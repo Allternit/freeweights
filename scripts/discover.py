@@ -168,6 +168,9 @@ def normalize(raw, kind, watch, now=None):
         "not_for_all_audiences": "not-for-all-audiences" in tags,
         "watchlist": org.lower() in watch,
         "sources": [],
+        # the fields classify.py reads under their Hugging Face names
+        "createdAt": raw.get("createdAt"),
+        "cardData": {k: card[k] for k in ("license", "license_name", "license_link", "base_model") if k in card},
     }
     rec.update(license_facts(card, tags))
     if "siblings" in raw:
@@ -239,14 +242,14 @@ def link_same_as(records):
     return n
 
 
-def plan_jobs(kind, limit, orgs, org_limit, sorts):
+def plan_jobs(kind, limit, orgs, org_limit, sorts, org_sort="createdAt"):
     """Return the list of listing jobs. A job = one sorted listing to page through."""
     jobs = []
     for s in sorts:
         jobs.append({"id": "%s/%s" % (kind, s), "kind": kind, "sort": s, "max": limit})
     for o in orgs:
-        jobs.append({"id": "%s/org/%s" % (kind, o), "kind": kind, "sort": "createdAt",
-                     "author": o, "max": org_limit})
+        jobs.append({"id": "%s/org/%s" % (kind, o) + ("" if org_sort == "createdAt" else "/" + org_sort),
+                     "kind": kind, "sort": org_sort, "author": o, "max": org_limit})
     for j in jobs:
         j["pages"] = max(1, math.ceil(j["max"] / PAGE))
     return jobs
@@ -314,6 +317,22 @@ class Client:
                 continue
             raise RuntimeError("HTTP %s for %s" % (status, url.split("?")[0]))
         raise RuntimeError("gave up after retries: " + url.split("?")[0])
+
+    def get_bytes(self, url):
+        """GET a small file (a license text) through the same limiter. Raw bytes."""
+        saved = self.opener
+        body = {}
+
+        def grab(u, h):
+            st, hd, b = saved(u, h)
+            body["b"] = b
+            return st, hd, b"null"
+        self.opener = grab
+        try:
+            self.get(url)
+        finally:
+            self.opener = saved
+        return body["b"]
 
 
 # ---------- run ----------
@@ -390,6 +409,123 @@ def link_variants(recs):
                     break
 
 
+def missing_parents(recs):
+    """Base-model ids named by a candidate but not in the candidate set (classify.py needs every
+    ancestor to work out the strictest license along the lineage)."""
+    want = set()
+    for r in recs.values():
+        for b in r["base_models"]:
+            k = "%s:%s" % (r["kind"], b["id"].lower())
+            if k not in recs and "/" in b["id"]:
+                want.add((r["kind"], b["id"]))
+    return sorted(want)
+
+
+def fetch_parents(client, recs, raw_path, watch, depth=3, now=None):
+    """Add missing ancestors to recs (one API call each), appending them to the raw file so a rerun
+    does not fetch them again. Ancestors that no longer exist are recorded as missing."""
+    n = 0
+    for _ in range(depth):
+        todo = [(k, i) for k, i in missing_parents(recs)]
+        if not todo:
+            break
+        with open(raw_path, "a") as out:
+            for kind, rid in todo:
+                q = urllib.parse.urlencode([("expand[]", f) for f in FIELDS] + [("expand[]", "siblings")])
+                url = "%s/%s/%s?%s" % (API, "models" if kind == "model" else "datasets", urllib.parse.quote(rid, safe="/"), q)
+                try:
+                    raw, _ = client.get(url)
+                    rec = normalize(raw, kind, watch, now)
+                except RuntimeError:
+                    rec = None
+                if not rec:  # gone or private: leave a stub so classify queues the child
+                    rec = normalize({"id": rid}, kind, watch, now)
+                    rec["missing"] = True
+                    recs[rec["key"]] = rec
+                    out.write(json.dumps(rec, separators=(",", ":")) + "\n")
+                    continue
+                rec["sources"] = ["parent"]
+                recs[rec["key"]] = rec
+                # also keep it under the id the child used, when the source renamed the repo
+                if rec["key"] != "%s:%s" % (kind, rid.lower()):
+                    alias = dict(rec, key="%s:%s" % (kind, rid.lower()), id=rid, renamed_to=rec["id"])
+                    recs[alias["key"]] = alias
+                    out.write(json.dumps(alias, separators=(",", ":")) + "\n")
+                out.write(json.dumps(rec, separators=(",", ":")) + "\n")
+                n += 1
+    return n
+
+
+LICENSE_FILE = re.compile(r"(?i)^(licen[sc]e|copying)([-_.][a-z0-9.-]*)?(\.(md|txt))?$")
+
+
+def license_path(rec):
+    """The repo path of the license text: license_link when it points inside the repo, else a
+    LICENSE-like file at the top level. None when there is no text in the repo."""
+    names = [s.get("rfilename", "") for s in rec.get("siblings") or []]
+    link = (rec.get("license_link") or "").strip()
+    if link:
+        m = re.match(r"https?://huggingface\.co/(?:datasets/)?([^/]+/[^/]+)/(?:blob|resolve)/[^/]+/(.+)$", link)
+        if m and m.group(1).lower() == rec["id"].lower() and m.group(2) in names:
+            return m.group(2)
+        if not link.startswith("http") and link.lstrip("./") in names:
+            return link.lstrip("./")
+    top = sorted((n for n in names if "/" not in n and LICENSE_FILE.match(n)), key=len)
+    return top[0] if top else None
+
+
+def needs_text(rec):
+    """Read the license text only when the tag alone cannot decide: "other" or a tag off the table."""
+    if rec.get("missing") or rec.get("gated"):
+        return False
+    tag = (rec.get("license") or (rec.get("license_tags") or [None])[0] or "").strip().lower()
+    if not tag:
+        return False
+    import licenses  # scripts/licenses.py, the one license table
+    e = licenses.entry(tag)
+    if e and e.get("tag"):
+        return False
+    return tag == "other" or tag not in licenses.HELD
+
+
+def fetch_license_texts(client, recs, cache_path, text_dir, keep=None):
+    """Set license_text_sha256 and license_file on records whose verdict needs the text.
+    The text is saved under work/ (text_dir) by its sha256 for the person who reviews the queue.
+    keep(rec) -> bool limits the reads to records that could be listed. Resumable via cache_path."""
+    import hashlib
+    cache = load_state(cache_path) if os.path.exists(cache_path) else {}
+    cache.pop("jobs", None)
+    os.makedirs(text_dir, exist_ok=True)
+    n = 0
+    for r in recs.values():
+        if not needs_text(r) or (keep and not keep(r)):
+            continue
+        path = license_path(r)
+        if not path:
+            continue
+        ck = "%s@%s:%s" % (r["id"], r.get("sha") or "main", path)
+        if ck not in cache:
+            url = "https://huggingface.co/%s%s/resolve/%s/%s" % ("datasets/" if r["kind"] == "dataset" else "", r["id"], r.get("sha") or "main", urllib.parse.quote(path))
+            try:
+                body = client.get_bytes(url)
+            except RuntimeError:
+                cache[ck] = None
+                continue
+            h = hashlib.sha256(body).hexdigest()
+            tp = os.path.join(text_dir, h + ".txt")
+            if not os.path.exists(tp):
+                with open(tp, "wb") as f:
+                    f.write(body)
+            cache[ck] = h
+            n += 1
+            if n % 50 == 0:
+                save_state(cache_path, cache)
+        if cache[ck]:
+            r["license_text_sha256"], r["license_file"] = cache[ck], path
+    save_state(cache_path, cache)
+    return n
+
+
 def summarize(recs, client, jobs_state):
     tiers = collections.Counter(r["tier_hint"] or "none" for r in recs.values())
     kinds = collections.Counter(r["kind"] for r in recs.values())
@@ -420,6 +556,9 @@ def main(argv=None):
     ap.add_argument("--sorts", default="downloads,likes,trendingScore")
     ap.add_argument("--siblings", action="store_true", help="also fetch file lists (about 10x the bytes)")
     ap.add_argument("--no-orgs", action="store_true", help="skip per-org listings")
+    ap.add_argument("--org-sort", default="createdAt", help="sort for per-org listings (createdAt or downloads)")
+    ap.add_argument("--parents", action="store_true", help="also fetch base models missing from the listings (one call each)")
+    ap.add_argument("--license-texts", action="store_true", help="read the license file of repos whose tag cannot decide (other, off-table)")
     ap.add_argument("--out", help="output JSONL path (default work/candidates-<date>.jsonl)")
     ap.add_argument("--fresh", action="store_true", help="ignore saved progress and start over")
     ap.add_argument("--dry-run", action="store_true")
@@ -433,7 +572,7 @@ def main(argv=None):
     sorts = [s for s in a.sorts.split(",") if s]
     jobs = []
     for kind in (a.kind or ["model"]):
-        jobs += plan_jobs(kind, a.limit, orgs, a.org_limit, sorts)
+        jobs += plan_jobs(kind, a.limit, orgs, a.org_limit, sorts, a.org_sort)
     for j in jobs:
         j["siblings"] = a.siblings
     total = sum(j["pages"] for j in jobs)
@@ -468,6 +607,12 @@ def main(argv=None):
         print("no records")
         return 0
     recs = merge_raw(raw_path)
+    if a.parents:
+        print("parents fetched: %d" % fetch_parents(client, recs, raw_path, watch), file=sys.stderr)
+    if a.license_texts:
+        listable = lambda r: bool(r.get("tier_hint") or r.get("variant") or "parent" in r.get("sources", []))
+        n = fetch_license_texts(client, recs, os.path.join(WORK, "license-texts.json"), os.path.join(WORK, "license-texts"), listable)
+        print("license texts read: %d" % n, file=sys.stderr)
     link_variants(recs)
     link_same_as(recs)
     with open(out_path, "w") as f:

@@ -11,7 +11,7 @@ Status: live at https://freeweights.allternit.com (Stage 0, 0 USD). Run by Allte
 | Path | What |
 |---|---|
 | spec/ | manifest-v0, catalog schema, hub API contract |
-| scripts/ | manifest builder, fw.py downloader/verifier, catalog builder, classify.py (inclusion gates, no network), licenses.py, formats.py |
+| scripts/ | manifest builder, fw.py downloader/verifier, catalog builder, discover.py (Hugging Face facts), classify.py (inclusion gates, no network), select_batch.py (batch picks and review queue), licenses.py, formats.py |
 | catalog/ | generated catalog rows; _audit/ license audit |
 | worker/ | Cloudflare Worker (read API, redirects, counts) |
 | site/ | static site (freeweights.allternit.com) |

@@ -36,6 +36,8 @@ def token():
 def http(url, binary=False, stream_hash=False):
     """GET with retry; falls back to the HF token only on 401/403."""
     hdr, tried_tok = {"User-Agent": VERSION}, False
+    if os.environ.get("HF_TOKEN"):  # a token raises the rate limits; never printed
+        hdr["Authorization"] = "Bearer " + os.environ["HF_TOKEN"]; tried_tok = True
     for attempt in range(6):
         try:
             time.sleep(SLEEP)
@@ -57,6 +59,7 @@ def http(url, binary=False, stream_hash=False):
 def head_bytes(url, n=formats.HEAD_BYTES):
     """First n bytes of a file by an HTTP range read (the format header check)."""
     hdr = {"User-Agent": VERSION, "Range": f"bytes=0-{n - 1}"}
+    if os.environ.get("HF_TOKEN"): hdr["Authorization"] = "Bearer " + os.environ["HF_TOKEN"]
     for attempt in range(4):
         try:
             time.sleep(SLEEP)
@@ -76,10 +79,13 @@ def load_validator():
     exec(src.split("def canonical(path)")[0], ns)  # defs + schema engine only, no reporting
     return ns["check"], json.load(open(os.path.join(ROOT, "spec", "manifest-v0.schema.json")))
 
-def build(repo, revision, dataset, section, include=None):
+def build(repo, revision, dataset, section, include=None, info=None, license_id=None, meta_out=None):
+    """info: the ?blobs=true repo info when the caller already fetched it. license_id: used when the
+    card declares none (a quantization that inherits its base model's license). meta_out (dict) gets
+    the header-checked formats."""
     kind = "datasets" if dataset else "models"
     base = f"https://huggingface.co/api/{kind}/{repo}"
-    info = http(base + (f"/revision/{urllib.parse.quote(revision, safe='')}" if revision else "") + "?blobs=true")
+    if info is None: info = http(base + (f"/revision/{urllib.parse.quote(revision, safe='')}" if revision else "") + "?blobs=true")
     commit = info["sha"]
     if info.get("gated"): raise Refused("gated repo, skipped (plan C rules)")
     include = include if include is not None else subsets().get(repo)
@@ -89,7 +95,8 @@ def build(repo, revision, dataset, section, include=None):
     if not dataset:
         fmts, why = formats.decide(paths, lambda p, n: head_bytes(resolve + urllib.parse.quote(p), n))
         if not fmts: raise Refused(why)
-    lic_id = (info.get("cardData") or {}).get("license") or ""
+        if meta_out is not None: meta_out["formats"] = fmts
+    lic_id = (info.get("cardData") or {}).get("license") or license_id or ""
     if not lic_id: raise Refused("no license in cardData")
     lic_id = str(lic_id)
     lic_path = next((p for p in paths if re.fullmatch(r"(licen[sc]e|copying)(\.(md|txt))?", p, re.I)), None)

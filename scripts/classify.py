@@ -94,6 +94,8 @@ class Classifier:
         """Verdict from the repo's own license alone: (verdict, method, queue_key, license_id, reason)."""
         if rid in self._own: return self._own[rid]
         rec = self.recs.get(rid)
+        if rec is not None and rec.get("missing"):  # an ancestor discovery could not read (deleted or private)
+            rec = None
         if rec is None:
             v = self.catalog.get(rid)
             res = (v, "reviewed", None, None, "listed in the catalog") if v else ("queue", "queue", f"parent:{rid}", None, f"base model {rid} is not classified yet")
@@ -120,10 +122,22 @@ class Classifier:
         own = self.own_license(rid)
         best, src = own, rid
         rec = self.recs.get(rid)
+        rel = relation_of(rec) if rec is not None else None
+        # A quantization carries its base model's license (a quantizer cannot relicense the weights).
+        # With no license tag of its own it takes the base's verdict instead of "no license".
+        bare_quant = rec is not None and rel["type"] == "quant" and rel["parents"] and not license_tag(rec) and rid not in self.reviewed
+        if bare_quant:
+            pid = rel["parents"][0]
+            best, src = (self.lineage_license(pid, seen + (rid,)), pid) if pid != rid and pid not in seen else (own, rid)
+            if best[0] == "refused" and best[4] == licenses.NO_LICENSE["note"]:
+                best = ("queue", "queue", f"parent-unlicensed:{pid}", pid, f"base model {pid} declares no license")
         if rec is not None and rid not in seen:
-            for pid in relation_of(rec)["parents"]:
+            for pid in rel["parents"]:
                 if pid == rid or pid in seen: continue
                 pv = self.lineage_license(pid, seen + (rid,))
+                if pv[0] == "refused" and pv[4] == licenses.NO_LICENSE["note"]:
+                    # an ancestor with no declared license is unknown, not refused: a person decides
+                    pv = ("queue", "queue", f"parent-unlicensed:{pid}", pid, f"base model {pid} declares no license")
                 if licenses.stricter(pv[0], best[0]) == pv[0] and pv[0] != best[0]:
                     best, src = pv, pid
         if src != rid:
@@ -152,6 +166,8 @@ class Classifier:
         # the license verdict is worked out first so every result carries its audit method
         v, method, key, gov, reason = self.lineage_license(rid)
         if gov and gov != rid: out["license_governed_by"] = gov
+        # the license id the verdict rests on (for text-hash, the id a person gave that text)
+        out["verdict_license_id"] = self.own_license(gov)[3] if gov in self.recs or gov in self.reviewed else out["license_id"]
         # 1 format (names only here; the build step range-reads one file per format for the header check)
         if kind == "model":
             paths = [s.get("rfilename", "") for s in rec.get("siblings") or []]

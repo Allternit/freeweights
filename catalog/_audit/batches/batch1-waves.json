@@ -1,0 +1,40 @@
+{
+  "_note": "Batch 1 waves for scripts/select_batch.py. A repo joins the first wave whose orgs (and tasks, when given) match it. Within a wave, orgs take turns, best downloads first, until the target. Quant waves take only quantizations whose parent is listed.",
+  "batch": "batch1",
+  "waves": [
+    {"id": "quants", "target": 250, "relation": "quant", "require_listed_parent": true,
+     "orgs": ["unsloth", "lmstudio-community", "bartowski", "ggml-org", "mlx-community", "onnx-community"]},
+    {"id": "embeddings", "target": 120, "section": "alt.freeweights.embed",
+     "orgs": ["sentence-transformers", "BAAI", "intfloat", "nomic-ai", "Alibaba-NLP", "mixedbread-ai", "Snowflake", "cross-encoder", "jinaai"],
+     "tasks": ["sentence-similarity", "feature-extraction", "text-ranking", "text-classification", "fill-mask", "image-feature-extraction", "visual-document-retrieval", null]},
+    {"id": "speech", "target": 60, "section": "alt.freeweights.speech",
+     "orgs": ["openai", "jonatasgrosman", "laion", "distil-whisper", "Systran"],
+     "tasks": ["automatic-speech-recognition", "text-to-speech", "audio-classification", "zero-shot-audio-classification", "text-to-audio", "audio-to-audio", "feature-extraction"],
+     "name_match": "whisper|wav2vec|xlsr|clap|speech|audio|voice"},
+    {"id": "image-video", "target": 50,
+     "orgs": ["Wan-AI", "Comfy-Org", "stabilityai", "black-forest-labs"],
+     "link_only_orgs": ["stabilityai", "black-forest-labs"],
+     "link_only_note": "Listed as a link only until a person reads the publisher's terms. Download from the source."},
+    {"id": "vision", "target": 200, "section": "alt.freeweights.vision",
+     "orgs": ["timm", "facebook", "google", "openai", "laion", "amazon", "Ultralytics"],
+     "tasks": ["image-classification", "object-detection", "image-segmentation", "zero-shot-image-classification", "zero-shot-object-detection",
+               "image-feature-extraction", "depth-estimation", "mask-generation", "keypoint-detection", "video-classification", "image-to-text",
+               "time-series-forecasting", "fill-mask", "token-classification", "text2text-generation", "translation", "summarization",
+               "question-answering", "text-classification", "zero-shot-classification", "feature-extraction"]},
+    {"id": "families", "target": 350,
+     "orgs": ["Qwen", "google", "deepseek-ai", "microsoft", "openai", "zai-org", "mistralai", "ibm-granite", "HuggingFaceTB", "openbmb", "allenai"]}
+  ],
+  "family_sections": {
+    "qwen": {"section": "alt.freeweights.qwen"},
+    "deepseek-ai": {"section": "alt.freeweights.deepseek"},
+    "zai-org": {"section": "alt.freeweights.glm"},
+    "mistralai": {"section": "alt.freeweights.mistral"},
+    "allenai": {"section": "alt.freeweights.olmo"},
+    "ibm-granite": {"section": "alt.freeweights.granite"},
+    "huggingfacetb": {"section": "alt.freeweights.smollm"},
+    "openbmb": {"section": "alt.freeweights.minicpm"},
+    "google": {"section": "alt.freeweights.gemma", "name_match": "gemma"},
+    "openai": {"section": "alt.freeweights.gpt-oss", "name_match": "gpt-oss"},
+    "microsoft": {"section": "alt.freeweights.phi", "name_match": "phi"}
+  }
+}

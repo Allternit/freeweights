@@ -14,8 +14,13 @@ is written to .pending/manifests/ (git-ignored, never served) instead, and the s
 --offline makes no network call: repo facts come from the existing manifests and catalog rows.
 License verdicts come from policy/licenses.json (scripts/licenses.py); a row whose base model has a
 stricter verdict inherits it. Every row carries kind, relation and audit {method, at}.
-Stdlib only. HF token is used only by make_manifest.http on 401/403, never printed."""
-import argparse, csv, datetime, glob, json, os, re, subprocess, sys, time, urllib.parse
+Batches: every catalog/_audit/batches/*.jsonl line (written by select_batch.py from classify.py verdicts)
+is a candidate too, with its own audit method, tier and relation. A batch repo's network work (repo info,
+small-file hashes, the format header check) runs in --jobs threads first and is cached under
+work/build-cache/, so an interrupted run resumes; weights are never downloaded (their sha256 comes from
+the Hugging Face lfs data). Gated, non-commercial and link-only batch repos get a row with no manifest.
+Stdlib only. HF_TOKEN (env) raises rate limits; it is never printed."""
+import argparse, concurrent.futures, csv, datetime, glob, json, os, re, subprocess, sys, threading, time, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_manifest as mm
 import licenses  # the one license table (policy/licenses.json)
@@ -55,7 +60,94 @@ ABLITERATED = {
         "Refusal directions removed from deepseek-ai/DeepSeek-V4.1-Flash-1017 by abliteration (huihui-ai, llama.cpp cvector method). "
         "Several series are built on ISTA-DASLab and unsloth quants of the same model."),
 }
+BATCH_DIR = os.path.join(CAT, "_audit", "batches")
+CACHE = os.path.join(ROOT, "work", "build-cache")
+INFO_KEYS = ("pipeline_tag", "library_name", "cardData", "safetensors", "tags", "gated", "sha", "downloads", "likes")
+INHERIT_NOTE = "The license of the base model {} applies: the strictest license along the lineage wins."
 DS_EXT = {".parquet": "parquet", ".jsonl": "jsonl", ".json": "json", ".csv": "csv", ".arrow": "arrow", ".txt": "text"}
+
+
+# ---------- batches (select_batch.py output) ----------
+def load_batches():
+    out = []
+    for p in sorted(glob.glob(os.path.join(BATCH_DIR, "*.jsonl"))):
+        for l in open(p, encoding="utf-8"):
+            if l.strip(): e = json.loads(l); e["_batch"] = os.path.basename(p)[:-6]; out.append(e)
+    return out
+
+def cache_path(e): return os.path.join(CACHE, f"{fname(e['repo'])}@{e['pinned_commit'] or 'main'}.json")
+
+def slim(info):
+    d = {k: info.get(k) for k in INFO_KEYS if k in info}
+    if isinstance(d.get("safetensors"), dict): d["safetensors"] = {"total": d["safetensors"].get("total")}
+    card = d.get("cardData") or {}
+    d["cardData"] = {k: card[k] for k in ("base_model", "license", "task_categories") if k in card}
+    return d
+
+def prefetch(e):
+    """Network work for one batch repo, cached: repo info, then the manifest (or link-only size and formats)."""
+    cp = cache_path(e)
+    if os.path.exists(cp): return "cached"
+    repo, commit = e["repo"], e["pinned_commit"] or None
+    info = mm.http(f"https://huggingface.co/api/models/{repo}" + (f"/revision/{commit}" if commit else "") + "?blobs=true")
+    sib = info.get("siblings", [])
+    res = {"info": slim(info), "commit": info.get("sha")}
+    if e["link_only"] or info.get("gated"):
+        res.update(link_only=True, gated=bool(info.get("gated")) or e["gated"],
+                   total=sum(int((s.get("lfs") or {}).get("size", s.get("size") or 0)) for s in sib),
+                   formats=formats_of([s["rfilename"] for s in sib], False, info.get("library_name") == "mlx"))
+    else:
+        mo = {}
+        try:
+            res["manifest"] = mm.build(repo, commit, False, e["section"], info=info, license_id=e["license_id"], meta_out=mo)
+            res["formats"] = mo.get("formats")
+        except mm.Refused as x: res["refused"] = str(x)
+    os.makedirs(CACHE, exist_ok=True)
+    tmp = cp + ".tmp"
+    open(tmp, "w", encoding="utf-8").write(json.dumps(res))
+    os.replace(tmp, cp)
+    return "refused" if "refused" in res else "link-only" if res.get("link_only") else "manifest"
+
+def prefetch_all(entries, jobs):
+    todo = [e for e in entries if not os.path.exists(cache_path(e))]
+    print(f"batch prefetch: {len(entries) - len(todo)} cached, {len(todo)} to fetch with {jobs} threads", flush=True)
+    lock, done, errs = threading.Lock(), [0], []
+    def one(e):
+        try: r = prefetch(e)
+        except Exception as x: r = f"error {type(x).__name__}: {x}"; errs.append((e["repo"], r))
+        with lock:
+            done[0] += 1
+            if done[0] % 25 == 0 or r.startswith("error"): print(f"  {done[0]}/{len(todo)} {e['repo']}: {r}", flush=True)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex: list(ex.map(one, todo))
+    if errs:
+        os.makedirs(CACHE, exist_ok=True)
+        with open(os.path.join(CACHE, "_errors.log"), "a") as f:
+            for repo, r in errs: f.write(f"{now()} {repo} {r}\n")
+    return errs
+
+def batch_terms(e, res):
+    """(license_class, redistribution, requires_terms, note) for a batch row."""
+    v = e["verdict"]
+    ent = licenses.entry(e["license_id"]) or {}
+    inh = INHERIT_NOTE.format(e["license_governed_by"]) if e["audit"]["method"] == "inherited" and e.get("license_governed_by") else None
+    join = lambda *xs: " ".join(x for x in xs if x) or None
+    if res.get("gated") and v != "non-commercial": return "gated", "click-through", True, join(GATED_MODEL_NOTE, inh)
+    if v == "non-commercial": return "non-commercial", "no", True, join(NONCOMM_NOTE, inh)
+    if ent.get("link_only"): return ent["verdict"], licenses.redistribution(ent["verdict"]), True, join(ent.get("note"), inh)
+    if e["link_only"]: return v, licenses.redistribution(v), True, join(e.get("link_note"), inh)
+    return v, licenses.redistribution(v), v != "permissive", inh
+
+def batch_row(c, res, man, ts, total, fmts):
+    cls, red, terms, note = batch_terms(c, res)
+    c["_redis"] = red
+    row = make_row(c, man, res["info"], ts, cls, terms, note, total=total, fmts=fmts)
+    row["relation"] = {"type": c["relation"]["type"], "parent": c["relation"]["parent"]}
+    row["base_model"] = c["relation"]["parent"]
+    row["audit"] = {"method": c["audit"]["method"], "at": c["audit"]["at"]}
+    row["tier"] = c["tier"]
+    row["signals"] = {k: (int(v) if isinstance(v, (int, float)) else None) for k, v in (c.get("signals") or {}).items()}
+    if c.get("pipeline_tag"): row["tasks"] = [c["pipeline_tag"]]
+    return row
 
 def now(): return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 def fname(repo): return repo.replace("/", "__")
@@ -100,7 +192,7 @@ def meta(repo, commit, dataset):
 def family_of(sec, repo):
     name = sec.rsplit(".", 1)[1]
     if repo in ABLITERATED: return ABLITERATED[repo][0]
-    return repo.split("/")[0] if name in ("speech", "embed", "image", "video", "music", "ocr", "datasets") else name
+    return repo.split("/")[0] if name in ("speech", "embed", "image", "video", "music", "ocr", "datasets", "vision") else name
 
 # Same weights in another packaging (quantization, format conversion, ComfyUI repack) count as "quant".
 QUANT_HINT = re.compile(r"gguf|mlx|onnx|comfy|gsq|awq|gptq|exl2|fp8|mxfp|nvfp4|int[48]|bnb|[-_.]q[2-8]", re.I)
@@ -187,8 +279,18 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--only", nargs="*"); ap.add_argument("--no-sign", action="store_true")
     ap.add_argument("--offline", action="store_true", help="no network: reuse existing manifests and catalog rows")
     ap.add_argument("--key", default=os.path.expanduser("~/.config/freeweights/minisign.key"))
+    ap.add_argument("--jobs", type=int, default=4, help="threads for batch prefetch (network)")
+    ap.add_argument("--prefetch-only", action="store_true", help="fill work/build-cache for batch repos, then stop")
     a = ap.parse_args()
     cands = list(csv.DictReader(open(os.path.join(CAT, "_audit", "licenses.csv"), encoding="utf-8"))) + EXTRA
+    batch = [e for e in load_batches() if not (a.only and e["repo"] not in a.only)]
+    csv_ids = {c["repo"] for c in cands}
+    batch = [e for e in batch if e["repo"] not in csv_ids]  # a person's audit row wins over a rule verdict
+    if batch and not a.offline:
+        errs = prefetch_all(batch, a.jobs)
+        if errs: print(f"batch prefetch: {len(errs)} errors (rerun to retry; work/build-cache/_errors.log)")
+    if a.prefetch_only: return
+    cands += batch
     check, mschema = mm.load_validator()
     cschema = json.load(open(os.path.join(ROOT, "spec", "catalog-schema.json")))
     key = a.key
@@ -211,6 +313,36 @@ def main():
         red, lid = c["redistribution"], c["license_id"]
         pr = prev.get(repo) or {}
         def refuse(reason): refused.append({"id": repo, "license_id": lid, "upstream_url": c["upstream_url"], "reason": reason}); print("REFUSED", repo, reason)
+        if c.get("_batch"):
+            res = json.load(open(cache_path(c), encoding="utf-8")) if os.path.exists(cache_path(c)) else None
+            if res is None:
+                if pr: rows.append(migrate(pr, c)); offline_skip.append(repo); print("kept previous row (no cache)", repo)
+                else: print("skipped, needs network:", repo)
+                continue
+            if res.get("refused"): refuse(res["refused"]); continue
+            if res.get("link_only"):
+                rows.append(batch_row(c, res, False, ts, res["total"], res["formats"])); continue
+            out = os.path.join(MAN, fname(repo) + ".json"); sig = out + ".minisig"
+            m = res["manifest"]
+            if os.path.exists(out) and os.path.exists(sig):
+                have = json.load(open(out, encoding="utf-8"))
+                if have["upstream"]["commit"] == m["upstream"]["commit"] and have["section"] == m["section"]: m = have
+            cls, red, terms, note = batch_terms(c, res)
+            m["license"]["id"], m["license"]["name"], m["license"]["redistribution"] = c["license_id"], licenses.name(c["license_id"]), red
+            errs = check(m, mschema)
+            if errs: print("MANIFEST ERRORS", repo, errs); sys.exit(1)
+            body = mm.canonical(m)
+            old = open(out, encoding="utf-8").read() if os.path.exists(out) else None
+            if body == old and os.path.exists(sig): unchanged.append(repo)
+            elif a.no_sign:
+                if os.path.exists(sig): write(os.path.join(PENDING, fname(repo) + ".json"), m); pending.append(repo)
+                elif body != old: write(out, m)
+            else:
+                if body != old: write(out, m)
+                mm.sign(out, repo, m["upstream"]["commit"], key); signed.append(repo)
+            c["pinned_commit"] = m["upstream"]["commit"]
+            rows.append(batch_row(c, res, True, ts, sum(f["size"] for f in m["files"]), res.get("formats") or formats_of([f["path"] for f in m["files"]], False, repo.startswith("mlx-community/"))))
+            continue
         try:
             if red == "no":
                 if "excludes the united states" in (c["notes"] + c["quoted_clause"]).lower() or "territory" in c["notes"].lower() and "United States" in c["notes"] or repo.startswith("MiniMaxAI/MiniMax-H3") or licenses.verdict(lid) == "refused":

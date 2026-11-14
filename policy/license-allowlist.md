@@ -38,7 +38,7 @@ Each entry records how its license verdict was reached (`audit.method`):
 - `reviewed`: a person read this repo's license and recorded the result.
 - `queue`: none of the above. The entry is not listed until a person reads the text. Texts are grouped by their sha256, so one decision clears every repo that ships the same text.
 
-The strictest verdict along base model, fine-tune and quantization wins. A quantization of a refused base model is refused, whatever its own tag says.
+The strictest verdict along base model, fine-tune and quantization wins. A quantization of a refused base model is refused, whatever its own tag says. A quantization with no license tag of its own takes its base model's verdict, because a quantizer cannot relicense the weights. A base model that declares no license sends its derivatives to the review queue, not to the refusal log.
 
 ## Custom licenses
 

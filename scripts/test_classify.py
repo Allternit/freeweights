@@ -70,6 +70,24 @@ class Lineage(unittest.TestCase):
         self.assertEqual(r["q/X-GGUF"]["verdict"], "permissive")
         self.assertEqual(r["q/X-GGUF"]["tier"], "variant")
 
+    def test_bare_quant_inherits_base_verdict(self):
+        # a quantization with no license tag of its own takes its base model's verdict
+        res, _ = run(rec("lab/base", lic="mit"), rec("q/base-GGUF", lic=None, base="lab/base", rel="quantized", files=("m.gguf",)))
+        self.assertEqual(res["q/base-GGUF"]["verdict"], "permissive")
+        self.assertEqual(res["q/base-GGUF"]["audit"]["method"], "inherited")
+        self.assertEqual(res["q/base-GGUF"]["verdict_license_id"], "mit")
+        self.assertEqual(res["q/base-GGUF"]["tier"], "variant")
+        # but a fine-tune with no license stays refused
+        res, _ = run(rec("lab/base", lic="mit"), rec("ft/base-chat", lic=None, base="lab/base", rel="finetune"))
+        self.assertEqual(res["ft/base-chat"]["verdict"], "refused")
+
+    def test_unlicensed_parent_queues_child(self):
+        # a base with no declared license is unknown: the child waits for a person, it is not refused
+        res, q = run(rec("u/base", lic=None), rec("lab/ft", lic="apache-2.0", base="u/base", rel="finetune"))
+        self.assertEqual(res["lab/ft"]["verdict"], "queue")
+        self.assertEqual(res["lab/ft"]["queue_key"], "parent-unlicensed:u/base")
+        self.assertEqual(res["u/base"]["verdict"], "refused")
+
     def test_lineage_cycle_terminates(self):
         r, _ = run(rec("a/A", base="b/B", rel="finetune"), rec("b/B", base="a/A", rel="finetune"))
         self.assertEqual(r["a/A"]["verdict"], "permissive")
