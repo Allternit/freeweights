@@ -182,9 +182,16 @@ test('daily cap: D1 limit errors pause until the next 00:00 UTC; other errors do
 // and the listing dereferenced one anyway, so any page holding such a row returned 500.
 test('link-only rows list and show without a manifest', async () => {
   const cat = await (await get('/api/catalog')).json();
-  const all = await get('/api/models?limit=1000');
-  assert.equal(all.status, 200);
-  assert.equal((await all.json()).length, cat.models.length);
+  // The API caps a page at 1000 rows; page through so every row (link-only included) is served.
+  let seen = 0;
+  for (let cursor = 0; ; cursor += 1000) {
+    const page = await get(`/api/models?limit=1000&cursor=${cursor}`);
+    assert.equal(page.status, 200);
+    const rows = await page.json();
+    seen += rows.length;
+    if (rows.length < 1000) break;
+  }
+  assert.equal(seen, cat.models.length);
   const linkOnly = cat.models.find((r) => !r.manifest_url);
   if (!linkOnly) return; // sample data has none
   const d = await get(`/api/models/${linkOnly.id}`);
