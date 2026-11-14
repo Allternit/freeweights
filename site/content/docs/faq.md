@@ -73,7 +73,7 @@ See the Wanted page. Each refusal has a reason.
 It depends on the license. The model page shows it. Read it before you build on it. We do not give legal advice.
 
 ### Do you scan files?
-At Stage 0 we check formats and headers: only safetensors, GGUF, MLX and ONNX, with no pickle files. Malware scanning and a hash blocklist come with the hub. Auto-quarantine happens only for a scanner hit or a blocklist match.
+We check formats and headers: safetensors, GGUF, MLX and ONNX, and CoreML, CTranslate2, TFLite, OpenVINO and ggml after a header check that reads the first bytes of a file. Pickle-only weights are refused. Malware scanning and a hash blocklist come with the hub. Auto-quarantine happens only for a scanner hit or a blocklist match.
 
 ## Money and ownership {#money}
 

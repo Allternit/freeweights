@@ -78,7 +78,7 @@ Every removal is counted on a public page: reports received, items removed, item
 
 ## What we host and never host {#hosting-lines}
 
-**Allowed.** All open model types: language, vision, speech, image, embedding and others. Each needs a license on the allow-list and a checksum for every file. Abliterated models, with the what-changed card. File formats at Stage 0: safetensors, GGUF and MLX (and ONNX, which is data only). No pickle-based files. General speech models, such as Kokoro, that do not copy one real person.
+**Allowed.** All open model types: language, vision, speech, image, embedding and others. Each needs a license on the allow-list and a checksum for every file. Abliterated models, with the what-changed card. Data-only file formats: safetensors, GGUF, MLX and ONNX, and after a header check CoreML, CTranslate2, TFLite, OpenVINO and ggml. No pickle-only weights. General speech models, such as Kokoro, that do not copy one real person.
 
 **Banned.** We never list or host:
 
@@ -93,7 +93,7 @@ Every removal is counted on a public page: reports received, items removed, item
 
 **The standard.** We judge a listing by how it is presented and what it is for, not only by what it can do. A general model that can be misused is allowed. A model that is named, tuned or marketed for a banned use is not.
 
-**Licenses.** Only licenses on the allow-list, or a custom license that passed a person's audit, a click-through, and a check that third parties may redistribute. Otherwise we serve from the source only, or we do not list. Gated repos are skipped. We do not copy gated files and we do not bypass a gate. See Licenses in the docs.
+**Licenses.** Only licenses on the allow-list, or a custom license that passed a person's audit, a click-through, and a check that third parties may redistribute. Otherwise we serve from the source only, or we do not list. Gated repos are listed as a link only. We do not copy gated files and we do not bypass a gate. See Licenses in the docs.
 
 ## How decisions are made {#decisions}
 

@@ -6,7 +6,8 @@ Status: Draft. Owner: Allternit. Published at /ethos with the takedown counts.
 
 - All open model types: language, vision, speech, image, embedding, and others. Each needs a license on the allow-list (license-allowlist.md) and a checksum for every file.
 - Abliterated models. The card must say what was changed, from which base model, and by which method. This is the what-changed card.
-- File formats at Stage 0: safetensors, GGUF and MLX only. No pickle-based files.
+- Repos tagged not-for-all-audiences are out by default and listed only after a person reviews them.
+- Data-only file formats: safetensors, GGUF, MLX and ONNX, and after a header check CoreML, CTranslate2, TFLite, OpenVINO and ggml (see inclusion-policy.md). No pickle-only weights.
 - General speech models, such as Kokoro, that do not copy one real person.
 
 ## Banned
@@ -39,7 +40,7 @@ Banned items are removed through the takedown process (takedown.md). Every remov
 
 - DECISION (Allternit): Who rules on unclear cases in the first 90 days. Draft default: Allternit, with counsel for anything involving a real person.
 - DECISION (Allternit): Whether to allow models for adult-themed text that are not made for sexual content (for example general role-play models). Draft default: allowed only if the card and marketing do not present sexual content as the purpose.
-- DECISION (Allternit): Format list after Stage 0. Draft default: add formats only after a scanner exists for them.
+- DECISION (Allternit), made: CoreML, CTranslate2, TFLite, OpenVINO and ggml are allowed after a header check of each format. Pickle-only stays refused.
 
 ## Verify with counsel
 
