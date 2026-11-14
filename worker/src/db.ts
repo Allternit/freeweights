@@ -55,15 +55,46 @@ export async function takeHfSlot(env: Env): Promise<boolean> {
   return !!r && r.n <= cap;
 }
 
-export const addDownload = (env: Env, id: string) =>
-  env.DB.prepare(
-    `INSERT INTO downloads (model_id, day, starts) VALUES (?1, ?2, 1)
-     ON CONFLICT(model_id, day) DO UPDATE SET starts = starts + 1`,
-  ).bind(id, day()).run();
+// Route kind of an entry: "model" now; "dataset" once dataset routes exist (plan B1), so ids cannot collide.
+export type Kind = 'model' | 'dataset';
+// downloads.model_id stays "org/repo" for models (old rows) and is "<kind>:org/repo" for other kinds.
+const dayKey = (kind: Kind, id: string) => (kind === 'model' ? id : `${kind}:${id}`);
 
-export async function downloadTotals(env: Env): Promise<Map<string, number>> {
-  const rows = await env.DB.prepare('SELECT model_id, SUM(starts) AS n FROM downloads GROUP BY model_id').all<{ model_id: string; n: number }>();
-  return new Map(rows.results.map((r) => [r.model_id, r.n]));
+/** One counted download: the per-day row and the running total, in one atomic batch (2 rows written). */
+export const addDownload = (env: Env, kind: Kind, id: string) =>
+  env.DB.batch([
+    env.DB.prepare(
+      `INSERT INTO downloads (model_id, day, starts) VALUES (?1, ?2, 1)
+       ON CONFLICT(model_id, day) DO UPDATE SET starts = starts + 1`,
+    ).bind(dayKey(kind, id), day()),
+    env.DB.prepare(
+      `INSERT INTO download_totals (kind, entry_id, total) VALUES (?1, ?2, 1)
+       ON CONFLICT(kind, entry_id) DO UPDATE SET total = total + 1`,
+    ).bind(kind, id),
+  ]);
+
+// Reads use download_totals (one row per entry) and never aggregate the per-day table, which grows
+// by one row per entry per day (plan A8: a GROUP BY there used the daily D1 read budget in ~166 calls).
+
+/** Totals for every entry of a kind (sort by downloads). Reads one row per entry with downloads. */
+export async function allTotals(env: Env, kind: Kind): Promise<Map<string, number>> {
+  const rows = await env.DB.prepare('SELECT entry_id, total FROM download_totals WHERE kind = ?')
+    .bind(kind).all<{ entry_id: string; total: number }>();
+  return new Map(rows.results.map((r) => [r.entry_id, r.total]));
+}
+
+/** Totals for the given entries only (a page of results or one detail). */
+export async function totalsFor(env: Env, kind: Kind, ids: string[]): Promise<Map<string, number>> {
+  const out = new Map<string, number>();
+  const CHUNK = 90; // D1: at most 100 bound parameters per statement
+  for (let i = 0; i < ids.length; i += CHUNK) {
+    const part = ids.slice(i, i + CHUNK);
+    const rows = await env.DB.prepare(
+      `SELECT entry_id, total FROM download_totals WHERE kind = ? AND entry_id IN (${part.map(() => '?').join(',')})`,
+    ).bind(kind, ...part).all<{ entry_id: string; total: number }>();
+    for (const r of rows.results) out.set(r.entry_id, r.total);
+  }
+  return out;
 }
 
 export const bumpCounter = (env: Env, name: string) =>

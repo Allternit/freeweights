@@ -1,9 +1,21 @@
--- Download starts per model per UTC day. No IP, no user agent, no token is stored.
+-- Full current schema for a fresh database. Existing databases apply migrations/ in order instead.
+
+-- Download starts per entry per UTC day. No IP, no user agent, no token is stored.
+-- model_id is "org/repo" for models and "<kind>:org/repo" for other kinds.
 CREATE TABLE IF NOT EXISTS downloads (
   model_id TEXT NOT NULL,
   day      TEXT NOT NULL,
   starts   INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY (model_id, day)
+) WITHOUT ROWID;
+
+-- Running download total per entry (migration 0002). Written in the same batch as `downloads`;
+-- search and detail read this table and never aggregate `downloads`.
+CREATE TABLE IF NOT EXISTS download_totals (
+  kind     TEXT NOT NULL,             -- route kind: model | dataset
+  entry_id TEXT NOT NULL,             -- org/repo
+  total    INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (kind, entry_id)
 ) WITHOUT ROWID;
 
 -- Last check result per model/source/file. key = "<id>|<type>|<priority>|<path>".

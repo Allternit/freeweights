@@ -1,14 +1,21 @@
 import type { Env, Manifest, CatalogRow, ManifestSource } from './types';
 import { CATALOG_JSON, CATALOG_ETAG, MANIFESTS } from './data.generated';
 import {
-  addDownload, addOriginBytes, bumpCounter, downloadTotals, effective, getStates, isPaidOrigin,
-  originGuardOn, sourceSummary,
+  addDownload, addOriginBytes, allTotals, bumpCounter, effective, isPaidOrigin,
+  originGuardOn, sourceSummary, totalsFor,
 } from './db';
-import { pickSource, stateKey } from './check';
+import { pickSource } from './check';
+import { countRule, isDailyCapError, pausedBody } from './rules';
 
 const CATALOG: { sections: unknown[]; models: CatalogRow[] } = JSON.parse(CATALOG_JSON);
 const ROWS = new Map(CATALOG.models.map((r) => [r.id, r]));
 const manifestCache = new Map<string, Manifest>();
+const countCache = new Map<string, (path: string) => boolean>();
+const counts = (m: Manifest, path: string) => {
+  let rule = countCache.get(m.id);
+  if (!rule) { rule = countRule(m.files); countCache.set(m.id, rule); }
+  return rule(path);
+};
 const getManifest = (id: string): Manifest | null => {
   const raw = MANIFESTS[id];
   if (!raw) return null;
@@ -21,6 +28,22 @@ const CORS = { 'access-control-allow-origin': '*' };
 const json = (body: unknown, status = 200, extra: HeadersInit = {}) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', ...CORS, ...extra } });
 const err = (status: number, error: string, message: string, extra: HeadersInit = {}) => json({ error, message }, status, extra);
+
+// ---- Pause at the daily cap -------------------------------------------------------------------
+// After a D1 daily-limit error this isolate answers D1-backed routes with 503 until 00:00 UTC
+// without trying D1 again. Catalog, manifests, tree and the Xet token pass do not use D1 and stay up.
+let pausedUntil = 0;
+const pause = () => {
+  const now = Date.now();
+  const { body, retryAfter } = pausedBody(now);
+  pausedUntil = Date.parse(body.resumes_at);
+  return json(body, 503, { 'retry-after': String(retryAfter), 'cache-control': 'no-store' });
+};
+const notePause = (e: unknown) => { if (isDailyCapError(e)) pause(); else throw e; }; // for waitUntil work
+const d1 = async (run: () => Promise<Response>): Promise<Response> => {
+  if (Date.now() < pausedUntil) return pause();
+  try { return await run(); } catch (e) { if (isDailyCapError(e)) return pause(); throw e; }
+};
 
 // ---- Auth -------------------------------------------------------------------------------------
 // hf_ tokens are refused; alt_ is reserved. The token value is never logged, stored or echoed.
@@ -53,7 +76,6 @@ async function search(env: Env, url: URL): Promise<Response> {
   const limit = Math.min(1000, Math.max(1, Number(q.get('limit')) || 50));
   const offset = Math.max(0, Number(q.get('cursor')) || 0);
   const sort = q.get('sort') || 'added';
-  const totals = await downloadTotals(env);
   let rows = CATALOG.models.filter((r) =>
     (!needle || r.id.toLowerCase().includes(needle) || r.display_name.toLowerCase().includes(needle)) &&
     (!q.get('section') || r.section === q.get('section')) &&
@@ -64,6 +86,8 @@ async function search(env: Env, url: URL): Promise<Response> {
     (!q.get('source') || r.badges.includes(q.get('source')!)) &&
     // total_size 0 = unknown (gated link-only rows have no file listing), so a size filter never matches them.
     (maxSize === null || (r.total_size > 0 && r.total_size <= maxSize)));
+  // Sorting by downloads needs every total; any other sort reads totals for the page only.
+  let totals = sort === 'downloads' ? await allTotals(env, 'model') : new Map<string, number>();
   const dl = (r: CatalogRow) => totals.get(r.id) ?? 0;
   const cmp: Record<string, (a: CatalogRow, b: CatalogRow) => number> = {
     added: (a, b) => b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
@@ -73,6 +97,7 @@ async function search(env: Env, url: URL): Promise<Response> {
   };
   rows = rows.sort(cmp[sort] || cmp.added);
   const page = rows.slice(offset, offset + limit);
+  if (sort !== 'downloads') totals = await totalsFor(env, 'model', page.map((r) => r.id));
   const headers: Record<string, string> = {};
   if (offset + limit < rows.length) {
     const next = new URL(url); next.searchParams.set('cursor', String(offset + limit));
@@ -84,7 +109,7 @@ async function search(env: Env, url: URL): Promise<Response> {
 async function detail(env: Env, id: string): Promise<Response> {
   const m = getManifest(id), r = ROWS.get(id);
   if (!r) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
-  const totals = await downloadTotals(env);
+  const totals = await totalsFor(env, 'model', [id]);
   if (!m) { // link-only row: listed with its license and source link, no files served here
     return json({ ...summary(r, undefined, totals.get(id) ?? 0), siblings: [], sources: [], upstream_url: r.upstream_url, catalog: r });
   }
@@ -157,9 +182,9 @@ async function resolve(env: Env, ctx: ExecutionContext, req: Request, id: string
     return new Response(null, { status: 200, headers });
   } else {
     ctx.waitUntil((async () => {
-      await addDownload(env, id);
+      if (counts(m, f.path)) await addDownload(env, 'model', id); // once per entry download (rules.ts)
       if (isPaidOrigin(env, res.url)) await addOriginBytes(env, f.size);
-    })());
+    })().catch(notePause));
   }
   return new Response(null, { status: 302, headers });
 }
@@ -172,7 +197,7 @@ export default {
 
     const kind = tokenKind(req, url);
     if (kind === 'hf') {
-      ctx.waitUntil(bumpCounter(env, 'hf_token_rejected')); // fact only, never the value
+      ctx.waitUntil(bumpCounter(env, 'hf_token_rejected').catch(notePause)); // fact only, never the value
       return err(401, 'hf_token_rejected', 'Freeweights does not accept Hugging Face tokens. Downloads need no token.');
     }
     if (kind === 'alt') return err(401, 'alt_tokens_not_yet', 'alt_ tokens are reserved and not yet accepted. Public reads need no token.');
@@ -181,7 +206,7 @@ export default {
     let mt: RegExpMatchArray | null;
     const seg = (s: string) => decodeURIComponent(s);
     try {
-      if (p === '/api/models') return await search(env, url);
+      if (p === '/api/models') return await d1(() => search(env, url));
       if (p === '/api/catalog') {
         if (req.headers.get('if-none-match') === CATALOG_ETAG) return new Response(null, { status: 304, headers: { etag: CATALOG_ETAG, ...CORS } });
         return new Response(CATALOG_JSON, { headers: { 'content-type': 'application/json', etag: CATALOG_ETAG, 'cache-control': 'public, max-age=300', ...CORS } });
@@ -199,7 +224,10 @@ export default {
         return new Response(up.body, { status: up.status, headers: { 'content-type': up.headers.get('content-type') ?? 'application/json', 'cache-control': 'no-store', ...CORS } });
       }
       if ((mt = p.match(/^\/api\/models\/([^/]+)\/([^/]+)\/tree\/([^/]+)$/))) return tree(`${seg(mt[1])}/${seg(mt[2])}`, seg(mt[3]));
-      if ((mt = p.match(/^\/api\/models\/([^/]+)\/([^/]+)(?:\/revision\/[^/]+)?$/))) return await detail(env, `${seg(mt[1])}/${seg(mt[2])}`);
+      if ((mt = p.match(/^\/api\/models\/([^/]+)\/([^/]+)(?:\/revision\/[^/]+)?$/))) {
+        const did = `${seg(mt[1])}/${seg(mt[2])}`;
+        return await d1(() => detail(env, did));
+      }
       if ((mt = p.match(/^\/manifests\/([^/]+)\/([^/]+?)\.json(\.minisig)?$/))) {
         const raw = MANIFESTS[`${seg(mt[1])}/${seg(mt[2])}`];
         const body = mt[3] ? raw?.sig : raw?.json; // exact stored bytes, never re-serialized
@@ -207,7 +235,8 @@ export default {
         return new Response(req.method === 'HEAD' ? null : body, { headers: { 'content-type': mt[3] ? 'text/plain; charset=utf-8' : 'application/json', 'cache-control': 'public, max-age=300', ...CORS } });
       }
       if ((mt = p.match(/^\/([^/]+)\/([^/]+)\/resolve\/([^/]+)\/(.+)$/)) && mt[1] !== 'api' && mt[1] !== 'manifests') {
-        return await resolve(env, ctx, req, `${seg(mt[1])}/${seg(mt[2])}`, seg(mt[3]), seg(mt[4]));
+        const [o, r, rev, path] = [seg(mt[1]), seg(mt[2]), seg(mt[3]), seg(mt[4])];
+        return await d1(() => resolve(env, ctx, req, `${o}/${r}`, rev, path));
       }
     } catch (e) {
       if (e instanceof URIError) return err(400, 'bad_request', 'Malformed URL encoding.');

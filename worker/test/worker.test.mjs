@@ -6,6 +6,7 @@ import { mkdtempSync, readFileSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { countRule, isDailyCapError, pausedBody } from '../src/rules.ts';
 
 const here = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = process.env.TEST_PORT || '8799';
@@ -116,13 +117,55 @@ test('detail, tree, catalog, manifest passthrough', async () => {
   assert.equal((await get('/manifests/x/y.json')).status, 404);
 });
 
-test('download starts count on GET, not on HEAD', async () => {
-  const starts = async () => (await (await get('/api/models?sort=downloads')).json()).find((m) => m.id === id).downloads;
+// Plan A8: one count per entry download (not per file), stored in download_totals and read by
+// search (both the downloads sort and the page-only path) and detail.
+test('download starts count once per entry download on GET, not on HEAD or other files', async () => {
+  const counts = countRule(man.files);
+  const anchor = man.files.find((f) => counts(f.path));
+  const other = man.files.find((f) => !counts(f.path));
+  const starts = async () => {
+    const byDl = (await (await get('/api/models?sort=downloads&limit=1000')).json()).find((m) => m.id === id).downloads;
+    const byName = (await (await get('/api/models?sort=name&limit=1000')).json()).find((m) => m.id === id).downloads;
+    const detail = (await (await get(`/api/models/${id}`)).json()).downloads;
+    assert.equal(byName, byDl);
+    assert.equal(detail, byDl);
+    return byDl;
+  };
   const before = await starts();
-  await get(rpath(lfs), { method: 'HEAD' });
-  await get(rpath(lfs));
+  await get(rpath(anchor), { method: 'HEAD' });
+  await get(rpath(anchor));
+  if (other) await get(rpath(other));
   await new Promise((r) => setTimeout(r, 500));
   assert.equal(await starts(), before + 1);
+  const top = (await (await get('/api/models?sort=downloads')).json())[0];
+  assert.equal(top.id, id);
+});
+
+test('count rule: GGUF quants each count, later shards do not; else config.json, model_index.json, largest', () => {
+  const g = countRule([{ path: 'config.json', size: 1 }, { path: 'a-Q4.gguf', size: 9 },
+    { path: 'Q8/b-00001-of-00002.gguf', size: 9 }, { path: 'Q8/b-00002-of-00002.gguf', size: 9 }]);
+  assert.deepEqual(['config.json', 'a-Q4.gguf', 'Q8/b-00001-of-00002.gguf', 'Q8/b-00002-of-00002.gguf'].map(g),
+    [false, true, true, false]);
+  const c = countRule([{ path: 'sub/config.json', size: 1 }, { path: 'config.json', size: 1 }, { path: 'model.safetensors', size: 9 }]);
+  assert.deepEqual(['config.json', 'sub/config.json', 'model.safetensors'].map(c), [true, false, false]);
+  const d = countRule([{ path: 'model_index.json', size: 1 }, { path: 'unet/config.json', size: 1 }]);
+  assert.equal(d('model_index.json'), true);
+  const l = countRule([{ path: 'b.parquet', size: 5 }, { path: 'a.parquet', size: 5 }, { path: 'README.md', size: 1 }]);
+  assert.deepEqual(['a.parquet', 'b.parquet', 'README.md'].map(l), [true, false, false]);
+});
+
+// Eoj's decision: at the free-plan daily cap the API pauses until 00:00 UTC with a public note.
+test('daily cap: D1 limit errors pause until the next 00:00 UTC; other errors do not', () => {
+  assert.ok(isDailyCapError(new Error('D1_ERROR: Your account has reached its daily D1 Free tier row read limit.')));
+  assert.ok(isDailyCapError(new Error('D1_ERROR', { cause: new Error('reached its daily D1 Free tier row write limit') })));
+  assert.ok(!isDailyCapError(new Error('D1_ERROR: too many SQL variables')));
+  assert.ok(!isDailyCapError(new Error('no such table: download_totals')));
+  const now = Date.UTC(2026, 10, 14, 23, 59, 30);
+  const { body, retryAfter } = pausedBody(now);
+  assert.equal(body.error, 'api_paused_daily_cap');
+  assert.equal(body.resumes_at, '2026-11-15T00:00:00.000Z');
+  assert.equal(retryAfter, 30);
+  assert.match(body.message, /00:00 UTC/);
 });
 
 // Regression (2026-11-14): link-only rows (non-commercial, territory-limited, gated) have no manifest,

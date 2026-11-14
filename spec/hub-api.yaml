@@ -44,7 +44,16 @@ info:
     `X-Freeweights-Origin-Guard: on` is set on resolve replies while it is active.
 
     ## Counts
-    Counts read "download starts", because a redirect cannot see a finished download.
+    Counts read "download starts", because a redirect cannot see a finished download. One start is counted
+    per entry download, not per file: in a repo with `.gguf` files each `.gguf` GET counts (split shards
+    after the first do not); otherwise the GET of the root `config.json`, else the root `model_index.json`,
+    else the largest file. HEAD never counts.
+
+    ## Daily cap pause
+    The Worker runs on free daily limits. When the database refuses a query because a daily limit is used,
+    the routes that need it (search, detail, resolve) reply 503 `api_paused_daily_cap` with `Retry-After`
+    and `resumes_at` (the next 00:00 UTC). The site, `/api/catalog`, `/manifests/...`, the file tree and the
+    source URLs listed in each manifest stay up, so a client can still fetch files from their sources directly.
 servers:
   - url: https://freeweights.allternit.com
     description: Production
@@ -81,6 +90,7 @@ paths:
             application/json:
               schema: {type: array, items: {$ref: '#/components/schemas/ModelSummary'}}
         '401': {$ref: '#/components/responses/HfTokenRejected'}
+        '503': {$ref: '#/components/responses/PausedDailyCap'}
   /api/models/{org}/{repo}:
     get:
       tags: [hub]
@@ -97,6 +107,7 @@ paths:
               schema: {$ref: '#/components/schemas/ModelDetail'}
         '401': {$ref: '#/components/responses/HfTokenRejected'}
         '404': {$ref: '#/components/responses/Error'}
+        '503': {$ref: '#/components/responses/PausedDailyCap'}
   /api/models/{org}/{repo}/tree/{rev}:
     get:
       tags: [hub]
@@ -131,7 +142,8 @@ paths:
       operationId: resolveFile
       summary: Redirect to the best live source
       description: |
-        Runs the check-on-read rule and replies 302 to the first live source. Counts one download start.
+        Runs the check-on-read rule and replies 302 to the first live source. Counts one download start when
+        the file is the entry's counted file (see Counts).
         The redirect may point at a Freeweights origin, a registered mirror, a web seed or the upstream publisher.
         A `Range` request is passed through to that source by the client after the redirect.
       responses:
@@ -144,7 +156,7 @@ paths:
             application/json:
               schema: {$ref: '#/components/schemas/Error'}
         '503':
-          description: No live source within the time limit; the model moves to Wanted.
+          description: No live source within the time limit (`no_live_source_in_time`), or the API is paused at the daily cap (`api_paused_daily_cap`, see PausedDailyCap).
           headers:
             Retry-After: {schema: {type: integer}}
           content:
@@ -167,6 +179,7 @@ paths:
         '302': {$ref: '#/components/responses/Redirect'}
         '401': {$ref: '#/components/responses/HfTokenRejected'}
         '404': {$ref: '#/components/responses/Error'}
+        '503': {$ref: '#/components/responses/PausedDailyCap'}
   /api/catalog:
     get:
       tags: [catalog]
@@ -247,6 +260,20 @@ components:
         application/json:
           schema: {$ref: '#/components/schemas/Error'}
           example: {error: hf_token_rejected, message: Freeweights does not accept Hugging Face tokens. Downloads need no token.}
+    PausedDailyCap:
+      description: The API is paused until 00:00 UTC because a daily free-tier limit was used. Manifests and source URLs stay up.
+      headers:
+        Retry-After: {schema: {type: integer}, description: Seconds until 00:00 UTC.}
+      content:
+        application/json:
+          schema:
+            allOf:
+              - {$ref: '#/components/schemas/Error'}
+              - type: object
+                required: [resumes_at]
+                properties:
+                  resumes_at: {type: string, format: date-time}
+          example: {error: api_paused_daily_cap, message: The Freeweights API is paused until 00:00 UTC because a daily free-tier limit was reached., resumes_at: '2026-11-15T00:00:00.000Z'}
     Error:
       description: Error.
       content:
@@ -257,7 +284,7 @@ components:
       type: object
       required: [error, message]
       properties:
-        error: {type: string, description: 'Stable code, for example model_not_found, model_wanted, hf_token_rejected.'}
+        error: {type: string, description: 'Stable code, for example model_not_found, model_wanted, hf_token_rejected, api_paused_daily_cap.'}
         message: {type: string}
     SourceState:
       type: object
