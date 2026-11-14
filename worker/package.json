@@ -1,0 +1,19 @@
+{
+  "name": "freeweights-worker",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs",
+    "dev": "wrangler dev --local",
+    "db:local": "wrangler d1 execute freeweights --local --file=schema.sql",
+    "typecheck": "node scripts/build-data.mjs && tsc --noEmit",
+    "test": "node scripts/build-data.mjs && node --test test/"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261113.1",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.0.0"
+  }
+}

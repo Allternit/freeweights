@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://freeweights.allternit.com/spec/catalog-schema.json",
+  "title": "Freeweights catalog",
+  "description": "A catalog row is one model. The catalog file is {sections, models}.",
+  "$defs": {
+    "section_id": {"type": "string", "pattern": "^alt\\.freeweights\\.[a-z0-9-]+$"},
+    "row": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "display_name", "section", "family", "tasks", "license_id", "redistribution", "formats", "total_size", "abliterated", "badges", "upstream_url", "added_at"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$"},
+        "display_name": {"type": "string"},
+        "section": {"$ref": "#/$defs/section_id"},
+        "family": {"type": "string"},
+        "tasks": {"type": "array", "items": {"type": "string"}, "description": "Task tags such as text-generation, embedding, text-to-speech."},
+        "license_id": {"type": "string"},
+        "redistribution": {"enum": ["yes", "no", "click-through"]},
+        "formats": {"type": "array", "items": {"enum": ["safetensors", "gguf", "mlx", "onnx", "parquet", "jsonl", "json", "csv", "arrow", "text", "other"]}, "description": "Weight formats for models, data formats for datasets. Empty for link-only entries with no file listing (gated datasets)."},
+        "total_size": {"type": "integer", "minimum": 0, "description": "Bytes across all manifest files."},
+        "params": {"type": ["integer", "null"], "minimum": 0, "description": "Parameter count if known."},
+        "base_model": {"type": ["string", "null"], "description": "id of the base model, if this is a derivative."},
+        "abliterated": {"type": "boolean"},
+        "what_changed": {"type": ["string", "null"], "description": "Required (non-empty) when abliterated is true."},
+        "badges": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["hosted", "seeded", "source"]}},
+        "manifest_url": {"type": "string", "format": "uri", "description": "Absent for From-source-only rows that have no manifest."},
+        "upstream_url": {"type": "string", "format": "uri"},
+        "added_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"},
+        "sample": {"type": "boolean"},
+        "requires_terms": {"type": "boolean", "description": "True when the user must accept the license or gate terms before download."},
+        "license_class": {"enum": ["permissive", "custom", "non-commercial", "gated"]},
+        "license_url": {"type": "string", "format": "uri", "description": "Link to the license text or gate page."},
+        "note": {"type": "string"}
+      },
+      "if": {"properties": {"abliterated": {"const": true}}},
+      "then": {"required": ["what_changed"], "properties": {"what_changed": {"type": "string", "minLength": 1}}}
+    },
+    "section": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "description"],
+      "properties": {
+        "id": {"$ref": "#/$defs/section_id"},
+        "name": {"type": "string"},
+        "description": {"type": "string"},
+        "count": {"type": "integer", "minimum": 0}
+      }
+    }
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/row"},
+    {
+      "type": "object", "additionalProperties": false,
+      "required": ["sections", "models"],
+      "properties": {
+        "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}},
+        "models": {"type": "array", "items": {"$ref": "#/$defs/row"}}
+      }
+    }
+  ],
+  "x-sections": [
+    {"id": "alt.freeweights.qwen", "name": "Qwen", "description": "Qwen language, vision, embedding, speech and image models."},
+    {"id": "alt.freeweights.deepseek", "name": "DeepSeek", "description": "DeepSeek models and community GGUF builds."},
+    {"id": "alt.freeweights.kimi", "name": "Kimi", "description": "Moonshot Kimi models and drafters."},
+    {"id": "alt.freeweights.glm", "name": "GLM", "description": "Z.ai GLM models."},
+    {"id": "alt.freeweights.minimax", "name": "MiniMax", "description": "MiniMax models and GGUF builds."},
+    {"id": "alt.freeweights.mimo", "name": "MiMo", "description": "Xiaomi MiMo models and distills."},
+    {"id": "alt.freeweights.gemma", "name": "Gemma", "description": "Google Gemma models."},
+    {"id": "alt.freeweights.gpt-oss", "name": "gpt-oss", "description": "OpenAI gpt-oss models."},
+    {"id": "alt.freeweights.olmo", "name": "Olmo", "description": "Ai2 Olmo fully open models."},
+    {"id": "alt.freeweights.nemotron", "name": "Nemotron", "description": "NVIDIA Nemotron models."},
+    {"id": "alt.freeweights.phi", "name": "Phi", "description": "Microsoft Phi models."},
+    {"id": "alt.freeweights.mistral", "name": "Mistral", "description": "Mistral and Ministral models."},
+    {"id": "alt.freeweights.speech", "name": "Speech", "description": "Speech recognition and text-to-speech models."},
+    {"id": "alt.freeweights.embed", "name": "Embeddings", "description": "Embedding and reranker models from any family."},
+    {"id": "alt.freeweights.image", "name": "Image", "description": "Image generation models."},
+    {"id": "alt.freeweights.video", "name": "Video", "description": "Text-to-video and image-to-video models."},
+    {"id": "alt.freeweights.music", "name": "Music", "description": "Music and song generation models."},
+    {"id": "alt.freeweights.ocr", "name": "OCR", "description": "Document and text recognition models."},
+    {"id": "alt.freeweights.datasets", "name": "Datasets", "description": "Training and evaluation datasets with open licenses."},
+    {"id": "alt.freeweights.tools", "name": "Tools", "description": "Inference and training tools, linked to their source repos."},
+    {"id": "alt.freeweights.abliterated", "name": "Abliterated", "description": "Models with refusal behavior removed, each labeled with what changed."},
+    {"id": "alt.freeweights.allternit", "name": "Allternit", "description": "Allternit builds, hosted by Allternit."}
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "currency": "USD",
+  "goals": [
+    {
+      "id": "goal-1",
+      "stage": 1,
+      "name": "Tracker and hub",
+      "unlocks": "Our tracker (weightless, MIT), hub server, seeds; up to 1 TB Hosted. Setup: Oracle free VM or a 1 TB seedbox with written clearance.",
+      "amount_usd_min": 45,
+      "amount_usd_max": 45,
+      "amount_note": "3 months x 15 USD; or a verified free VM",
+      "raised_usd": 0
+    },
+    {
+      "id": "goal-2",
+      "stage": 2,
+      "name": "Origin",
+      "unlocks": "Backblaze B2 behind Cloudflare as web-seed origin (6 TB, about 42 USD); permissive models move to Hosted; uploads open. Wasabi or R2 fallback.",
+      "amount_usd_min": 126,
+      "amount_usd_max": 270,
+      "amount_note": "prepaid",
+      "raised_usd": 0
+    },
+    {
+      "id": "goal-3",
+      "stage": 3,
+      "name": "Storage server",
+      "unlocks": "One storage server or object storage, 50 TB; community repos; more quants.",
+      "amount_usd_min": 1050,
+      "amount_usd_max": 2250,
+      "amount_note": "prepaid, or a sponsor or credits",
+      "raised_usd": 0
+    }
+  ]
+}

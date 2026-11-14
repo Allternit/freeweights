@@ -1,0 +1,23 @@
+# Allternit Freeweights
+
+open models, free to download. — freeweights.allternit.com
+
+Allternit Freeweights is the open source alternative's commons for open AI model weights:
+a public catalog where every file has a license, a checksum and a signed manifest, and every
+model says where its bytes come from (Hosted by Allternit, Community seeded, From source).
+
+Status: live at https://freeweights.allternit.com (Stage 0, 0 USD). Run by Allternit, the open source alternative. Rules: site/content/mission.md (Operating Statement) and policy/.
+
+| Path | What |
+|---|---|
+| spec/ | manifest-v0, catalog schema, hub API contract |
+| scripts/ | manifest builder, fw.py downloader/verifier, catalog builder |
+| catalog/ | generated catalog rows; _audit/ license audit |
+| worker/ | Cloudflare Worker (read API, redirects, counts) |
+| site/ | static site (freeweights.allternit.com) |
+| policy/ | ethos, content policy, takedown, license allow-list, support terms |
+| ledger/, mirrors/ | public cost ledger, mirror registry |
+
+
+
+Code: Apache-2.0 (LICENSE). Catalog, manifests and ledger data: CC0 (LICENSE-CC0.txt in each folder). Future C tools: MIT. Model weights keep their own licenses, listed per model.

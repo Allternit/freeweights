@@ -1,0 +1,13 @@
+{
+  "name": "freeweights-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static site for freeweights.allternit.com, generated from the catalog, manifests, ledger and mirror registry.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "python3 -m http.server 8787 --directory dist"
+  },
+  "engines": { "node": ">=18" }
+}

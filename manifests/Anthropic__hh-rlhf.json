@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-14T06:37:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "79deb409a995d414d9b2e89b5e16a5f46fcaa7596c63242dd0bd72311a422458",
+      "size": 2265
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f75f40db0268656ba07736ec8e59a9720c1910ce554c85354cec74b1c8bda175",
+      "size": 5771
+    },
+    {
+      "lfs": true,
+      "path": "harmless-base/test.jsonl.gz",
+      "sha256": "ebfaaed21162a4de120ae85366075b34425e2a6303fac59b99555002f7016f03",
+      "size": 742801
+    },
+    {
+      "lfs": true,
+      "path": "harmless-base/train.jsonl.gz",
+      "sha256": "bf3e1ecd3db61bf21d190f69351d26670c67aababa0fd282fa008c17a7202217",
+      "size": 13197306
+    },
+    {
+      "lfs": true,
+      "path": "helpful-base/test.jsonl.gz",
+      "sha256": "8be3fc1a13b27901631696f2be6f184c799f1baeaf145f53ac5db24960adc37b",
+      "size": 875191
+    },
+    {
+      "lfs": true,
+      "path": "helpful-base/train.jsonl.gz",
+      "sha256": "518a5bf288456fc9f3b7c980c54116fba0c52f274d3f4d344675d83e4058f6f4",
+      "size": 16200131
+    },
+    {
+      "lfs": true,
+      "path": "helpful-online/test.jsonl.gz",
+      "sha256": "39a475cc7e0df972902f8e3a0972726fce826ac65369bda8c671de4330c60a10",
+      "size": 1053578
+    },
+    {
+      "lfs": true,
+      "path": "helpful-online/train.jsonl.gz",
+      "sha256": "0994d18b82083f5c084ce04071b683958a724df8c7215ab1d851986642d36a2a",
+      "size": 20127228
+    },
+    {
+      "lfs": true,
+      "path": "helpful-rejection-sampled/test.jsonl.gz",
+      "sha256": "abc35dbc56015db1dae0faa484514ccbc3eee0133bfcd557fc69250619b028bb",
+      "size": 1361231
+    },
+    {
+      "lfs": true,
+      "path": "helpful-rejection-sampled/train.jsonl.gz",
+      "sha256": "0cea2d2ab2187624ec1314e8cc6fb579f0fa987b3a33e8102b7556ed4d255f64",
+      "size": 25697148
+    },
+    {
+      "lfs": true,
+      "path": "red-team-attempts/red_team_attempts.jsonl.gz",
+      "sha256": "4c7b0069991460f0064f279fd400b51f3f0095697d14d7793c49b0925f80814f",
+      "size": 15483307
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Anthropic/hh-rlhf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f75f40db0268656ba07736ec8e59a9720c1910ce554c85354cec74b1c8bda175",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.datasets",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T06:37:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/datasets/Anthropic/hh-rlhf/resolve/09be8c5bbc57cb3887f3a9732ad6aa7ec602a1fa/"
+    }
+  ],
+  "upstream": {
+    "commit": "09be8c5bbc57cb3887f3a9732ad6aa7ec602a1fa",
+    "host": "huggingface.co",
+    "repo": "Anthropic/hh-rlhf",
+    "url": "https://huggingface.co/datasets/Anthropic/hh-rlhf/tree/09be8c5bbc57cb3887f3a9732ad6aa7ec602a1fa"
+  }
+}

@@ -1,0 +1,313 @@
+openapi: 3.1.0
+info:
+  title: Freeweights hub read API
+  version: 0.1.0
+  license:
+    name: Apache-2.0
+    identifier: Apache-2.0
+  description: |
+    Read API implemented by the Stage 0 Cloudflare Worker and kept by the Stage 1 hub (MatrixHub fork).
+    Both share this one route contract (plan F8). The model routes are compatible with the Hugging Face
+    Hub, so `HF_ENDPOINT=https://freeweights.allternit.com` works for downloads.
+
+    ## Auth
+    Public reads need no account and no token. Later stages add tokens with the `alt_` prefix
+    (`Authorization: Bearer alt_...`). A request that carries a Hugging Face token (`hf_` prefix) in any
+    header or query is refused with 401 `hf_token_rejected`. The token value is never logged, never
+    stored, and never forwarded; only the fact of the rejection is counted.
+
+    ## Source states
+    Each manifest source (`hosted`, `seeded`, `source`) is in one state:
+
+    | State | Meaning |
+    | --- | --- |
+    | `live` | The last check passed within the freshness window. |
+    | `stale` | The last check is older than the window; it is re-checked on the next read. |
+    | `failed` | The last check failed (HEAD error, size mismatch with the manifest, commit gone). |
+    | `skipped` | Not used on purpose, for example upstream while the origin budget guard is off, or a source with no capacity. |
+
+    A model with no `live` source is moved to Wanted and returns 404 `model_wanted` on resolve.
+
+    ## Check on read (plan F4)
+    There is no cron checker. When `resolve` is called, the Worker takes sources in priority order. For each
+    one that is `stale`, it runs a HEAD (hosted and source) or a tracker/partner lookup (seeded) with a short time
+    limit (1500 ms per source, 3000 ms in total), compares size with the manifest, and records the result in D1.
+    The first `live` source wins and the reply is a 302 to it. The `source` check must see the pinned commit
+    and the manifest size; a changed or removed file marks the source `failed`. Fresh results are reused for
+    the freshness window (default 10 minutes), so a burst of reads costs one check.
+
+    ## Origin budget guard (plan F11)
+    The Worker tracks origin egress for the month against a configured budget. When the budget is used,
+    `hosted` sources that sit on a paid origin are set to `skipped` for resolve: the source order moves
+    upstream (`source`) and torrent magnets (`seeded`) come first in `/api/models/{org}/{repo}` source lists.
+    Mirrors with their own capacity are not affected. The guard resets with the month. Header
+    `X-Freeweights-Origin-Guard: on` is set on resolve replies while it is active.
+
+    ## Counts
+    Counts read "download starts", because a redirect cannot see a finished download.
+servers:
+  - url: https://freeweights.allternit.com
+    description: Production
+tags:
+  - name: hub
+    description: Hugging Face compatible model routes
+  - name: catalog
+    description: Static catalog and signed manifests
+paths:
+  /api/models:
+    get:
+      tags: [hub]
+      operationId: searchModels
+      summary: Search and filter models
+      description: Same response shape as the Hugging Face `GET /api/models`. Order is by `sort`, never paid.
+      parameters:
+        - {name: search, in: query, schema: {type: string}, description: Text match on id and display name.}
+        - {name: section, in: query, schema: {type: string, pattern: '^alt\.freeweights\.[a-z0-9-]+$'}}
+        - {name: author, in: query, schema: {type: string}, description: Organization part of the id.}
+        - {name: pipeline_tag, in: query, schema: {type: string}, description: Task tag.}
+        - {name: license, in: query, schema: {type: string}, description: License id.}
+        - {name: library, in: query, schema: {type: string, enum: [safetensors, gguf, mlx]}, description: Format.}
+        - {name: source, in: query, schema: {type: string, enum: [hosted, seeded, source]}, description: Badge filter.}
+        - {name: max_size, in: query, schema: {type: integer, minimum: 0}, description: Total size limit in bytes.}
+        - {name: sort, in: query, schema: {type: string, enum: [added, downloads, size, name], default: added}}
+        - {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 1000, default: 50}}
+        - {name: cursor, in: query, schema: {type: string}}
+      responses:
+        '200':
+          description: A page of models.
+          headers:
+            Link: {schema: {type: string}, description: 'rel="next" when more results exist.'}
+          content:
+            application/json:
+              schema: {type: array, items: {$ref: '#/components/schemas/ModelSummary'}}
+        '401': {$ref: '#/components/responses/HfTokenRejected'}
+  /api/models/{org}/{repo}:
+    get:
+      tags: [hub]
+      operationId: getModel
+      summary: Model detail
+      parameters:
+        - {$ref: '#/components/parameters/org'}
+        - {$ref: '#/components/parameters/repo'}
+      responses:
+        '200':
+          description: Model detail with source states.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ModelDetail'}
+        '401': {$ref: '#/components/responses/HfTokenRejected'}
+        '404': {$ref: '#/components/responses/Error'}
+  /api/models/{org}/{repo}/tree/{rev}:
+    get:
+      tags: [hub]
+      operationId: getTree
+      summary: File list at a revision
+      description: Hugging Face compatible tree. `rev` must be the pinned commit or `main` (which maps to the pinned commit).
+      parameters:
+        - {$ref: '#/components/parameters/org'}
+        - {$ref: '#/components/parameters/repo'}
+        - {$ref: '#/components/parameters/rev'}
+      responses:
+        '200':
+          description: Files in the manifest.
+          content:
+            application/json:
+              schema: {type: array, items: {$ref: '#/components/schemas/TreeEntry'}}
+        '401': {$ref: '#/components/responses/HfTokenRejected'}
+        '404': {$ref: '#/components/responses/Error'}
+  /{org}/{repo}/resolve/{rev}/{path}:
+    parameters:
+      - {$ref: '#/components/parameters/org'}
+      - {$ref: '#/components/parameters/repo'}
+      - {$ref: '#/components/parameters/rev'}
+      - name: path
+        in: path
+        required: true
+        description: File path inside the repo. May contain slashes.
+        schema: {type: string}
+        allowReserved: true
+    get:
+      tags: [hub]
+      operationId: resolveFile
+      summary: Redirect to the best live source
+      description: |
+        Runs the check-on-read rule and replies 302 to the first live source. Counts one download start.
+        The redirect may point at a Freeweights origin, a registered mirror, a web seed or the upstream publisher.
+        A `Range` request is passed through to that source by the client after the redirect.
+      responses:
+        '302': {$ref: '#/components/responses/Redirect'}
+        '401': {$ref: '#/components/responses/HfTokenRejected'}
+        '404': {$ref: '#/components/responses/Error'}
+        '451':
+          description: Removed after a takedown. Counted on the public takedown page.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+        '503':
+          description: No live source within the time limit; the model moves to Wanted.
+          headers:
+            Retry-After: {schema: {type: integer}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+    head:
+      tags: [hub]
+      operationId: resolveFileHead
+      summary: File metadata without a redirect body
+      description: Hugging Face clients call HEAD first. The reply has the metadata headers and Content-Length from the manifest; no source is contacted unless the cached state is stale.
+      responses:
+        '200':
+          description: Metadata.
+          headers:
+            X-Repo-Commit: {$ref: '#/components/headers/XRepoCommit'}
+            ETag: {$ref: '#/components/headers/ETag'}
+            X-Linked-Size: {$ref: '#/components/headers/XLinkedSize'}
+            X-Linked-Etag: {$ref: '#/components/headers/XLinkedEtag'}
+            Content-Length: {$ref: '#/components/headers/ContentLength'}
+        '302': {$ref: '#/components/responses/Redirect'}
+        '401': {$ref: '#/components/responses/HfTokenRejected'}
+        '404': {$ref: '#/components/responses/Error'}
+  /api/catalog:
+    get:
+      tags: [catalog]
+      operationId: getCatalog
+      summary: Whole catalog
+      description: Static file `catalog.json` served with caching. Shape is defined by `catalog-schema.json`.
+      responses:
+        '200':
+          description: Sections and model rows.
+          headers:
+            ETag: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: 'catalog-schema.json'}
+  /manifests/{org}/{repo}.json:
+    get:
+      tags: [catalog]
+      operationId: getManifest
+      summary: Signed manifest
+      description: Canonical JSON bytes, exactly as signed. Never re-serialized by the Worker.
+      parameters:
+        - {$ref: '#/components/parameters/org'}
+        - {$ref: '#/components/parameters/repo'}
+      responses:
+        '200':
+          description: Manifest (see manifest-v0.md).
+          content:
+            application/json:
+              schema: {$ref: 'manifest-v0.schema.json'}
+        '404': {$ref: '#/components/responses/Error'}
+  /manifests/{org}/{repo}.json.minisig:
+    get:
+      tags: [catalog]
+      operationId: getManifestSignature
+      summary: Detached minisign signature
+      description: Verify with `minisign -Vm <manifest>.json -P <pubkey>`.
+      parameters:
+        - {$ref: '#/components/parameters/org'}
+        - {$ref: '#/components/parameters/repo'}
+      responses:
+        '200':
+          description: Signature file.
+          content:
+            text/plain:
+              schema: {type: string}
+        '404': {$ref: '#/components/responses/Error'}
+components:
+  securitySchemes:
+    altToken:
+      type: http
+      scheme: bearer
+      description: Token with the alt_ prefix. Not needed for public reads. Tokens with the hf_ prefix are refused.
+  parameters:
+    org: {name: org, in: path, required: true, schema: {type: string, pattern: '^[A-Za-z0-9._-]+$'}}
+    repo: {name: repo, in: path, required: true, schema: {type: string, pattern: '^[A-Za-z0-9._-]+$'}}
+    rev: {name: rev, in: path, required: true, description: Pinned 40-hex commit or main., schema: {type: string}}
+  headers:
+    XRepoCommit: {schema: {type: string, pattern: '^[0-9a-f]{40}$'}, description: Pinned upstream commit.}
+    ETag: {schema: {type: string}, description: 'For LFS files, the file sha256 (quoted hex). For other files, the manifest sha256 as well.'}
+    XLinkedSize: {schema: {type: integer}, description: Size in bytes from the manifest (LFS files).}
+    XLinkedEtag: {schema: {type: string}, description: sha256 of the LFS file (quoted hex).}
+    ContentLength: {schema: {type: integer}, description: Size in bytes on HEAD.}
+    Location: {schema: {type: string, format: uri}, description: Best live source.}
+  responses:
+    Redirect:
+      description: Redirect to the best live source.
+      headers:
+        Location: {$ref: '#/components/headers/Location'}
+        X-Repo-Commit: {$ref: '#/components/headers/XRepoCommit'}
+        ETag: {$ref: '#/components/headers/ETag'}
+        X-Linked-Size: {$ref: '#/components/headers/XLinkedSize'}
+        X-Linked-Etag: {$ref: '#/components/headers/XLinkedEtag'}
+        X-Freeweights-Source: {schema: {type: string, enum: [hosted, seeded, source]}, description: Source type chosen.}
+        X-Freeweights-Origin-Guard: {schema: {type: string, enum: ['on']}, description: Present while the origin budget guard is active.}
+    HfTokenRejected:
+      description: A Hugging Face token (hf_ prefix) was sent. Refused; the token is not logged.
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {error: hf_token_rejected, message: Freeweights does not accept Hugging Face tokens. Downloads need no token.}
+    Error:
+      description: Error.
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+  schemas:
+    Error:
+      type: object
+      required: [error, message]
+      properties:
+        error: {type: string, description: 'Stable code, for example model_not_found, model_wanted, hf_token_rejected.'}
+        message: {type: string}
+    SourceState:
+      type: object
+      required: [type, state, priority, last_checked]
+      properties:
+        type: {type: string, enum: [hosted, seeded, source]}
+        state: {type: string, enum: [live, stale, failed, skipped]}
+        priority: {type: integer}
+        last_checked: {type: [string, 'null'], format: date-time}
+        reason: {type: string, description: Why failed or skipped.}
+    ModelSummary:
+      type: object
+      required: [id, modelId, sha, tags, downloads]
+      properties:
+        id: {type: string}
+        modelId: {type: string}
+        sha: {type: string, description: Pinned commit.}
+        pipeline_tag: {type: string}
+        library_name: {type: string}
+        tags: {type: array, items: {type: string}}
+        downloads: {type: integer, description: Download starts.}
+        lastModified: {type: string, format: date-time}
+        section: {type: string}
+        license: {type: string}
+        badges: {type: array, items: {type: string, enum: [hosted, seeded, source]}}
+    ModelDetail:
+      allOf:
+        - $ref: '#/components/schemas/ModelSummary'
+        - type: object
+          properties:
+            siblings:
+              type: array
+              items:
+                type: object
+                properties:
+                  rfilename: {type: string}
+            sources: {type: array, items: {$ref: '#/components/schemas/SourceState'}}
+            manifest_url: {type: string, format: uri}
+            upstream_url: {type: string, format: uri}
+            catalog: {$ref: 'catalog-schema.json#/$defs/row'}
+    TreeEntry:
+      type: object
+      required: [type, path, size, oid]
+      properties:
+        type: {type: string, enum: [file]}
+        path: {type: string}
+        size: {type: integer}
+        oid: {type: string, description: sha256 from the manifest.}
+        lfs:
+          type: object
+          properties:
+            oid: {type: string}
+            size: {type: integer}

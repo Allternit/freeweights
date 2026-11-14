@@ -1,0 +1,36 @@
+# Freeweights Stage 0 Worker. Deployed 2026-11-14 (Gate G0).
+# No account id is committed. Set CLOUDFLARE_ACCOUNT_ID in the environment when deploying.
+name = "freeweights-worker"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# Cloudflare routes allow wildcards only at the hostname start and path end, so the Worker
+# takes freeweights.allternit.com/* and passes non-API paths through to Pages (PASSTHROUGH).
+# Static prefixes (assets, manifests, catalog pages, docs) get zone routes with no Worker,
+# created by scripts/cf_static_routes.sh, so site traffic does not use Worker requests.
+routes = [
+  { pattern = "freeweights.allternit.com/*", zone_name = "allternit.com" },
+]
+
+[build]
+command = "node scripts/build-data.mjs"
+cwd = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "freeweights"
+database_id = "67ac7c53-9af4-4371-97d2-7b9982e1cc6a"
+
+[vars]
+# Source freshness window (ms). Plan F4 default: 10 minutes.
+FRESH_MS = "600000"
+# "live" = check sources on read. "offline" = trust the manifest (tests, no network).
+CHECK_MODE = "live"
+# Max Hugging Face checks per 5-minute window across all isolates. HF limit is 3000 anonymous / 5000 free user.
+HF_CHECK_CAP = "2000"
+# Origin budget guard (plan F11). 0 = guard disabled.
+ORIGIN_BUDGET_BYTES = "0"
+# Comma list of hostnames of paid origins counted against the budget.
+PAID_ORIGIN_HOSTS = ""
+# Pass non-Worker paths through to the Pages origin (production only; tests leave it unset).
+PASSTHROUGH = "1"

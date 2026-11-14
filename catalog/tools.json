@@ -1,0 +1,625 @@
+{
+  "tools": [
+    {
+      "id": "comfyui",
+      "name": "ComfyUI",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "license": "GPL-3.0",
+      "what": "Node-based app for running image, video and music models. Most of the newer ones in this catalog are packaged for it.",
+      "kind": "ui",
+      "install": [
+        "git clone https://github.com/comfyanonymous/ComfyUI",
+        "cd ComfyUI && pip install -r requirements.txt",
+        "python main.py"
+      ],
+      "use": "# put the files in ComfyUI/models/ and open the publisher's workflow",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "works_with": {
+        "role": "runs",
+        "sections": [
+          "image",
+          "video",
+          "music"
+        ],
+        "tasks": [
+          "text-to-image",
+          "image-to-image",
+          "text-to-video",
+          "image-to-video",
+          "text-to-audio"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://www.comfy.org/",
+      "github": {
+        "repo": "Comfy-Org/ComfyUI",
+        "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+        "homepage": "https://www.comfy.org/",
+        "language": "Python",
+        "topics": [
+          "ai",
+          "comfy",
+          "comfyui",
+          "python",
+          "pytorch",
+          "stable-diffusion"
+        ],
+        "default_branch": "master",
+        "license": "GPL-3.0",
+        "branch_commit": "eee59185ff4f43ae2d9ad122b245619d27d9daad",
+        "release": {
+          "tag": "v0.45.0",
+          "date": "2026-11-10",
+          "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.45.0",
+          "commit": "989d93d0d968e704c589ce0146bb18c77f6b50cc"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "llama-cpp",
+      "name": "llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "license": "MIT",
+      "what": "Runs GGUF language models on CPUs and consumer GPUs, with a local server.",
+      "kind": "inference",
+      "install": [
+        "brew install llama.cpp"
+      ],
+      "use": "llama-server -m ./<file>.gguf --port 8080",
+      "platforms": [
+        "macOS",
+        "Linux",
+        "Windows"
+      ],
+      "works_with": {
+        "role": "runs",
+        "formats": [
+          "gguf"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://llama.app",
+      "github": {
+        "repo": "ggml-org/llama.cpp",
+        "description": "LLM inference in C/C++",
+        "homepage": "https://llama.app",
+        "language": "C++",
+        "topics": [
+          "ggml"
+        ],
+        "default_branch": "master",
+        "license": "MIT",
+        "branch_commit": "3549c274dc22001d9118713fa56a10085b85de3b",
+        "release": {
+          "tag": "v1.0.0",
+          "date": "2026-11-13",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0",
+          "commit": "b1b770d90d94cad9e9ea5b993bdbc383a522fb28"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "whisper-cpp",
+      "name": "whisper.cpp",
+      "url": "https://github.com/ggml-org/whisper.cpp",
+      "license": "MIT",
+      "what": "Speech recognition with Whisper models in plain C and C++.",
+      "kind": "inference",
+      "install": [
+        "git clone https://github.com/ggml-org/whisper.cpp.git",
+        "cd whisper.cpp && cmake -B build && cmake --build build -j --config Release"
+      ],
+      "use": "./build/bin/whisper-cli -m ./<model>.bin -f audio.wav   # convert the weights to ggml first",
+      "platforms": [
+        "macOS",
+        "Linux",
+        "Windows",
+        "iOS",
+        "Android"
+      ],
+      "works_with": {
+        "role": "runs",
+        "match": "whisper"
+      },
+      "install_verified": true,
+      "install_docs": "https://github.com/ggml-org/whisper.cpp#readme",
+      "github": {
+        "repo": "ggml-org/whisper.cpp",
+        "description": "Port of OpenAI's Whisper model in C/C++",
+        "homepage": "",
+        "language": "C++",
+        "topics": [
+          "inference",
+          "openai",
+          "speech-recognition",
+          "speech-to-text",
+          "transformer",
+          "whisper"
+        ],
+        "default_branch": "master",
+        "license": "MIT",
+        "branch_commit": "5922450fbce1ed9d1648babd0d5ac4520055b436",
+        "release": {
+          "tag": "v1.9.5",
+          "date": "2026-10-06",
+          "url": "https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.5",
+          "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "mlx-lm",
+      "name": "mlx-lm",
+      "url": "https://github.com/ml-explore/mlx-lm",
+      "license": "MIT",
+      "what": "Run and fine-tune language models on Apple silicon with MLX.",
+      "kind": "inference",
+      "install": [
+        "pip install mlx-lm"
+      ],
+      "use": "mlx_lm.generate --model <id> --prompt \"Hello\"",
+      "platforms": [
+        "macOS (Apple silicon)"
+      ],
+      "works_with": {
+        "role": "runs",
+        "formats": [
+          "mlx"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://github.com/ml-explore/mlx-lm#readme",
+      "github": {
+        "repo": "ml-explore/mlx-lm",
+        "description": "Run LLMs with MLX",
+        "homepage": "",
+        "language": "Python",
+        "topics": [
+          "llms",
+          "mlx"
+        ],
+        "default_branch": "main",
+        "license": "MIT",
+        "branch_commit": "56230fa02b8ff8330daf26dc95c28480423ed5fe",
+        "release": {
+          "tag": "v0.32.2",
+          "date": "2026-10-16",
+          "url": "https://github.com/ml-explore/mlx-lm/releases/tag/v0.32.2",
+          "commit": "93e6d4a6447b3080861985947f0820e76fcb957d"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "vllm",
+      "name": "vLLM",
+      "url": "https://github.com/vllm-project/vllm",
+      "license": "Apache-2.0",
+      "what": "High-throughput server for language models on GPUs.",
+      "kind": "inference",
+      "install": [
+        "pip install vllm"
+      ],
+      "use": "HF_ENDPOINT=https://freeweights.allternit.com vllm serve <id>",
+      "platforms": [
+        "Linux (GPU)"
+      ],
+      "works_with": {
+        "role": "runs",
+        "formats": [
+          "safetensors"
+        ],
+        "tasks": [
+          "text-generation",
+          "image-text-to-text"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://vllm.ai",
+      "github": {
+        "repo": "vllm-project/vllm",
+        "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+        "homepage": "https://vllm.ai",
+        "language": "Python",
+        "topics": [
+          "amd",
+          "blackwell",
+          "cuda",
+          "deepseek",
+          "deepseek-v3",
+          "gpt",
+          "gpt-oss",
+          "inference",
+          "kimi",
+          "llama",
+          "llm",
+          "llm-serving",
+          "model-serving",
+          "moe",
+          "openai",
+          "pytorch",
+          "qwen",
+          "qwen3",
+          "tpu",
+          "transformer"
+        ],
+        "default_branch": "main",
+        "license": "Apache-2.0",
+        "branch_commit": "d2f92859b4c62434a2c111036ebe62cb0e9de243",
+        "release": {
+          "tag": "v0.33.0rc3",
+          "date": "2026-11-02",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+          "commit": "4ba787ec9959e566d3b587a796dff07673324da5"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "sglang",
+      "name": "SGLang",
+      "url": "https://github.com/sgl-project/sglang",
+      "license": "Apache-2.0",
+      "what": "Fast serving framework for language and vision-language models.",
+      "kind": "inference",
+      "install": [
+        "uv pip install --prerelease=allow sglang"
+      ],
+      "use": "HF_ENDPOINT=https://freeweights.allternit.com python3 -m sglang.launch_server --model-path <id>",
+      "platforms": [
+        "Linux (GPU)"
+      ],
+      "works_with": {
+        "role": "runs",
+        "formats": [
+          "safetensors"
+        ],
+        "tasks": [
+          "text-generation",
+          "image-text-to-text"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://sglang.io",
+      "github": {
+        "repo": "sgl-project/sglang",
+        "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+        "homepage": "https://sglang.io",
+        "language": "Python",
+        "topics": [
+          "attention",
+          "blackwell",
+          "cuda",
+          "deepseek",
+          "diffusion",
+          "glm",
+          "gpt-oss",
+          "inference",
+          "llama",
+          "llm",
+          "minimax",
+          "moe",
+          "qwen",
+          "qwen-image",
+          "reinforcement-learning",
+          "transformer",
+          "vlm",
+          "wan"
+        ],
+        "default_branch": "main",
+        "license": "Apache-2.0",
+        "branch_commit": "999a6fa3dc7cb4f9e10d7be8fab9ce5853ae2d4d",
+        "release": {
+          "tag": "v0.5.23",
+          "date": "2026-11-02",
+          "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
+          "commit": "297e54fd105e974cdf401e5b4d20253a22c16f90"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "url": "https://github.com/ollama/ollama",
+      "license": "MIT",
+      "what": "Pull and run local models with one command.",
+      "kind": "inference",
+      "install": [
+        "curl -fsSL https://ollama.com/install.sh | sh"
+      ],
+      "use": "printf 'FROM ./<file>.gguf\\n' > Modelfile && ollama create <name> -f Modelfile",
+      "platforms": [
+        "macOS",
+        "Linux",
+        "Windows"
+      ],
+      "works_with": {
+        "role": "runs",
+        "formats": [
+          "gguf"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://ollama.com",
+      "github": {
+        "repo": "ollama/ollama",
+        "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+        "homepage": "https://ollama.com",
+        "language": "Go",
+        "topics": [
+          "deepseek",
+          "gemma",
+          "glm",
+          "go",
+          "golang",
+          "gpt-oss",
+          "llama",
+          "llm",
+          "llms",
+          "minimax",
+          "mistral",
+          "muse",
+          "ollama",
+          "qwen"
+        ],
+        "default_branch": "main",
+        "license": "MIT",
+        "branch_commit": "a5864fcb33969705de3c0ebfedf4b2a16c970bcc",
+        "release": {
+          "tag": "v0.40.16",
+          "date": "2026-11-09",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
+          "commit": "d63b702609c4300a2ca07be2bdb0adb9834725e5"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "axolotl",
+      "name": "Axolotl",
+      "url": "https://github.com/axolotl-ai-cloud/axolotl",
+      "license": "Apache-2.0",
+      "what": "Fine-tuning from a single config file, with LoRA and full-weight options.",
+      "kind": "training",
+      "install": [
+        "uv pip install torch==2.14.0 torchvision",
+        "uv pip install axolotl[deepspeed]"
+      ],
+      "use": "axolotl train config.yml   # base_model: <id>",
+      "platforms": [
+        "Linux (GPU)"
+      ],
+      "works_with": {
+        "role": "trains",
+        "formats": [
+          "safetensors"
+        ],
+        "tasks": [
+          "text-generation",
+          "image-text-to-text"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://docs.axolotl.ai",
+      "github": {
+        "repo": "axolotl-ai-cloud/axolotl",
+        "description": "Go ahead and axolotl questions",
+        "homepage": "https://docs.axolotl.ai",
+        "language": "Python",
+        "topics": [
+          "fine-tuning",
+          "llm"
+        ],
+        "default_branch": "main",
+        "license": "Apache-2.0",
+        "branch_commit": "f2158ff1922b2bcf701854a17e47cc91ba26e7e9",
+        "release": {
+          "tag": "v0.21.1",
+          "date": "2026-10-27",
+          "url": "https://github.com/axolotl-ai-cloud/axolotl/releases/tag/v0.21.1",
+          "commit": "240c1b22e0556b54f90f282fae7621ba91f15b9b"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "trl",
+      "name": "TRL",
+      "url": "https://github.com/huggingface/trl",
+      "license": "Apache-2.0",
+      "what": "Supervised fine-tuning and preference training for transformers models.",
+      "kind": "training",
+      "install": [
+        "pip install trl"
+      ],
+      "use": "trl sft --model_name_or_path <id> --dataset_name <dataset>",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "works_with": {
+        "role": "trains",
+        "formats": [
+          "safetensors"
+        ],
+        "tasks": [
+          "text-generation",
+          "image-text-to-text"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "http://hf.co/docs/trl",
+      "github": {
+        "repo": "huggingface/trl",
+        "description": "Train transformer language models with reinforcement learning.",
+        "homepage": "http://hf.co/docs/trl",
+        "language": "Python",
+        "topics": [],
+        "default_branch": "main",
+        "license": "Apache-2.0",
+        "branch_commit": "8ad18ec1b6493b85cf9fffbd87d376767ceb8611",
+        "release": {
+          "tag": "v1.18.0",
+          "date": "2026-11-13",
+          "url": "https://github.com/huggingface/trl/releases/tag/v1.18.0",
+          "commit": "480dde905c9137898819b27b6c2c6f9be9f34046"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "peft",
+      "name": "PEFT",
+      "url": "https://github.com/huggingface/peft",
+      "license": "Apache-2.0",
+      "what": "Parameter-efficient fine-tuning methods such as LoRA.",
+      "kind": "training",
+      "install": [
+        "pip install peft"
+      ],
+      "use": "# get_peft_model(AutoModelForCausalLM.from_pretrained(\"<id>\"), LoraConfig(...))",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "works_with": {
+        "role": "trains",
+        "formats": [
+          "safetensors"
+        ],
+        "tasks": [
+          "text-generation",
+          "image-text-to-text"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://huggingface.co/docs/peft",
+      "github": {
+        "repo": "huggingface/peft",
+        "description": "🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning.",
+        "homepage": "https://huggingface.co/docs/peft",
+        "language": "Python",
+        "topics": [
+          "adapter",
+          "diffusion",
+          "fine-tuning",
+          "llm",
+          "lora",
+          "parameter-efficient-learning",
+          "peft",
+          "python",
+          "pytorch",
+          "transformers"
+        ],
+        "default_branch": "main",
+        "license": "Apache-2.0",
+        "branch_commit": "66a7c305bac9d7f8183b1f158280b77be971a3d4",
+        "release": {
+          "tag": "v0.21.3",
+          "date": "2026-11-13",
+          "url": "https://github.com/huggingface/peft/releases/tag/v0.21.3",
+          "commit": "599e264cc9c62f93a7d6a0279b413b9c576812ca"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "unsloth",
+      "name": "Unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "license": "Apache-2.0",
+      "what": "Faster, lower-memory fine-tuning (the upstream open-source library).",
+      "kind": "training",
+      "install": [
+        "pip install unsloth"
+      ],
+      "use": "# FastLanguageModel.from_pretrained(\"<id>\")",
+      "platforms": [
+        "Linux (NVIDIA)",
+        "Windows (NVIDIA)"
+      ],
+      "works_with": {
+        "role": "trains",
+        "formats": [
+          "safetensors"
+        ],
+        "tasks": [
+          "text-generation",
+          "image-text-to-text"
+        ]
+      },
+      "install_verified": true,
+      "install_docs": "https://unsloth.ai/docs",
+      "github": {
+        "repo": "unslothai/unsloth",
+        "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+        "homepage": "https://unsloth.ai/docs",
+        "language": "Python",
+        "topics": [
+          "agent",
+          "ai",
+          "chatgpt",
+          "deepseek",
+          "fine-tuning",
+          "gemma",
+          "image-generation",
+          "llama",
+          "llm",
+          "llms",
+          "openai",
+          "python",
+          "qwen",
+          "reinforcement-learning",
+          "self-hosted",
+          "stable-diffusion",
+          "text-to-speech",
+          "tts",
+          "ui",
+          "unsloth"
+        ],
+        "default_branch": "main",
+        "license": "Apache-2.0",
+        "branch_commit": "8fc3ae284ddb365a79dd4def416509a1a2560948",
+        "release": {
+          "tag": "v0.1.917-beta",
+          "date": "2026-11-11",
+          "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.917-beta",
+          "commit": "475ceee98d8d141423201193c9cf2be2da30e600"
+        },
+        "fetched": "2026-11-14"
+      }
+    },
+    {
+      "id": "fw-py",
+      "name": "fw.py (Freeweights)",
+      "url": "/docs/",
+      "license": "Not yet published",
+      "what": "Our downloader: checks the signature and every sha256, tries each source in order, resumes.",
+      "kind": "ours",
+      "install": [
+        "# copy scripts/fw.py from the Freeweights repository"
+      ],
+      "use": "fw get <id>",
+      "platforms": [
+        "macOS",
+        "Linux",
+        "Windows (Python 3)"
+      ],
+      "works_with": {
+        "role": "gets",
+        "all_hosted": true
+      },
+      "install_verified": false
+    }
+  ]
+}

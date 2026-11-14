@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://freeweights.allternit.com/spec/manifest-v0.schema.json",
+  "title": "Freeweights manifest v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "section", "upstream", "license", "files", "sources", "created_at", "generator"],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "timestamp": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"}
+  },
+  "properties": {
+    "schema_version": {"const": 0},
+    "sample": {"type": "boolean", "description": "True only in hand-written sample manifests; hashes may be placeholders."},
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$"},
+    "section": {"type": "string", "pattern": "^alt\\.freeweights\\.[a-z0-9-]+$"},
+    "upstream": {
+      "type": "object", "additionalProperties": false,
+      "required": ["host", "repo", "commit", "url"],
+      "properties": {
+        "host": {"type": "string", "enum": ["huggingface.co", "github.com", "other"]},
+        "repo": {"type": "string"},
+        "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "url": {"type": "string", "format": "uri"}
+      }
+    },
+    "license": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "file_path", "file_sha256", "redistribution"],
+      "properties": {
+        "id": {"type": "string", "description": "SPDX id, or a Freeweights id such as qwen-license for custom licenses."},
+        "name": {"type": "string"},
+        "file_path": {"type": "string", "description": "Path of the license text inside the repo at the pinned commit."},
+        "file_sha256": {"$ref": "#/$defs/sha256"},
+        "redistribution": {"enum": ["yes", "no", "click-through"]}
+      }
+    },
+    "files": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["path", "size", "sha256", "lfs"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "size": {"type": "integer", "minimum": 0},
+          "sha256": {"$ref": "#/$defs/sha256"},
+          "lfs": {"type": "boolean"}
+        }
+      }
+    },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["type", "priority", "last_checked"],
+        "properties": {
+          "type": {"enum": ["hosted", "seeded", "source"]},
+          "url": {"type": "string", "format": "uri"},
+          "magnet": {"type": "string", "pattern": "^magnet:\\?"},
+          "priority": {"type": "integer", "minimum": 0, "description": "Lower is tried first."},
+          "last_checked": {"anyOf": [{"$ref": "#/$defs/timestamp"}, {"type": "null"}]}
+        },
+        "anyOf": [{"required": ["url"]}, {"required": ["magnet"]}]
+      }
+    },
+    "torrent": {
+      "type": "object", "additionalProperties": false,
+      "required": ["infohash_v1", "magnet"],
+      "properties": {
+        "infohash_v1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "infohash_v2": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "magnet": {"type": "string", "pattern": "^magnet:\\?"},
+        "web_seeds": {"type": "array", "items": {"type": "string", "format": "uri"}}
+      }
+    },
+    "created_at": {"$ref": "#/$defs/timestamp"},
+    "generator": {"type": "string", "description": "Tool and version, e.g. freeweights-manifest/0.1.0."}
+  }
+}
