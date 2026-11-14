@@ -1,0 +1,54 @@
+{
+  "id": "gpu-unlock",
+  "name": "gpu-unlock",
+  "repo": "Zagitta/gpu-unlock",
+  "category": "inference",
+  "license": "GPL-2.0",
+  "license_note": "GPL-2.0 text is in licenses/GPL-2.0.txt (no root LICENSE file, so GitHub shows none). The build downloads NVIDIA and CachyOS inputs over HTTPS and generates firmware on your machine; check NVIDIA's terms for your use. Freeweights links to the source and hosts none of it.",
+  "install": [
+    "git clone https://github.com/Zagitta/gpu-unlock && cd gpu-unlock",
+    "make install",
+    "Add gpu_unlock.targets=all to the kernel command line, then reboot"
+  ],
+  "install_check": [
+    "make install",
+    "GRUB_CMDLINE_LINUX_DEFAULT"
+  ],
+  "platforms": [
+    "Linux"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "text-generation",
+      "text-to-image"
+    ]
+  },
+  "use": "Linux kernel module for GeForce RTX 20, 30 and 40 cards (not RTX 50 / Blackwell, not pro cards). It removes the consumer half-rate cap on FP16, BF16 and TF32 tensor math with FP32 accumulation, so local inference and fine-tuning of Freeweights models run faster. The project reports bit-identical outputs; Ampere is marked stable, Ada and Turing experimental. Laptops lose the unlock when the GPU powers off. Use at your own risk.",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Kernel module that lifts the GeForce half-rate tensor-core cap for FP16/BF16/TF32 (RTX 20/30/40, Linux).",
+  "github": {
+    "repo": "Zagitta/gpu-unlock",
+    "description": "Your GeForce runs AI at half speed. This fixes it for 20/30/40 series cards. Up to 2× FP16 / BF16 / TF32 tensor throughput",
+    "homepage": "",
+    "language": "C",
+    "topics": [],
+    "default_branch": "main",
+    "license": "",
+    "stars": 19489,
+    "pushed_at": "2026-10-29",
+    "archived": false,
+    "branch_commit": "7eb51bccae0a0b7e599e084d971170e9a1e82d0c",
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "7eb51bccae0a0b7e599e084d971170e9a1e82d0c",
+    "date": "2026-10-29"
+  }
+}
