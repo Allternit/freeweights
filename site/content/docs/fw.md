@@ -1,5 +1,5 @@
 ---
-title: fw.py reference
+title: fw reference
 nav_label: fw.py
 summary: Every fw.py command and option, including the info and search cards.
 group: Tools
@@ -18,13 +18,17 @@ sections:
 
 ## Install {#install}
 
-Copy the one file, `scripts/fw.py`, from the repository. Install minisign: `brew install minisign` (macOS) or your package manager.
-
-The model cards on the site write the commands as `fw get` and `fw verify`. To type them that way, add an alias:
-
 ```
-alias fw='python3 /path/to/fw.py'
+brew install allternit/tap/fw
+pipx install allternit-freeweights
+pip install allternit-freeweights
 ```
+
+Each gives you the `fw` command. Install minisign for signature checks: `brew install minisign` (macOS) or your package manager. The Homebrew formula installs it for you.
+
+From a checkout of the repository you can run the same program as `python3 scripts/fw.py`. The examples below write `fw.py`; with an installed package, type `fw` instead.
+
+An installed `fw` has no local catalog, so `info` reads the catalog from freeweights.allternit.com. `fw search` always asks the live API at `https://freeweights.allternit.com/api/models`. If it cannot reach the site it prints one error line and exits with code 2. In a checkout, `fw.py search --local` searches the files in `catalog/` instead.
 
 ## fw.py get {#get}
 
@@ -66,10 +70,10 @@ Color is used only when the output is a terminal and `NO_COLOR` is not set. Pipe
 ## fw.py search {#search}
 
 ```
-fw.py search <words...> [--remote] [--width N] [--limit N] [--cards N]
+fw.py search <words...> [--local] [--width N] [--limit N] [--cards N]
 ```
 
-Finds models whose id, name, section, task, format or license contains every word. With three matches or fewer (change it with `--cards`) it prints a full card for each. With more, it prints three lines per model: the name with size and license class, the From and group line, and the `fw get` command (or the license link for a link-only model). `--limit` caps the list (default 20). Exit code 1 means nothing matched.
+Asks the live hub API for models whose id contains the longest word, then keeps those whose id, name, section, task, format or license contain every word. With three matches or fewer (change it with `--cards`) it prints a full card for each. With more, it prints three lines per model: the name with size and license class, the From and group line, and the `fw get` command (or the license link for a link-only model). `--limit` caps the list (default 20). Exit code 1 means nothing matched. Exit code 2 means the API could not be reached.
 
 ## How it behaves {#behavior}
 

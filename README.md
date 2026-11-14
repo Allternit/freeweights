@@ -19,5 +19,14 @@ Status: live at https://freeweights.allternit.com (Stage 0, 0 USD). Run by Allte
 | ledger/, mirrors/ | public cost ledger, mirror registry |
 
 
+## Install the fw CLI
+
+```
+brew install allternit/tap/fw          # macOS and Linux (Homebrew)
+pipx install allternit-freeweights     # any platform with pipx
+pip install allternit-freeweights      # into the current Python environment
+```
+
+Then `fw search qwen`, `fw info <model-id>`, `fw get <model-id>`. `fw get` checks the signed manifest with `minisign` (`brew install minisign`). The CLI uses only the Python standard library. From a checkout you can also run `python3 scripts/fw.py ...`. Reference: https://freeweights.allternit.com/docs/fw. Maintainers: see RELEASING.md.
 
 Code: Apache-2.0 (LICENSE). Catalog, manifests and ledger data: CC0 (LICENSE-CC0.txt in each folder). Future C tools: MIT. Model weights keep their own licenses, listed per model.
