@@ -1,6 +1,10 @@
 {
   "abliterated": false,
   "added_at": "2026-11-14T06:26:40Z",
+  "audit": {
+    "at": "2026-11-14T06:26:40Z",
+    "method": "inherited"
+  },
   "badges": [
     "source"
   ],
@@ -11,12 +15,19 @@
     "safetensors"
   ],
   "id": "RadixArk/Kimi-K3.1-Dflash2-Preview",
-  "license_class": "permissive",
+  "kind": "model",
+  "license_class": "custom",
   "license_id": "Apache-2.0",
+  "license_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/d9e99b0792a5e93b78ea9bea62a68167e36ddd9e/LICENSE",
   "manifest_url": "https://freeweights.allternit.com/manifests/RadixArk/Kimi-K3.1-Dflash2-Preview.json",
+  "note": "The license of the base model moonshotai/Kimi-K3.1-Pro applies: the strictest license along the lineage wins.",
   "params": 2784811008,
-  "redistribution": "yes",
-  "requires_terms": false,
+  "redistribution": "click-through",
+  "relation": {
+    "parent": "moonshotai/Kimi-K3.1-Pro",
+    "type": "finetune"
+  },
+  "requires_terms": true,
   "section": "alt.freeweights.kimi",
   "tasks": [
     "text-generation"

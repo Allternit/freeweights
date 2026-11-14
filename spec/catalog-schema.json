@@ -2,21 +2,52 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://freeweights.allternit.com/spec/catalog-schema.json",
   "title": "Freeweights catalog",
-  "description": "A catalog row is one model. The catalog file is {sections, models}.",
+  "description": "A catalog row is one entry: a model, a dataset or a tool. Its key is (kind, id), because model and dataset ids collide at the source; kind is stored, never inferred from the section. The catalog file is {sections, models}.",
+  "x-key": ["kind", "id"],
   "$defs": {
     "section_id": {"type": "string", "pattern": "^alt\\.freeweights\\.[a-z0-9-]+$"},
     "row": {
       "type": "object", "additionalProperties": false,
-      "required": ["id", "display_name", "section", "family", "tasks", "license_id", "redistribution", "formats", "total_size", "abliterated", "badges", "upstream_url", "added_at"],
+      "required": ["id", "kind", "display_name", "section", "family", "tasks", "license_id", "redistribution", "formats", "total_size", "abliterated", "badges", "upstream_url", "added_at", "relation", "audit"],
       "properties": {
         "id": {"type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$"},
+        "kind": {"enum": ["model", "dataset", "tool"], "description": "Part of the key with id. Stored, not inferred from the section."},
+        "relation": {
+          "type": "object", "additionalProperties": false, "required": ["type", "parent"],
+          "description": "Lineage. A quant or adapter attaches to its parent as a Variants row.",
+          "properties": {
+            "type": {"enum": ["base", "finetune", "quant", "adapter", "merge"]},
+            "parent": {"type": ["string", "null"], "description": "id of the parent entry; null for a base."}
+          },
+          "if": {"properties": {"type": {"const": "base"}}},
+          "then": {"properties": {"parent": {"type": "null"}}},
+          "else": {"properties": {"parent": {"type": "string", "minLength": 1}}}
+        },
+        "tier": {"enum": ["T0", "T1", "T2", "variant", "benchmark", null], "description": "Inclusion tier (policy/inclusion-policy.md). Absent or null for entries curated before tiers."},
+        "signals": {
+          "type": ["object", "null"], "additionalProperties": false,
+          "description": "Popularity at the last discovery run. Never used to delist.",
+          "properties": {
+            "downloads_30d": {"type": ["integer", "null"], "minimum": 0},
+            "likes": {"type": ["integer", "null"], "minimum": 0},
+            "trending": {"type": ["integer", "null"], "minimum": 1, "description": "Trending rank, 1 is first."}
+          }
+        },
+        "audit": {
+          "type": "object", "additionalProperties": false, "required": ["method", "at"],
+          "description": "How the license verdict was reached. tag = the publisher's own license tag, shown as \"license as declared by the publisher\".",
+          "properties": {
+            "method": {"enum": ["tag", "text-hash", "inherited", "reviewed", "queue"]},
+            "at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"}
+          }
+        },
         "display_name": {"type": "string"},
         "section": {"$ref": "#/$defs/section_id"},
         "family": {"type": "string"},
         "tasks": {"type": "array", "items": {"type": "string"}, "description": "Task tags such as text-generation, embedding, text-to-speech."},
         "license_id": {"type": "string"},
         "redistribution": {"enum": ["yes", "no", "click-through"]},
-        "formats": {"type": "array", "items": {"enum": ["safetensors", "gguf", "mlx", "onnx", "parquet", "jsonl", "json", "csv", "arrow", "text", "other"]}, "description": "Weight formats for models, data formats for datasets. Empty for link-only entries with no file listing (gated datasets)."},
+        "formats": {"type": "array", "items": {"enum": ["safetensors", "gguf", "mlx", "onnx", "coreml", "ctranslate2", "tflite", "openvino", "ggml", "parquet", "jsonl", "json", "csv", "arrow", "text", "other"]}, "description": "Weight formats for models, data formats for datasets. Empty for link-only entries with no file listing (gated datasets)."},
         "total_size": {"type": "integer", "minimum": 0, "description": "Bytes across all manifest files."},
         "params": {"type": ["integer", "null"], "minimum": 0, "description": "Parameter count if known."},
         "base_model": {"type": ["string", "null"], "description": "id of the base model, if this is a derivative."},

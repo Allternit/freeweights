@@ -1,6 +1,10 @@
 {
   "abliterated": false,
   "added_at": "2026-11-14T06:26:40Z",
+  "audit": {
+    "at": "2026-11-14T06:26:40Z",
+    "method": "reviewed"
+  },
   "badges": [
     "source"
   ],
@@ -11,12 +15,17 @@
     "safetensors"
   ],
   "id": "Qwen/Qwen-Image-2.1-Turbo",
+  "kind": "model",
   "license_class": "non-commercial",
   "license_id": "LicenseRef-Qwen-Research",
   "license_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/blob/fc13ba1986fcb905854dc8de2f52eee395f49b5b/LICENSE",
   "note": "Freeweights never hosts a copy of this model, and Allternit does not run it commercially. The license allows non-commercial use only. Listed with a link to the source.",
   "params": 7115124736,
   "redistribution": "no",
+  "relation": {
+    "parent": "Qwen/Qwen-Image-2.1",
+    "type": "finetune"
+  },
   "requires_terms": true,
   "section": "alt.freeweights.qwen",
   "tasks": [

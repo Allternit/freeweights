@@ -8,7 +8,7 @@ load = lambda p: json.load(open(p, encoding="utf-8"))
 
 def mini(inst, sch, root, path="$"):
     """Subset: $ref, const, enum, type, pattern, min/max, required, properties,
-    additionalProperties false, items, minItems, uniqueItems, anyOf, oneOf, if/then."""
+    additionalProperties false, items, minItems, uniqueItems, anyOf, oneOf, if/then/else."""
     errs = []
     if "$ref" in sch:
         node = root
@@ -39,7 +39,10 @@ def mini(inst, sch, root, path="$"):
             for i, v in enumerate(inst): errs += mini(v, sch["items"], root, f"{path}[{i}]")
     if "anyOf" in sch and not any(not mini(inst, s, root, path) for s in sch["anyOf"]): errs.append(f"{path}: fails anyOf")
     if "oneOf" in sch and sum(not mini(inst, s, root, path) for s in sch["oneOf"]) != 1: errs.append(f"{path}: must match exactly one of oneOf")
-    if "if" in sch and not mini(inst, sch["if"], root, path) and "then" in sch: errs += mini(inst, sch["then"], root, path)
+    if "if" in sch:
+        if not mini(inst, sch["if"], root, path):
+            if "then" in sch: errs += mini(inst, sch["then"], root, path)
+        elif "else" in sch: errs += mini(inst, sch["else"], root, path)
     return errs
 
 try:
@@ -71,9 +74,35 @@ for p in sorted(glob.glob(f"{SPEC}/samples/*.manifest.json")):
     report(os.path.relpath(p, ROOT), e)
 for p in sorted(glob.glob(f"{SPEC}/samples/*.catalog-row.json")):
     report(os.path.relpath(p, ROOT), check(load(p), cat_s))
+# the real catalog: every row, the catalog file, the (kind, id) key, and the license table
+CAT = os.path.join(ROOT, "catalog")
+if os.path.exists(os.path.join(CAT, "catalog.json")):
+    sys.path.insert(0, os.path.join(ROOT, "scripts"))
+    import licenses
+    cat = load(os.path.join(CAT, "catalog.json"))
+    report("catalog/catalog.json", check(cat, cat_s))
+    rows = [load(p) for p in sorted(glob.glob(os.path.join(CAT, "rows", "*.json")))]
+    report(f"catalog/rows/*.json ({len(rows)} rows)", [f"{r.get('id')}: {e}" for r in rows for e in check(r, cat_s)])
+    keys = [(r.get("kind"), r.get("id")) for r in cat.get("models", [])]
+    report("catalog key (kind, id) is unique", sorted({f"duplicate {k}" for k in keys if keys.count(k) > 1}))
+    want = {"permissive": "permissive", "custom": "custom", "non-commercial": "non-commercial"}
+    e = []
+    for r in cat.get("models", []):
+        lc, v = r.get("license_class"), licenses.verdict(r.get("license_id"))
+        if lc == "gated" or (r.get("audit") or {}).get("method") == "inherited": continue
+        if v == "queue": e.append(f"{r['id']}: license {r.get('license_id')!r} is not in policy/licenses.json")
+        elif want.get(lc) != v: e.append(f"{r['id']}: license_class {lc!r} but the table says {v!r} for {r.get('license_id')!r}")
+    report("catalog rows agree with policy/licenses.json", e)
+    report("license table docs are generated from policy/licenses.json",
+           [f"{os.path.relpath(p, ROOT)} is out of date: run scripts/licenses.py --write-docs" for p, ok in licenses.docs_status() if not ok])
 # negative test: schema must reject a bad manifest
 bad = {"schema_version": 0, "id": "nope"}
 report("negative: bad manifest is rejected", [] if check(bad, man_s) else ["bad manifest was accepted"])
+row = load(sorted(glob.glob(f"{SPEC}/samples/*.catalog-row.json"))[0])
+nokind = {k: v for k, v in row.items() if k != "kind"}
+report("negative: a row without kind is rejected", [] if check(nokind, cat_s) else ["row without kind was accepted"])
+badrel = dict(row, relation={"type": "quant", "parent": None})
+report("negative: a quant without a parent is rejected", [] if check(badrel, cat_s) else ["quant with no parent was accepted"])
 
 api = os.path.join(SPEC, "hub-api.yaml")
 try:

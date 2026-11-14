@@ -3,6 +3,10 @@
     {
       "abliterated": true,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -13,11 +17,16 @@
         "gguf"
       ],
       "id": "alesha-pro/GLM-5.3-Flash-abliterated-Maya-M-GGUF",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/alesha-pro/GLM-5.3-Flash-abliterated-Maya-M-GGUF.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "peasantsmith/GLM-5.3-Flash-Maya-GGUF",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.abliterated",
       "tasks": [
@@ -30,6 +39,10 @@
     {
       "abliterated": true,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -40,12 +53,17 @@
         "gguf"
       ],
       "id": "alesha-pro/Qwen3.8-Flash-Next-abliterated-GSQ-RCO-Strata-GGUF",
+      "kind": "model",
       "license_class": "custom",
       "license_id": "LicenseRef-Qwen-Community-1.0",
       "license_url": "https://huggingface.co/alesha-pro/Qwen3.8-Flash-Next-abliterated-GSQ-RCO-Strata-GGUF/blob/d4af3be5701549435e0770d625f79dd2def1358f/LICENSE",
       "manifest_url": "https://freeweights.allternit.com/manifests/alesha-pro/Qwen3.8-Flash-Next-abliterated-GSQ-RCO-Strata-GGUF.json",
       "params": null,
       "redistribution": "click-through",
+      "relation": {
+        "parent": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+        "type": "finetune"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.abliterated",
       "tasks": [
@@ -58,6 +76,10 @@
     {
       "abliterated": true,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -68,11 +90,16 @@
         "gguf"
       ],
       "id": "huihui-ai/Huihui-DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/huihui-ai/Huihui-DeepSeek-V4.1-Flash-1017-abliterated-GGUF.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.abliterated",
       "tasks": [
@@ -85,6 +112,10 @@
     {
       "abliterated": true,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -95,11 +126,16 @@
         "gguf"
       ],
       "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3.8-27B",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.abliterated",
       "tasks": [
@@ -112,6 +148,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -122,11 +162,16 @@
         "jsonl"
       ],
       "id": "Anthropic/hh-rlhf",
+      "kind": "dataset",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/Anthropic/hh-rlhf.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -139,6 +184,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -149,11 +198,16 @@
         "parquet"
       ],
       "id": "HuggingFaceFW/fineweb-edu",
+      "kind": "dataset",
       "license_class": "permissive",
       "license_id": "ODC-BY-1.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/HuggingFaceFW/fineweb-edu.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -166,6 +220,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -176,11 +234,16 @@
         "parquet"
       ],
       "id": "HuggingFaceH4/ultrafeedback_binarized",
+      "kind": "dataset",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/HuggingFaceH4/ultrafeedback_binarized.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -193,6 +256,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -201,12 +268,17 @@
       "family": "Idavidrein",
       "formats": [],
       "id": "Idavidrein/gpqa",
+      "kind": "dataset",
       "license_class": "gated",
       "license_id": "CC-BY-4.0 + click-through",
       "license_url": "https://huggingface.co/datasets/Idavidrein/gpqa",
       "note": "Gated dataset: listed as a link only, with no file listing and no copy hosted. Accept the gate terms at the source (do not reveal examples in plain text or images online).",
       "params": null,
       "redistribution": "click-through",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -220,6 +292,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -231,11 +307,16 @@
         "parquet"
       ],
       "id": "OpenAssistant/oasst2",
+      "kind": "dataset",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/OpenAssistant/oasst2.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -248,6 +329,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -258,11 +343,16 @@
         "parquet"
       ],
       "id": "TIGER-Lab/MMLU-Pro",
+      "kind": "dataset",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/TIGER-Lab/MMLU-Pro.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -275,6 +365,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -285,11 +379,16 @@
         "parquet"
       ],
       "id": "allenai/WildChat-4.8M",
+      "kind": "dataset",
       "license_class": "permissive",
       "license_id": "ODC-BY-1.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/allenai/WildChat-4.8M.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -303,6 +402,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -313,11 +416,16 @@
         "parquet"
       ],
       "id": "openai/gsm8k",
+      "kind": "dataset",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/openai/gsm8k.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -330,6 +438,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -340,11 +452,16 @@
         "parquet"
       ],
       "id": "openai/openai_humaneval",
+      "kind": "dataset",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/openai/openai_humaneval.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.datasets",
       "tasks": [
@@ -357,6 +474,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -367,11 +488,16 @@
         "gguf"
       ],
       "id": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-Coder-GGUF.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "type": "quant"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.deepseek",
       "tasks": [
@@ -384,6 +510,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -394,11 +524,16 @@
         "safetensors"
       ],
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/deepseek-ai/DeepSeek-V4-Flash-0731.json",
       "params": 304180418494,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.deepseek",
       "tasks": [
@@ -411,6 +546,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -421,11 +560,16 @@
         "safetensors"
       ],
       "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/deepseek-ai/DeepSeek-V4.1-Flash-1017.json",
       "params": 763205315794,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.deepseek",
       "tasks": [
@@ -438,6 +582,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -448,11 +596,16 @@
         "gguf"
       ],
       "id": "lmstudio-community/DeepSeek-V4-Flash-0731-GGUF",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/lmstudio-community/DeepSeek-V4-Flash-0731-GGUF.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "type": "quant"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.deepseek",
       "tasks": [
@@ -465,6 +618,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -475,11 +632,16 @@
         "gguf"
       ],
       "id": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/DeepSeek-V4.1-Flash-1017-GGUF.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "type": "quant"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.deepseek",
       "tasks": [
@@ -492,6 +654,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -502,11 +668,16 @@
         "onnx"
       ],
       "id": "BAAI/bge-m3",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/BAAI/bge-m3.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.embed",
       "tasks": [
@@ -519,6 +690,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -529,11 +704,16 @@
         "safetensors"
       ],
       "id": "BAAI/bge-reranker-v2-m3",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/BAAI/bge-reranker-v2-m3.json",
       "params": 567755777,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.embed",
       "tasks": [
@@ -546,6 +726,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -556,11 +740,16 @@
         "safetensors"
       ],
       "id": "google/embeddinggemma-2",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/google/embeddinggemma-2.json",
       "params": 744371512,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.gemma",
       "tasks": [
@@ -573,6 +762,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -583,11 +776,16 @@
         "safetensors"
       ],
       "id": "google/gemma-4-12B-it",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/google/gemma-4-12B-it.json",
       "params": 11959730224,
       "redistribution": "yes",
+      "relation": {
+        "parent": "google/gemma-4-12B",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.gemma",
       "tasks": [
@@ -600,6 +798,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -610,11 +812,16 @@
         "safetensors"
       ],
       "id": "google/gemma-4-26B-A4B-it",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/google/gemma-4-26B-A4B-it.json",
       "params": 25805936206,
       "redistribution": "yes",
+      "relation": {
+        "parent": "google/gemma-4-26B-A4B",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.gemma",
       "tasks": [
@@ -627,6 +834,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -637,11 +848,16 @@
         "safetensors"
       ],
       "id": "google/gemma-4-31B-it",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/google/gemma-4-31B-it.json",
       "params": 31273088876,
       "redistribution": "yes",
+      "relation": {
+        "parent": "google/gemma-4-31B",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.gemma",
       "tasks": [
@@ -654,6 +870,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -664,11 +884,16 @@
         "safetensors"
       ],
       "id": "google/gemma-4-E2B-it",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/google/gemma-4-E2B-it.json",
       "params": 5123178051,
       "redistribution": "yes",
+      "relation": {
+        "parent": "google/gemma-4-E2B",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.gemma",
       "tasks": [
@@ -681,6 +906,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -691,11 +920,16 @@
         "safetensors"
       ],
       "id": "google/gemma-4-E4B-it",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/google/gemma-4-E4B-it.json",
       "params": 7996156490,
       "redistribution": "yes",
+      "relation": {
+        "parent": "google/gemma-4-E4B",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.gemma",
       "tasks": [
@@ -708,6 +942,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -718,11 +956,16 @@
         "gguf"
       ],
       "id": "unsloth/GLM-5.3-Flash-GGUF",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/GLM-5.3-Flash-GGUF.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "zai-org/GLM-5.3-Flash",
+        "type": "quant"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.glm",
       "tasks": [
@@ -735,6 +978,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -745,11 +992,16 @@
         "safetensors"
       ],
       "id": "zai-org/GLM-4.7-Flash",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/zai-org/GLM-4.7-Flash.json",
       "params": 31221488576,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.glm",
       "tasks": [
@@ -762,6 +1014,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -772,12 +1028,17 @@
         "safetensors"
       ],
       "id": "zai-org/GLM-5.3",
+      "kind": "model",
       "license_class": "custom",
       "license_id": "LicenseRef-GLM-5.3",
       "license_url": "https://huggingface.co/zai-org/GLM-5.3/blob/ba32f8c19c8738e2c57c71798c601d477a7bf844/LICENSE",
       "manifest_url": "https://freeweights.allternit.com/manifests/zai-org/GLM-5.3.json",
       "params": 753329940480,
       "redistribution": "click-through",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.glm",
       "tasks": [
@@ -790,6 +1051,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -800,11 +1065,16 @@
         "safetensors"
       ],
       "id": "zai-org/GLM-5.3-Flash",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/zai-org/GLM-5.3-Flash.json",
       "params": 321323031390,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.glm",
       "tasks": [
@@ -817,6 +1087,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -827,11 +1101,16 @@
         "safetensors"
       ],
       "id": "openai/gpt-oss-120b",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/openai/gpt-oss-120b.json",
       "params": 116829156672,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.gpt-oss",
       "tasks": [
@@ -844,6 +1123,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -854,11 +1137,16 @@
         "safetensors"
       ],
       "id": "openai/gpt-oss-20b",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/openai/gpt-oss-20b.json",
       "params": 20914757184,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.gpt-oss",
       "tasks": [
@@ -871,6 +1159,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -881,11 +1173,16 @@
         "safetensors"
       ],
       "id": "OpenMOSS-Team/MOSS-Image-Base",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/OpenMOSS-Team/MOSS-Image-Base.json",
       "params": 5082308624,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.image",
       "tasks": [
@@ -898,6 +1195,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -908,11 +1209,16 @@
         "safetensors"
       ],
       "id": "black-forest-labs/FLUX.2-klein-4B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/black-forest-labs/FLUX.2-klein-4B.json",
       "params": 3875544576,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.image",
       "tasks": [
@@ -925,6 +1231,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -935,12 +1245,17 @@
         "safetensors"
       ],
       "id": "black-forest-labs/flux-3-image-klein-comfy",
+      "kind": "model",
       "license_class": "gated",
       "license_id": "LicenseRef-FLUX-Kommunity-1.0",
       "license_url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/blob/9d36114cf7a2e03a45c28f5cc4987d20ebfdb6c1/LICENSE.md",
       "note": "Gated at the source: listed as a link only, and no copy is hosted. Accept the license on the model page at the source, then download from there.",
       "params": null,
       "redistribution": "click-through",
+      "relation": {
+        "parent": "black-forest-labs/flux-3-image-klein",
+        "type": "quant"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.image",
       "tasks": [
@@ -953,6 +1268,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "inherited"
+      },
       "badges": [
         "source"
       ],
@@ -963,12 +1282,19 @@
         "safetensors"
       ],
       "id": "RadixArk/Kimi-K3.1-Dflash2-Preview",
-      "license_class": "permissive",
+      "kind": "model",
+      "license_class": "custom",
       "license_id": "Apache-2.0",
+      "license_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/d9e99b0792a5e93b78ea9bea62a68167e36ddd9e/LICENSE",
       "manifest_url": "https://freeweights.allternit.com/manifests/RadixArk/Kimi-K3.1-Dflash2-Preview.json",
+      "note": "The license of the base model moonshotai/Kimi-K3.1-Pro applies: the strictest license along the lineage wins.",
       "params": 2784811008,
-      "redistribution": "yes",
-      "requires_terms": false,
+      "redistribution": "click-through",
+      "relation": {
+        "parent": "moonshotai/Kimi-K3.1-Pro",
+        "type": "finetune"
+      },
+      "requires_terms": true,
       "section": "alt.freeweights.kimi",
       "tasks": [
         "text-generation"
@@ -980,6 +1306,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -990,12 +1320,17 @@
         "safetensors"
       ],
       "id": "moonshotai/Kimi-K3.1-Pro",
+      "kind": "model",
       "license_class": "custom",
       "license_id": "LicenseRef-Kimi-K3.1-Pro",
       "license_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/d9e99b0792a5e93b78ea9bea62a68167e36ddd9e/LICENSE",
       "manifest_url": "https://freeweights.allternit.com/manifests/moonshotai/Kimi-K3.1-Pro.json",
       "params": 2780110363392,
       "redistribution": "click-through",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.kimi",
       "tasks": [
@@ -1008,6 +1343,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1018,11 +1357,16 @@
         "safetensors"
       ],
       "id": "moonshotai/Kimi-Linear-48B-A3B-Base",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/moonshotai/Kimi-Linear-48B-A3B-Base.json",
       "params": 49122681728,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.kimi",
       "tasks": [
@@ -1035,6 +1379,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1045,11 +1393,16 @@
         "safetensors"
       ],
       "id": "moonshotai/Kimi-Linear-48B-A3B-Instruct",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/moonshotai/Kimi-Linear-48B-A3B-Instruct.json",
       "params": 49122681728,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.kimi",
       "tasks": [
@@ -1062,6 +1415,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1072,11 +1429,16 @@
         "safetensors"
       ],
       "id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/XiaomiMiMo/MiMo-V2.6-Flash-RL.json",
       "params": 310756322688,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.mimo",
       "tasks": [
@@ -1089,6 +1451,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1099,11 +1465,16 @@
         "mlx"
       ],
       "id": "mlx-community/MiMo-V2.6-Flash-RL-mxfp4-q8",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/mlx-community/MiMo-V2.6-Flash-RL-mxfp4-q8.json",
       "params": 308778778368,
       "redistribution": "yes",
+      "relation": {
+        "parent": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+        "type": "quant"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.mimo",
       "tasks": [
@@ -1116,6 +1487,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1126,12 +1501,17 @@
         "safetensors"
       ],
       "id": "MiniMaxAI/MiniMax-M3.1-Flash",
+      "kind": "model",
       "license_class": "non-commercial",
       "license_id": "LicenseRef-MiniMax-Community",
       "license_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash/blob/ce7f4df87d2e05262f5775f373dac4772f134041/LICENSE",
       "note": "Freeweights never hosts a copy of this model, and Allternit does not run it commercially. The license allows non-commercial use only. Listed with a link to the source.",
       "params": 220490854016,
       "redistribution": "no",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.minimax",
       "tasks": [
@@ -1144,6 +1524,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1154,12 +1538,17 @@
         "gguf"
       ],
       "id": "unsloth/MiniMax-M3.1-Flash-GGUF",
+      "kind": "model",
       "license_class": "non-commercial",
       "license_id": "LicenseRef-MiniMax-Community",
       "license_url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash-GGUF",
       "note": "Freeweights never hosts a copy of this model, and Allternit does not run it commercially. The license allows non-commercial use only. Listed with a link to the source.",
       "params": null,
       "redistribution": "no",
+      "relation": {
+        "parent": "MiniMaxAI/MiniMax-M3.1-Flash",
+        "type": "quant"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.minimax",
       "tasks": [
@@ -1172,6 +1561,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1182,11 +1575,16 @@
         "safetensors"
       ],
       "id": "mistralai/Ministral-3-14B-Reasoning-2512",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/mistralai/Ministral-3-14B-Reasoning-2512.json",
       "params": 13945031680,
       "redistribution": "yes",
+      "relation": {
+        "parent": "mistralai/Ministral-3-14B-Base-2512",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.mistral",
       "tasks": [
@@ -1199,6 +1597,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1209,11 +1611,16 @@
         "safetensors"
       ],
       "id": "ACE-Step/Ace-Step1.5",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/ACE-Step/Ace-Step1.5.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.music",
       "tasks": [
@@ -1226,6 +1633,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1236,12 +1647,17 @@
         "safetensors"
       ],
       "id": "Comfy-Org/YuE2",
+      "kind": "model",
       "license_class": "non-commercial",
       "license_id": "CC-BY-NC-4.0",
       "license_url": "https://huggingface.co/Comfy-Org/YuE2",
       "note": "Freeweights never hosts a copy of this model, and Allternit does not run it commercially. The license allows non-commercial use only. Listed with a link to the source.",
       "params": null,
       "redistribution": "no",
+      "relation": {
+        "parent": "m-a-p/YuE2-3B",
+        "type": "quant"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.music",
       "tasks": [
@@ -1254,6 +1670,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1264,12 +1684,17 @@
         "safetensors"
       ],
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "kind": "model",
       "license_class": "custom",
       "license_id": "OpenMDW-1.1",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16/blob/a9904d24bcc1d289a1950fa9d2b978c47cf903b9/LICENSE",
       "manifest_url": "https://freeweights.allternit.com/manifests/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16.json",
       "params": 31577937344,
       "redistribution": "click-through",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.nemotron",
       "tasks": [
@@ -1282,6 +1707,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1292,11 +1721,16 @@
         "safetensors"
       ],
       "id": "baidu/Unlimited-OCR-2",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/baidu/Unlimited-OCR-2.json",
       "params": 3343978497,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.ocr",
       "tasks": [
@@ -1309,6 +1743,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1319,11 +1757,16 @@
         "safetensors"
       ],
       "id": "allenai/Olmo-3-1025-7B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/allenai/Olmo-3-1025-7B.json",
       "params": 7298011136,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.olmo",
       "tasks": [
@@ -1336,6 +1779,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1346,11 +1793,16 @@
         "safetensors"
       ],
       "id": "allenai/Olmo-3.1-32B-Instruct",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/allenai/Olmo-3.1-32B-Instruct.json",
       "params": 32233522176,
       "redistribution": "yes",
+      "relation": {
+        "parent": "allenai/Olmo-3.1-32B-Instruct-DPO",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.olmo",
       "tasks": [
@@ -1363,6 +1815,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1373,11 +1829,16 @@
         "safetensors"
       ],
       "id": "microsoft/phi-4",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/microsoft/phi-4.json",
       "params": 14659507200,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.phi",
       "tasks": [
@@ -1390,6 +1851,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1400,11 +1865,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen-AgentWorld-35B-A3B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen-AgentWorld-35B-A3B.json",
       "params": 34660610688,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3.5-35B-A3B-Base",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1417,6 +1887,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1427,12 +1901,17 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen-Image-2.1",
+      "kind": "model",
       "license_class": "non-commercial",
       "license_id": "LicenseRef-Qwen-Research",
       "license_url": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/d26bb61231c349cf6b7896fa83353113880e1ba3/LICENSE",
       "note": "Freeweights never hosts a copy of this model, and Allternit does not run it commercially. The license allows non-commercial use only. Listed with a link to the source.",
       "params": 7115124736,
       "redistribution": "no",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1445,6 +1924,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1455,12 +1938,17 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen-Image-2.1-Turbo",
+      "kind": "model",
       "license_class": "non-commercial",
       "license_id": "LicenseRef-Qwen-Research",
       "license_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo/blob/fc13ba1986fcb905854dc8de2f52eee395f49b5b/LICENSE",
       "note": "Freeweights never hosts a copy of this model, and Allternit does not run it commercially. The license allows non-commercial use only. Listed with a link to the source.",
       "params": 7115124736,
       "redistribution": "no",
+      "relation": {
+        "parent": "Qwen/Qwen-Image-2.1",
+        "type": "finetune"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1473,6 +1961,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1483,11 +1975,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-ASR-1.7B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-ASR-1.7B.json",
       "params": 2349217408,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1500,6 +1997,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1510,11 +2011,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-Embedding-0.6B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-Embedding-0.6B.json",
       "params": 595776512,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3-0.6B-Base",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1527,6 +2033,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1537,11 +2047,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-Embedding-4B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-Embedding-4B.json",
       "params": 4021774336,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3-4B-Base",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1554,6 +2069,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1564,11 +2083,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-Embedding-8B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-Embedding-8B.json",
       "params": 7567295488,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3-8B-Base",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1581,6 +2105,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1591,11 +2119,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-Reranker-0.6B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-Reranker-0.6B.json",
       "params": 595776512,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3-0.6B-Base",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1608,6 +2141,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1618,11 +2155,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-Reranker-4B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-Reranker-4B.json",
       "params": 4021784576,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3-4B-Base",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1635,6 +2177,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1645,11 +2191,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-TTS-12Hz-1.7B-Base.json",
       "params": 1928677440,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1662,6 +2213,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1672,11 +2227,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-TTS-Tokenizer-12Hz",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-TTS-Tokenizer-12Hz.json",
       "params": 170557441,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1689,6 +2249,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1699,11 +2263,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-VL-8B-Instruct",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-VL-8B-Instruct.json",
       "params": 8767123696,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1716,6 +2285,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1726,11 +2299,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3-VL-Embedding-2B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3-VL-Embedding-2B.json",
       "params": 2127532032,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3-VL-2B-Instruct",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1743,6 +2321,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1753,11 +2335,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3.5-4B-Base",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3.5-4B-Base.json",
       "params": 4659865088,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1770,6 +2357,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1780,11 +2371,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3.5-9B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3.5-9B.json",
       "params": 9653104368,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3.5-9B-Base",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1797,6 +2393,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1807,11 +2407,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3.5-9B-Base",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3.5-9B-Base.json",
       "params": 9653104368,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1824,6 +2429,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1834,11 +2443,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3.6-27B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3.6-27B.json",
       "params": 27781427952,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1851,6 +2465,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1861,11 +2479,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3.6-35B-A3B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3.6-35B-A3B.json",
       "params": 35951822704,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1878,6 +2501,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1888,11 +2515,16 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3.8-27B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3.8-27B.json",
       "params": 27781427952,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1905,6 +2537,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1915,12 +2551,17 @@
         "safetensors"
       ],
       "id": "Qwen/Qwen3.8-Flash-Next",
+      "kind": "model",
       "license_class": "custom",
       "license_id": "LicenseRef-Qwen-Community-1.0",
       "license_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/812d96e10a0dd82b69d749e68693698cf6c36daa/LICENSE",
       "manifest_url": "https://freeweights.allternit.com/manifests/Qwen/Qwen3.8-Flash-Next.json",
       "params": 179999981459,
       "redistribution": "click-through",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1933,6 +2574,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1943,11 +2588,16 @@
         "safetensors"
       ],
       "id": "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B.json",
       "params": 9409813744,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3.5-9B",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1960,6 +2610,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1970,11 +2624,16 @@
         "gguf"
       ],
       "id": "unsloth/Qwen3.8-27B-GGUF",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/Qwen3.8-27B-GGUF.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "Qwen/Qwen3.8-27B",
+        "type": "quant"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -1987,6 +2646,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -1997,12 +2660,17 @@
         "gguf"
       ],
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
+      "kind": "model",
       "license_class": "custom",
       "license_id": "LicenseRef-Qwen-Community-1.0",
       "license_url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
       "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/Qwen3.8-Flash-Next-GGUF.json",
       "params": null,
       "redistribution": "click-through",
+      "relation": {
+        "parent": "Qwen/Qwen3.8-Flash-Next",
+        "type": "quant"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.qwen",
       "tasks": [
@@ -2015,6 +2683,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2025,11 +2697,16 @@
         "safetensors"
       ],
       "id": "ResembleAI/chatterbox",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/ResembleAI/chatterbox.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.speech",
       "tasks": [
@@ -2042,6 +2719,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2052,12 +2733,17 @@
         "safetensors"
       ],
       "id": "fishaudio/s2-pro",
+      "kind": "model",
       "license_class": "non-commercial",
       "license_id": "LicenseRef-Fish-Audio-Research",
       "license_url": "https://huggingface.co/fishaudio/s2-pro/blob/1de9996b6be38b745688de084d87a5633f714e4e/LICENSE.md",
       "note": "Freeweights never hosts a copy of this model, and Allternit does not run it commercially. The license allows non-commercial use only. Listed with a link to the source.",
       "params": 4561852416,
       "redistribution": "no",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.speech",
       "tasks": [
@@ -2070,6 +2756,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2080,11 +2770,16 @@
         "onnx"
       ],
       "id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/Kokoro-82M-v1.0-ONNX.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": "hexgrad/Kokoro-82M",
+        "type": "quant"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.speech",
       "tasks": [
@@ -2097,6 +2792,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2107,11 +2806,16 @@
         "safetensors"
       ],
       "id": "openai/whisper-large-v3",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/openai/whisper-large-v3.json",
       "params": 1543490560,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.speech",
       "tasks": [
@@ -2124,6 +2828,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T06:26:40Z",
+      "audit": {
+        "at": "2026-11-14T06:26:40Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2134,11 +2842,16 @@
         "safetensors"
       ],
       "id": "openai/whisper-large-v3-turbo",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "MIT",
       "manifest_url": "https://freeweights.allternit.com/manifests/openai/whisper-large-v3-turbo.json",
       "params": 808878080,
       "redistribution": "yes",
+      "relation": {
+        "parent": "openai/whisper-large-v3",
+        "type": "finetune"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.speech",
       "tasks": [
@@ -2151,6 +2864,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2161,12 +2878,17 @@
         "safetensors"
       ],
       "id": "Lightricks/LTX-2.5",
+      "kind": "model",
       "license_class": "gated",
       "license_id": "LicenseRef-LTX-2.x-Community",
       "license_url": "https://huggingface.co/Lightricks/LTX-2.5",
       "note": "Gated at the source: listed as a link only, and no copy is hosted. Accept the license on the model page at the source, then download from there.",
       "params": null,
       "redistribution": "click-through",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.video",
       "tasks": [
@@ -2179,6 +2901,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2189,11 +2915,16 @@
         "safetensors"
       ],
       "id": "Wan-AI/Wan2.2-I2V-A14B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Wan-AI/Wan2.2-I2V-A14B.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.video",
       "tasks": [
@@ -2206,6 +2937,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2216,11 +2951,16 @@
         "safetensors"
       ],
       "id": "Wan-AI/Wan2.2-T2V-A14B",
+      "kind": "model",
       "license_class": "permissive",
       "license_id": "Apache-2.0",
       "manifest_url": "https://freeweights.allternit.com/manifests/Wan-AI/Wan2.2-T2V-A14B.json",
       "params": null,
       "redistribution": "yes",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": false,
       "section": "alt.freeweights.video",
       "tasks": [
@@ -2233,6 +2973,10 @@
     {
       "abliterated": false,
       "added_at": "2026-11-14T15:33:13Z",
+      "audit": {
+        "at": "2026-11-14T15:33:13Z",
+        "method": "reviewed"
+      },
       "badges": [
         "source"
       ],
@@ -2243,12 +2987,17 @@
         "safetensors"
       ],
       "id": "tencent/HunyuanVideo-1.5",
+      "kind": "model",
       "license_class": "custom",
       "license_id": "LicenseRef-Tencent-Hunyuan-Community",
       "license_url": "https://huggingface.co/tencent/HunyuanVideo-1.5/blob/9b49404b3f5df2a8f0b31df27a0c7ab872e7b038/LICENSE",
       "note": "Freeweights does not host a copy. The Tencent Hunyuan Community License covers only its Territory, which excludes the European Union, the United Kingdom and South Korea, and a worldwide hub cannot limit who downloads. Listed with a link to the source; read the license there before you download.",
       "params": null,
       "redistribution": "no",
+      "relation": {
+        "parent": null,
+        "type": "base"
+      },
       "requires_terms": true,
       "section": "alt.freeweights.video",
       "tasks": [

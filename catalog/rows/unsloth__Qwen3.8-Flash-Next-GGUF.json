@@ -1,6 +1,10 @@
 {
   "abliterated": false,
   "added_at": "2026-11-14T15:33:13Z",
+  "audit": {
+    "at": "2026-11-14T15:33:13Z",
+    "method": "reviewed"
+  },
   "badges": [
     "source"
   ],
@@ -11,12 +15,17 @@
     "gguf"
   ],
   "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
+  "kind": "model",
   "license_class": "custom",
   "license_id": "LicenseRef-Qwen-Community-1.0",
   "license_url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
   "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/Qwen3.8-Flash-Next-GGUF.json",
   "params": null,
   "redistribution": "click-through",
+  "relation": {
+    "parent": "Qwen/Qwen3.8-Flash-Next",
+    "type": "quant"
+  },
   "requires_terms": true,
   "section": "alt.freeweights.qwen",
   "tasks": [

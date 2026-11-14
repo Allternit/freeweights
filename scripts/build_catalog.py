@@ -1,22 +1,30 @@
 #!/usr/bin/env python3
 """Build the full Freeweights catalog (Phase 0.8) from catalog/_audit/licenses.csv.
 
-  build_catalog.py [--only org/repo ...] [--no-sign]
+  build_catalog.py [--only org/repo ...] [--no-sign] [--offline]
 
 Per CSV row: redistribution yes -> signed manifest + row (From source badge);
 custom licenses and gated sets -> manifest + row with requires_terms; non-commercial ->
 row only (never hosted); US-excluded, unclear and pickle-only -> catalog/refused.json.
 Writes catalog/rows/*.json, catalog/catalog.json, catalog/refused.json, manifests/*.
 Resumable: a repo whose manifest already matches the pinned commit is not rebuilt.
+Signing: only a manifest whose content changed is signed again (the signature is replaced
+atomically). --no-sign never deletes or touches a signature: a signed manifest that would change
+is written to .pending/manifests/ (git-ignored, never served) instead, and the signed pair stays as it was.
+--offline makes no network call: repo facts come from the existing manifests and catalog rows.
+License verdicts come from policy/licenses.json (scripts/licenses.py); a row whose base model has a
+stricter verdict inherits it. Every row carries kind, relation and audit {method, at}.
 Stdlib only. HF token is used only by make_manifest.http on 401/403, never printed."""
-import argparse, csv, datetime, glob, json, os, subprocess, sys, time, urllib.parse
+import argparse, csv, datetime, glob, json, os, re, subprocess, sys, time, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_manifest as mm
 import licenses  # the one license table (policy/licenses.json)
+import classify, formats
 
 ROOT = mm.ROOT
 CAT = os.path.join(ROOT, "catalog")
 MAN = os.path.join(ROOT, "manifests")
+PENDING = os.path.join(ROOT, ".pending", "manifests")
 SITE = "https://freeweights.allternit.com"
 # Rows not in the CSV that Phase 0 already manifested and the plan keeps.
 EXTRA = [{"repo": "onnx-community/Kokoro-82M-v1.0-ONNX", "kind": "model", "section": "alt.freeweights.speech", "license_id": "Apache-2.0",
@@ -66,11 +74,24 @@ def formats_of(paths, dataset, lib_mlx):
     if any(p.endswith(".onnx") for p in low): f.add("onnx")
     if lib_mlx or any(p.endswith(".npz") for p in low):
         f.discard("safetensors"); f.add("mlx")
+    # formats added after a header check (make_manifest.build range-reads one file per format)
+    f |= {k for k in formats.candidates(paths) if k in ("coreml", "ctranslate2", "tflite", "openvino", "ggml")}
     return sorted(f)
 
 def first(x):
     if isinstance(x, list): return first(x[0]) if x else None
     return x if isinstance(x, str) else None
+
+class Offline(Exception): pass
+
+def offline_info(prev):
+    """The repo facts make_row needs, rebuilt from the previous catalog row (no network)."""
+    if not prev: raise Offline()
+    tasks = prev.get("tasks") or []
+    return {"pipeline_tag": tasks[0] if tasks and tasks != ["dataset"] else None, "library_name": "mlx" if "mlx" in (prev.get("formats") or []) else None,
+            "cardData": {"base_model": prev.get("base_model"), "task_categories": [t for t in tasks if t != "dataset"]},
+            "safetensors": {"total": prev["params"]} if prev.get("params") else {}, "tags": [],
+            "_relation": prev.get("relation"), "_signals": prev.get("signals")}
 
 def meta(repo, commit, dataset):
     kind = "datasets" if dataset else "models"
@@ -81,6 +102,25 @@ def family_of(sec, repo):
     if repo in ABLITERATED: return ABLITERATED[repo][0]
     return repo.split("/")[0] if name in ("speech", "embed", "image", "video", "music", "ocr", "datasets") else name
 
+# Same weights in another packaging (quantization, format conversion, ComfyUI repack) count as "quant".
+QUANT_HINT = re.compile(r"gguf|mlx|onnx|comfy|gsq|awq|gptq|exl2|fp8|mxfp|nvfp4|int[48]|bnb|[-_.]q[2-8]", re.I)
+QUANT_ORGS = {"comfy-org", "onnx-community", "unsloth", "lmstudio-community", "mlx-community", "bartowski", "ista-daslab", "thebloke", "mradermacher", "ggml-org"}
+
+def relation_for(repo, info, base, dataset):
+    """relation {type, parent}: from the Hugging Face lineage tags when present, else from base_model."""
+    if dataset: return {"type": "base", "parent": None}
+    r = classify.relation_of({"tags": info.get("tags") or [], "cardData": {"base_model": base}})
+    if any(str(t).startswith("base_model:") for t in info.get("tags") or []): return {"type": r["type"], "parent": r["parent"]}
+    if info.get("_relation"): return info["_relation"]
+    if not base: return {"type": "base", "parent": None}
+    quant = repo not in ABLITERATED and (QUANT_HINT.search(repo.split("/")[1]) or repo.split("/")[0].lower() in QUANT_ORGS)
+    return {"type": "quant" if quant else "finetune", "parent": base}
+
+def signals_of(info):
+    if info.get("_signals"): return info["_signals"]
+    if info.get("downloads") is None and info.get("likes") is None: return None
+    return {"downloads_30d": info.get("downloads"), "likes": info.get("likes"), "trending": None}
+
 def make_row(c, man, info, now_ts, cls, terms, note=None, link_only=False, total=None, fmts=None):
     repo, dataset = c["repo"], c["kind"] == "dataset"
     card = info.get("cardData") or {}
@@ -90,31 +130,85 @@ def make_row(c, man, info, now_ts, cls, terms, note=None, link_only=False, total
         tasks = [info["pipeline_tag"]] if info.get("pipeline_tag") else ["text-generation"]
     params = (info.get("safetensors") or {}).get("total")
     sec = c["section"]
-    row = {"id": repo, "display_name": repo.split("/")[1], "section": sec, "family": family_of(sec, repo), "tasks": tasks,
+    base = first(card.get("base_model"))
+    row = {"id": repo, "kind": c["kind"], "display_name": repo.split("/")[1], "section": sec, "family": family_of(sec, repo), "tasks": tasks,
            "license_id": c["license_id"], "redistribution": c["_redis"],
            "formats": fmts, "total_size": total, "params": params if isinstance(params, int) else None,
-           "base_model": first(card.get("base_model")), "abliterated": repo in ABLITERATED,
+           "base_model": base, "relation": relation_for(repo, info, base, dataset), "abliterated": repo in ABLITERATED,
            "what_changed": ABLITERATED[repo][1] if repo in ABLITERATED else None, "badges": ["source"],
-           "upstream_url": c["upstream_url"], "added_at": now_ts, "license_class": cls, "requires_terms": terms}
+           "upstream_url": c["upstream_url"], "added_at": now_ts, "license_class": cls, "requires_terms": terms,
+           # every CSV row is a license a person read and recorded (catalog/_audit/licenses.csv)
+           "audit": {"method": "reviewed", "at": now_ts}}
+    sig = signals_of(info)
+    if sig: row["signals"] = sig
     if man: row["manifest_url"] = f"{SITE}/manifests/{repo}.json"
     lf = c.get("license_file", "")
     if terms: row["license_url"] = f"{c['upstream_url']}/blob/{c['pinned_commit'] or 'main'}/{lf}" if lf and lf != "none" and not dataset else c["upstream_url"]
     if note: row["note"] = note
     return row
 
+CLASS_RANK = {"permissive": 0, "custom": 1, "gated": 1, "non-commercial": 2}
+
+def inherit(rows):
+    """The strictest license class along base -> fine-tune -> quant wins (a quant of a stricter base
+    may not list looser). Returns the ids that changed."""
+    by_id, changed = {r["id"]: r for r in rows}, []
+    def chain(r, seen=()):
+        best = r
+        p = by_id.get((r.get("relation") or {}).get("parent") or "")
+        if p and p["id"] not in seen and p["id"] != r["id"]:
+            pb = chain(p, seen + (r["id"],))
+            if CLASS_RANK.get(pb["license_class"], 0) > CLASS_RANK.get(best["license_class"], 0): best = pb
+        return best
+    for r in rows:
+        b = chain(r)
+        if b is not r and CLASS_RANK.get(b["license_class"], 0) > CLASS_RANK.get(r["license_class"], 0):
+            r["license_class"], r["redistribution"], r["requires_terms"] = b["license_class"], b["redistribution"], True
+            r["license_url"] = b.get("license_url") or b["upstream_url"]
+            r["audit"]["method"] = "inherited"
+            r["note"] = (NONCOMM_NOTE + " " if b["license_class"] == "non-commercial" else "") + \
+                f"The license of the base model {b['id']} applies: the strictest license along the lineage wins."
+            changed.append(r["id"])
+    return changed
+
+def migrate(r, c):
+    """Bring a row written before kind/relation/audit up to the current schema (kind from the audit CSV, never the section)."""
+    r = dict(r)
+    r.setdefault("kind", c["kind"])
+    r.setdefault("relation", relation_for(r["id"], {}, r.get("base_model"), r["kind"] == "dataset"))
+    r.setdefault("audit", {"method": "reviewed", "at": r.get("added_at")})
+    return r
+
+def row_file(r, ids):
+    """catalog/rows/<org>__<repo>.json; a non-model entry whose id collides with another kind gets a kind prefix."""
+    return fname(r["id"]) + ".json" if r["kind"] == "model" or ids[r["id"]] == 1 else f"{r['kind']}__{fname(r['id'])}.json"
+
+def sign(path, repo, commit, key):
+    """Sign to a temp file, then replace: the old signature is never removed before a new one exists."""
+    sig, tmp = path + ".minisig", path + ".minisig.tmp"
+    if os.path.exists(tmp): os.remove(tmp)
+    subprocess.run(["minisign", "-S", "-m", path, "-s", key, "-x", tmp, "-t", f"freeweights manifest {repo} {commit[:12]}"], check=True, capture_output=True)
+    os.replace(tmp, sig)
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--only", nargs="*"); ap.add_argument("--no-sign", action="store_true")
+    ap.add_argument("--offline", action="store_true", help="no network: reuse existing manifests and catalog rows")
+    ap.add_argument("--key", default=os.path.expanduser("~/.config/freeweights/minisign.key"))
     a = ap.parse_args()
     cands = list(csv.DictReader(open(os.path.join(CAT, "_audit", "licenses.csv"), encoding="utf-8"))) + EXTRA
     check, mschema = mm.load_validator()
     cschema = json.load(open(os.path.join(ROOT, "spec", "catalog-schema.json")))
-    key = os.path.expanduser("~/.config/freeweights/minisign.key")
+    key = a.key
     seen, rows, refused = set(), [], []
+    signed, unchanged, pending, offline_skip = [], [], [], []
     ts = now()
-    # Keep added_at for rows that already exist; only new rows get today's date.
-    prev_added = {}
+    # Keep added_at and the audit date for rows that already exist; only new rows get today's date.
+    prev = {}
     for old in glob.glob(os.path.join(CAT, "rows", "*.json")):
-        d = json.load(open(old, encoding="utf-8")); prev_added[d["id"]] = d.get("added_at")
+        d = json.load(open(old, encoding="utf-8")); prev[d["id"]] = d
+    def net(fn, repo):
+        if not a.offline: return fn()
+        return offline_info(prev.get(repo))
     for c in cands:
         repo = c["repo"]
         if repo in seen: print("dup skip", repo); continue
@@ -122,75 +216,101 @@ def main():
         if a.only and repo not in a.only: continue
         dataset = c["kind"] == "dataset"
         red, lid = c["redistribution"], c["license_id"]
+        pr = prev.get(repo) or {}
         def refuse(reason): refused.append({"id": repo, "license_id": lid, "upstream_url": c["upstream_url"], "reason": reason}); print("REFUSED", repo, reason)
-        if red == "no":
-            if "excludes the united states" in (c["notes"] + c["quoted_clause"]).lower() or "territory" in c["notes"].lower() and "United States" in c["notes"] or repo.startswith("MiniMaxAI/MiniMax-H3"):
-                refuse("License excludes the United States (Applicable Territory is worldwide except the EU, UK, South Korea and the US). Distribution from a US host is outside the grant."); continue
-            c["_redis"] = "no"
-            info = meta(repo, c["pinned_commit"], False)
-            sib = mm.http(f"https://huggingface.co/api/models/{repo}/revision/{c['pinned_commit']}?blobs=true").get("siblings", [])
-            total = sum(int((s.get("lfs") or {}).get("size", s.get("size") or 0)) for s in sib)
-            fm = formats_of([s["rfilename"] for s in sib], False, info.get("library_name") == "mlx") or ["safetensors"]
-            cls, note = SOURCE_ONLY.get(repo, ("non-commercial", NONCOMM_NOTE))
-            rows.append(make_row(c, False, info, ts, cls, True, note, total=total, fmts=fm)); print("source-only row", repo); time.sleep(1); continue
-        if red == "unclear": refuse("license unclear — needs review"); continue
-        if repo == "hexgrad/Kokoro-82M": refuse("pickle-only weights; replaced by onnx-community/Kokoro-82M-v1.0-ONNX"); continue
-        if c["gated"] == "yes" and not dataset:
-            # Gated model: the public file listing gives size and formats; no manifest, no copy.
-            c["_redis"] = "click-through"
-            info = mm.http(f"https://huggingface.co/api/models/{repo}/revision/{c['pinned_commit']}?blobs=true")
-            sib = info.get("siblings", [])
-            total = sum(int((s.get("lfs") or {}).get("size", s.get("size") or 0)) for s in sib)
-            fm = formats_of([s["rfilename"] for s in sib], False, info.get("library_name") == "mlx")
-            rows.append(make_row(c, False, info, ts, "gated", True, GATED_MODEL_NOTE, total=total, fmts=fm)); print("gated model row", repo); time.sleep(1); continue
-        if red == "click-through" and c["gated"] == "yes":
-            c["_redis"] = "click-through"
-            info = mm.http(f"https://huggingface.co/api/datasets/{repo}")
-            rows.append(make_row(c, False, info, ts, "gated", True, "Gated dataset: listed as a link only, with no file listing and no copy hosted. Accept the gate terms at the source (do not reveal examples in plain text or images online).", total=0, fmts=[])); print("gated row", repo); time.sleep(1); continue
-        # downloadable: manifest + row
-        out = os.path.join(MAN, fname(repo) + ".json")
-        commit = c["pinned_commit"] or None
-        have = None
-        if os.path.exists(out) and os.path.exists(out + ".minisig"):
-            have = json.load(open(out))
-            if (commit and have["upstream"]["commit"] != commit) or have["section"] != c["section"]: have = None
-            elif repo in mm.subsets() and not all(mm.included(f["path"], mm.subsets()[repo]) for f in have["files"]): have = None
-        if have: m = have
-        else:
-            try: m = mm.build(repo, commit, dataset, c["section"])
-            except mm.Refused as e: refuse(str(e)); continue
-            time.sleep(1)
-        permissive = licenses.is_permissive(lid)
-        c["_redis"] = "yes" if permissive else "click-through"
-        m["license"]["id"] = lid
-        m["license"]["name"] = licenses.name(lid)
-        m["license"]["redistribution"] = c["_redis"]
-        errs = check(m, mschema)
-        if errs: print("MANIFEST ERRORS", repo, errs); sys.exit(1)
-        write(out, m)
-        sig = out + ".minisig"
-        if os.path.exists(sig): os.remove(sig)
-        if not a.no_sign:
-            subprocess.run(["minisign", "-S", "-m", out, "-s", key, "-x", sig, "-t", f"freeweights manifest {repo} {m['upstream']['commit'][:12]}"], check=True, capture_output=True)
-        info = meta(repo, m["upstream"]["commit"], dataset)
-        paths = [f["path"] for f in m["files"]]
-        fm = formats_of(paths, dataset, info.get("library_name") == "mlx" or repo.startswith("mlx-community/"))
-        c["pinned_commit"] = m["upstream"]["commit"]
-        row = make_row(c, True, info, ts, "permissive" if permissive else "custom", not permissive, fmts=fm, total=sum(f["size"] for f in m["files"]))
-        rows.append(row); print("ok", repo, len(m["files"]), "files", row["total_size"], "bytes"); time.sleep(1)
+        try:
+            if red == "no":
+                if "excludes the united states" in (c["notes"] + c["quoted_clause"]).lower() or "territory" in c["notes"].lower() and "United States" in c["notes"] or repo.startswith("MiniMaxAI/MiniMax-H3") or licenses.verdict(lid) == "refused":
+                    refuse("License excludes the United States (Applicable Territory is worldwide except the EU, UK, South Korea and the US). Distribution from a US host is outside the grant."); continue
+                c["_redis"] = "no"
+                info = net(lambda: meta(repo, c["pinned_commit"], False), repo)
+                if a.offline: total, fm = pr["total_size"], pr["formats"]
+                else:
+                    sib = mm.http(f"https://huggingface.co/api/models/{repo}/revision/{c['pinned_commit']}?blobs=true").get("siblings", [])
+                    total = sum(int((s.get("lfs") or {}).get("size", s.get("size") or 0)) for s in sib)
+                    fm = formats_of([s["rfilename"] for s in sib], False, info.get("library_name") == "mlx") or ["safetensors"]
+                e = licenses.entry(lid) or {}
+                cls, note = SOURCE_ONLY.get(repo) or ((e["verdict"], e["note"]) if e.get("link_only") else ("non-commercial", NONCOMM_NOTE))
+                rows.append(make_row(c, False, info, ts, cls, True, note, total=total, fmts=fm)); print("source-only row", repo); a.offline or time.sleep(1); continue
+            if red == "unclear": refuse("license unclear — needs review"); continue
+            if repo == "hexgrad/Kokoro-82M": refuse("pickle-only weights; replaced by onnx-community/Kokoro-82M-v1.0-ONNX"); continue
+            if c["gated"] == "yes" and not dataset:
+                # Gated model: the public file listing gives size and formats; no manifest, no copy.
+                c["_redis"] = "click-through"
+                info = net(lambda: mm.http(f"https://huggingface.co/api/models/{repo}/revision/{c['pinned_commit']}?blobs=true"), repo)
+                if a.offline: total, fm = pr["total_size"], pr["formats"]
+                else:
+                    sib = info.get("siblings", [])
+                    total = sum(int((s.get("lfs") or {}).get("size", s.get("size") or 0)) for s in sib)
+                    fm = formats_of([s["rfilename"] for s in sib], False, info.get("library_name") == "mlx")
+                rows.append(make_row(c, False, info, ts, "gated", True, GATED_MODEL_NOTE, total=total, fmts=fm)); print("gated model row", repo); a.offline or time.sleep(1); continue
+            if red == "click-through" and c["gated"] == "yes":
+                c["_redis"] = "click-through"
+                info = net(lambda: mm.http(f"https://huggingface.co/api/datasets/{repo}"), repo)
+                rows.append(make_row(c, False, info, ts, "gated", True, "Gated dataset: listed as a link only, with no file listing and no copy hosted. Accept the gate terms at the source (do not reveal examples in plain text or images online).", total=0, fmts=[])); print("gated row", repo); a.offline or time.sleep(1); continue
+            # downloadable: manifest + row
+            out = os.path.join(MAN, fname(repo) + ".json")
+            sig = out + ".minisig"
+            commit = c["pinned_commit"] or None
+            have = None
+            if os.path.exists(out) and (os.path.exists(sig) or a.offline):
+                have = json.load(open(out))
+                if (commit and have["upstream"]["commit"] != commit) or have["section"] != c["section"]: have = None
+                elif repo in mm.subsets() and not all(mm.included(f["path"], mm.subsets()[repo]) for f in have["files"]): have = None
+            if have: m = have
+            elif a.offline: raise Offline()
+            else:
+                try: m = mm.build(repo, commit, dataset, c["section"])
+                except mm.Refused as e: refuse(str(e)); continue
+                time.sleep(1)
+            permissive = licenses.is_permissive(lid)
+            c["_redis"] = "yes" if permissive else "click-through"
+            m["license"]["id"] = lid
+            m["license"]["name"] = licenses.name(lid)
+            m["license"]["redistribution"] = c["_redis"]
+            errs = check(m, mschema)
+            if errs: print("MANIFEST ERRORS", repo, errs); sys.exit(1)
+            body = mm.canonical(m)
+            old = open(out, encoding="utf-8").read() if os.path.exists(out) else None
+            if body == old and os.path.exists(sig): unchanged.append(repo)
+            elif a.no_sign:
+                if os.path.exists(sig):
+                    # never break a signed pair without signing: park the new content for the next signed run
+                    write(os.path.join(PENDING, fname(repo) + ".json"), m); pending.append(repo)
+                elif body != old: write(out, m)
+            else:
+                if body != old: write(out, m)
+                sign(out, repo, m["upstream"]["commit"], key); signed.append(repo)
+            info = net(lambda: meta(repo, m["upstream"]["commit"], dataset), repo)
+            paths = [f["path"] for f in m["files"]]
+            fm = formats_of(paths, dataset, info.get("library_name") == "mlx" or repo.startswith("mlx-community/"))
+            c["pinned_commit"] = m["upstream"]["commit"]
+            row = make_row(c, True, info, ts, "permissive" if permissive else "custom", not permissive, fmts=fm, total=sum(f["size"] for f in m["files"]))
+            rows.append(row); print("ok", repo, len(m["files"]), "files", row["total_size"], "bytes"); a.offline or time.sleep(1)
+        except Offline:
+            if pr: rows.append(migrate(pr, c)); offline_skip.append(repo); print("offline: kept previous row", repo)
+            else: print("offline: skipped, needs network", repo)
+    print(f"\nmanifests: {len(signed)} signed, {len(unchanged)} unchanged, {len(pending)} pending a signature (.pending/manifests/, not served)")
     if a.only: return
     # validate + write
+    for r in rows:
+        p = prev.get(r["id"]) or {}
+        if p.get("added_at"): r["added_at"] = p["added_at"]
+        if r.get("audit") and r is not p: r["audit"]["at"] = (p.get("audit") or {}).get("at") or r["added_at"]
+    for rid in inherit(rows): print("inherited a stricter base license:", rid)
     secs = json.load(open(os.path.join(ROOT, "spec", "catalog-schema.json")))["x-sections"]
     bad = 0
     for r in rows:
         e = check(r, cschema)
         if e: bad += 1; print("ROW ERRORS", r["id"], e)
     if bad: sys.exit(1)
-    for r in rows:
-        if prev_added.get(r["id"]): r["added_at"] = prev_added[r["id"]]
     for old in glob.glob(os.path.join(CAT, "rows", "*.json")): os.remove(old)
-    for r in rows: write(os.path.join(CAT, "rows", fname(r["id"]) + ".json"), r)
-    rows.sort(key=lambda r: (r["section"], r["id"]))
+    keys = [(r["kind"], r["id"]) for r in rows]
+    if len(set(keys)) != len(keys): print("DUPLICATE (kind, id)", sorted(k for k in keys if keys.count(k) > 1)); sys.exit(1)
+    ids = {}
+    for r in rows: ids[r["id"]] = ids.get(r["id"], 0) + 1
+    for r in rows: write(os.path.join(CAT, "rows", row_file(r, ids)), r)
+    rows.sort(key=lambda r: (r["section"], r["id"], r["kind"]))
     cat = {"sections": [dict(s, count=sum(r["section"] == s["id"] for r in rows)) for s in secs], "models": rows}
     e = check(cat, cschema)
     if e: print("CATALOG ERRORS", e); sys.exit(1)
