@@ -213,13 +213,23 @@ def signals_of(info):
     if info.get("downloads") is None and info.get("likes") is None: return None
     return {"downloads_30d": info.get("downloads"), "likes": info.get("likes"), "trending": None}
 
+# Name hints used only when the publisher sets no pipeline tag. Otherwise leave the task empty
+# ("not tagged" on the site) rather than guessing text-generation for a speech or image repo.
+TASK_HINTS = [(r"tts|text-to-speech", "text-to-speech"), (r"asr|whisper|speech-recognition", "automatic-speech-recognition"),
+              (r"embed", "feature-extraction"), (r"rerank", "text-ranking"), (r"tokenizer", None)]
+def guess_task(repo):
+    name = repo.split("/")[1].lower()
+    for pat, task in TASK_HINTS:
+        if re.search(pat, name): return [task] if task else []
+    return []
+
 def make_row(c, man, info, now_ts, cls, terms, note=None, link_only=False, total=None, fmts=None):
     repo, dataset = c["repo"], c["kind"] == "dataset"
     card = info.get("cardData") or {}
     if dataset:
         tasks = [t for t in (card.get("task_categories") or []) if isinstance(t, str)] or ["dataset"]
     else:
-        tasks = [info["pipeline_tag"]] if info.get("pipeline_tag") else ["text-generation"]
+        tasks = [info["pipeline_tag"]] if info.get("pipeline_tag") else guess_task(repo)
     params = (info.get("safetensors") or {}).get("total")
     sec = c["section"]
     base = first(card.get("base_model"))
