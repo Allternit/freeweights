@@ -12,13 +12,12 @@ Stdlib only. HF token is used only by make_manifest.http on 401/403, never print
 import argparse, csv, datetime, glob, json, os, subprocess, sys, time, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_manifest as mm
+import licenses  # the one license table (policy/licenses.json)
 
 ROOT = mm.ROOT
 CAT = os.path.join(ROOT, "catalog")
 MAN = os.path.join(ROOT, "manifests")
 SITE = "https://freeweights.allternit.com"
-PERMISSIVE = {"mit", "apache-2.0", "bsd-2-clause", "bsd-3-clause", "cc0-1.0", "cc-by-4.0", "cc-by-sa-4.0", "odc-by-1.0", "isc", "unlicense", "mpl-2.0"}
-NAMES = dict(mm.LICENSE_NAMES, **{"odc-by-1.0": "Open Data Commons Attribution License 1.0"})
 # Rows not in the CSV that Phase 0 already manifested and the plan keeps.
 EXTRA = [{"repo": "onnx-community/Kokoro-82M-v1.0-ONNX", "kind": "model", "section": "alt.freeweights.speech", "license_id": "Apache-2.0",
           "redistribution": "yes", "gated": "no", "license_file": "", "pinned_commit": "",
@@ -161,10 +160,10 @@ def main():
             try: m = mm.build(repo, commit, dataset, c["section"])
             except mm.Refused as e: refuse(str(e)); continue
             time.sleep(1)
-        permissive = lid.lower() in PERMISSIVE
+        permissive = licenses.is_permissive(lid)
         c["_redis"] = "yes" if permissive else "click-through"
         m["license"]["id"] = lid
-        m["license"]["name"] = NAMES.get(lid.lower(), lid)
+        m["license"]["name"] = licenses.name(lid)
         m["license"]["redistribution"] = c["_redis"]
         errs = check(m, mschema)
         if errs: print("MANIFEST ERRORS", repo, errs); sys.exit(1)

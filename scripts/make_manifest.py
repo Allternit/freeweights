@@ -11,12 +11,8 @@ import argparse, datetime, fnmatch, hashlib, json, os, re, subprocess, sys, time
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VERSION = "freeweights-manifest/0.1.0"
 SLEEP = 0.4
-SAFE_EXT = (".safetensors", ".gguf", ".onnx", ".npz")  # npz: MLX weights sometimes ship so
-PICKLE_EXT = (".bin", ".pt", ".pth", ".pkl", ".pickle", ".ckpt")
-PERMISSIVE = {"apache-2.0", "mit", "bsd-2-clause", "bsd-3-clause", "cc0-1.0", "cc-by-4.0", "cc-by-sa-4.0", "unlicense", "isc", "mpl-2.0"}
-LICENSE_NAMES = {"apache-2.0": "Apache License 2.0", "mit": "MIT License", "cc-by-4.0": "Creative Commons Attribution 4.0",
-                 "cc-by-sa-4.0": "Creative Commons Attribution-ShareAlike 4.0", "cc0-1.0": "CC0 1.0 Universal",
-                 "bsd-3-clause": "BSD 3-Clause License", "bsd-2-clause": "BSD 2-Clause License"}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import formats, licenses  # noqa: E402  (the one format rule set and the one license table)
 SECTION_BY_ORG = {"qwen": "qwen", "deepseek-ai": "deepseek", "moonshotai": "kimi", "zai-org": "glm", "thudm": "glm", "minimaxai": "minimax",
                   "xiaomimimo": "mimo", "google": "gemma", "baai": "embed", "hexgrad": "speech", "onnx-community": "speech",
                   "openai": "speech", "nvidia": "nemotron", "allenai": "olmo", "microsoft": "phi", "mistralai": "mistral"}
@@ -58,6 +54,20 @@ def http(url, binary=False, stream_hash=False):
         except (urllib.error.URLError, TimeoutError): time.sleep(3 * (attempt + 1))
     raise RuntimeError("giving up on " + url)
 
+def head_bytes(url, n=formats.HEAD_BYTES):
+    """First n bytes of a file by an HTTP range read (the format header check)."""
+    hdr = {"User-Agent": VERSION, "Range": f"bytes=0-{n - 1}"}
+    for attempt in range(4):
+        try:
+            time.sleep(SLEEP)
+            with urllib.request.urlopen(urllib.request.Request(url, headers=hdr), timeout=60) as r: return r.read(n)
+        except urllib.error.HTTPError as e:
+            if e.code in (401, 403) and "Authorization" not in hdr and token(): hdr["Authorization"] = "Bearer " + token(); continue
+            if e.code == 429 or e.code >= 500: time.sleep(5 * (attempt + 1)); continue
+            raise
+        except (urllib.error.URLError, TimeoutError): time.sleep(3 * (attempt + 1))
+    raise RuntimeError("giving up on " + url)
+
 def canonical(obj): return json.dumps(obj, sort_keys=True, indent=2, ensure_ascii=False) + "\n"
 
 def load_validator():
@@ -75,18 +85,16 @@ def build(repo, revision, dataset, section, include=None):
     include = include if include is not None else subsets().get(repo)
     sibs = [s for s in info.get("siblings", []) if included(s["rfilename"], include)]
     paths = [s["rfilename"] for s in sibs]
-    low = [p.lower() for p in paths]
+    resolve = f"https://huggingface.co/{'datasets/' if dataset else ''}{repo}/resolve/{commit}/"
     if not dataset:
-        if not any(p.endswith(SAFE_EXT) for p in low):
-            why = "pickle-only weights" if any(p.endswith(PICKLE_EXT) for p in low) else "no safetensors, GGUF, MLX or ONNX weights"
-            raise Refused(why)
+        fmts, why = formats.decide(paths, lambda p, n: head_bytes(resolve + urllib.parse.quote(p), n))
+        if not fmts: raise Refused(why)
     lic_id = (info.get("cardData") or {}).get("license") or ""
     if not lic_id: raise Refused("no license in cardData")
     lic_id = str(lic_id)
     lic_path = next((p for p in paths if re.fullmatch(r"(licen[sc]e|copying)(\.(md|txt))?", p, re.I)), None)
     if not lic_path: lic_path = "README.md" if "README.md" in paths else None
     if not lic_path: raise Refused("no license file or README")
-    resolve = f"https://huggingface.co/{'datasets/' if dataset else ''}{repo}/resolve/{commit}/"
     files, lic_sha = [], None
     for s in sorted(sibs, key=lambda s: s["rfilename"]):
         p, lfs = s["rfilename"], s.get("lfs")
@@ -103,8 +111,8 @@ def build(repo, revision, dataset, section, include=None):
     return {"schema_version": 0, "id": repo, "section": section,
             "upstream": {"host": "huggingface.co", "repo": repo, "commit": commit,
                          "url": f"https://huggingface.co/{'datasets/' if dataset else ''}{repo}/tree/{commit}"},
-            "license": {"id": lic_id, "name": LICENSE_NAMES.get(lic_id.lower(), lic_id), "file_path": lic_path,
-                        "file_sha256": lic_sha, "redistribution": "yes" if lic_id.lower() in PERMISSIVE else "click-through"},
+            "license": {"id": lic_id, "name": licenses.name(lic_id), "file_path": lic_path,
+                        "file_sha256": lic_sha, "redistribution": "yes" if licenses.is_permissive(lic_id) else "click-through"},
             "files": files,
             "sources": [{"type": "source", "url": resolve, "priority": 100, "last_checked": now}],
             "created_at": now, "generator": VERSION}
