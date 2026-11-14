@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-14T21:25:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2131587d814608a9047b079a83fb0e39c84977a03c4f95677673933f55604f42",
+      "size": 3027
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "847603d3ed14387a2b45c197f8d07ddee0f9938051549c727cbc894facfea78b",
+      "size": 922
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "193ac1bc9233f649f6c2ab1c694292f184a4c0944f94146d27940ab792981c33",
+      "size": 1523
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e9527bdf03e7d4971f9cacdbcf81a5fe04b10b64fc478bba6bf389cc0e597b72",
+      "size": 239
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "c7beb372e4b7fa5402c284b30cab0ec529b5aa239a0e8d52f0520c82a613fc94",
+      "size": 5303216560
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "f71476c862b2704d4e1556aa0cb8f63d6f4bf0c4ca10a017ab7cc9e906e87354",
+      "size": 5303216696
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "068af23a9eca089a00269e82c1f9b8abe514372665207bf3281f774489358a6c",
+      "size": 5303216696
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "3ca99b8cfc6d8e3a6d28e900724ee0b083f3ca04d8477da83ce82466eacaa800",
+      "size": 4675994152
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "d1a77d5ca0b8fa2cb57e097e1d4087bbfcb86e85778ce59e17e5e2610bc6dd86",
+      "size": 66392
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "d71bebc1307f2d1e38e87563b50faa78c72fd2e4093b5c69c756f12c444fec6a",
+      "size": 364
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "76ebeac0d8bd7879ead7b43c16b44981f277e47225de2bd7de9ae1a6cc664a8c",
+      "size": 19966496
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e87c176ab373d67c97f2f787eeb2e05f9026e76f4db356111643b2f511a75a94",
+      "size": 4794
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "85d5ca37836f20a5edd11800e4380e731612946f8c7b70fba4d8f532fe752932",
+      "size": 365
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "zai-org/GLM-4.1V-9B-Base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2131587d814608a9047b079a83fb0e39c84977a03c4f95677673933f55604f42",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.glm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:25:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/zai-org/GLM-4.1V-9B-Base/resolve/5e8d1942554a9277eabcf9e83211bbf9c86136ee/"
+    }
+  ],
+  "upstream": {
+    "commit": "5e8d1942554a9277eabcf9e83211bbf9c86136ee",
+    "host": "huggingface.co",
+    "repo": "zai-org/GLM-4.1V-9B-Base",
+    "url": "https://huggingface.co/zai-org/GLM-4.1V-9B-Base/tree/5e8d1942554a9277eabcf9e83211bbf9c86136ee"
+  }
+}

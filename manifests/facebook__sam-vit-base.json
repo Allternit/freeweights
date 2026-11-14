@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:36:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7a8579105233ff1e8fdc6c8387e102e88458e94c873463f640c416de01c921dd",
+      "size": 6727
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5ebd0d8643b486f3a716bf17c2a15531eb818b2b96ff0c6c5dcc88fa015161af",
+      "size": 6566
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "892c410e496344e527255ccdcb2cb7244a609acb5389c7c4fdba1288f861c579",
+      "size": 374979480
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "225545a743c654e3c495ec6f545a0eaba57c8ba3fbbd8483b3cb1c0fc58db517",
+      "size": 466
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "1a1e860feeb895bc46f704d4faad2a0be739b5dfdca0ebdda520ffbcfb73f348",
+      "size": 375050165
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "cfaf0843e7c825c7262261782344a8ea64a6914766ff886bc967198ece733ed5",
+      "size": 375292824
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/sam-vit-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7a8579105233ff1e8fdc6c8387e102e88458e94c873463f640c416de01c921dd",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/sam-vit-base/resolve/70c1a07f894ebb5b307fd9eaaee97b9dfc16068f/"
+    }
+  ],
+  "upstream": {
+    "commit": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f",
+    "host": "huggingface.co",
+    "repo": "facebook/sam-vit-base",
+    "url": "https://huggingface.co/facebook/sam-vit-base/tree/70c1a07f894ebb5b307fd9eaaee97b9dfc16068f"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "intfloat/multilingual-e5-small",
+  "display_name": "finemath-classifier",
+  "family": "smollm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "HuggingFaceTB/finemath-classifier",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "mit",
+  "manifest_url": "https://freeweights.allternit.com/manifests/HuggingFaceTB/finemath-classifier.json",
+  "params": 117654145,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "intfloat/multilingual-e5-small",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.smollm",
+  "signals": {
+    "downloads_30d": 890,
+    "likes": 16,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "T0",
+  "total_size": 985605519,
+  "upstream_url": "https://huggingface.co/HuggingFaceTB/finemath-classifier",
+  "what_changed": null
+}

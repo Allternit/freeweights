@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen3-4B",
+  "display_name": "Qwen3-4B-ONNX",
+  "family": "qwen",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/Qwen3-4B-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/Qwen3-4B-ONNX.json",
+  "note": "The license of the base model Qwen/Qwen3-4B applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen3-4B",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.qwen",
+  "signals": {
+    "downloads_30d": 2132,
+    "likes": 6,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 19705961751,
+  "upstream_url": "https://huggingface.co/onnx-community/Qwen3-4B-ONNX",
+  "what_changed": null
+}

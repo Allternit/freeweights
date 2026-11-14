@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "BAAI/bge-reranker-v2-m3",
+  "display_name": "poiss-bge-m3-reranker",
+  "family": "amazon",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "amazon/poiss-bge-m3-reranker",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/amazon/poiss-bge-m3-reranker.json",
+  "params": 567755777,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "BAAI/bge-reranker-v2-m3",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 72,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "T0",
+  "total_size": 2293248918,
+  "upstream_url": "https://huggingface.co/amazon/poiss-bge-m3-reranker",
+  "what_changed": null
+}

@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-14T21:24:52Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1a3a493bbb99dd2935e6e61c902be60ba326d7627958f5f78279259bb77027e9",
+      "size": 4031
+    },
+    {
+      "lfs": false,
+      "path": "USAGE_POLICY",
+      "sha256": "a48000373022ca5114dc538e01085a3885884f41d4ba5c12dcd30d1e2d21dadf",
+      "size": 236
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "589c73db2f7775c5f946b84bd4695fd3be3612e48ebb69a956dc38b7ec70236d",
+      "size": 16663
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.json",
+      "sha256": "c8f5c2924c29dc0c6fafb1894863d620b2c0b065a8aef860c79f65b911ef95a7",
+      "size": 17461
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8fc6c94451a1a97bf3080baec34002c75173833164bd8e75f40152e27b31e531",
+      "size": 1806
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "97b165839e19bf43309d1e571d1720ebc081dde24e6722cfb644257215ad1e66",
+      "size": 165
+    },
+    {
+      "lfs": true,
+      "path": "model-00000-of-00002.safetensors",
+      "sha256": "ef82af3aff019605840ebd545957b8493a65a179a8c11339e50753d311195d12",
+      "size": 4792272488
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "19684279c3bf220c0bf6e63a86ee22a2724debb6972c7ad59b0d8aa42dff642d",
+      "size": 4798702184
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "e18569972d3995dd7327e4423a6a3de5b1356223d4f710808bfcbac09f2b4d5d",
+      "size": 4170342232
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "0e085b977c4c9942f85938828e8c989ed7d5cdabf852e4da6a67c116cd502cd1",
+      "size": 36355
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "dd5e191d20c12d2fee1da5bae14ca1db0f5f4215300af691f23cdee97120a293",
+      "size": 98
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3",
+      "size": 27868174
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9279e942392b742d633c7adbb89ebe002c98399db8926a7af5125c726f404070",
+      "size": 4200
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openai/gpt-oss-safeguard-20b",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gpt-oss",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:24:52Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openai/gpt-oss-safeguard-20b/resolve/8a11e17b25c973a24099d4016bf2e17dd7ec1574/"
+    }
+  ],
+  "upstream": {
+    "commit": "8a11e17b25c973a24099d4016bf2e17dd7ec1574",
+    "host": "huggingface.co",
+    "repo": "openai/gpt-oss-safeguard-20b",
+    "url": "https://huggingface.co/openai/gpt-oss-safeguard-20b/tree/8a11e17b25c973a24099d4016bf2e17dd7ec1574"
+  }
+}

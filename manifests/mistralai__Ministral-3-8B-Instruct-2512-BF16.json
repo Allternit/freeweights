@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-14T21:24:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "07b3b4b04ce1da1f27be4f1ff90006c9b8ace80cc0eb81bdd182a11257f4498c",
+      "size": 1618
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f390689977775d8ee2196a56d469f77293a1a33400069a6a2a00c5dc95f53510",
+      "size": 8637
+    },
+    {
+      "lfs": false,
+      "path": "SYSTEM_PROMPT.txt",
+      "sha256": "66e0fda8c8ab269ccd010dca6196931d475a22c3f2eebe5b6b3a2ec33a354d0e",
+      "size": 2406
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "74eeb55fd3341286ec3fd44e902b7120721acc81cd394e96b431f85e93a1ea56",
+      "size": 11912
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3953b565385881fe1e80980fa8f797ffef5dbcc170851b5f90d60ddcb1905f58",
+      "size": 1579
+    },
+    {
+      "lfs": true,
+      "path": "consolidated.safetensors",
+      "sha256": "44db184fe2b0b08edea6370ad8403d7b17d604d38127133f50a3da111a874eca",
+      "size": 17836115976
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e0923390059f84a9180b00e5501778acc45ea9856cd7f2fd68208b360927c677",
+      "size": 131
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "95f4da19c81e6a06d4f0c61cac3dfdd85ef463a7955473dc4c07e570fd2342f9",
+      "size": 4984292952
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "18275e4c8413d0ed4b0cb8380fe1fd4faeee34189960fdd92ef5b0d3f4ed1b98",
+      "size": 4999804256
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "980d1d3635ae29a6e629e2f7ad589c882eba270c3f66da74da4f8ccb11845687",
+      "size": 4915917680
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "fa80e52af465c5644b18b623eeeebb1d50e47dafbee73816bf26f2473f88d369",
+      "size": 2936108304
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "639a9c27a864b0be21e9e0fd1313f120d24c45563723797ebf611c6fce75b822",
+      "size": 52675
+    },
+    {
+      "lfs": false,
+      "path": "params.json",
+      "sha256": "81b8377f36c5b3d60900b333214d85160a0500b84576e969092c6fd214f69538",
+      "size": 1098
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "ece2373c2ae391bce18785a1810543bc6173a1f28b6767cffab2c35dbea5f002",
+      "size": 976
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "0a5c981e8c5c6f8886ee007a6d4543a0be6b221cb9ca32a8709384a4c6fc8cbb",
+      "size": 147094
+    },
+    {
+      "lfs": true,
+      "path": "tekken.json",
+      "sha256": "600bb27946565481ecf51ba8aee252e49b9a68507866080ac9c30185bb312843",
+      "size": 16753784
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "d5f6046775b112f0e2d456ee9dba450684ab964fe5c4e231599bdc6773028135",
+      "size": 17078128
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f59f7294e4f26383d0ea93840fe21cf197784be0842a8301a0343e8c34ed0d6d",
+      "size": 198094
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f390689977775d8ee2196a56d469f77293a1a33400069a6a2a00c5dc95f53510",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:24:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512-BF16/resolve/f6fae9795746f63c9be8344932f01275f3c63734/"
+    }
+  ],
+  "upstream": {
+    "commit": "f6fae9795746f63c9be8344932f01275f3c63734",
+    "host": "huggingface.co",
+    "repo": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "url": "https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512-BF16/tree/f6fae9795746f63c9be8344932f01275f3c63734"
+  }
+}

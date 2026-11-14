@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-14T21:34:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c2edd42aefcdc48e1664bfacf1c3d65785ecc7ef6a6ca4e0ca42b6a10d55ff91",
+      "size": 11873
+    },
+    {
+      "lfs": true,
+      "path": "model-tuned-specifically-for-emotional-speech.safetensors",
+      "sha256": "ee55274667be2be08fb26b74f1a19d149072f0b8d74ef297594e8dd7c2bfbbc3",
+      "size": 912352784
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8deae1555e1cefa9f6347a36cf21de02931ed9471fcadf6abcb5fe7741566078",
+      "size": 912352784
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/whisper-clap-version-0.1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c2edd42aefcdc48e1664bfacf1c3d65785ecc7ef6a6ca4e0ca42b6a10d55ff91",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:34:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/whisper-clap-version-0.1/resolve/f990e22f5fbaa966516af4d1af1f3fd9798a6dd4/"
+    }
+  ],
+  "upstream": {
+    "commit": "f990e22f5fbaa966516af4d1af1f3fd9798a6dd4",
+    "host": "huggingface.co",
+    "repo": "laion/whisper-clap-version-0.1",
+    "url": "https://huggingface.co/laion/whisper-clap-version-0.1/tree/f990e22f5fbaa966516af4d1af1f3fd9798a6dd4"
+  }
+}

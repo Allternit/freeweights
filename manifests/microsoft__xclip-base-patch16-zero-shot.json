@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-14T21:23:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "20cb01c2bd9b0ae0863422f9da41b20f10f93e009e657f411a41402f51ccf391",
+      "size": 1438
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d4aa9deca77e6eb675b84f14cd41d9e4879ba3c21baac35fb80d4864c0d25cb0",
+      "size": 3017
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6416b40171bcf1dae39904aad1dea0ab24ada831661f8731b5cef3bfbd7d17d7",
+      "size": 8899
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0057077dd2bb6a5852fc9150f6e08f866448f4928f0acd7b267007f22a6adaf7",
+      "size": 779838804
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "3376c13ec67e5505734b3d5b61d51b7f753cb1896d9661171c25ad35afcb69b6",
+      "size": 310
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "6f57805daf0db792cc4a09e99b72c97feb2b7e7a0a99c219718d28186d852fe4",
+      "size": 779959711
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c4864a9376a8401918425bed71fc14fc0e81f9b59ec45c1cf96cccb2df508eac",
+      "size": 472
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f3dba9c5f2100fc09edb20622a18083f1fbf5041e4c0af371959bd7502428d44",
+      "size": 2224208
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "1636bf45a35613aa5bc18520bca07d58550d3b272b6f8a12fc17363f52b2a930",
+      "size": 927
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349",
+      "size": 1059962
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/xclip-base-patch16-zero-shot",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d4aa9deca77e6eb675b84f14cd41d9e4879ba3c21baac35fb80d4864c0d25cb0",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:23:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/xclip-base-patch16-zero-shot/resolve/6746d6a5202bf24300cd9bf36f457f174483d41b/"
+    }
+  ],
+  "upstream": {
+    "commit": "6746d6a5202bf24300cd9bf36f457f174483d41b",
+    "host": "huggingface.co",
+    "repo": "microsoft/xclip-base-patch16-zero-shot",
+    "url": "https://huggingface.co/microsoft/xclip-base-patch16-zero-shot/tree/6746d6a5202bf24300cd9bf36f457f174483d41b"
+  }
+}

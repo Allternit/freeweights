@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:08:40Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "d02ebf56344d20f773449b15d0c10ee9a86a9178f3b3c9bfecb8b87d4350ce38",
+      "size": 296
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5813aa53e5ba789d1e5f64904b0ec5ca529f981327b5417f6f88d4438cd31eb3",
+      "size": 85521
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2e26193d0d00a8c709c379fd840bd6c41789b25add0d324d841d0788d61b7e0e",
+      "size": 738
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "26a4caecbc808973e5b3b3a04484db1389078b0458254e4dd617ff361e2f378a",
+      "size": 252
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "059905097862be303c51fc88d6976d27e3006ac59786cc750478043c4eb91b3a",
+      "size": 435588776
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "size": 349
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "564e6c65ee0c739a486702e9e3e9b33c3f697c19c34dbe886bce9eec497ce971",
+      "size": 435811541
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "c6e8ef5f4d93b03c99da91e8b4d38bf5606db8118e344d465dae408b30107772",
+      "size": 143859863
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "7f8fcebda72ae4eec54769f42727c5c7484b271358d423bf610db7327093cb08",
+      "size": 218108238
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "e46017484d369593d6bb830936fde2175ce21e1ba1ddf002f23e3212d87c824a",
+      "size": 110084023
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "a1fa572089a82803eeb2b821b28edfe8414ae84b7cd91ddf552a1cae1095fb63",
+      "size": 149167751
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "e46017484d369593d6bb830936fde2175ce21e1ba1ddf002f23e3212d87c824a",
+      "size": 110084023
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "4cfc22160ddd52bac43697b6b84a4b29ea25a82db23841c27436dbddcfd5f88a",
+      "size": 110084023
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "4dfc17a899f3ea25b5c8e9034a1d0d9ebd96eca0868b015a89d1d748c38e4b2f",
+      "size": 107
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "size": 711649
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0e83e9d7206b3ade43f8f2aeef523cf5d5b4a25b67af21b273de21972c0f58b7",
+      "size": 1381
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Snowflake/snowflake-arctic-embed-m",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5813aa53e5ba789d1e5f64904b0ec5ca529f981327b5417f6f88d4438cd31eb3",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:08:40Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Snowflake/snowflake-arctic-embed-m/resolve/fc74610d18462d218e312aa986ec5c8a75a98152/"
+    }
+  ],
+  "upstream": {
+    "commit": "fc74610d18462d218e312aa986ec5c8a75a98152",
+    "host": "huggingface.co",
+    "repo": "Snowflake/snowflake-arctic-embed-m",
+    "url": "https://huggingface.co/Snowflake/snowflake-arctic-embed-m/tree/fc74610d18462d218e312aa986ec5c8a75a98152"
+  }
+}

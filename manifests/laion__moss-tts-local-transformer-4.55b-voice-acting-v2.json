@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:34:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8ea7b4ffad0e9f2169a066c266ee5da4bf493aa79359c3e9d0fd0b02983790d9",
+      "size": 12020
+    },
+    {
+      "lfs": false,
+      "path": "__init__.py",
+      "sha256": "fa22d925207c64e6701f9c5f97c3e14a9bad4db5c37060c6e5f1362c02bc8040",
+      "size": 254
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "39bb49db6acfb8e7510b1640f575bdc183f511d85c94ce3ee967f2a6195c4a8a",
+      "size": 790
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "size": 4168
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4c32ccf610315114d7ca5570662e62e9f5c41db36ad8bcc007dce8bfc9fa21f0",
+      "size": 6985
+    },
+    {
+      "lfs": false,
+      "path": "configuration_moss_tts.py",
+      "sha256": "ab6debcb92032cb9dc91ae80aed77dbadd2e59848208baef2b062bd6def3f3be",
+      "size": 7160
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "215f29f6b57440eb88eb67cf42a9899f4b9a3c1cc8553190a3cbb790ac34b4e2",
+      "size": 95
+    },
+    {
+      "lfs": false,
+      "path": "gpt2_decoder.py",
+      "sha256": "f2e877104669f1e6c7cd34680f0da1a8a159e032123ee56b660b63929b6c8989",
+      "size": 30896
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "dec264542f015f59475c40f13f01ca6c25627eb518d52f7089a4d89874c5d3a4",
+      "size": 8260031400
+    },
+    {
+      "lfs": false,
+      "path": "modeling_moss_tts.py",
+      "sha256": "b0a66211943ae580b087f3e71495fea2f455701a4f6c29b6d3562218f7668c5f",
+      "size": 26379
+    },
+    {
+      "lfs": false,
+      "path": "processing_moss_tts.py",
+      "sha256": "059637b92e7eb9a67df531fe9578e9554d456195828b223eb81f21117c58e8f8",
+      "size": 37501
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "fac7289af2a37d988d708d813c92960e5e91c59d348c17b72c6aa6b86859f2b7",
+      "size": 209
+    },
+    {
+      "lfs": false,
+      "path": "qwen3_decoder.py",
+      "sha256": "100163bd7ecf31a59bafacc0b032ace9339edc992a3eb4cc80662502e04e46f0",
+      "size": 25473
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "02a153514db64e5378c53ef164c960409882649de6f4aac8f81f66218e7f8797",
+      "size": 394
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06902d1fb775216338802205886a24bc715ccc606bd872a892e3d3c83ca1b9e2",
+      "size": 11423220
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ec2869dd4c9c7155b3460c291a6fb2b955e5068013ba7efbcaafd1c61e02abce",
+      "size": 5727
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/moss-tts-local-transformer-4.55b-voice-acting-v2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8ea7b4ffad0e9f2169a066c266ee5da4bf493aa79359c3e9d0fd0b02983790d9",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:34:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/moss-tts-local-transformer-4.55b-voice-acting-v2/resolve/1aff170de525ea80ad916f89ce19b61fb2c1d25e/"
+    }
+  ],
+  "upstream": {
+    "commit": "1aff170de525ea80ad916f89ce19b61fb2c1d25e",
+    "host": "huggingface.co",
+    "repo": "laion/moss-tts-local-transformer-4.55b-voice-acting-v2",
+    "url": "https://huggingface.co/laion/moss-tts-local-transformer-4.55b-voice-acting-v2/tree/1aff170de525ea80ad916f89ce19b61fb2c1d25e"
+  }
+}

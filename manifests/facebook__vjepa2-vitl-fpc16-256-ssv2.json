@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:36:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "400bbc19de13b62f092738b668b88aa026071bc4fc9075faab729638d9850ff1",
+      "size": 3712
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9ea266370f726ba85ba03080abab9632233d0742a084f0106d90d909772e4aab",
+      "size": 14953
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "35aeab96e8513d9cc60ee08c1642dd121c86452c926ce3599b3317896a320396",
+      "size": 1502018592
+    },
+    {
+      "lfs": false,
+      "path": "notebook_finetuning.ipynb",
+      "sha256": "98ccdc0d774fd3a55897455b50744196918da5f0028fdac8dfb9c1152f324dc1",
+      "size": 544786
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "6a5687451deda1331cb4c0ba08fc440a21e285a8905522e3537004eddfca13bb",
+      "size": 1464
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/vjepa2-vitl-fpc16-256-ssv2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "400bbc19de13b62f092738b668b88aa026071bc4fc9075faab729638d9850ff1",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/vjepa2-vitl-fpc16-256-ssv2/resolve/4aa02df83918538fc21cfaf576382fa20e489a80/"
+    }
+  ],
+  "upstream": {
+    "commit": "4aa02df83918538fc21cfaf576382fa20e489a80",
+    "host": "huggingface.co",
+    "repo": "facebook/vjepa2-vitl-fpc16-256-ssv2",
+    "url": "https://huggingface.co/facebook/vjepa2-vitl-fpc16-256-ssv2/tree/4aa02df83918538fc21cfaf576382fa20e489a80"
+  }
+}

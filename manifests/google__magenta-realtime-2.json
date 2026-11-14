@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-14T21:15:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "c342323c409ab3c2a113e348d2278287fba16f8936ea490101498e920c5a33ce",
+      "size": 2042
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "432cb52a3c115ac32ba1664713ebe061218cfaeffd008e97ff26f6dc0ddf4c71",
+      "size": 9854
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/mrt2_base.safetensors",
+      "sha256": "60f3e813d9da4a41a166c734a3074e6d54254c2fc14b0817bad6b8d25cddc044",
+      "size": 9836760520
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/mrt2_small.safetensors",
+      "sha256": "5dd1cbc7c606c512c21de0bcb04d4818bf0a3b873d7cbb9d1556d67d3b034de3",
+      "size": 1128840272
+    },
+    {
+      "lfs": true,
+      "path": "models/mrt2_base/mrt2_base.mlxfn",
+      "sha256": "ee2f19f2782182095fcd05c0fc1978f7f3e020b1cc0993e9d8e643e2f7de0bfb",
+      "size": 2771414746
+    },
+    {
+      "lfs": true,
+      "path": "models/mrt2_base/mrt2_base_state.safetensors",
+      "sha256": "88b302502aa5b467b74b0591adefd7769cb620211bf18606b7656a9ea57eef5f",
+      "size": 16939969
+    },
+    {
+      "lfs": true,
+      "path": "models/mrt2_small/mrt2_small.mlxfn",
+      "sha256": "1a70b0de30b3e6ad054fe6a61a7765408f01127628e6362c1abc328809a3c422",
+      "size": 455654550
+    },
+    {
+      "lfs": true,
+      "path": "models/mrt2_small/mrt2_small_state.safetensors",
+      "sha256": "23f1e05a6beea306fe39970bd61193f2d3e5fbd8f08af93570bda4ca9ec33255",
+      "size": 8676998
+    },
+    {
+      "lfs": true,
+      "path": "resources/musiccoca/audio_preprocessor.tflite",
+      "sha256": "656ca4c358451c2b85932e66efcfd2ba62492f4435953d775bfc1d3c08329a30",
+      "size": 8729640
+    },
+    {
+      "lfs": true,
+      "path": "resources/musiccoca/mapper.tflite",
+      "sha256": "2f9743cc8f121a588b69c7f4d79a2a4111ce81864cbde8830054cd5e97f3d717",
+      "size": 86166664
+    },
+    {
+      "lfs": true,
+      "path": "resources/musiccoca/music_encoder.tflite",
+      "sha256": "0d4501af799834e383d904c34ee826c61eb53c69682bf15a981a46c1bb32793a",
+      "size": 370935584
+    },
+    {
+      "lfs": true,
+      "path": "resources/musiccoca/pretrained_vector_quantizer.tflite",
+      "sha256": "7a8a19e2119ad405818eae84a331a970f1a582b3389d4bfd27814f75b455a444",
+      "size": 72422108
+    },
+    {
+      "lfs": true,
+      "path": "resources/musiccoca/spm.model",
+      "sha256": "ff325a99b61ba5726cf6437cde6eefbb633dbaa363a684f7a97ed99b55202cca",
+      "size": 517448
+    },
+    {
+      "lfs": true,
+      "path": "resources/musiccoca/text_encoder.tflite",
+      "sha256": "e1222e3418cbe8cc2623939571bae8e9ab6f0d511404b0d83da69f4e6e11b272",
+      "size": 418674324
+    },
+    {
+      "lfs": true,
+      "path": "resources/spectrostream/decoder.safetensors",
+      "sha256": "0ac6f100a24945fb434783fde6acd7902ceaa8bca492ca317edfc75dd51c42dd",
+      "size": 209853216
+    },
+    {
+      "lfs": true,
+      "path": "resources/spectrostream/encoder.safetensors",
+      "sha256": "f20c197ddcbb9cd43e1a97f9bee0d07d211f79966cd3862d9830a32885090f72",
+      "size": 37013392
+    },
+    {
+      "lfs": true,
+      "path": "resources/spectrostream/quantizer.safetensors",
+      "sha256": "0ba89dcb85344bb14f4f34b8f597c0d6adaa560002d4fd88879a2944c98a20f0",
+      "size": 67108984
+    },
+    {
+      "lfs": true,
+      "path": "resources/spectrostream/spectrostream_encoder.mlxfn",
+      "sha256": "887c25b21aa1714d19907fc96963c6440d5911f11571054cd5acf7306c260905",
+      "size": 104319983
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/magenta-realtime-2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "432cb52a3c115ac32ba1664713ebe061218cfaeffd008e97ff26f6dc0ddf4c71",
+    "id": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:15:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/magenta-realtime-2/resolve/010aa0dcb0dfd27b24f0ad07b4dad63e8f9521cc/"
+    }
+  ],
+  "upstream": {
+    "commit": "010aa0dcb0dfd27b24f0ad07b4dad63e8f9521cc",
+    "host": "huggingface.co",
+    "repo": "google/magenta-realtime-2",
+    "url": "https://huggingface.co/google/magenta-realtime-2/tree/010aa0dcb0dfd27b24f0ad07b4dad63e8f9521cc"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:16:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e20234ff1a9eec054fd643d5ef7a4683857c8b24c7b00b466a9f55b6e22728ff",
+      "size": 18233
+    },
+    {
+      "lfs": false,
+      "path": "benchmarks.webp",
+      "sha256": "fd5c0cc8e071e42bd0513fc53cfbe1d49043e798fb54d14887715614069ea479",
+      "size": 170404
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5e2367547c103e92cb8ebc63cbd5ad4d7bf83facad5a2a2ec261fa770ed659d5",
+      "size": 1563
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "69d76e6b0a3b31f0de871f8f5b968957e0532fd9b17214aabf151da4bdbe1804",
+      "size": 69
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a706726a7eb01bbcb42994b7dcb3c06ea9557898dbae8d480eb04fe8ccb89710",
+      "size": 3240592
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "0cefcfb5a52810ab0e1103fe206c6d5b00a4c86159a4a957681031122ec23ee7",
+      "size": 4920
+    },
+    {
+      "lfs": false,
+      "path": "ttm_image.webp",
+      "sha256": "ec63340da31707b78e94252177bc57e1c7d27713734f8e4aa393ca826375d5d9",
+      "size": 377412
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-timeseries-ttm-r2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e20234ff1a9eec054fd643d5ef7a4683857c8b24c7b00b466a9f55b6e22728ff",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:16:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/"
+    }
+  ],
+  "upstream": {
+    "commit": "d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-timeseries-ttm-r2",
+    "url": "https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/tree/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f"
+  }
+}

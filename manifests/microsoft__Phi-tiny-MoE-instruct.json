@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:23:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "9daeae709a0bd71bcfd1c96dc5822ecec5210327eff929da64b0ae7f8faf1444",
+      "size": 444
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "c49419617a6070bcb197cfe272f7007fdec3e790dbb529cb995473bd69c0bd51",
+      "size": 1105
+    },
+    {
+      "lfs": false,
+      "path": "NOTICE.md",
+      "sha256": "6ac541192c253d21cd16a597ce69c515868e031db3f32f75d996b993b5aca216",
+      "size": 1772
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "27832c445de98d51b2de2fb54616ca50053640ea3a8141ad21a500267fd7a3f3",
+      "size": 13174
+    },
+    {
+      "lfs": false,
+      "path": "SECURITY.md",
+      "sha256": "7b6976eec43edfa68b79a459dd089c56b7a395916dbf1a01bd11e6d86e12128f",
+      "size": 2656
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "84addd9b7448d7b7f5320d3ed40274ba90c58340ffe183a5d13ce5293cbd1f82",
+      "size": 315
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cdc9b948bf96ecbd2facb5540bc113621a74baf67e8e02fd50121fcc6db32354",
+      "size": 1069
+    },
+    {
+      "lfs": false,
+      "path": "configuration_slimmoe.py",
+      "sha256": "31e4b0096a467ae6a50948e7a54cc28030148e4872cc37c8d2279238c71094f1",
+      "size": 12279
+    },
+    {
+      "lfs": false,
+      "path": "data_summary_card.md",
+      "sha256": "dcc9cad772ef4e56bee0035536df7297afa1277d8d48d5c96575eea956b58ba0",
+      "size": 4348
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "689a3630f4b3ba9bed78cde16c7f5fdbbbbd562efd85da06bf3f72f7db4a97d2",
+      "size": 177
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "dcb4621a07a01e28cc2161d6a2a5ce3a15f343057722da2169e2c6907bfdb2ae",
+      "size": 4998945744
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "1bc35ff74f5dfc65ed0cb968ba4c707ffcdc30c84d799ff4dfe2e9525a38f12c",
+      "size": 2511742008
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "5c1854eba7eeed34a62f0113fc9545627b781e9cf58491487dd90606a1129644",
+      "size": 182552
+    },
+    {
+      "lfs": false,
+      "path": "modeling_slimmoe.py",
+      "sha256": "9ab50e875106cbf6544db2a231727bfe0fdb897776c0875179573e03077c0c02",
+      "size": 80615
+    },
+    {
+      "lfs": false,
+      "path": "sample_finetune.py",
+      "sha256": "684314343e336315526468e6d4dcec1e2354ebf6f13ce6c799f7707b9a1861c6",
+      "size": 4936
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "474d699677e264edd3851559548cbbb61801ad8da6b249c81455007602313c34",
+      "size": 569
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d0f067e1e15cd0a36ebef3668024882cb67a80b86fb4b7b4b128481f0d474db7",
+      "size": 1844436
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f1dd849855d10277cec0457162688f71e5c9230a7b69370ae66f804755f5e90f",
+      "size": 3103
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/Phi-tiny-MoE-instruct",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "c49419617a6070bcb197cfe272f7007fdec3e790dbb529cb995473bd69c0bd51",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.phi",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:23:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/Phi-tiny-MoE-instruct/resolve/2fe50e88d0e2a5a132563815686ea0dcc8e252b5/"
+    }
+  ],
+  "upstream": {
+    "commit": "2fe50e88d0e2a5a132563815686ea0dcc8e252b5",
+    "host": "huggingface.co",
+    "repo": "microsoft/Phi-tiny-MoE-instruct",
+    "url": "https://huggingface.co/microsoft/Phi-tiny-MoE-instruct/tree/2fe50e88d0e2a5a132563815686ea0dcc8e252b5"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-14T21:30:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6a9510e5e89ccef1c9c6002fa5b09380bd94a63f3cfbc2dd2ed3f5d730b5916c",
+      "size": 4448
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+      "size": 18683
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7498f36fa59dedc7498d3a3dcbd827beebb30c5a06ba8a4cbeb273274411b561",
+      "size": 71877
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "a8349d9bd64cc5841297fcb5002f0fdc4749c473c8f1b10ea337f9ce4ee7014e",
+      "size": 260
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "9755118a7773451be6bf66210694c7be9b0b5f1c0f6237808f6b95829dbef0cc",
+      "size": 3160
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "515896784d9237ed8545ee2668eb886f665b075abe8ae50dc70f10cf173763c1",
+      "size": 5367057485
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "0bea2433d5812dbb20fddc75b4adaa2d33a964420209eabefef94579048b0457",
+      "size": 3532148007
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "c51ce9064ad7c2957b0892ebe66751217cf10bfa34f707b752bea7050a79a91a",
+      "size": 129412
+    },
+    {
+      "lfs": false,
+      "path": "optiq_metadata.json",
+      "sha256": "e64e0271ef661b18c1d6b54c395266681be08771aa3e11804c7a206ada32dddf",
+      "size": 33789
+    },
+    {
+      "lfs": true,
+      "path": "optiq_vision.safetensors",
+      "sha256": "e8649d38ae7b79f19c0fb4d6a7b2dc2ab50da5c072a22bc7a49b1208246ccbd3",
+      "size": 104760992
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "6b938e76555b3e9946890770e1abcd442a4718f34041a58e8139dc8ad34545c9",
+      "size": 1382
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "113b1b1773839fe736d09a3c80a63a3877c0ae1321726f56c8bb6c7cb1943710",
+      "size": 2780
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/gemma-4-12B-it-qat-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6a9510e5e89ccef1c9c6002fa5b09380bd94a63f3cfbc2dd2ed3f5d730b5916c",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:30:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/gemma-4-12B-it-qat-OptiQ-4bit/resolve/5fbb5d97b1219b5e12735cc0e865bae1dd8e8fce/"
+    }
+  ],
+  "upstream": {
+    "commit": "5fbb5d97b1219b5e12735cc0e865bae1dd8e8fce",
+    "host": "huggingface.co",
+    "repo": "mlx-community/gemma-4-12B-it-qat-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/gemma-4-12B-it-qat-OptiQ-4bit/tree/5fbb5d97b1219b5e12735cc0e865bae1dd8e8fce"
+  }
+}

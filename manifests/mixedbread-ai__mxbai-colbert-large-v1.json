@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-14T21:09:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ae0aef653cb4215c3e40122f92d3a3a0bda4559a482795645284ce42e626a806",
+      "size": 1560
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "4b0dfefcb74f1e50a8df72a9f2bf0088753f8568bc479387292469b4948705d4",
+      "size": 10762
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9d3564fd7990a76236155aba8580a64ddc3f5960bf34d4fed18972d794fedae4",
+      "size": 47406
+    },
+    {
+      "lfs": false,
+      "path": "artifact.metadata",
+      "sha256": "19500fb061b8b11c88aceea91de652da7c0830e3b7b4e07995ad520b115a5cc2",
+      "size": 1535
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ee0d1ad785b8a0d6423dc1ef6568e6dac512b4bdba7bc3d763a87b5c16434f23",
+      "size": 674
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1a66baadbcbf529a00cd2fb21c00a5658fbd9a04ae131ec2e4822c10c8327245",
+      "size": 670592576
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "5bb56be92d5b571548330fc7a30a720dbc8bc8c4c7a5788d0cbc4a04a67cf2f9",
+      "size": 1337351411
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "e6a3929fbc21b26bcdef3dfe2557bc5e03142028a50f6d64f38ad6c8139a9e7d",
+      "size": 669079662
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "dc3138c406f4459d7ea7906eb3e690e95daecfc3d1227432b112d0715f72ba80",
+      "size": 336014357
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "size": 711396
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0b29c7bfc889e53b36d9dd3e686dd4300f6525110eaa98c76a5dafceb2029f53",
+      "size": 1242
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mixedbread-ai/mxbai-colbert-large-v1",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "4b0dfefcb74f1e50a8df72a9f2bf0088753f8568bc479387292469b4948705d4",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:09:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mixedbread-ai/mxbai-colbert-large-v1/resolve/d092c678f449647d1945569dc17b4d8917a687e0/"
+    }
+  ],
+  "upstream": {
+    "commit": "d092c678f449647d1945569dc17b4d8917a687e0",
+    "host": "huggingface.co",
+    "repo": "mixedbread-ai/mxbai-colbert-large-v1",
+    "url": "https://huggingface.co/mixedbread-ai/mxbai-colbert-large-v1/tree/d092c678f449647d1945569dc17b4d8917a687e0"
+  }
+}

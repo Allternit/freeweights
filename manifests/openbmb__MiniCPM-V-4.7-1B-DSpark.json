@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-14T21:25:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ee05350c7fda0af4da116020dd7b976d731de3beed4f5e717d5bcc95ead24550",
+      "size": 50
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "663aec01e5194995da9c96ccf0f230a8e2375557af0d588378a375583cc36f1e",
+      "size": 3432
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d4e7bdc47a6ce7f0c63f794e7c71b72ff06fed21626e31aba19032299b7c5d2b",
+      "size": 1409
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "84222c854701adcd170f243f3dd4041f8b26c0b89089b34de2b27bc27d538196",
+      "size": 427102026
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM-V-4.7-1B-DSpark",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "663aec01e5194995da9c96ccf0f230a8e2375557af0d588378a375583cc36f1e",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:25:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B-DSpark/resolve/33762d223b4be1101cf90abba1958435a9b018e0/"
+    }
+  ],
+  "upstream": {
+    "commit": "33762d223b4be1101cf90abba1958435a9b018e0",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM-V-4.7-1B-DSpark",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B-DSpark/tree/33762d223b4be1101cf90abba1958435a9b018e0"
+  }
+}

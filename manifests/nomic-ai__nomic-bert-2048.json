@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-14T21:10:04Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b4c606bbb0cb7f15b2efd3b819c17b6fddf11230e4e0f622bd0bed4114be4179",
+      "size": 3536
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "53adc51a6b5b938e55f2e789f7059028aa452c19f790106353a5e05f2ecdb24f",
+      "size": 1883
+    },
+    {
+      "lfs": false,
+      "path": "configuration_hf_nomic_bert.py",
+      "sha256": "f7871694b8de3d3df4ac6640313d5799ce323261a0fb90c5cc567ecc34a0039e",
+      "size": 1958
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9acacdb7c24a8eac0fc7c11b00c4a2e7986a49aacbd40c9b30ae12b2763ead19",
+      "size": 549304584
+    },
+    {
+      "lfs": false,
+      "path": "modeling_hf_nomic_bert.py",
+      "sha256": "3b24a366c4cc31b869466ccfb7bbb8879e138c97f8de06c83d4fa1e31a21f149",
+      "size": 103563
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "e0b1c7db843aeae0c744716acf3c7b7da60d142e7ca31edd11853f5b163c8776",
+      "size": 549328982
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "size": 125
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "size": 711396
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d7e0000bcc80134debd2222220427e6bf5fa20a669f40a0d0d1409cc18e0a9bc",
+      "size": 1191
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nomic-ai/nomic-bert-2048",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b4c606bbb0cb7f15b2efd3b819c17b6fddf11230e4e0f622bd0bed4114be4179",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:10:04Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nomic-ai/nomic-bert-2048/resolve/7710840340a098cfb869c4f65e87cf2b1b70caca/"
+    }
+  ],
+  "upstream": {
+    "commit": "7710840340a098cfb869c4f65e87cf2b1b70caca",
+    "host": "huggingface.co",
+    "repo": "nomic-ai/nomic-bert-2048",
+    "url": "https://huggingface.co/nomic-ai/nomic-bert-2048/tree/7710840340a098cfb869c4f65e87cf2b1b70caca"
+  }
+}

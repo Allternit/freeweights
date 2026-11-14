@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:35:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6eba311f90322ac7ed3cf9004e35b3d4f93be6d0c2d0b9873b5cc55bf92e69f2",
+      "size": 6146
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ffe24870a82376256eeef9119bf2d099c717462834d47e9b267496b895e81f84",
+      "size": 1113
+    },
+    {
+      "lfs": false,
+      "path": "figures/main-figure.png",
+      "sha256": "5be3368b7c92972fcd68505591a4a685db9fc2fa156f9df5adc01601cbd365e7",
+      "size": 232294
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "8f6833851ce53496a43ef87a975c766f7a3049e2d598ecef609a526ca6308534",
+      "size": 142
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "5cf49253460171e8dfc3a75cfd5e3796091352ec48df16baeb8a1bfeacef769c",
+      "size": 81835272
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/chronos-t5-mini",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6eba311f90322ac7ed3cf9004e35b3d4f93be6d0c2d0b9873b5cc55bf92e69f2",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:35:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/chronos-t5-mini/resolve/bd6a4fde8403b8469acd0abd52852b29dbe61c7b/"
+    }
+  ],
+  "upstream": {
+    "commit": "bd6a4fde8403b8469acd0abd52852b29dbe61c7b",
+    "host": "huggingface.co",
+    "repo": "amazon/chronos-t5-mini",
+    "url": "https://huggingface.co/amazon/chronos-t5-mini/tree/bd6a4fde8403b8469acd0abd52852b29dbe61c7b"
+  }
+}

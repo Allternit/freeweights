@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:36:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e3a69d04273339b6492f185111f66fb7e9c3e4376f6fb8087f50886291cc7eb0",
+      "size": 4161
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "af92473ce89269ba92b2fb33466179aef6ceeb62d3c2f4db55da9a3380e67320",
+      "size": 348
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "00df88d823790b34a4d2d0047803ffabd47497ae724fd6659b1533dd793255be",
+      "size": 1482553200
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "e12b577bd0da1f9bf6a0b8d3d78c8f9b55b9d99dec25556954e19cfc7b8ecf28",
+      "size": 368
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2b6a1ff67a27e0df9ac0c7d93250fc0d87431c7b366b3d5669217104f9088a26",
+      "size": 409
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "ef78f86560d809067d12bac6c09f19a462cb3af3f54d2b8acbba26e1433125d6",
+      "size": 4309802
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "babbf9fed5f505ac6b28fd820b5108ca6882332ce6b921c8d33f8ff69bf841d9",
+      "size": 16350281
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d6423dae508cc3a129d22ea443841c111832a1a73125b8f25ea8736951698bcb",
+      "size": 711
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/siglip-base-patch16-256-multilingual",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e3a69d04273339b6492f185111f66fb7e9c3e4376f6fb8087f50886291cc7eb0",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/siglip-base-patch16-256-multilingual/resolve/8952a4eafcde3cb7ab46b1dd629b33f8784ca9c6/"
+    }
+  ],
+  "upstream": {
+    "commit": "8952a4eafcde3cb7ab46b1dd629b33f8784ca9c6",
+    "host": "huggingface.co",
+    "repo": "google/siglip-base-patch16-256-multilingual",
+    "url": "https://huggingface.co/google/siglip-base-patch16-256-multilingual/tree/8952a4eafcde3cb7ab46b1dd629b33f8784ca9c6"
+  }
+}

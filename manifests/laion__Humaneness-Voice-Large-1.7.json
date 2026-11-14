@@ -1,0 +1,912 @@
+{
+  "created_at": "2026-11-14T21:34:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "50ec3d2e2b5cb61936e860db73119dcf583f881dad972737c4dd41a334bf6686",
+      "size": 2593
+    },
+    {
+      "lfs": false,
+      "path": "INFERENCE_OPTIMIZATIONS.md",
+      "sha256": "fe55ff4e39268dfa547bf3fc1f77b3a0f937eef9f9a5979b74c0bb55ad3d1a21",
+      "size": 7706
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "2e1f0f3d4c35cb182eecb392d4a9ae78844ebcb8061924b8a53284ccc292def4",
+      "size": 574
+    },
+    {
+      "lfs": false,
+      "path": "MANIFEST.json",
+      "sha256": "454b67c932890fa761e44c69135a03324ea63e522cf5a0fcf2051f78a110dd41",
+      "size": 23475
+    },
+    {
+      "lfs": false,
+      "path": "NOTICE.md",
+      "sha256": "391005b5d9f241d3bc67029865c1240505695b4e6284b62e26d450d6386cbac3",
+      "size": 698
+    },
+    {
+      "lfs": false,
+      "path": "PROMPTING.md",
+      "sha256": "de9f17c10737384f70475317036bc15a91c802c6a77a4161015e7c0c4d6c3e23",
+      "size": 6900
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4a3b232dbfef9f8fe047a5b4cc9d612e6d1494268dc31f3d93a8771c4f2e416f",
+      "size": 15095
+    },
+    {
+      "lfs": false,
+      "path": "ROBBY_RTX3090.md",
+      "sha256": "5227f8d26c01ce863598c35fed40419cb9f9e78e2704a934100cdbfbd9b6b688",
+      "size": 12752
+    },
+    {
+      "lfs": false,
+      "path": "TRAINING.md",
+      "sha256": "095276f5ad39260dc749035f23ebda97d30f0c4c5ca40277d44bf7f99ddfe1c4",
+      "size": 7560
+    },
+    {
+      "lfs": false,
+      "path": "UPSTREAM_LICENSE",
+      "sha256": "17241371600bcde523c76ca4f006a1700145535914b24586c5766572640f7cf8",
+      "size": 544
+    },
+    {
+      "lfs": false,
+      "path": "UPSTREAM_NOTICE.md",
+      "sha256": "a00fd9ba52637b37dce84f9a09596a6747df540a3796b8140e151fb5949d9cf6",
+      "size": 1236
+    },
+    {
+      "lfs": false,
+      "path": "VOICE_ALIASES.md",
+      "sha256": "b56d019a0443b623a9517dd01d208e44f24d18a2da1e1e7bbfbe6ad74053eec6",
+      "size": 7262
+    },
+    {
+      "lfs": false,
+      "path": "__init__.py",
+      "sha256": "fa22d925207c64e6701f9c5f97c3e14a9bad4db5c37060c6e5f1362c02bc8040",
+      "size": 254
+    },
+    {
+      "lfs": true,
+      "path": "adapter/adapter.safetensors",
+      "sha256": "5b44fd6e2c6691d391538ec1daa20820cc741e0e09f77910e383babd8c3eb2b6",
+      "size": 96370472
+    },
+    {
+      "lfs": false,
+      "path": "adapter/adapter_config.json",
+      "sha256": "4795fefe6a98ad4919e8d3a9b9e64383979473766ca0034b38e943275aad68db",
+      "size": 498
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "39bb49db6acfb8e7510b1640f575bdc183f511d85c94ce3ee967f2a6195c4a8a",
+      "size": 790
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "971b0da285852aa351f27ffbc20e3c66a2477480a11910e9e930c53085882b29",
+      "size": 6985
+    },
+    {
+      "lfs": false,
+      "path": "configuration_moss_tts.py",
+      "sha256": "ab6debcb92032cb9dc91ae80aed77dbadd2e59848208baef2b062bd6def3f3be",
+      "size": 7160
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/de-merged-cfg1p0.json",
+      "sha256": "3c0f5348df80c4b3a0a6ec313c9afd51efa70501044df3e03aa61c5bf851d94c",
+      "size": 11786
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/de-merged-cfg1p0.mp3",
+      "sha256": "4c0fff178e0195ffce322f658b771334001f368df3ef88180faf93ff95ed3775",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/de-merged-cfg1p0.npy",
+      "sha256": "2b12288e5816da417d4b3ad2ccd20e296ee86b5dd6fdcd4360160769f0457123",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/de-unmerged-cfg1p0.json",
+      "sha256": "addbd1b1c24a611b03f5eeb57e96607c914dee2bc89c2cab83788a5fd476021b",
+      "size": 11773
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/de-unmerged-cfg1p0.mp3",
+      "sha256": "a8651185d1db8309a57342e7da079860c33febb8dc1108b72458c630af2fcb67",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/de-unmerged-cfg1p0.npy",
+      "sha256": "d14d52c3fd786b5d861d1aad01da622e23e2234da2fbb7cc6a34c2d61e6fef70",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/en-merged-cfg1p0.json",
+      "sha256": "368c5a3471319fc8fd2b112d54f17303162c9c3ecaaa3a894ee372a15df5d8f1",
+      "size": 11667
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/en-merged-cfg1p0.mp3",
+      "sha256": "efbefe1948ddca85891310d6813406ca995b1cdac253350e839a2d4972bcec14",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/en-merged-cfg1p0.npy",
+      "sha256": "1465a63c78078508dc7d93079d7d6253370235b9a3d410833000844bdd3f96bd",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/en-merged-cfg2p5.json",
+      "sha256": "6a1a9684f422f42257ab8053709d574378aa614c8c78ba674e4ce554c3ce5f0a",
+      "size": 11670
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/en-merged-cfg2p5.mp3",
+      "sha256": "646ece5de818b23b7941c6ee38349042398f1be322fd461b5aeb9a31a804b116",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/en-merged-cfg2p5.npy",
+      "sha256": "87f711e106ed75066381f52cd7cb14ad442b142504dce54bb0dbf767b5391e28",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/en-unmerged-cfg1p0.json",
+      "sha256": "2820124bafe8b54fde81dd32f74a000217e1c1ff9e1088b5aff00e71fd58b05d",
+      "size": 11681
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/en-unmerged-cfg1p0.mp3",
+      "sha256": "b9fa498512c053484c6b052c8aeabe1a8afd922279815e1393b737803387beec",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/en-unmerged-cfg1p0.npy",
+      "sha256": "6bdeac73cb6a50577e63a05ee06c024eb2cc2d1b09f8da9a37ccfa430251cfb4",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/en-unmerged-cfg2p5.json",
+      "sha256": "28d03325614fb2d9338202461c90411010b04ff7a0bbad37a4c189b7683237b0",
+      "size": 11694
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/en-unmerged-cfg2p5.mp3",
+      "sha256": "9e08c78fd55170ff53bfc1903b37d29958d78123272ead73864d921a7f251de2",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/en-unmerged-cfg2p5.npy",
+      "sha256": "0372c620fb87e3d06f26056c0cc2b0277104d4897e6518d28d77d6739e11ddf6",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/es-merged-cfg1p0.json",
+      "sha256": "9b6dd349a82110f7b7a6379104169394e769e48c96267e8333ad877e1d636c2b",
+      "size": 11699
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/es-merged-cfg1p0.mp3",
+      "sha256": "dc6a512e407ab8eaf2010631dce3f952d232c455d7516fa6f46f27579b156efe",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/es-merged-cfg1p0.npy",
+      "sha256": "baeb4987474bee549386c0c88f92117db05cef4bf675f72b4be6b95eeb0b7ba4",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/es-unmerged-cfg1p0.json",
+      "sha256": "d05e0c11b1b7f1ed99007f588668df3457ccfb8a96c9dc2ce39b841ecb3c52b9",
+      "size": 11715
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/es-unmerged-cfg1p0.mp3",
+      "sha256": "db2115cdcc624fb9036d16bd5ddf3a067d9349ecafc12f38ffdc5de08abae7f2",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/es-unmerged-cfg1p0.npy",
+      "sha256": "9436d57ab8568a2560fcb98d09862e5c9d0c28018e569a73763416cc7f153f90",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/fr-merged-cfg1p0.json",
+      "sha256": "b3d09262384f934de6b6f66983cbdbf1f750a6816b3056f8e8c1c5c021b09339",
+      "size": 11787
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/fr-merged-cfg1p0.mp3",
+      "sha256": "443e673e1ace0436602dfda16a007d2562814a2c9a5137e4d6c9889c5837e30e",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/fr-merged-cfg1p0.npy",
+      "sha256": "5c2a8919ed19f40a04387df98dd61f06ae11909cb3882ea4fd776a6bccb55e06",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/fr-unmerged-cfg1p0.json",
+      "sha256": "ec6d6a924b178b085df00b820bb418a99e99b9fe8a50974515e2b64c5930cbd9",
+      "size": 11788
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/fr-unmerged-cfg1p0.mp3",
+      "sha256": "e04fd817619c4cc45b599e9affa0289b6c9a1a881b0447cb5d3f4b0ca5577688",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/fr-unmerged-cfg1p0.npy",
+      "sha256": "04178910c433b12151e2c37be9c68373fa80a5e459ad00879c0c257477484af5",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/nl-merged-cfg1p0.json",
+      "sha256": "31a66032a5a62105b1280c81fa569c4c6662ce6128f435f5de8ded39634643bc",
+      "size": 11728
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/nl-merged-cfg1p0.mp3",
+      "sha256": "fdcd96f376019b094666c6325e9f4870af4ededbf0eebf3bfb11d6d7f1ba4413",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/nl-merged-cfg1p0.npy",
+      "sha256": "9d1e240a5a2d5c7f8f08ea6d84ee17965ab1cde38a4b710c02f7890fc2af7f57",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary/nl-unmerged-cfg1p0.json",
+      "sha256": "ec7bb97af0f467fe9c5957e114663ffd5cacfe6fe62aaf35ab7336e9bb16b126",
+      "size": 11714
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/nl-unmerged-cfg1p0.mp3",
+      "sha256": "f4fd0d4f013ce66be0e1358d19cd24b37c7c4eaed87f3424773e58c533d7599e",
+      "size": 147840
+    },
+    {
+      "lfs": true,
+      "path": "examples/canary/nl-unmerged-cfg1p0.npy",
+      "sha256": "ba8ee608d6ec2102917c12960e4e249542ecd83399cd4dfbb02520d5a39882ab",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "examples/canary_tasks.json",
+      "sha256": "f5ecc8a90dea1b069427f0388046580ebf14f069cf9d7d55412ce90bf0c6cace",
+      "size": 4845
+    },
+    {
+      "lfs": false,
+      "path": "examples/neutral-de.txt",
+      "sha256": "73d0971c3be51896f285e9767af5cc88b4421f8efe6d6532383b2e9692dbb847",
+      "size": 350
+    },
+    {
+      "lfs": false,
+      "path": "examples/neutral-en.txt",
+      "sha256": "87365042dab17e2f67c99c6b65730d1533bd8ccaac36062568a46fcdeb4d4c10",
+      "size": 327
+    },
+    {
+      "lfs": false,
+      "path": "examples/neutral-es.txt",
+      "sha256": "bbc2274cdeb54a9f54cdb3d91d8803ad3b06f3892fb7c9bac8a28156b74efc8c",
+      "size": 334
+    },
+    {
+      "lfs": false,
+      "path": "examples/neutral-fr.txt",
+      "sha256": "cc315742582c69c61ddf006ed17fcaa1c249a503d11df1fd5b490bc6302b4c18",
+      "size": 348
+    },
+    {
+      "lfs": false,
+      "path": "examples/neutral-nl.txt",
+      "sha256": "c1030283a361479a5fb74018b37065799ecf009e2485436858ccad9c3f81a89c",
+      "size": 340
+    },
+    {
+      "lfs": false,
+      "path": "examples/prompt-de.txt",
+      "sha256": "a451520bd673fce63af33d6c6d0bbc01f075479cfd0e77b09d48dd3104ae0619",
+      "size": 438
+    },
+    {
+      "lfs": false,
+      "path": "examples/prompt-en.txt",
+      "sha256": "1c0ea03999054a4df63616a6ca62916d3a9f25bbcc57d72274a89265823f2e8d",
+      "size": 415
+    },
+    {
+      "lfs": false,
+      "path": "examples/prompt-es.txt",
+      "sha256": "87f0b076b483dbd6ac82969ec73f81f6acb51a307d98cc396c75842f23575806",
+      "size": 422
+    },
+    {
+      "lfs": false,
+      "path": "examples/prompt-fr.txt",
+      "sha256": "a386d28811cd1c965d3cd8e89e7478e32d3706b2549f1196178b19bebcac8709",
+      "size": 436
+    },
+    {
+      "lfs": false,
+      "path": "examples/prompt-nl.txt",
+      "sha256": "76447b535c0c5d39a9cb2ebb8e1f812f0e2f304c04ac9ab5507c53b9410d4787",
+      "size": 428
+    },
+    {
+      "lfs": true,
+      "path": "examples/reference-fairy-14.96.mp3",
+      "sha256": "9e997b027b1eab46615c40788ea59141769ff9395f7889c1331c7258ebf105a2",
+      "size": 239908
+    },
+    {
+      "lfs": false,
+      "path": "examples/text-de.txt",
+      "sha256": "c2b66e37c2154fa1c5b3a223d884d84d84c2778e423f17ab5b6e664b5fcb8164",
+      "size": 116
+    },
+    {
+      "lfs": false,
+      "path": "examples/text-en.txt",
+      "sha256": "890ce9764da83800b85ec61ec70b932f9b75b5f580fd6d2e40a2ec0401f1ec86",
+      "size": 93
+    },
+    {
+      "lfs": false,
+      "path": "examples/text-es.txt",
+      "sha256": "8ae67fbd181944cfd0424327a478c3d516248bc63e4c93faf85a7aaf615e73fc",
+      "size": 100
+    },
+    {
+      "lfs": false,
+      "path": "examples/text-fr.txt",
+      "sha256": "6850a2ebef157e90461a77de51f0afdd0573f8e838dc5b1b23ad62307c5ddaf2",
+      "size": 114
+    },
+    {
+      "lfs": false,
+      "path": "examples/text-nl.txt",
+      "sha256": "d86c1c0e7e497d2c7d69169a059d12d330565eb0d2be23bea968c5ee51dd12bc",
+      "size": 106
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "ec11df43c896a23a66d88eb9281d90bbbca48f3afb047fec0172f7af4d1ccdfc",
+      "size": 158
+    },
+    {
+      "lfs": false,
+      "path": "gpt2_decoder.py",
+      "sha256": "f2e877104669f1e6c7cd34680f0da1a8a159e032123ee56b660b63929b6c8989",
+      "size": 30896
+    },
+    {
+      "lfs": false,
+      "path": "infer.py",
+      "sha256": "94e5f518ae0bb9ab027182f094fcf0cdc8975ff430593874df4f3da6a742048a",
+      "size": 6056
+    },
+    {
+      "lfs": false,
+      "path": "manual/AGENT_GUIDE.md",
+      "sha256": "46c2035181c8998fac479eb215e23d63a546d581045b5cac7ef30a72e53299cf",
+      "size": 5562
+    },
+    {
+      "lfs": false,
+      "path": "manual/recipes.jsonl",
+      "sha256": "3b8ade2e267dfa24f4c863285dcc4265ef1a7bf5d72ea968f5a44b814f7eb852",
+      "size": 712083
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "3a58abc85d557836f30046ba8be2e677dde15004f84bf8ee849edd80fab56292",
+      "size": 5970732528
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "2e84194e1b60781129cc9efa0b792a08535e0a5027df9ae5ce4a1cb24cb04393",
+      "size": 5903813328
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "0c7873c4426f18f1367f659c5815c284abd4e3673f8270c358f8dddc556d5df6",
+      "size": 4645465360
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "4caf21d4613731bd40fab873a115f43c5962aac6e951c2e69b13a1285b058e61",
+      "size": 37249
+    },
+    {
+      "lfs": false,
+      "path": "modeling_moss_tts.py",
+      "sha256": "b0a66211943ae580b087f3e71495fea2f455701a4f6c29b6d3562218f7668c5f",
+      "size": 26379
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/__init__.py",
+      "sha256": "fa22d925207c64e6701f9c5f97c3e14a9bad4db5c37060c6e5f1362c02bc8040",
+      "size": 254
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/added_tokens.json",
+      "sha256": "39bb49db6acfb8e7510b1640f575bdc183f511d85c94ce3ee967f2a6195c4a8a",
+      "size": 790
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/config.json",
+      "sha256": "ced0e41ba4ea840212721e3b25f1ca857c2939901be7564f1c9060c9a955790f",
+      "size": 6986
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/configuration_moss_tts.py",
+      "sha256": "ab6debcb92032cb9dc91ae80aed77dbadd2e59848208baef2b062bd6def3f3be",
+      "size": 7160
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/generation_config.json",
+      "sha256": "ec11df43c896a23a66d88eb9281d90bbbca48f3afb047fec0172f7af4d1ccdfc",
+      "size": 158
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/gpt2_decoder.py",
+      "sha256": "f2e877104669f1e6c7cd34680f0da1a8a159e032123ee56b660b63929b6c8989",
+      "size": 30896
+    },
+    {
+      "lfs": true,
+      "path": "parent_model/model-00001-of-00004.safetensors",
+      "sha256": "3131eb7fb0dc9c95483e54296e12135b67721793467141d681c6f910fbd9ce05",
+      "size": 2997778640
+    },
+    {
+      "lfs": true,
+      "path": "parent_model/model-00002-of-00004.safetensors",
+      "sha256": "f0f0a1811cf0274b1c40dab053ae14c312f89b6ecb994a84193037fa1c507f46",
+      "size": 2972888312
+    },
+    {
+      "lfs": true,
+      "path": "parent_model/model-00003-of-00004.safetensors",
+      "sha256": "ab4080ddb0fb056d3e2035754886a301912dbffae540cab89d0acfdb46191de9",
+      "size": 2978136984
+    },
+    {
+      "lfs": true,
+      "path": "parent_model/model-00004-of-00004.safetensors",
+      "sha256": "8da307a92da3681b7fb04ce9051d1a3175e070617911d309fb1872c8883641ed",
+      "size": 152055472
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/model.safetensors.index.json",
+      "sha256": "2e09c55ef01c9bae534b4892bb09ec303b65ab3c06270e97166776d8ca2bbe14",
+      "size": 38117
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/modeling_moss_tts.py",
+      "sha256": "b0a66211943ae580b087f3e71495fea2f455701a4f6c29b6d3562218f7668c5f",
+      "size": 26379
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/processing_moss_tts.py",
+      "sha256": "059637b92e7eb9a67df531fe9578e9554d456195828b223eb81f21117c58e8f8",
+      "size": 37501
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/processor_config.json",
+      "sha256": "fac7289af2a37d988d708d813c92960e5e91c59d348c17b72c6aa6b86859f2b7",
+      "size": 209
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/qwen3_decoder.py",
+      "sha256": "100163bd7ecf31a59bafacc0b032ace9339edc992a3eb4cc80662502e04e46f0",
+      "size": 25473
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/special_tokens_map.json",
+      "sha256": "02a153514db64e5378c53ef164c960409882649de6f4aac8f81f66218e7f8797",
+      "size": 394
+    },
+    {
+      "lfs": true,
+      "path": "parent_model/tokenizer.json",
+      "sha256": "06902d1fb775216338802205886a24bc715ccc606bd872a892e3d3c83ca1b9e2",
+      "size": 11423220
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/tokenizer_config.json",
+      "sha256": "ec2869dd4c9c7155b3460c291a6fb2b955e5068013ba7efbcaafd1c61e02abce",
+      "size": 5727
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/update_manifest.py",
+      "sha256": "7ba2526009dcf8e97ddea501184fc198151daaff55524aa605b088340512e4d9",
+      "size": 639
+    },
+    {
+      "lfs": false,
+      "path": "parent_model/voices.json",
+      "sha256": "9a80aeafcbfe45247d98170b4139bef99b1d8393588e97cbb93125923a509ea1",
+      "size": 15113
+    },
+    {
+      "lfs": false,
+      "path": "processing_moss_tts.py",
+      "sha256": "059637b92e7eb9a67df531fe9578e9554d456195828b223eb81f21117c58e8f8",
+      "size": 37501
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "fac7289af2a37d988d708d813c92960e5e91c59d348c17b72c6aa6b86859f2b7",
+      "size": 209
+    },
+    {
+      "lfs": false,
+      "path": "provenance.json",
+      "sha256": "9319f3fb6994b7b0d77e6bd5fe693d95af75060b9f697672d6be43c5e3f23ba7",
+      "size": 1679
+    },
+    {
+      "lfs": false,
+      "path": "qwen3_decoder.py",
+      "sha256": "100163bd7ecf31a59bafacc0b032ace9339edc992a3eb4cc80662502e04e46f0",
+      "size": 25473
+    },
+    {
+      "lfs": false,
+      "path": "release_config.json",
+      "sha256": "3e5ff3c194c9db76f98198b2c14b9bd86ee9a70b4025ffcef23403fc2f4cd676",
+      "size": 590
+    },
+    {
+      "lfs": false,
+      "path": "requirements.txt",
+      "sha256": "181448038f26d202ba25abe9f6dea0ea0e2dcdf998390ed29a2cb313e209aac1",
+      "size": 109
+    },
+    {
+      "lfs": false,
+      "path": "runtime/base_infer.py",
+      "sha256": "4b73145ff3dbeaa6cce4e609973054ea79b1b9ff9f4bb10e3e8a662e7f42b540",
+      "size": 7464
+    },
+    {
+      "lfs": false,
+      "path": "runtime/native_adapters.py",
+      "sha256": "f7eaf7ac6b6da344653f72dee77d498bc7019a3bc32fe715695d9cd2a994e579",
+      "size": 2852
+    },
+    {
+      "lfs": false,
+      "path": "runtime/native_cfg.py",
+      "sha256": "d5af8a56d35be6baee5587c019ffbe08d0581ce915e14063194bb2dccbbc9a5f",
+      "size": 4319
+    },
+    {
+      "lfs": false,
+      "path": "runtime/packing.py",
+      "sha256": "bd10a68e39cbd8f2e9a1b63da27cbd7f050efb81da5d1e1b7ba4fe6acc4aa112",
+      "size": 1806
+    },
+    {
+      "lfs": false,
+      "path": "runtime/va_loss.py",
+      "sha256": "2df51c949a72d0ccbad4a1fdb3ce50374cddae34f70c73fd212d7959347095a5",
+      "size": 5534
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "02a153514db64e5378c53ef164c960409882649de6f4aac8f81f66218e7f8797",
+      "size": 394
+    },
+    {
+      "lfs": false,
+      "path": "stats/adapter_initial_contract.json",
+      "sha256": "956c27fc8be00cf9f56961f41722233fa3082ac8bec33c699ac73b31a8aa09d5",
+      "size": 1068
+    },
+    {
+      "lfs": false,
+      "path": "stats/eight_gpu_migration.json",
+      "sha256": "c30e4314e126865abc1c3b4acb89f8db500d9a9b87703d010a06ac5c40cfd733",
+      "size": 1256
+    },
+    {
+      "lfs": false,
+      "path": "stats/eight_gpu_training_steps.jsonl",
+      "sha256": "888483176cbcd734826aa025850cbd1aa3af9c07f245d7b1089812eda3e7516a",
+      "size": 8558500
+    },
+    {
+      "lfs": false,
+      "path": "stats/evaluation_protocol.json",
+      "sha256": "679988c8da6cb9074778d2d15c8af9519896a6aed31fe4e5b99d0fbe355b25c6",
+      "size": 3956
+    },
+    {
+      "lfs": false,
+      "path": "stats/final_training_status.json",
+      "sha256": "14730a5d018228077c4fa86d8a3e93bb862a4dcf787184b4bb619fd2149be813",
+      "size": 248
+    },
+    {
+      "lfs": false,
+      "path": "stats/high_parent_contract.json",
+      "sha256": "caf8e9d75852102f5e3853a8cc9f74d9731da7e6324bd85cc29dce0e5a4d9f72",
+      "size": 3391
+    },
+    {
+      "lfs": false,
+      "path": "stats/high_parent_steps.jsonl",
+      "sha256": "8543e075b57bde3f75c95ebfac39b0116510a1edbdaed37090d35a5ff13e9fc8",
+      "size": 75689
+    },
+    {
+      "lfs": false,
+      "path": "stats/high_parent_validation.jsonl",
+      "sha256": "9ff7f5654899254d180080037eefcbd9c9431f940e93c734247881367484c27e",
+      "size": 3587
+    },
+    {
+      "lfs": false,
+      "path": "stats/inference_canary.json",
+      "sha256": "896df57a9267da76363b54375237d9fa205cdcde150919ea27ae80136f823ee7",
+      "size": 154707
+    },
+    {
+      "lfs": false,
+      "path": "stats/merge-canary-listening.html",
+      "sha256": "f83b43ae7177f8dca46a103bc80d4022b3fc042d6f3cf231ca229c9891544dee",
+      "size": 2696712
+    },
+    {
+      "lfs": false,
+      "path": "stats/merge_validation.json",
+      "sha256": "bce61a5487170b404feff7691f7a7f11bbb4d7ce2584a1af764c4c685427dad6",
+      "size": 18628
+    },
+    {
+      "lfs": false,
+      "path": "stats/selected_adapter_ready.json",
+      "sha256": "dd6467349a6bf90749d0e3e5718909ceb85eb596ad8e8136b5a7f807cb1506c7",
+      "size": 393
+    },
+    {
+      "lfs": false,
+      "path": "stats/selection.json",
+      "sha256": "1c1055956a9c511aa5f6fc84f5fc2f3194d3ab4a6d3dc3baa64582e48c176d0c",
+      "size": 6594
+    },
+    {
+      "lfs": false,
+      "path": "stats/training_curve_scope.json",
+      "sha256": "f753b070d765110ad7e7e5b4e924274a54034a33a958c0edb17291d9f727d123",
+      "size": 320
+    },
+    {
+      "lfs": false,
+      "path": "stats/training_data_summary.json",
+      "sha256": "e4bd485260a052779d59a6c580077e257c289ca7dd688788e3c6c974537a2256",
+      "size": 1721
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06902d1fb775216338802205886a24bc715ccc606bd872a892e3d3c83ca1b9e2",
+      "size": 11423220
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ec2869dd4c9c7155b3460c291a6fb2b955e5068013ba7efbcaafd1c61e02abce",
+      "size": 5727
+    },
+    {
+      "lfs": false,
+      "path": "training/ancestor_1_3_TRAINING.md",
+      "sha256": "b2ea1f0ef903457bdd29b5f9ace659ada15d6dd7a6656863f2fb9382e3a64185",
+      "size": 11624
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/common.py",
+      "sha256": "8fa1dcac27dac2aa481ccb00cfee88a46fe07a7f513ce5684feaf58acab09e1f",
+      "size": 5075
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/data.py",
+      "sha256": "9e1c372116d5594fc8f395701581c60ef39deb691b143188370df1f0c7288457",
+      "size": 3826
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/detailed_prompts.py",
+      "sha256": "db98a0221a85be6cffb1363cdc554735871fbe4c18620f41bbcda17caaba8bf0",
+      "size": 10223
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/eight_gpu_MIGRATION.json",
+      "sha256": "4fc40aa4084481d1be29b532f7eda2e9a507ce7ae00c7c8f80cb5e2343746d2b",
+      "size": 1541
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/eight_gpu_README.md",
+      "sha256": "5d23d8db6aca0ca87b3581d601255518148da33eb3d7aca3d2a1601bc27a6901",
+      "size": 5030
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/eight_gpu_train.py",
+      "sha256": "f863398a327358de2d1c7cd4fe5590775ef63d963c505385f5b39184c9b80f1b",
+      "size": 17322
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/native_packing.py",
+      "sha256": "aef816e47d202ead9dd1191aa30c48abd6326dfb162d9156db43ca2037a9fd47",
+      "size": 1798
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/parent_acting_data.py",
+      "sha256": "393a0d53c9f19d2ddff884490ea661cdef44fd1da30a4f7cf902ab84b8f299d2",
+      "size": 7201
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/parent_real_data.py",
+      "sha256": "5628c554fc9d96c175db3915f86dcadbedb4dcc2847f814edd0cd3f4bf6fae52",
+      "size": 2561
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/parent_train_fullft.py",
+      "sha256": "1d163ab37c480ad1c144a7476e53c7da3a5ba2b4fee0f9e0fefb2aeaa2a134d8",
+      "size": 23723
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/policy.py",
+      "sha256": "53cb9a8696401f5fe8f3fd73ba3d5f4bd1b914bd1da44915097e568bf4bc3257",
+      "size": 4968
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/train.py",
+      "sha256": "54126cb999465e93b492c1afd4595312ea5efadb9ad0199d062f9234406077fe",
+      "size": 17766
+    },
+    {
+      "lfs": false,
+      "path": "training/original_jupiter/va_loss.py",
+      "sha256": "2df51c949a72d0ccbad4a1fdb3ce50374cddae34f70c73fd212d7959347095a5",
+      "size": 5534
+    },
+    {
+      "lfs": false,
+      "path": "training/train_reference.py",
+      "sha256": "ab7d411320c8fc6bd49b87e69e458ee13496bb6a1a4d6e879f5ea26d2bec7c8a",
+      "size": 6333
+    },
+    {
+      "lfs": false,
+      "path": "update_manifest.py",
+      "sha256": "7ba2526009dcf8e97ddea501184fc198151daaff55524aa605b088340512e4d9",
+      "size": 639
+    },
+    {
+      "lfs": false,
+      "path": "voices.json",
+      "sha256": "9a80aeafcbfe45247d98170b4139bef99b1d8393588e97cbb93125923a509ea1",
+      "size": 15113
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/Humaneness-Voice-Large-1.7",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "2e1f0f3d4c35cb182eecb392d4a9ae78844ebcb8061924b8a53284ccc292def4",
+    "id": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:34:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/Humaneness-Voice-Large-1.7/resolve/80973b899d203ecce852298e71ed7a3ecf11ac8d/"
+    }
+  ],
+  "upstream": {
+    "commit": "80973b899d203ecce852298e71ed7a3ecf11ac8d",
+    "host": "huggingface.co",
+    "repo": "laion/Humaneness-Voice-Large-1.7",
+    "url": "https://huggingface.co/laion/Humaneness-Voice-Large-1.7/tree/80973b899d203ecce852298e71ed7a3ecf11ac8d"
+  }
+}

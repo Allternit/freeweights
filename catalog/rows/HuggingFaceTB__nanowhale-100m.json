@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "HuggingFaceTB/nanowhale-100m-base",
+  "display_name": "nanowhale-100m",
+  "family": "smollm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "HuggingFaceTB/nanowhale-100m",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/HuggingFaceTB/nanowhale-100m.json",
+  "params": 110369621,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "HuggingFaceTB/nanowhale-100m-base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.smollm",
+  "signals": {
+    "downloads_30d": 1155,
+    "likes": 71,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 451620932,
+  "upstream_url": "https://huggingface.co/HuggingFaceTB/nanowhale-100m",
+  "what_changed": null
+}

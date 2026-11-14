@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-14T21:23:28Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "3d17fc7e405d0039a2d600923e4a102b7f7fc6577df814d7c391f81d98c4c2ad",
+      "size": 306
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ec5efef050b03bc294ba21db1913a4ebbb842f258c82fd5bcef762d0abe42aa3",
+      "size": 4124
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4873cb753c97f042886a93adfef478978662c21169755670de20f2ff73fa4ca1",
+      "size": 3527
+    },
+    {
+      "lfs": true,
+      "path": "figures/report_overview.png",
+      "sha256": "25ff476ff353744e5b52d26021cf50a12dd150d1513402f2b0b127355d0e384e",
+      "size": 223086
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+      "size": 138
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "58cb328634bb4b7e5afcc4f14c43261a0c636c9031b0b085bd3ef53c131aaf19",
+      "size": 4996674400
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "410349401256a9a995424408f8f77a21cad5e53183e07207820d7b25e84682df",
+      "size": 4963184724
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "49c2d7591f9dcbbd6fb37baa58379211f21df30dbd3c6ff39cb8c81473660cdb",
+      "size": 1296761656
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "89f02fb82c9228373f199303996451b3b20cd8207186c2975fded695fcdd456b",
+      "size": 120151
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f7c9b2dba4a296b1aa76c16a34b8225c0c118978400d4bb66bff0902d702f5b8",
+      "size": 7028015
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "80d64fccf954f022eb43b7425eb45a133cbb92c76a5f24d4cea6dbe3d45548d9",
+      "size": 1289
+    },
+    {
+      "lfs": true,
+      "path": "vibeasr-lm-i2_s-embed-q6_k.gguf",
+      "sha256": "fbe273d8dc2f2433bb25f849e19d77ea65aaa2188d12c20cee987ab6f321e002",
+      "size": 992877600
+    },
+    {
+      "lfs": true,
+      "path": "vibeasr-vae-encoder-i8_s.gguf",
+      "sha256": "4941c82608c253ec066b5cc74d3dd11a5c8fef96cccbc5b87359ef0fe4338df6",
+      "size": 703080064
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/VibeVoice-ASR-BitNet",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ec5efef050b03bc294ba21db1913a4ebbb842f258c82fd5bcef762d0abe42aa3",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:23:28Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/VibeVoice-ASR-BitNet/resolve/66e78021ab8f5f06133d1ab421ba4d348bda97c9/"
+    }
+  ],
+  "upstream": {
+    "commit": "66e78021ab8f5f06133d1ab421ba4d348bda97c9",
+    "host": "huggingface.co",
+    "repo": "microsoft/VibeVoice-ASR-BitNet",
+    "url": "https://huggingface.co/microsoft/VibeVoice-ASR-BitNet/tree/66e78021ab8f5f06133d1ab421ba4d348bda97c9"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-14T21:08:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "2eb415c04236c18bdb2fbaafa6dab5576d25e4ba87116151b4435716b81f9a87",
+      "size": 90
+    },
+    {
+      "lfs": false,
+      "path": "2_Dense/config.json",
+      "sha256": "d5e3f95e6dacce49488effc605b27600fdd36654cba765632dea26652947edd2",
+      "size": 230
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/model.safetensors",
+      "sha256": "29008b86da1296a485c7c03f0b9e1e7e7fba7db8b6144f665c96cddaa9cd39ae",
+      "size": 12845152
+    },
+    {
+      "lfs": false,
+      "path": "3_LayerNorm/config.json",
+      "sha256": "583d227f0851896f93c52239dfb1e11cfe9d3fc7d434a901346fbced9bdf18dc",
+      "size": 25
+    },
+    {
+      "lfs": true,
+      "path": "3_LayerNorm/model.safetensors",
+      "sha256": "5d1ec00d40c8248b8534013b04febe8ce8da8be42035af5e0aba816d55cc9ac2",
+      "size": 14488
+    },
+    {
+      "lfs": false,
+      "path": "4_Dense/config.json",
+      "sha256": "34ac5f60dd0a2cb7f2d6281bc6307c3f025a647d48a641b2f098d9fab6f246a3",
+      "size": 214
+    },
+    {
+      "lfs": true,
+      "path": "4_Dense/model.safetensors",
+      "sha256": "de057e57c30d7a31abb0650c08faac9f7d936c8f83d42c7f657d4490a832cfd5",
+      "size": 7324
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b6bac48f379662acf8768bc172f4751ff02a018f90ff4f5c1ed80bd9213e2040",
+      "size": 60931
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "bd85fa9ebd84ff700769d88646f5ec6533454534f2e58c3fd204a57de24cfca2",
+      "size": 2165
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "58704a86e4fe20f511de172ce623498c68991abfa7b330740d642d8e049affb7",
+      "size": 257
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "445db565f289bb7475e5bd40a06302a3291c654395815460d248f9c509e36cd6",
+      "size": 4112219800
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "d8394ab6c24cb0fb80229dafb886fac022ff489e757e3e6ed7d69603d5ae5942",
+      "size": 678
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "3084164002c0bca01b0259c5327123803fce32e660a57feb93184ffead186fc8",
+      "size": 241
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "28c5e078e4c52aa37cf0e6de1a212878f3dbd58dd1c70466298efe0b6b86db35",
+      "size": 3583327
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2b85302525d8c528a9e1fbaea2733472bd00d4755eae881441c8c52b90e2d600",
+      "size": 488
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "cross-encoder/ettin-reranker-1b-v1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b6bac48f379662acf8768bc172f4751ff02a018f90ff4f5c1ed80bd9213e2040",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:08:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/cross-encoder/ettin-reranker-1b-v1/resolve/7d20e9baad17016fdf5549c08f69a2d7ca3e60c3/"
+    }
+  ],
+  "upstream": {
+    "commit": "7d20e9baad17016fdf5549c08f69a2d7ca3e60c3",
+    "host": "huggingface.co",
+    "repo": "cross-encoder/ettin-reranker-1b-v1",
+    "url": "https://huggingface.co/cross-encoder/ettin-reranker-1b-v1/tree/7d20e9baad17016fdf5549c08f69a2d7ca3e60c3"
+  }
+}

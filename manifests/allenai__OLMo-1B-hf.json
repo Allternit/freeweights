@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:13:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2662a3950c8c93ce2b5fe313967939b76f13c52ac56e45486b62422a35e119c5",
+      "size": 15667
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6f7e503641d4064e95ab9f84a5ef39da92d232f4a364985f9df7dade8f3d3e65",
+      "size": 632
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "6cf1d8a9e7f1fff5f1c957c4471e95216e0789962ea553345e113b7588582dea",
+      "size": 116
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e9ba1a06a5619b3cc65c8efe8f295e5e275ea2d6ca6aba6aa75a8c32349b70c3",
+      "size": 4707070632
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b77491e270c6fcc5b2ecf22370f7318a6a18d3cabea09ba7bab92e9bf12656c2",
+      "size": 65
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f6be7e4f0ee192755599bb2756cc57a44bd0456fe8c2aac7caab42628ca786d5",
+      "size": 2115885
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "78a839c7851f14f9fb30e664c2b46166dc0628f2900679e5ec160656f702edff",
+      "size": 5372
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/OLMo-1B-hf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2662a3950c8c93ce2b5fe313967939b76f13c52ac56e45486b62422a35e119c5",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:13:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/OLMo-1B-hf/resolve/aee7752d9c08ee4775e9b0091426d8410e8f6a89/"
+    }
+  ],
+  "upstream": {
+    "commit": "aee7752d9c08ee4775e9b0091426d8410e8f6a89",
+    "host": "huggingface.co",
+    "repo": "allenai/OLMo-1B-hf",
+    "url": "https://huggingface.co/allenai/OLMo-1B-hf/tree/aee7752d9c08ee4775e9b0091426d8410e8f6a89"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:09:17Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "7363a8ebd782ede400e72bb3e88c19248478eb6f280a7376d398fc2f22707b9a",
+      "size": 1627
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "aa629215c1d83e73d9c51184e566f2c53456bc742f936984355a2990c8c8d046",
+      "size": 271
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "41676700d80691ac2f4397ee2b546ef58f9e3236af2f3d0770ab0fa61940ce51",
+      "size": 140205
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d185df634c872f06fc6dcb3bad4375d3c447234baea8a6e548103f653b595a35",
+      "size": 690
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "7e16d286cc304f7d34ffb4e21fa1a11f227cf2b6d49cb615aa44d87723d17e28",
+      "size": 128
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "dd6b6e4f52db0a7aff83a13d10e6c5342ef9f6ab799bad3221f4b35ef390fa85",
+      "size": 1119825680
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "size": 349
+    },
+    {
+      "lfs": false,
+      "path": "onnx/config.json",
+      "sha256": "3762389b621283a0466d96f699fc1a0f160de49c4b50adcc87b537931e458ba3",
+      "size": 763
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "e3aeea5355352d826bd952a9a96fab206c6c72d1a429c8773c9da5ac16e44af5",
+      "size": 686499
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "4c13ca44e40a7ee86b461398cdee003d656e39f3fa87e1b3152fbada3e61b506",
+      "size": 2235367440
+    },
+    {
+      "lfs": true,
+      "path": "onnx/sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "onnx/special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "onnx/tokenizer.json",
+      "sha256": "f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af",
+      "size": 17082756
+    },
+    {
+      "lfs": false,
+      "path": "onnx/tokenizer_config.json",
+      "sha256": "49f06d15a18f81855c338f8ab6241ca2e502a65b62968be69b74f094489f8175",
+      "size": 1182
+    },
+    {
+      "lfs": false,
+      "path": "sentence_xlm-roberta_config.json",
+      "sha256": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+      "size": 53
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af",
+      "size": 17082756
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "49f06d15a18f81855c338f8ab6241ca2e502a65b62968be69b74f094489f8175",
+      "size": 1182
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "intfloat/multilingual-e5-large-instruct",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "41676700d80691ac2f4397ee2b546ef58f9e3236af2f3d0770ab0fa61940ce51",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:09:17Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/intfloat/multilingual-e5-large-instruct/resolve/274baa43b0e13e37fafa6428dbc7938e62e5c439/"
+    }
+  ],
+  "upstream": {
+    "commit": "274baa43b0e13e37fafa6428dbc7938e62e5c439",
+    "host": "huggingface.co",
+    "repo": "intfloat/multilingual-e5-large-instruct",
+    "url": "https://huggingface.co/intfloat/multilingual-e5-large-instruct/tree/274baa43b0e13e37fafa6428dbc7938e62e5c439"
+  }
+}

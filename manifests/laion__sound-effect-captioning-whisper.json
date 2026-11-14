@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-14T21:34:40Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "0c7b0330fbc28c7113fad001ea9d5dba2f4cf22406ea57d2e48cd6170a45fe20",
+      "size": 1753
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f5525cf11b29f917df56471b90f7019fabf33105ce69c8b09fbce9a86cdb2d87",
+      "size": 15981
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6559865e39b729a063a8ac0a8407d8af67d8cc9367652fc4496f88364d554c6d",
+      "size": 1302
+    },
+    {
+      "lfs": true,
+      "path": "examples/example_01_vocal_burst_groan.mp3",
+      "sha256": "d2bbeb0272645993ec3cc88ab7c88330efb7b90d396e15fec9119612b5cb3895",
+      "size": 322873
+    },
+    {
+      "lfs": true,
+      "path": "examples/example_02_sonar_beeps.mp3",
+      "sha256": "8513897fb20d90e148a77216e1a4bb97b3e8ac3b1e7452bb770716e6c97e01a2",
+      "size": 139581
+    },
+    {
+      "lfs": true,
+      "path": "examples/example_03_upbeat_electronic_music.mp3",
+      "sha256": "10e191f73b7ec4f09a70e438bf82268e519fe0b4c59a6bbc878cbf4621737196",
+      "size": 121143
+    },
+    {
+      "lfs": false,
+      "path": "examples/example_04_mechanical_whine.mp3",
+      "sha256": "b56b7437df88441a51cb3e87bf59d242fed11e6b93d0afbdd8b80b4b4f6302bf",
+      "size": 40560
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "10f7e09cafc14b9d92a41c3b10abd9e3370fbc71ff6ae469bfe9c725e076ebb0",
+      "size": 3773
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9e15eab5eda6c51c8bc6fb60208a0b4ab3e74b25cdf200a4ccb773b093921da5",
+      "size": 966995080
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ba2e601484abc80f4cded977f9a4fd4a53175b7d35c2f2511f0cfc3a32ad2499",
+      "size": 315
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "8c648fa85aafc59a07435ed751322499bd4238b819ca9200ddd2b5ba4df50e68",
+      "size": 409
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "7b469ff15eb7816315aa45eec391f5943d639b9d73d110f5c003df5192fd54e3",
+      "size": 3930494
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "61af73c493c67b2a426c9f998fcd214592ffd12e0fdd53950122d28e5777ac4a",
+      "size": 2083
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/sound-effect-captioning-whisper",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f5525cf11b29f917df56471b90f7019fabf33105ce69c8b09fbce9a86cdb2d87",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:34:40Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/sound-effect-captioning-whisper/resolve/bb36f9c6534037a8d1d78cff97d119dd37da478a/"
+    }
+  ],
+  "upstream": {
+    "commit": "bb36f9c6534037a8d1d78cff97d119dd37da478a",
+    "host": "huggingface.co",
+    "repo": "laion/sound-effect-captioning-whisper",
+    "url": "https://huggingface.co/laion/sound-effect-captioning-whisper/tree/bb36f9c6534037a8d1d78cff97d119dd37da478a"
+  }
+}

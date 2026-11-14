@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:36:37Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a368a21c472071feec9095f63d5f7d3433826c1c476a6995f072b6755ccc6f59",
+      "size": 399
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4759bbdea204b051cbff6d7b2608ce1771eea56e44d18df425004f46e7c9c23b",
+      "size": 3467
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "00cee8d59cb84ec112404fdd4e35bc1aa74e8bd83c61a220b5c1729bdaf2073f",
+      "size": 826
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "44cfb8ac2ea5c08135677376d2dbddfa0422aee9ee273964869d198f098c44cf",
+      "size": 260
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "84d354574ec7b37912d18c0b75a9f8f1c3e360df83f821762252c20ee106f003",
+      "size": 396453
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7fb494a444e3c67e01a960bc904e88028dc7ec4915fa43e1ec818838ae680a8f",
+      "size": 1172813064
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "16798a98813e3915b6b27d531e8c581e44683b17851da7a282c19403893d4e02",
+      "size": 1164465181
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "31956650ada676087554158dc87e0756efa75f1e510dd92a29bca8b9e7d758bb",
+      "size": 67
+    },
+    {
+      "lfs": false,
+      "path": "vocab-src.json",
+      "sha256": "167f3a4b53f19a350e91a6b7bd8fc9afd7fc1040658449adb0fcd6540a1bb9a3",
+      "size": 775921
+    },
+    {
+      "lfs": false,
+      "path": "vocab-tgt.json",
+      "sha256": "c7ecc41b8b20ba89bf158eea6e462d15487ed9006dc68a76d520bfb33b03e7e4",
+      "size": 639310
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/wmt19-ru-en",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4759bbdea204b051cbff6d7b2608ce1771eea56e44d18df425004f46e7c9c23b",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:37Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/wmt19-ru-en/resolve/683f21ae88f6f8f4f1d27933591ed6309f0bee1f/"
+    }
+  ],
+  "upstream": {
+    "commit": "683f21ae88f6f8f4f1d27933591ed6309f0bee1f",
+    "host": "huggingface.co",
+    "repo": "facebook/wmt19-ru-en",
+    "url": "https://huggingface.co/facebook/wmt19-ru-en/tree/683f21ae88f6f8f4f1d27933591ed6309f0bee1f"
+  }
+}

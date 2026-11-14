@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:23:40Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "556d4f64619e23ade3efdbdeda105bdc809e1340beabf915084696498ab699ce",
+      "size": 2258
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "11a01bcc873444bb433140e5f30f3687356641ed923266d738eef1c3438f6d22",
+      "size": 69548
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1cf00ee468998c23d084361b02cffadabacb5074105564c596b8079f77ecb126",
+      "size": 46812324
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "fd575b890da5a949493e1d1e7a70bfcb9e4b99fe444004d2dbfa253add254741",
+      "size": 266
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "420fc189b95a1d31fa95e1cf494c25e3cead05f88480b5578c5efcebeb0db57a",
+      "size": 46844813
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "64320beb5ab72e9819844eb576a38ed9ffbd6edd73dc752a9c920801fb025c96",
+      "size": 46933112
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/resnet-18",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "556d4f64619e23ade3efdbdeda105bdc809e1340beabf915084696498ab699ce",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:23:40Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/resnet-18/resolve/65a5785d9156231087c481e0c7dd33a5ff6f7e3e/"
+    }
+  ],
+  "upstream": {
+    "commit": "65a5785d9156231087c481e0c7dd33a5ff6f7e3e",
+    "host": "huggingface.co",
+    "repo": "microsoft/resnet-18",
+    "url": "https://huggingface.co/microsoft/resnet-18/tree/65a5785d9156231087c481e0c7dd33a5ff6f7e3e"
+  }
+}

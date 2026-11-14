@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:15:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "484fac0cb8b057eefe1992c8b72ac6e7438c7d17bd60c0e278b401c2190f7e72",
+      "size": 1624
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "131e26f7f1fa69445dc4b0ab98a2251811f8c3128426bf09fcef6ac5ee16e7e4",
+      "size": 28340
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "14f38c5492ffc9cbcdf808647ca0c025bb5b9b4eb737526347134d500ace6098",
+      "size": 4383
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "02b56bd11e1cd1e363e701a85a2fd7fbaa2992ec3358c1cd7cc44ead7208f505",
+      "size": 233
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "fe054ae05ff7f44318fd8ae90d58992531455c7ed31356704088f0f2d8c8009a",
+      "size": 23919549408
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "6b938e76555b3e9946890770e1abcd442a4718f34041a58e8139dc8ad34545c9",
+      "size": 1382
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "42cacba08980fc39bfe2c73cb8c4486b9d00f2f2671072c6cb9c45ee2c5cfaae",
+      "size": 32157657
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "522a38334973725dba8f7c645195b19dda0c284f403f43273f77837679ba2eab",
+      "size": 888
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/gemma-4-12B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "131e26f7f1fa69445dc4b0ab98a2251811f8c3128426bf09fcef6ac5ee16e7e4",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:15:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/gemma-4-12B/resolve/1a2c7729392586f5ecddae8807ee2ef741eabb9a/"
+    }
+  ],
+  "upstream": {
+    "commit": "1a2c7729392586f5ecddae8807ee2ef741eabb9a",
+    "host": "huggingface.co",
+    "repo": "google/gemma-4-12B",
+    "url": "https://huggingface.co/google/gemma-4-12B/tree/1a2c7729392586f5ecddae8807ee2ef741eabb9a"
+  }
+}

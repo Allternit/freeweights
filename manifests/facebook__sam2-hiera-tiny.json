@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:36:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "96f72d39f59ddd8f69b43c81f4f9fc1e4682124806f3913ba3aafb0d90fb744c",
+      "size": 19947
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3239c7ecf212b1a9d9f98310c8993612335c5596a12c8cfba25e512e9dc5965b",
+      "size": 5697
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1449035ba6ba2ed524c646da989e5cb3a9b93b97f1c1b2d474e598c3b748d99f",
+      "size": 155841672
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "6ebf229ee259368ce4a8d4f2fe893a72b053023710853e257253939e601f583d",
+      "size": 683
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "f8a68e865cfad115c1c2763f3d93eca7b1c622da06da2a9273eb437fb2389b6d",
+      "size": 95
+    },
+    {
+      "lfs": false,
+      "path": "sam2_hiera_t.yaml",
+      "sha256": "bad67370c3353d301d9081988bbf59368b2089160ad45d6c8ebeb2bf1b90088e",
+      "size": 3752
+    },
+    {
+      "lfs": true,
+      "path": "sam2_hiera_tiny.pt",
+      "sha256": "65b50056e05bcb13694174f51bb6da89c894b57b75ccdf0ba6352c597c5d1125",
+      "size": 155906050
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "9fccfe5f464ec38c2f236d0e6a68e95511c80c22132fc2fa4b9f7b65f24fad95",
+      "size": 705
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/sam2-hiera-tiny",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "96f72d39f59ddd8f69b43c81f4f9fc1e4682124806f3913ba3aafb0d90fb744c",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/sam2-hiera-tiny/resolve/7c218beaf0bb87874785f32b582f640134fc1c09/"
+    }
+  ],
+  "upstream": {
+    "commit": "7c218beaf0bb87874785f32b582f640134fc1c09",
+    "host": "huggingface.co",
+    "repo": "facebook/sam2-hiera-tiny",
+    "url": "https://huggingface.co/facebook/sam2-hiera-tiny/tree/7c218beaf0bb87874785f32b582f640134fc1c09"
+  }
+}

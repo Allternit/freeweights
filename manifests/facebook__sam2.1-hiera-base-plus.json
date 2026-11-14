@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:36:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "137fce7aa08774c4110ba8d4982a6ecb1f0d3a26f22426dc1234fc4841e53c50",
+      "size": 20010
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8e24a93b6a40d4dad86eaec383ce7b4044f37ec6360136460f5ff2ce55f87390",
+      "size": 5705
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2012733a0de5d03efd1bba550a2847c4551be9ef2e0d497c83074df66189f780",
+      "size": 323476296
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "6ebf229ee259368ce4a8d4f2fe893a72b053023710853e257253939e601f583d",
+      "size": 683
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "f8a68e865cfad115c1c2763f3d93eca7b1c622da06da2a9273eb437fb2389b6d",
+      "size": 95
+    },
+    {
+      "lfs": false,
+      "path": "sam2.1_hiera_b+.yaml",
+      "sha256": "e73f9e9547b305040552ee943ebd3a34cee5727a76fc2ab88b87f7b28b430754",
+      "size": 3650
+    },
+    {
+      "lfs": true,
+      "path": "sam2.1_hiera_base_plus.pt",
+      "sha256": "a2345aede8715ab1d5d31b4a509fb160c5a4af1970f199d9054ccfb746c004c5",
+      "size": 323606802
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "9fccfe5f464ec38c2f236d0e6a68e95511c80c22132fc2fa4b9f7b65f24fad95",
+      "size": 705
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/sam2.1-hiera-base-plus",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "137fce7aa08774c4110ba8d4982a6ecb1f0d3a26f22426dc1234fc4841e53c50",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/sam2.1-hiera-base-plus/resolve/b7320756a13354e7530a63935656d35b2f91a290/"
+    }
+  ],
+  "upstream": {
+    "commit": "b7320756a13354e7530a63935656d35b2f91a290",
+    "host": "huggingface.co",
+    "repo": "facebook/sam2.1-hiera-base-plus",
+    "url": "https://huggingface.co/facebook/sam2.1-hiera-base-plus/tree/b7320756a13354e7530a63935656d35b2f91a290"
+  }
+}

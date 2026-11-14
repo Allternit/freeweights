@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:08:17Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "8ae7b365d432d1158942502ae33bd7b566db27b95424ea11675066b58d80fa65",
+      "size": 1562
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b4223c8c1e95538f8c79168afc501f8b2da06c63221f013b79b28af78b59366d",
+      "size": 34111
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "289adf7ada1eb6b4afa7589a48a032d45a076cf2e46dcdb3b4cabc33be14f708",
+      "size": 799
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ced967c45fd1902eb92716c9ceeca7c95a936770ea9db611f5a841b926e33fbd",
+      "size": 1112206140
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "15b9a8c3da82eddf263df571281166e00e9308fe19d077084b642ebfcaf06d2b",
+      "size": 1112459588
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "5b475bec40425c52229bbc63f9f50e290315c29f4e52c8f8dd404a159c0469fa",
+      "size": 1112251061
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "d5469a60db23249c7f8945013d78df30b44b6bf686c6bb4740f4223f77b1b535",
+      "size": 279
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "9eb652ac4e40cc093272bbbe0f55d521cf67570060227109b5cdc20945a4489e",
+      "size": 17098107
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b",
+      "size": 443
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/bge-reranker-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b4223c8c1e95538f8c79168afc501f8b2da06c63221f013b79b28af78b59366d",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:08:17Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/bge-reranker-base/resolve/2cfc18c9415c912f9d8155881c133215df768a70/"
+    }
+  ],
+  "upstream": {
+    "commit": "2cfc18c9415c912f9d8155881c133215df768a70",
+    "host": "huggingface.co",
+    "repo": "BAAI/bge-reranker-base",
+    "url": "https://huggingface.co/BAAI/bge-reranker-base/tree/2cfc18c9415c912f9d8155881c133215df768a70"
+  }
+}

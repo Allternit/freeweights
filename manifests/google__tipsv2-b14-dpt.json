@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:37:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "80b8417b5379b2334c1c1d5796319c8cc14024c613ea183748e0a6b99237a8db",
+      "size": 3502
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4727780d704da533f4caa36405d96af9fb8a602154ac248dcfe4afc8a8756883",
+      "size": 7622
+    },
+    {
+      "lfs": false,
+      "path": "configuration_dpt.py",
+      "sha256": "e73dcb9b2378321922a2a60c186906399448a32bc96b1a027e96b86aadaffbc3",
+      "size": 1408
+    },
+    {
+      "lfs": false,
+      "path": "dpt_head.py",
+      "sha256": "a769a5d8b144bd90c77870a11959087377e5c7e444fd91691e73023a96ca3d49",
+      "size": 28239
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "718757c7c816630bbe2a9ac9bdce4ee3ec22f2e1ddbb32c838ff569dc15f88a9",
+      "size": 632066716
+    },
+    {
+      "lfs": false,
+      "path": "modeling_dpt.py",
+      "sha256": "1935a0f945e98f1a7b1aa8682a94fd27dd06582cc38ea7c9fa458af3f78b6207",
+      "size": 4523
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "783a0628906c4f65d330022e42f61cd6cfd5ed32c9222b9e16cc79cff61107be",
+      "size": 261
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/tipsv2-b14-dpt",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "80b8417b5379b2334c1c1d5796319c8cc14024c613ea183748e0a6b99237a8db",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:37:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/tipsv2-b14-dpt/resolve/da81b552538c453432e7a1efea39737c89580424/"
+    }
+  ],
+  "upstream": {
+    "commit": "da81b552538c453432e7a1efea39737c89580424",
+    "host": "huggingface.co",
+    "repo": "google/tipsv2-b14-dpt",
+    "url": "https://huggingface.co/google/tipsv2-b14-dpt/tree/da81b552538c453432e7a1efea39737c89580424"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-14T21:24:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "90cc1cff20dc52fddeb11638e6eddb26fd70982377e5de33561597ca0380a163",
+      "size": 2285
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b61b12d8293e919fdaf560f37fcaa9be5417c20ee917a7a1f28658240b0a20d3",
+      "size": 7335
+    },
+    {
+      "lfs": false,
+      "path": "README_zh.md",
+      "sha256": "b8af3d6ad27e496eb931b4553cabbe6efbfd52b8664045513faa3a2310276e68",
+      "size": 6943
+    },
+    {
+      "lfs": false,
+      "path": "assets/parsing_pipeline.svg",
+      "sha256": "e601a364eeb37709a7d100e86b0099e57e7a071610bcaf22884d21fb1e0f127e",
+      "size": 4491
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-F16.gguf",
+      "sha256": "293c40eee003e6d1a7bf502876b524d358c7d4dbb4b6266b1d892b9725f81f3d",
+      "size": 605563424
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q4_0.gguf",
+      "sha256": "7afa986d15c399fbee79c971de3e4922b24c0e50ccac5c24286eaa34be04bbfb",
+      "size": 209159776
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q4_1.gguf",
+      "sha256": "ff02c46e95ca9222588b25d832203c74d153d0284fded54a212dc997f6f59022",
+      "size": 220371104
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q4_K_M.gguf",
+      "sha256": "34b8eeb83cff5fe920d89f21b34a207f02334e46ac73a41f07fa0f865b904239",
+      "size": 211322464
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q4_K_S.gguf",
+      "sha256": "d2ee7e1cc6e9825275c3de6f7a81f57c4fe818a12d6fa3789b44184f89489afd",
+      "size": 209421920
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q5_0.gguf",
+      "sha256": "591b5a4dd267f68c5a15e1206dc8eb6ebeaa4fc025f22dc294615543f40daef7",
+      "size": 231582432
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q5_1.gguf",
+      "sha256": "0999327d2b8fd240915a9b1c1db330c91f0b5c89118418cdec8a3140cb046a5f",
+      "size": 242793760
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q5_K_M.gguf",
+      "sha256": "6b0ff27d34655a3dfc29c4d8725a6a169c863682040ad7d3f2ff1500a13a0699",
+      "size": 232696544
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q5_K_S.gguf",
+      "sha256": "9023b393844e08d53bdc084106f6f2dd1c8e6f8e4812512619ead50f3450b873",
+      "size": 231582432
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q6_K.gguf",
+      "sha256": "d42f8f5cab648a22cc5db84256c7d86c6d8d9b055bc8c8338ba3b1107c8770ff",
+      "size": 255406528
+    },
+    {
+      "lfs": true,
+      "path": "dspark-MiniCPM-OCR-1_0-Q8_0.gguf",
+      "sha256": "fd8f64bb62cf5a5c6b4c0999bfa58f64453690c9f75f1124ab613dfb44a822da",
+      "size": 327293024
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM-OCR-1.0-DSpark-gguf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b61b12d8293e919fdaf560f37fcaa9be5417c20ee917a7a1f28658240b0a20d3",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:24:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM-OCR-1.0-DSpark-gguf/resolve/cab493a5a26516a1c4c6e07c73b4470ff854a898/"
+    }
+  ],
+  "upstream": {
+    "commit": "cab493a5a26516a1c4c6e07c73b4470ff854a898",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM-OCR-1.0-DSpark-gguf",
+    "url": "https://huggingface.co/openbmb/MiniCPM-OCR-1.0-DSpark-gguf/tree/cab493a5a26516a1c4c6e07c73b4470ff854a898"
+  }
+}

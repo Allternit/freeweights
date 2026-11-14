@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-14T21:15:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "b91bf20cc9b208d3e5a31f6b0aeac62c2942c57f7ff0aa7c30ae1a6cfd5b02fe",
+      "size": 1767
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7acf2548ee8ef633d95ed4544160f6e33e5fc79bace0c6a2e250c5eb34d5d0cc",
+      "size": 29268
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-31B-it-mmproj.gguf",
+      "sha256": "6bd60bdb958548b4093196d38744b0f2290c12503a3fddd7486bffa9c5eb07a4",
+      "size": 1200726368
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-31B_q4_0-it.gguf",
+      "sha256": "179cfb99212709597eae5929112cfca677e1bbf566178b479ae1da0c4772874b",
+      "size": 17651001568
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/gemma-4-31B-it-qat-q4_0-gguf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7acf2548ee8ef633d95ed4544160f6e33e5fc79bace0c6a2e250c5eb34d5d0cc",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:15:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/gemma-4-31B-it-qat-q4_0-gguf/resolve/59dde24573e7e61570dba08b18a2e1fe246955ed/"
+    }
+  ],
+  "upstream": {
+    "commit": "59dde24573e7e61570dba08b18a2e1fe246955ed",
+    "host": "huggingface.co",
+    "repo": "google/gemma-4-31B-it-qat-q4_0-gguf",
+    "url": "https://huggingface.co/google/gemma-4-31B-it-qat-q4_0-gguf/tree/59dde24573e7e61570dba08b18a2e1fe246955ed"
+  }
+}

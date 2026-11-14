@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:08:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9fc24ad706c6aa1ff8cdaf0b36c6dc328367371282d79beef7c9c61f90a26d1e",
+      "size": 17201
+    },
+    {
+      "lfs": false,
+      "path": "assets/BEIR-bge-en-v1.5.png",
+      "sha256": "c1e57bfc0bb87408ac0d5084acce36a26914a2ea19f2f9f3560e71be9d4daef6",
+      "size": 56374
+    },
+    {
+      "lfs": false,
+      "path": "assets/BEIR-e5-mistral.png",
+      "sha256": "5119f2d1b364f79eaa2954bd5efb4a7e56364ee8748571964d800f85683280c4",
+      "size": 40223
+    },
+    {
+      "lfs": false,
+      "path": "assets/CMTEB-retrieval-bge-zh-v1.5.png",
+      "sha256": "ce02a58c566da5f733b6928cc968865e4d472c8a276546bfce5d0f4452050ed4",
+      "size": 51484
+    },
+    {
+      "lfs": false,
+      "path": "assets/llama-index.png",
+      "sha256": "62c4fbdeeb44296da80bdd2f0a7a6b5e44f3492072af84fdf3ed99d01a53e596",
+      "size": 106473
+    },
+    {
+      "lfs": false,
+      "path": "assets/miracl-bge-m3.png",
+      "sha256": "98f40bf0ba104f3efa52ef76da1434fb776834cdc732e6b29d2550672ea2df1b",
+      "size": 52028
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1d0bc85dc75d4400fdfb04360777700e47514f24213192d8839d1b12f115d016",
+      "size": 1181
+    },
+    {
+      "lfs": false,
+      "path": "configuration_minicpm_reranker.py",
+      "sha256": "c99d026cce2e4253aaea859c49f55f1a38645496535d74db63aa8d2a66d0bae0",
+      "size": 9967
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c94220480deccef26f27b2fd238458691fd8057a2bb92240b44cf13da67243a5",
+      "size": 140
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "e2bd6342e253cce7debf1efd1b5813011fd79cce0c6528fd8d6d7d2b20f549ee",
+      "size": 4985494472
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "568f1cc88ffbc58516066cf49dcc8aca39a6e6dae1b771a771b58a1bdcfda154",
+      "size": 4979702584
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "4a8921a5c38d777e6cd6ccf5e92015c18ef50d5d31f65d7ba8a3a64280a894a2",
+      "size": 934675392
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "4516cb8b99e0b84b3b12e669e2595b116f8f377b123a25c36362324156b9a83c",
+      "size": 32235
+    },
+    {
+      "lfs": false,
+      "path": "modeling_minicpm_reranker.py",
+      "sha256": "dbe978b271e0e05ba79dfd9e53811f7b2320cfd20b820954e2cde3bc3ff9473c",
+      "size": 72520
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "4859e5dbde90e059988a0a2136d8df3f2773d4d2fc4c4543690028f0b2166e7f",
+      "size": 552
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "42f73d01995bd71c88647b13ac696b36d84d5126d0c7cbaef6f8d872d5c97dff",
+      "size": 6202715
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "c9aafcd7da1f5611dab6be545db74d5552a2ccc9c2a12c72ea7be63aac4a25d7",
+      "size": 1994871
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ed90231596fa3476f3df3b90e115152ce465bac2ba15d3ada9925d43be1acda3",
+      "size": 1136
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/bge-reranker-v2-minicpm-layerwise",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9fc24ad706c6aa1ff8cdaf0b36c6dc328367371282d79beef7c9c61f90a26d1e",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:08:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/bge-reranker-v2-minicpm-layerwise/resolve/47b5332b296c4d8cb6ee2c60502cc62a0d708881/"
+    }
+  ],
+  "upstream": {
+    "commit": "47b5332b296c4d8cb6ee2c60502cc62a0d708881",
+    "host": "huggingface.co",
+    "repo": "BAAI/bge-reranker-v2-minicpm-layerwise",
+    "url": "https://huggingface.co/BAAI/bge-reranker-v2-minicpm-layerwise/tree/47b5332b296c4d8cb6ee2c60502cc62a0d708881"
+  }
+}

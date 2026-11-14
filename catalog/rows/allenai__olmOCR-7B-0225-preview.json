@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen2-VL-7B-Instruct",
+  "display_name": "olmOCR-7B-0225-preview",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/olmOCR-7B-0225-preview",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/olmOCR-7B-0225-preview.json",
+  "params": 8291375616,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen2-VL-7B-Instruct",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 40017,
+    "likes": 705,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 16594378970,
+  "upstream_url": "https://huggingface.co/allenai/olmOCR-7B-0225-preview",
+  "what_changed": null
+}

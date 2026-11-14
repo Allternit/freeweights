@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:37:32Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f888dc7c230287cd68af7034aa9fc2e2d6663fb7b3e70faa153caf93877914c3",
+      "size": 744
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "500243dde5f7e62d515087940a171b5e47c3383b6f4215fe437d83f890e41d4c",
+      "size": 4996
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "851d3d6735c3bc22b4eb6fdff57b42e10b9b03cd2d50d0a707164f45e446d24d",
+      "size": 503
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "4c7c1efdbde7374a23b7ed3dbbd33e945ee5874c2c0e0358e99508b8b7224a5d",
+      "size": 2529637030
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2c72388bf7e6e31fbdec2bbbbfbedc24c648acf79705b18186c4e74bc1f24bab",
+      "size": 2529678224
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "90d1ae427c27d2b9dcb01f6a62ba96aa67aac2de1697c59cd212055b5035c4a2",
+      "size": 160
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "205cb171f212547101e11ddbb546505b77844e6070639b8b4d5dafccc9b01802",
+      "size": 2529825583
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "a7cd6fa69a1dc27a314fed6054a1e03a57b9baedda32415f8e9ef7a51bf7a427",
+      "size": 2530317952
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/vit-huge-patch14-224-in21k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "500243dde5f7e62d515087940a171b5e47c3383b6f4215fe437d83f890e41d4c",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:37:32Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/vit-huge-patch14-224-in21k/resolve/bbff058c978d2e65b36eecaa5ed6e30977602c9d/"
+    }
+  ],
+  "upstream": {
+    "commit": "bbff058c978d2e65b36eecaa5ed6e30977602c9d",
+    "host": "huggingface.co",
+    "repo": "google/vit-huge-patch14-224-in21k",
+    "url": "https://huggingface.co/google/vit-huge-patch14-224-in21k/tree/bbff058c978d2e65b36eecaa5ed6e30977602c9d"
+  }
+}

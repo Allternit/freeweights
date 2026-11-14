@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:36:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f888dc7c230287cd68af7034aa9fc2e2d6663fb7b3e70faa153caf93877914c3",
+      "size": 744
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b9416b3021f73bb857d43ebfc515bec12b3bcfa88ac71f2f54586f448817ccf7",
+      "size": 5319
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8ab81540ab16de2b734e5e3e0012ad4d05dafac7dab38a2cb3d2f11a75b004e1",
+      "size": 670
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "16b918c3a6baa71a0e80e0d9376a01e60e78d1da5b073650fbb47ea575458748",
+      "size": 528491046
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "29597dae5a7818dd6eae9d58b91033c760f9324d0a35ec0065180eb6c424f9b5",
+      "size": 528561767
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "63ade5ba36d52c1243ecf9f93e44cd8831595f076556c78982db89268e875a81",
+      "size": 657
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "93cfe4485557c29e3f843165f3f796673a9f0602f756653cdfd4e65277d727db",
+      "size": 854
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/canine-s",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b9416b3021f73bb857d43ebfc515bec12b3bcfa88ac71f2f54586f448817ccf7",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/canine-s/resolve/75d6d0b3f4d0bffed0ca7ddd0b73949977d4ca02/"
+    }
+  ],
+  "upstream": {
+    "commit": "75d6d0b3f4d0bffed0ca7ddd0b73949977d4ca02",
+    "host": "huggingface.co",
+    "repo": "google/canine-s",
+    "url": "https://huggingface.co/google/canine-s/tree/75d6d0b3f4d0bffed0ca7ddd0b73949977d4ca02"
+  }
+}

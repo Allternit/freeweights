@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:28:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "fbb339ed363c80d70376c0d61803e1c2f188ef519cd0a4d5a946727f5930b6ee",
+      "size": 1785
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "91ca3e6bb213593608737c37563fb48aff386d85bdc95306b59f2744b60f2d9e",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "319bbb434d2abe8f54f8571fa1e90973aa3cde85ab260312b7b7f8e3d9da02f5",
+      "size": 449
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "9f765a635d7779a63d0f9ea2b7a40be2e9e35c6ef114f250092bd8941e0144bc",
+      "size": 295920
+    },
+    {
+      "lfs": true,
+      "path": "embeddinggemma-2-BF16.gguf",
+      "sha256": "68bae29d62fb8c7d23e98d21fd4662753ddd636e6b62b8a70dfe059a9844f216",
+      "size": 557950176
+    },
+    {
+      "lfs": true,
+      "path": "embeddinggemma-2-Q8_0.gguf",
+      "sha256": "2188ac1deca4b77dffefd603c2776a9d76d9d74ec01841392982ebb840b09135",
+      "size": 309855456
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-embeddinggemma-2-BF16.gguf",
+      "sha256": "cc8d7eb30a9984c5128d6b1ccdec7510bfce213dc92a840be0d20e2a62b26bcd",
+      "size": 982074816
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-embeddinggemma-2-Q8_0.gguf",
+      "sha256": "0531309472a6bc6f4b146c3736eee7795ec9db1903c25490d3c937490cef6dd8",
+      "size": 554821056
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/embeddinggemma-2-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "319bbb434d2abe8f54f8571fa1e90973aa3cde85ab260312b7b7f8e3d9da02f5",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:28:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/resolve/6ea3e3a309d12a4779cfda98b8c19800d2d5da71/"
+    }
+  ],
+  "upstream": {
+    "commit": "6ea3e3a309d12a4779cfda98b8c19800d2d5da71",
+    "host": "huggingface.co",
+    "repo": "ggml-org/embeddinggemma-2-GGUF",
+    "url": "https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/tree/6ea3e3a309d12a4779cfda98b8c19800d2d5da71"
+  }
+}

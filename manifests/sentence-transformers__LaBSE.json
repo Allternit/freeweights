@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:10:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98c91dabef4df27b2fc7c8454d220aba47476f73593cbd034d961fe4927304c1",
+      "size": 445
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "c9bef85e8bbf4b2eab4941b3fb62bd33f88686748b478f2e264d256472d9643b",
+      "size": 190
+    },
+    {
+      "lfs": false,
+      "path": "2_Dense/config.json",
+      "sha256": "02a7646de76be592655235523e09b5315c115bb770d91de87f21a9b0746723b5",
+      "size": 114
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/model.safetensors",
+      "sha256": "f866c945fa2147ce4940c8ead0b4b20af4217e0f4664bd35f41c2a0967c4fe77",
+      "size": 2362528
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/pytorch_model.bin",
+      "sha256": "06fb85120e40adf0ab188c4f0cc7684f702cb2023532947d1b85f325b0a3645c",
+      "size": 2363431
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "870cff82ed45dcb043794df684e527e0a0f36c71b641a015579e6f80ff4ca28c",
+      "size": 2018
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b6bd83d561db8d2ccb7f44dafcd945e39bea16dc2819072ffb10adb45608b029",
+      "size": 804
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "b8c64b5cece00d8424b4896ea75b512b6008576088497609dfeb6bd63e6d36b8",
+      "size": 122
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "4cbe50771a6b147d2da0beb6da1d80908a706cec2e2e06a09873649ed183e884",
+      "size": 1883714625
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "77d8e1f2dbab6eb5d3c261ce9d3dbf1e3c69e02938c95f934f94f42c22dfa31f",
+      "size": 1883734344
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "41251094dfd3e7ff81a85ba97b3f4788df47e4039f1bc5037575b43c028beb40",
+      "size": 461
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "2a48ae86b3ef337ea47916915386180fe97ecbb73f0797b6f6b5550bb05c4979",
+      "size": 1881623050
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "c9e7daf739f87c2168a6d1baffdae5782eceb03eb6de61950284a925234c6865",
+      "size": 1883785969
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+      "size": 53
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "e971d0404bba02ce8ab4568bc9625a74e6fbe99c7cdc927d5f3095597a70c55d",
+      "size": 1883974632
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d09046654dc5151fc313613f16768b6ecc1e5e3bddbc9c8aca209a5f23fe3cd3",
+      "size": 9621556
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9c5867ec63310dc2958daae8ccfabb226a2b6d317f407ade84d50315e7f9e80b",
+      "size": 397
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "7453247caa2cf23116c1da332bec0cc1c9ef896b7803591a62ad2007b7a33c33",
+      "size": 5220781
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "sentence-transformers/LaBSE",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "870cff82ed45dcb043794df684e527e0a0f36c71b641a015579e6f80ff4ca28c",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:10:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/sentence-transformers/LaBSE/resolve/836121a0533e5664b21c7aacc5d22951f2b8b25b/"
+    }
+  ],
+  "upstream": {
+    "commit": "836121a0533e5664b21c7aacc5d22951f2b8b25b",
+    "host": "huggingface.co",
+    "repo": "sentence-transformers/LaBSE",
+    "url": "https://huggingface.co/sentence-transformers/LaBSE/tree/836121a0533e5664b21c7aacc5d22951f2b8b25b"
+  }
+}

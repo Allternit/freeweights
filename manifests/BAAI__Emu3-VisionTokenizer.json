@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:08:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5763e0d54ed458232a8a4edb94cbf8b3b7fcf7d76372c2c0ea2c4c7b6e6a4e78",
+      "size": 3531
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6717e1bd03d980c6b5e88aa0a47a557d193b0c33afbdb9d24e53a92593ee7473",
+      "size": 592
+    },
+    {
+      "lfs": false,
+      "path": "configuration_emu3visionvq.py",
+      "sha256": "e4a9c0ee78c5196219a5ab89223ba82d2d20844687d19f877b261e5026ef4c11",
+      "size": 4176
+    },
+    {
+      "lfs": false,
+      "path": "image_processing_emu3visionvq.py",
+      "sha256": "506392861a6842fa3c9a0bb320b3be0228309c93a1f3b45e4aa2caf501141ea4",
+      "size": 22487
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "89536431c69b08b10b449ec309f52dcea22f14b7647317f30f5715273392bbf1",
+      "size": 1083015124
+    },
+    {
+      "lfs": false,
+      "path": "modeling_emu3visionvq.py",
+      "sha256": "07558b036f40ec751de174487b15fe5c03823ba2edf29449bfa29be6f7f01afc",
+      "size": 24362
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "98a019cd8820290dbdc53e7366f7e447ee55d085824b63fdb68b2d642dd9edbf",
+      "size": 556
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/Emu3-VisionTokenizer",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5763e0d54ed458232a8a4edb94cbf8b3b7fcf7d76372c2c0ea2c4c7b6e6a4e78",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:08:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/Emu3-VisionTokenizer/resolve/c81f916ad371289e205310a7539255e8a9396488/"
+    }
+  ],
+  "upstream": {
+    "commit": "c81f916ad371289e205310a7539255e8a9396488",
+    "host": "huggingface.co",
+    "repo": "BAAI/Emu3-VisionTokenizer",
+    "url": "https://huggingface.co/BAAI/Emu3-VisionTokenizer/tree/c81f916ad371289e205310a7539255e8a9396488"
+  }
+}

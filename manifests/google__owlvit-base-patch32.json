@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:36:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "400b270bc8f5cb44fda65b1a4532ceca0fb452d0637425e861829560cf393ae2",
+      "size": 1227
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a16c707494da894773e85c1be976ae605a7b3a3ce92cf9ed277623dd25f236bf",
+      "size": 5146
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b5934e0d2933194b8a85f93674e577feaa1a1ba2dc1d143b2d5e5305ff7a9d7c",
+      "size": 4418
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "4dbe0399f0b7d7c8dddf1535a98769cc30743bebc877aea681998c8d984ce52b",
+      "size": 612983940
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "2010d320cd2c68a8bb1de69aaa8f89daf173ef17cc22a30e4baf44b2f0e9bb6e",
+      "size": 392
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "02437334ba11db56a312a6c3f0f351f610a1075751bfe36b689636a826d5b531",
+      "size": 613049157
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f118ab3a983206e4f32583448de6bd6aae4ee21869135cef1f5848a753cdaab6",
+      "size": 460
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "da35aceebeda2adf44094a5867940b09379323b9390fa9197b57044e106bfb6e",
+      "size": 775
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349",
+      "size": 1059962
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/owlvit-base-patch32",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a16c707494da894773e85c1be976ae605a7b3a3ce92cf9ed277623dd25f236bf",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/owlvit-base-patch32/resolve/cbc355fb364588351c5d51c7f74465e8e7ec6f72/"
+    }
+  ],
+  "upstream": {
+    "commit": "cbc355fb364588351c5d51c7f74465e8e7ec6f72",
+    "host": "huggingface.co",
+    "repo": "google/owlvit-base-patch32",
+    "url": "https://huggingface.co/google/owlvit-base-patch32/tree/cbc355fb364588351c5d51c7f74465e8e7ec6f72"
+  }
+}

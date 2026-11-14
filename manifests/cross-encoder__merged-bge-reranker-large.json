@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:08:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "02199cfbecdfc53d39c19d9e95b8013c49fbda79f19f9074dd0e5b5488a69c53",
+      "size": 8258
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "534e31267c785b82ded8e86d7886f41a30195324d309c5198e51f32961848c4a",
+      "size": 877
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "1215dee71a157f61d0dd822ec97d81123ee23779bb6a0098b99c6d450117a299",
+      "size": 268
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e767573e009af2ea2ce180fed8e9d3679965a4098c0f2bde37b64ef8dcd22ec7",
+      "size": 2239614524
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "d14691fd903a7121e75b7cf346528a2aa440a6135205a6add060b8f07e8b738d",
+      "size": 138
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "dd5041705e857af983711291644d950d98f590e59b9152043d24b306a929842c",
+      "size": 234
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "7243033bbf304553d853a6e1aa843272f62695b4cdac88f60bde59562b19b69c",
+      "size": 17082986
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "37449bf9f1e06b3201dd3d057f04454d6d442c847873c92ec011aae924d9f613",
+      "size": 394
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "cross-encoder/merged-bge-reranker-large",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "02199cfbecdfc53d39c19d9e95b8013c49fbda79f19f9074dd0e5b5488a69c53",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:08:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/cross-encoder/merged-bge-reranker-large/resolve/0d9f82dc9a2d1bcef53870ad3bf4456ba8e809da/"
+    }
+  ],
+  "upstream": {
+    "commit": "0d9f82dc9a2d1bcef53870ad3bf4456ba8e809da",
+    "host": "huggingface.co",
+    "repo": "cross-encoder/merged-bge-reranker-large",
+    "url": "https://huggingface.co/cross-encoder/merged-bge-reranker-large/tree/0d9f82dc9a2d1bcef53870ad3bf4456ba8e809da"
+  }
+}

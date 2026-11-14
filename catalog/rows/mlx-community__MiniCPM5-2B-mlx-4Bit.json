@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openbmb/MiniCPM5-2B",
+  "display_name": "MiniCPM5-2B-mlx-4Bit",
+  "family": "minicpm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "mlx-community/MiniCPM5-2B-mlx-4Bit",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/mlx-community/MiniCPM5-2B-mlx-4Bit.json",
+  "params": 2516756480,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openbmb/MiniCPM5-2B",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.minicpm",
+  "signals": {
+    "downloads_30d": 4969,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 1426011807,
+  "upstream_url": "https://huggingface.co/mlx-community/MiniCPM5-2B-mlx-4Bit",
+  "what_changed": null
+}

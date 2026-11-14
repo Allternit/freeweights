@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-14T21:36:44Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "73b8d0aa9e7a5912b27856bceedeb73e7fa232c5939722d72d1f8cf27e690797",
+      "size": 1723
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7579fd7a40ebb96bc9098b1c817825c572a20763aa8fc80c5261a0517e224979",
+      "size": 9666
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "d914176fd50bd7f565700006a31aa97b79d3ad17cee20c8e5ff2061d5cb74817",
+      "size": 4
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cad399cab799b99409a6ec2d90d72552257c2bb752861261d2016691e0643e7c",
+      "size": 749
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "0849b38987568ccfe4ebefc22bbda1cec4bee01c345e93bfab207d4692b0a1d5",
+      "size": 142
+    },
+    {
+      "lfs": true,
+      "path": "model-q2k.gguf",
+      "sha256": "abab3b4cf39c076b94517e5b7f53bf43a70e72032d787dde948c56a1c597df5d",
+      "size": 965486240
+    },
+    {
+      "lfs": true,
+      "path": "model-q3k.gguf",
+      "sha256": "6d9850c77c4610037085b2595f5cfde13a23a70296596209d8d61b7cc0d34e6e",
+      "size": 1264101024
+    },
+    {
+      "lfs": true,
+      "path": "model-q4k.gguf",
+      "sha256": "ea6e5531a3e95213c7f0635988d119e078a655c09306e47851e15d4c0c3f9c37",
+      "size": 1654597280
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "66ff5f8fcaf92291da486fdfbd4d5233cec90e1359348a56e3172c978b3a76d4",
+      "size": 11761587872
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "7f79f1d5063d56c4b980eec0692f3c7429bdef335071d34e566bd00fd4b5e3e0",
+      "size": 414
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "ef11ac9a22c7503492f56d48dce53be20e339b63605983e9f27d2cd0e0f3922c",
+      "size": 4427844
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "a2799ccc696b752ba00c34f58726bfe253a04921ceb6cfc620400f560474790b",
+      "size": 16629031
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "641fc660745306dfb935f666a68f8bc10a44c39241cfb357be518fda8c09662d",
+      "size": 830
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/madlad400-3b-mt",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7579fd7a40ebb96bc9098b1c817825c572a20763aa8fc80c5261a0517e224979",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:44Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/madlad400-3b-mt/resolve/fa184c675da0b5c9e1c8694fccd4e12e2d422094/"
+    }
+  ],
+  "upstream": {
+    "commit": "fa184c675da0b5c9e1c8694fccd4e12e2d422094",
+    "host": "huggingface.co",
+    "repo": "google/madlad400-3b-mt",
+    "url": "https://huggingface.co/google/madlad400-3b-mt/tree/fa184c675da0b5c9e1c8694fccd4e12e2d422094"
+  }
+}

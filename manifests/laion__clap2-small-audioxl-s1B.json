@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-14T21:34:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "16eadca5ef856175352e8712324f66e013d1e4674538eaa8e8e521d5f3ef3e02",
+      "size": 9257
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0a286fdaf5d6ef036579bb5566f231af08a020c885c62b9185732756331a665a",
+      "size": 1516
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7a4204b32d8d832f0d3e4cf8d3fefe2518010ecebe29bfb8e2bc97b462801cc2",
+      "size": 415618612
+    },
+    {
+      "lfs": false,
+      "path": "open_clip_config.json",
+      "sha256": "1f62f815b32726fbbc79116d93f11f75958576084ca556d25902d0e8cfa43dd8",
+      "size": 1457
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_model.safetensors",
+      "sha256": "5cf19eefa2d65686851b5f0ae81d22b5918ff6eb9479fa35f762669cca1eab5c",
+      "size": 415615468
+    },
+    {
+      "lfs": false,
+      "path": "open_clip_tiktoken/r50k_base.json",
+      "sha256": "0172ba9f641bb36aa5741bc3263a03f157e8d4bf84daf216b7491074edf5026f",
+      "size": 213
+    },
+    {
+      "lfs": false,
+      "path": "open_clip_tiktoken/r50k_base.tiktoken",
+      "sha256": "306cd27f03c1a714eca7108e03d66b7dc042abe8c258b44c199a7ed9838dd930",
+      "size": 835554
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "cd4aa7741206e2dcf95073a70168a53b3478917d3f7de855ffe4e9a6a806296d",
+      "size": 403
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ea41bbe8b758ffe23143019ea39cfa21b3c92223fa28b04055932f60266ff5f8",
+      "size": 3559421
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "10aa2b147ea5d1129b6aa8a726f985abb94880233b93bfe82787050aab6be1b1",
+      "size": 399
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/clap2-small-audioxl-s1B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "16eadca5ef856175352e8712324f66e013d1e4674538eaa8e8e521d5f3ef3e02",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:34:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/clap2-small-audioxl-s1B/resolve/56bdd36775531b9b22ee7681437da32830bb50dd/"
+    }
+  ],
+  "upstream": {
+    "commit": "56bdd36775531b9b22ee7681437da32830bb50dd",
+    "host": "huggingface.co",
+    "repo": "laion/clap2-small-audioxl-s1B",
+    "url": "https://huggingface.co/laion/clap2-small-audioxl-s1B/tree/56bdd36775531b9b22ee7681437da32830bb50dd"
+  }
+}

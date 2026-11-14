@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "allenai/Olmo-3-7B-Instruct",
+  "display_name": "Molmo2-O-7B",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/Molmo2-O-7B",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/Molmo2-O-7B.json",
+  "params": 7760786896,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "allenai/Olmo-3-7B-Instruct",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 31940,
+    "likes": 27,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 31053201352,
+  "upstream_url": "https://huggingface.co/allenai/Molmo2-O-7B",
+  "what_changed": null
+}

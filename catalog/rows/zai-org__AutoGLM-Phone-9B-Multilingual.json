@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "zai-org/GLM-4.1V-9B-Base",
+  "display_name": "AutoGLM-Phone-9B-Multilingual",
+  "family": "glm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "zai-org/AutoGLM-Phone-9B-Multilingual",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "mit",
+  "manifest_url": "https://freeweights.allternit.com/manifests/zai-org/AutoGLM-Phone-9B-Multilingual.json",
+  "params": 934400,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "zai-org/GLM-4.1V-9B-Base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.glm",
+  "signals": {
+    "downloads_30d": 2278,
+    "likes": 244,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 20605692650,
+  "upstream_url": "https://huggingface.co/zai-org/AutoGLM-Phone-9B-Multilingual",
+  "what_changed": null
+}

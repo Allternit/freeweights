@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-14T21:38:24Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "84152a293c5048870ca6e2437fffeb5e4d2fe7346d6fcb1301ad4a334d82b2bf",
+      "size": 18562
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "06200810a9d59071fe2d9e8b3af0e5b4cb5926cc39774e45cb7cf7a839e8b373",
+      "size": 623
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "cbd145a7d2fd6b29016bc3f17249ae5439989b6db6af5a7d829a10cf8851e695",
+      "size": 354400320
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "168fdd1133279dcde2b7f6262ae71be01203ec820ffce45c6bb2da88a4168851",
+      "size": 354495341
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/convnext_base.clip_laion2b_augreg_ft_in12k_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "84152a293c5048870ca6e2437fffeb5e4d2fe7346d6fcb1301ad4a334d82b2bf",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:38:24Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/convnext_base.clip_laion2b_augreg_ft_in12k_in1k/resolve/d009b0ed0dbfd6ddfd321e22c8fa8e67fdfcba64/"
+    }
+  ],
+  "upstream": {
+    "commit": "d009b0ed0dbfd6ddfd321e22c8fa8e67fdfcba64",
+    "host": "huggingface.co",
+    "repo": "timm/convnext_base.clip_laion2b_augreg_ft_in12k_in1k",
+    "url": "https://huggingface.co/timm/convnext_base.clip_laion2b_augreg_ft_in12k_in1k/tree/d009b0ed0dbfd6ddfd321e22c8fa8e67fdfcba64"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:07:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "feeef6a61680c8153fb9069cb31ee9ebd4910fc642389ebeb480b5aa9e97157a",
+      "size": 4651
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2ea2cb7d559c6315558e91dab54893c169a0af12c762bd5fff303e7a996e5768",
+      "size": 1349
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a77fba3be07a0b2d93c65810148797381cbc331c310d91cd0b7d9d6610276da3",
+      "size": 612436592
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af",
+      "size": 17082756
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "24cebbf2ef20fc317256e03e52ac7b2ca326586f946a8427ecac036332bf0933",
+      "size": 1149
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Alibaba-NLP/gte-multilingual-mlm-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "feeef6a61680c8153fb9069cb31ee9ebd4910fc642389ebeb480b5aa9e97157a",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:07:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Alibaba-NLP/gte-multilingual-mlm-base/resolve/b747c5e8eb09e48c24eb3d4e48f80a79a18889ff/"
+    }
+  ],
+  "upstream": {
+    "commit": "b747c5e8eb09e48c24eb3d4e48f80a79a18889ff",
+    "host": "huggingface.co",
+    "repo": "Alibaba-NLP/gte-multilingual-mlm-base",
+    "url": "https://huggingface.co/Alibaba-NLP/gte-multilingual-mlm-base/tree/b747c5e8eb09e48c24eb3d4e48f80a79a18889ff"
+  }
+}

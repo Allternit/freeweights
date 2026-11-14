@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:36:19Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a368a21c472071feec9095f63d5f7d3433826c1c476a6995f072b6755ccc6f59",
+      "size": 399
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cab08621abc2edc57238a9e2b083d639513a16ba5ce6953aa3e1d42e15a3aa29",
+      "size": 476
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4ea0e9c5b88e8e90d3130a2731fa5067ccc9beee4fe861f25e8f7a25ebe299b1",
+      "size": 1347
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "60f91af617e2a8a8d39dd3bb206752b0c85fd43473d2c5c679185e8cb5f9bbfd",
+      "size": 1222263894
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "f5279157191933cf69485a63291df12316c94d1a092c9efb2fed7472592df8f8",
+      "size": 1222319877
+    },
+    {
+      "lfs": false,
+      "path": "sentence.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "51449b7a9d58d33245d5f69a87f7fd6b7c6becb5151dfff6bbd2b7d72d4b07eb",
+      "size": 2443942072
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "1068d2ae7ebef8ccd516bb54bbbb9537f85b282ce924854a41885cfbee0026b4",
+      "size": 9099897
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/mbart-large-en-ro",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cab08621abc2edc57238a9e2b083d639513a16ba5ce6953aa3e1d42e15a3aa29",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:19Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/mbart-large-en-ro/resolve/3f6705eea8aef516fdbdbf3ec20f63a6a522a6ae/"
+    }
+  ],
+  "upstream": {
+    "commit": "3f6705eea8aef516fdbdbf3ec20f63a6a522a6ae",
+    "host": "huggingface.co",
+    "repo": "facebook/mbart-large-en-ro",
+    "url": "https://huggingface.co/facebook/mbart-large-en-ro/tree/3f6705eea8aef516fdbdbf3ec20f63a6a522a6ae"
+  }
+}

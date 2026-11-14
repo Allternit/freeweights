@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-14T21:31:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "3fcd06cd07d1e3b51164452943edb55cbf977a351b490fd342dc648ecdf0a258",
+      "size": 1860
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "dc3163956788e0e906f73e3f15aa508b877d3c0fa91a9010e378b7aa6ae60d98",
+      "size": 28122
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "2f1b4d75d067bae3fe44e676721c7f077d243bc007156cb9c2f8b5836613d082",
+      "size": 17336
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2387efbdf9d703a03f5e18f5de054eaff7956bb9dbce392bc576e38974f93654",
+      "size": 6673
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "fb53f4c64e58896a63472e8eb304397db4a39453e1da0f5d57625ec5a8c1050e",
+      "size": 209
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q2f16.onnx",
+      "sha256": "395be1a42f34aa1c5b34244ba93cc24ffb38bd1ebed7777e484d930d39e3c88c",
+      "size": 327391
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q2f16.onnx_data",
+      "sha256": "91c885319088f5721fd596c7f6f3f247f08b3a1e87896f59fe98c5683b29a18c",
+      "size": 91930880
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q2f16.onnx",
+      "sha256": "c0e72ee12b6715bc968621a09ee695e232f6e5f1190f4fae6d02ba2c5319ddee",
+      "size": 807184
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q2f16.onnx_data",
+      "sha256": "9b9e8d541335ccdd0226c697882a84a1cb77ac2726ce097e5847589b1e632bcc",
+      "size": 994621440
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q2f16.onnx",
+      "sha256": "ee1b97a04187ba19a23a8ca1761bcd5f241e37ef9ed29ccedb4c1f15e54ec114",
+      "size": 5491
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q2f16.onnx_data",
+      "sha256": "a4e548ba02cabd151b9aea983c0338d8ce80b34b00a02a17a3fff50509f03076",
+      "size": 1296564224
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_fp16.onnx",
+      "sha256": "b01c3caf8d96ddba12117faad125819fecde3e4599b53f64fb8eeee8c914a226",
+      "size": 222019
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_fp16.onnx_data",
+      "sha256": "31e3f184f775af2974e48f06fb01bbc1803aebbb723cb54c06cb0e9f293a2c7e",
+      "size": 187272896
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ea2ae257e901064abdd98dceb19f2b0da06af600bed15e0f99f5c85c37ee9d78",
+      "size": 511
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7df7e062c54d160443fd723987cd885a55e869d3048e2c1b563a3a965c903f95",
+      "size": 1877
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/gemma-4-E2B-it-qat-mobile-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "dc3163956788e0e906f73e3f15aa508b877d3c0fa91a9010e378b7aa6ae60d98",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:31:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/gemma-4-E2B-it-qat-mobile-ONNX/resolve/a7f19b0ab28252b77cea830f52b8290b2479c87d/"
+    }
+  ],
+  "upstream": {
+    "commit": "a7f19b0ab28252b77cea830f52b8290b2479c87d",
+    "host": "huggingface.co",
+    "repo": "onnx-community/gemma-4-E2B-it-qat-mobile-ONNX",
+    "url": "https://huggingface.co/onnx-community/gemma-4-E2B-it-qat-mobile-ONNX/tree/a7f19b0ab28252b77cea830f52b8290b2479c87d"
+  }
+}

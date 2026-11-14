@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "LCO-Embedding/LCO-Embedding-Omni-7B",
+  "display_name": "voiceclap-large",
+  "family": "laion",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "laion/voiceclap-large",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "cc-by-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/laion/voiceclap-large.json",
+  "params": 8931813888,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "LCO-Embedding/LCO-Embedding-Omni-7B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 20,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "feature-extraction"
+  ],
+  "tier": "T0",
+  "total_size": 17879782451,
+  "upstream_url": "https://huggingface.co/laion/voiceclap-large",
+  "what_changed": null
+}

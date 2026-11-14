@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "laion/Humaneness-Voice-Large-1.3-Alpha",
+  "display_name": "Humaneness-Voice-Large-NotebookLM-Edition",
+  "family": "laion",
+  "formats": [
+    "mlx",
+    "safetensors"
+  ],
+  "id": "laion/Humaneness-Voice-Large-NotebookLM-Edition",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "cc-by-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/laion/Humaneness-Voice-Large-NotebookLM-Edition.json",
+  "params": 4129990144,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "laion/Humaneness-Voice-Large-1.3-Alpha",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 111,
+    "likes": 0,
+    "trending": null
+  },
+  "tasks": [
+    "text-to-speech"
+  ],
+  "tier": "T0",
+  "total_size": 8471647773,
+  "upstream_url": "https://huggingface.co/laion/Humaneness-Voice-Large-NotebookLM-Edition",
+  "what_changed": null
+}

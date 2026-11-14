@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:35:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "bc96f9f57a6eb44b9854dc1689655e3383ade24f3d53c2df8f93ba97ca52b689",
+      "size": 3370
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "bd98c1c12ba585af264395c1938e94f1fa4abda1cb362d33fa529e81b583a2d2",
+      "size": 69723
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "88cf5d270e9a5f1ab51748fe2a2ca3239cf6f3797ff5431391dcc09a4377d009",
+      "size": 14850040
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "9ef34d18dbf7909143a91f05ad23457180fcfed05034bf94843f300e32a9b968",
+      "size": 352
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "dca900170d9c7dafb4395c2b2058b8bd21aa38111fd3fb2f8da98712119acaee",
+      "size": 14879738
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "9d24fd0c74929c8455fa4610f584b827bf3e2b61bb1331cc415f5ffade4b4a7d",
+      "size": 14999264
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/convnextv2-atto-1k-224",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "bc96f9f57a6eb44b9854dc1689655e3383ade24f3d53c2df8f93ba97ca52b689",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:35:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/convnextv2-atto-1k-224/resolve/c7eab08296c3bca2631738322afc3d05373acc8f/"
+    }
+  ],
+  "upstream": {
+    "commit": "c7eab08296c3bca2631738322afc3d05373acc8f",
+    "host": "huggingface.co",
+    "repo": "facebook/convnextv2-atto-1k-224",
+    "url": "https://huggingface.co/facebook/convnextv2-atto-1k-224/tree/c7eab08296c3bca2631738322afc3d05373acc8f"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:32:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "329373481008c7c38654aff8ecdcf0163c211557cc7ba8e2ef6f2f84b4f75ec8",
+      "size": 1998
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828",
+      "size": 2370
+    },
+    {
+      "lfs": true,
+      "path": "model.bin",
+      "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "size": 483546902
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+      "size": 2203239
+    },
+    {
+      "lfs": false,
+      "path": "vocabulary.txt",
+      "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+      "size": 459861
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Systran/faster-whisper-small",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "329373481008c7c38654aff8ecdcf0163c211557cc7ba8e2ef6f2f84b4f75ec8",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:32:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Systran/faster-whisper-small/resolve/536b0662742c02347bc0e980a01041f333bce120/"
+    }
+  ],
+  "upstream": {
+    "commit": "536b0662742c02347bc0e980a01041f333bce120",
+    "host": "huggingface.co",
+    "repo": "Systran/faster-whisper-small",
+    "url": "https://huggingface.co/Systran/faster-whisper-small/tree/536b0662742c02347bc0e980a01041f333bce120"
+  }
+}

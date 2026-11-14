@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:37:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1a09037c573fc0eed02e4d46746ac2da65397711e4d004f6a174da1a7d8ffa03",
+      "size": 4117
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1053d489ef9053689fc5ee3659c2212c6a44a6f0d71daeabb23a163a3150e57d",
+      "size": 554
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e00d04afb3fb45b0113e5c79b6d6889eff5f240e9c54cfb149dab4a3e304e9a3",
+      "size": 2608699800
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "e12b577bd0da1f9bf6a0b8d3d78c8f9b55b9d99dec25556954e19cfc7b8ecf28",
+      "size": 368
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2b6a1ff67a27e0df9ac0c7d93250fc0d87431c7b366b3d5669217104f9088a26",
+      "size": 409
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "1e5036bed065526c3c212dfbe288752391797c4bb1a284aa18c9a0b23fcaf8ec",
+      "size": 798330
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "c6e405cb7c670d56636a9402c81023a55bc6c3c53d89cf02b92f5c5005bfe920",
+      "size": 2399357
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d6423dae508cc3a129d22ea443841c111832a1a73125b8f25ea8736951698bcb",
+      "size": 711
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/siglip-large-patch16-256",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1a09037c573fc0eed02e4d46746ac2da65397711e4d004f6a174da1a7d8ffa03",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:37:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/siglip-large-patch16-256/resolve/d0da9f876e7d66b4e250cd2450c3ba2ce735e447/"
+    }
+  ],
+  "upstream": {
+    "commit": "d0da9f876e7d66b4e250cd2450c3ba2ce735e447",
+    "host": "huggingface.co",
+    "repo": "google/siglip-large-patch16-256",
+    "url": "https://huggingface.co/google/siglip-large-patch16-256/tree/d0da9f876e7d66b4e250cd2450c3ba2ce735e447"
+  }
+}

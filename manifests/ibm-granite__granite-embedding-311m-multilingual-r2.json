@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-11-14T21:16:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "781299da695e58439d70d491840da22ea0935d1d57d9646eb9725f1f19754e89",
+      "size": 313
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3c47e61d962601a89027f406fe78f32f9bcdd9c73576c5204b3e70defb3e796b",
+      "size": 21421
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e1e3fc842a8e0537e25d6e4c93879698b92ae96722e8c162bef334b57978a3b0",
+      "size": 1191
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "f09adf93fcf868bb2fc3976a435d810b2ecdffa953d1da091d2a91168abab44b",
+      "size": 283
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "dcb6431bfa6e817fe100a2b0521360cec3383963b03fa966b685de18ca310d31",
+      "size": 623341952
+    },
+    {
+      "lfs": false,
+      "path": "model.sig",
+      "sha256": "a6b9aa03a591bdc8f952617d4c341fad480e7243f387e3a16977104be4f8eaa5",
+      "size": 11953
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "size": 349
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "75f9f258bf5013f5fe8a4dad61dd0fd16ac0cbaa7a106e3d3f41c2d04a42d541",
+      "size": 1247170481
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quint8_avx2.onnx",
+      "sha256": "f1fdd44e7e1ac51f12ab7957c7bd092e064d596c288513bf9d326842f669edee",
+      "size": 313421909
+    },
+    {
+      "lfs": true,
+      "path": "openvino/granite_embedding_int8.bin",
+      "sha256": "7db8c57219190d8870e0d274baa87f5039cf7b3fa3c3a6014802dc31d80952d5",
+      "size": 313662989
+    },
+    {
+      "lfs": false,
+      "path": "openvino/granite_embedding_int8.xml",
+      "sha256": "dfcfc151012eabc9090ec2e924b5c67341b92f1bb25fcbdaaa569288e7cbbf0f",
+      "size": 1222562
+    },
+    {
+      "lfs": true,
+      "path": "openvino/openvino_model_qint8_quantized.bin",
+      "sha256": "19cd99b8657e8f86529ce05384194b1bf3dbde94fd48a571a832344c119c27bc",
+      "size": 312563184
+    },
+    {
+      "lfs": false,
+      "path": "openvino/openvino_model_qint8_quantized.xml",
+      "sha256": "9dc67b11a2f629359329ccef6c8a572477ee316375dcbf664fad1b8c90d812f3",
+      "size": 954235
+    },
+    {
+      "lfs": true,
+      "path": "openvino_model.bin",
+      "sha256": "bb1ab2f8bc859e6c8d9db5cd539b95242caeb63da5dec34554549889f80680e9",
+      "size": 1246658016
+    },
+    {
+      "lfs": false,
+      "path": "openvino_model.xml",
+      "sha256": "5fe954a477b4f9d8bfda0ce8b4f31a27c3a660e246c5657c26cd1a5b2cbd0fd5",
+      "size": 800366
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "967ef958285e4a7a37d8ff1832473d967edd913b4e48572f31c3d3ea361d5327",
+      "size": 60
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "cb9e60dcf4d8d314315cb3e761fe4c2e664fda8dbf66d7815372b2639e381182",
+      "size": 694
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "0087c868b33bad550a78a08d19798cfd7f713cde4f020803b8f51f405503e15f",
+      "size": 33384821
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7947bdf0378520e69ca412b8c4dacd1cffa8aef099f851fdd5c65aa27c6b36a0",
+      "size": 1155500
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-embedding-311m-multilingual-r2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3c47e61d962601a89027f406fe78f32f9bcdd9c73576c5204b3e70defb3e796b",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:16:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-embedding-311m-multilingual-r2/resolve/44399559930365213510b1ee2eb15ded83374f0e/"
+    }
+  ],
+  "upstream": {
+    "commit": "44399559930365213510b1ee2eb15ded83374f0e",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-embedding-311m-multilingual-r2",
+    "url": "https://huggingface.co/ibm-granite/granite-embedding-311m-multilingual-r2/tree/44399559930365213510b1ee2eb15ded83374f0e"
+  }
+}

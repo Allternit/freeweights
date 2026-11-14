@@ -320,7 +320,7 @@ def main():
         seen.add(repo)
         if a.only and repo not in a.only: continue
         dataset = c["kind"] == "dataset"
-        red, lid = c["redistribution"], c["license_id"]
+        red, lid = c.get("redistribution"), c["license_id"]  # batch rows get redistribution from batch_terms
         pr = prev.get(repo) or {}
         def refuse(reason): refused.append({"id": repo, "license_id": lid, "upstream_url": c["upstream_url"], "reason": reason}); print("REFUSED", repo, reason)
         if c.get("_batch"):

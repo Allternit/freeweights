@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:36:36Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "daa61ff963e5f5c9a9685727a5e6ce981dea2afe708f55132da724c8754ccd45",
+      "size": 5035
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8e0b5aa224b95fa5e52c16e3e44d9f71a802743dc90f1e2e755e02f9668d1dc1",
+      "size": 659
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "c8083776f8612a9a8f8b7d5874e1a77729193ef992e74078ae4e8d0ef4b9bad6",
+      "size": 13931044336
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "52d7e774ea89c4c40b3bb3b86e98f70fe7a8e9f6fdc2e39656bad195b12df1ce",
+      "size": 13931181134
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "58dc0a3d15e3bad4861bcf2dee770ea327344d185182d4c5d2bf253285e53a83",
+      "size": 238
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "c4482fa15ec41607c87337878945513713e7a02b268e42f687e88ce5fe5bd6f4",
+      "size": 9096733
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "de39c8b5041ae188475f528420e9c472f61489964a63bba40080a4a8065bbf34",
+      "size": 405
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/xlm-roberta-xl",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "daa61ff963e5f5c9a9685727a5e6ce981dea2afe708f55132da724c8754ccd45",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:36Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/xlm-roberta-xl/resolve/aa5d120255845efeebc9b7f42822a1dd0f9ece9d/"
+    }
+  ],
+  "upstream": {
+    "commit": "aa5d120255845efeebc9b7f42822a1dd0f9ece9d",
+    "host": "huggingface.co",
+    "repo": "facebook/xlm-roberta-xl",
+    "url": "https://huggingface.co/facebook/xlm-roberta-xl/tree/aa5d120255845efeebc9b7f42822a1dd0f9ece9d"
+  }
+}

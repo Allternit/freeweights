@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:34:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e45b8adc757afa4ce68f73426c1295bce99bdddc7859f21d15291d3ea6abf858",
+      "size": 5273
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "617e310c10f7f33f3c1c6103a3ab7b074413f6097593b08fa4b91091d2394960",
+      "size": 645
+    },
+    {
+      "lfs": false,
+      "path": "configuration_voiceclap.py",
+      "sha256": "59aaf3f0e76e25ba772dfb1836fd8060668e567290fa9c9dba02b51e4e8850bf",
+      "size": 1421
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "07849965a3e852b43ddb1b782d7b006ec8b36fe0b91abcdc7fbc7438c81513d7",
+      "size": 452717296
+    },
+    {
+      "lfs": false,
+      "path": "modeling_voiceclap.py",
+      "sha256": "38b40e52135981f2e5e78fc062f145a2da02778cba7b169a0296e80cb1ece2b1",
+      "size": 9432
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ba2e601484abc80f4cded977f9a4fd4a53175b7d35c2f2511f0cfc3a32ad2499",
+      "size": 315
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0",
+      "size": 711661
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "872b6936be955bc3aea75ed599264d865626d68feede7e58b01e378e6332bd74",
+      "size": 594
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/voiceclap-commercial",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e45b8adc757afa4ce68f73426c1295bce99bdddc7859f21d15291d3ea6abf858",
+    "id": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:34:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/voiceclap-commercial/resolve/4e0170bf9a7e29704dd3a26ca92855b3cdd8706c/"
+    }
+  ],
+  "upstream": {
+    "commit": "4e0170bf9a7e29704dd3a26ca92855b3cdd8706c",
+    "host": "huggingface.co",
+    "repo": "laion/voiceclap-commercial",
+    "url": "https://huggingface.co/laion/voiceclap-commercial/tree/4e0170bf9a7e29704dd3a26ca92855b3cdd8706c"
+  }
+}

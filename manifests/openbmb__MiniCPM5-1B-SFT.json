@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-14T21:25:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README-cn.md",
+      "sha256": "5af1151ced25d7755788cce6fadd5cac947124d84647ef47e15620ef7006c465",
+      "size": 22081
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "57b20e19c446717c29c5471488932ff81bf95c8ef08d52b6af159a7b65fd7375",
+      "size": 23408
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "7451a05cf1e28a79d97d7c0bc951028c0b1915119bf9046acd06a0e3d931f47c",
+      "size": 9062
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2c129d79de518fd7ba22df4f14a2f8b737157e385dd4c2f8cdbe1c8dec4e0091",
+      "size": 730
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c32cc1dbec6aef8cd6d3310ccd1f6ecebbb124b2c7b3d471b19e136b4567e0b1",
+      "size": 213
+    },
+    {
+      "lfs": true,
+      "path": "model-00000-of-00001.safetensors",
+      "sha256": "3d55612299c140fb1f16180df61ccf8166f48fb4ba7b499435aac6a4055f1675",
+      "size": 2161290944
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "1b2eaa65742b9cadec7a95d65d8533208d6294b1952ee3450af30b6aa4b3f298",
+      "size": 18004
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "82d96d7a9e6ced037f12394b7ea6a5b02e6ca87e0d11edaa8d60d9be857ce7db",
+      "size": 551
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3e065a558a034185fe299917b398685c1facd0169a9eea1e629eb30c171fed81",
+      "size": 9894271
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "bb74d51116831c3bf65db812c553f94ab0c88dcf97a5bbb37e3504f6d359c530",
+      "size": 1181204
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "094efb3cf1ff412284cc5945fc99dff58673a912760d04483a04aa1c716f66fd",
+      "size": 94416
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM5-1B-SFT",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "57b20e19c446717c29c5471488932ff81bf95c8ef08d52b6af159a7b65fd7375",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:25:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM5-1B-SFT/resolve/0a727cbb7e8880fbe336d13af2777a8297dd8c21/"
+    }
+  ],
+  "upstream": {
+    "commit": "0a727cbb7e8880fbe336d13af2777a8297dd8c21",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM5-1B-SFT",
+    "url": "https://huggingface.co/openbmb/MiniCPM5-1B-SFT/tree/0a727cbb7e8880fbe336d13af2777a8297dd8c21"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "laion/BUD-E-Whisper_V1.1",
+  "display_name": "BUD-E-Whisper_V1.2",
+  "family": "laion",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "laion/BUD-E-Whisper_V1.2",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "cc-by-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/laion/BUD-E-Whisper_V1.2.json",
+  "params": 241734912,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "laion/BUD-E-Whisper_V1.1",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 64,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T0",
+  "total_size": 972640880,
+  "upstream_url": "https://huggingface.co/laion/BUD-E-Whisper_V1.2",
+  "what_changed": null
+}

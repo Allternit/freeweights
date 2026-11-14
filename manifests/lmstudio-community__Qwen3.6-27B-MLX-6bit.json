@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-14T21:28:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c2353f3f3668569104b527bdbc4bdcdc2abdc12f58573fc020f0efb32000895a",
+      "size": 2259
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "size": 7764
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "419144c4146bba6c2b6ef574c87ba40ba8e703974551b3e46b7e048380cbd210",
+      "size": 4573
+    },
+    {
+      "lfs": false,
+      "path": "configuration.json",
+      "sha256": "2d4464e2ead06bc9bc718c781309ad1e7baded626d66e8dcdc8b469ba185faf0",
+      "size": 51
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "size": 202
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "21b8a7ed125709f6c16565cffea05851b2248620c1273a02ad5ec37c092b31e6",
+      "size": 5362726126
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "78a6fd3d77a827f2000c9e3e90d323b016e775da500a14f55aa8772ab6dcaffd",
+      "size": 5344281968
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "d15b4df016e5f0642358daa07083cb13d60fdc38a338125e8d39df71ca4247c7",
+      "size": 5331479330
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "c38638ddd3d9f652e37eb91762b70e3dc6fed4eec9ae6fef693ce1a80aaaa721",
+      "size": 5331479394
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "0aefd29a27efd1687c9761f782546056edb456bd0b3419c8891b8d8df342c2a3",
+      "size": 1407912947
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "dafc019bb8416ae2a289f24c598473b5531b14ca87a0cabfd9b0d6aec67bffc1",
+      "size": 218281
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "size": 390
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "45fc17c8dd2474af6b493b52483c26c0584b0082d368c480f9fa611e73070040",
+      "size": 991
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "31d4bab23d88f6aa1ff7c6f692b454733fafa4e9c26da3a542c8eeadcb99ecef",
+      "size": 9195
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "size": 385
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "size": 6722759
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/Qwen3.6-27B-MLX-6bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c2353f3f3668569104b527bdbc4bdcdc2abdc12f58573fc020f0efb32000895a",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:28:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/Qwen3.6-27B-MLX-6bit/resolve/dafc96bab96a89e3ea8c4b3c197e2806b8c0d595/"
+    }
+  ],
+  "upstream": {
+    "commit": "dafc96bab96a89e3ea8c4b3c197e2806b8c0d595",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/Qwen3.6-27B-MLX-6bit",
+    "url": "https://huggingface.co/lmstudio-community/Qwen3.6-27B-MLX-6bit/tree/dafc96bab96a89e3ea8c4b3c197e2806b8c0d595"
+  }
+}

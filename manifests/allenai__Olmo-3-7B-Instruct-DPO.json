@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:13:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "fe8d0403bfae10d6fa1aa89546455a246fd815f578a2151ffc21fd7c70b41544",
+      "size": 1573
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "03e59490d3a1ffb331d87e26bb5fc517d82eb34d9a3bde5b827baa60d0a54c94",
+      "size": 11704
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "edbb35ef1219ad2273f716feed08f535a868e167be5b5518adc37ab2bcb8afe6",
+      "size": 2638
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a9a643548644d3a4a102f02d4ecbab1c94e3876b217d239f14120eaef6779804",
+      "size": 1620
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "72fbe1d5face3c248eaf7ca78fd30b8e2191f546e9d877338d2bbe0d83631cea",
+      "size": 183
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+      "size": 916646
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "bd41d0d49c4ecb22246b6c6b6432d1676c802ee73352ae2dcc4c9be04c900e06",
+      "size": 4969984976
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "2adebe0ef71958243770442b181ccf510ab555fdbba7681c9734a5641f16ceaa",
+      "size": 4981161496
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "e1f8543516719c9655d2d6669f933a46aca9fcf9bf47f7b5b517d44aa9354ef9",
+      "size": 4644917240
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "23c0a582ed549a8980d4816e774fd9e28498e7aa9c53e99e17d8900d493a4a60",
+      "size": 31065
+    },
+    {
+      "lfs": true,
+      "path": "olmo-instruct.png",
+      "sha256": "9ae64ca9d1e2a551eb275120ec9d4dd8a3276eb10035ff118e566750d80b0435",
+      "size": 105001
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model-00001-of-00003.bin",
+      "sha256": "dd3ec6d973b0da28b1f06a0cc17c104107b755c7737a5cc7740dd7a80480cfc9",
+      "size": 4970011167
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model-00002-of-00003.bin",
+      "sha256": "e3876cce6faf358b5a748b89df75c07601d7156457cec21e4314390ed0817600",
+      "size": 4981192677
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model-00003-of-00003.bin",
+      "sha256": "54299d1df9c48465a41da66a433a4ff4dd20a775d3cc5077f4ed6de4a2f1dec7",
+      "size": 4644941224
+    },
+    {
+      "lfs": false,
+      "path": "pytorch_model.bin.index.json",
+      "sha256": "058f17ee30e12b077d9f4c0c6ad41ba431622e66016e3680679c18e3c44a2298",
+      "size": 29626
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2",
+      "size": 581
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "7738a25c46a6043a0e2e605138851baa450269ce9d800af6ca9bf6192e45510c",
+      "size": 7137175
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f7a2753a4ff30657e452c8fef02b9a99a3b900ceb4c65a1e3fbea6a3bfab07a6",
+      "size": 4318
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "d8eb44d0d51f5e39c9b14825ca8bd10a2500f99c438ca81d4462f0263acd3b53",
+      "size": 1611055
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/Olmo-3-7B-Instruct-DPO",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "03e59490d3a1ffb331d87e26bb5fc517d82eb34d9a3bde5b827baa60d0a54c94",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:13:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-DPO/resolve/b33130b7de49f0c2553b5c2b3bc8409ff3e627d1/"
+    }
+  ],
+  "upstream": {
+    "commit": "b33130b7de49f0c2553b5c2b3bc8409ff3e627d1",
+    "host": "huggingface.co",
+    "repo": "allenai/Olmo-3-7B-Instruct-DPO",
+    "url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-DPO/tree/b33130b7de49f0c2553b5c2b3bc8409ff3e627d1"
+  }
+}

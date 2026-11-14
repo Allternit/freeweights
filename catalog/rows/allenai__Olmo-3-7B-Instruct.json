@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "allenai/Olmo-3-7B-Instruct-DPO",
+  "display_name": "Olmo-3-7B-Instruct",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/Olmo-3-7B-Instruct",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/Olmo-3-7B-Instruct.json",
+  "params": 7298011136,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "allenai/Olmo-3-7B-Instruct-DPO",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 129743,
+    "likes": 160,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 14605886599,
+  "upstream_url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+  "what_changed": null
+}

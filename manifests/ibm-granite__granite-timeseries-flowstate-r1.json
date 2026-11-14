@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:16:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "716fd3350e3b610f4219623aa99e640361a26d76c4e1451e50a52f0b52a37b58",
+      "size": 1628
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b5bd505ea19ba711f6fefcb3980ee9c8d69f39eb5b02a38c095b9827123bc06f",
+      "size": 7979
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ba2cfa7a3cfb6f0137e3c39bc855dbd4fa7a6a035136960b256e558a13902dc8",
+      "size": 593
+    },
+    {
+      "lfs": true,
+      "path": "figs/FlowState.png",
+      "sha256": "f31d78d7ccb54173ed6642beaf9b5b54f42811eb9d53a2c1f520868d65e7b764",
+      "size": 600975
+    },
+    {
+      "lfs": true,
+      "path": "figs/flowstate_performance.png",
+      "sha256": "38c733924f4484933300deb3c84b156250613b3eb9700aa3c2711cf3008af6c2",
+      "size": 276039
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "07a7844db841047d3a99ce9c6ce0ce5139a24d1f42e919c37c2d1e285fa0ff98",
+      "size": 36284680
+    },
+    {
+      "lfs": false,
+      "path": "model.sig",
+      "sha256": "6ae2b1c2144889f57d3c499fe4dc93e4c4320b14d1211828664adb4ed4a55f0e",
+      "size": 9072
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-timeseries-flowstate-r1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b5bd505ea19ba711f6fefcb3980ee9c8d69f39eb5b02a38c095b9827123bc06f",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:16:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-timeseries-flowstate-r1/resolve/05effc6cb39ee16dce9dd0064ed1a76e4b8ff464/"
+    }
+  ],
+  "upstream": {
+    "commit": "05effc6cb39ee16dce9dd0064ed1a76e4b8ff464",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-timeseries-flowstate-r1",
+    "url": "https://huggingface.co/ibm-granite/granite-timeseries-flowstate-r1/tree/05effc6cb39ee16dce9dd0064ed1a76e4b8ff464"
+  }
+}

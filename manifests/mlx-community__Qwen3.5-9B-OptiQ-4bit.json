@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-14T21:30:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "551ab42f05198bab45bbad610b5727d2dd3c689d6351c0f6265dcc071a588d0b",
+      "size": 5416
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "size": 7756
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7c1a6013d5355749280bcf9ad8b7c83fa44c0cc7657526cd742716b9348128c4",
+      "size": 55664
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "f2130efdf66df1834aa4f7a6e48752e88a8dff41965739c6ffb2bb26c841615e",
+      "size": 148
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "88b7f80fd9b3a202088f71889a7b43f818d63c4f836a60f26d5babe08093a10c",
+      "size": 528
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "ac85c6ecdcd12ab778d44a9d6f90f1080498173c7fa6da2f335f3c42b716d85c",
+      "size": 5349382977
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "9d3a23b2307c705af2e86bbf2af791f0d63eae8c24042c5f362ad7586caa0062",
+      "size": 1751328661
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "71a97da2f5c6b961b02d55f099b5e23dee6280dd3eece93acac30e02534e24a6",
+      "size": 115912
+    },
+    {
+      "lfs": true,
+      "path": "optiq/mtp.safetensors",
+      "sha256": "84f77e2c18a70efa345ec8217e586750f8013ca572ee594a8b8d10cd4906b995",
+      "size": 185118739
+    },
+    {
+      "lfs": false,
+      "path": "optiq_metadata.json",
+      "sha256": "ee34e7aec78859db7f3473e1b3c75170de0985b71aabd971aa6344c9f792dec8",
+      "size": 26233
+    },
+    {
+      "lfs": true,
+      "path": "optiq_vision.safetensors",
+      "sha256": "af5d3b456c02edbf708e2bc0b016d4ed16a2d1ce96f7ba7e93b171ab7c464500",
+      "size": 912057935
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "size": 390
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b",
+      "size": 1300
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b2bed5e033438f09f22b0ce9522115b4807d9bbcc3b82bf23372cb74d93ed081",
+      "size": 1135
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "size": 385
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwen3.5-9B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "551ab42f05198bab45bbad610b5727d2dd3c689d6351c0f6265dcc071a588d0b",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:30:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwen3.5-9B-OptiQ-4bit/resolve/10a7fc93870c02a14b6bd5ddef4a7f6ada5f111f/"
+    }
+  ],
+  "upstream": {
+    "commit": "10a7fc93870c02a14b6bd5ddef4a7f6ada5f111f",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwen3.5-9B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Qwen3.5-9B-OptiQ-4bit/tree/10a7fc93870c02a14b6bd5ddef4a7f6ada5f111f"
+  }
+}

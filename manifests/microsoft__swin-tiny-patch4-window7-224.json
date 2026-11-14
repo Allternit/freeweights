@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:23:44Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "314aeef8e1d3f1961c03e1e19b24f2758d352ab970098ae6f48485525f6307fb",
+      "size": 3684
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b99b2d1d80b05ff592979047b4a34fb459dd53b82c8036bae1c2a9d1ea2c5ed3",
+      "size": 71813
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a941acf68a76b365d67738d6c6dce4f0db3ea5224b7cff856d3f8f3753502d29",
+      "size": 113412768
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "cf47f0a7c8ff723066a62ca5cf536ba0f530ed1e797a0eab270f1304e2f880db",
+      "size": 255
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "f2a3c1bc4ebd5f87ab22331b134c593dd24288c2dbaf7071ad49b4d9c59842d6",
+      "size": 113476015
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "613ffde402c38d5626003db04e3578c64a32ddee8c1272333524315faaa4c2c7",
+      "size": 113477552
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/swin-tiny-patch4-window7-224",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "314aeef8e1d3f1961c03e1e19b24f2758d352ab970098ae6f48485525f6307fb",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:23:44Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/swin-tiny-patch4-window7-224/resolve/d00d478bfaf1f417d34a1186673ad4b4be264c51/"
+    }
+  ],
+  "upstream": {
+    "commit": "d00d478bfaf1f417d34a1186673ad4b4be264c51",
+    "host": "huggingface.co",
+    "repo": "microsoft/swin-tiny-patch4-window7-224",
+    "url": "https://huggingface.co/microsoft/swin-tiny-patch4-window7-224/tree/d00d478bfaf1f417d34a1186673ad4b4be264c51"
+  }
+}

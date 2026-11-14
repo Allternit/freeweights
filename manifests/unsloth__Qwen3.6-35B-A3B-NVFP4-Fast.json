@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-14T21:32:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "fe81d528e7ee055bbcf6a310afe0f2808423a4a16d45225f29c285926abef08d",
+      "size": 1635
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "badb6370f2315573fbc2d39911e2eb6e8dffd533c1dc767aeaba44d37e4438b7",
+      "size": 67263
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "size": 7764
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "46cb11d0ce8048b7efa09694c7725ab8be6f0c02d4b2421c1d89316aae280850",
+      "size": 22367
+    },
+    {
+      "lfs": false,
+      "path": "configuration.json",
+      "sha256": "c1b09db419119513247e9b8b912c4b9897106c9b20c6cada7e107d993c5435eb",
+      "size": 58
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "d0dbf670c6a372817b2ff92d5d47e3130d35de9c3a7164ba455fd7a88255b362",
+      "size": 214
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "ae6d6df8a4bac85af79c6912b7360533107a8de89f8eb106008c872203f477b1",
+      "size": 5002671628
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "071ab0aa7b8e0ecf80227c6be51bfadb666d2b0566090ab261a439cbd765cb63",
+      "size": 5004247852
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "e81191b3fe3fc8471cfa8be2014584864fbb03248aa1924823d1553b54243590",
+      "size": 5003987116
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "1dcc959e513844a39a53361f539e0588a03473889e39683a4ce32791f2e84c22",
+      "size": 5004437760
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "d6c56b1762626d3a2b7c53eddd4e3ae32c2574e79424c6d658de7f4f6405da29",
+      "size": 3633643668
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors.index.json",
+      "sha256": "d0ab515cf0dcc4fae3daf192b9c6af1d3a9b0e79a4e699892bc18a3013315fd7",
+      "size": 14300018
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "size": 390
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+      "size": 1191
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "1a6329cee073f44581f13a111a96addf12a9d9a65b2ac6f81fa441ec1b63f5c9",
+      "size": 19989425
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "792fa3f0cb88b111e54ef3134c873531008c4df471d108da17903426e308aa7b",
+      "size": 1165
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "size": 385
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "size": 6722759
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/Qwen3.6-35B-A3B-NVFP4-Fast",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "badb6370f2315573fbc2d39911e2eb6e8dffd533c1dc767aeaba44d37e4438b7",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:32:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-NVFP4-Fast/resolve/1c3f884bc99aac2524f6d49bcbac8c88401afd66/"
+    }
+  ],
+  "upstream": {
+    "commit": "1c3f884bc99aac2524f6d49bcbac8c88401afd66",
+    "host": "huggingface.co",
+    "repo": "unsloth/Qwen3.6-35B-A3B-NVFP4-Fast",
+    "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-NVFP4-Fast/tree/1c3f884bc99aac2524f6d49bcbac8c88401afd66"
+  }
+}

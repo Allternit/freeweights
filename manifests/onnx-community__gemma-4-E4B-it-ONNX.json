@@ -1,0 +1,456 @@
+{
+  "created_at": "2026-11-14T21:31:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "0843bc00b48780dcca82c8d4e0de14b62ca7a086d4ad72e388cd256fbb96c61c",
+      "size": 4666
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a7efa3b6983d5448e5a8a5a2395926defe36f34b26fb13826a6db0d7e34975ea",
+      "size": 27835
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "781d10940fbc44be40064b5d43a056fc486c84ceaa55538226368b57314132bf",
+      "size": 16317
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3251c77df50bccec2037f7e06a023105aeacbc89b784d990b1d279fc83ff9b1f",
+      "size": 5741
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e6a0b50de21a511f15ac4857b7f227f68ee60ecb1f11255d07b75e0bdc60e155",
+      "size": 238
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder.onnx",
+      "sha256": "6deb0a993e95f9b2043a75bd84f532a1cd1c76d518e711477a22854fcfabefbb",
+      "size": 220281
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder.onnx_data",
+      "sha256": "817cab8784c49d6fadba888a3cb7fcd970e3d89decadcca843e4ce3c9d151194",
+      "size": 1185333760
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_fp16.onnx",
+      "sha256": "3500e7c13585f9ba111e7bb713f406fe6bb28a473258fed35c65b7d785a1e14c",
+      "size": 219310
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_fp16.onnx_data",
+      "sha256": "e14a5baa9637ecef28fd164587791c368309ef494a7b7a933e1848e552490197",
+      "size": 592986368
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q4.onnx",
+      "sha256": "0baaa4b27ccb8c1461277380736e374802810c5a046d25f97543d619a30f70e8",
+      "size": 261229
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q4.onnx_data",
+      "sha256": "b7a320b3edb4a41d1a34c22b1f189ca54fd7b7f7412f3072e18936ba594b9823",
+      "size": 191091200
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q4f16.onnx",
+      "sha256": "abf9f3db89b336579c786704e147747085ccca23f28ecdf33f6736a93e3fbc47",
+      "size": 260446
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q4f16.onnx_data",
+      "sha256": "814635b03d618d2513d377e051d491d0a5448f1407864fb2535e4b8182f9eced",
+      "size": 172167424
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_quantized.onnx",
+      "sha256": "f229b726768ea589627d4d823be27ccec9ff5b43a97efb29580831a585e7c0a1",
+      "size": 265017
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_quantized.onnx_data",
+      "sha256": "79be229c15834198e099d41f19dba4e9fb7f6479f5ae0ad11daf33ba7161b5f1",
+      "size": 343695872
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx",
+      "sha256": "d78efba85d5b54ce6ffa1c3c9caf3be4277184c6cd001e3fe775c9f1f581358d",
+      "size": 661239
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data",
+      "sha256": "b13a48cf140aafed1f6342e41ebe53560ca0128e5289c280dc55eea3677ac5e5",
+      "size": 1995692032
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_1",
+      "sha256": "802672bb1e33eda2b1d04f9359cf1652912a2782e9274f34d333f3dd5e5b11e4",
+      "size": 1972645888
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_2",
+      "sha256": "0acc5405ad8ca7f15a95748ec395186a177290546dd47cb9a4dea2259566723f",
+      "size": 1913925632
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_3",
+      "sha256": "a3cd8106749a5aca5fa30d705fb276859ca8096bac8918a25934975d301382aa",
+      "size": 1913925632
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_4",
+      "sha256": "01e3cc6e70662dba3e0e55e8536c0c84d24de3c4171e07017378b64432ad0441",
+      "size": 1903437824
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_5",
+      "sha256": "fe9e3d8147138007cd1ad0bfe551cf0bbbba44e30a34089768c3af6c68f879d9",
+      "size": 2060713984
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_6",
+      "sha256": "e17281c3d5b08677b018f15b80d8de890799723e516f0f456e043a305971390f",
+      "size": 2003094528
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_7",
+      "sha256": "c1ad4f07cb5829dc45fe9afe0f01ce9f21be60e2baf3bad1c4552ebf37432d89",
+      "size": 2018769920
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_8",
+      "sha256": "5f520fb85af8513a5681fa15760af8e8f896a5dedded7d85a45c47016ac67ff9",
+      "size": 513886208
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx_data_9",
+      "sha256": "98a84d41c4df6321c8dbf4b495659579345e9dc8bb5699083ea8fb4a04e6f237",
+      "size": 2684354560
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_fp16.onnx",
+      "sha256": "2b7d4abf5f60e5e275e5217bd14ef01a77d67fc081fc0a0b3a1f1600032c4947",
+      "size": 696458
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_fp16.onnx_data",
+      "sha256": "67a48110b5240dac01bd31f68a9fdc4d6408cda58abe9ae0b76d45d27b7b0cb1",
+      "size": 2089012224
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_fp16.onnx_data_1",
+      "sha256": "5d38e95f62e4c4419a452082b87a8341d12c35716fa7306d197ca842b98689b2",
+      "size": 1995203584
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_fp16.onnx_data_2",
+      "sha256": "cfe68868b215a6ed46ac645f1adf64b394d8ca976b0e8441c827ca4207daeea1",
+      "size": 2052873216
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_fp16.onnx_data_3",
+      "sha256": "a1e47f370819c54be23b24fa8acf0ce46ac078ec755b558d480eb4ffdf6e8ebe",
+      "size": 2010917888
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_fp16.onnx_data_4",
+      "sha256": "81ddc02ad3435114232e94e147dac77c213e650c10e3b72810c0aeebc38ff3b0",
+      "size": 1342177280
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4.onnx",
+      "sha256": "af764e3b468255401694cf9acbdf859e7e2febd8cd9abd1443ab8ab5493d1f99",
+      "size": 814829
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4.onnx_data",
+      "sha256": "3f0dda0cd6b575a49c9a8753250256518a2b9a053ed4cc9dddb6e228a3732099",
+      "size": 2093703168
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4.onnx_data_1",
+      "sha256": "3ce62ea330a5549d791d9b7a2a72dcad8cd4f4083fac490b72b1d539f46f07eb",
+      "size": 1286205440
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4f16.onnx",
+      "sha256": "43aa27452be3dd7fbb9524257dd66af957add748ddab20ea63ae71923e59aa08",
+      "size": 850610
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4f16.onnx_data",
+      "sha256": "b6aa13eab3ecdf4721293e93c806c279ca0516956187f7aec63ee90ec7216e73",
+      "size": 2074847232
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4f16.onnx_data_1",
+      "sha256": "84e1c5f09ba88a5351959e4f73f62bce46f92dc19a7d7c82376ef36771c26a30",
+      "size": 812318720
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx",
+      "sha256": "cf0b937aed1b8a6a24206fafc8f61dbb3986e39f991ab82a6f2d708d36ea7a3b",
+      "size": 824032
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx_data",
+      "sha256": "be2546474f67c4b8d90c54433304f3348d0516a818cd3f18dc9ab289d3210223",
+      "size": 2096242688
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx_data_1",
+      "sha256": "6b02b9439092cedd10bef06d25a376d9b401357d2e4c4b33b33aff452e746462",
+      "size": 2053529600
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx_data_2",
+      "sha256": "325c2b74b85f9c53ceb463bc41dce6ea63977ad75349713b5810d4d14431bb55",
+      "size": 1624637440
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens.onnx",
+      "sha256": "366f285e904aaf65c7995eb1a2a9da1e21c95c38fa3bff99e8f88163cfee0919",
+      "size": 4241
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens.onnx_data",
+      "sha256": "83574e60aa182da473b9fbb23b4320af80c57f98a0df1e2df56546181a51d252",
+      "size": 2684354560
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens.onnx_data_1",
+      "sha256": "01307179b594d804a1d3791347440261a8275c13c7a81fef4da29319cea6f80e",
+      "size": 11274289152
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_fp16.onnx",
+      "sha256": "9372077ffe674ac6149be72a71a1946ca33502109e9e800789907361e8a27855",
+      "size": 4711
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_fp16.onnx_data",
+      "sha256": "03192217951df30db67ce881e79969389fa0d50beac6baed4d5212c0f4991d91",
+      "size": 1342177280
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_fp16.onnx_data_1",
+      "sha256": "ce1f307cf6f0ee6223921830d80d28d5113f9a1c0c0f68d0d1fee14d153ae141",
+      "size": 5637144576
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4.onnx",
+      "sha256": "78f0c7025bc90339807336da699d7dac6c51ddbb4a690aa4c9e68f3e42b2b353",
+      "size": 5134
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4.onnx_data",
+      "sha256": "67a3100d70c26840c34f8aac29aeec3db31315268cfc53dbc456e2a648849f35",
+      "size": 1839202304
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4.onnx_data_1",
+      "sha256": "260b86f8e306ea73aeb8f85c0c142e1fef4a5ac1889a2345e35891518d9367d5",
+      "size": 396361728
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4f16.onnx",
+      "sha256": "aa48aa1806eda0ea42b79cd8eea355aebaf3b6ae3b04190bfee7ceef308603a4",
+      "size": 5619
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4f16.onnx_data",
+      "sha256": "fd0f39c08f7e20a31145c2351a76a408b6c4ab60d15cc33f40e29cf30c0b2451",
+      "size": 2017460224
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_quantized.onnx",
+      "sha256": "37371d6fbf2210762b924c9c568ac0b4297f5d36a4f78f77bf27556dff36f7f8",
+      "size": 5171
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_quantized.onnx_data",
+      "sha256": "f275cb4247609bbb13febc2b1feec8291655eba6c330aa88650735333de7f29b",
+      "size": 775946240
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_quantized.onnx_data_1",
+      "sha256": "116090e86296784f756f2d8c7cd2d08f01aab00f64c371f8046c45e9b9fff183",
+      "size": 2818572288
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_quantized.onnx_data_2",
+      "sha256": "c708996a16a11db4b36819462e20e1c14d901b5337050b39e168e0c92874d094",
+      "size": 440401920
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder.onnx",
+      "sha256": "6a775e3c41186efc8a3f4846b3c367c9a304cf27816f40683f075b65c63ce48d",
+      "size": 161900
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder.onnx_data",
+      "sha256": "0d769976353b6adfb6bf93c6f9b7fcd9df34a3546998ca81feb2134e975e94a4",
+      "size": 677319872
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_fp16.onnx",
+      "sha256": "e64eb9094e581bd6f7e95638b0b5f81941c23b0cdd9b227e2cc46fa6c57ca0d8",
+      "size": 150672
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_fp16.onnx_data",
+      "sha256": "c1db1bfeb62084f03917c1138641f7d62128071c1e37b3c992b3baa07f785884",
+      "size": 338661056
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_q4.onnx",
+      "sha256": "ae64cce8def6731c586c4e899ebe9cf56a24c6420d141fb41ed88e3afe704c99",
+      "size": 200082
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_q4.onnx_data",
+      "sha256": "4f8b2fc97064387b0fb63d2927fe80518279f09b00acf52764353fd6eb44494a",
+      "size": 115251392
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_q4f16.onnx",
+      "sha256": "7475ce3d5d98d74003410367cc53f23ddb38891e1847cce0a4535fb6d953c540",
+      "size": 189126
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_q4f16.onnx_data",
+      "sha256": "6cada2b035aed2284ef3a379fb6523906b95da1c1a24af7182161342d1269a52",
+      "size": 100762304
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_quantized.onnx",
+      "sha256": "1b5a1104d4f4bda7518916c0f5330a4ed11edd06068fc102c40afafc9b9461b1",
+      "size": 203177
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_quantized.onnx_data",
+      "sha256": "659f68698bad3576e6addffceb962df88585dd002c66d383e119d3eb10725bfc",
+      "size": 201522368
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "4457c6e8a09070d7d5d1cd983fbfb67ebafe602bd98120c3543a024f5d07056b",
+      "size": 43
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "47bd35616c7c782aaca6ccf48c75f3461d5877170984b8836b375107d0a9f566",
+      "size": 19439251
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "175c298b7bedbe83b3f2d6eecdc1fc9058cb4ff6d9f115c5990bc82d96336b9e",
+      "size": 18590
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/gemma-4-E4B-it-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a7efa3b6983d5448e5a8a5a2395926defe36f34b26fb13826a6db0d7e34975ea",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:31:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/gemma-4-E4B-it-ONNX/resolve/2b6d2e26a962f70a33da8f7cd81e1afdd8d9cfb2/"
+    }
+  ],
+  "upstream": {
+    "commit": "2b6d2e26a962f70a33da8f7cd81e1afdd8d9cfb2",
+    "host": "huggingface.co",
+    "repo": "onnx-community/gemma-4-E4B-it-ONNX",
+    "url": "https://huggingface.co/onnx-community/gemma-4-E4B-it-ONNX/tree/2b6d2e26a962f70a33da8f7cd81e1afdd8d9cfb2"
+  }
+}

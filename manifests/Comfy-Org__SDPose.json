@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-14T21:26:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1730b4f5e5f5d626b57c8eb4973a2b43e15d3431bd206a1ff4abaf9850affbf2",
+      "size": 4389
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/sdpose_wholebody_fp16.safetensors",
+      "sha256": "63d01f9a7494560693b24767f4469d59c9d3266b31ff0a253e74d1e611442721",
+      "size": 1916645792
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/rt_detr_v4-x-hgnet_fp16.safetensors",
+      "sha256": "581f9af9bbabb664d1891cbccd823308b176ecd409146f954dfa39af3bec2476",
+      "size": 123968978
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/rt_detr_v4-x-hgnet_fp32.safetensors",
+      "sha256": "1ba4a7794c2f8b176327c887ba38fbe0f977049cbef149960288aa923d0239f3",
+      "size": 247790660
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/SDPose",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1730b4f5e5f5d626b57c8eb4973a2b43e15d3431bd206a1ff4abaf9850affbf2",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:26:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/SDPose/resolve/acb43fbe8142b54d9ebd52b720b81dd4e14c8d81/"
+    }
+  ],
+  "upstream": {
+    "commit": "acb43fbe8142b54d9ebd52b720b81dd4e14c8d81",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/SDPose",
+    "url": "https://huggingface.co/Comfy-Org/SDPose/tree/acb43fbe8142b54d9ebd52b720b81dd4e14c8d81"
+  }
+}

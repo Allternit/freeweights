@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:25:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "Modelfile",
+      "sha256": "5b66bd54e42e50b9a44518f995baee01e8bfe5262cc4b460ae5b930606c29fb6",
+      "size": 384
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cb46efd5d74a8fe1a242f9175004493875b8d8f44960b47286f3e08c290eaf6a",
+      "size": 11707
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "4760fcbf90bc193f33827ffe02f2e7ba1af1ec43644cc02ac22fdd611f6cca15",
+      "size": 216
+    },
+    {
+      "lfs": false,
+      "path": "compressed_attention.py",
+      "sha256": "51b1bddf1eecce6ec8794080b210f224e165c07cc0c0b1ecffe77aff4dde23ff",
+      "size": 44004
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a2340eecb7314bcc7eb3624f50d04ee920a6d11e54282707f04cb2210f229f52",
+      "size": 4620
+    },
+    {
+      "lfs": false,
+      "path": "configuration_minicpm.py",
+      "sha256": "34f014251e54c9f5cee5ba48556482bcd34acf80c4eeabc183a24c10ecbdab17",
+      "size": 9458
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9c2ecdbb766896150c6c47f44d2ca8b902b4e0547293967d2ded0609a6e06afd",
+      "size": 182
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "8889121190f1249d223ba24a5cbf50c959a6c4cc2456d5cf3448e5463ddce882",
+      "size": 3990806216
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "e513ad5fb6f8180cceb278d5ac2ad3d677694cbf84b725187e047774677c50a1",
+      "size": 3926008088
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "059c3fa22026b886ad5169ed954f7e336320b605ab8973a6ea16308f7a61a597",
+      "size": 3926008120
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "548dc62dd17b6ae7b1d328a35a8d7ecb89a20e5dcbfc83d20c060d1cd45ddeba",
+      "size": 3926033016
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "cbc464a995b4d5ad7188c965862202621af0b5c25e67d7078c220dc4a1e46d06",
+      "size": 601686144
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "fc4c1635bb04c80081141960ee09b9df5e64f7c7391084e8259b291aa2eec84f",
+      "size": 23950
+    },
+    {
+      "lfs": false,
+      "path": "modeling_minicpm.py",
+      "sha256": "d58285c45e659030ee13f59e6050ccf67fe523548c9b587e6e1374a33b570d5f",
+      "size": 108133
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "aa36446e046d615dd89275b2e5a2bf369a4a694090f04504c5f542f3aad9448c",
+      "size": 773
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "adf7208af154a5ca065d2eda4e5419e02aac58c2c00627874748b75ec6769094",
+      "size": 6701371
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "bb74d51116831c3bf65db812c553f94ab0c88dcf97a5bbb37e3504f6d359c530",
+      "size": 1181204
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7b2ec8082adc5d960710df041cb4c8235ddae1bd1d5e78cd89d1c633c949e308",
+      "size": 10538
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM4-MCP",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cb46efd5d74a8fe1a242f9175004493875b8d8f44960b47286f3e08c290eaf6a",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:25:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM4-MCP/resolve/a86a48b5b6af17ef98b7234a3a0edd1ebbe6e63e/"
+    }
+  ],
+  "upstream": {
+    "commit": "a86a48b5b6af17ef98b7234a3a0edd1ebbe6e63e",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM4-MCP",
+    "url": "https://huggingface.co/openbmb/MiniCPM4-MCP/tree/a86a48b5b6af17ef98b7234a3a0edd1ebbe6e63e"
+  }
+}

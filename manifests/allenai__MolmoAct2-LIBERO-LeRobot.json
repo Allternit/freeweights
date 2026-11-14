@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:13:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c8857fc50e12d1902f19eecfd01bf77cce20ea3c2c8d397665fd44818bc3a55e",
+      "size": 8186
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2d65a19d7cc3859fbb49709a34a2fbc1ea68893775195771bedea82aa267b5fe",
+      "size": 3656
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "4bc4cae246588dddfb558c3e082db4a1e0e21ac25b3aefc5e4d91068b845e8cf",
+      "size": 10884573720
+    },
+    {
+      "lfs": false,
+      "path": "policy_postprocessor.json",
+      "sha256": "c74038e87302ec0f9eea2998f873c29e1eefdf66f52f191451a34dbb60444fb1",
+      "size": 757
+    },
+    {
+      "lfs": true,
+      "path": "policy_postprocessor_step_1_molmoact2_masked_unnormalizer.safetensors",
+      "sha256": "a20b5ab0598507d3a736bc78925dde64c14748440a56df1112b049d55c54c4f6",
+      "size": 5060
+    },
+    {
+      "lfs": false,
+      "path": "policy_preprocessor.json",
+      "sha256": "3f5331c768c85f78b95fb0b22fa39a4aef11f75cca88c57c019ecf88f0a13456",
+      "size": 2993
+    },
+    {
+      "lfs": true,
+      "path": "policy_preprocessor_step_2_molmoact2_masked_normalizer.safetensors",
+      "sha256": "a20b5ab0598507d3a736bc78925dde64c14748440a56df1112b049d55c54c4f6",
+      "size": 5060
+    },
+    {
+      "lfs": false,
+      "path": "train_config.json",
+      "sha256": "978a12f01c44c83d81741cc884f7a82109273ad692c1a0c0f68aae61424bd12d",
+      "size": 8267
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/MolmoAct2-LIBERO-LeRobot",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c8857fc50e12d1902f19eecfd01bf77cce20ea3c2c8d397665fd44818bc3a55e",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:13:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/MolmoAct2-LIBERO-LeRobot/resolve/f0c5a9567c2b72faadec901e16e055c8b098c2f5/"
+    }
+  ],
+  "upstream": {
+    "commit": "f0c5a9567c2b72faadec901e16e055c8b098c2f5",
+    "host": "huggingface.co",
+    "repo": "allenai/MolmoAct2-LIBERO-LeRobot",
+    "url": "https://huggingface.co/allenai/MolmoAct2-LIBERO-LeRobot/tree/f0c5a9567c2b72faadec901e16e055c8b098c2f5"
+  }
+}

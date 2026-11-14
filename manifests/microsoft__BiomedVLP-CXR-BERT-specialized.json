@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-14T21:17:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "400b270bc8f5cb44fda65b1a4532ceca0fb452d0637425e861829560cf393ae2",
+      "size": 1227
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "81d6d915d8b2300cc83ac9d7e0a0528af9e1017f335ff008fb5fbb548e335e2d",
+      "size": 10418
+    },
+    {
+      "lfs": true,
+      "path": "biovil_image_resnet50_proj_size_128.pt",
+      "sha256": "118c4bb1c16d4e69b7c9b7f2ff5b2c0a79242059acf20bd2ed3068045b8f6b98",
+      "size": 103671857
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "677244c654ba9490effdfb74d3b9333660e91ce8b66a00132482afb1bc720605",
+      "size": 843
+    },
+    {
+      "lfs": false,
+      "path": "configuration_cxrbert.py",
+      "sha256": "94b40a0fda6553434dfdf431fcebe04e59d68748e384211cabc6bc05c2065c20",
+      "size": 889
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ab65abb62d945287a80e985d3d37bfe82ff4003ec1f38c48758b36759941762d",
+      "size": 438546672
+    },
+    {
+      "lfs": false,
+      "path": "modeling_cxrbert.py",
+      "sha256": "b8038e079260424c30fc975f322119090dab82e9fb2c2ceb3b7627d19bb69d9c",
+      "size": 5818
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "a41d2f4b33e5bdbacabecb8d34c4420163e2165b9fdc6915014e8263a0d0782b",
+      "size": 438588639
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5ae9739b3812d48f39b225a226703b6fc1c79a774a30dfcf17fb8785840cbd3e",
+      "size": 659
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "e025f479c3a7ce6e248971bfe1b409708db0439e9488d30e254f81f27f75d678",
+      "size": 235402
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/BiomedVLP-CXR-BERT-specialized",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "81d6d915d8b2300cc83ac9d7e0a0528af9e1017f335ff008fb5fbb548e335e2d",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:17:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/BiomedVLP-CXR-BERT-specialized/resolve/5157bdba1437a3aed316dacb1a5b68edf96b9902/"
+    }
+  ],
+  "upstream": {
+    "commit": "5157bdba1437a3aed316dacb1a5b68edf96b9902",
+    "host": "huggingface.co",
+    "repo": "microsoft/BiomedVLP-CXR-BERT-specialized",
+    "url": "https://huggingface.co/microsoft/BiomedVLP-CXR-BERT-specialized/tree/5157bdba1437a3aed316dacb1a5b68edf96b9902"
+  }
+}

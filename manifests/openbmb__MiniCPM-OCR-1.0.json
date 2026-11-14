@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-14T21:24:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".eval_results/olmocr-bench.yaml",
+      "sha256": "d18c3f9820b03d8c9244790e361b659db72d5e62a37071408bfd409d05cb8ada",
+      "size": 162
+    },
+    {
+      "lfs": false,
+      "path": ".eval_results/real5_omnidocbench.yaml",
+      "sha256": "e4b5a0bd7751892e48648f29670b00ead2e85eafe659f2080753cd2c19691eda",
+      "size": 1418
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "6b265fb9c22bee54168c8e9fb1dac10bcfc9eee8f95c129580066d1a2f8350fe",
+      "size": 2213
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "41397755907ff633bc4aa689c3660a1ef8e1e62b642e0944c0abccc97004ad27",
+      "size": 19162
+    },
+    {
+      "lfs": false,
+      "path": "README_zh.md",
+      "sha256": "c7a7c10f3d35d3a75ebfc98e1f43ee4593a6d7d19a5da8759b3817abb6ddcb3c",
+      "size": 18242
+    },
+    {
+      "lfs": false,
+      "path": "assets/parsing_pipeline.svg",
+      "sha256": "e601a364eeb37709a7d100e86b0099e57e7a071610bcaf22884d21fb1e0f127e",
+      "size": 4491
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "c6a5f1387c6baa0befecc39e36f293e44baba865a9c7809ac93fae1604b2c210",
+      "size": 7344
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "762025491b206967a3c29c3e36ff2cccd8af6a8c750360b61dc91882b573f759",
+      "size": 2275
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7cecf81e246f8db6bcc4c14f22313dd7decf2d6a70dd1b45c4d237a2e6927405",
+      "size": 133
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "83f4e433b044fd23f9ea7eb3acbc7d59e4fe11a1fdf3c3129b7021d0ab4f8fd4",
+      "size": 2600969816
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7b46cf09f350fa1cd3bfd4d20fe8b8532e76dcc5d892a0052660f803c8ad532b",
+      "size": 340
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "b71fbc3e22a7dbe04622e1a2641e8553375bc1434875ac438066c58a88b974b1",
+      "size": 46
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "6269eb38f25c20c0f2ba676577f2e5603f79eab3be573dfdaa727ca6eeb5522d",
+      "size": 19993565
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "74f51078120066292803d9dfe5437f67b778c5ef6d16eb04dbc6a3f7a13e5826",
+      "size": 1463
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM-OCR-1.0",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "41397755907ff633bc4aa689c3660a1ef8e1e62b642e0944c0abccc97004ad27",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:24:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM-OCR-1.0/resolve/883ca368d17335b9ce5aa6fef4d000ef0684fcaa/"
+    }
+  ],
+  "upstream": {
+    "commit": "883ca368d17335b9ce5aa6fef4d000ef0684fcaa",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM-OCR-1.0",
+    "url": "https://huggingface.co/openbmb/MiniCPM-OCR-1.0/tree/883ca368d17335b9ce5aa6fef4d000ef0684fcaa"
+  }
+}

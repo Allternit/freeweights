@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:35:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "210be2f23286a3cfd5f6996926c0ce2be2d9c96028615d0e29b12357180732b3",
+      "size": 3059
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1d26d7329549b7bd6c204a48282f937aeca9b0c79f28ddd6253884dd12c1cb09",
+      "size": 69641
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "d48dc1638cb83dba6ac8153d76491bbccc9485cf54890b1314eb687444714747",
+      "size": 200935760
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "fd575b890da5a949493e1d1e7a70bfcb9e4b99fe444004d2dbfa253add254741",
+      "size": 266
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "b3cbe154c1cb96aeff1fe8d0d4bd9808423ce941a9f70dac0ffe77f31abf9b83",
+      "size": 201021585
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "2d6654ccb434821d09842dbe1e0ce766231d31d92c011631440d470aeb7d16f4",
+      "size": 201304952
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/convnext-small-224",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "210be2f23286a3cfd5f6996926c0ce2be2d9c96028615d0e29b12357180732b3",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:35:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/convnext-small-224/resolve/e0df91dcc78dbc0f56be8fbecff706128aee7c28/"
+    }
+  ],
+  "upstream": {
+    "commit": "e0df91dcc78dbc0f56be8fbecff706128aee7c28",
+    "host": "huggingface.co",
+    "repo": "facebook/convnext-small-224",
+    "url": "https://huggingface.co/facebook/convnext-small-224/tree/e0df91dcc78dbc0f56be8fbecff706128aee7c28"
+  }
+}

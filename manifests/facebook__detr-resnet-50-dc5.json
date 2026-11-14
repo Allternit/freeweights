@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:36:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f888dc7c230287cd68af7034aa9fc2e2d6663fb7b3e70faa153caf93877914c3",
+      "size": 744
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2f35d8b7bdc79a98cc8c4e9cb262b27f1b777440da64868e3a4f2dd1f61eeac3",
+      "size": 4813
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "570c2d73983c5ab17c271d21bc1456afb94d775a122ba5019cbd04adfa49dcd3",
+      "size": 4380
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ec729a51f970737ef4c5c419520c36e175d160cf537011e7f972518368b75a85",
+      "size": 166587896
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "84084dff7cb5f0ab9394adc87f34d813a4e0c3d7ad56aa7d73d775174ffaca3f",
+      "size": 274
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "6da76d54c0d7a1d27cb30394c6d6291be3aa5604c4a4cc1675b2308b81cfe776",
+      "size": 166731871
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/detr-resnet-50-dc5",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2f35d8b7bdc79a98cc8c4e9cb262b27f1b777440da64868e3a4f2dd1f61eeac3",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/detr-resnet-50-dc5/resolve/6da4ef8c063ac1e8b8df9522e8113c5cc9ade5c9/"
+    }
+  ],
+  "upstream": {
+    "commit": "6da4ef8c063ac1e8b8df9522e8113c5cc9ade5c9",
+    "host": "huggingface.co",
+    "repo": "facebook/detr-resnet-50-dc5",
+    "url": "https://huggingface.co/facebook/detr-resnet-50-dc5/tree/6da4ef8c063ac1e8b8df9522e8113c5cc9ade5c9"
+  }
+}

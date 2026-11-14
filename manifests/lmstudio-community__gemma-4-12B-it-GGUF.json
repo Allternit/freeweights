@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:28:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ac0c2e38945f0b629791f8ec05e80a5abd868a65237ab268d7857cdd722d5b30",
+      "size": 2025
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cf8236c2b323fc3fd1dfcedcb9f54df213ae57cd70b91f8fb077db79ef67be97",
+      "size": 2128
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-12B-it-Q4_K_M.gguf",
+      "sha256": "95d83ba36642b1f385fb906b5962a71763361be3bac930a709945f72d97473f8",
+      "size": 7381382944
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-12B-it-Q6_K.gguf",
+      "sha256": "383372016e2f801719e4042aecc895c6731f54402f7ec5d88867970856df6161",
+      "size": 9786023584
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-12B-it-Q8_0.gguf",
+      "sha256": "2faa985631539ea4007adfdfd73565bf99ee3c31b22f7b9fa9508ca1db993603",
+      "size": 12669648544
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-gemma-4-12B-it-BF16.gguf",
+      "sha256": "7fd884a5f7d9ee60f6b88e5b51287151e547454b2b60a4a6270bb5434310ad0e",
+      "size": 175115296
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/gemma-4-12B-it-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cf8236c2b323fc3fd1dfcedcb9f54df213ae57cd70b91f8fb077db79ef67be97",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:28:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/gemma-4-12B-it-GGUF/resolve/40b870babe39398ce917bbf4b4ff9b5a1f12710e/"
+    }
+  ],
+  "upstream": {
+    "commit": "40b870babe39398ce917bbf4b4ff9b5a1f12710e",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/gemma-4-12B-it-GGUF",
+    "url": "https://huggingface.co/lmstudio-community/gemma-4-12B-it-GGUF/tree/40b870babe39398ce917bbf4b4ff9b5a1f12710e"
+  }
+}

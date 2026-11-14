@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:07:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "4bf279dd9204db673304cab6e7db8448f427412a0d87f04c3e19f1de55dd98cd",
+      "size": 297
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "97d40aa325f0e6eaddf77edc7187b7bba6fd3e31a555be3b5766f015c6c27550",
+      "size": 13983
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8ba54dc3d35d7194f5178a4194b649f146753e02dabd22bdca5c5cbac15069ed",
+      "size": 1184
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "f6bbc7812d09c4ae1cba610fbdad3aea0ca9b3b8affe5a130d31709bdbc94e99",
+      "size": 205
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "3e85899d5728cb7de79781c0c3acfb91ccef9f875f1f7e0b3c9f3dd4b6a724ba",
+      "size": 298041568
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460",
+      "size": 229
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "947f31df7effaeec4edb57c50e4ed7e0f2034d9336063f92615b92e3e0d24d78",
+      "size": 596392315
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "c78d4d5844bce41d2c7297c9f58205962fb9f1dd361b7ca84fdc8f7ef85f478d",
+      "size": 217259853
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "4e4d6c757d5f8c2c6147cf07b8900e9250cbbc1db3dcf961516dfa5b2b562ae5",
+      "size": 298363618
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "bae96b276d342bf86eeee07c1bdbc0c75bb82bf4033941aab7fabc1e33ee3b44",
+      "size": 150218016
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "5d1278a1ba749c06b82f9a2f65c2c1c5765d36f2eb88b4888de62ff12b0724a2",
+      "size": 224152761
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "d91bf57590f030b9a3441a1024419026d5b74abc1dc15691efe88e301a8063d7",
+      "size": 139824760
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "bae96b276d342bf86eeee07c1bdbc0c75bb82bf4033941aab7fabc1e33ee3b44",
+      "size": 150218016
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "1c35c226d1ab27591d4cec0feb94d9f181ed7e4a11c76834b035802bd8eb0bfa",
+      "size": 150218016
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "dc59a5ad66327b309471bd8c42b59a937ebc66cb37679c3e39a6cdef58388d45",
+      "size": 298046586
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049",
+      "size": 694
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "size": 3583228
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9654072f7c873161814043cf08cb5ed72f71d0b935abcd4e267935cb34352c21",
+      "size": 20867
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Alibaba-NLP/gte-modernbert-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "97d40aa325f0e6eaddf77edc7187b7bba6fd3e31a555be3b5766f015c6c27550",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:07:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Alibaba-NLP/gte-modernbert-base/resolve/e7f32e3c00f91d699e8c43b53106206bcc72bb22/"
+    }
+  ],
+  "upstream": {
+    "commit": "e7f32e3c00f91d699e8c43b53106206bcc72bb22",
+    "host": "huggingface.co",
+    "repo": "Alibaba-NLP/gte-modernbert-base",
+    "url": "https://huggingface.co/Alibaba-NLP/gte-modernbert-base/tree/e7f32e3c00f91d699e8c43b53106206bcc72bb22"
+  }
+}

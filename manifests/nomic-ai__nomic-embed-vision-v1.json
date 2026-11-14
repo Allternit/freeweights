@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-14T21:10:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4f3a55216a2e84d968d87a3c0f2c1125ebf558a12825c94657317578f317f7be",
+      "size": 4396
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8ba755dcfdd6f6ddd05c81b1b3c812818f48e3828c420e424ae667e8c32ec1fe",
+      "size": 2140
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "567800482ee6d07768931252ce68846782776611a2edbc3af2436a1f0c87c33e",
+      "size": 371806672
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "857feb6165694822d8c0e7cc94011a52c94f0f486cb53d7b6f1c58c577b97ca6",
+      "size": 374487555
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "edc1825e8150779edf849b3ac5d412b0598d4dbc46adfcb3c48bcc0021ad8db5",
+      "size": 56177424
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "f13d2eaba917a1d57247f2e11b49fe2583cbfed4e88ec7f54f2db17c1f49c110",
+      "size": 187390167
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "e16f11caac9f19733c7eb83885eab809078f0af6a5edb59463dadfb495028d0d",
+      "size": 96745606
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "9c6392ff63538da9ec1cc085c59a42ce048374c7d0642cbcfb45e773fb64655e",
+      "size": 61964551
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "e16f11caac9f19733c7eb83885eab809078f0af6a5edb59463dadfb495028d0d",
+      "size": 96745606
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "0be790baccf7d5a85846d627ed55dbdfe5e8f911b769ddd60fae19ed17a5d6fc",
+      "size": 96745634
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "77436fccc0108364dd52185181d65cace7e830113e3b81b2bad8009a47f59b34",
+      "size": 791
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nomic-ai/nomic-embed-vision-v1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4f3a55216a2e84d968d87a3c0f2c1125ebf558a12825c94657317578f317f7be",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:10:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nomic-ai/nomic-embed-vision-v1/resolve/d4a4adac9b70520c0729ae361ef6eef7286153c2/"
+    }
+  ],
+  "upstream": {
+    "commit": "d4a4adac9b70520c0729ae361ef6eef7286153c2",
+    "host": "huggingface.co",
+    "repo": "nomic-ai/nomic-embed-vision-v1",
+    "url": "https://huggingface.co/nomic-ai/nomic-embed-vision-v1/tree/d4a4adac9b70520c0729ae361ef6eef7286153c2"
+  }
+}

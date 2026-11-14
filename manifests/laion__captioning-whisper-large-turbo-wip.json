@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:33:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3f3d3fb97394efc6b17eb81e36f0909320b54b34835835b810cbcdfaf9919a2e",
+      "size": 5659
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+      "size": 34648
+    },
+    {
+      "lfs": false,
+      "path": "code/download_data.py",
+      "sha256": "e76e282d8f6059127342f9815ecd2c72cd17bba968fd32c696b1ccdd832e1fbc",
+      "size": 10859
+    },
+    {
+      "lfs": false,
+      "path": "code/monitor.py",
+      "sha256": "8ccbd58c40afe814f43177907af536503f7fd78d86f8a00ec3121334a59617df",
+      "size": 18336
+    },
+    {
+      "lfs": false,
+      "path": "code/phase2_launcher.sh",
+      "sha256": "27a973c7c9583ab8ad7584be5130fbdbcfa3ead379686bf4ed1579b0a0ef21f9",
+      "size": 4015
+    },
+    {
+      "lfs": false,
+      "path": "code/prefetcher.py",
+      "sha256": "061813d36b955eeb55453ffaa9c6edd0e6d5531c6e2156efafac1eccbf24dec0",
+      "size": 30397
+    },
+    {
+      "lfs": false,
+      "path": "code/train.py",
+      "sha256": "60ca6eb9191527a5d6d51e9eac8a3b44078995a58962fb11e227f5fbf5d361d4",
+      "size": 56642
+    },
+    {
+      "lfs": false,
+      "path": "code/watchdog.sh",
+      "sha256": "d2929724482b29fd1985b928361aa93aa9976f72d43550c41969efd147197b96",
+      "size": 4012
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4c0ec26e6b702e810c38b776435fc803220055a6e9056c5c5a46cc63c2ce7bf3",
+      "size": 1223
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c6fb63cbebc0838aed4e2ffc5a56afd01e410670ac2c5bb279342b757d638544",
+      "size": 2842
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "size": 493869
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "716758f4ae48ff95a87e3b2ae073007cab954005e27ea93640747aab4812c459",
+      "size": 3235581408
+    },
+    {
+      "lfs": false,
+      "path": "normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "size": 52666
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499",
+      "size": 357
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+      "size": 2186
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "070f76a8f93bdf163d38e05cd21a4f82990b1e95754c7a0e621c86837cdedf3e",
+      "size": 3930743
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "3c75940dfce3a294fca7041a5faff011677f1b68fa85e47511bb8cf6dccaded6",
+      "size": 282873
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971",
+      "size": 835528
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/captioning-whisper-large-turbo-wip",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3f3d3fb97394efc6b17eb81e36f0909320b54b34835835b810cbcdfaf9919a2e",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:33:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/captioning-whisper-large-turbo-wip/resolve/ed8c19104291d2e1e8f5de2cddfa07efce6c8bcb/"
+    }
+  ],
+  "upstream": {
+    "commit": "ed8c19104291d2e1e8f5de2cddfa07efce6c8bcb",
+    "host": "huggingface.co",
+    "repo": "laion/captioning-whisper-large-turbo-wip",
+    "url": "https://huggingface.co/laion/captioning-whisper-large-turbo-wip/tree/ed8c19104291d2e1e8f5de2cddfa07efce6c8bcb"
+  }
+}

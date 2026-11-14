@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-14T21:09:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "6401a8eeaeca1f1fe2b1b46be987dcf2ee6085ec73f7d2263318ffc191dd91d3",
+      "size": 191
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4cf700a16076d1bd571e6bc1827f6424c7a94694495dff3603ccfb2ee688d3cc",
+      "size": 82603
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8d4c498741937d1467af5be739dc0fbcc4d033eb1fb93ece4f1c9c6bbdd37ec5",
+      "size": 1177
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "f74e79e5a81393fc7127bb35604607dda8e68e7feeb7ed8cd399fc3b1257c793",
+      "size": 117
+    },
+    {
+      "lfs": false,
+      "path": "de_evaluation_results.png",
+      "sha256": "aac4bb83d867e11dd44e22bc310c1e2f142c16425eb9b684a2bcb1cea691de21",
+      "size": 321775
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "53e71fe16da7432f4bda152986875b2813e2f680a59c6a32d6346f8fc30f837b",
+      "size": 589466
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0ffca9240c502ef64a63917baf0e60648a7a438dfd49a4f91ad4d5dab3428cf8",
+      "size": 321648328
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "size": 349
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "51654b7441fbfcfef6598b01cbd1ea925ca0f0cad81202fcd36fee325783f1b0",
+      "size": 641212851
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "e039ce538df36cb7ecee6bb88aacf0699227277be769a8e9adb5da719d23c571",
+      "size": 320852338
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "b19a38d186594d9784e6a2c8954035a6928b5da1df402e7942d25021cf488b6b",
+      "size": 161565240
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "b7ed0e5f7aa0fbaf70db652dd783b4b8d9da415f6e6e405c91e069d364ad1eed",
+      "size": 321664570
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "7a17ba8cf5532d66e5e102613b7ff22905c2722f6c8c853e6bc02d5ad280cf51",
+      "size": 99
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+      "size": 280
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "376c53a06d6911569afc19f584002a11dbcd6b871afb6d96b8600eb3c4e7e7a7",
+      "size": 2633554
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "99c5e1cf31def1533447759dca2f1c22853d499c0c73e13d9667ae2b5ff1fa0b",
+      "size": 1211
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "950db6d11f3338b92d6839317b1dbef27f44e5a9fcd020c369ca23896b197a09",
+      "size": 1006758
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "jinaai/jina-embeddings-v2-base-de",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4cf700a16076d1bd571e6bc1827f6424c7a94694495dff3603ccfb2ee688d3cc",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:09:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v2-base-de/resolve/3f9eede875721714945b6a99a3198299243cf2be/"
+    }
+  ],
+  "upstream": {
+    "commit": "3f9eede875721714945b6a99a3198299243cf2be",
+    "host": "huggingface.co",
+    "repo": "jinaai/jina-embeddings-v2-base-de",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v2-base-de/tree/3f9eede875721714945b6a99a3198299243cf2be"
+  }
+}

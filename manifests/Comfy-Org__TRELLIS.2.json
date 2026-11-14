@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:26:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c9dbaa577043305bf0da1160a652c752a8f7da23322aafa60f5cf47c2e421f7d",
+      "size": 1636
+    },
+    {
+      "lfs": true,
+      "path": "clip_vision/dino_v3_vit_l.safetensors",
+      "sha256": "5cb785e458de7c460579082418af81f5c62380c181599344bdc60898c63468ee",
+      "size": 1212559776
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/trellis_2_bf16.safetensors",
+      "sha256": "bf8ebe29f2d73722ca8a17b7aa65ef07650eb26d04799ae600482058f96921b5",
+      "size": 10338297616
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/trellis_2_int8_convrot.safetensors",
+      "sha256": "d01952ad137213f6a868f86b6b877026276f84af5eec23069217475a0bad3a31",
+      "size": 5253048192
+    },
+    {
+      "lfs": true,
+      "path": "vae/trellis_2_shape_vae_bf16.safetensors",
+      "sha256": "de0cb4949a76c59ee5c091a995a69bcc8c51d5aeda939f0c641a50d2a72341f4",
+      "size": 1095844024
+    },
+    {
+      "lfs": true,
+      "path": "vae/trellis_2_texture_vae_bf16.safetensors",
+      "sha256": "714e5ebf094a610e12a8e3b5175c18a62f37f6ea4218acb6073644456b73ab0e",
+      "size": 948461364
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/TRELLIS.2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c9dbaa577043305bf0da1160a652c752a8f7da23322aafa60f5cf47c2e421f7d",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:26:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/TRELLIS.2/resolve/430a9d09b2416687018c8fe8edced2ad4858a439/"
+    }
+  ],
+  "upstream": {
+    "commit": "430a9d09b2416687018c8fe8edced2ad4858a439",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/TRELLIS.2",
+    "url": "https://huggingface.co/Comfy-Org/TRELLIS.2/tree/430a9d09b2416687018c8fe8edced2ad4858a439"
+  }
+}

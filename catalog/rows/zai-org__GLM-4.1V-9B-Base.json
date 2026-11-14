@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "zai-org/GLM-4-9B-0414",
+  "display_name": "GLM-4.1V-9B-Base",
+  "family": "glm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "zai-org/GLM-4.1V-9B-Base",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "mit",
+  "manifest_url": "https://freeweights.allternit.com/manifests/zai-org/GLM-4.1V-9B-Base.json",
+  "params": 10292777472,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "zai-org/GLM-4-9B-0414",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.glm",
+  "signals": {
+    "downloads_30d": 2553,
+    "likes": 68,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 20605689796,
+  "upstream_url": "https://huggingface.co/zai-org/GLM-4.1V-9B-Base",
+  "what_changed": null
+}

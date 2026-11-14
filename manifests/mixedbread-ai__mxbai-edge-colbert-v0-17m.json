@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-14T21:09:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "1_Dense/config.json",
+      "sha256": "fdedbe7da07dafae623a002bcde227e767b8129da964fd90a3da301e3c7f929f",
+      "size": 133
+    },
+    {
+      "lfs": true,
+      "path": "1_Dense/model.safetensors",
+      "sha256": "cbd910c4bc2a0338f58f08b4a840770b38bceda90eb1c433233cbf227121bee1",
+      "size": 524376
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/2_Dense/model.safetensors",
+      "sha256": "8e724279af3acf91c20d4a4dd33c6bd272f80b02095ff969e8a3f3de6432175c",
+      "size": 98392
+    },
+    {
+      "lfs": false,
+      "path": "2_Dense/config.json",
+      "sha256": "d0e3d51270eb8bef21c3f321b2848ebfc2894d5e93fde02f7f09a8c7308748f0",
+      "size": 132
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/model.safetensors",
+      "sha256": "8e724279af3acf91c20d4a4dd33c6bd272f80b02095ff969e8a3f3de6432175c",
+      "size": 98392
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0d177ea3615e2842ea6523d144d60d35c0cbc9d0e534012c319b4eb6bf7b2fb6",
+      "size": 70069
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8dfe2360cfa456796f9f2f27d87dbbda083d0329320542b871cea6d34d2c5e8c",
+      "size": 1252
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "629c4f00d1ac23abe86fec195dc90a7799ee33ceae236df6a3c026d8db018816",
+      "size": 760
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx",
+      "sha256": "a2fb3ad410f1b68479caa31e9d6821213050ef25804cb9a3c9ba963e72503f46",
+      "size": 67970609
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "63e9d246f0166ceafa8bd63ee52cb929335ca30110efdb28e7f877c7aa641ca1",
+      "size": 67195976
+    },
+    {
+      "lfs": true,
+      "path": "model_int8.onnx",
+      "sha256": "1d4a2876f8c325f43b97d186e22f6b63ebe9820827d73b81fcea180c20e5518b",
+      "size": 17228400
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "930b80c6d74f342665da7c56d01a9d906176ba3c74dd9f332cea8922121c4bbf",
+      "size": 319
+    },
+    {
+      "lfs": false,
+      "path": "onnx_config.json",
+      "sha256": "e12026a07eb05b45dbe2a5677390c6b968c511cdfb2281a2156589bf48e27750",
+      "size": 803
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "418d0ad8b3489d2505453940b1d635e2ec7099fad599ea97d64cd116eb468e76",
+      "size": 57
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "6edfb9d64c0d7e5cbaa53516e90280fe1f42ba5ea7923d005a5f9b6e082142cf",
+      "size": 581
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "594291000b476c98ed600cbb1914ff128c79642a9433aac86213c7a5562d7c1a",
+      "size": 3583588
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "cf6fbfaeb7553a572debf790d8b8bac09686648b83827e01b3efed0470e9f338",
+      "size": 21181
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mixedbread-ai/mxbai-edge-colbert-v0-17m",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0d177ea3615e2842ea6523d144d60d35c0cbc9d0e534012c319b4eb6bf7b2fb6",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:09:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mixedbread-ai/mxbai-edge-colbert-v0-17m/resolve/592c6417c1c6687572043408ed1ae5196bce16b1/"
+    }
+  ],
+  "upstream": {
+    "commit": "592c6417c1c6687572043408ed1ae5196bce16b1",
+    "host": "huggingface.co",
+    "repo": "mixedbread-ai/mxbai-edge-colbert-v0-17m",
+    "url": "https://huggingface.co/mixedbread-ai/mxbai-edge-colbert-v0-17m/tree/592c6417c1c6687572043408ed1ae5196bce16b1"
+  }
+}

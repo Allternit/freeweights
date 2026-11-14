@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:23:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "dcd08d6249bd9916c8f66f30832e6640953669d3f359f6bd6876fa28fd407e91",
+      "size": 1572
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c409631105ca563f0b34e439494ab395dc8ded6bf55d26d5b87e155dd698c8dc",
+      "size": 10160
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "caee2691e790b04054bbe14a753b40149fa7c0c16fadb58d9adf5412343dcf57",
+      "size": 2117
+    },
+    {
+      "lfs": true,
+      "path": "figures/Fig1.png",
+      "sha256": "0386a7f577a66324c2b07cf3dff573bc805ce8687c8d6f8b5f3d6d04aed51250",
+      "size": 123543
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7758b150b8139deb48ac1ff6f181f745c8fedd5511232fd974b3eb217d83b514",
+      "size": 2035332888
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ebf514b5d30a012e5ae00d9a19d01e735e35b27768c3926d980815db8fa742e5",
+      "size": 360
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/VibeVoice-Realtime-0.5B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c409631105ca563f0b34e439494ab395dc8ded6bf55d26d5b87e155dd698c8dc",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:23:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/VibeVoice-Realtime-0.5B/resolve/6bce5f06044837fe6d2c5d7a71a84f0416bd57e4/"
+    }
+  ],
+  "upstream": {
+    "commit": "6bce5f06044837fe6d2c5d7a71a84f0416bd57e4",
+    "host": "huggingface.co",
+    "repo": "microsoft/VibeVoice-Realtime-0.5B",
+    "url": "https://huggingface.co/microsoft/VibeVoice-Realtime-0.5B/tree/6bce5f06044837fe6d2c5d7a71a84f0416bd57e4"
+  }
+}

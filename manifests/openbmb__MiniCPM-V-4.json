@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:25:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e75d2f4c9818149f7fd2b66f3f4764d42a269307d9ed8882cebd03abbf29fadd",
+      "size": 19772
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a83a83259378c2684a96ce3a6cb96d418a1d97f46118af3aff2ac1222fc783b8",
+      "size": 5057
+    },
+    {
+      "lfs": false,
+      "path": "configuration_minicpm.py",
+      "sha256": "ff493a387dbac8bcde4bad93574f74238d4f715808189630c6d1f7ed207e9dfc",
+      "size": 4238
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "b3604fc95ad97535c8efa08711e939743fb57cc004fc36ef358684dd2083087f",
+      "size": 153
+    },
+    {
+      "lfs": false,
+      "path": "image_processing_minicpmv.py",
+      "sha256": "070fbe746243ce3fd666b48bbf415d9b9b3bf4cddaad15ab3f243733e40a6201",
+      "size": 16600
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "c1636a5c21c7fedb3f6f0ff3f3a4e35103e6208c1144f320a0c5a92c22a16af6",
+      "size": 4966445072
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "cd6ee63b0a3ae1ad24790f954cca3448392cd3a0d9d2d208cb2b14e0da53d32e",
+      "size": 3152707944
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "803b4c6605fd33df8ba4386c787f914e75d4d382f937e4e2c3f640d47e1f6d5c",
+      "size": 62812
+    },
+    {
+      "lfs": false,
+      "path": "modeling_minicpmv.py",
+      "sha256": "c59f539caf3bab55b4d491cb56449d6267ae07fe1ff25f63a859ea4a3e7f69e2",
+      "size": 17268
+    },
+    {
+      "lfs": false,
+      "path": "modeling_navit_siglip.py",
+      "sha256": "c71ca316fe7405325b7097364f98f71c317fff8c9f5c8820f30d3362b1ed5bfa",
+      "size": 41835
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "1d9513a6613e3919dda231a4ea935073122fd92107ab5342abd8ab3c212ca8f5",
+      "size": 714
+    },
+    {
+      "lfs": false,
+      "path": "processing_minicpmv.py",
+      "sha256": "8af1702cc70167e94cb77f0d3a7c387d0923755a22679c7313a8380b72e5a3b2",
+      "size": 9920
+    },
+    {
+      "lfs": false,
+      "path": "resampler.py",
+      "sha256": "6f4f91977fd409b15fe7d2e7ab2ee3f88b544e71a1209026a937eece6c6c582e",
+      "size": 34709
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76",
+      "size": 1632
+    },
+    {
+      "lfs": false,
+      "path": "tokenization_minicpmv_fast.py",
+      "sha256": "4512e985d4af814747a5c9d81d5f911fcb95c1d714b547282b01dd06639c08d0",
+      "size": 1647
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "028e74a0efb7bbe99dc7e8b5c216c5fe54da231f80f41bb658e21326883503f3",
+      "size": 3691593
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "63099373ce6901674187ba3d7233c5970a253e8e0874056823bf0d3abc8d96a1",
+      "size": 1181048
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "c13da6ff468cfed3d14eeccd4198cc304305660281cb91dc280aeb332e4d67e4",
+      "size": 2883
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM-V-4",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e75d2f4c9818149f7fd2b66f3f4764d42a269307d9ed8882cebd03abbf29fadd",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:25:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM-V-4/resolve/c0d840f2874630f618bb5e6b23c697de4d76f055/"
+    }
+  ],
+  "upstream": {
+    "commit": "c0d840f2874630f618bb5e6b23c697de4d76f055",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM-V-4",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-4/tree/c0d840f2874630f618bb5e6b23c697de4d76f055"
+  }
+}

@@ -1,0 +1,576 @@
+{
+  "created_at": "2026-11-14T21:34:10Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "17241371600bcde523c76ca4f006a1700145535914b24586c5766572640f7cf8",
+      "size": 544
+    },
+    {
+      "lfs": false,
+      "path": "NOTICE.md",
+      "sha256": "a00fd9ba52637b37dce84f9a09596a6747df540a3796b8140e151fb5949d9cf6",
+      "size": 1236
+    },
+    {
+      "lfs": false,
+      "path": "PROMPTING.md",
+      "sha256": "4de4427d1f925f40781834af98144b73acdc4054ab8e88f89c05bf284c83d7ba",
+      "size": 4475
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a7fb623f96f4541c61051694b1f2cce61d3677ceb68cca12437e2993b682504a",
+      "size": 9566
+    },
+    {
+      "lfs": false,
+      "path": "TRAINING.md",
+      "sha256": "7eeda486b1d7b2f06b9cc4fa2c6e0607098f61a42e95f8ad9e08166597fbfa4f",
+      "size": 11636
+    },
+    {
+      "lfs": false,
+      "path": "VOICE_ALIASES.md",
+      "sha256": "b56d019a0443b623a9517dd01d208e44f24d18a2da1e1e7bbfbe6ad74053eec6",
+      "size": 7262
+    },
+    {
+      "lfs": false,
+      "path": "__init__.py",
+      "sha256": "fa22d925207c64e6701f9c5f97c3e14a9bad4db5c37060c6e5f1362c02bc8040",
+      "size": 254
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "39bb49db6acfb8e7510b1640f575bdc183f511d85c94ce3ee967f2a6195c4a8a",
+      "size": 790
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a38831fed29e80f78d9f842f56612f0db3a4f707fbdb43929d454e90a1f11f4c",
+      "size": 7047
+    },
+    {
+      "lfs": false,
+      "path": "configuration_moss_tts.py",
+      "sha256": "ab6debcb92032cb9dc91ae80aed77dbadd2e59848208baef2b062bd6def3f3be",
+      "size": 7160
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/TASKS.json",
+      "sha256": "dcdb37cb410d75946d4fa10fb413ab73a2f6f3758a2eee71ac8157ae9ea33f5f",
+      "size": 770772
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/check_gpu_preflight.py",
+      "sha256": "908bd1b8ec295319138696bd8e4f63a30300340201f77d7fb610c94ddab08278",
+      "size": 1003
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/common.py",
+      "sha256": "126b130a5197f28f361f1b347b8e2232f30a3c7b135c324375f40683cca98b74",
+      "size": 116
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/env.sh",
+      "sha256": "4637b1b83122929286fcc3527e32f8068f370a604a22ab142766009ed7f60f9b",
+      "size": 521
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/evaluate.sbatch",
+      "sha256": "7f4281a46d88b1ae05fd868cad1831eaef5b6501412790112b52d4988148c587",
+      "size": 1430
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/gpu-env.sh",
+      "sha256": "f5700b32529b67732387958dedae0d800d060c0ab14c82ebb29a30b1a84bedcd",
+      "size": 852
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/gpu_preflight.py",
+      "sha256": "20b40912e340a9786368ca2b27ff55cf04bde0099e4a37809613e093e9734b89",
+      "size": 807
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/masking_cases.py",
+      "sha256": "dda8df873576cc12d02fc279a00a847d4dbb0f336a7c04b3164733b2d1f3b56e",
+      "size": 17564
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/pipeline.py",
+      "sha256": "789810f571cc79dfbc46965a8cd82b68dcfdf3d9077dedbf52315e224b62a800",
+      "size": 14776
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/publish.py",
+      "sha256": "5775c4f160fd7c9b225cc6550015243cfc8abdbee2e7656a9488255fee419ea4",
+      "size": 10531
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/publish.sh",
+      "sha256": "591293902f6e5015287bc4ed8ffcc8d7a99765421cf995ca182e35a67f9e73b3",
+      "size": 314
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/render.py",
+      "sha256": "a9d14c720f6c713f1f2581e05f55527743f25bbcd44731c57abef70b668e9361",
+      "size": 11647
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/rl_recipe.py",
+      "sha256": "4c3ef962dc6a241c2ae473ecea28a93e497a99d4f831120532ffc0699c23258a",
+      "size": 9040
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/settings.py",
+      "sha256": "2685e562795892f7be1700071305c1d00bcd51c51f712d0771b620e666bea3ee",
+      "size": 1500
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/code/test_pipeline.py",
+      "sha256": "66338938e3a373349bf106f05f8361728fd4fc8081795c4a9d1599464b670a69",
+      "size": 4438
+    },
+    {
+      "lfs": true,
+      "path": "evaluation/public_cli_canary.tar",
+      "sha256": "a2c1a4b66d0ef84401c35505e8f98463084b3327d69d1d2c80d1c23ecbd9713c",
+      "size": 2908160
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/references.json",
+      "sha256": "9d4ea661ce42273798ebd2d116bee194232aa670589b2717128ce2be18b73dd3",
+      "size": 4953
+    },
+    {
+      "lfs": true,
+      "path": "evaluation/references.npz",
+      "sha256": "0d86c91fe534cc162c782aeff2399f116190d066b11403524ea5c288473c79dc",
+      "size": 14889
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "ec11df43c896a23a66d88eb9281d90bbbca48f3afb047fec0172f7af4d1ccdfc",
+      "size": 158
+    },
+    {
+      "lfs": false,
+      "path": "gpt2_decoder.py",
+      "sha256": "f2e877104669f1e6c7cd34680f0da1a8a159e032123ee56b660b63929b6c8989",
+      "size": 30896
+    },
+    {
+      "lfs": false,
+      "path": "infer.py",
+      "sha256": "4b73145ff3dbeaa6cce4e609973054ea79b1b9ff9f4bb10e3e8a662e7f42b540",
+      "size": 7464
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "3a9831cfd1944316e8b7d5fcaea845bf8b49b832824950709ce0eabf56b4702a",
+      "size": 3957901888
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "1fdaae7bd4f09b867152ef91761106e7bfef986b5f9979f69463466e864018a5",
+      "size": 3987451840
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "c149c250be927df24cdaa59c5b8ff50c3f0471f664f6483bb58236f07afa31df",
+      "size": 314677600
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "47899821fb607f60e3ec812c1c1b9c9ac0a58186d83cba755e70f4f9f241f71e",
+      "size": 37248
+    },
+    {
+      "lfs": false,
+      "path": "modeling_moss_tts.py",
+      "sha256": "b0a66211943ae580b087f3e71495fea2f455701a4f6c29b6d3562218f7668c5f",
+      "size": 26379
+    },
+    {
+      "lfs": false,
+      "path": "processing_moss_tts.py",
+      "sha256": "059637b92e7eb9a67df531fe9578e9554d456195828b223eb81f21117c58e8f8",
+      "size": 37501
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "fac7289af2a37d988d708d813c92960e5e91c59d348c17b72c6aa6b86859f2b7",
+      "size": 209
+    },
+    {
+      "lfs": false,
+      "path": "qwen3_decoder.py",
+      "sha256": "100163bd7ecf31a59bafacc0b032ace9339edc992a3eb4cc80662502e04e46f0",
+      "size": 25473
+    },
+    {
+      "lfs": false,
+      "path": "release_config.json",
+      "sha256": "7ac41438f51cf9a10112f0ef6056a96b03c5f5436f36b3caa162c8848fb2cf24",
+      "size": 627
+    },
+    {
+      "lfs": false,
+      "path": "requirements.txt",
+      "sha256": "d714d8a2e21f1f6ade5b02b527745b7c89adb2f9f581c60d1a735175e8ac0459",
+      "size": 180
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "02a153514db64e5378c53ef164c960409882649de6f4aac8f81f66218e7f8797",
+      "size": 394
+    },
+    {
+      "lfs": false,
+      "path": "stats/ATTENTION_PREFLIGHT.json",
+      "sha256": "ef9f7994faca912f72c37424d4ad7d86cbd5ce269da9be9c2de8a628086c5aa2",
+      "size": 154
+    },
+    {
+      "lfs": false,
+      "path": "stats/DATA_READY.json",
+      "sha256": "3af422d542ba5175b7ca2aedf8ec2083f57dddbedac2991cdfb4d5c41249e25b",
+      "size": 18447
+    },
+    {
+      "lfs": false,
+      "path": "stats/DETAILED_PROMPTS_MANIFEST.json",
+      "sha256": "ce40d80462ad20cf1bdfd02d5245e70116c0894b7a07cdea186a0fbcd2a6290a",
+      "size": 2887
+    },
+    {
+      "lfs": false,
+      "path": "stats/DONE.json",
+      "sha256": "cba98162df964a325c14f15b03d85bb395852b547490dd12b7424f707119cd05",
+      "size": 162
+    },
+    {
+      "lfs": false,
+      "path": "stats/EXPORT_READY.json",
+      "sha256": "d3caecd810ed16399b28b7c523343aa228d762c246c6fa3f4733a4f77a927d98",
+      "size": 734
+    },
+    {
+      "lfs": false,
+      "path": "stats/FINAL_CHECKPOINT.json",
+      "sha256": "1690068d19e534d7483e734cde0a318534f4cb6595c6e1b2a6c5cef3587cfd6f",
+      "size": 273
+    },
+    {
+      "lfs": false,
+      "path": "stats/INFERENCE_TEST_ENVIRONMENT.json",
+      "sha256": "0fb65928e402c0f2ec1f82a768f2d1c7cbab9c77d76a821a0f5fa4b04ec71ddf",
+      "size": 651
+    },
+    {
+      "lfs": false,
+      "path": "stats/LISTENING_FULL_PUBLIC_VERIFIED.json",
+      "sha256": "252a537abb8a2e11e5aeaaa6e0a30830782b8b08c28eae452f258770fcb9e6f6",
+      "size": 284
+    },
+    {
+      "lfs": false,
+      "path": "stats/LISTENING_PREVIEW_VERIFIED.json",
+      "sha256": "4c543f209e64792744659d68bd4af2bde529bc1796625c2b95eb32a77793ed5d",
+      "size": 139
+    },
+    {
+      "lfs": false,
+      "path": "stats/MODEL_PREFLIGHT.json",
+      "sha256": "fc064bfca364b03c0aa07c7242e813dfcea8fe2a5b2e4329cf0923e90b1c240b",
+      "size": 131
+    },
+    {
+      "lfs": false,
+      "path": "stats/PACKING_PREFLIGHT.json",
+      "sha256": "06a37fa87c90b2a418fd4cc3598142569448685a1a8a06ecb8b6e5e1b2c0e44a",
+      "size": 21587
+    },
+    {
+      "lfs": false,
+      "path": "stats/PUBLIC_INFERENCE_CANARY.json",
+      "sha256": "26883746b9bec6c1ae3e1e014e4ff1ec9cc56f7d2368ba0d139ed0d3b48402a2",
+      "size": 2281
+    },
+    {
+      "lfs": false,
+      "path": "stats/PUBLIC_LOADER_WEIGHT_AUDIT.json",
+      "sha256": "6f27d4b1b047a4a660fc95e40662a7ed7c2714ce01375d6c31adac326f26e143",
+      "size": 127
+    },
+    {
+      "lfs": false,
+      "path": "stats/RUN_CONTRACT.json",
+      "sha256": "929f8e039a5cb8798476c3e2abfe47eab4cbce24d5bfc6f6ce78cf193b590e72",
+      "size": 4223
+    },
+    {
+      "lfs": false,
+      "path": "stats/STATUS.json",
+      "sha256": "a6ef8f7b5b85308f265d2a142fbaa7dfc2851d20baef102dce26fcd7a3de8ea7",
+      "size": 244
+    },
+    {
+      "lfs": false,
+      "path": "stats/TRAINING_SMOKE_READY.json",
+      "sha256": "2d60f1f50834f4989f61215e48540cf22b9c1ce5bae0675158dab7fc764939b7",
+      "size": 397
+    },
+    {
+      "lfs": false,
+      "path": "stats/steps.jsonl",
+      "sha256": "edfd2efcac11686d9d311969adba4aa5d16af8e3d2a86764288a17974f97b497",
+      "size": 94108
+    },
+    {
+      "lfs": false,
+      "path": "stats/validation.jsonl",
+      "sha256": "84a7731131d3c721f69b7e37268e14017876a29af18ac43d3c7e9ef4b10d1c1a",
+      "size": 1921
+    },
+    {
+      "lfs": false,
+      "path": "test_infer.py",
+      "sha256": "1996f695d065e73d868c9a8a22948d32ca9b7188449ad196723ab4cfa6e99769",
+      "size": 2012
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06902d1fb775216338802205886a24bc715ccc606bd872a892e3d3c83ca1b9e2",
+      "size": 11423220
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ec2869dd4c9c7155b3460c291a6fb2b955e5068013ba7efbcaafd1c61e02abce",
+      "size": 5727
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/LOCK.json",
+      "sha256": "513b7969baa322d8b39d1bacee91b592999033d4e5665cd8e748753f7ea5de08",
+      "size": 1761
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/ORIGINAL_LOCK.json",
+      "sha256": "c0d1cde2dee167ab803a2f1f9ea05b5ca585b194792b5544d2f9e6625d000205",
+      "size": 1830
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/check_gpu_preflight.py",
+      "sha256": "908bd1b8ec295319138696bd8e4f63a30300340201f77d7fb610c94ddab08278",
+      "size": 1003
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/common.py",
+      "sha256": "e2a1e57b6d07d5d7902a517bb8ac5e0d3ac00866b500c3e7ba3ce68dbacb7185",
+      "size": 3888
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/data.py",
+      "sha256": "a5850399876852547cdc8ba8bd47c90122ea66445ac657523a5fd9f5c7a13bff",
+      "size": 5310
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/detailed_prompts.py",
+      "sha256": "8c46379b1235991d51aac18c39e3a365f6443809bd93b1706574e25b8ee29a4e",
+      "size": 9930
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/env.sh",
+      "sha256": "4637b1b83122929286fcc3527e32f8068f370a604a22ab142766009ed7f60f9b",
+      "size": 521
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/gpu-env.sh",
+      "sha256": "f5700b32529b67732387958dedae0d800d060c0ab14c82ebb29a30b1a84bedcd",
+      "size": 852
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/gpu_preflight.py",
+      "sha256": "20b40912e340a9786368ca2b27ff55cf04bde0099e4a37809613e093e9734b89",
+      "size": 807
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/launch.py",
+      "sha256": "bd0cc58f779a60a3810b9d4a2b852522067f2f65dfed1916114a15da87264cf8",
+      "size": 6500
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/memory_attention.py",
+      "sha256": "d5e34c3394aecc705be8d79d88c6c5a3e27d114cb87167198740918e6dcc5b14",
+      "size": 360
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/monitor.py",
+      "sha256": "cce7e60541857be566381aa04882da6a9690fe9e5285c9cd1d9c8f7234e09bfd",
+      "size": 8960
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/prepare.py",
+      "sha256": "321372681e6b979fa3bff1a4e2eb3b844363223cbd9b00532a0d1d5c1cc33da5",
+      "size": 23452
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/prepare.sbatch",
+      "sha256": "009c5ac59d91c2182ed7d32ad1314827a5c5e58a897351b1c0f93fd6b304b8bc",
+      "size": 1767
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/test_pipeline.py",
+      "sha256": "f7a3e6a121da234179a012c7f08ef528a2499705507c7fe64f97a5332903997e",
+      "size": 4166
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/train.py",
+      "sha256": "2f5e54930209afb786be3afb4e9ffcb125d07c65098fac437c4cfb96d44dd74d",
+      "size": 15633
+    },
+    {
+      "lfs": false,
+      "path": "training/jupiter/train.sbatch",
+      "sha256": "db7780ca73723e9ca6b7b65d6de4d9fc18b88f1e5fe8be9d02cf7b79e57ea419",
+      "size": 1316
+    },
+    {
+      "lfs": false,
+      "path": "training/legacy/acting_data.py",
+      "sha256": "e448295761d87bee1ba8654bbe9c1fba764928bf3a25dab622588940c9fb606e",
+      "size": 7198
+    },
+    {
+      "lfs": false,
+      "path": "training/legacy/conditioning.py",
+      "sha256": "f1f0e0db18b2221d9a64679aa45604227ef89679f0a39e69a532b77685388533",
+      "size": 7501
+    },
+    {
+      "lfs": false,
+      "path": "training/legacy/large_talker.py",
+      "sha256": "3a1d0ed44467a6933dfac2a21a143a1c802482bafb2e992a1e6d8793e3fcdae4",
+      "size": 2474
+    },
+    {
+      "lfs": false,
+      "path": "training/legacy/memory_attention.py",
+      "sha256": "98e46fbe74b8b4e8d48ff12e91a40ce79aab59ea2a970202088a5f91d53bb2cf",
+      "size": 3510
+    },
+    {
+      "lfs": false,
+      "path": "training/legacy/moss_small.py",
+      "sha256": "56ce306ae433dda890da621be8fda7d39398938c4d53cc59dd66f06e364f0707",
+      "size": 10801
+    },
+    {
+      "lfs": false,
+      "path": "training/legacy/real_data.py",
+      "sha256": "5628c554fc9d96c175db3915f86dcadbedb4dcc2847f814edd0cd3f4bf6fae52",
+      "size": 2561
+    },
+    {
+      "lfs": false,
+      "path": "training/legacy/train_fullft.py",
+      "sha256": "4e5f84b948afd3eabd28f762349d1a2c7429232ffc5bd6524f891c82c6a613d3",
+      "size": 23678
+    },
+    {
+      "lfs": false,
+      "path": "training/legacy/va_loss.py",
+      "sha256": "2df51c949a72d0ccbad4a1fdb3ce50374cddae34f70c73fd212d7959347095a5",
+      "size": 5534
+    },
+    {
+      "lfs": false,
+      "path": "training_requirements.txt",
+      "sha256": "09f6170fe6a0abf7819fd62847ecb18616c1b679a76ef5e7f92a9c64706641f2",
+      "size": 132
+    },
+    {
+      "lfs": false,
+      "path": "voices.json",
+      "sha256": "9a80aeafcbfe45247d98170b4139bef99b1d8393588e97cbb93125923a509ea1",
+      "size": 15113
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/Humaneness-Voice-Large-1.3-Alpha",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "17241371600bcde523c76ca4f006a1700145535914b24586c5766572640f7cf8",
+    "id": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:34:10Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/Humaneness-Voice-Large-1.3-Alpha/resolve/f4cee303eb362af4cf3d205e9fe0198288564398/"
+    }
+  ],
+  "upstream": {
+    "commit": "f4cee303eb362af4cf3d205e9fe0198288564398",
+    "host": "huggingface.co",
+    "repo": "laion/Humaneness-Voice-Large-1.3-Alpha",
+    "url": "https://huggingface.co/laion/Humaneness-Voice-Large-1.3-Alpha/tree/f4cee303eb362af4cf3d205e9fe0198288564398"
+  }
+}

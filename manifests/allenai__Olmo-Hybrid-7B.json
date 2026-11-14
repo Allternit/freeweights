@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:13:58Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f80ceb1f347be99c57ecd5d2a9e8a37b11ce244e723105075ab428161ed652ac",
+      "size": 14200
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "00bdf5c713c1be5c10498de8e248b6a47e132e0c3636b1c7015b4dc55ebe568e",
+      "size": 1597
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+      "size": 916646
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "40e654fdc9d971ec2dcaad712ebe79c01e648804bce084894e6bbbc090842aeb",
+      "size": 14861802680
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "4cb2b52960bababa8ec27153831e405ef7811e3fad1226106e09c28e715cfb21",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+      "size": 7137177
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ffa5b2cfee6e73d5dc0a7d3b7e02eb6ed60a491dd782f2bd8ad2b4659b2aafc6",
+      "size": 4308
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+      "size": 1611056
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/Olmo-Hybrid-7B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f80ceb1f347be99c57ecd5d2a9e8a37b11ce244e723105075ab428161ed652ac",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:13:58Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/Olmo-Hybrid-7B/resolve/4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf/"
+    }
+  ],
+  "upstream": {
+    "commit": "4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf",
+    "host": "huggingface.co",
+    "repo": "allenai/Olmo-Hybrid-7B",
+    "url": "https://huggingface.co/allenai/Olmo-Hybrid-7B/tree/4f1cc566f9fdf3ce68da2ab6a788a83d89896dcf"
+  }
+}

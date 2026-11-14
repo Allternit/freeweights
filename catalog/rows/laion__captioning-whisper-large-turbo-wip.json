@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-large-v3-turbo",
+  "display_name": "captioning-whisper-large-turbo-wip",
+  "family": "laion",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "laion/captioning-whisper-large-turbo-wip",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/laion/captioning-whisper-large-turbo-wip.json",
+  "params": 808878080,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-large-v3-turbo",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 10,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T0",
+  "total_size": 3241349782,
+  "upstream_url": "https://huggingface.co/laion/captioning-whisper-large-turbo-wip",
+  "what_changed": null
+}

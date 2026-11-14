@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:07:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3d010454d2949f8188bb3496951594e19c35076652e04d203cbd7e20ef3a3871",
+      "size": 5656
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "995730781d157e147c13ccdfe0eb20a0875c486b6c4de8c97f0bbd845549dbc0",
+      "size": 1494
+    },
+    {
+      "lfs": false,
+      "path": "images/mgte-reranker.png",
+      "sha256": "2588b1442676484f941f4075bfcead1cdd7da83af4999d37ab45507495bdd784",
+      "size": 238472
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "10ebaa49322dd7e01a13a91c49810939e3f91f231aceaa47fdf0cab3083954f6",
+      "size": 611934706
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "d6f76fe13d42f80dcee0cb86a1aeb5f14f8909bb8a8782f7a4a4ad76697ef164",
+      "size": 17083021
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6f00514620aff01ba8b7291b2394e98daca5be264cb743805232d9ae27494b2a",
+      "size": 1340
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Alibaba-NLP/gte-multilingual-reranker-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3d010454d2949f8188bb3496951594e19c35076652e04d203cbd7e20ef3a3871",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:07:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Alibaba-NLP/gte-multilingual-reranker-base/resolve/8215cf04918ba6f7b6a62bb44238ce2953d8831c/"
+    }
+  ],
+  "upstream": {
+    "commit": "8215cf04918ba6f7b6a62bb44238ce2953d8831c",
+    "host": "huggingface.co",
+    "repo": "Alibaba-NLP/gte-multilingual-reranker-base",
+    "url": "https://huggingface.co/Alibaba-NLP/gte-multilingual-reranker-base/tree/8215cf04918ba6f7b6a62bb44238ce2953d8831c"
+  }
+}

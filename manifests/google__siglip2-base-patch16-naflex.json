@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:37:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d4353009ea90b7de43575c4ba7e547e195e3239a62f7746afb16ae4ca7fa390a",
+      "size": 3383
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c0b8c2e7f0527b0bea1b1d9abe0381c0f294352df92439c54590b8420e539118",
+      "size": 329
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ac5f28bbdf92c0c1696ccbd3ce716426049cd67ad8045b66d0d938b0f9c8bbec",
+      "size": 1500985224
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "1125703e5446d5b6ff4d5893a33bac128cdd21dc12e3dad2469a648fb0ae3bf7",
+      "size": 393
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "size": 636
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "58a1696e79c9d97937389ed116f552a15c84811d7b8023918b86f4bc5775b1b0",
+      "size": 34356304
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "size": 4241003
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d2343400f0f86133053325951b696df8fd0f53a007cf6a546e6c2b4361344f47",
+      "size": 40160
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/siglip2-base-patch16-naflex",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d4353009ea90b7de43575c4ba7e547e195e3239a62f7746afb16ae4ca7fa390a",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:37:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/siglip2-base-patch16-naflex/resolve/b53b807d3a2d5e2b3911292f2d69e5341cdc064c/"
+    }
+  ],
+  "upstream": {
+    "commit": "b53b807d3a2d5e2b3911292f2d69e5341cdc064c",
+    "host": "huggingface.co",
+    "repo": "google/siglip2-base-patch16-naflex",
+    "url": "https://huggingface.co/google/siglip2-base-patch16-naflex/tree/b53b807d3a2d5e2b3911292f2d69e5341cdc064c"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:28:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "8b57a0f9ace9a603ba10e1410caf552ce1f3596f5417b8eaf7480bfb3b9264b7",
+      "size": 1635
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "1391c9f72bf608a1a7772db9b65a64e7e5ce014c69ab262312c14d1d47a5535e",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "72862225fe942d613bd04e2731adce7c63327cb65d763f852e4a1fa4484a9ea6",
+      "size": 409
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "6ddb6f8fe5a0d0e2f6e8fa13ae87ca9fafd7eb25306d50c7e3f24f633b4d380c",
+      "size": 167675
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-12B-BF16.gguf",
+      "sha256": "2ed7b871110c282a2f1914b7b795cd59dc25a2e429f6015803fa29f7831621d1",
+      "size": 23832042208
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-12B-Q8_0.gguf",
+      "sha256": "36286d9a33f7c6f47fb85a9bbf6930a61f67a024eed67a5e81cce7077e028962",
+      "size": 12669623008
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/gemma-4-12B-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "72862225fe942d613bd04e2731adce7c63327cb65d763f852e4a1fa4484a9ea6",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:28:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/gemma-4-12B-GGUF/resolve/15c5280e1271f1c33c6d9176bf9f6b49f6498f06/"
+    }
+  ],
+  "upstream": {
+    "commit": "15c5280e1271f1c33c6d9176bf9f6b49f6498f06",
+    "host": "huggingface.co",
+    "repo": "ggml-org/gemma-4-12B-GGUF",
+    "url": "https://huggingface.co/ggml-org/gemma-4-12B-GGUF/tree/15c5280e1271f1c33c6d9176bf9f6b49f6498f06"
+  }
+}

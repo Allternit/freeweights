@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openbmb/MiniCPM4-0.5B",
+  "display_name": "VoxCPM1.5",
+  "family": "minicpm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "openbmb/VoxCPM1.5",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/openbmb/VoxCPM1.5.json",
+  "params": 801729856,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openbmb/MiniCPM4-0.5B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.minicpm",
+  "signals": {
+    "downloads_30d": 5700,
+    "likes": 364,
+    "trending": null
+  },
+  "tasks": [
+    "text-to-speech"
+  ],
+  "tier": "T0",
+  "total_size": 1953411237,
+  "upstream_url": "https://huggingface.co/openbmb/VoxCPM1.5",
+  "what_changed": null
+}

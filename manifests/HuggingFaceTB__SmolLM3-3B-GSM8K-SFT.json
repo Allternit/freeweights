@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-14T21:11:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2be4ce7e2bed81b159708595143923f5fa779c9515b5ce137ab0764eb219ea9d",
+      "size": 4499
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "d2771c9694cc22f4d983cbf2344551d4d0933156a927f673584a358e4aee0563",
+      "size": 391
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7e92814b1877e9975e539ffd6e63dddc37c08c9b98333382370b43a47a78e096",
+      "size": 2015
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "fc1b5c5105108a1aa16ae36f54facd8d1442e33fe958726931010f2cc7f8c92a",
+      "size": 131
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "3efb15d254372a45b8310dd8999f912becaf8b5b7e16f6a366c381b317a77aa6",
+      "size": 4966315264
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "8b68a5f873c649c2672219d11ee7ff44bc3f562c6619b291d4280040275d3f89",
+      "size": 1183919744
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "e3a7254c086c4a78f95ad5864f435d165ffed1ed8998326ce5107b4423c15b76",
+      "size": 26899
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "15864bf8c2203d4df3e6030bf2f917a45d7ee5e6b4145bc42868392703da7972",
+      "size": 299
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "ab4da6b2aa68247e9c0fa9b97fc7fcc796505038d01f7e144522a65ce0dbd2e5",
+      "size": 17208861
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ce5751001657b8a901887461604ff5e452c283e574373ca94a6b3ca81ef8d027",
+      "size": 50439
+    },
+    {
+      "lfs": false,
+      "path": "training/evaluate_gsm8k.py",
+      "sha256": "4c715f29392f1f98e635384ab10745ce3df4c42c690bef22c0aac57335923513",
+      "size": 2767
+    },
+    {
+      "lfs": false,
+      "path": "training/requirements.txt",
+      "sha256": "49ad229769f78b512cfd798eb6997080809aa5ab6ab1bfa884e2690a7c2272f7",
+      "size": 132
+    },
+    {
+      "lfs": false,
+      "path": "training/train_sft.py",
+      "sha256": "048525ae9eb3a4297a56f1d7bc59b8243c3c76b7146797a476022fea7be15cd5",
+      "size": 4369
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "00a928c87b198b750003285050886aa0c72c601fd48924723197a3bdb7df3b3f",
+      "size": 6289
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "HuggingFaceTB/SmolLM3-3B-GSM8K-SFT",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2be4ce7e2bed81b159708595143923f5fa779c9515b5ce137ab0764eb219ea9d",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:11:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B-GSM8K-SFT/resolve/44034b1b8898ad2ad3c5a7034b5bbde1c0b87c0a/"
+    }
+  ],
+  "upstream": {
+    "commit": "44034b1b8898ad2ad3c5a7034b5bbde1c0b87c0a",
+    "host": "huggingface.co",
+    "repo": "HuggingFaceTB/SmolLM3-3B-GSM8K-SFT",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B-GSM8K-SFT/tree/44034b1b8898ad2ad3c5a7034b5bbde1c0b87c0a"
+  }
+}

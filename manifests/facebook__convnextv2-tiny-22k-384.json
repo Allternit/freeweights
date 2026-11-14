@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:36:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c58a4debc389a91e943acc129a4788c7269a365350f2c44217d050b5f8d04182",
+      "size": 3374
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f7674180aaa6ff41308f448cc06a252e7f95a959b4f93d2b57c721d473e64069",
+      "size": 69724
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "55c7bff4477d04dfd0affb11648e7b2d9bebf4ab038f930fed7d7c7435a0afa0",
+      "size": 114565784
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "65f684f944a19b334fdde9fefac90a7ad61a614041de60ac1cf89ac2311e8776",
+      "size": 352
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "3d19a0b02bfdc8396e24def16d6f6acfee0715efeb99231f237619b7e86d6787",
+      "size": 114608874
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "205aea890924f44fe224a82d26c5671bb5b51b1cdaf5a3aeb19d969ee25f5eca",
+      "size": 114787096
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/convnextv2-tiny-22k-384",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c58a4debc389a91e943acc129a4788c7269a365350f2c44217d050b5f8d04182",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/convnextv2-tiny-22k-384/resolve/e339b920c6aa5a0d7f9dea15065d97ad9ba06cfc/"
+    }
+  ],
+  "upstream": {
+    "commit": "e339b920c6aa5a0d7f9dea15065d97ad9ba06cfc",
+    "host": "huggingface.co",
+    "repo": "facebook/convnextv2-tiny-22k-384",
+    "url": "https://huggingface.co/facebook/convnextv2-tiny-22k-384/tree/e339b920c6aa5a0d7f9dea15065d97ad9ba06cfc"
+  }
+}

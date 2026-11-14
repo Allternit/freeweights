@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:36:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3015b3bd574911638fa460d8c539710c78c6e5ba5c27c3c9afb5973bf53a48e6",
+      "size": 3370
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "098d2b9b9cf5065d453ce18dc8098def4ba38572079c68f962ae7eaf9bc7fdd8",
+      "size": 58288
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a027deffcc5f81ab85e4498ae87944041a818c6a32435de9c8ec5623c010c90b",
+      "size": 4558302712
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+      "size": 436
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "bce4b3bbc4ff37199c3dd9ac426ae6a0b6226b836923e30813b5d9d77746f477",
+      "size": 4558454669
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/dinov2-giant-imagenet1k-1-layer",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3015b3bd574911638fa460d8c539710c78c6e5ba5c27c3c9afb5973bf53a48e6",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/dinov2-giant-imagenet1k-1-layer/resolve/f65e635169579fa7d4ecfe51b1d7c5881e831014/"
+    }
+  ],
+  "upstream": {
+    "commit": "f65e635169579fa7d4ecfe51b1d7c5881e831014",
+    "host": "huggingface.co",
+    "repo": "facebook/dinov2-giant-imagenet1k-1-layer",
+    "url": "https://huggingface.co/facebook/dinov2-giant-imagenet1k-1-layer/tree/f65e635169579fa7d4ecfe51b1d7c5881e831014"
+  }
+}

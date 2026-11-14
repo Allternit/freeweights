@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:37:13Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7c5bd8a396a5d961a5d7f76b50618a632e8b34b62270a28b3c233c9858636482",
+      "size": 3381
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "946cfbcedeb7aaa497606d78540163d13ab92fe70da8f5d25049991bd3b69b8d",
+      "size": 536
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2041e5330b3db96299b26bc3a6506c7fa8d5e61d5c94f267dd8aa4cfb12c1050",
+      "size": 4541963488
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc",
+      "size": 394
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "size": 636
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+      "size": 34363039
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "size": 4241003
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8",
+      "size": 47164
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/siglip2-so400m-patch14-224",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7c5bd8a396a5d961a5d7f76b50618a632e8b34b62270a28b3c233c9858636482",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:37:13Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/siglip2-so400m-patch14-224/resolve/78e403963a4f6a3640d07803284752326fdf4edf/"
+    }
+  ],
+  "upstream": {
+    "commit": "78e403963a4f6a3640d07803284752326fdf4edf",
+    "host": "huggingface.co",
+    "repo": "google/siglip2-so400m-patch14-224",
+    "url": "https://huggingface.co/google/siglip2-so400m-patch14-224/tree/78e403963a4f6a3640d07803284752326fdf4edf"
+  }
+}

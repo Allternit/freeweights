@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:37:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f888dc7c230287cd68af7034aa9fc2e2d6663fb7b3e70faa153caf93877914c3",
+      "size": 744
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a9586913d11b9fa39cc5ef5241d86ef0f6dbd3a90953842aad5bf13bbcd14a8e",
+      "size": 5849
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "463ad4a909ed136cf70f8594ca51defd134c8683e225a87833e69b5ef894fc1f",
+      "size": 69665
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "ed234aa90d5e6d065f16b5882cfb0cdab1dd8d8d4ab13036f4f0fe87b929bef7",
+      "size": 353196137
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "46ad483c57f427771665b9527ec8e943015153ae9700543b5b4ef131cd3583ad",
+      "size": 353212016
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "1b04f2e6cbd820aa13cee6c06ab77aae772145a352ef3f13cbe9f35d9916b942",
+      "size": 160
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "b72d8c538cca7091192311e138ce7444d958cf27c4588daca398d30b2be0b9b5",
+      "size": 353269743
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "4fe1af6dd578f86c01a2b47de71c9822bb197ab959f1be6dd1e9f3c6b9139485",
+      "size": 353472192
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/vit-base-patch32-384",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a9586913d11b9fa39cc5ef5241d86ef0f6dbd3a90953842aad5bf13bbcd14a8e",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:37:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/vit-base-patch32-384/resolve/d285164d04ed60526ea1b462ba8cc7afbe53a31b/"
+    }
+  ],
+  "upstream": {
+    "commit": "d285164d04ed60526ea1b462ba8cc7afbe53a31b",
+    "host": "huggingface.co",
+    "repo": "google/vit-base-patch32-384",
+    "url": "https://huggingface.co/google/vit-base-patch32-384/tree/d285164d04ed60526ea1b462ba8cc7afbe53a31b"
+  }
+}

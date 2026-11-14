@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-14T21:36:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "068a8b3ded3bc227b448197f46290701ab28734778843c72a61032f86592b1a5",
+      "size": 3256
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cc35e8f8ae47d68ced2198a0fe4d08f63a04622b964ee78943c3b0333a70ac6f",
+      "size": 453
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f51c99ce793d1eb87daf2a670b9e11e50927fd00334d2cac75cbd30666d13f6b",
+      "size": 343253736
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "44298553bf686c8c3d1b128f24fae01f76235f66bda5516f1c6c0c57bba1b47f",
+      "size": 244
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "5050bfb328f303d0a4c8c052b793eb62dc8e066dfe2d7d049cc841a55f055744",
+      "size": 343305397
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/dino-vitb8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "068a8b3ded3bc227b448197f46290701ab28734778843c72a61032f86592b1a5",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/dino-vitb8/resolve/f1ca762fe312f2617c0f37f3d56a5af83847bf6c/"
+    }
+  ],
+  "upstream": {
+    "commit": "f1ca762fe312f2617c0f37f3d56a5af83847bf6c",
+    "host": "huggingface.co",
+    "repo": "facebook/dino-vitb8",
+    "url": "https://huggingface.co/facebook/dino-vitb8/tree/f1ca762fe312f2617c0f37f3d56a5af83847bf6c"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-14T21:28:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a3d7a7783f6e8c95e77812d42a2e9e1b97a3f07c6972b27107486dc9dff0d98d",
+      "size": 2259
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "size": 7764
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5a5d8fffcb96e6bc03d9a458461754dc9a17078b63728abddcccf1ea847dfd67",
+      "size": 4573
+    },
+    {
+      "lfs": false,
+      "path": "configuration.json",
+      "sha256": "2d4464e2ead06bc9bc718c781309ad1e7baded626d66e8dcdc8b469ba185faf0",
+      "size": 51
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "size": 202
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "61561bb9606bbe421e794872860cdc15ffd81fde0e95148d1e198555efbaf287",
+      "size": 5340149014
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "8e417e1a72a6e18c16bb6d978fb81d6323f306e8b7118dd3232e7d503372bd70",
+      "size": 5355925558
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "02db921349b2d2fb1d19fdb2ad4059992cb52fcd4d6312c957de827ca47ef0ba",
+      "size": 5368656152
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "a56e6ba96423d01341000a1bf26a8e6d34f1216c262a383230e4da1f1cb9f4c3",
+      "size": 3351480055
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "1db792b85647f0ddf4b5c1ba12b2a09308f4181c51f16b70d52b87dbfc0d85ff",
+      "size": 218281
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "size": 390
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "45fc17c8dd2474af6b493b52483c26c0584b0082d368c480f9fa611e73070040",
+      "size": 991
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "31d4bab23d88f6aa1ff7c6f692b454733fafa4e9c26da3a542c8eeadcb99ecef",
+      "size": 9195
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "size": 385
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "size": 6722759
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/Qwen3.6-27B-MLX-5bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a3d7a7783f6e8c95e77812d42a2e9e1b97a3f07c6972b27107486dc9dff0d98d",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:28:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/Qwen3.6-27B-MLX-5bit/resolve/589f789ab2a6673feaf18e2acaa0867b07f657d8/"
+    }
+  ],
+  "upstream": {
+    "commit": "589f789ab2a6673feaf18e2acaa0867b07f657d8",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/Qwen3.6-27B-MLX-5bit",
+    "url": "https://huggingface.co/lmstudio-community/Qwen3.6-27B-MLX-5bit/tree/589f789ab2a6673feaf18e2acaa0867b07f657d8"
+  }
+}

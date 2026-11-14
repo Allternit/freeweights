@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-large-v3-turbo",
+  "display_name": "whisper-large-v3-turbo",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/whisper-large-v3-turbo",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/whisper-large-v3-turbo.json",
+  "note": "The license of the base model openai/whisper-large-v3-turbo applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-large-v3-turbo",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 51284,
+    "likes": 79,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "variant",
+  "total_size": 16419160054,
+  "upstream_url": "https://huggingface.co/onnx-community/whisper-large-v3-turbo",
+  "what_changed": null
+}

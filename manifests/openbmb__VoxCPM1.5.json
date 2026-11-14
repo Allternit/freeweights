@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:25:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ac6394190da2d46e28a9f11e38b46a626285dbef94fc6f364928d6323c09caa0",
+      "size": 1579
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "81e3afa97b6151e747b1597ee2736e72f05971036b45dcd92c3dcbc7378bf24d",
+      "size": 13684
+    },
+    {
+      "lfs": false,
+      "path": "assets/voxcpm_logo.png",
+      "sha256": "7b90525ab45f7b303eba72c7b0375ae25d81c7233e890ef6358feacc479239f1",
+      "size": 24487
+    },
+    {
+      "lfs": true,
+      "path": "assets/voxcpm_model.png",
+      "sha256": "49f6eb7998135ad49f5dd0ee1fa2c099d79a016ab59fe29fc039f7f32ef8f5ca",
+      "size": 144982
+    },
+    {
+      "lfs": true,
+      "path": "audiovae.pth",
+      "sha256": "8160987a7f10acd4c49b72a9a3e974c0b5c1c786538cd4bcaac5f2df388c0f14",
+      "size": 346023712
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2459071497a422bf25fb0f47ff8bd30181dbf62ef7903b293bcff59a615eda26",
+      "size": 2831
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7e97ee2cd2ca891662f7da368921df08368a616410afe67461253e4dcd3823cc",
+      "size": 1603516600
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76",
+      "size": 1632
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "63443666e076f48a575030d4861e5bdbf64b71632b48e75d4e867c46dd980aa5",
+      "size": 3676778
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "466575c55f0cf49530666c2e46ed14f26237dbd227ba7f4bb3bbec93df90edfc",
+      "size": 4952
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/VoxCPM1.5",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "81e3afa97b6151e747b1597ee2736e72f05971036b45dcd92c3dcbc7378bf24d",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:25:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/VoxCPM1.5/resolve/cdaae72f8ca2d51971c93f0a02430c4209016f6b/"
+    }
+  ],
+  "upstream": {
+    "commit": "cdaae72f8ca2d51971c93f0a02430c4209016f6b",
+    "host": "huggingface.co",
+    "repo": "openbmb/VoxCPM1.5",
+    "url": "https://huggingface.co/openbmb/VoxCPM1.5/tree/cdaae72f8ca2d51971c93f0a02430c4209016f6b"
+  }
+}

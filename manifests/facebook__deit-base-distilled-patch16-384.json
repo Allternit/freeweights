@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:36:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f888dc7c230287cd68af7034aa9fc2e2d6663fb7b3e70faa153caf93877914c3",
+      "size": 744
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5ba9968c644fe24dfe61e65d89cbc6de77547101b40863f01e2a9725af969b67",
+      "size": 6871
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b0385c2225a4bb7b0a9a8aa5d4ba2870b5f02af066f8c5c9b9d56d14fe96fed4",
+      "size": 69607
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "cdb1e860ad1dc44d319598a39e70f865609525a52197943fd68641cc1add46fd",
+      "size": 350543872
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "fdc0d4f4730c8a4acb0e915768f19ba478bd5bda8a69ee7982d00c9ff33a069c",
+      "size": 287
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "dec73721e660733aa027e42bdb0e9e3ee6cbbaf05bf97965ce32d38c04f2e4e0",
+      "size": 350602567
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "b8c34c4448a98a1d8787c17ce7bb7d6913a0deefd115e46f5e40beec36524f98",
+      "size": 350808384
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/deit-base-distilled-patch16-384",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5ba9968c644fe24dfe61e65d89cbc6de77547101b40863f01e2a9725af969b67",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/deit-base-distilled-patch16-384/resolve/d939597a763b570654d2cbb10a22d59ee21ecd7e/"
+    }
+  ],
+  "upstream": {
+    "commit": "d939597a763b570654d2cbb10a22d59ee21ecd7e",
+    "host": "huggingface.co",
+    "repo": "facebook/deit-base-distilled-patch16-384",
+    "url": "https://huggingface.co/facebook/deit-base-distilled-patch16-384/tree/d939597a763b570654d2cbb10a22d59ee21ecd7e"
+  }
+}

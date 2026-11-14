@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-14T21:15:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "37f74365f692df7dc014c0cff1f5c96c09251a1bb19a87a0ee67e298edaf2a71",
+      "size": 29351
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5",
+      "size": 18569
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f2db6d6e24cb4b695308897d82c8424fae946e95272a27de68b6e908c77b0f95",
+      "size": 5137
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "b69207f9be617e982d13cc273cce6fd88c98dda99a4bdc5e2d52ffe0a0d9f0a9",
+      "size": 203
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ad8ef515194b15ab13b6f98d54d37652b691c9a2c787cdf7ed5f951f5ed2c7fa",
+      "size": 15882477468
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "3ab5c7b94dc97d65ca7064496fa69b88ff875378e1cb7ee3e43070c3a8170999",
+      "size": 3729
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/gemma-4-E4B-it-qat-q4_0-unquantized",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "37f74365f692df7dc014c0cff1f5c96c09251a1bb19a87a0ee67e298edaf2a71",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:15:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-unquantized/resolve/476025a01dbf99361c062bbeca3d6a76bb4c4566/"
+    }
+  ],
+  "upstream": {
+    "commit": "476025a01dbf99361c062bbeca3d6a76bb4c4566",
+    "host": "huggingface.co",
+    "repo": "google/gemma-4-E4B-it-qat-q4_0-unquantized",
+    "url": "https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-unquantized/tree/476025a01dbf99361c062bbeca3d6a76bb4c4566"
+  }
+}

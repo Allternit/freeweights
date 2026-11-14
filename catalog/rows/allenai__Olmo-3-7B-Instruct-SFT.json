@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "allenai/Olmo-3-1025-7B",
+  "display_name": "Olmo-3-7B-Instruct-SFT",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/Olmo-3-7B-Instruct-SFT",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/Olmo-3-7B-Instruct-SFT.json",
+  "params": 7298011136,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "allenai/Olmo-3-1025-7B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 54066,
+    "likes": 6,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 14603409801,
+  "upstream_url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT",
+  "what_changed": null
+}

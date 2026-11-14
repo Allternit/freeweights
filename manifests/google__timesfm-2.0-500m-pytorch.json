@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-14T21:37:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ff901ca9c8561d9b61d532b304e807b1dfc607a357cc0d940ad39cd5a955b88a",
+      "size": 1572
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f9665708551e99a82fe69d5351770641d3ee5c5906cc65a84da2c641a1128789",
+      "size": 7352
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6be4107f60a7e89ea619dbcc99f4d7d321ea02b7dd5124999f6bcfd404932e3a",
+      "size": 692
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "bb9d7022d8027325f4e656b7d5cf36dd919269fd79ad714eab41f5ba49cc1cfe",
+      "size": 1995406976
+    },
+    {
+      "lfs": true,
+      "path": "torch_model.ckpt",
+      "sha256": "a3a1362cdc26f0dde45c9790c438951ff02af96b2d1d6445fdb58f28c77e18de",
+      "size": 1995545448
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/timesfm-2.0-500m-pytorch",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f9665708551e99a82fe69d5351770641d3ee5c5906cc65a84da2c641a1128789",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:37:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/timesfm-2.0-500m-pytorch/resolve/dc2443792ce5516872b89b37cf1bc058c3bf0c10/"
+    }
+  ],
+  "upstream": {
+    "commit": "dc2443792ce5516872b89b37cf1bc058c3bf0c10",
+    "host": "huggingface.co",
+    "repo": "google/timesfm-2.0-500m-pytorch",
+    "url": "https://huggingface.co/google/timesfm-2.0-500m-pytorch/tree/dc2443792ce5516872b89b37cf1bc058c3bf0c10"
+  }
+}

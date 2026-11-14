@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-14T21:15:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9b470c8290994329e921da795fd3edd8493b60736c6385279c239bda3a9655c9",
+      "size": 29361
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5",
+      "size": 18569
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "190a55c13f78f2634134a2a9dfc75a58489bc14513d767a16a20272d7fadbbae",
+      "size": 2356
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "fb53f4c64e58896a63472e8eb304397db4a39453e1da0f5d57625ec5a8c1050e",
+      "size": 209
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9d0e2053067590cae9a8f4fcc57eefbe20dff90599360458ebd451e5cb5c947d",
+      "size": 159138208
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "75a6583c1a418e2bbd79c60d95d28e0f5bf549ad3f2990b5bdb5238c6c2bf70c",
+      "size": 32169440
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "01f2ff1c21ef2e722891380323edcaecd9c86a776aeb9b40148e2f35e3cee4d3",
+      "size": 3023
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/gemma-4-E4B-it-qat-q4_0-unquantized-assistant",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9b470c8290994329e921da795fd3edd8493b60736c6385279c239bda3a9655c9",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:15:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-unquantized-assistant/resolve/27f8d204f09f2be353d6ff0bf0d012792b13c79f/"
+    }
+  ],
+  "upstream": {
+    "commit": "27f8d204f09f2be353d6ff0bf0d012792b13c79f",
+    "host": "huggingface.co",
+    "repo": "google/gemma-4-E4B-it-qat-q4_0-unquantized-assistant",
+    "url": "https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-unquantized-assistant/tree/27f8d204f09f2be353d6ff0bf0d012792b13c79f"
+  }
+}

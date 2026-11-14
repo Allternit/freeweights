@@ -23,14 +23,17 @@
   "params": null,
   "redistribution": "no",
   "relation": {
-    "parent": "m-a-p/YuE2-3B",
-    "type": "quant"
+    "parent": "m-a-p/SheetSage2",
+    "type": "finetune"
   },
   "requires_terms": true,
   "section": "alt.freeweights.music",
-  "tasks": [
-    "text-generation"
-  ],
+  "signals": {
+    "downloads_30d": 337678,
+    "likes": 330,
+    "trending": null
+  },
+  "tasks": [],
   "total_size": 13147793678,
   "upstream_url": "https://huggingface.co/Comfy-Org/YuE2",
   "what_changed": null

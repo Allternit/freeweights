@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "jhu-clsp/ettin-encoder-1b",
+  "display_name": "ettin-reranker-1b-v1",
+  "family": "cross-encoder",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "cross-encoder/ettin-reranker-1b-v1",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/cross-encoder/ettin-reranker-1b-v1.json",
+  "params": 1028050688,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "jhu-clsp/ettin-encoder-1b",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.embed",
+  "signals": {
+    "downloads_30d": 424,
+    "likes": 8,
+    "trending": null
+  },
+  "tasks": [
+    "text-ranking"
+  ],
+  "tier": "T0",
+  "total_size": 4128736929,
+  "upstream_url": "https://huggingface.co/cross-encoder/ettin-reranker-1b-v1",
+  "what_changed": null
+}

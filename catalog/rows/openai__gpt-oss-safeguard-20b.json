@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/gpt-oss-20b",
+  "display_name": "gpt-oss-safeguard-20b",
+  "family": "gpt-oss",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "openai/gpt-oss-safeguard-20b",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/openai/gpt-oss-safeguard-20b.json",
+  "params": 21511953984,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/gpt-oss-20b",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.gpt-oss",
+  "signals": {
+    "downloads_30d": 25714,
+    "likes": 293,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 13789279021,
+  "upstream_url": "https://huggingface.co/openai/gpt-oss-safeguard-20b",
+  "what_changed": null
+}

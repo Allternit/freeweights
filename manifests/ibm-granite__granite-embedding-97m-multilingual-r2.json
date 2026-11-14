@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-14T21:16:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "8bc5c9a40814fcf48d2fbe7cfeff4bee6736c3c2a823ba0ce098985c59d12ab7",
+      "size": 313
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a73d22110e7e6d947f55cdd4f1a8b0b622e340fd09a66d302f5fe800899024bd",
+      "size": 20684
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "de948b0bdc6f356afad7a84b276d8dd7e7fe10fb9add1bb5e610621c28e41ebc",
+      "size": 1216
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "93a59cbc7d82a47a7148719d9b21c0f2f111121e495b3918143184f4cd0ea25e",
+      "size": 283
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f3ea88b230492811046145513710e76b4cc8c2ad49e8708da0e7247e548903be",
+      "size": 194889568
+    },
+    {
+      "lfs": false,
+      "path": "model.sig",
+      "sha256": "2ccaf6a17941f5d39a584f11ff8f260b5276a5fddc5835d0f407a7fb8f5bd67f",
+      "size": 11884
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "size": 349
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "68e592b160673d30250824c1116bc6ab33f70efb22b97c9e1d7ce1e69c1c9d70",
+      "size": 390004608
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quint8_avx2.onnx",
+      "sha256": "a6022dd8220ea6f6595562a1328ee216f4a94faa55362f2f4747c80f1e78772e",
+      "size": 98247878
+    },
+    {
+      "lfs": true,
+      "path": "openvino/openvino_model_qint8_quantized.bin",
+      "sha256": "6a2d84b6c1b09d24af2a10c4cc5dd374d305f5e98bed3ca3db016797753f6d37",
+      "size": 97950112
+    },
+    {
+      "lfs": false,
+      "path": "openvino/openvino_model_qint8_quantized.xml",
+      "sha256": "9762e8dd805054518a1fea9cd17158b443533999e4c5e0b005e530b0ce6b8786",
+      "size": 537315
+    },
+    {
+      "lfs": true,
+      "path": "openvino_model.bin",
+      "sha256": "29091e79be57c55d6448eff9bc0ec1b387eb29f05a3b61a39e97cc689c1c49bf",
+      "size": 389764960
+    },
+    {
+      "lfs": false,
+      "path": "openvino_model.xml",
+      "sha256": "c3ddee24eb7b864cc6ceaefe173dd509f881a6b144e9c2e946ea5fcf590717fb",
+      "size": 452762
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "967ef958285e4a7a37d8ff1832473d967edd913b4e48572f31c3d3ea361d5327",
+      "size": 60
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "013787ee251ff611722479197c00853b62113ad303cb0a36524231783c676c69",
+      "size": 871
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "4f2842d568e2724370aec203652a42ac783c7937f8347a1a2cc7506d71f1582f",
+      "size": 25301672
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6ed69389e30a8ecabfce2f9ebcdf0c908b34056f24d994340f2f216521c057d5",
+      "size": 12860
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-embedding-97m-multilingual-r2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a73d22110e7e6d947f55cdd4f1a8b0b622e340fd09a66d302f5fe800899024bd",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:16:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-embedding-97m-multilingual-r2/resolve/835ad14087e140460703cf0fae09f97d469d65c2/"
+    }
+  ],
+  "upstream": {
+    "commit": "835ad14087e140460703cf0fae09f97d469d65c2",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-embedding-97m-multilingual-r2",
+    "url": "https://huggingface.co/ibm-granite/granite-embedding-97m-multilingual-r2/tree/835ad14087e140460703cf0fae09f97d469d65c2"
+  }
+}

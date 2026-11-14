@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-14T21:35:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "20cb01c2bd9b0ae0863422f9da41b20f10f93e009e657f411a41402f51ccf391",
+      "size": 1438
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "808781acd8d229940859cd49050062cae4d2d95300a4b8abf469fa96197e3b4e",
+      "size": 14877
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "560be47bea388757f8d4cc185c5d82067426cbb6361e38016dd90ddc01ab203a",
+      "size": 34604
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4601bc6340054a7573f10765e785177bab1545d9c83c4f238f7d72fc08b07add",
+      "size": 1945
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "9817baf8ac8822dd38d7ba3feff91047898c4dae9afb7f7370afe05c5d6a0a34",
+      "size": 3055461507
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "6f73a0ac0b2388ebe86bc4430db58a6292cbe835fc50009d5d74e8bb096ef5dc",
+      "size": 1947
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8f731340f569588236c21f794c33e83b7cc5a297511d2bdc30117ea969004311",
+      "size": 3055540208
+    },
+    {
+      "lfs": false,
+      "path": "normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "size": 52666
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "9b5cd03a36fbb8a627c64d98a5b5b126ead95a77720723944487311f0110b666",
+      "size": 184990
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "9cab9e33c423511099b0f7b9b8f54eb37c5acfdbdd1e363765621b6cec24657c",
+      "size": 3055731227
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "014f8f802366ed818919550be0ad9e35907327cb9e142e8aaa102420f460bda8",
+      "size": 1830
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "3e62f82f9d4b81713a839dfce549188821756238b931059407cb9e3763f00f20",
+      "size": 3056429776
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "5eb60cec1e77aeeb6869a2bb5a8e01a84c3fe5d072d75369343021fe6f5310d0",
+      "size": 2405679
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "14f84bdf4b9ecdbd4738ddc81c17a1baedfc02bb93c6e049c951e15a1b40b70d",
+      "size": 805
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7",
+      "size": 798156
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openai/whisper-medium.en",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "808781acd8d229940859cd49050062cae4d2d95300a4b8abf469fa96197e3b4e",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:35:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openai/whisper-medium.en/resolve/2e98eb6279edf5095af0c8dedb36bdec0acd172b/"
+    }
+  ],
+  "upstream": {
+    "commit": "2e98eb6279edf5095af0c8dedb36bdec0acd172b",
+    "host": "huggingface.co",
+    "repo": "openai/whisper-medium.en",
+    "url": "https://huggingface.co/openai/whisper-medium.en/tree/2e98eb6279edf5095af0c8dedb36bdec0acd172b"
+  }
+}

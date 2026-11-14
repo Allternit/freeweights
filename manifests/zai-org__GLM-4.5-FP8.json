@@ -1,0 +1,636 @@
+{
+  "created_at": "2026-11-14T21:26:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "96d68d60a6e07603866031f5448d4a6255b78d62bc7bc94a68c28371e681bda5",
+      "size": 13239
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "44f815868bf02fa458dd2f741a338046f4bf45f398eb6d067766726b9d96cce3",
+      "size": 3242
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "92e0988e5f028fe640c8327df236bce4a084395358abb9a22ec5427e0f439f51",
+      "size": 39808
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "06ac18cb0e733da062bdb1d260247d52b1f6c4b10785fc733402f22a510da05d",
+      "size": 155
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00093.safetensors",
+      "sha256": "4e9f8be41352ef01efb6f918476320935e5fa4f69e59d4a5109d3e4fc70ab4e4",
+      "size": 3429092432
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00093.safetensors",
+      "sha256": "b4acc56ab2f11076f65c2f505826d8dea68231389b4e1944809f40d60142bb2e",
+      "size": 325307176
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00093.safetensors",
+      "sha256": "f1ec33051189611419b8375792fe12bfc4e271725cce50358e7baa7c60ceae97",
+      "size": 325307176
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00093.safetensors",
+      "sha256": "defe947b1be9e7a1adbe788c0e88d939ef66f194a5e024180726a1145a6663d7",
+      "size": 3941945016
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00093.safetensors",
+      "sha256": "c3841409db24c14f37b681b8f85462c1089e724f3d3d862030dc294d680b213f",
+      "size": 3941945016
+    },
+    {
+      "lfs": true,
+      "path": "model-00006-of-00093.safetensors",
+      "sha256": "664a602eb2767f3d38153e6b62735c3ba19645fb65fd8ad31d4cca0a0359db16",
+      "size": 3941945016
+    },
+    {
+      "lfs": true,
+      "path": "model-00007-of-00093.safetensors",
+      "sha256": "36d496ad682f8448937cdd5b4701f83bd1d50d994b2a63f8cdac6fe0530bbe45",
+      "size": 3941945016
+    },
+    {
+      "lfs": true,
+      "path": "model-00008-of-00093.safetensors",
+      "sha256": "0a1f0af1b8da9c255e3098d2cf32abee8e32533c10049208078b42393cb09ad9",
+      "size": 3941945016
+    },
+    {
+      "lfs": true,
+      "path": "model-00009-of-00093.safetensors",
+      "sha256": "90e8ab69d69950c5d6c6d0b3d1242b3514b7084c93743920a52e52300536fccb",
+      "size": 3941945016
+    },
+    {
+      "lfs": true,
+      "path": "model-00010-of-00093.safetensors",
+      "sha256": "50017bd964ece562de28a7660e043250511db912d24668f7d60b373aaf3e6af8",
+      "size": 3941945016
+    },
+    {
+      "lfs": true,
+      "path": "model-00011-of-00093.safetensors",
+      "sha256": "a766563add31d4338bb79dc4a4e968891d1b5e39519e68117f559078196e2be8",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00012-of-00093.safetensors",
+      "sha256": "ab2b5d49dd9f7759d943453b13249f5b12ade99577e7e8d88e7d525d6a499e8d",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00013-of-00093.safetensors",
+      "sha256": "3e02438318686821459ecdbf5a6b0fefe9ebda57db2f87420182fdba3c3ca4c4",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00014-of-00093.safetensors",
+      "sha256": "885462c55488a7f650b75126e997904060883d34a8d58867d08dc9b6c732f899",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00015-of-00093.safetensors",
+      "sha256": "081c67b80b0c2bcba8ac3ad1842a64cbf929f9decc27cef0ad2499ce56e63077",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00016-of-00093.safetensors",
+      "sha256": "09c680360cfae9cea10dd87711307116da763200af179ffabf01eaa3559ec632",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00017-of-00093.safetensors",
+      "sha256": "88156dea92606c61f11e562ab0f9453b4d2f2b24e5b4b61f557b07e11c61bfd8",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00018-of-00093.safetensors",
+      "sha256": "bbc078699202b77c33dfe73c8e7a3921c999554b8adf672b542bec0aa426dfc9",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00019-of-00093.safetensors",
+      "sha256": "f3aa8ca62be8f7367a87d8dd1bed7d93d154e391a4e07a71ac0258299c0c12a7",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00020-of-00093.safetensors",
+      "sha256": "58a332a7a48929a7a22e7519e3e232d2cc03621ec659b5b6c5c92f832afdbad8",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00021-of-00093.safetensors",
+      "sha256": "673d1446864e102c00251385bc7a12c9b89b19dbea0a603c35f1754bbf96e69a",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00022-of-00093.safetensors",
+      "sha256": "8b65f44592f5d9a88c6616ac9dd74c40d87e25d886a6a75c7da2290675dbd47c",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00023-of-00093.safetensors",
+      "sha256": "e03aca49b2de2bb97e916d625d9fe853b5a89a9a9e5d6a38386c48403e6a96ad",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00024-of-00093.safetensors",
+      "sha256": "47346a04e25b03ce2dda1ccbfd47881048ee18baf37955281ea7bb59560957b4",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00025-of-00093.safetensors",
+      "sha256": "75a8063308ead803041357e6a82c8edf44e54fabf572056cf2af154b5cd6fe08",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00026-of-00093.safetensors",
+      "sha256": "788f09c388ab32f8744f373d3573ee33a58af42fdd8ca9524ef13a6f2bf90e5e",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00027-of-00093.safetensors",
+      "sha256": "d3fde08e16a5480b925a659fadc9c86ec3ce0730499f1e00554cc833d8e60fb1",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00028-of-00093.safetensors",
+      "sha256": "002fcef3f2824b12e355ad1eb55db953c68d6dd5ad13c2588d3d171b437ff97e",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00029-of-00093.safetensors",
+      "sha256": "e5b1674edb69d4660d0687ec9cdeca8e1800ea318f4d3ee754395cf7e446dc74",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00030-of-00093.safetensors",
+      "sha256": "239604560580be7f0c7ab6359f195b726e53929edc3b14d74bec68c4a9fe495a",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00031-of-00093.safetensors",
+      "sha256": "aa1d41a6a4e73355cc71ea6288c3415bff5da8f22f11ced895348facbc8b23df",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00032-of-00093.safetensors",
+      "sha256": "5a3c2918063110ef5bf06eb951e6ad47d99a8afde0c7e3c9d5c86db4a0913354",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00033-of-00093.safetensors",
+      "sha256": "0bcad2b9f38894a1b993bb2116ad081066c9cf5bf760e6a381c026d4250e054f",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00034-of-00093.safetensors",
+      "sha256": "6ad903705f8e17604cc8f6bce228f5c3f6eb0ab0a2d52318c0c7dc15fdb2bfa7",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00035-of-00093.safetensors",
+      "sha256": "affc228b85c89bf3b925007fbc7f50e64e7a1c408d00333b9a82d8d1cc143027",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00036-of-00093.safetensors",
+      "sha256": "5e2ce2bf42bb2ea59305a04342810cfb239e057730c3b686ee525f16c8bdad28",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00037-of-00093.safetensors",
+      "sha256": "33adf0e0eddcf74e490d708f309dd61cc521f4c19988930e8d05f669743521ad",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00038-of-00093.safetensors",
+      "sha256": "9b7ed7bd86b40711f12a1a5a2e668882086eaada658e9309805aecacac50d2e7",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00039-of-00093.safetensors",
+      "sha256": "1c30eb4d1926462e35ccbf2d3ea41583cd591fdf45c6887dc89d33bf01264c79",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00040-of-00093.safetensors",
+      "sha256": "88c2f8983d905b589ad9574024e18fd5c323dff14aa922120dea95986f7c12a8",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00041-of-00093.safetensors",
+      "sha256": "30c32044dd84859a7b7b447cf12f0b6654139a99acb7ef724ae747ac36c46e15",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00042-of-00093.safetensors",
+      "sha256": "7aa8cf5996981c9faeb822e9f65eccc6017ad8398cd8211fe7ea30d7f2b8a171",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00043-of-00093.safetensors",
+      "sha256": "8dda6b2f1272f787e9bcca262a28db0cbc15bf8f5ff5c4e73ecb8561d9a1e958",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00044-of-00093.safetensors",
+      "sha256": "619f8c1c2c77ecaa5e17445bcdbaa191279f5949684c1e1ccddf9b7fd12b1072",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00045-of-00093.safetensors",
+      "sha256": "f06e087600bf40842e1580f07ac0d9333ecc03138526de9c06ff544e5235bbb0",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00046-of-00093.safetensors",
+      "sha256": "dae3b589915bd830de9bcb47ca10a15c4a920288e9ec97f0fe8c279257136f54",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00047-of-00093.safetensors",
+      "sha256": "4fe16fb59de7fb1f1440613ee7c1be6f9db11b7ec5a1a8b520e293ff8172df4a",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00048-of-00093.safetensors",
+      "sha256": "45a3eb0c7b64624acbb0028f96b43428609873b15c096547201a4f19af48fc96",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00049-of-00093.safetensors",
+      "sha256": "585d96d225e1c715471b841c619b3c62882acda837f8c7e61e802c3ebc5a9098",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00050-of-00093.safetensors",
+      "sha256": "8feba95dc7970981bf58deff854f2ffab3303dc4d4def88363394c02cb399050",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00051-of-00093.safetensors",
+      "sha256": "ed9693579bd5a02b6bcee46ec35268774ca56f6692d10ca8a89bf81e238575ef",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00052-of-00093.safetensors",
+      "sha256": "9b0f9600dda51ece04ca93afcd06850cd473c81eda30d836aff632a95048770d",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00053-of-00093.safetensors",
+      "sha256": "67c90e1032fba5f72bc9d378780aa1ba39b696eb4be2e0586e5e7eaa0b2190ce",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00054-of-00093.safetensors",
+      "sha256": "c6cb58630a1f0c606af24f8ad9c2f7d069d177ffc34865169e34dde380dd3206",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00055-of-00093.safetensors",
+      "sha256": "66fc1172ee29707d0cfc6188abb8a6e9c99403f951d6840980e62794f728c196",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00056-of-00093.safetensors",
+      "sha256": "5bc6158290a352520d143bb8440f7d050f1e216738415166c8e83ce6be1d7d85",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00057-of-00093.safetensors",
+      "sha256": "98780ecc9380c6f3e945afd3763209a6d0568989e1cf8949807519bb8534254e",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00058-of-00093.safetensors",
+      "sha256": "34d009ee01136397a2f7b6fafb200d14cb165d6237eaa43314692eb67d223a15",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00059-of-00093.safetensors",
+      "sha256": "8ece982d07fb9b759e7fedb8b0b85b538beda133afb4528a919db7518991b9ce",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00060-of-00093.safetensors",
+      "sha256": "547b5f46c683d3d5f29f2951d117bf4a204df75101a15e941537664f9ed6157f",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00061-of-00093.safetensors",
+      "sha256": "a9c37ce75919cf156ce3ed8668ad912e8f751c393af1e62dae1e3093a60b5c8f",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00062-of-00093.safetensors",
+      "sha256": "8e2704e8fa1a56cee18e5f44d79ae95583cf371f7f059d7837dc496b9ca372ad",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00063-of-00093.safetensors",
+      "sha256": "ab44dcb01baa287767979c8795b7a26f9e7935f656d5f5a0a33e483729628677",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00064-of-00093.safetensors",
+      "sha256": "8612d8643e22e7a4ede174b151c0b4a41046d4db1cf572f28e517dcf755727f6",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00065-of-00093.safetensors",
+      "sha256": "75c2e24301641c2d1d003a1ac4401ee8d878dffa2c80b5b5e7935149aed2dc71",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00066-of-00093.safetensors",
+      "sha256": "eed25a1fbc87a0c8d832e78ceabb9ae35e2c8c80c3e79f9b4a6d75d39b978678",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00067-of-00093.safetensors",
+      "sha256": "f675f93a13d2108a5bc2c789e40ea757f0346cd2da2fc1e7072be196d28142e0",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00068-of-00093.safetensors",
+      "sha256": "eda2340aab715543f7301f42393010204d7fe5335c303456ac73e950e036fcfd",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00069-of-00093.safetensors",
+      "sha256": "858d04f446a4fa3cde4844508b97632abe9b199887fcccf6dd684ccfe91845ba",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00070-of-00093.safetensors",
+      "sha256": "5908d118c2a33512dca1b39eab9f2dca5c7125a4f3dc6fc80d431580a9b6471d",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00071-of-00093.safetensors",
+      "sha256": "4bace3ff0d1c4f21ed7afafe6861f0852162a9d779392a2a13d62203aa1f4743",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00072-of-00093.safetensors",
+      "sha256": "3e74395aaef32c2a871547c630cb4742c656179df2d282ae2ff5a4075015ecb8",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00073-of-00093.safetensors",
+      "sha256": "315c353f49fc5de423bef7797d3c90137d8b37c9f8cebfe60434c0ad5d0d2849",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00074-of-00093.safetensors",
+      "sha256": "e48157763b5d450dea06b69d06873185188c881ffc0dcd1e5db250a697d8003c",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00075-of-00093.safetensors",
+      "sha256": "43ff83ffeb54fb8a1dc05bcbebffc064479570d99462c88f1a238060ea9e3a9b",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00076-of-00093.safetensors",
+      "sha256": "58e482f06fd4b24509b602b2d898f4c5d3db2c9e52e87c3cce9787bafffa7efb",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00077-of-00093.safetensors",
+      "sha256": "204615d252d333266b7a5b425b7b5f5561b75b0d97bfc3c527f96a238f3efdac",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00078-of-00093.safetensors",
+      "sha256": "4487a25a6cd134c41317238cb2196f67d31465eb5336279e1710c76d5f8ed3c0",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00079-of-00093.safetensors",
+      "sha256": "4959e9c0d467fce02b925dd0a1200037ebfc3dd7f2539aa3d25249d30b8478ac",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00080-of-00093.safetensors",
+      "sha256": "2be05bfec67d6a6131440c56957386fb6aaf80f0ec11f8aab046c37a8b62c3ea",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00081-of-00093.safetensors",
+      "sha256": "097b58b4089aa3b36dbe264aa330c2e3eea011ca74dae0d815cf7b25afd55e73",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00082-of-00093.safetensors",
+      "sha256": "02f221e61912736b631a975f97720220477c9cd27d1e18542442906fcec4f2fd",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00083-of-00093.safetensors",
+      "sha256": "e0f4bb6aeba9270111c9710734eac45f14aa172ec3ce2c7bf3b2256dd1059b38",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00084-of-00093.safetensors",
+      "sha256": "3f6945500abdbdf07bf287b754f42978cea16f0eb4b0132a991b68fb545df921",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00085-of-00093.safetensors",
+      "sha256": "692f6e3dfce235419dc6f40bee31e3820c2ca91c8c4f49663e6f87fea9077316",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00086-of-00093.safetensors",
+      "sha256": "247e1ae4f61dfa86c5692d810d91fbe92e2ebaf439585e999a22b692c2165140",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00087-of-00093.safetensors",
+      "sha256": "6d1590ef905581b02a3e1d2ac9394256a9876e257995a592db7dea1b48ab1900",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00088-of-00093.safetensors",
+      "sha256": "07433cb88187cc3a0b1ba1db51ffd12c2f34468982d4831663500675d1d41590",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00089-of-00093.safetensors",
+      "sha256": "110d25a9de8afcb2591c5400f0b3fb5be41439ffb823a9b9283eb35d970befe4",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00090-of-00093.safetensors",
+      "sha256": "cd9ccb6df66f7a0fb72a0cc750d2703ef11737febc0506c78bb5747b0b26dd71",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00091-of-00093.safetensors",
+      "sha256": "2d1a794a2bdc14ce40cdfb65fec9fec1a344c2a35e9e6c3a0f460992745e680c",
+      "size": 3941946000
+    },
+    {
+      "lfs": true,
+      "path": "model-00092-of-00093.safetensors",
+      "sha256": "b895eace5b8b530ccb719261f699413a7c6ae6c0befbeac09f443cd6edb5a599",
+      "size": 6270401912
+    },
+    {
+      "lfs": true,
+      "path": "model-00093-of-00093.safetensors",
+      "sha256": "603b1ad1bb0c19dfc3af55e0653a3b8740884028cde22997d3f42f429a910dbc",
+      "size": 4046834824
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "912330893ab9de13ac5594111c74ae21598c47cd0439d14881effb35645657bf",
+      "size": 8272051
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "9340665016419c825c4bdabbcc9acc43b7ca2c68ce142724afa829abb1be5efd",
+      "size": 19970699
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "27d01309c0ae7b5edb6511daabfcbf772b60e21c65cbb74d059acc76796f7897",
+      "size": 7307
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "zai-org/GLM-4.5-FP8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "96d68d60a6e07603866031f5448d4a6255b78d62bc7bc94a68c28371e681bda5",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.glm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:26:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/zai-org/GLM-4.5-FP8/resolve/8cc290ee4c7cbfa38d3a2db9bd0b7371773ece81/"
+    }
+  ],
+  "upstream": {
+    "commit": "8cc290ee4c7cbfa38d3a2db9bd0b7371773ece81",
+    "host": "huggingface.co",
+    "repo": "zai-org/GLM-4.5-FP8",
+    "url": "https://huggingface.co/zai-org/GLM-4.5-FP8/tree/8cc290ee4c7cbfa38d3a2db9bd0b7371773ece81"
+  }
+}

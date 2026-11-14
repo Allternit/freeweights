@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-14T21:37:57Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5b9ac135404515b1d8a4a596799ed0d1492ff37b4c637c33cb92e6c1bcb95f59",
+      "size": 1541
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "706c709b40f658130548167ea69067067f34560cf44e0a93a6b6ee944da0464f",
+      "size": 48
+    },
+    {
+      "lfs": false,
+      "path": "open_clip_config.json",
+      "sha256": "709768239a6598fe13f19f1ccffd152d503c4c51847ea211f4aefec2158a91f8",
+      "size": 664
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_pytorch_model.bin",
+      "sha256": "f22c34acef2b7a5d1ed28982a21077de651363eaaebcf34a3f10676e17837cb8",
+      "size": 2554107511
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_pytorch_model.safetensors",
+      "sha256": "e7a260a9de42fc86e67452546013b1f8619b50f01971900f141d2202628ea28f",
+      "size": 2553895340
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/mscoco_finetuned_CoCa-ViT-L-14-laion2B-s13B-b90k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "706c709b40f658130548167ea69067067f34560cf44e0a93a6b6ee944da0464f",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:37:57Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/mscoco_finetuned_CoCa-ViT-L-14-laion2B-s13B-b90k/resolve/f895105fb18cf5ea3ba7a1172966e4cc0ad8d743/"
+    }
+  ],
+  "upstream": {
+    "commit": "f895105fb18cf5ea3ba7a1172966e4cc0ad8d743",
+    "host": "huggingface.co",
+    "repo": "laion/mscoco_finetuned_CoCa-ViT-L-14-laion2B-s13B-b90k",
+    "url": "https://huggingface.co/laion/mscoco_finetuned_CoCa-ViT-L-14-laion2B-s13B-b90k/tree/f895105fb18cf5ea3ba7a1172966e4cc0ad8d743"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-14T21:16:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "d81961da36b56f4a1abfbf59a2469e1c49efa04b94a876908c48780894b0b307",
+      "size": 191
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5f899714f04d612484d6daeb2c9f9ab93680382ccaa95090643cc691f11c6633",
+      "size": 610356
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1a0e6b783e85be5265ab4fa3a92b79c0d5fd733617fe3d3264411cf3e5d13c8e",
+      "size": 698
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx",
+      "sha256": "aefac97b384f92932a61a19900d41c870679d5b8e6ceb682768eb153d0e31c7d",
+      "size": 1112413925
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b522423ae15d1a6fd48c55ef4f599c0c2c0737603da94e4b4815760c2c06ebac",
+      "size": 556109872
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "21ddb3037a55ebf4549eb5c1dc44c3f28f10b56ec7f1335c92fd90e5b30d88ac",
+      "size": 350
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "c1d9f400f9763ed18e1b9aeb560b03b19123b42946a8231184aa2ce06868dfa5",
+      "size": 1112217891
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "ed20daeb5b882c3e1f116ce7b3d53e6643d11063aa9baaa31f5ae91770cfad8f",
+      "size": 54
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+      "size": 239
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "2a0d7366dd7780ea36cc42431dd74cd79289b783ab01acd33013fcc96865a8e9",
+      "size": 9081351
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0b3223bec744a0e449daf1ece51510681d25c935aaf16373039e836c3d94559e",
+      "size": 418
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-embedding-278m-multilingual",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5f899714f04d612484d6daeb2c9f9ab93680382ccaa95090643cc691f11c6633",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:16:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-embedding-278m-multilingual/resolve/a9cb5338491faf32b73dd17b714a31821c021bbf/"
+    }
+  ],
+  "upstream": {
+    "commit": "a9cb5338491faf32b73dd17b714a31821c021bbf",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-embedding-278m-multilingual",
+    "url": "https://huggingface.co/ibm-granite/granite-embedding-278m-multilingual/tree/a9cb5338491faf32b73dd17b714a31821c021bbf"
+  }
+}

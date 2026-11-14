@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-14T21:09:41Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "55d4d3278a3e2901c561092aca4c292427bde1f6e6c69cda22af8277bdcef119",
+      "size": 10744
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e050ff6a15ae9295e84882fa0e98051bd8754856cd5201395ebf00ce9f2d609b",
+      "size": 1206
+    },
+    {
+      "lfs": false,
+      "path": "configuration_bert.py",
+      "sha256": "f800cd9cb98feb32b9579b2e171778f0a70a15a8252a63ecf93879c1fee2224b",
+      "size": 8240
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "34c90c55c32ada402c943c79555515b9eea2cbaf5bbcd970b012a2bc8e0ad331",
+      "size": 336141
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6faa4c9876a52aed86716a7c99385da1af985d9eaf9ffec3d52b30a3d2600ee9",
+      "size": 75554746
+    },
+    {
+      "lfs": false,
+      "path": "modeling_bert.py",
+      "sha256": "2487fad570a705a9166cd234188f634e09946e2b44450f720776cddeff35e107",
+      "size": 99262
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "c1296c66c119de645fa9cdee536d8637740efe85224cfa270281e50f213aa565",
+      "size": 151296975
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "9db01a2886b23abc56af98a9c900b40764d2065b80e849eae6f7341294602c41",
+      "size": 102642048
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "401819c91426abef90619efcd438fa5a73fc4fe64de1c6a69e7d51e2ae6268e2",
+      "size": 75802349
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "3defdef1ae34e119bd704216087743e79665934c96aebabcb6077c239dc3ae66",
+      "size": 38295104
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "9e85e3c0797005d96d56e978c659a151afa8e0fb49114adb95e74b555d37e8df",
+      "size": 103526550
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "3defdef1ae34e119bd704216087743e79665934c96aebabcb6077c239dc3ae66",
+      "size": 38295104
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "4f6edff0634c97c4ede6724da19d1c536e95fc5844a8b4597e027c3531cdbf71",
+      "size": 38295103
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "865db4f93a28237be5d32299e35e6c442ea3435a3c845866c6b43ffb3b7ed35e",
+      "size": 76153978
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+      "size": 280
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "0046da43cc8c424b317f56b092b0512aaaa65c4f925d2f16af9d9eeb4d0ef902",
+      "size": 2030772
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d291c6652d96d56ffdbcf1ea19d9bae5ed79003f7648c627e725a619227ce8fa",
+      "size": 1215
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "62a861857691f39b92935580e929a31e7869056e5de5119ef81f5c62ffa1a4b5",
+      "size": 854399
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "jinaai/jina-reranker-v1-turbo-en",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "55d4d3278a3e2901c561092aca4c292427bde1f6e6c69cda22af8277bdcef119",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:09:41Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/jinaai/jina-reranker-v1-turbo-en/resolve/b8c14f4e723d9e0aab4732a7b7b93741eeeb77c2/"
+    }
+  ],
+  "upstream": {
+    "commit": "b8c14f4e723d9e0aab4732a7b7b93741eeeb77c2",
+    "host": "huggingface.co",
+    "repo": "jinaai/jina-reranker-v1-turbo-en",
+    "url": "https://huggingface.co/jinaai/jina-reranker-v1-turbo-en/tree/b8c14f4e723d9e0aab4732a7b7b93741eeeb77c2"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-14T21:41:57Z",
+  "audit": {
+    "at": "2026-11-14T21:41:57Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen2-VL-2B-Instruct",
+  "display_name": "gme-Qwen2-VL-2B-Instruct",
+  "family": "Alibaba-NLP",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "Alibaba-NLP/gme-Qwen2-VL-2B-Instruct",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/Alibaba-NLP/gme-Qwen2-VL-2B-Instruct.json",
+  "params": 2208985600,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen2-VL-2B-Instruct",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.embed",
+  "signals": {
+    "downloads_30d": 5063,
+    "likes": 135,
+    "trending": null
+  },
+  "tasks": [
+    "sentence-similarity"
+  ],
+  "tier": "T0",
+  "total_size": 8848245026,
+  "upstream_url": "https://huggingface.co/Alibaba-NLP/gme-Qwen2-VL-2B-Instruct",
+  "what_changed": null
+}

@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-14T21:26:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "73e3ac922f2a60b0021e3b72751d5eb44d09a044700597642d11c4fe924f6efa",
+      "size": 4617
+    },
+    {
+      "lfs": false,
+      "path": "flow/config.yaml",
+      "sha256": "1296dec66ef32fdcee6a7fe3a3b19b5031b1ae22a0283ba3745bb5fbf7300c9b",
+      "size": 180
+    },
+    {
+      "lfs": true,
+      "path": "flow/flow.pt",
+      "sha256": "532fb30348a9a8df727c8b4b142b3e7a272d5a4f2e2d7b70576c60662943b143",
+      "size": 901331642
+    },
+    {
+      "lfs": true,
+      "path": "hift/hift.pt",
+      "sha256": "3386cc880324d4e98e05987b99107f49e40ed925b8ecc87c1f4939432d429879",
+      "size": 83390254
+    },
+    {
+      "lfs": false,
+      "path": "llm/config.json",
+      "sha256": "6e582499f7521568904159a89f5ff67763bfccff7f939bf0175fb371dfe891ae",
+      "size": 674
+    },
+    {
+      "lfs": false,
+      "path": "llm/generation_config.json",
+      "sha256": "dfbf1d6403235b70efa8fc7a6ebf225aeb886b9d89ad09e2178c422cede8abc2",
+      "size": 111
+    },
+    {
+      "lfs": true,
+      "path": "llm/model-00001-of-00002.safetensors",
+      "sha256": "12adf2b0ea8be7a39ea5d5aa2d3658556602b1d979a382d41e3cd79b546d7b30",
+      "size": 4999976928
+    },
+    {
+      "lfs": true,
+      "path": "llm/model-00002-of-00002.safetensors",
+      "sha256": "5f07a39df2aff4b4f5b68494d98584e4cc319fc7561d9823d6408979f25f5e32",
+      "size": 1208089016
+    },
+    {
+      "lfs": false,
+      "path": "llm/model.safetensors.index.json",
+      "sha256": "e66f4098acd31bfac907355cadb8c52c77f0ce1a2327db1fd9b60d52d9822213",
+      "size": 20919
+    },
+    {
+      "lfs": false,
+      "path": "speech_tokenizer/config.json",
+      "sha256": "3411628188995721f796e3e2506339bf6d95bf7242f6aab3b138df62c5998c49",
+      "size": 1941
+    },
+    {
+      "lfs": true,
+      "path": "speech_tokenizer/model.safetensors",
+      "sha256": "78e3a3542b8e111a2ecb363056c643dafdef3624eacce3af587693421a55e38e",
+      "size": 1628135704
+    },
+    {
+      "lfs": false,
+      "path": "speech_tokenizer/preprocessor_config.json",
+      "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+      "size": 340
+    },
+    {
+      "lfs": true,
+      "path": "vocos2d/generator_jit.ckpt",
+      "sha256": "acfccc69db407008db8388eea1b8229151bdb822083211f757f5c1c73847913a",
+      "size": 60429952
+    },
+    {
+      "lfs": false,
+      "path": "vq32k-phoneme-tokenizer/tokenization_chatglm.py",
+      "sha256": "9dcc01e16ee9a2cac7b1e224718b5e3460e6ec141d1865365323e3138f060b91",
+      "size": 8990
+    },
+    {
+      "lfs": true,
+      "path": "vq32k-phoneme-tokenizer/tokenizer.model",
+      "sha256": "3c16309bf80bf496e823cad3a9e77967746d5f0ac55afd1755717ec9f9cc1ce0",
+      "size": 1044856
+    },
+    {
+      "lfs": false,
+      "path": "vq32k-phoneme-tokenizer/tokenizer_config.json",
+      "sha256": "6146e8db6ea0127e0733a03fd7a8514d388880e1e19e1e508948bea3137cbdf4",
+      "size": 6368796
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "zai-org/GLM-TTS",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "73e3ac922f2a60b0021e3b72751d5eb44d09a044700597642d11c4fe924f6efa",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.glm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:26:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/zai-org/GLM-TTS/resolve/b3feb691fa4cf590eec4418f6275f95220e58844/"
+    }
+  ],
+  "upstream": {
+    "commit": "b3feb691fa4cf590eec4418f6275f95220e58844",
+    "host": "huggingface.co",
+    "repo": "zai-org/GLM-TTS",
+    "url": "https://huggingface.co/zai-org/GLM-TTS/tree/b3feb691fa4cf590eec4418f6275f95220e58844"
+  }
+}

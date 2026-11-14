@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:32:41Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5200b9d86f3259876395b34b74017c850f7ad6f057ae70b59855a2243af5f147",
+      "size": 1565
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "013d67d1920d6ef7406d5fc41ff21f0a05fe1977ccdfa86dfff9683fb92ed6c3",
+      "size": 1452
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "90c55f775cc4e0bb17293d0bf12f96557a486f20dea886fabd8e6075a3588b21",
+      "size": 2690
+    },
+    {
+      "lfs": true,
+      "path": "model.bin",
+      "sha256": "b79368e19b6623813609431a6e5ee309a71506701ebc49fd7820e692dec7c5f5",
+      "size": 1512927867
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+      "size": 340
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6d8cbd7cd0d8d5815e478dac67b85a26bbe77c1f5e0c6d76d1ce2abc0e5f21ca",
+      "size": 2480617
+    },
+    {
+      "lfs": false,
+      "path": "vocabulary.json",
+      "sha256": "c69260f2ab26d659b7c398f9a2b2b48ed0df16c3b47d7326782fd9cba71690c1",
+      "size": 1068114
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Systran/faster-distil-whisper-large-v3",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "013d67d1920d6ef7406d5fc41ff21f0a05fe1977ccdfa86dfff9683fb92ed6c3",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:32:41Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Systran/faster-distil-whisper-large-v3/resolve/c3058b475261292e64a0412df1d2681c06260fab/"
+    }
+  ],
+  "upstream": {
+    "commit": "c3058b475261292e64a0412df1d2681c06260fab",
+    "host": "huggingface.co",
+    "repo": "Systran/faster-distil-whisper-large-v3",
+    "url": "https://huggingface.co/Systran/faster-distil-whisper-large-v3/tree/c3058b475261292e64a0412df1d2681c06260fab"
+  }
+}

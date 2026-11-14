@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-14T21:15:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "484fac0cb8b057eefe1992c8b72ac6e7438c7d17bd60c0e278b401c2190f7e72",
+      "size": 1624
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8adf126758a3da9a545dcc3fee8bb91817107779f668d2c5574504750db93de9",
+      "size": 29898
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b6f19209588fcefe41f65b193fad6148446253c470d36e29441ecc5158a54e6d",
+      "size": 2346
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "2f9cbe2c0b3c57d26876fe639f3eb594c7a60922fe8ead57c17ad25bcd9f5f16",
+      "size": 360
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "3279c173daddd7186e79d652ad94022415736d3a1370625696c898429b06d6df",
+      "size": 845719296
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "c001d9ada50af662c94f5ab17ec7e09f6438d1bec8246c47fee6510693d8de35",
+      "size": 32169884
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "089594a3924fcfd4cb1c596a7906fbf476193519e5198f780912eed02b177e42",
+      "size": 822
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/gemma-4-12B-it-assistant",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8adf126758a3da9a545dcc3fee8bb91817107779f668d2c5574504750db93de9",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:15:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/gemma-4-12B-it-assistant/resolve/3b0b0a4a3b31b5556516329227fb55f275c23c9f/"
+    }
+  ],
+  "upstream": {
+    "commit": "3b0b0a4a3b31b5556516329227fb55f275c23c9f",
+    "host": "huggingface.co",
+    "repo": "google/gemma-4-12B-it-assistant",
+    "url": "https://huggingface.co/google/gemma-4-12B-it-assistant/tree/3b0b0a4a3b31b5556516329227fb55f275c23c9f"
+  }
+}

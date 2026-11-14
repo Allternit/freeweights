@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:11:41Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1ae8eb8e3cdcc3fa85339243b91206b3ffcc18090cbf31f6b86b7fddc4d1c031",
+      "size": 4165
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "5b36e3f50d9941012ae66d0496b8a76ac0401448ab7d3f6e4ed092547d052ed1",
+      "size": 1098
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "db983080add70846ba3818786d391fa27b25b1bb20fb94e1550807e1102790d8",
+      "size": 1517
+    },
+    {
+      "lfs": false,
+      "path": "configuration_deepseek_v4.py",
+      "sha256": "f9565745ab619710776b258e26b831adf826ada56d2d4d7796f25e4ec31c2e99",
+      "size": 4635
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "5ed2a1791ec72bba9e09ae0acf838c5e6f0f721a86e000f2bef7e2d8149f29f9",
+      "size": 226
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "21b28b6962110a16b4e46e4a8eff7ddf5ac3c6db701d73142667511fdb86c98e",
+      "size": 441507028
+    },
+    {
+      "lfs": false,
+      "path": "modeling_deepseek_v4.py",
+      "sha256": "ffad5944f427d6241b619a14f49cdde5a7c081f00ab08bb05fbdffe6646c1d1a",
+      "size": 28764
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "8421075aceec0741baf15179b6c337f443f9029e53ea88d8c1e909dd0d69b70b",
+      "size": 10071664
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f829b42325608e714d58da87aa1f5ebf9cc82e3dd6a93eb8811a13d9d03e5a12",
+      "size": 316
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "HuggingFaceTB/nanowhale-100m",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1ae8eb8e3cdcc3fa85339243b91206b3ffcc18090cbf31f6b86b7fddc4d1c031",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:11:41Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/HuggingFaceTB/nanowhale-100m/resolve/6a3bed5ff8f3ffa23238e146caa003191e6f3c0a/"
+    }
+  ],
+  "upstream": {
+    "commit": "6a3bed5ff8f3ffa23238e146caa003191e6f3c0a",
+    "host": "huggingface.co",
+    "repo": "HuggingFaceTB/nanowhale-100m",
+    "url": "https://huggingface.co/HuggingFaceTB/nanowhale-100m/tree/6a3bed5ff8f3ffa23238e146caa003191e6f3c0a"
+  }
+}

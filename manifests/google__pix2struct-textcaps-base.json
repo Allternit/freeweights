@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:36:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e5dc83622c2ce6ce1df491db93f6ddc6a7ac27f5988c4a36c432a69e91de0bf0",
+      "size": 7676
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "aaebb1cbc1eb952676e1b874b09ea28b2519f654ebf261807b22eaebc43f2023",
+      "size": 5009
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "771693f7e310a89d77aa7ee4d1f5ea3e0c4adb0b6112cdf25a20da29cc3d0ea7",
+      "size": 1129177976
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "885e6dd8946290a61b0a808e90cc74dd1a33a011b6482fd213bc7327945305f8",
+      "size": 217
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "2e8599e7e8a6912e1654d2aff5a158ffed8814da8742090a229cc08ba35cde2c",
+      "size": 1129238081
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5c87151ef0f72a99d1f766a4c418bd2a1f90aaa30a8e22fe5eca9641daebb64f",
+      "size": 2201
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "7fd650335add59bed55a432186ca0437a09e185c2d241faab468a538fe6bcf94",
+      "size": 851388
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "0af109b23840545ef2c286073f4373959badba1faa73c8557881d5126f6287c9",
+      "size": 3265159
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5fdb6767a49aca48fdfa43d0279321918185fc4997bdb3ea72bf3a6301a1b43d",
+      "size": 2583
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/pix2struct-textcaps-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e5dc83622c2ce6ce1df491db93f6ddc6a7ac27f5988c4a36c432a69e91de0bf0",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:36:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/pix2struct-textcaps-base/resolve/61bee0d7e2378e601b68f853ceee4f7cf99f1b88/"
+    }
+  ],
+  "upstream": {
+    "commit": "61bee0d7e2378e601b68f853ceee4f7cf99f1b88",
+    "host": "huggingface.co",
+    "repo": "google/pix2struct-textcaps-base",
+    "url": "https://huggingface.co/google/pix2struct-textcaps-base/tree/61bee0d7e2378e601b68f853ceee4f7cf99f1b88"
+  }
+}

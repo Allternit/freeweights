@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-14T21:30:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7cf336ecda9d906a12284890f54f4301af8ce56e4b865c98964a68436ede1044",
+      "size": 621
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+      "size": 605
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a0bc6f6fc7a29a80017a433e8f03a1cc1236e838a944a2d034295a60c4f2fddb",
+      "size": 1017
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.json",
+      "sha256": "ad60d90252ed0b0705ba14e2d0ad0fec0beac1ea955642b54059b36052d8bc96",
+      "size": 1050
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9f3068a72bed1d328326be3623701b280ad5b8ffd6995d39ec5e1cdc5bb5f799",
+      "size": 9059
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "f8f9e40b9d85636128865f0be3c696b915932049b6c25b087241f63f5ef4e785",
+      "size": 260
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "7078b086bf1545e8f5382287ef5554d611349f7ba8ef7fa90a818666cc63cab4",
+      "size": 5326987104
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "36239bb0581f60fd14068592fb250066b38c61d025442af3a421b83516d878e9",
+      "size": 4118157240
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "4be35310ddc165e46e88de4c3fec8c1210014b0b8717f4544d82cc740814ae0c",
+      "size": 57655
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "dfc7263fe735989c65c290d394198c4724d5afc58bf15c815d5e2e25b00b51b1",
+      "size": 829
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+      "size": 11421896
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e04be4dd17e9f661bc487ba848a37f66a8f1adf2eef412f5d4ecb40cab4d39e7",
+      "size": 4730
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "9b7003dd088dd6cd924a7ba9c5fcfea865063adad5dcdc4080ac9c7264e1fe78",
+      "size": 955
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    },
+    {
+      "lfs": false,
+      "path": "zero_to_fp32.py",
+      "sha256": "e8a2553b434ac043ec63b022db1e768277acf8d4e70f10a2842db6d238977135",
+      "size": 33270
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/olmOCR-2-7B-1025-mlx-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7cf336ecda9d906a12284890f54f4301af8ce56e4b865c98964a68436ede1044",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:30:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/olmOCR-2-7B-1025-mlx-8bit/resolve/b0f72c9dfdb5488691e3c00d2afa2613c16c3bb3/"
+    }
+  ],
+  "upstream": {
+    "commit": "b0f72c9dfdb5488691e3c00d2afa2613c16c3bb3",
+    "host": "huggingface.co",
+    "repo": "mlx-community/olmOCR-2-7B-1025-mlx-8bit",
+    "url": "https://huggingface.co/mlx-community/olmOCR-2-7B-1025-mlx-8bit/tree/b0f72c9dfdb5488691e3c00d2afa2613c16c3bb3"
+  }
+}

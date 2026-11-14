@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-14T21:34:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "139dc88aa312eed6edb709fe437ac89f247a35c9dfcd4d110fd22fbcc42ce990",
+      "size": 14475
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "ba9d7b73817184a4466d75d1146d47b53554ae51dce05f6cbd420712b7a07d5d",
+      "size": 1570
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "b4ca6eafb991c95244a2713bdae8c8533f734b52097924caa731663f789aaaa2",
+      "size": 549790896
+    },
+    {
+      "lfs": false,
+      "path": "selection.json",
+      "sha256": "b863da18123a2ca0d381eec0636fd143713322a038c3a4bbb92f1704f3ae296f",
+      "size": 336
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/moss-tts-local-transformer-4.55b-voice-acting-v2-dpo-lora",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "139dc88aa312eed6edb709fe437ac89f247a35c9dfcd4d110fd22fbcc42ce990",
+    "id": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:34:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/moss-tts-local-transformer-4.55b-voice-acting-v2-dpo-lora/resolve/4cf233819c18b4a0e5f57430feb6a011bfb89861/"
+    }
+  ],
+  "upstream": {
+    "commit": "4cf233819c18b4a0e5f57430feb6a011bfb89861",
+    "host": "huggingface.co",
+    "repo": "laion/moss-tts-local-transformer-4.55b-voice-acting-v2-dpo-lora",
+    "url": "https://huggingface.co/laion/moss-tts-local-transformer-4.55b-voice-acting-v2-dpo-lora/tree/4cf233819c18b4a0e5f57430feb6a011bfb89861"
+  }
+}

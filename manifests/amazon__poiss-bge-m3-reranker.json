@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:35:33Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358
+    },
+    {
+      "lfs": false,
+      "path": "NOTICE",
+      "sha256": "b8298e451762ffddf946ab60a42f3417a9ba8a5a993f911305c8feebd47cdfa0",
+      "size": 773
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0a05b4db224f12af3a946f61f536ec8e81d51358f06089ba369d6335253ab76b",
+      "size": 8491
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3ba1b696b98429400ba200489b54dc4413a10cfa0c6b08f3c1d2f7150d588ae5",
+      "size": 756
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "236eb0829a01af9c6cc527d7f76588e6def082c8636b92094705cbc1c5484c6f",
+      "size": 2271071852
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "8bf8afbfd11306bd872018c53bfdf2e160a56f8edbcf49933324404791c148d3",
+      "size": 17082900
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b87c8703482b0300d3da30e201519aa641f6a450f5eb5bf1e624afbf70c74d80",
+      "size": 1203
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/poiss-bge-m3-reranker",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:35:33Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/poiss-bge-m3-reranker/resolve/21504e7afaa450908c4e36988f3d15a000652972/"
+    }
+  ],
+  "upstream": {
+    "commit": "21504e7afaa450908c4e36988f3d15a000652972",
+    "host": "huggingface.co",
+    "repo": "amazon/poiss-bge-m3-reranker",
+    "url": "https://huggingface.co/amazon/poiss-bge-m3-reranker/tree/21504e7afaa450908c4e36988f3d15a000652972"
+  }
+}

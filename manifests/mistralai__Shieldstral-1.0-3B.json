@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-14T21:24:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "07b3b4b04ce1da1f27be4f1ff90006c9b8ace80cc0eb81bdd182a11257f4498c",
+      "size": 1618
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b67233168fac38fa63658f70a1b59901da612cfa19cd14cc6ecaf804b9003d9d",
+      "size": 23152
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "df026d5384cfbb925dd35ff96b9c55ce7257ec8d47d5fa73757673bd4c98ce53",
+      "size": 7095
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a0b1122916b629ab9c3b54a422476e3f4bf4f2b66353a82c43c349c4fe2257ad",
+      "size": 1654
+    },
+    {
+      "lfs": true,
+      "path": "consolidated.safetensors",
+      "sha256": "25bcdaafaf81fe79982409ffaf9b3e269abe67d9064fed349b424944db92095e",
+      "size": 7698234952
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7e8a15f269bb1b52e54ed4f4ef5a0b73014f15275a7d2a9d2bf6f8c291c494bd",
+      "size": 126
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "87753e30c8c321da478b83bbabebcd813cc9b3d0cee5c5b3d64349a8ee4172f7",
+      "size": 7698241104
+    },
+    {
+      "lfs": false,
+      "path": "params.json",
+      "sha256": "9e5afb715882b931c491aad8a1c6127fdea8d7031cadba14763da779833cbad6",
+      "size": 1208
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "bb6bbc47d9aec510c0ee42c2eeecde5cb54fa96cd85035c7248b35f91157deab",
+      "size": 660
+    },
+    {
+      "lfs": true,
+      "path": "tekken.json",
+      "sha256": "ceb11e85e44d7c91d051604d636d97b05aee59a907a0dc96a3c6e557d9634e18",
+      "size": 16275088
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "9172cf28b79a17502736f971b560faeced38ee527540cea6882a1f40cce320c0",
+      "size": 17077322
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b41ad95e3321bd29dcbc525de2b34d74f0d64e6a96add615149e448bff5c38c3",
+      "size": 261
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mistralai/Shieldstral-1.0-3B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b67233168fac38fa63658f70a1b59901da612cfa19cd14cc6ecaf804b9003d9d",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:24:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mistralai/Shieldstral-1.0-3B/resolve/003ec7e2b0bab5f0e6307edbaf186fa5822b76f5/"
+    }
+  ],
+  "upstream": {
+    "commit": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+    "host": "huggingface.co",
+    "repo": "mistralai/Shieldstral-1.0-3B",
+    "url": "https://huggingface.co/mistralai/Shieldstral-1.0-3B/tree/003ec7e2b0bab5f0e6307edbaf186fa5822b76f5"
+  }
+}

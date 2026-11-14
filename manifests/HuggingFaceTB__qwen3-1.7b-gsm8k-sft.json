@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-11-14T21:11:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f2c2a6a092355909080546470c6d6275d22f9346491ae09510d82c08e43a7588",
+      "size": 1695
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "945310e79e48ac9a8c5b114c7004f5f7390395194953cd731a458526b3ae9b49",
+      "size": 6524
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "size": 4168
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a4a451865e8d45a519133031f19cda7d347813159fde1756d63e2beaf67f2288",
+      "size": 1360
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3b101cd89b140b757d0bca469e75570e75789a2423ada90a33ec17707dfacf08",
+      "size": 188
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1febbe96ad1e0ad1ac19919d0eb5362bb013b0493063de241d1ecdd7b67bb291",
+      "size": 3441185608
+    },
+    {
+      "lfs": true,
+      "path": "qwen3-1.7b-gsm8k-f16.gguf",
+      "sha256": "cd6b433c2c52329f688810ded7e66d38c5313f8ca93ca4ec0e45fc9a63b9a79b",
+      "size": 3447348928
+    },
+    {
+      "lfs": true,
+      "path": "qwen3-1.7b-gsm8k-q8_0.gguf",
+      "sha256": "9508fd895d10cb39fd4799d709c3599efeb00a61d4afbc05ecbfa34b02998e1a",
+      "size": 1834426048
+    },
+    {
+      "lfs": false,
+      "path": "scripts/evaluate.py",
+      "sha256": "02b97287d5cd2179dc26c4328a35386a5a2908919a360fd97418b32003b15529",
+      "size": 4080
+    },
+    {
+      "lfs": false,
+      "path": "scripts/evaluate_math500.py",
+      "sha256": "c02c40eb82e2633b81b7ac139714389dc275f0e7799742264a1d70753ebdec06",
+      "size": 5176
+    },
+    {
+      "lfs": false,
+      "path": "scripts/prepare_combined_data.py",
+      "sha256": "210e66871f665a44094cfc3829394d43faec0e25ceefb52d1e685870a105ab0a",
+      "size": 5055
+    },
+    {
+      "lfs": false,
+      "path": "scripts/train_continued.py",
+      "sha256": "5dbb3cf3da372b12537b98aa9fe49fce15e8368178a67f0ae95654f5e2c2c9f5",
+      "size": 2890
+    },
+    {
+      "lfs": false,
+      "path": "scripts/train_improved.py",
+      "sha256": "8c8b7281b3289d3ca55bbdf78c3d566abf1097658075678f677d16d99aa49dc0",
+      "size": 3233
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0",
+      "size": 5404
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "4cc4183a399e46771d11513377493de112e1c85dfa95d53dc6b122e5befe0449",
+      "size": 6289
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "HuggingFaceTB/qwen3-1.7b-gsm8k-sft",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "945310e79e48ac9a8c5b114c7004f5f7390395194953cd731a458526b3ae9b49",
+    "id": "apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:11:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/HuggingFaceTB/qwen3-1.7b-gsm8k-sft/resolve/b0a537b73930e835e38b349bba1581202022a945/"
+    }
+  ],
+  "upstream": {
+    "commit": "b0a537b73930e835e38b349bba1581202022a945",
+    "host": "huggingface.co",
+    "repo": "HuggingFaceTB/qwen3-1.7b-gsm8k-sft",
+    "url": "https://huggingface.co/HuggingFaceTB/qwen3-1.7b-gsm8k-sft/tree/b0a537b73930e835e38b349bba1581202022a945"
+  }
+}

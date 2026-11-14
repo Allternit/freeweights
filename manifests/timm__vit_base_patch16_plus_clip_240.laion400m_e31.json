@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:38:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b58f99146bc988e66080c750262e5ea94c6601425d2321f3d5e237b556b16293",
+      "size": 392
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": false,
+      "path": "open_clip_config.json",
+      "sha256": "3dbe153d1aefe5d0c88d8b56e98908fcba2af0aae90008428d903a0103954d9c",
+      "size": 533
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_model.safetensors",
+      "sha256": "f65b63daa30d38e9c4afe87ebd40140cee700cf0a1091711248f512f48706840",
+      "size": 833543412
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_pytorch_model.bin",
+      "sha256": "fa8eec9aff58e9215b9b44a977038179712694d3fc3a73eba62546bcff13deb3",
+      "size": 833625910
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2cdb3b8331a60c92fc1e55a13e9fd61fd2293c5a51275fdcccd62b780052530e",
+      "size": 588
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "43d4281659ce30b6aca2c7485944b3d73925bb7f87c7234daf3b6b094a6d618c",
+      "size": 3642035
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "c8758738997537b9e24885a081a043e1c9f5beff1355f0ec68ca19349e8699aa",
+      "size": 706
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363",
+      "size": 862328
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_base_patch16_plus_clip_240.laion400m_e31",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b58f99146bc988e66080c750262e5ea94c6601425d2321f3d5e237b556b16293",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:38:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_base_patch16_plus_clip_240.laion400m_e31/resolve/6dbe024bee4f13f90ad3676d92957e68868a616d/"
+    }
+  ],
+  "upstream": {
+    "commit": "6dbe024bee4f13f90ad3676d92957e68868a616d",
+    "host": "huggingface.co",
+    "repo": "timm/vit_base_patch16_plus_clip_240.laion400m_e31",
+    "url": "https://huggingface.co/timm/vit_base_patch16_plus_clip_240.laion400m_e31/tree/6dbe024bee4f13f90ad3676d92957e68868a616d"
+  }
+}

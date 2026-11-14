@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-14T21:26:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5c4b3d1cdbc1ccffa51a05214336594f487131d0442c4042d00eaebac79587c7",
+      "size": 2370
+    },
+    {
+      "lfs": true,
+      "path": "clip_vision/dino_v3_L_naf_fp32.safetensors",
+      "sha256": "4ad2ec4e0879a5b5b04cd97325cc37da954a7b6edca5170b86510f17f2b2290f",
+      "size": 1215214176
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/pixal3d_bf16.safetensors",
+      "sha256": "5f3cd67b7ff9104d810754bcd89e47a6c2393e41f8c0a808d0dead37802d85fe",
+      "size": 10999317704
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/pixal3d_int8_convrot.safetensors",
+      "sha256": "4621eac3b715484f79303c7152af641fe0b2b14f4d0e3d394fd6922d00f955ec",
+      "size": 5584555824
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/pixal3d_multiview_bf16.safetensors",
+      "sha256": "302d00adb453f089c87ea083ebde2c9087bc259170d17910136ad1d8231f49a3",
+      "size": 10999317704
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/pixal3d_multiview_int8_convrot.safetensors",
+      "sha256": "6b1eb3328930d921d3b57508d9c46cceec1c174dcedeebc14f176ab67d49f477",
+      "size": 5584555824
+    },
+    {
+      "lfs": false,
+      "path": "pixal3d_test_jester.json",
+      "sha256": "def74a3bcc11451fcfae4f69b0f3d892eaf438ddd3fb90a4f404435b8bc5c4e4",
+      "size": 75212
+    },
+    {
+      "lfs": true,
+      "path": "vae/trellis_2_shape_vae_bf16.safetensors",
+      "sha256": "de0cb4949a76c59ee5c091a995a69bcc8c51d5aeda939f0c641a50d2a72341f4",
+      "size": 1095844024
+    },
+    {
+      "lfs": true,
+      "path": "vae/trellis_2_texture_vae_bf16.safetensors",
+      "sha256": "714e5ebf094a610e12a8e3b5175c18a62f37f6ea4218acb6073644456b73ab0e",
+      "size": 948461364
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Pixal3D",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5c4b3d1cdbc1ccffa51a05214336594f487131d0442c4042d00eaebac79587c7",
+    "id": "mit",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-14T21:26:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Pixal3D/resolve/f37641be376725d324c56626007cc477f1249a69/"
+    }
+  ],
+  "upstream": {
+    "commit": "f37641be376725d324c56626007cc477f1249a69",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Pixal3D",
+    "url": "https://huggingface.co/Comfy-Org/Pixal3D/tree/f37641be376725d324c56626007cc477f1249a69"
+  }
+}
