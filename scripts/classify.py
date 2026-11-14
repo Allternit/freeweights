@@ -111,7 +111,11 @@ class Classifier:
                 hit = licenses.text_verdict(sha) if sha else None
                 if hit: res = (hit[0], "text-hash", None, hit[1], "license text matches one a person read")
                 else:
-                    key = f"text:{sha}" if sha else (f"held:{licenses.norm(tag)}" if licenses.norm(tag) in licenses.HELD else f"name:{(rec.get('cardData') or {}).get('license_name') or licenses.norm(tag) or 'none'}")
+                    lname = (rec.get("cardData") or {}).get("license_name")
+                    if sha: key = f"text:{sha}"
+                    elif licenses.norm(tag) == "other" and lname: key = f"name:{lname}"  # no text found: group by the declared name
+                    elif licenses.norm(tag) in licenses.HELD: key = f"held:{licenses.norm(tag)}"
+                    else: key = f"name:{lname or licenses.norm(tag) or 'none'}"
                     res = ("queue", "queue", key, tag, why)
         self._own[rid] = res
         return res
