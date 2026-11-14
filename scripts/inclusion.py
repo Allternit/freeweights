@@ -27,7 +27,7 @@ CI_FIXTURE = re.compile(r"(^|/)(tiny-random|tiny-testing|dummy|test-?model|rando
 SAME_AS_RULE = "weight sha256 set equal to a listed repo"
 
 # ---------- tiers ----------
-WATCH_LIST_FILE = os.path.join(ROOT, "policy", "watch-list.json")   # {"orgs": [...]} about 80 lab orgs
+WATCH_LIST_FILE = os.path.join(ROOT, "catalog", "watchlist.json")   # {"labs": [...], "quants": [...]}; written for discover.py, shared here
 T0_RECENT_MONTHS = 36
 T0_MIN_DOWNLOADS_30D = 1_000
 T0_MIN_LIKES = 100
@@ -43,7 +43,8 @@ RULE_METHODS = ("tag", "text-hash", "inherited", "reviewed")  # a "rule-based li
 # Popularity never delists: once listed, an entry stays when its numbers drop.
 
 def watch_list():
-    try: return {o.lower() for o in json.load(open(WATCH_LIST_FILE, encoding="utf-8")).get("orgs", [])}
+    """T0 lab orgs. Trusted quant orgs ("quants") are not T0: their repos are variants of a base."""
+    try: return {o.lower() for o in json.load(open(WATCH_LIST_FILE, encoding="utf-8")).get("labs", [])}
     except (OSError, ValueError): return set()
 
 def _months_since(iso, now):

@@ -142,6 +142,16 @@ def main():
     if errs: print("schema errors:\n  " + "\n  ".join(errs), file=sys.stderr); return 1
     os.makedirs(a.out_dir, exist_ok=True)
     out = os.path.join(a.out_dir, a.repo.replace("/", "__") + ".json")
+    if os.path.exists(out) and os.path.exists(out + ".minisig"):
+        try: old = json.load(open(out, encoding="utf-8"))
+        except ValueError: old = None
+        def strip(d):  # run timestamps change every run; they are not content
+            d = {k: v for k, v in d.items() if k != "created_at"}
+            d["sources"] = [{k: v for k, v in x.items() if k != "last_checked"} for x in d.get("sources", [])]
+            return d
+        if old is not None and strip(old) == strip(m):
+            print(f"unchanged {out} (kept existing signature)")
+            return 0
     open(out, "w", encoding="utf-8", newline="\n").write(canonical(m))
     if not a.no_sign: sign(out, a.repo, m["upstream"]["commit"], a.key)
     print(f"wrote {out} ({len(m['files'])} files, {sum(f['size'] for f in m['files'])} bytes)")
