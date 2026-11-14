@@ -1,0 +1,78 @@
+{
+  "id": "litellm",
+  "name": "LiteLLM",
+  "repo": "BerriAI/litellm",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "uv add litellm"
+  ],
+  "install_check": [
+    "uv add litellm"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "vllm",
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "BerriAI/litellm",
+    "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+    "homepage": "https://docs.litellm.ai/docs/",
+    "language": "Python",
+    "topics": [
+      "ai-gateway",
+      "anthropic",
+      "azure-openai",
+      "bedrock",
+      "gateway",
+      "langchain",
+      "litellm",
+      "llm",
+      "llm-gateway",
+      "llmops",
+      "mcp-gateway",
+      "openai",
+      "openai-proxy",
+      "rust",
+      "rust-ai",
+      "vertex-ai"
+    ],
+    "default_branch": "main",
+    "license": "",
+    "stars": 63257,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "580203cce6b4c1051433626e1f122fb0bdebea7f",
+    "release": {
+      "tag": "v1.109.1",
+      "date": "2026-11-12",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.109.1",
+      "commit": "6c4ead4fc064d14e36b0c69d6795acc130c866bf"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.109.1",
+    "commit": "6c4ead4fc064d14e36b0c69d6795acc130c866bf",
+    "date": "2026-11-12"
+  },
+  "description": "Calls 100+ model APIs in the OpenAI format, with a proxy for routing and budgets."
+}

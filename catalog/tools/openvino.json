@@ -1,0 +1,77 @@
+{
+  "id": "openvino",
+  "name": "OpenVINO",
+  "repo": "openvinotoolkit/openvino",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install -U openvino"
+  ],
+  "install_check": [
+    "pip install -U openvino"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "onnx"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "openvinotoolkit/openvino",
+    "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+    "homepage": "https://docs.openvino.ai",
+    "language": "C++",
+    "topics": [
+      "ai",
+      "computer-vision",
+      "deep-learning",
+      "deploy-ai",
+      "diffusion-models",
+      "generative-ai",
+      "good-first-issue",
+      "inference",
+      "llm-inference",
+      "natural-language-processing",
+      "nlp",
+      "openvino",
+      "optimize-ai",
+      "performance-boost",
+      "recommendation-system",
+      "speech-recognition",
+      "stable-diffusion",
+      "transformers",
+      "yolo"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 11158,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "333164412c823665d9c7ef0bb90fc6832f7e796b",
+    "release": {
+      "tag": "2026.4.1",
+      "date": "2026-10-01",
+      "url": "https://github.com/openvinotoolkit/openvino/releases/tag/2026.4.1",
+      "commit": "e213a14725769a6a2bf86fc86650aa78a9c05d3e"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "2026.4.1",
+    "commit": "e213a14725769a6a2bf86fc86650aa78a9c05d3e",
+    "date": "2026-10-01"
+  },
+  "description": "Intel's toolkit for optimizing and running models on Intel CPUs, GPUs and NPUs."
+}

@@ -1,0 +1,69 @@
+{
+  "id": "pyannote-audio",
+  "name": "pyannote.audio",
+  "repo": "pyannote/pyannote-audio",
+  "category": "speech",
+  "license": "MIT",
+  "install": [
+    "pip install pyannote.audio"
+  ],
+  "install_check": [
+    "pip install pyannote.audio"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "pyannote/pyannote-audio",
+    "description": "Neural building blocks for speaker diarization: speech activity detection, speaker change detection, overlapped speech detection, speaker embedding ",
+    "homepage": "https://www.pyannote.ai",
+    "language": "Jupyter Notebook",
+    "topics": [
+      "overlapped-speech-detection",
+      "pretrained-models",
+      "pytorch",
+      "speaker-change-detection",
+      "speaker-diarization",
+      "speaker-embedding",
+      "speaker-recognition",
+      "speaker-verification",
+      "speech-activity-detection",
+      "speech-processing",
+      "voice-activity-detection"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 10796,
+    "pushed_at": "2026-11-09",
+    "archived": false,
+    "branch_commit": "0d6f291328af48c7d93bcbb79bc92576af384ed7",
+    "release": {
+      "tag": "4.0.7",
+      "date": "2026-06-30",
+      "url": "https://github.com/pyannote/pyannote-audio/releases/tag/4.0.7",
+      "commit": "b749285c5cdd4636b2edc7f766f1352c8dde9369"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "4.0.7",
+    "commit": "b749285c5cdd4636b2edc7f766f1352c8dde9369",
+    "date": "2026-06-30"
+  },
+  "description": "Speaker diarization and voice activity detection in PyTorch."
+}

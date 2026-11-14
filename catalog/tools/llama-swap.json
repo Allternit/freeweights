@@ -1,0 +1,67 @@
+{
+  "id": "llama-swap",
+  "name": "llama-swap",
+  "repo": "mostlygeek/llama-swap",
+  "category": "distribution",
+  "license": "MIT",
+  "install": [
+    "brew tap mostlygeek/llama-swap",
+    "brew install llama-swap"
+  ],
+  "install_check": [
+    "brew install llama-swap"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "gguf"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "llama-cpp"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "mostlygeek/llama-swap",
+    "description": "Reliable model swapping for any local AI server. Chosen by thousands of users.  Batteries included. If we don't have it, you probably don't need it.",
+    "homepage": "https://llama-swap.ai",
+    "language": "Go",
+    "topics": [
+      "ai",
+      "golang",
+      "llama",
+      "llm",
+      "localllama",
+      "localllm"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 6254,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "85cbb9b59ba71d7cbd5c73b3a9e345118f0cb217",
+    "release": {
+      "tag": "v272",
+      "date": "2026-11-10",
+      "url": "https://github.com/mostlygeek/llama-swap/releases/tag/v272",
+      "commit": "802f1c4314e6f8162e6dca2e1567cfd9d0403629"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v272",
+    "commit": "802f1c4314e6f8162e6dca2e1567cfd9d0403629",
+    "date": "2026-11-10"
+  },
+  "description": "Swaps between local models on demand behind one OpenAI-compatible endpoint."
+}

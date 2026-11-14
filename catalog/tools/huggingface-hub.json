@@ -1,0 +1,64 @@
+{
+  "id": "huggingface-hub",
+  "name": "huggingface_hub",
+  "repo": "huggingface/huggingface_hub",
+  "category": "distribution",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install huggingface_hub"
+  ],
+  "install_check": [
+    "pip install huggingface_hub"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "gets",
+    "all_hosted": true
+  },
+  "use": "HF_ENDPOINT=https://freeweights.allternit.com hf download <id>",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "huggingface/huggingface_hub",
+    "description": "The official CLI and Python client for the Hugging Face Hub.",
+    "homepage": "https://huggingface.co/docs/huggingface_hub",
+    "language": "Python",
+    "topics": [
+      "deep-learning",
+      "hacktoberfest",
+      "machine-learning",
+      "model-hub",
+      "models",
+      "natural-language-processing",
+      "pretrained-models",
+      "pytorch"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 4052,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "2c61ae8c11eedb1b79e262dd9eb5e68962cac063",
+    "release": {
+      "tag": "v2.4.0",
+      "date": "2026-10-29",
+      "url": "https://github.com/huggingface/huggingface_hub/releases/tag/v2.4.0",
+      "commit": "3739729b86489e4ae28b5a62e622be320b141493"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.4.0",
+    "commit": "3739729b86489e4ae28b5a62e622be320b141493",
+    "date": "2026-10-29"
+  },
+  "description": "Python client and CLI for downloading and uploading models; Freeweights works as its endpoint."
+}

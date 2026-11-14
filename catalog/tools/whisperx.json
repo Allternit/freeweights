@@ -1,0 +1,63 @@
+{
+  "id": "whisperx",
+  "name": "WhisperX",
+  "repo": "m-bain/whisperX",
+  "category": "speech",
+  "license": "BSD-2-Clause",
+  "install": [
+    "pip install whisperx"
+  ],
+  "install_check": [
+    "pip install whisperx"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "m-bain/whisperX",
+    "description": "WhisperX:  Automatic Speech Recognition with Word-level Timestamps (& Diarization)",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "asr",
+      "speech",
+      "speech-recognition",
+      "speech-to-text",
+      "whisper"
+    ],
+    "default_branch": "main",
+    "license": "BSD-2-Clause",
+    "stars": 25272,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "b904f02b7e1f26fd10fb04840d655ff27e88e464",
+    "release": {
+      "tag": "v3.8.6",
+      "date": "2026-05-25",
+      "url": "https://github.com/m-bain/whisperX/releases/tag/v3.8.6",
+      "commit": "3ccc17b8de34f305300f8a3fd3c9f76ba820c0d0"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v3.8.6",
+    "commit": "3ccc17b8de34f305300f8a3fd3c9f76ba820c0d0",
+    "date": "2026-05-25"
+  },
+  "description": "Whisper with word-level timestamps and speaker labels."
+}

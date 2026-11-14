@@ -1,0 +1,72 @@
+{
+  "id": "ollama",
+  "name": "Ollama",
+  "kind": "tool",
+  "category": "inference",
+  "repo": "ollama/ollama",
+  "homepage": "https://ollama.com",
+  "license": "MIT",
+  "description": "Pull and run local models with one command.",
+  "install": [
+    "curl -fsSL https://ollama.com/install.sh | sh"
+  ],
+  "install_check": [
+    "curl -fsSL https://ollama.com/install.sh | sh"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "macOS",
+    "Linux",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "gguf"
+    ]
+  },
+  "use": "printf 'FROM ./<file>.gguf\\n' > Modelfile && ollama create <name> -f Modelfile",
+  "runs_with": [],
+  "github": {
+    "repo": "ollama/ollama",
+    "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+    "homepage": "https://ollama.com",
+    "language": "Go",
+    "topics": [
+      "deepseek",
+      "gemma",
+      "glm",
+      "go",
+      "golang",
+      "gpt-oss",
+      "llama",
+      "llm",
+      "llms",
+      "minimax",
+      "mistral",
+      "muse",
+      "ollama",
+      "qwen"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 186970,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "a5864fcb33969705de3c0ebfedf4b2a16c970bcc",
+    "release": {
+      "tag": "v0.40.16",
+      "date": "2026-11-09",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
+      "commit": "d63b702609c4300a2ca07be2bdb0adb9834725e5"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.40.16",
+    "commit": "d63b702609c4300a2ca07be2bdb0adb9834725e5",
+    "date": "2026-11-09"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "langgraph",
+  "name": "LangGraph",
+  "repo": "langchain-ai/langgraph",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install -U langgraph"
+  ],
+  "install_check": [
+    "pip install -U langgraph"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "langchain-ai/langgraph",
+    "description": "Build resilient agents.",
+    "homepage": "https://docs.langchain.com/oss/python/langgraph/",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "ai",
+      "ai-agents",
+      "chatgpt",
+      "deepagents",
+      "enterprise",
+      "framework",
+      "gemini",
+      "generative-ai",
+      "langchain",
+      "langgraph",
+      "llm",
+      "multiagent",
+      "open-source",
+      "openai",
+      "pydantic",
+      "python",
+      "rag"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 44964,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "08a2016953789a4f579b4d36bd1967941ec62012",
+    "release": {
+      "tag": "1.2.22",
+      "date": "2026-11-14",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.22",
+      "commit": "08a2016953789a4f579b4d36bd1967941ec62012"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "1.2.22",
+    "commit": "08a2016953789a4f579b4d36bd1967941ec62012",
+    "date": "2026-11-14"
+  },
+  "description": "Builds long-running, stateful agents as graphs of steps."
+}

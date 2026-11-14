@@ -1,0 +1,83 @@
+{
+  "id": "llama-factory",
+  "name": "LLaMA-Factory",
+  "repo": "hiyouga/LLaMA-Factory",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone --depth 1 https://github.com/hiyouga/LlamaFactory.git",
+    "pip install -e ."
+  ],
+  "install_check": [
+    "git clone --depth 1 https://github.com/hiyouga/LlamaFactory.git",
+    "pip install -e ."
+  ],
+  "platforms": [
+    "Linux (GPU)",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "hiyouga/LlamaFactory",
+    "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
+    "homepage": "https://llamafactory.readthedocs.io",
+    "language": "Python",
+    "topics": [
+      "agent",
+      "ai",
+      "deepseek",
+      "fine-tuning",
+      "gemma",
+      "gpt",
+      "instruction-tuning",
+      "large-language-models",
+      "llama",
+      "llama3",
+      "llm",
+      "lora",
+      "moe",
+      "nlp",
+      "peft",
+      "qlora",
+      "quantization",
+      "qwen",
+      "rlhf",
+      "transformers"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 76043,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "5f1f6ad537e69216e0604671223cc1eeecbb7ba6",
+    "release": {
+      "tag": "v0.9.5",
+      "date": "2026-05-30",
+      "url": "https://github.com/hiyouga/LlamaFactory/releases/tag/v0.9.5",
+      "commit": "7af909522a951e3ad9f022ea6f88b6755257eaa5"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.9.5",
+    "commit": "7af909522a951e3ad9f022ea6f88b6755257eaa5",
+    "date": "2026-05-30"
+  },
+  "description": "Unified fine-tuning of 100+ language and vision models, from the command line or a web UI."
+}

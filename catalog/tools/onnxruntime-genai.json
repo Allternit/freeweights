@@ -1,0 +1,63 @@
+{
+  "id": "onnxruntime-genai",
+  "name": "ONNX Runtime GenAI",
+  "repo": "microsoft/onnxruntime-genai",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "pip install onnxruntime-genai"
+  ],
+  "install_check": [
+    "pip install onnxruntime-genai"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "onnx"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [
+    "README.md"
+  ],
+  "github": {
+    "repo": "microsoft/onnxruntime-genai",
+    "description": "Generative AI with ONNX Runtime",
+    "homepage": "",
+    "language": "C++",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 1157,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "da29a76b66e7d69658e2dfd1026322a3b370c2a1",
+    "release": {
+      "tag": "v0.19.0",
+      "date": "2026-11-04",
+      "url": "https://github.com/microsoft/onnxruntime-genai/releases/tag/v0.19.0",
+      "commit": "d01b2441a72d4e3223415b9b08474c6e65fbc028"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.19.0",
+    "commit": "d01b2441a72d4e3223415b9b08474c6e65fbc028",
+    "date": "2026-11-04"
+  },
+  "description": "Generation loop for ONNX models: run language models on CPU, GPU and NPUs with ONNX Runtime."
+}

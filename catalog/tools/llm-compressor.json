@@ -1,0 +1,62 @@
+{
+  "id": "llm-compressor",
+  "name": "LLM Compressor",
+  "repo": "vllm-project/llm-compressor",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install llmcompressor"
+  ],
+  "install_check": [
+    "pip install llmcompressor"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "vllm-project/llm-compressor",
+    "description": "State-of-the-art LLM compression, built for production inference with vLLM",
+    "homepage": "https://docs.vllm.ai/projects/llm-compressor",
+    "language": "Python",
+    "topics": [
+      "compression",
+      "quantization"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3966,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "f8a3abb5358765a1864783deb3e38d3e2452912a",
+    "release": {
+      "tag": "0.15.0",
+      "date": "2026-10-29",
+      "url": "https://github.com/vllm-project/llm-compressor/releases/tag/0.15.0",
+      "commit": "04546e05125298c87b267253959eff39c6968925"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "0.15.0",
+    "commit": "04546e05125298c87b267253959eff39c6968925",
+    "date": "2026-10-29"
+  },
+  "description": "Quantizes and prunes language models into formats vLLM loads directly."
+}

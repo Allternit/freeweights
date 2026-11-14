@@ -1,0 +1,55 @@
+{
+  "id": "ai-toolkit",
+  "name": "AI Toolkit",
+  "repo": "ostris/ai-toolkit",
+  "category": "training",
+  "license": "MIT",
+  "install": [
+    "git clone https://github.com/ostris/ai-toolkit.git"
+  ],
+  "install_check": [
+    "git clone https://github.com/ostris/ai-toolkit.git"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-to-image",
+      "text-to-video"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "ostris/ai-toolkit",
+    "description": "The ultimate training toolkit for finetuning diffusion models",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 12629,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "d6a18ad72da9abca3ffb67ea8e42c25764eee61a",
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "d6a18ad72da9abca3ffb67ea8e42c25764eee61a",
+    "date": "2026-11-13"
+  },
+  "description": "Trains LoRAs for FLUX and other image and video diffusion models, with a web UI."
+}

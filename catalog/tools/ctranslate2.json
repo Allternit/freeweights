@@ -1,0 +1,78 @@
+{
+  "id": "ctranslate2",
+  "name": "CTranslate2",
+  "repo": "OpenNMT/CTranslate2",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "pip install ctranslate2"
+  ],
+  "install_check": [
+    "pip install ctranslate2"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Fast inference engine for Transformer models on CPU and GPU, behind faster-whisper.",
+  "github": {
+    "repo": "OpenNMT/CTranslate2",
+    "description": "Fast inference engine for Transformer models",
+    "homepage": "https://opennmt.net/CTranslate2",
+    "language": "C++",
+    "topics": [
+      "avx",
+      "avx2",
+      "cpp",
+      "cuda",
+      "deep-learning",
+      "deep-neural-networks",
+      "gemm",
+      "inference",
+      "intrinsics",
+      "machine-translation",
+      "mkl",
+      "neon",
+      "neural-machine-translation",
+      "onednn",
+      "openmp",
+      "opennmt",
+      "parallel-computing",
+      "quantization",
+      "thrust",
+      "transformer-models"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 4750,
+    "pushed_at": "2026-11-10",
+    "archived": false,
+    "branch_commit": "a22ba1c63ee35d1a0d25db149aa2a66d36a6a732",
+    "release": {
+      "tag": "v4.9.0",
+      "date": "2026-11-10",
+      "url": "https://github.com/OpenNMT/CTranslate2/releases/tag/v4.9.0",
+      "commit": "a22ba1c63ee35d1a0d25db149aa2a66d36a6a732"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v4.9.0",
+    "commit": "a22ba1c63ee35d1a0d25db149aa2a66d36a6a732",
+    "date": "2026-11-10"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ultralytics",
+  "name": "Ultralytics",
+  "repo": "ultralytics/ultralytics",
+  "category": "inference",
+  "license": "AGPL-3.0",
+  "install": [
+    "pip install ultralytics"
+  ],
+  "install_check": [
+    "pip install ultralytics"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "onnx"
+    ]
+  },
+  "use": "yolo predict model=<weights>.pt source=image.jpg",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [
+    "docs/en/quickstart.md"
+  ],
+  "github": {
+    "repo": "ultralytics/ultralytics",
+    "description": "Ultralytics YOLO27, YOLO26, YOLO11, YOLOv8 — object detection, instance segmentation, semantic segmentation, image classification, pose estimation, object tracking",
+    "homepage": "https://platform.ultralytics.com",
+    "language": "Python",
+    "topics": [
+      "computer-vision",
+      "deep-learning",
+      "image-classification",
+      "instance-segmentation",
+      "machine-learning",
+      "object-detection",
+      "object-tracking",
+      "pose-estimation",
+      "python",
+      "pytorch",
+      "rotated-object-detection",
+      "segment-anything",
+      "semantic-segmentation",
+      "tracking",
+      "ultralytics",
+      "yolo",
+      "yolo11",
+      "yolo26",
+      "yolo27",
+      "yolov8"
+    ],
+    "default_branch": "main",
+    "license": "AGPL-3.0",
+    "stars": 63407,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "d0cfceaf16f8d13dc3e62270744e8f8a44640448",
+    "release": {
+      "tag": "v8.4.213",
+      "date": "2026-11-14",
+      "url": "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.213",
+      "commit": "d0cfceaf16f8d13dc3e62270744e8f8a44640448"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v8.4.213",
+    "commit": "d0cfceaf16f8d13dc3e62270744e8f8a44640448",
+    "date": "2026-11-14"
+  },
+  "description": "YOLO object detection, segmentation, pose and classification models: train, run and export.",
+  "license_note": "AGPL-3.0, a copyleft license: if you run a modified version as a network service you must publish its source. The project also sells a separate enterprise license; Freeweights does not."
+}

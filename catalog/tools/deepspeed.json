@@ -1,0 +1,69 @@
+{
+  "id": "deepspeed",
+  "name": "DeepSpeed",
+  "repo": "deepspeedai/DeepSpeed",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install deepspeed"
+  ],
+  "install_check": [
+    "pip install deepspeed"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "deepspeedai/DeepSpeed",
+    "description": "DeepSpeed is a deep learning optimization library that makes distributed training and inference easy, efficient, and effective.",
+    "homepage": "https://www.deepspeed.ai/",
+    "language": "Python",
+    "topics": [
+      "billion-parameters",
+      "compression",
+      "data-parallelism",
+      "deep-learning",
+      "gpu",
+      "inference",
+      "machine-learning",
+      "mixture-of-experts",
+      "model-parallelism",
+      "pipeline-parallelism",
+      "pytorch",
+      "trillion-parameters",
+      "zero"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 43325,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "892ed83e417df01d9d4f21f559a0b88183cf5e4c",
+    "release": {
+      "tag": "v0.20.0",
+      "date": "2026-11-12",
+      "url": "https://github.com/deepspeedai/DeepSpeed/releases/tag/v0.20.0",
+      "commit": "3202612e4c0dd40df9de5b969cc1113014923c69"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.20.0",
+    "commit": "3202612e4c0dd40df9de5b969cc1113014923c69",
+    "date": "2026-11-12"
+  },
+  "description": "Distributed training and inference library for very large models."
+}

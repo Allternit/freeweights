@@ -1,0 +1,63 @@
+{
+  "id": "lighteval",
+  "name": "LightEval",
+  "repo": "huggingface/lighteval",
+  "category": "eval",
+  "license": "MIT",
+  "install": [
+    "pip install lighteval"
+  ],
+  "install_check": [
+    "pip install lighteval"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "huggingface/lighteval",
+    "description": "Lighteval is your all-in-one toolkit for evaluating LLMs across multiple backends",
+    "homepage": "https://huggingface.co/docs/lighteval/en/index",
+    "language": "Python",
+    "topics": [
+      "evaluation",
+      "evaluation-framework",
+      "evaluation-metrics",
+      "huggingface"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 2586,
+    "pushed_at": "2026-11-11",
+    "archived": false,
+    "branch_commit": "b97a6533bec22c4184b88526366fdf5d73d502c9",
+    "release": {
+      "tag": "v0.13.0",
+      "date": "2025-11-24",
+      "url": "https://github.com/huggingface/lighteval/releases/tag/v0.13.0",
+      "commit": "7c1cd62716b0a198a630c26d781430c54726cd02"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.13.0",
+    "commit": "7c1cd62716b0a198a630c26d781430c54726cd02",
+    "date": "2025-11-24"
+  },
+  "description": "Hugging Face's toolkit for evaluating language models across backends."
+}

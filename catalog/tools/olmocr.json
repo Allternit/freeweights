@@ -1,0 +1,55 @@
+{
+  "id": "olmocr",
+  "name": "olmOCR",
+  "repo": "allenai/olmocr",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install olmocr[gpu]"
+  ],
+  "install_check": [
+    "pip install olmocr"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "allenai/olmocr",
+    "description": "Toolkit for linearizing PDFs for LLM datasets/training",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 19822,
+    "pushed_at": "2026-03-25",
+    "archived": false,
+    "branch_commit": "f7cfe4c22098b154c76b6ec950d1c0a464eecf8d",
+    "release": {
+      "tag": "v0.4.27",
+      "date": "2026-03-12",
+      "url": "https://github.com/allenai/olmocr/releases/tag/v0.4.27",
+      "commit": "1e139a5ea61f1668164e6b63357d7284a8391615"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.4.27",
+    "commit": "1e139a5ea61f1668164e6b63357d7284a8391615",
+    "date": "2026-03-12"
+  },
+  "description": "Converts PDFs to clean text with a vision-language model, built for training-data scale."
+}

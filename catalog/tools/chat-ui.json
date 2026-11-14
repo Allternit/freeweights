@@ -1,0 +1,72 @@
+{
+  "id": "chat-ui",
+  "name": "Hugging Face Chat UI",
+  "repo": "huggingface/chat-ui",
+  "category": "apps",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone https://github.com/huggingface/chat-ui"
+  ],
+  "install_check": [
+    "git clone https://github.com/huggingface/chat-ui"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "vllm"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [
+    "README.md"
+  ],
+  "github": {
+    "repo": "huggingface/chat-ui",
+    "description": "The open source codebase powering HuggingChat",
+    "homepage": "https://huggingface.co/chat",
+    "language": "TypeScript",
+    "topics": [
+      "chatgpt",
+      "hacktoberfest",
+      "huggingface",
+      "llm",
+      "svelte",
+      "svelte-kit",
+      "sveltekit",
+      "tailwindcss",
+      "typescript"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 11036,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "f543c9a1f38683ce6cebf82c007bbef2e24ee867",
+    "release": {
+      "tag": "v0.10.0",
+      "date": "2026-05-11",
+      "url": "https://github.com/huggingface/chat-ui/releases/tag/v0.10.0",
+      "commit": "cac5329f4c7f95cffc2988546c34a12b1730969f"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.10.0",
+    "commit": "cac5329f4c7f95cffc2988546c34a12b1730969f",
+    "date": "2026-05-11"
+  },
+  "description": "The open-source interface behind HuggingChat, for any OpenAI-compatible endpoint."
+}

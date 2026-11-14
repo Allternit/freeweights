@@ -1,0 +1,66 @@
+{
+  "id": "mistral-rs",
+  "name": "mistral.rs",
+  "repo": "EricLBuehler/mistral.rs",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/EricLBuehler/mistral.rs/master/install.sh | sh"
+  ],
+  "install_check": [
+    "install.sh | sh"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors",
+      "gguf"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "EricLBuehler/mistral.rs",
+    "description": "Fast, flexible LLM inference",
+    "homepage": "",
+    "language": "Rust",
+    "topics": [
+      "llm",
+      "rust",
+      "uqff"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 7837,
+    "pushed_at": "2026-11-09",
+    "archived": false,
+    "branch_commit": "fb4cdc3730dc64b366724e7637a205a8b7747499",
+    "release": {
+      "tag": "v0.9.5",
+      "date": "2026-10-19",
+      "url": "https://github.com/EricLBuehler/mistral.rs/releases/tag/v0.9.5",
+      "commit": "465191d0b0a7e2432d327b0de06204ab3f94d3a2"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.9.5",
+    "commit": "465191d0b0a7e2432d327b0de06204ab3f94d3a2",
+    "date": "2026-10-19"
+  },
+  "description": "Rust inference engine for text, vision, image and speech models with an OpenAI-compatible server."
+}

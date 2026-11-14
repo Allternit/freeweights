@@ -1,0 +1,79 @@
+{
+  "id": "speechbrain",
+  "name": "SpeechBrain",
+  "repo": "speechbrain/speechbrain",
+  "category": "speech",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install speechbrain"
+  ],
+  "install_check": [
+    "pip install speechbrain"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Speech toolkit for recognition, enhancement and speaker tasks in PyTorch.",
+  "github": {
+    "repo": "speechbrain/speechbrain",
+    "description": "A PyTorch-based Speech Toolkit",
+    "homepage": "http://speechbrain.github.io",
+    "language": "Python",
+    "topics": [
+      "asr",
+      "audio",
+      "audio-processing",
+      "deep-learning",
+      "huggingface",
+      "language-model",
+      "pytorch",
+      "speaker-diarization",
+      "speaker-recognition",
+      "speaker-verification",
+      "speech-enhancement",
+      "speech-processing",
+      "speech-recognition",
+      "speech-separation",
+      "speech-to-text",
+      "speech-toolkit",
+      "speechrecognition",
+      "spoken-language-understanding",
+      "transformers",
+      "voice-recognition"
+    ],
+    "default_branch": "develop",
+    "license": "Apache-2.0",
+    "stars": 11937,
+    "pushed_at": "2026-10-14",
+    "archived": false,
+    "branch_commit": "c0241278f93ef02cd5191f03caf4e5f8e1292bf6",
+    "release": {
+      "tag": "v1.1.2",
+      "date": "2026-10-14",
+      "url": "https://github.com/speechbrain/speechbrain/releases/tag/v1.1.2",
+      "commit": "c0241278f93ef02cd5191f03caf4e5f8e1292bf6"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.1.2",
+    "commit": "c0241278f93ef02cd5191f03caf4e5f8e1292bf6",
+    "date": "2026-10-14"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "mlx-vlm",
+  "name": "MLX-VLM",
+  "repo": "Blaizzy/mlx-vlm",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "pip install -U mlx-vlm"
+  ],
+  "install_check": [
+    "pip install -U mlx-vlm"
+  ],
+  "platforms": [
+    "macOS (Apple silicon)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "mlx"
+    ],
+    "tasks": [
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Run and fine-tune vision-language models on a Mac with MLX.",
+  "github": {
+    "repo": "Neywa-Labs/mlx-vlm",
+    "description": "MLX-VLM is a package for inference and fine-tuning of Vision Language Models (VLMs) on your Mac using MLX.",
+    "homepage": "https://neywa-labs.github.io/mlx-vlm/",
+    "language": "Python",
+    "topics": [
+      "apple-silicon",
+      "florence2",
+      "idefics",
+      "llava",
+      "llm",
+      "local-ai",
+      "mlx",
+      "molmo",
+      "paligemma",
+      "pixtral",
+      "vision-framework",
+      "vision-language-model",
+      "vision-transformer"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 5846,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "e267ccf740b8b9dfc4529665b5efd8b9e1eff187",
+    "release": {
+      "tag": "v0.7.12",
+      "date": "2026-11-04",
+      "url": "https://github.com/Neywa-Labs/mlx-vlm/releases/tag/v0.7.12",
+      "commit": "7230940302cbe602054650f18a2f77db945bc57a"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.7.12",
+    "commit": "7230940302cbe602054650f18a2f77db945bc57a",
+    "date": "2026-11-04"
+  }
+}

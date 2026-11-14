@@ -1,0 +1,67 @@
+{
+  "id": "mergekit",
+  "name": "mergekit",
+  "repo": "arcee-ai/mergekit",
+  "category": "quantization",
+  "license": "LGPL-3.0",
+  "install": [
+    "pip install -e ."
+  ],
+  "install_check": [
+    "pip install -e ."
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "mergekit-yaml config.yml ./merged",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [
+    "README.md"
+  ],
+  "github": {
+    "repo": "arcee-ai/mergekit",
+    "description": "Tools for merging pretrained large language models.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "llama",
+      "llm",
+      "model-merging"
+    ],
+    "default_branch": "main",
+    "license": "LGPL-3.0",
+    "stars": 7453,
+    "pushed_at": "2026-10-31",
+    "archived": false,
+    "branch_commit": "0f1423ecf0f06f46f17b045b333b6c445705390e",
+    "release": {
+      "tag": "v0.1.5",
+      "date": "2026-10-20",
+      "url": "https://github.com/arcee-ai/mergekit/releases/tag/v0.1.5",
+      "commit": "c91c787ff9293bda5d67bf59942700204f7ac2ba"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.1.5",
+    "commit": "c91c787ff9293bda5d67bf59942700204f7ac2ba",
+    "date": "2026-10-20"
+  },
+  "description": "Merges pretrained language models by weight arithmetic, SLERP, TIES and other methods."
+}

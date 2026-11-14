@@ -1,0 +1,71 @@
+{
+  "id": "optimum",
+  "name": "Optimum",
+  "repo": "huggingface/optimum",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "python -m pip install optimum"
+  ],
+  "install_check": [
+    "python -m pip install optimum"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors",
+      "onnx"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "huggingface/optimum",
+    "description": "🚀 Accelerate inference and training of 🤗 Transformers, Diffusers, TIMM and Sentence Transformers with easy to use hardware optimization tools",
+    "homepage": "https://huggingface.co/docs/optimum/main/",
+    "language": "Python",
+    "topics": [
+      "graphcore",
+      "habana",
+      "inference",
+      "intel",
+      "onnx",
+      "onnxruntime",
+      "optimization",
+      "pytorch",
+      "quantization",
+      "tflite",
+      "training",
+      "transformers"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3521,
+    "pushed_at": "2026-11-09",
+    "archived": false,
+    "branch_commit": "87ba58464371163e4f23d8fcc155141bab8c55de",
+    "release": {
+      "tag": "v2.3.0",
+      "date": "2026-08-04",
+      "url": "https://github.com/huggingface/optimum/releases/tag/v2.3.0",
+      "commit": "982e495540364f95da1e4b6f62d2d4e5907d08fd"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.3.0",
+    "commit": "982e495540364f95da1e4b6f62d2d4e5907d08fd",
+    "date": "2026-08-04"
+  },
+  "description": "Exports Transformers models to ONNX and other runtimes, and applies quantization."
+}

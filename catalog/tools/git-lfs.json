@@ -1,0 +1,61 @@
+{
+  "id": "git-lfs",
+  "name": "Git LFS",
+  "repo": "git-lfs/git-lfs",
+  "category": "distribution",
+  "license": "MIT",
+  "install": [
+    "brew install git-lfs"
+  ],
+  "install_check": [
+    "brew install git-lfs"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "gets",
+    "all_hosted": true
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [
+    "INSTALLING.md"
+  ],
+  "github": {
+    "repo": "git-lfs/git-lfs",
+    "description": "Git extension for versioning large files",
+    "homepage": "https://git-lfs.com",
+    "language": "Go",
+    "topics": [
+      "git",
+      "git-lfs",
+      "go"
+    ],
+    "default_branch": "main",
+    "license": "",
+    "stars": 14595,
+    "pushed_at": "2026-11-06",
+    "archived": false,
+    "branch_commit": "33752a72ba9a30fc591a8a58ed8fc55197a36928",
+    "release": {
+      "tag": "v3.8.1",
+      "date": "2026-10-22",
+      "url": "https://github.com/git-lfs/git-lfs/releases/tag/v3.8.1",
+      "commit": "a662a6dbfedf706cfa9fc7a5b7bcc7ba2e2c8a65"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v3.8.1",
+    "commit": "a662a6dbfedf706cfa9fc7a5b7bcc7ba2e2c8a65",
+    "date": "2026-10-22"
+  },
+  "description": "Git extension for large files, the way models are stored in repositories."
+}

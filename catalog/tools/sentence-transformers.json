@@ -1,0 +1,62 @@
+{
+  "id": "sentence-transformers",
+  "name": "Sentence Transformers",
+  "repo": "huggingface/sentence-transformers",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install -U sentence-transformers"
+  ],
+  "install_check": [
+    "pip install -U sentence-transformers"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "huggingface/sentence-transformers",
+    "description": "State-of-the-Art Embeddings, Retrieval, and Reranking",
+    "homepage": "https://www.sbert.net",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 19285,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "688fd663e7b242f41f3f62296d08c69937efeb00",
+    "release": {
+      "tag": "v6.3.0",
+      "date": "2026-11-11",
+      "url": "https://github.com/huggingface/sentence-transformers/releases/tag/v6.3.0",
+      "commit": "cddcaee3405a5efde83c1d98f89c6ebd6733dab6"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v6.3.0",
+    "commit": "cddcaee3405a5efde83c1d98f89c6ebd6733dab6",
+    "date": "2026-11-11"
+  },
+  "description": "Compute, search with and fine-tune text embedding and reranker models."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "tei",
+  "name": "Text Embeddings Inference",
+  "repo": "huggingface/text-embeddings-inference",
+  "category": "retrieval",
+  "license": "Apache-2.0",
+  "install": [
+    "docker run --gpus all -p 8080:80 -v $PWD/data:/data --pull always ghcr.io/huggingface/text-embeddings-inference:latest --model-id <id>"
+  ],
+  "install_check": [
+    "ghcr.io/huggingface/text-embeddings-inference"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "huggingface/text-embeddings-inference",
+    "description": "A blazing fast inference solution for text embeddings models",
+    "homepage": "https://huggingface.co/docs/text-embeddings-inference/quick_tour",
+    "language": "Rust",
+    "topics": [
+      "ai",
+      "embeddings",
+      "huggingface",
+      "llm",
+      "ml"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 5121,
+    "pushed_at": "2026-11-10",
+    "archived": false,
+    "branch_commit": "da9a9ce190444ef4326e1fbab15d298f0a1016c7",
+    "release": {
+      "tag": "v1.9.4",
+      "date": "2026-09-15",
+      "url": "https://github.com/huggingface/text-embeddings-inference/releases/tag/v1.9.4",
+      "commit": "e80ef225ed0e6cb1717ce632a6a84b6cf211bb67"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.9.4",
+    "commit": "e80ef225ed0e6cb1717ce632a6a84b6cf211bb67",
+    "date": "2026-09-15"
+  },
+  "description": "Fast server for embedding and reranker models, run from a container."
+}

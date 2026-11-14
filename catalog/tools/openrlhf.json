@@ -1,0 +1,68 @@
+{
+  "id": "openrlhf",
+  "name": "OpenRLHF",
+  "repo": "OpenRLHF/OpenRLHF",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install openrlhf"
+  ],
+  "install_check": [
+    "pip install openrlhf"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Reinforcement learning from human feedback and reasoning-model training on Ray and vLLM.",
+  "github": {
+    "repo": "OpenRLHF/OpenRLHF",
+    "description": "An Easy-to-use, Scalable and High-performance Agentic RL Framework based on Ray (PPO & DAPO & REINFORCE++ &  VLM & TIS & vLLM & Ray & Async  RL)",
+    "homepage": "https://openrlhf.readthedocs.io/",
+    "language": "Python",
+    "topics": [
+      "large-language-models",
+      "proximal-policy-optimization",
+      "raylib",
+      "reinforcement-learning",
+      "reinforcement-learning-from-human-feedback",
+      "transformers",
+      "visual-language-models",
+      "vllm"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 10153,
+    "pushed_at": "2026-11-03",
+    "archived": false,
+    "branch_commit": "26494490bc237f6c3af62dab6117e6bbb0a78dba",
+    "release": {
+      "tag": "v0.11.2",
+      "date": "2026-09-14",
+      "url": "https://github.com/OpenRLHF/OpenRLHF/releases/tag/v0.11.2",
+      "commit": "17fd4a79cc87dfb2f6185ffac634066525bcd917"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.11.2",
+    "commit": "17fd4a79cc87dfb2f6185ffac634066525bcd917",
+    "date": "2026-09-14"
+  }
+}

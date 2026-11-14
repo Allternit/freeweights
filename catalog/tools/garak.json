@@ -1,0 +1,64 @@
+{
+  "id": "garak",
+  "name": "garak",
+  "repo": "NVIDIA/garak",
+  "category": "safety",
+  "license": "Apache-2.0",
+  "install": [
+    "python -m pip install -U garak"
+  ],
+  "install_check": [
+    "python -m pip install -U garak"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "NVIDIA/garak",
+    "description": "the LLM vulnerability scanner",
+    "homepage": "https://discord.gg/uVch4puUCs",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "llm-evaluation",
+      "llm-security",
+      "security-scanners",
+      "vulnerability-assessment"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 10025,
+    "pushed_at": "2026-11-06",
+    "archived": false,
+    "branch_commit": "892779207cbc38f65a738ef9cbdfbc1e83aa0b55",
+    "release": {
+      "tag": "v0.17.1",
+      "date": "2026-10-16",
+      "url": "https://github.com/NVIDIA/garak/releases/tag/v0.17.1",
+      "commit": "7aa740fe7412cc9bc33cdc39ca211843223cd3e1"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.17.1",
+    "commit": "7aa740fe7412cc9bc33cdc39ca211843223cd3e1",
+    "date": "2026-10-16"
+  },
+  "description": "Probes a language model for jailbreaks, leakage and other failure modes."
+}

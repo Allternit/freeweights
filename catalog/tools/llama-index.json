@@ -1,0 +1,69 @@
+{
+  "id": "llama-index",
+  "name": "LlamaIndex",
+  "repo": "run-llama/llama_index",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install llama-index"
+  ],
+  "install_check": [
+    "pip install llama-index"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "run-llama/llama_index",
+    "description": "LlamaIndex is the document processing platform for AI",
+    "homepage": "https://developers.llamaindex.ai",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "application",
+      "data",
+      "fine-tuning",
+      "framework",
+      "llamaindex",
+      "llm",
+      "multi-agents",
+      "rag",
+      "vector-database"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 52901,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "99d7433f6f71888951379ccca9294e272442c832",
+    "release": {
+      "tag": "v0.14.26",
+      "date": "2026-11-13",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.26",
+      "commit": "3aaab93a2e823b9637ce3c6f0611e5e18a4a7a5b"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.14.26",
+    "commit": "3aaab93a2e823b9637ce3c6f0611e5e18a4a7a5b",
+    "date": "2026-11-13"
+  },
+  "description": "Data framework that connects language models to your documents and tools."
+}

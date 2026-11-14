@@ -1,0 +1,63 @@
+{
+  "id": "axolotl",
+  "name": "Axolotl",
+  "kind": "tool",
+  "category": "training",
+  "repo": "axolotl-ai-cloud/axolotl",
+  "homepage": "https://docs.axolotl.ai",
+  "license": "Apache-2.0",
+  "description": "Fine-tuning from a single config file, with LoRA and full-weight options.",
+  "install": [
+    "uv pip install torch==2.14.0 torchvision",
+    "uv pip install axolotl[deepspeed]"
+  ],
+  "install_check": [
+    "uv pip install axolotl[deepspeed]"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "axolotl train config.yml   # base_model: <id>",
+  "runs_with": [],
+  "github": {
+    "repo": "axolotl-ai-cloud/axolotl",
+    "description": "Go ahead and axolotl questions",
+    "homepage": "https://docs.axolotl.ai",
+    "language": "Python",
+    "topics": [
+      "fine-tuning",
+      "llm"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 12701,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "f2158ff1922b2bcf701854a17e47cc91ba26e7e9",
+    "release": {
+      "tag": "v0.21.1",
+      "date": "2026-10-27",
+      "url": "https://github.com/axolotl-ai-cloud/axolotl/releases/tag/v0.21.1",
+      "commit": "240c1b22e0556b54f90f282fae7621ba91f15b9b"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.21.1",
+    "commit": "240c1b22e0556b54f90f282fae7621ba91f15b9b",
+    "date": "2026-10-27"
+  }
+}

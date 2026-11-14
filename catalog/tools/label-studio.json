@@ -1,0 +1,78 @@
+{
+  "id": "label-studio",
+  "name": "Label Studio",
+  "repo": "HumanSignal/label-studio",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install label-studio"
+  ],
+  "install_check": [
+    "pip install label-studio"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Annotation tool for text, image, audio and video data.",
+  "github": {
+    "repo": "HumanSignal/label-studio",
+    "description": "Label Studio is a multi-type data labeling and annotation tool with standardized output format",
+    "homepage": "https://labelstud.io",
+    "language": "TypeScript",
+    "topics": [
+      "annotation",
+      "annotation-tool",
+      "annotations",
+      "boundingbox",
+      "computer-vision",
+      "data-labeling",
+      "dataset",
+      "datasets",
+      "deep-learning",
+      "image-annotation",
+      "image-classification",
+      "image-labeling",
+      "image-labelling-tool",
+      "label-studio",
+      "labeling",
+      "labeling-tool",
+      "mlops",
+      "semantic-segmentation",
+      "text-annotation",
+      "yolo"
+    ],
+    "default_branch": "develop",
+    "license": "Apache-2.0",
+    "stars": 28693,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "8831d8b9eb507ebb3ce29ab0021e494bc1893a16",
+    "release": {
+      "tag": "1.23.2",
+      "date": "2026-09-29",
+      "url": "https://github.com/HumanSignal/label-studio/releases/tag/1.23.2",
+      "commit": "df96d79183156e556d91825d15fa7721f1145e1a"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "1.23.2",
+    "commit": "df96d79183156e556d91825d15fa7721f1145e1a",
+    "date": "2026-09-29"
+  }
+}

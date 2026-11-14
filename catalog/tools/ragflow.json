@@ -1,0 +1,78 @@
+{
+  "id": "ragflow",
+  "name": "RAGFlow",
+  "repo": "infiniflow/ragflow",
+  "category": "retrieval",
+  "license": "Apache-2.0",
+  "install": [
+    "docker compose -f docker-compose.yml up -d"
+  ],
+  "install_check": [
+    "docker compose -f docker-compose.yml up -d"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [
+    "README.md"
+  ],
+  "github": {
+    "repo": "infiniflow/ragflow",
+    "description": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engine that grew into context infrastructure.",
+    "homepage": "https://ragflow.io",
+    "language": "Go",
+    "topics": [
+      "agent-harness",
+      "agent-native-database",
+      "agentic-ai",
+      "agentic-retrieval",
+      "agentic-search",
+      "ai",
+      "ai-agents",
+      "context-engine",
+      "context-engineering",
+      "context-management",
+      "harness-engineering",
+      "knowledge-compilation",
+      "rag",
+      "retrieval-augmented-generation",
+      "retrieval-harness",
+      "search-harness"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 94154,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "f9a53a3779a12b5abb8a254ec9384c2af7fae4b4",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-11-06",
+      "url": "https://github.com/infiniflow/ragflow/releases/tag/v1.0.0",
+      "commit": "db1cd5929a7885a3074547791f5ecc4d2f891739"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.0.0",
+    "commit": "db1cd5929a7885a3074547791f5ecc4d2f891739",
+    "date": "2026-11-06"
+  },
+  "description": "Retrieval-augmented generation engine with deep document understanding."
+}

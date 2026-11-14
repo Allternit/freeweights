@@ -1,0 +1,63 @@
+{
+  "id": "megatron-lm",
+  "name": "Megatron-LM",
+  "repo": "NVIDIA/Megatron-LM",
+  "category": "training",
+  "license": "BSD-3-Clause",
+  "install": [
+    "pip install megatron-core"
+  ],
+  "install_check": [
+    "pip install megatron-core"
+  ],
+  "platforms": [
+    "Linux (NVIDIA)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "NVIDIA's library for training transformer models across thousands of GPUs.",
+  "github": {
+    "repo": "NVIDIA/Megatron-LM",
+    "description": "Ongoing research training transformer models at scale",
+    "homepage": "https://docs.nvidia.com/megatron-core/developer-guide/latest/get-started/quickstart.html",
+    "language": "Python",
+    "topics": [
+      "large-language-models",
+      "model-para",
+      "transformers"
+    ],
+    "default_branch": "main",
+    "license": "",
+    "stars": 18394,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "1c3539e6e95b39f3cab215988f143ddf4dd8a9c3",
+    "release": {
+      "tag": "core_v0.20.0",
+      "date": "2026-10-29",
+      "url": "https://github.com/NVIDIA/Megatron-LM/releases/tag/core_v0.20.0",
+      "commit": "685fb8bd970185e9ac3283fe32a5d6667bf4b268"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "core_v0.20.0",
+    "commit": "685fb8bd970185e9ac3283fe32a5d6667bf4b268",
+    "date": "2026-10-29"
+  }
+}

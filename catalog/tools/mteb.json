@@ -1,0 +1,79 @@
+{
+  "id": "mteb",
+  "name": "MTEB",
+  "repo": "embeddings-benchmark/mteb",
+  "category": "eval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install mteb"
+  ],
+  "install_check": [
+    "pip install mteb"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "embeddings-benchmark/mteb",
+    "description": "MTEB: State-of-the-art evaluation of embeddings across languages and modalities",
+    "homepage": "https://docs.mteb.org",
+    "language": "Python",
+    "topics": [
+      "benchmark",
+      "bitext-mining",
+      "clustering",
+      "embeddings",
+      "evaluation",
+      "information-retrieval",
+      "low-resource-nlp",
+      "mteb",
+      "multilingual-nlp",
+      "multimodal",
+      "neural-search",
+      "reranking",
+      "retrieval",
+      "sbert",
+      "semantic-search",
+      "sentence-transformers",
+      "sts",
+      "text-classification",
+      "text-embedding"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3516,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "c090baaf03fe1f141bfb943489ae6d72c4f4b04d",
+    "release": {
+      "tag": "2.27.14",
+      "date": "2026-11-13",
+      "url": "https://github.com/embeddings-benchmark/mteb/releases/tag/2.27.14",
+      "commit": "6f41981b1738642f625955ba0388d7b5011351b9"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "2.27.14",
+    "commit": "6f41981b1738642f625955ba0388d7b5011351b9",
+    "date": "2026-11-13"
+  },
+  "description": "Benchmark and library for scoring text, image and audio embedding models."
+}

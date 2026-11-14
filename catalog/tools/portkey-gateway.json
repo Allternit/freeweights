@@ -1,0 +1,77 @@
+{
+  "id": "portkey-gateway",
+  "name": "Portkey AI Gateway",
+  "repo": "Portkey-AI/gateway",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "npx @portkey-ai/gateway"
+  ],
+  "install_check": [
+    "npx @portkey-ai/gateway"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "vllm",
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "Portkey-AI/gateway",
+    "description": "A blazing fast AI Gateway with integrated guardrails. Route to 1,600+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.",
+    "homepage": "https://portkey.ai/features/ai-gateway",
+    "language": "TypeScript",
+    "topics": [
+      "ai-gateway",
+      "gateway",
+      "generative-ai",
+      "hacktoberfest",
+      "langchain",
+      "llm",
+      "llm-gateway",
+      "llmops",
+      "llms",
+      "mcp",
+      "mcp-client",
+      "mcp-gateway",
+      "mcp-servers",
+      "model-router",
+      "openai"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 13379,
+    "pushed_at": "2026-05-25",
+    "archived": false,
+    "branch_commit": "669825cbe89ee51569918b8f78a9db486fd69dd4",
+    "release": {
+      "tag": "v1.15.2",
+      "date": "2026-01-12",
+      "url": "https://github.com/Portkey-AI/gateway/releases/tag/v1.15.2",
+      "commit": "ca7712947ec8c0887803990b746740d36011c697"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.15.2",
+    "commit": "ca7712947ec8c0887803990b746740d36011c697",
+    "date": "2026-01-12"
+  },
+  "description": "Gateway that routes one API to 200+ models with fallbacks, retries and guardrails."
+}

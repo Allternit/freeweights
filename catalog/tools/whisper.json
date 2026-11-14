@@ -1,0 +1,57 @@
+{
+  "id": "whisper",
+  "name": "Whisper",
+  "repo": "openai/whisper",
+  "category": "speech",
+  "license": "MIT",
+  "install": [
+    "pip install -U openai-whisper"
+  ],
+  "install_check": [
+    "pip install -U openai-whisper"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "openai/whisper",
+    "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 112706,
+    "pushed_at": "2026-08-31",
+    "archived": false,
+    "branch_commit": "86098128c0b4f24f0e2aa2994de830614b474227",
+    "release": {
+      "tag": "v20250625",
+      "date": "2025-06-26",
+      "url": "https://github.com/openai/whisper/releases/tag/v20250625",
+      "commit": "31243bad24cc746f07d4c8bfdd2d974872cb1803"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v20250625",
+    "commit": "31243bad24cc746f07d4c8bfdd2d974872cb1803",
+    "date": "2025-06-26"
+  },
+  "description": "OpenAI's open speech recognition and translation models and reference code."
+}

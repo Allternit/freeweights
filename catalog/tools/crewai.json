@@ -1,0 +1,64 @@
+{
+  "id": "crewai",
+  "name": "CrewAI",
+  "repo": "crewAIInc/crewAI",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "uv tool install crewai"
+  ],
+  "install_check": [
+    "uv tool install crewai"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Framework for teams of role-playing agents that work on a task together.",
+  "github": {
+    "repo": "crewAIInc/crewAI",
+    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
+    "homepage": "https://crewai.com",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "ai",
+      "ai-agents",
+      "aiagentframework",
+      "llms"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 60901,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "d7dfa0ef5ade793bd48ff7357c6eb45a45294371",
+    "release": {
+      "tag": "1.15.41",
+      "date": "2026-11-12",
+      "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.41",
+      "commit": "878d6c5c801ae4053bd80d77ef303f48f95aa493"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "1.15.41",
+    "commit": "878d6c5c801ae4053bd80d77ef303f48f95aa493",
+    "date": "2026-11-12"
+  }
+}

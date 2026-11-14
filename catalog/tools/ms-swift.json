@@ -1,0 +1,79 @@
+{
+  "id": "ms-swift",
+  "name": "ms-swift",
+  "repo": "modelscope/ms-swift",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install ms-swift -U"
+  ],
+  "install_check": [
+    "pip install ms-swift -U"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "modelscope/ms-swift",
+    "description": "Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ...) and 300+ MLLMs (Qwen3-VL, Qwen3-Omni, InternVL3.5, Ovis2.5, GLM5.3, Gemma4, Llava, Phi4, ...) (AAAI 2025).",
+    "homepage": "https://swift.readthedocs.io/zh-cn/latest/",
+    "language": "Python",
+    "topics": [
+      "deepseek",
+      "embedding",
+      "glm",
+      "grpo",
+      "jev",
+      "kimi",
+      "liger",
+      "llm",
+      "lora",
+      "megatron",
+      "moe",
+      "multimodal",
+      "peft",
+      "qwen",
+      "qwen3",
+      "qwen3-omni",
+      "qwen3-vl",
+      "reranker",
+      "sft"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 16104,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "0ae9a80a1c3ca0e0b8d626a5dace771a835b90c6",
+    "release": {
+      "tag": "v4.6.1",
+      "date": "2026-11-13",
+      "url": "https://github.com/modelscope/ms-swift/releases/tag/v4.6.1",
+      "commit": "58808cc1cb784568edc76a79c0a251561c5a4062"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v4.6.1",
+    "commit": "58808cc1cb784568edc76a79c0a251561c5a4062",
+    "date": "2026-11-13"
+  },
+  "description": "ModelScope's framework for training and deploying 600+ text and multimodal models."
+}

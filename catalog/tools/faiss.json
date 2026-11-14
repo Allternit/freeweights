@@ -1,0 +1,61 @@
+{
+  "id": "faiss",
+  "name": "FAISS",
+  "repo": "facebookresearch/faiss",
+  "category": "retrieval",
+  "license": "MIT",
+  "install": [
+    "conda install -c pytorch -c conda-forge faiss-cpu=1.16.0"
+  ],
+  "install_check": [
+    "conda install -c pytorch -c conda-forge faiss-cpu=1.16.0"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [
+    "INSTALL.md"
+  ],
+  "github": {
+    "repo": "facebookresearch/faiss",
+    "description": "A library for efficient similarity search and clustering of dense vectors.",
+    "homepage": "https://faiss.ai",
+    "language": "C++",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 41662,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "ebab8f784c1d177129602269d5ad966c525fbdcb",
+    "release": {
+      "tag": "v1.16.0",
+      "date": "2026-11-10",
+      "url": "https://github.com/facebookresearch/faiss/releases/tag/v1.16.0",
+      "commit": "6ccfd5f9be2283ebc037564bb45c6ba63b71e96a"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.16.0",
+    "commit": "6ccfd5f9be2283ebc037564bb45c6ba63b71e96a",
+    "date": "2026-11-10"
+  },
+  "description": "Library for similarity search over dense vectors, on CPU and GPU."
+}

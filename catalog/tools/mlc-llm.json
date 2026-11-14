@@ -1,0 +1,65 @@
+{
+  "id": "mlc-llm",
+  "name": "MLC LLM",
+  "repo": "mlc-ai/mlc-llm",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "python -m pip install --pre -U -f https://mlc.ai/wheels mlc-llm-nightly-cpu mlc-ai-nightly-cpu"
+  ],
+  "install_check": [
+    "mlc.ai/wheels"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows",
+    "iOS",
+    "Android",
+    "Web"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "mlc_llm chat HF://<id>",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [
+    "docs/install/mlc_llm.rst"
+  ],
+  "github": {
+    "repo": "mlc-ai/mlc-llm",
+    "description": "Universal LLM Deployment Engine with ML Compilation",
+    "homepage": "https://llm.mlc.ai/",
+    "language": "Python",
+    "topics": [
+      "language-model",
+      "llm",
+      "machine-learning-compilation",
+      "tvm"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 23417,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "3b7663abb6962c1ac1be0337630321fd7bfcf9ff",
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "3b7663abb6962c1ac1be0337630321fd7bfcf9ff",
+    "date": "2026-11-14"
+  },
+  "description": "Compiles and runs language models on phones, browsers, laptops and GPUs from one stack."
+}

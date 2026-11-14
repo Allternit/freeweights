@@ -1,0 +1,81 @@
+{
+  "id": "unsloth",
+  "name": "Unsloth",
+  "kind": "tool",
+  "category": "training",
+  "repo": "unslothai/unsloth",
+  "homepage": "https://unsloth.ai/docs",
+  "license": "Apache-2.0",
+  "description": "Faster, lower-memory fine-tuning (the upstream open-source library).",
+  "install": [
+    "pip install unsloth"
+  ],
+  "install_check": [
+    "pip install unsloth"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "Linux (NVIDIA)",
+    "Windows (NVIDIA)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "# FastLanguageModel.from_pretrained(\"<id>\")",
+  "runs_with": [],
+  "github": {
+    "repo": "unslothai/unsloth",
+    "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
+    "homepage": "https://unsloth.ai/docs",
+    "language": "Python",
+    "topics": [
+      "agent",
+      "ai",
+      "chatgpt",
+      "deepseek",
+      "fine-tuning",
+      "gemma",
+      "image-generation",
+      "llama",
+      "llm",
+      "llms",
+      "openai",
+      "python",
+      "qwen",
+      "reinforcement-learning",
+      "self-hosted",
+      "stable-diffusion",
+      "text-to-speech",
+      "tts",
+      "ui",
+      "unsloth"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 79503,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "3051c0ba6b07167245ba150a0c8f1fe602d79643",
+    "release": {
+      "tag": "v0.1.917-beta",
+      "date": "2026-11-11",
+      "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.917-beta",
+      "commit": "475ceee98d8d141423201193c9cf2be2da30e600"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.1.917-beta",
+    "commit": "475ceee98d8d141423201193c9cf2be2da30e600",
+    "date": "2026-11-11"
+  }
+}

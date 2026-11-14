@@ -1,0 +1,74 @@
+{
+  "id": "docling",
+  "name": "Docling",
+  "repo": "docling-project/docling",
+  "category": "data",
+  "license": "MIT",
+  "install": [
+    "pip install docling"
+  ],
+  "install_check": [
+    "pip install docling"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "parquet",
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "docling-project/docling",
+    "description": "Get your documents ready for gen AI",
+    "homepage": "https://docling-project.github.io/docling",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "convert",
+      "document-parser",
+      "document-parsing",
+      "documents",
+      "docx",
+      "html",
+      "markdown",
+      "pdf",
+      "pdf-converter",
+      "pdf-to-json",
+      "pdf-to-text",
+      "pptx",
+      "tables",
+      "xlsx"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 70580,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "6d3bb9ee1bffaee73f2dddfda10dc0f1c438a643",
+    "release": {
+      "tag": "v2.150.1",
+      "date": "2026-11-14",
+      "url": "https://github.com/docling-project/docling/releases/tag/v2.150.1",
+      "commit": "5e600e8d37a11f70b62f795ea1e3ce3a4052e551"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.150.1",
+    "commit": "5e600e8d37a11f70b62f795ea1e3ce3a4052e551",
+    "date": "2026-11-14"
+  },
+  "description": "Turns PDFs, Office files and images into clean Markdown or JSON for model use."
+}

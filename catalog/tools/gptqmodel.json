@@ -1,0 +1,75 @@
+{
+  "id": "gptqmodel",
+  "name": "GPTQModel",
+  "repo": "ModelCloud/GPTQModel",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install -v gptqmodel"
+  ],
+  "install_check": [
+    "pip install -v gptqmodel"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "ModelCloud/GPTQModel",
+    "description": "LLM model quantization (compression) toolkit with HW acceleration support for Nvidia CUDA, AMD ROCm, Intel XPU, Tenstorrent, Huawei Ascent NPU, and Intel/AMD/Apple CPU via HF, vLLM, and SGLang.",
+    "homepage": "https://x.com/Qubitium",
+    "language": "Python",
+    "topics": [
+      "cuda",
+      "gptq",
+      "metal",
+      "mlx",
+      "npu",
+      "optimum",
+      "peft",
+      "quantization",
+      "rocm",
+      "sglang",
+      "tenstorrent",
+      "transformers",
+      "vllm",
+      "xla",
+      "xpu"
+    ],
+    "default_branch": "main",
+    "license": "",
+    "stars": 1290,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "ad0525cca18a7f7a81dfe28e217bc04821f6d3a7",
+    "release": {
+      "tag": "v7.10.0",
+      "date": "2026-11-06",
+      "url": "https://github.com/ModelCloud/GPTQModel/releases/tag/v7.10.0",
+      "commit": "f6750bd193c69790a7d3d9ed4dfac8814bf456a9"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v7.10.0",
+    "commit": "f6750bd193c69790a7d3d9ed4dfac8814bf456a9",
+    "date": "2026-11-06"
+  },
+  "description": "Quantizes language models with GPTQ and related methods, and runs the result."
+}

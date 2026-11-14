@@ -1,0 +1,62 @@
+{
+  "id": "sqlite-vec",
+  "name": "sqlite-vec",
+  "repo": "asg017/sqlite-vec",
+  "category": "retrieval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install sqlite-vec"
+  ],
+  "install_check": [
+    "pip install sqlite-vec"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "asg017/sqlite-vec",
+    "description": "A vector search SQLite extension that runs anywhere!",
+    "homepage": "",
+    "language": "C",
+    "topics": [
+      "sqlite",
+      "sqlite-extension"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 8262,
+    "pushed_at": "2026-05-18",
+    "archived": false,
+    "branch_commit": "04d28bd21773981e2d266bbf6aa4efbd011eb4f6",
+    "release": {
+      "tag": "v0.1.9",
+      "date": "2026-03-31",
+      "url": "https://github.com/asg017/sqlite-vec/releases/tag/v0.1.9",
+      "commit": "e9f598abfa0c06b328d8fe5da9c3760cce74be10"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.1.9",
+    "commit": "e9f598abfa0c06b328d8fe5da9c3760cce74be10",
+    "date": "2026-03-31"
+  },
+  "description": "Small vector search extension that runs anywhere SQLite runs."
+}

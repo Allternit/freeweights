@@ -1,0 +1,60 @@
+{
+  "id": "exllamav3",
+  "name": "ExLlamaV3",
+  "repo": "turboderp-org/exllamav3",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "pip install exllamav3"
+  ],
+  "install_check": [
+    "pip install exllamav3"
+  ],
+  "platforms": [
+    "Linux (NVIDIA)",
+    "Windows (NVIDIA)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "turboderp-org/exllamav3",
+    "description": "An optimized quantization and inference library for running LLMs locally on modern consumer-class GPUs ",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 1825,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "8c593e4e5c88da76a4aaf8f1b1838bb7c1fce4e0",
+    "release": {
+      "tag": "v1.6.7",
+      "date": "2026-11-13",
+      "url": "https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.7",
+      "commit": "8c593e4e5c88da76a4aaf8f1b1838bb7c1fce4e0"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.6.7",
+    "commit": "8c593e4e5c88da76a4aaf8f1b1838bb7c1fce4e0",
+    "date": "2026-11-13"
+  },
+  "description": "Fast local inference for language models quantized to the EXL3 format on NVIDIA GPUs."
+}

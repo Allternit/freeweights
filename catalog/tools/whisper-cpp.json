@@ -1,0 +1,66 @@
+{
+  "id": "whisper-cpp",
+  "name": "whisper.cpp",
+  "kind": "tool",
+  "category": "speech",
+  "repo": "ggml-org/whisper.cpp",
+  "homepage": "",
+  "license": "MIT",
+  "description": "Speech recognition with Whisper models in plain C and C++.",
+  "install": [
+    "git clone https://github.com/ggml-org/whisper.cpp.git",
+    "cd whisper.cpp && cmake -B build && cmake --build build -j --config Release"
+  ],
+  "install_check": [
+    "cmake -B build",
+    "cmake --build build"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "macOS",
+    "Linux",
+    "Windows",
+    "iOS",
+    "Android"
+  ],
+  "works_with": {
+    "role": "runs",
+    "match": "whisper"
+  },
+  "use": "./build/bin/whisper-cli -m ./<model>.bin -f audio.wav   # convert the weights to ggml first",
+  "runs_with": [],
+  "github": {
+    "repo": "ggml-org/whisper.cpp",
+    "description": "Port of OpenAI's Whisper model in C/C++",
+    "homepage": "",
+    "language": "C++",
+    "topics": [
+      "inference",
+      "openai",
+      "speech-recognition",
+      "speech-to-text",
+      "transformer",
+      "whisper"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 55191,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "5922450fbce1ed9d1648babd0d5ac4520055b436",
+    "release": {
+      "tag": "v1.9.5",
+      "date": "2026-10-06",
+      "url": "https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.5",
+      "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.9.5",
+    "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+    "date": "2026-10-06"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "qdrant",
+  "name": "Qdrant",
+  "repo": "qdrant/qdrant",
+  "category": "retrieval",
+  "license": "Apache-2.0",
+  "install": [
+    "docker run -p 6333:6333 qdrant/qdrant"
+  ],
+  "install_check": [
+    "docker run -p 6333:6333 qdrant/qdrant"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "qdrant/qdrant",
+    "description": "Qdrant - High-performance, massive-scale Vector Database and Vector Search Engine for the next generation of AI. Also available in the cloud https://cloud.qdrant.io/",
+    "homepage": "https://qdrant.tech",
+    "language": "Rust",
+    "topics": [
+      "ai-search",
+      "ai-search-engine",
+      "embeddings-similarity",
+      "hnsw",
+      "hybrid-search",
+      "image-search",
+      "knn-algorithm",
+      "machine-learning",
+      "mlops",
+      "nearest-neighbor-search",
+      "neural-network",
+      "neural-search",
+      "recommender-system",
+      "search",
+      "search-engine",
+      "search-engines",
+      "similarity-search",
+      "vector-database",
+      "vector-search",
+      "vector-search-engine"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 35556,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "95d89e51427f4217bf7b496e039ef0a069ebe342",
+    "release": {
+      "tag": "v1.20.1",
+      "date": "2026-11-13",
+      "url": "https://github.com/qdrant/qdrant/releases/tag/v1.20.1",
+      "commit": "95d89e51427f4217bf7b496e039ef0a069ebe342"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.20.1",
+    "commit": "95d89e51427f4217bf7b496e039ef0a069ebe342",
+    "date": "2026-11-13"
+  },
+  "description": "Vector database and search engine written in Rust."
+}

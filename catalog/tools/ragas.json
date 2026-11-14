@@ -1,0 +1,62 @@
+{
+  "id": "ragas",
+  "name": "Ragas",
+  "repo": "explodinggradients/ragas",
+  "category": "eval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install ragas"
+  ],
+  "install_check": [
+    "pip install ragas"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "vibrantlabsai/ragas",
+    "description": "Supercharge Your LLM Application Evaluations 🚀",
+    "homepage": "https://docs.ragas.io",
+    "language": "Python",
+    "topics": [
+      "evaluation",
+      "llm",
+      "llmops"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 16320,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "8c63f10d500c44efbf24fdb9e2920de2104c321c",
+    "release": {
+      "tag": "v0.4.4",
+      "date": "2026-11-14",
+      "url": "https://github.com/vibrantlabsai/ragas/releases/tag/v0.4.4",
+      "commit": "8c63f10d500c44efbf24fdb9e2920de2104c321c"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.4.4",
+    "commit": "8c63f10d500c44efbf24fdb9e2920de2104c321c",
+    "date": "2026-11-14"
+  },
+  "description": "Metrics for evaluating retrieval-augmented generation pipelines."
+}

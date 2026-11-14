@@ -1,0 +1,78 @@
+{
+  "id": "sglang",
+  "name": "SGLang",
+  "kind": "tool",
+  "category": "inference",
+  "repo": "sgl-project/sglang",
+  "homepage": "https://sglang.io",
+  "license": "Apache-2.0",
+  "description": "Fast serving framework for language and vision-language models.",
+  "install": [
+    "uv pip install --prerelease=allow sglang"
+  ],
+  "install_check": [
+    "uv pip install --prerelease=allow sglang"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "HF_ENDPOINT=https://freeweights.allternit.com python3 -m sglang.launch_server --model-path <id>",
+  "runs_with": [],
+  "github": {
+    "repo": "sgl-project/sglang",
+    "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+    "homepage": "https://sglang.io",
+    "language": "Python",
+    "topics": [
+      "attention",
+      "blackwell",
+      "cuda",
+      "deepseek",
+      "diffusion",
+      "glm",
+      "gpt-oss",
+      "inference",
+      "llama",
+      "llm",
+      "minimax",
+      "moe",
+      "qwen",
+      "qwen-image",
+      "reinforcement-learning",
+      "transformer",
+      "vlm",
+      "wan"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 38872,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "ecb69fe25df5a0b3d33671286f796395b2873317",
+    "release": {
+      "tag": "v0.5.23",
+      "date": "2026-11-02",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
+      "commit": "297e54fd105e974cdf401e5b4d20253a22c16f90"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.5.23",
+    "commit": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+    "date": "2026-11-02"
+  }
+}

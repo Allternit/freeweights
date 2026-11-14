@@ -1,0 +1,61 @@
+{
+  "id": "trl",
+  "name": "TRL",
+  "kind": "tool",
+  "category": "training",
+  "repo": "huggingface/trl",
+  "homepage": "http://hf.co/docs/trl",
+  "license": "Apache-2.0",
+  "description": "Supervised fine-tuning and preference training for transformers models.",
+  "install": [
+    "pip install trl"
+  ],
+  "install_check": [
+    "pip install trl"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "trl sft --model_name_or_path <id> --dataset_name <dataset>",
+  "runs_with": [],
+  "github": {
+    "repo": "huggingface/trl",
+    "description": "Train transformer language models with reinforcement learning.",
+    "homepage": "http://hf.co/docs/trl",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 19734,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "8ad18ec1b6493b85cf9fffbd87d376767ceb8611",
+    "release": {
+      "tag": "v1.18.0",
+      "date": "2026-11-13",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.18.0",
+      "commit": "480dde905c9137898819b27b6c2c6f9be9f34046"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.18.0",
+    "commit": "480dde905c9137898819b27b6c2c6f9be9f34046",
+    "date": "2026-11-13"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "verl",
+  "name": "verl",
+  "repo": "volcengine/verl",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install verl"
+  ],
+  "install_check": [
+    "pip install verl"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [
+    "docs/start/install.rst"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Reinforcement learning library for post-training language models at scale.",
+  "github": {
+    "repo": "verl-project/verl",
+    "description": "verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework ",
+    "homepage": "https://verl-project.github.io",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 24230,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "4191e7f910d85d69acb8c45f4840f10faa535165",
+    "release": {
+      "tag": "v0.9.1",
+      "date": "2026-09-20",
+      "url": "https://github.com/verl-project/verl/releases/tag/v0.9.1",
+      "commit": "1876b06d0a3e4e71e06230be10af14492ca8a75b"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.9.1",
+    "commit": "1876b06d0a3e4e71e06230be10af14492ca8a75b",
+    "date": "2026-09-20"
+  }
+}

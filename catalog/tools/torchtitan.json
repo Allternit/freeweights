@@ -1,0 +1,59 @@
+{
+  "id": "torchtitan",
+  "name": "TorchTitan",
+  "repo": "pytorch/torchtitan",
+  "category": "training",
+  "license": "BSD-3-Clause",
+  "install": [
+    "pip install torchtitan"
+  ],
+  "install_check": [
+    "pip install torchtitan"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "PyTorch-native platform for large-scale pretraining of language models.",
+  "github": {
+    "repo": "pytorch/torchtitan",
+    "description": "A PyTorch native platform for training generative AI models",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "BSD-3-Clause",
+    "stars": 5907,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "631d544b1f6794ecfeca734a7bba861e03ddd5e3",
+    "release": {
+      "tag": "v0.4.0",
+      "date": "2026-10-28",
+      "url": "https://github.com/pytorch/torchtitan/releases/tag/v0.4.0",
+      "commit": "45e33cd413b64cb37a7840cfd3c9765d3c639ae1"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.4.0",
+    "commit": "45e33cd413b64cb37a7840cfd3c9765d3c639ae1",
+    "date": "2026-10-28"
+  }
+}

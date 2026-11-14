@@ -1,0 +1,57 @@
+{
+  "id": "accelerate",
+  "name": "Accelerate",
+  "repo": "huggingface/accelerate",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install accelerate"
+  ],
+  "install_check": [
+    "pip install accelerate"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Runs the same PyTorch training script on one GPU, many GPUs or TPUs.",
+  "github": {
+    "repo": "huggingface/accelerate",
+    "description": "🚀 A simple way to launch, train, and use PyTorch models on almost any device and distributed configuration, automatic mixed precision (including fp8), and easy-to-configure FSDP and DeepSpeed support",
+    "homepage": "https://huggingface.co/docs/accelerate",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 9944,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "0aca80e511a60b6735ec22dc1062b22f35c2fa15",
+    "release": {
+      "tag": "v1.15.0",
+      "date": "2026-09-09",
+      "url": "https://github.com/huggingface/accelerate/releases/tag/v1.15.0",
+      "commit": "6afc1e5ee217051fde702b23de2813344dc0fd33"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.15.0",
+    "commit": "6afc1e5ee217051fde702b23de2813344dc0fd33",
+    "date": "2026-09-09"
+  }
+}

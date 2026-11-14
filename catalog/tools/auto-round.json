@@ -1,0 +1,75 @@
+{
+  "id": "auto-round",
+  "name": "AutoRound",
+  "repo": "intel/auto-round",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install auto-round"
+  ],
+  "install_check": [
+    "pip install auto-round"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "intel/auto-round",
+    "description": "PTQ-Level Efficiency, QAT-Level Accuracy | 训练后量化的效率，量化感知训练的精度",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "diffusers",
+      "gguf",
+      "int4",
+      "llms",
+      "mxfp4",
+      "nvfp4",
+      "omni",
+      "quantization",
+      "rounding",
+      "sglang",
+      "transformers",
+      "vllm",
+      "vlms"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 1704,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "42db5d3ae52de359d0edf9abf822f701c679088e",
+    "release": {
+      "tag": "v0.16.1",
+      "date": "2026-10-16",
+      "url": "https://github.com/intel/auto-round/releases/tag/v0.16.1",
+      "commit": "d72868d5f7ff47ab398a688fdc5a7c4a53f88240"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.16.1",
+    "commit": "d72868d5f7ff47ab398a688fdc5a7c4a53f88240",
+    "date": "2026-10-16"
+  },
+  "description": "Low-bit weight quantization of language and vision-language models, exporting GGUF and other formats."
+}

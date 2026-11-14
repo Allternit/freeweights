@@ -1,0 +1,68 @@
+{
+  "id": "distilabel",
+  "name": "distilabel",
+  "repo": "argilla-io/distilabel",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install distilabel --upgrade"
+  ],
+  "install_check": [
+    "pip install distilabel --upgrade"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "parquet",
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "argilla-io/distilabel",
+    "description": "Distilabel is a framework for synthetic data and AI feedback for engineers who need fast, reliable and scalable pipelines based on verified research papers.",
+    "homepage": "https://distilabel.argilla.io",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "huggingface",
+      "llms",
+      "openai",
+      "python",
+      "rlaif",
+      "rlhf",
+      "synthetic-data",
+      "synthetic-dataset-generation"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3457,
+    "pushed_at": "2026-11-09",
+    "archived": false,
+    "branch_commit": "313fac85b1a2472dd88db1a31c2b754599f46476",
+    "release": {
+      "tag": "1.5.3",
+      "date": "2025-01-28",
+      "url": "https://github.com/argilla-io/distilabel/releases/tag/1.5.3",
+      "commit": "1b6c101c3012c9d1306227566ed9ad8dd463309b"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "1.5.3",
+    "commit": "1b6c101c3012c9d1306227566ed9ad8dd463309b",
+    "date": "2025-01-28"
+  },
+  "description": "Builds synthetic datasets and AI feedback pipelines with any model."
+}

@@ -1,0 +1,72 @@
+{
+  "id": "lmdeploy",
+  "name": "LMDeploy",
+  "repo": "InternLM/lmdeploy",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install lmdeploy"
+  ],
+  "install_check": [
+    "pip install lmdeploy"
+  ],
+  "platforms": [
+    "Linux (GPU)",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "lmdeploy serve api_server <id>",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "InternLM/lmdeploy",
+    "description": "LMDeploy is a toolkit for compressing, deploying, and serving LLMs.",
+    "homepage": "https://lmdeploy.readthedocs.io/en/latest",
+    "language": "Python",
+    "topics": [
+      "codellama",
+      "cuda-kernels",
+      "deepspeed",
+      "fastertransformer",
+      "internlm",
+      "llama",
+      "llama2",
+      "llama3",
+      "llm",
+      "llm-inference",
+      "turbomind"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 8142,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "442097e83799c2e85df9d6bbce35c7c79ea05dfe",
+    "release": {
+      "tag": "v0.18.0",
+      "date": "2026-09-28",
+      "url": "https://github.com/InternLM/lmdeploy/releases/tag/v0.18.0",
+      "commit": "110965c7706bbbeb31e21df5d7ef2531fe01c935"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.18.0",
+    "commit": "110965c7706bbbeb31e21df5d7ef2531fe01c935",
+    "date": "2026-09-28"
+  },
+  "description": "Toolkit for compressing, deploying and serving language and vision-language models."
+}

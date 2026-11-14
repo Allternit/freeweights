@@ -1,0 +1,58 @@
+{
+  "id": "mlx-lm",
+  "name": "mlx-lm",
+  "kind": "tool",
+  "category": "inference",
+  "repo": "ml-explore/mlx-lm",
+  "homepage": "",
+  "license": "MIT",
+  "description": "Run and fine-tune language models on Apple silicon with MLX.",
+  "install": [
+    "pip install mlx-lm"
+  ],
+  "install_check": [
+    "pip install mlx-lm"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "macOS (Apple silicon)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "mlx"
+    ]
+  },
+  "use": "mlx_lm.generate --model <id> --prompt \"Hello\"",
+  "runs_with": [],
+  "github": {
+    "repo": "ml-explore/mlx-lm",
+    "description": "Run LLMs with MLX",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "llms",
+      "mlx"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 7655,
+    "pushed_at": "2026-11-06",
+    "archived": false,
+    "branch_commit": "56230fa02b8ff8330daf26dc95c28480423ed5fe",
+    "release": {
+      "tag": "v0.32.2",
+      "date": "2026-10-16",
+      "url": "https://github.com/ml-explore/mlx-lm/releases/tag/v0.32.2",
+      "commit": "93e6d4a6447b3080861985947f0820e76fcb957d"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.32.2",
+    "commit": "93e6d4a6447b3080861985947f0820e76fcb957d",
+    "date": "2026-10-16"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "fw-py",
+  "name": "fw.py (Freeweights)",
+  "kind": "tool",
+  "category": "distribution",
+  "repo": "Allternit/freeweights",
+  "homepage": "",
+  "license": "Apache-2.0",
+  "description": "Our downloader: checks the signature and every sha256, tries each source in order, resumes.",
+  "install": [
+    "# copy scripts/fw.py from the Freeweights repository"
+  ],
+  "install_check": [],
+  "install_docs_paths": [],
+  "platforms": [
+    "macOS",
+    "Linux",
+    "Windows (Python 3)"
+  ],
+  "works_with": {
+    "role": "gets",
+    "all_hosted": true
+  },
+  "use": "fw get <id>",
+  "runs_with": [],
+  "github": {
+    "repo": "Allternit/freeweights",
+    "description": "open models, free to download. The open source alternative's commons for open AI model weights: license, checksum and signed manifest on every file.",
+    "homepage": "https://freeweights.allternit.com",
+    "language": "JavaScript",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 0,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "ff9ef1d6ef26966d7cddf005ef54e204a892f575",
+    "fetched": "2026-11-14"
+  },
+  "install_verified": false,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "ff9ef1d6ef26966d7cddf005ef54e204a892f575",
+    "date": "2026-11-14"
+  },
+  "gap": "Ours: the signed-manifest downloader for this catalog."
+}

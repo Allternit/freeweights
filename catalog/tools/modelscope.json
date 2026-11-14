@@ -1,0 +1,64 @@
+{
+  "id": "modelscope",
+  "name": "ModelScope",
+  "repo": "modelscope/modelscope",
+  "category": "distribution",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install modelscope"
+  ],
+  "install_check": [
+    "pip install modelscope"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "gets",
+    "all_hosted": true
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "modelscope/modelscope",
+    "description": "ModelScope: bring the notion of Model-as-a-Service to life.",
+    "homepage": "https://www.modelscope.cn/",
+    "language": "Python",
+    "topics": [
+      "cv",
+      "deep-learning",
+      "machine-learning",
+      "multi-modal",
+      "nlp",
+      "python",
+      "science",
+      "speech"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 9214,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "34844f9977a33f541cb5d8959c40a57cd6155b3b",
+    "release": {
+      "tag": "v1.40.3",
+      "date": "2026-11-09",
+      "url": "https://github.com/modelscope/modelscope/releases/tag/v1.40.3",
+      "commit": "53525f503f795e6d7d941b42c075b48824b497d9"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.40.3",
+    "commit": "53525f503f795e6d7d941b42c075b48824b497d9",
+    "date": "2026-11-09"
+  },
+  "description": "Library and CLI for models hosted on ModelScope, a second source for many open models."
+}

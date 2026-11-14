@@ -1,0 +1,58 @@
+{
+  "id": "picklescan",
+  "name": "picklescan",
+  "repo": "mmaitre314/picklescan",
+  "category": "safety",
+  "license": "MIT",
+  "install": [
+    "pip install picklescan"
+  ],
+  "install_check": [
+    "pip install picklescan"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "picklescan --path ./<file>",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "mmaitre314/picklescan",
+    "description": "Security scanner detecting Python Pickle files performing suspicious actions",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 432,
+    "pushed_at": "2026-11-02",
+    "archived": false,
+    "branch_commit": "5e7ab22cb5bc59c4276820df5153829db4c751e8",
+    "release": {
+      "tag": "v1.0.5",
+      "date": "2026-07-01",
+      "url": "https://github.com/mmaitre314/picklescan/releases/tag/v1.0.5",
+      "commit": "f15d54da3dec9aa28a87ede82f87882bb80f1023"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.0.5",
+    "commit": "f15d54da3dec9aa28a87ede82f87882bb80f1023",
+    "date": "2026-07-01"
+  },
+  "description": "Scans pickle files for dangerous imports. Hugging Face uses it on uploads.",
+  "gap": "Scans model files for unsafe pickle code; no other listed tool does this."
+}

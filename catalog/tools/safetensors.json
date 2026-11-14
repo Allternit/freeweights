@@ -1,0 +1,57 @@
+{
+  "id": "safetensors",
+  "name": "safetensors",
+  "repo": "huggingface/safetensors",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install safetensors"
+  ],
+  "install_check": [
+    "pip install safetensors"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "safetensors/safetensors",
+    "description": "Simple, safe way to store and distribute tensors",
+    "homepage": "https://huggingface.co/docs/safetensors",
+    "language": "Rust",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3952,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "9e6f4d6c7af8c63ac791ab1bfdd58d2de02fbaa4",
+    "release": {
+      "tag": "v0.8.0",
+      "date": "2026-06-09",
+      "url": "https://github.com/safetensors/safetensors/releases/tag/v0.8.0",
+      "commit": "a406ca3e7a90598be0cd05a50069cb9bf5ef6ba6"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.8.0",
+    "commit": "a406ca3e7a90598be0cd05a50069cb9bf5ef6ba6",
+    "date": "2026-06-09"
+  },
+  "description": "The safe tensor file format most open models ship in, with fast loading and no code execution."
+}

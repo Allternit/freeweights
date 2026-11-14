@@ -1,0 +1,65 @@
+{
+  "id": "langflow",
+  "name": "Langflow",
+  "repo": "langflow-ai/langflow",
+  "category": "apps",
+  "license": "MIT",
+  "install": [
+    "uv pip install langflow -U"
+  ],
+  "install_check": [
+    "uv pip install langflow -U"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "langflow-ai/langflow",
+    "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
+    "homepage": "http://www.langflow.org",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "chatgpt",
+      "generative-ai",
+      "large-language-models",
+      "multiagent",
+      "react-flow"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 156639,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "260cbf347cc5563cc48c79094c175ca31532ea2b",
+    "release": {
+      "tag": "v1.13.2",
+      "date": "2026-11-10",
+      "url": "https://github.com/langflow-ai/langflow/releases/tag/v1.13.2",
+      "commit": "8b42952d734de18e34c2838ff6c634efb1815878"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.13.2",
+    "commit": "8b42952d734de18e34c2838ff6c634efb1815878",
+    "date": "2026-11-10"
+  },
+  "description": "Visual builder for agent and retrieval workflows, deployable as an API."
+}

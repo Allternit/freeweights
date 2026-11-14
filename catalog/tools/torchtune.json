@@ -1,0 +1,60 @@
+{
+  "id": "torchtune",
+  "name": "torchtune",
+  "repo": "meta-pytorch/torchtune",
+  "category": "training",
+  "license": "BSD-3-Clause",
+  "install": [
+    "pip install torchtune"
+  ],
+  "install_check": [
+    "pip install torchtune"
+  ],
+  "platforms": [
+    "Linux (GPU)",
+    "macOS"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "meta-pytorch/torchtune",
+    "description": "PyTorch native post-training library",
+    "homepage": "https://pytorch.org/torchtune/main/",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "BSD-3-Clause",
+    "stars": 5817,
+    "pushed_at": "2026-11-09",
+    "archived": false,
+    "branch_commit": "ef542e46285f9b68b37de938d4a59ca2d6dc1ef1",
+    "release": {
+      "tag": "v0.6.1",
+      "date": "2025-04-07",
+      "url": "https://github.com/meta-pytorch/torchtune/releases/tag/v0.6.1",
+      "commit": "a6290a5b40758f13bca61c386bc8756a49ef417e"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.6.1",
+    "commit": "a6290a5b40758f13bca61c386bc8756a49ef417e",
+    "date": "2025-04-07"
+  },
+  "description": "PyTorch-native library for post-training language models, with recipes for LoRA and full fine-tuning."
+}

@@ -1,0 +1,58 @@
+{
+  "id": "mlx",
+  "name": "MLX",
+  "repo": "ml-explore/mlx",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "pip install mlx"
+  ],
+  "install_check": [
+    "pip install mlx"
+  ],
+  "platforms": [
+    "macOS (Apple silicon)",
+    "Linux"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "mlx"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "ml-explore/mlx",
+    "description": "MLX: An array framework for Apple silicon",
+    "homepage": "https://ml-explore.github.io/mlx/",
+    "language": "C++",
+    "topics": [
+      "mlx"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 29161,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "fc344c986c4169d99f76b5d95ae6b4a58a359a63",
+    "release": {
+      "tag": "v0.32.4",
+      "date": "2026-10-14",
+      "url": "https://github.com/ml-explore/mlx/releases/tag/v0.32.4",
+      "commit": "36969c094354086e15d2a327a9c50feb20b9cf11"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.32.4",
+    "commit": "36969c094354086e15d2a327a9c50feb20b9cf11",
+    "date": "2026-10-14"
+  },
+  "description": "Apple's array framework for machine learning on Apple silicon."
+}

@@ -1,0 +1,65 @@
+{
+  "id": "deepeval",
+  "name": "DeepEval",
+  "repo": "confident-ai/deepeval",
+  "category": "eval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install -U deepeval"
+  ],
+  "install_check": [
+    "pip install -U deepeval"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Unit-test style evaluation for language model apps, runnable with local judge models.",
+  "github": {
+    "repo": "confident-ai/deepeval",
+    "description": "The LLM Evaluation Framework",
+    "homepage": "https://deepeval.com",
+    "language": "Python",
+    "topics": [
+      "evaluation-framework",
+      "evaluation-metrics",
+      "llm-evaluation",
+      "llm-evaluation-framework",
+      "llm-evaluation-metrics",
+      "python"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 19479,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "34db63dd005ebc9a905c8ef4741ae0687c93c14c",
+    "release": {
+      "tag": "python-v4.2.4",
+      "date": "2026-09-22",
+      "url": "https://github.com/confident-ai/deepeval/releases/tag/python-v4.2.4",
+      "commit": "da9b2c969f8a15e8aa4ef67c372157ce060cd63e"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "python-v4.2.4",
+    "commit": "da9b2c969f8a15e8aa4ef67c372157ce060cd63e",
+    "date": "2026-09-22"
+  }
+}

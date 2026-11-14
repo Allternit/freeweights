@@ -1,0 +1,75 @@
+{
+  "id": "aider",
+  "name": "Aider",
+  "repo": "Aider-AI/aider",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "python -m pip install aider-install",
+    "aider-install"
+  ],
+  "install_check": [
+    "python -m pip install aider-install"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "Aider-AI/aider",
+    "description": "aider is AI pair programming in your terminal",
+    "homepage": "https://aider.chat/",
+    "language": "Python",
+    "topics": [
+      "anthropic",
+      "chatgpt",
+      "claude-3",
+      "cli",
+      "command-line",
+      "gemini",
+      "gpt-3",
+      "gpt-35-turbo",
+      "gpt-4",
+      "gpt-4o",
+      "llama",
+      "openai",
+      "sonnet"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 50119,
+    "pushed_at": "2026-05-22",
+    "archived": false,
+    "branch_commit": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+    "release": {
+      "tag": "v0.86.0",
+      "date": "2025-08-09",
+      "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+      "commit": "a4be6ccd87ebaa59b361f3f028d116ce1761b626"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.86.0",
+    "commit": "a4be6ccd87ebaa59b361f3f028d116ce1761b626",
+    "date": "2025-08-09"
+  },
+  "description": "Pair-programming in your terminal with a language model that edits files in your git repository."
+}

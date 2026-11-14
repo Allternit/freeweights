@@ -1,0 +1,68 @@
+{
+  "id": "faster-whisper",
+  "name": "faster-whisper",
+  "repo": "SYSTRAN/faster-whisper",
+  "category": "speech",
+  "license": "MIT",
+  "install": [
+    "pip install faster-whisper"
+  ],
+  "install_check": [
+    "pip install faster-whisper"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ctranslate2"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "SYSTRAN/faster-whisper",
+    "description": "Faster Whisper transcription with CTranslate2",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "deep-learning",
+      "inference",
+      "openai",
+      "quantization",
+      "speech-recognition",
+      "speech-to-text",
+      "transformer",
+      "whisper"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 26754,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "6cb639e70786aea42b9233006ae60eaf07190bdb",
+    "release": {
+      "tag": "v1.2.1",
+      "date": "2025-10-31",
+      "url": "https://github.com/SYSTRAN/faster-whisper/releases/tag/v1.2.1",
+      "commit": "65882eee9f5cdbeeb2d877f1131d48cf241b327d"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.2.1",
+    "commit": "65882eee9f5cdbeeb2d877f1131d48cf241b327d",
+    "date": "2025-10-31"
+  },
+  "description": "Whisper speech recognition on CTranslate2, up to four times faster with less memory."
+}

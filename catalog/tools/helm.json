@@ -1,0 +1,58 @@
+{
+  "id": "helm",
+  "name": "HELM",
+  "repo": "stanford-crfm/helm",
+  "category": "eval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install crfm-helm"
+  ],
+  "install_check": [
+    "pip install crfm-helm"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Stanford's holistic evaluation of language models across scenarios and metrics.",
+  "github": {
+    "repo": "stanford-crfm/helm",
+    "description": "Holistic Evaluation of Language Models (HELM) is an open source Python framework created by the Center for Research on Foundation Models (CRFM) at Stanford for holistic, reproducible and transparent evaluation of foundation models, including large language models (LLMs) and multimodal models.",
+    "homepage": "https://crfm.stanford.edu/helm",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 2970,
+    "pushed_at": "2026-09-01",
+    "archived": false,
+    "branch_commit": "63754d05db6f874e41a395880fb573890a13e791",
+    "release": {
+      "tag": "v0.5.16",
+      "date": "2026-04-30",
+      "url": "https://github.com/stanford-crfm/helm/releases/tag/v0.5.16",
+      "commit": "ef439fc94e58568fd1274d5c07ceb1b711360a55"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.5.16",
+    "commit": "ef439fc94e58568fd1274d5c07ceb1b711360a55",
+    "date": "2026-04-30"
+  }
+}

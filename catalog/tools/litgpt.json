@@ -1,0 +1,68 @@
+{
+  "id": "litgpt",
+  "name": "LitGPT",
+  "repo": "Lightning-AI/litgpt",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install 'litgpt[extra]'"
+  ],
+  "install_check": [
+    "pip install 'litgpt[extra]'"
+  ],
+  "platforms": [
+    "Linux (GPU)",
+    "macOS"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "litgpt finetune <id>",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "Lightning-AI/litgpt",
+    "description": "20+ high-performance LLMs with recipes to pretrain, finetune and deploy at scale.",
+    "homepage": "https://lightning.ai",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "artificial-intelligence",
+      "deep-learning",
+      "large-language-models",
+      "llm",
+      "llm-inference",
+      "llms"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 13747,
+    "pushed_at": "2026-11-10",
+    "archived": false,
+    "branch_commit": "5341568a65e918a85cb284fac038de2157eebf3f",
+    "release": {
+      "tag": "v0.5.14",
+      "date": "2026-11-10",
+      "url": "https://github.com/Lightning-AI/litgpt/releases/tag/v0.5.14",
+      "commit": "5341568a65e918a85cb284fac038de2157eebf3f"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.5.14",
+    "commit": "5341568a65e918a85cb284fac038de2157eebf3f",
+    "date": "2026-11-10"
+  },
+  "description": "Pretrain, fine-tune and serve 20+ language models with from-scratch implementations."
+}

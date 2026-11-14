@@ -1,0 +1,77 @@
+{
+  "id": "localai",
+  "name": "LocalAI",
+  "repo": "mudler/LocalAI",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "docker run -ti --name local-ai -p 8080:8080 localai/localai:latest"
+  ],
+  "install_check": [
+    "localai/localai"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "gguf",
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "mudler/LocalAI",
+    "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
+    "homepage": "https://localai.io",
+    "language": "Go",
+    "topics": [
+      "agents",
+      "ai",
+      "api",
+      "audio-generation",
+      "decentralized",
+      "distributed",
+      "image-generation",
+      "libp2p",
+      "llama",
+      "llm",
+      "mamba",
+      "mcp",
+      "musicgen",
+      "object-detection",
+      "rerank",
+      "stable-diffusion",
+      "text-generation",
+      "tts"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 50365,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "062473903e068a3d0fc64f78ef09204aa61596e8",
+    "release": {
+      "tag": "v4.12.1",
+      "date": "2026-10-23",
+      "url": "https://github.com/mudler/LocalAI/releases/tag/v4.12.1",
+      "commit": "ec9274027eadd552d56f2c6c1fe86cd9216a991a"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v4.12.1",
+    "commit": "ec9274027eadd552d56f2c6c1fe86cd9216a991a",
+    "date": "2026-10-23"
+  },
+  "description": "Drop-in OpenAI-compatible API that runs text, image, audio and embedding models on your own hardware."
+}

@@ -1,0 +1,58 @@
+{
+  "id": "smolagents",
+  "name": "smolagents",
+  "repo": "huggingface/smolagents",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install \"smolagents[toolkit]\""
+  ],
+  "install_check": [
+    "pip install \"smolagents[toolkit]\""
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "huggingface/smolagents",
+    "description": "🤗 smolagents: a barebones library for agents that think in code.",
+    "homepage": "https://huggingface.co/docs/smolagents",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 30372,
+    "pushed_at": "2026-11-10",
+    "archived": false,
+    "branch_commit": "96f33faaf028479119ec8d34507b47694cf14e34",
+    "release": {
+      "tag": "v1.26.0",
+      "date": "2026-05-29",
+      "url": "https://github.com/huggingface/smolagents/releases/tag/v1.26.0",
+      "commit": "12c1bc820eca50ace6f80a21d90426d41d74f845"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.26.0",
+    "commit": "12c1bc820eca50ace6f80a21d90426d41d74f845",
+    "date": "2026-05-29"
+  },
+  "description": "Small library for agents that write and run Python as their actions."
+}

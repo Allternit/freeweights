@@ -1,0 +1,65 @@
+{
+  "id": "markitdown",
+  "name": "MarkItDown",
+  "repo": "microsoft/markitdown",
+  "category": "data",
+  "license": "MIT",
+  "install": [
+    "pip install 'markitdown[all]'"
+  ],
+  "install_check": [
+    "pip install 'markitdown[all]'"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "microsoft/markitdown",
+    "description": "Python tool for converting files and office documents to Markdown.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "autogen",
+      "autogen-extension",
+      "langchain",
+      "markdown",
+      "microsoft-office",
+      "openai",
+      "pdf"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 195368,
+    "pushed_at": "2026-11-07",
+    "archived": false,
+    "branch_commit": "ed178952a6672abdfd35b5f9e76a80b6cefc086e",
+    "release": {
+      "tag": "v0.1.9",
+      "date": "2026-10-21",
+      "url": "https://github.com/microsoft/markitdown/releases/tag/v0.1.9",
+      "commit": "21d9c1d01ecc12538dab19811fd247ef2f96ef60"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.1.9",
+    "commit": "21d9c1d01ecc12538dab19811fd247ef2f96ef60",
+    "date": "2026-10-21"
+  },
+  "description": "Converts files and Office documents to Markdown for language model pipelines."
+}

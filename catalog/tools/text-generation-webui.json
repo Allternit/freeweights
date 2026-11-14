@@ -1,0 +1,73 @@
+{
+  "id": "text-generation-webui",
+  "name": "Text Generation WebUI",
+  "repo": "oobabooga/textgen",
+  "category": "apps",
+  "license": "AGPL-3.0",
+  "install": [
+    "git clone https://github.com/oobabooga/textgen",
+    "cd textgen",
+    "python -m venv venv",
+    "source venv/bin/activate",
+    "pip install -r requirements/portable/requirements.txt --upgrade",
+    "python server.py --portable --api --auto-launch"
+  ],
+  "install_check": [
+    "git clone https://github.com/oobabooga/textgen",
+    "cd textgen",
+    "python -m venv venv",
+    "source venv/bin/activate",
+    "pip install -r requirements/portable/requirements.txt --upgrade",
+    "python server.py --portable --api --auto-launch"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "gguf",
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "oobabooga/textgen",
+    "description": "Open-source desktop app for local LLMs. Text, vision, tool-calling, OpenAI/Anthropic-compatible API. 100% private.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "AGPL-3.0",
+    "stars": 47739,
+    "pushed_at": "2026-08-17",
+    "archived": false,
+    "branch_commit": "c93f8871239550de2ccfe1e95d469aa82616f07e",
+    "release": {
+      "tag": "v4.9",
+      "date": "2026-05-20",
+      "url": "https://github.com/oobabooga/textgen/releases/tag/v4.9",
+      "commit": "f9df9be98267a79b57617d287d6d0638823116d4"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v4.9",
+    "commit": "f9df9be98267a79b57617d287d6d0638823116d4",
+    "date": "2026-05-20"
+  },
+  "description": "Gradio web UI for running language models with several backends, chat and notebook modes.",
+  "license_note": "AGPL-3.0, a copyleft license: if you run a modified version as a network service you must publish its source."
+}

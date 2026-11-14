@@ -1,0 +1,72 @@
+{
+  "id": "peft",
+  "name": "PEFT",
+  "kind": "tool",
+  "category": "training",
+  "repo": "huggingface/peft",
+  "homepage": "https://huggingface.co/docs/peft",
+  "license": "Apache-2.0",
+  "description": "Parameter-efficient fine-tuning methods such as LoRA.",
+  "install": [
+    "pip install peft"
+  ],
+  "install_check": [
+    "pip install peft"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "# get_peft_model(AutoModelForCausalLM.from_pretrained(\"<id>\"), LoraConfig(...))",
+  "runs_with": [],
+  "github": {
+    "repo": "huggingface/peft",
+    "description": "🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning.",
+    "homepage": "https://huggingface.co/docs/peft",
+    "language": "Python",
+    "topics": [
+      "adapter",
+      "diffusion",
+      "fine-tuning",
+      "llm",
+      "lora",
+      "parameter-efficient-learning",
+      "peft",
+      "python",
+      "pytorch",
+      "transformers"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 21887,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "66a7c305bac9d7f8183b1f158280b77be971a3d4",
+    "release": {
+      "tag": "v0.21.3",
+      "date": "2026-11-13",
+      "url": "https://github.com/huggingface/peft/releases/tag/v0.21.3",
+      "commit": "599e264cc9c62f93a7d6a0279b413b9c576812ca"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.21.3",
+    "commit": "599e264cc9c62f93a7d6a0279b413b9c576812ca",
+    "date": "2026-11-13"
+  }
+}

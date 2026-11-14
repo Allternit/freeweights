@@ -1,0 +1,78 @@
+{
+  "id": "unstructured",
+  "name": "Unstructured",
+  "repo": "Unstructured-IO/unstructured",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install unstructured"
+  ],
+  "install_check": [
+    "pip install unstructured"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "Unstructured-IO/unstructured",
+    "description": "Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding.",
+    "homepage": "https://www.unstructured.io/",
+    "language": "HTML",
+    "topics": [
+      "data-pipelines",
+      "deep-learning",
+      "document-image-analysis",
+      "document-image-processing",
+      "document-parser",
+      "document-parsing",
+      "docx",
+      "donut",
+      "information-retrieval",
+      "langchain",
+      "llm",
+      "machine-learning",
+      "ml",
+      "natural-language-processing",
+      "nlp",
+      "ocr",
+      "pdf",
+      "pdf-to-json",
+      "pdf-to-text",
+      "preprocessing"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 15740,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "ac932052e6e0ba3feab8a6e96b6d4480218e009f",
+    "release": {
+      "tag": "0.27.37",
+      "date": "2026-11-06",
+      "url": "https://github.com/Unstructured-IO/unstructured/releases/tag/0.27.37",
+      "commit": "293d235cfcd5f5e89c3cc5ff85562005e182ae33"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "0.27.37",
+    "commit": "293d235cfcd5f5e89c3cc5ff85562005e182ae33",
+    "date": "2026-11-06"
+  },
+  "description": "Splits and cleans documents of many types into pieces for retrieval and training."
+}

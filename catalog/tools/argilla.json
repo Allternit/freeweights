@@ -1,0 +1,75 @@
+{
+  "id": "argilla",
+  "name": "Argilla",
+  "repo": "argilla-io/argilla",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install argilla"
+  ],
+  "install_check": [
+    "pip install argilla"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "Collaborative annotation and feedback tool for language model data.",
+  "github": {
+    "repo": "argilla-io/argilla",
+    "description": "Argilla is a collaboration tool for AI engineers and domain experts to build high-quality datasets",
+    "homepage": "https://argilla-io.github.io/argilla/latest/",
+    "language": "Python",
+    "topics": [
+      "active-learning",
+      "ai",
+      "annotation-tool",
+      "developer-tools",
+      "gpt-4",
+      "human-in-the-loop",
+      "langchain",
+      "llm",
+      "machine-learning",
+      "mlops",
+      "natural-language-processing",
+      "nlp",
+      "rlhf",
+      "text-annotation",
+      "text-labeling",
+      "weak-supervision",
+      "weakly-supervised-learning"
+    ],
+    "default_branch": "develop",
+    "license": "Apache-2.0",
+    "stars": 5203,
+    "pushed_at": "2026-11-09",
+    "archived": false,
+    "branch_commit": "5338519accb13ae422f8bf9c0642651c249c49af",
+    "release": {
+      "tag": "v2.8.0",
+      "date": "2025-03-11",
+      "url": "https://github.com/argilla-io/argilla/releases/tag/v2.8.0",
+      "commit": "78cb5183f72e59857cf4da3015c42a91c3b46205"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.8.0",
+    "commit": "78cb5183f72e59857cf4da3015c42a91c3b46205",
+    "date": "2025-03-11"
+  }
+}

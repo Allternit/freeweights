@@ -1,0 +1,75 @@
+{
+  "id": "datasets",
+  "name": "Datasets",
+  "repo": "huggingface/datasets",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install datasets"
+  ],
+  "install_check": [
+    "pip install datasets"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "parquet",
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "huggingface/datasets",
+    "description": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
+    "homepage": "https://huggingface.co/docs/datasets",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "artificial-intelligence",
+      "computer-vision",
+      "dataset-hub",
+      "datasets",
+      "deep-learning",
+      "huggingface",
+      "llm",
+      "machine-learning",
+      "natural-language-processing",
+      "nlp",
+      "numpy",
+      "pandas",
+      "pytorch",
+      "speech",
+      "tensorflow"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 22139,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "efc82474bc990f5872226dca56457536c9a880e9",
+    "release": {
+      "tag": "5.2.0",
+      "date": "2026-11-09",
+      "url": "https://github.com/huggingface/datasets/releases/tag/5.2.0",
+      "commit": "e45c5b38100d0a39f7d29e31431075051b97485b"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "5.2.0",
+    "commit": "e45c5b38100d0a39f7d29e31431075051b97485b",
+    "date": "2026-11-09"
+  },
+  "description": "Loads and processes datasets with memory-mapped Arrow tables."
+}

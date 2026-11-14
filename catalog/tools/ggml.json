@@ -1,0 +1,59 @@
+{
+  "id": "ggml",
+  "name": "ggml",
+  "repo": "ggml-org/ggml",
+  "category": "quantization",
+  "license": "MIT",
+  "install": [
+    "git clone https://github.com/ggml-org/ggml"
+  ],
+  "install_check": [
+    "git clone https://github.com/ggml-org/ggml"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "gguf"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "ggml-org/ggml",
+    "description": "Tensor library for machine learning",
+    "homepage": "https://github.com/ggml-org",
+    "language": "C++",
+    "topics": [
+      "machine-learning"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 15784,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "417a024b4fb6bc3116d41af7c067166a039bdf12",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-11-13",
+      "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
+      "commit": "417a024b4fb6bc3116d41af7c067166a039bdf12"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.0.0",
+    "commit": "417a024b4fb6bc3116d41af7c067166a039bdf12",
+    "date": "2026-11-13"
+  },
+  "description": "The tensor library under llama.cpp and whisper.cpp, and the GGUF file format."
+}

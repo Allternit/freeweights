@@ -400,6 +400,11 @@ function cardRow(r) {
 // faces and a detail page. Freeweights links to the project and does not host tool binaries.
 const TOOL_LC = (spdx) => (/^(MIT|Apache-2\.0|BSD|ISC|Zlib|Unlicense|MPL)/i.test(spdx || '') ? 'permissive' : /GPL/i.test(spdx || '') ? 'copyleft' : 'unknown');
 const TOOL_KIND = { inference: 'inference', training: 'training', ui: 'app', format: 'format', ours: 'ours' };
+// A tool's category (catalog/tools/<id>.json) is its kind label on cards and pages.
+const TOOL_CAT = { inference: 'inference engine', apps: 'app or UI', training: 'training', quantization: 'quantization and conversion', eval: 'evaluation', agents: 'agents and gateways', data: 'data and documents', retrieval: 'retrieval', distribution: 'distribution', speech: 'speech', safety: 'safety scanner' };
+const toolKind = (t) => TOOL_CAT[t.category] || TOOL_KIND[t.kind] || t.kind;
+// How a tool relates to catalog entries: label on a model page, heading on the tool's Use tab.
+const TOOL_ROLE = { runs: ['Runs with', 'Run a catalog model'], trains: ['Fine-tune with', 'Fine-tune a catalog model'], converts: ['Convert with', 'Convert a catalog model'], evals: ['Evaluate with', 'Evaluate a catalog model'], scans: ['Scan with', 'Scan a downloaded model'], uses: ['Works with', 'Use a catalog model'], gets: ['Downloads with', 'Download any hosted model'] };
 const TOOL_ROWS = TOOLS.map((t) => {
   const g = t.github || {}; const repo = g.repo || (t.id === 'fw-py' ? 'allternit/fw.py' : 'allternit/' + t.id); const [owner, name] = repo.split('/');
   const rel = g.release || {}; const spdx = g.license || t.license;
@@ -413,7 +418,7 @@ function toolCardRow(r) {
   const t = r.tool; const g = t.github || {}; const rel = g.release || {};
   return { kind: 'tool', id: r.id, key: r.key, n: r.name, org: r.org, sec: r.section, fam: 'tools', mono: r.mono, url: modelUrl(r), size: 0, params: 0, fmt: [], task: [],
     lc: r.licClass, lic: r.license, rt: false, src: 'Links to the project', nc: false, added: r.added, sha: '', files: 0, host: 'github.com', commit: rel.commit || g.branch_commit || '',
-    sum: r.summary, logo: LOGO_OWNER(r), sig: '', licUrl: r.upstream, tag: rel.tag || '', relDate: rel.date || '', lang: g.language || '', tkind: TOOL_KIND[t.kind] || t.kind,
+    sum: r.summary, logo: LOGO_OWNER(r), sig: '', licUrl: r.upstream, tag: rel.tag || '', relDate: rel.date || '', lang: g.language || '', tkind: toolKind(t),
     platforms: t.platforms || [], install: t.install_verified ? t.install || [] : [], installDocs: t.install_docs || r.upstream, use: t.use || '', role: (t.works_with || {}).role || '',
     fv: Object.fromEntries(FACETS.map(([k, , f]) => [k, facetVals(k, f, r)])) };
 }
@@ -716,8 +721,8 @@ function useSnippets(r) {
 function toolChip(tr) { const lg = LOGO_OWNER(tr); return `<a class="tchip" href="${modelUrl(tr)}">${lg ? `<img class="org" src="${lg}" alt="" width="16" height="16" loading="lazy" decoding="async">` : ''}${esc(tr.name)}</a>`; }
 function runsWithHtml(r) {
   const tools = runsWith(r); if (!tools.length) return '';
-  const run = tools.filter((t) => t.tool.works_with.role === 'runs'); const train = tools.filter((t) => t.tool.works_with.role === 'trains');
-  return `<div class="runs">${run.length ? `<span class="runs-l">Runs with</span>${run.map(toolChip).join('')}` : ''}${train.length ? `<span class="runs-l">Fine-tune with</span>${train.map(toolChip).join('')}` : ''}</div>`;
+  const groups = Object.keys(TOOL_ROLE).filter((k) => k !== 'gets').map((k) => [k, tools.filter((t) => t.tool.works_with.role === k)]).filter(([, g]) => g.length);
+  return `<div class="runs">${groups.map(([k, g]) => `<span class="runs-l">${TOOL_ROLE[k][0]}</span>${g.map(toolChip).join('')}`).join('')}</div>`;
 }
 function modelPage(r) {
   const m = r.manifest || {}; const files = m.files || []; const srcs = (m.sources || []).slice().sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99));
@@ -797,15 +802,15 @@ function toolPage(r) {
   const t = r.tool; const g = t.github || {}; const rel = g.release || {}; const c = cardRow(r); const ext = /^https?:/.test(r.upstream);
   const fits = LISTED.filter((x) => toolFits(t, x)); const role = (t.works_with || {}).role;
   const note = `<p class="sub small" style="margin-top:12px">Freeweights links to the project and does not host tool binaries.</p>`;
-  const facts = [['Kind', TOOL_KIND[t.kind] || t.kind], ['License', r.license || 'see project'], ['Language', g.language || 'not stated'], ['Platforms', (t.platforms || []).join(', ') || 'see project'], ['Latest release', rel.tag ? `${rel.tag} (${rel.date})` : 'no release'], ['Repository', g.repo || 'not published yet']];
+  const facts = [['Kind', toolKind(t)], ['License', r.license || 'see project'], ['Language', g.language || 'not stated'], ['Platforms', (t.platforms || []).join(', ') || 'see project'], ['Latest release', rel.tag ? `${rel.tag} (${rel.date})` : 'no release'], ['Repository', g.repo || 'not published yet']];
   const installHtml = (t.install_verified && t.install && t.install.length) ? `${codeBlock('t-install', t.install.map((l) => `<span class="c">$ </span>${esc(l)}`).join('\n'))}<p class="sub small" style="margin-top:10px">Checked against the project's README on ${esc(g.fetched || 'the last fetch')}. The project's own instructions win when they differ: <a class="link" href="${esc(t.install_docs || r.upstream)}" rel="noopener">install docs ${ICON.ext}</a></p>`
     : `<div class="box pad"><p>${t.id === 'fw-py' ? 'Copy <span class="mono">scripts/fw.py</span> from the Freeweights repository. See the <a class="link" href="/docs/fw/">fw.py reference</a>.' : `Follow the project's install instructions: <a class="link" href="${esc(t.install_docs || r.upstream)}" rel="noopener">install docs ${ICON.ext}</a>`}</p></div>`;
   const fitList = fits.length ? `<div class="runs runs-list">${fits.slice(0, 60).map((x) => `<a class="tchip" href="${modelUrl(x)}">${esc(x.name)}</a>`).join('')}</div>${fits.length > 60 ? `<p class="sub small">and ${fits.length - 60} more.</p>` : ''}` : '<p class="sub">No catalog model matches yet.</p>';
   const tabs = [
     ['overview', 'Overview', `<p class="m-sum">${esc(t.what)}</p><dl class="facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>${(g.topics || []).length ? `<div class="runs"><span class="runs-l">Topics</span>${g.topics.slice(0, 12).map((x) => `<span class="tchip mono">${esc(x)}</span>`).join('')}</div>` : ''}${note}`],
     ['install', 'Install', `<div class="lead-face">${FWC.action(c)}</div>${installHtml}${note}`],
-    ['use', 'Use with Freeweights', `<div class="box pad"><div class="box-h">${role === 'trains' ? 'Fine-tune a catalog model' : role === 'gets' ? 'Download any hosted model' : 'Run a catalog model'}</div>${t.use ? codeBlock('t-use', `<span class="c">$ </span>${esc(t.use)}`) : ''}<p class="sub small" style="margin-top:8px">Download the weights from Freeweights first (<a class="link" href="/docs/hf-endpoint/">HF_ENDPOINT</a> or <a class="link" href="/docs/fw/">fw.py</a>), then point the tool at the folder.</p></div><h3 class="h3" style="margin:18px 0 8px">${role === 'trains' ? 'Catalog models it can fine-tune' : 'Catalog models it can run'} (${fits.length})</h3>${fitList}`],
-    ['license', 'License', `<div class="box pad"><dl class="kv"><dt>License</dt><dd class="mono">${esc(r.license || 'see project')}</dd><dt>Class</dt><dd>${lcTag(r)}</dd></dl>${ext ? `<p style="margin-top:14px"><a class="btn" href="${esc(r.upstream)}/blob/${esc(g.default_branch || 'main')}/LICENSE" rel="noopener">Read the license ${ICON.ext}</a></p>` : ''}</div>${note}`],
+    ['use', 'Use with Freeweights', `<div class="box pad"><div class="box-h">${(TOOL_ROLE[role] || TOOL_ROLE.runs)[1]}</div>${t.use ? codeBlock('t-use', `<span class="c">$ </span>${esc(t.use)}`) : ''}<p class="sub small" style="margin-top:8px">Download the weights from Freeweights first (<a class="link" href="/docs/hf-endpoint/">HF_ENDPOINT</a> or <a class="link" href="/docs/fw/">fw.py</a>), then point the tool at the folder.</p></div><h3 class="h3" style="margin:18px 0 8px">${role === 'trains' ? 'Catalog models it can fine-tune' : 'Catalog models it can run'} (${fits.length})</h3>${fitList}`],
+    ['license', 'License', `<div class="box pad"><dl class="kv"><dt>License</dt><dd class="mono">${esc(r.license || 'see project')}</dd><dt>Class</dt><dd>${lcTag(r)}</dd></dl>${t.license_note ? `<p class="sub" style="margin-top:12px">${esc(t.license_note)}</p>` : ''}${ext ? `<p style="margin-top:14px"><a class="btn" href="${esc(r.upstream)}/blob/${esc(g.default_branch || 'main')}/LICENSE" rel="noopener">Read the license ${ICON.ext}</a></p>` : ''}</div>${note}`],
     ['provenance', 'Provenance', `<div class="lead-face">${FWC.record(c, 'head', { link: false })}</div><div class="box pad"><dl class="kv"><dt>Repository</dt><dd>${ext ? `<a class="link mono small" href="${esc(r.upstream)}" rel="noopener">${esc(g.repo)} ${ICON.ext}</a>` : 'Not published yet'}</dd><dt>Pinned release</dt><dd class="mono small">${rel.tag ? `<a class="link" href="${esc(rel.url)}" rel="noopener">${esc(rel.tag)}</a>, ${esc(rel.date)}` : 'none'}</dd><dt>Release commit</dt><dd class="mono small" style="word-break:break-all">${esc(rel.commit || 'not known')}</dd><dt>Default branch</dt><dd class="mono small" style="word-break:break-all">${esc(g.default_branch || '')} ${esc(g.branch_commit || '')}</dd><dt>Fetched</dt><dd>${esc(g.fetched || 'not fetched')}</dd><dt>Takedowns</dt><dd>None.</dd></dl></div>${note}`],
   ];
   return {

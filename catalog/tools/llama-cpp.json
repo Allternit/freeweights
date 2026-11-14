@@ -1,0 +1,61 @@
+{
+  "id": "llama-cpp",
+  "name": "llama.cpp",
+  "kind": "tool",
+  "category": "inference",
+  "repo": "ggml-org/llama.cpp",
+  "homepage": "https://llama.app",
+  "license": "MIT",
+  "description": "Runs GGUF language models on CPUs and consumer GPUs, with a local server.",
+  "install": [
+    "brew install llama.cpp"
+  ],
+  "install_check": [
+    "brew install llama.cpp"
+  ],
+  "install_docs_paths": [
+    "docs/install.md"
+  ],
+  "platforms": [
+    "macOS",
+    "Linux",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "gguf"
+    ]
+  },
+  "use": "llama-server -m ./<file>.gguf --port 8080",
+  "runs_with": [],
+  "github": {
+    "repo": "ggml-org/llama.cpp",
+    "description": "LLM inference in C/C++",
+    "homepage": "https://llama.app",
+    "language": "C++",
+    "topics": [
+      "ggml"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 135047,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "a956a852c9c8bc1fb07206364838ddef299178c0",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-11-13",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0",
+      "commit": "b1b770d90d94cad9e9ea5b993bdbc383a522fb28"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.0.0",
+    "commit": "b1b770d90d94cad9e9ea5b993bdbc383a522fb28",
+    "date": "2026-11-13"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "comfyui",
+  "name": "ComfyUI",
+  "kind": "tool",
+  "category": "apps",
+  "repo": "Comfy-Org/ComfyUI",
+  "homepage": "https://www.comfy.org/",
+  "license": "GPL-3.0",
+  "description": "Node-based app for running image, video and music models. Most of the newer ones in this catalog are packaged for it.",
+  "install": [
+    "git clone https://github.com/comfyanonymous/ComfyUI",
+    "cd ComfyUI && pip install -r requirements.txt",
+    "python main.py"
+  ],
+  "install_check": [
+    "pip install -r requirements.txt",
+    "python main.py"
+  ],
+  "install_docs_paths": [],
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  "works_with": {
+    "role": "runs",
+    "sections": [
+      "image",
+      "video",
+      "music"
+    ],
+    "tasks": [
+      "text-to-image",
+      "image-to-image",
+      "text-to-video",
+      "image-to-video",
+      "text-to-audio"
+    ]
+  },
+  "use": "# put the files in ComfyUI/models/ and open the publisher's workflow",
+  "runs_with": [],
+  "github": {
+    "repo": "Comfy-Org/ComfyUI",
+    "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+    "homepage": "https://www.comfy.org/",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "comfy",
+      "comfyui",
+      "python",
+      "pytorch",
+      "stable-diffusion"
+    ],
+    "default_branch": "master",
+    "license": "GPL-3.0",
+    "stars": 146818,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "eee59185ff4f43ae2d9ad122b245619d27d9daad",
+    "release": {
+      "tag": "v0.45.0",
+      "date": "2026-11-10",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.45.0",
+      "commit": "989d93d0d968e704c589ce0146bb18c77f6b50cc"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.45.0",
+    "commit": "989d93d0d968e704c589ce0146bb18c77f6b50cc",
+    "date": "2026-11-10"
+  }
+}

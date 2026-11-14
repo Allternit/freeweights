@@ -1,0 +1,66 @@
+{
+  "id": "executorch",
+  "name": "ExecuTorch",
+  "repo": "pytorch/executorch",
+  "category": "quantization",
+  "license": "BSD-3-Clause",
+  "install": [
+    "pip install executorch"
+  ],
+  "install_check": [
+    "pip install executorch"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "iOS",
+    "Android"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "install_docs_paths": [],
+  "homepage": "",
+  "kind": "tool",
+  "description": "PyTorch's runtime for phones, wearables and embedded devices.",
+  "github": {
+    "repo": "pytorch/executorch",
+    "description": "On-device AI across mobile, embedded and edge for PyTorch",
+    "homepage": "https://executorch.ai",
+    "language": "Python",
+    "topics": [
+      "deep-learning",
+      "embedded",
+      "gpu",
+      "machine-learning",
+      "mobile",
+      "neural-network",
+      "tensor"
+    ],
+    "default_branch": "main",
+    "license": "",
+    "stars": 5177,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "a532d10e63544e54273f4ccba1973bc06ef4e2be",
+    "release": {
+      "tag": "v1.6.0",
+      "date": "2026-11-12",
+      "url": "https://github.com/pytorch/executorch/releases/tag/v1.6.0",
+      "commit": "4776f71b6f0daa5dfc7d758d5836fc1cc0d40154"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.6.0",
+    "commit": "4776f71b6f0daa5dfc7d758d5836fc1cc0d40154",
+    "date": "2026-11-12"
+  }
+}

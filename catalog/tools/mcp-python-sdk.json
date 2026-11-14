@@ -1,0 +1,63 @@
+{
+  "id": "mcp-python-sdk",
+  "name": "MCP Python SDK",
+  "repo": "modelcontextprotocol/python-sdk",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "uv add \"mcp[cli]\""
+  ],
+  "install_check": [
+    "uv add \"mcp[cli]\""
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "modelcontextprotocol/python-sdk",
+    "description": "The official Python SDK for Model Context Protocol servers and clients",
+    "homepage": "https://py.sdk.modelcontextprotocol.io/",
+    "language": "Python",
+    "topics": [
+      "mcp",
+      "mcp-client",
+      "mcp-server",
+      "python"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 24861,
+    "pushed_at": "2026-11-05",
+    "archived": false,
+    "branch_commit": "77001c96f9507be0f4d009b83210a384a5e08bda",
+    "release": {
+      "tag": "v2.3.0",
+      "date": "2026-10-02",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/releases/tag/v2.3.0",
+      "commit": "2118f14f8a19bc158d8a1cf90af58d85d187f849"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.3.0",
+    "commit": "2118f14f8a19bc158d8a1cf90af58d85d187f849",
+    "date": "2026-10-02"
+  },
+  "description": "Reference SDK for building Model Context Protocol servers and clients."
+}

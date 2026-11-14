@@ -1,0 +1,69 @@
+{
+  "id": "ramalama",
+  "name": "RamaLama",
+  "repo": "containers/ramalama",
+  "category": "distribution",
+  "license": "MIT",
+  "install": [
+    "pip install ramalama"
+  ],
+  "install_check": [
+    "pip install ramalama"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "gguf"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "containers/ramalama",
+    "description": "RamaLama is an open-source developer tool that simplifies the local serving of AI models from any source and facilitates their use for inference in production, all through the familiar language of containers.",
+    "homepage": "https://ramalama.ai",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "containers",
+      "cuda",
+      "hacktoberfest",
+      "hip",
+      "inference-server",
+      "intel",
+      "llamacpp",
+      "llm",
+      "podman",
+      "vllm"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 3113,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "58c808965f181c3b7c3fa9c3f6061d25811c053a",
+    "release": {
+      "tag": "v0.26.0",
+      "date": "2026-11-04",
+      "url": "https://github.com/containers/ramalama/releases/tag/v0.26.0",
+      "commit": "066e9cc7bbd6229abbe9e3b02b6b7f05151719df"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.26.0",
+    "commit": "066e9cc7bbd6229abbe9e3b02b6b7f05151719df",
+    "date": "2026-11-04"
+  },
+  "description": "Runs models from registries inside containers, the way you run any other image."
+}

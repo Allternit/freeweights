@@ -1,75 +1,36 @@
 #!/usr/bin/env python3
-"""Fill catalog/tools.json from each project's GitHub repository (stdlib + the gh CLI).
+"""Build catalog/tools.json from the curated tool files in catalog/tools/<id>.json (stdlib + the gh CLI).
 
-  python3 scripts/enrich_tools.py [--only ID ...]
+  python3 scripts/enrich_tools.py [--only ID ...] [--offline]
 
-For every tool whose url is a GitHub repository it records: description, license (SPDX id),
-primary language, homepage, topics, the latest release (tag + date, pinned like a model's commit),
-the commit sha the release tag points at and the default branch head, and a `fetched` date.
-Install commands and the "use with Freeweights" line are curated below. Each install command is
-checked against the project's README (and the extra docs listed): `install_verified` is true only
-when every `check` string is found there. The site shows unverified commands as a link to the
-project's own install page instead. `works_with` says which catalog entries a tool runs or trains.
-Stars are not recorded: the site does not rank tools."""
-import argparse, datetime, json, os, subprocess, sys, urllib.parse
+One curated file per tool. A person writes the curated fields; this script adds the GitHub facts and
+writes them back into the same file, then regenerates catalog/tools.json for the site and the Worker.
+
+Curated fields: id, name, kind ("tool"), category, repo, homepage, license (SPDX, OSI approved),
+description, install (lines copied from the project's README or docs), install_check (strings that must
+appear in the README or install_docs_paths files, which is how an install line counts as verified),
+install_docs_paths, platforms, works_with (which catalog entries it runs, trains, converts, evaluates,
+scans or uses), runs_with (ids of tools it runs with), use (the "use with Freeweights" line).
+
+GitHub facts (field `github`): description, language, topics, default branch, license, stars,
+pushed_at, the latest release (tag, date, url) and the commit that tag points at, the default branch
+head, and a `fetched` date. `pinned` is the release tag and commit shown as Provenance: the latest
+release when there is one, otherwise the default branch head.
+
+Checks that fail the run: no license, license not OSI approved, license differs from the repository's,
+no pinned commit, repository unreadable. Stale (no push or release in 12 months) is an error too.
+Fewer than 1,000 stars is a warning unless the tool file says why in `gap` (a format or task gap)."""
+import argparse, concurrent.futures as cf, datetime, glob, json, os, subprocess, sys, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PATH = os.path.join(ROOT, "catalog", "tools.json")
+DIR = os.path.join(ROOT, "catalog", "tools")
+OUT = os.path.join(ROOT, "catalog", "tools.json")
 
-RUNS_TEXT = ["text-generation", "image-text-to-text"]
-CURATED = {
-    "comfyui": {"install": ["git clone https://github.com/comfyanonymous/ComfyUI", "cd ComfyUI && pip install -r requirements.txt", "python main.py"],
-                "check": ["pip install -r requirements.txt", "python main.py"],
-                "use": "# put the files in ComfyUI/models/ and open the publisher's workflow",
-                "platforms": ["Windows", "macOS", "Linux"],
-                "works_with": {"role": "runs", "sections": ["image", "video", "music"], "tasks": ["text-to-image", "image-to-image", "text-to-video", "image-to-video", "text-to-audio"]}},
-    "llama-cpp": {"install": ["brew install llama.cpp"], "check": ["brew install llama.cpp"], "docs": ["docs/install.md"],
-                  "use": "llama-server -m ./<file>.gguf --port 8080",
-                  "platforms": ["macOS", "Linux", "Windows"],
-                  "works_with": {"role": "runs", "formats": ["gguf"]}},
-    "whisper-cpp": {"install": ["git clone https://github.com/ggml-org/whisper.cpp.git", "cd whisper.cpp && cmake -B build && cmake --build build -j --config Release"],
-                    "check": ["cmake -B build", "cmake --build build"],
-                    "use": "./build/bin/whisper-cli -m ./<model>.bin -f audio.wav   # convert the weights to ggml first",
-                    "platforms": ["macOS", "Linux", "Windows", "iOS", "Android"],
-                    "works_with": {"role": "runs", "match": "whisper"}},
-    "mlx-lm": {"install": ["pip install mlx-lm"], "check": ["pip install mlx-lm"],
-               "use": "mlx_lm.generate --model <id> --prompt \"Hello\"",
-               "platforms": ["macOS (Apple silicon)"],
-               "works_with": {"role": "runs", "formats": ["mlx"]}},
-    "vllm": {"install": ["pip install vllm"], "check": ["pip install vllm"],
-             "use": "HF_ENDPOINT=https://freeweights.allternit.com vllm serve <id>",
-             "platforms": ["Linux (GPU)"],
-             "works_with": {"role": "runs", "formats": ["safetensors"], "tasks": RUNS_TEXT}},
-    "sglang": {"install": ["uv pip install --prerelease=allow sglang"], "check": ["uv pip install --prerelease=allow sglang"],
-               "use": "HF_ENDPOINT=https://freeweights.allternit.com python3 -m sglang.launch_server --model-path <id>",
-               "platforms": ["Linux (GPU)"],
-               "works_with": {"role": "runs", "formats": ["safetensors"], "tasks": RUNS_TEXT}},
-    "ollama": {"install": ["curl -fsSL https://ollama.com/install.sh | sh"], "check": ["curl -fsSL https://ollama.com/install.sh | sh"],
-               "use": "printf 'FROM ./<file>.gguf\\n' > Modelfile && ollama create <name> -f Modelfile",
-               "platforms": ["macOS", "Linux", "Windows"],
-               "works_with": {"role": "runs", "formats": ["gguf"]}},
-    "axolotl": {"install": ["uv pip install torch==2.14.0 torchvision", "uv pip install axolotl[deepspeed]"],
-                "check": ["uv pip install axolotl[deepspeed]"],
-                "use": "axolotl train config.yml   # base_model: <id>",
-                "platforms": ["Linux (GPU)"],
-                "works_with": {"role": "trains", "formats": ["safetensors"], "tasks": RUNS_TEXT}},
-    "trl": {"install": ["pip install trl"], "check": ["pip install trl"],
-            "use": "trl sft --model_name_or_path <id> --dataset_name <dataset>",
-            "platforms": ["Linux", "macOS", "Windows"],
-            "works_with": {"role": "trains", "formats": ["safetensors"], "tasks": RUNS_TEXT}},
-    "peft": {"install": ["pip install peft"], "check": ["pip install peft"],
-             "use": "# get_peft_model(AutoModelForCausalLM.from_pretrained(\"<id>\"), LoraConfig(...))",
-             "platforms": ["Linux", "macOS", "Windows"],
-             "works_with": {"role": "trains", "formats": ["safetensors"], "tasks": RUNS_TEXT}},
-    "unsloth": {"install": ["pip install unsloth"], "check": ["pip install unsloth"],
-                "use": "# FastLanguageModel.from_pretrained(\"<id>\")",
-                "platforms": ["Linux (NVIDIA)", "Windows (NVIDIA)"],
-                "works_with": {"role": "trains", "formats": ["safetensors"], "tasks": RUNS_TEXT}},
-    "fw-py": {"install": ["# copy scripts/fw.py from the Freeweights repository"], "check": [],
-              "use": "fw get <id>",
-              "platforms": ["macOS", "Linux", "Windows (Python 3)"],
-              "works_with": {"role": "gets", "all_hosted": True}},
-}
+# SPDX ids of OSI approved licenses that tool repositories use. Add an id only after checking opensource.org.
+OSI = {"MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Zlib", "MPL-2.0", "GPL-2.0", "GPL-3.0", "AGPL-3.0",
+       "LGPL-2.1", "LGPL-3.0", "PostgreSQL", "Unlicense", "BSL-1.0"}
+CATEGORIES = ["inference", "apps", "training", "quantization", "eval", "agents", "data", "retrieval", "distribution", "speech", "safety"]
+STALE_DAYS = 366
 
 
 def gh(path, raw=False):
@@ -84,59 +45,125 @@ def today():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
 
 
-def enrich(t):
-    cur = CURATED.get(t["id"], {})
-    for k in ("install", "use", "platforms", "works_with"):
-        if k in cur:
-            t[k] = cur[k]
-    u = urllib.parse.urlparse(t.get("url", ""))
-    if u.netloc != "github.com":
-        t["install_verified"] = False
-        return t
-    owner, repo = u.path.strip("/").split("/")[:2]
+def facts(t):
+    """Fetch the GitHub facts for one tool. Returns (github dict, readme text) or (None, "")."""
+    owner, repo = t["repo"].split("/")
     info = gh(f"repos/{owner}/{repo}")
     if not info:
-        print(f"fail {t['id']}: repository not readable", file=sys.stderr)
-        return t
+        return None, ""
     owner, repo = info["owner"]["login"], info["name"]  # follows a moved repository
-    gh_ = {"repo": f"{owner}/{repo}", "description": info.get("description") or "", "homepage": info.get("homepage") or "",
-           "language": info.get("language") or "", "topics": info.get("topics") or [], "default_branch": info.get("default_branch") or "",
-           "license": ((info.get("license") or {}).get("spdx_id") or "").replace("NOASSERTION", "")}
-    head = gh(f"repos/{owner}/{repo}/commits/{gh_['default_branch']}") if gh_["default_branch"] else None
-    gh_["branch_commit"] = (head or {}).get("sha", "")
+    g = {"repo": f"{owner}/{repo}", "description": info.get("description") or "", "homepage": info.get("homepage") or "",
+         "language": info.get("language") or "", "topics": info.get("topics") or [], "default_branch": info.get("default_branch") or "",
+         "license": ((info.get("license") or {}).get("spdx_id") or "").replace("NOASSERTION", ""),
+         "stars": info.get("stargazers_count", 0), "pushed_at": (info.get("pushed_at") or "")[:10], "archived": bool(info.get("archived"))}
+    head = gh(f"repos/{owner}/{repo}/commits/{g['default_branch']}") if g["default_branch"] else None
+    g["branch_commit"] = (head or {}).get("sha", "")
     rel = gh(f"repos/{owner}/{repo}/releases/latest")
     if rel:
-        gh_["release"] = {"tag": rel.get("tag_name", ""), "date": (rel.get("published_at") or "")[:10], "url": rel.get("html_url", "")}
-        ref = gh(f"repos/{owner}/{repo}/commits/{urllib.parse.quote(rel.get('tag_name', ''))}")
-        gh_["release"]["commit"] = (ref or {}).get("sha", "")
+        g["release"] = {"tag": rel.get("tag_name", ""), "date": (rel.get("published_at") or "")[:10], "url": rel.get("html_url", "")}
+        ref = gh(f"repos/{owner}/{repo}/commits/{urllib.parse.quote(rel.get('tag_name', ''), safe='')}")
+        g["release"]["commit"] = (ref or {}).get("sha", "")
     text = gh(f"repos/{owner}/{repo}/readme", raw=True) or ""
-    for d in cur.get("docs", []):
+    for d in t.get("install_docs_paths", []):
         text += "\n" + (gh(f"repos/{owner}/{repo}/contents/{d}", raw=True) or "")
-    checks = cur.get("check", [])
+    g["fetched"] = today()
+    return g, text
+
+
+def pin(g):
+    r = g.get("release") or {}
+    if r.get("tag") and r.get("commit"):
+        return {"source": "release", "tag": r["tag"], "commit": r["commit"], "date": r.get("date", "")}
+    return {"source": "branch", "tag": "", "commit": g.get("branch_commit", ""), "date": g.get("pushed_at", "")}
+
+
+def enrich(t):
+    g, text = facts(t)
+    if g is None:
+        return t, ["repository not readable"]
+    errs = []
+    t["github"] = g
+    checks = t.get("install_check", [])
     t["install_verified"] = bool(checks) and all(c in text for c in checks)
-    t["install_docs"] = gh_["homepage"] or f"https://github.com/{owner}/{repo}#readme"
-    gh_["fetched"] = today()
-    t["github"] = gh_
-    if gh_["license"]:
-        t["license"] = gh_["license"]
-    return t
+    t["pinned"] = pin(g)
+    gl, cl = g["license"], t.get("license", "")
+    if gl and cl and gl != cl:
+        errs.append(f"license {cl} in the file but {gl} on GitHub")
+    t["license"] = gl or cl
+    return t, errs
+
+
+def validate(t, errs):
+    errs = list(errs)
+    g = t.get("github") or {}
+    if t.get("kind") != "tool":
+        errs.append("kind must be tool")
+    if t.get("category") not in CATEGORIES:
+        errs.append(f"category {t.get('category')!r} unknown")
+    if not t.get("license"):
+        errs.append("no license")
+    elif t["license"] not in OSI:
+        errs.append(f"license {t['license']} is not on the OSI list")
+    if not (t.get("pinned") or {}).get("commit"):
+        errs.append("no pinned commit")
+    if g.get("archived"):
+        errs.append("repository is archived")
+    last = max((g.get("pushed_at") or ""), ((g.get("release") or {}).get("date") or ""))
+    if last and (datetime.date.today() - datetime.date.fromisoformat(last)).days > STALE_DAYS:
+        errs.append(f"stale: last push or release {last}")
+    warns = []
+    if g.get("stars", 0) < 1000 and not t.get("gap"):
+        warns.append(f"{g.get('stars', 0)} stars and no gap reason")
+    if not t.get("install_verified") and t.get("install_check"):
+        warns.append("install not verified against the README")
+    return errs, warns
+
+
+def derive(t):
+    """The shape the site and the Worker read (catalog/tools.json)."""
+    g = t.get("github") or {}
+    keep = {"id": t["id"], "name": t["name"], "url": f"https://github.com/{t['repo']}", "license": t["license"], "what": t["description"],
+            "kind": t["kind"], "category": t["category"], "install": t["install"], "use": t.get("use", ""), "platforms": t.get("platforms", []),
+            "works_with": t.get("works_with", {}), "runs_with": t.get("runs_with", []), "install_verified": t.get("install_verified", False),
+            "install_docs": t.get("homepage") or g.get("homepage") or f"https://github.com/{t['repo']}#readme", "github": g, "pinned": t.get("pinned", {})}
+    if t.get("license_note"):
+        keep["license_note"] = t["license_note"]
+    return keep
 
 
 def main():
     ap = argparse.ArgumentParser(prog="enrich_tools.py")
     ap.add_argument("--only", nargs="*")
+    ap.add_argument("--offline", action="store_true", help="regenerate tools.json from the files without calling GitHub")
     a = ap.parse_args()
-    data = json.load(open(PATH))
-    for t in data.get("tools", []):
-        if a.only and t["id"] not in a.only:
-            continue
-        enrich(t)
+    files = sorted(glob.glob(os.path.join(DIR, "*.json")))
+    tools = [json.load(open(f)) for f in files]
+    ids = {t["id"] for t in tools}
+    bad = 0
+    work = [t for t in tools if not a.offline and (not a.only or t["id"] in a.only)]
+    with cf.ThreadPoolExecutor(8) as ex:
+        results = {t["id"]: r for t, r in zip(work, ex.map(enrich, work))}
+    for t, f in zip(tools, files):
+        errs = []
+        if t["id"] in results:
+            t, errs = results[t["id"]]
+            with open(f, "w") as fh:
+                json.dump(t, fh, indent=2, ensure_ascii=False)
+                fh.write("\n")
+        for r in t.get("runs_with", []):
+            if r not in ids:
+                errs.append(f"runs_with {r} is not a tool id")
+        errs, warns = validate(t, errs)
         g = t.get("github", {})
-        print(f"{t['id']:12} {g.get('license', t.get('license', '')):12} {(g.get('release') or {}).get('tag', '-'):14} install {'verified' if t.get('install_verified') else 'NOT verified'}")
-    with open(PATH, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        print(f"{t['id']:22} {t['category']:12} {t.get('license', ''):12} {g.get('stars', 0):>7} {(t.get('pinned') or {}).get('tag') or 'branch':14} install {'verified' if t.get('install_verified') else 'NOT verified'}"
+              + "".join(f"  WARN {w}" for w in warns) + "".join(f"  ERROR {e}" for e in errs))
+        bad += bool(errs)
+    out = {"tools": [derive(t) for t in tools]}
+    with open(OUT, "w") as f:
+        json.dump(out, f, indent=2, ensure_ascii=False)
         f.write("\n")
-    return 0
+    print(f"{len(tools)} tools, {bad} with errors")
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":

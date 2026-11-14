@@ -1,0 +1,56 @@
+{
+  "id": "pgvector",
+  "name": "pgvector",
+  "repo": "pgvector/pgvector",
+  "category": "retrieval",
+  "license": "PostgreSQL",
+  "install": [
+    "docker pull pgvector/pgvector:pg18"
+  ],
+  "install_check": [
+    "docker pull pgvector/pgvector"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "pgvector/pgvector",
+    "description": "Open-source vector similarity search for Postgres",
+    "homepage": "",
+    "language": "C",
+    "topics": [
+      "approximate-nearest-neighbor-search",
+      "nearest-neighbor-search"
+    ],
+    "default_branch": "master",
+    "license": "",
+    "stars": 23679,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "10a73eceefe033ac944f91782c553b5fc67eccb9",
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "10a73eceefe033ac944f91782c553b5fc67eccb9",
+    "date": "2026-11-14"
+  },
+  "description": "Vector similarity search inside PostgreSQL."
+}

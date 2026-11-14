@@ -1,0 +1,57 @@
+{
+  "id": "piper",
+  "name": "Piper",
+  "repo": "OHF-Voice/piper1-gpl",
+  "category": "speech",
+  "license": "GPL-3.0",
+  "install": [
+    "pip install piper-tts"
+  ],
+  "install_check": [
+    "pip install piper-tts"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "text-to-speech"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "OHF-Voice/piper1-gpl",
+    "description": "Fast and local neural text-to-speech engine",
+    "homepage": "",
+    "language": "C++",
+    "topics": [],
+    "default_branch": "main",
+    "license": "GPL-3.0",
+    "stars": 6287,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "6565650f47648de2fb053f622544e46e32c9d0e7",
+    "release": {
+      "tag": "v1.8.0",
+      "date": "2026-09-04",
+      "url": "https://github.com/OHF-Voice/piper1-gpl/releases/tag/v1.8.0",
+      "commit": "639388b6317fc4731e91d53da42aea68fd4166ff"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.8.0",
+    "commit": "639388b6317fc4731e91d53da42aea68fd4166ff",
+    "date": "2026-09-04"
+  },
+  "description": "Fast local text-to-speech that runs on a Raspberry Pi."
+}

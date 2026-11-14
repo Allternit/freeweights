@@ -1,0 +1,60 @@
+{
+  "id": "modelscan",
+  "name": "ModelScan",
+  "repo": "protectai/modelscan",
+  "category": "safety",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install modelscan"
+  ],
+  "install_check": [
+    "pip install modelscan"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "formats": [
+      "safetensors",
+      "gguf",
+      "onnx"
+    ]
+  },
+  "use": "modelscan -p ./<file>",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "github": {
+    "repo": "protectai/modelscan",
+    "description": "Protection against Model Serialization Attacks",
+    "homepage": "http://modelscan.ai",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 797,
+    "pushed_at": "2026-09-28",
+    "archived": false,
+    "branch_commit": "61fcec9c2a37c24c1fb12d84ede30fe248a364bd",
+    "release": {
+      "tag": "v0.8.8",
+      "date": "2026-02-18",
+      "url": "https://github.com/protectai/modelscan/releases/tag/v0.8.8",
+      "commit": "61fcec9c2a37c24c1fb12d84ede30fe248a364bd"
+    },
+    "fetched": "2026-11-14"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.8.8",
+    "commit": "61fcec9c2a37c24c1fb12d84ede30fe248a364bd",
+    "date": "2026-02-18"
+  },
+  "description": "Scans model files for unsafe code such as pickle payloads before you load them.",
+  "gap": "Scans model files for unsafe pickle code; no other listed tool does this."
+}
