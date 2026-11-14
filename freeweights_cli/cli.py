@@ -11,7 +11,7 @@ every file from the sources in priority order with resume, and checks size and s
 info and search print a model's card in the terminal: a dot-letter family monogram, the
 newsgroup header lines (the RECORD face), key facts and the get/verify commands (the ACTION
 face). Link-only models print the license link instead of commands."""
-import argparse, hashlib, json, os, shutil, subprocess, sys, tempfile, textwrap, unicodedata, urllib.error, urllib.parse, urllib.request
+import argparse, hashlib, json, os, re, shutil, subprocess, sys, tempfile, textwrap, unicodedata, urllib.error, urllib.parse, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL = os.path.isdir(os.path.join(ROOT, "catalog"))  # true in a repository checkout, false when pip/brew installed
 DEFAULT_PUB = next((p for p in (os.path.join(ROOT, "spec", "keys", "freeweights-v0.pub"), os.path.join(os.path.dirname(os.path.abspath(__file__)), "keys", "freeweights-v0.pub")) if os.path.exists(p)), "freeweights-v0.pub")
@@ -329,6 +329,19 @@ def cmd_info(a):
     print("\n".join(render_card(card_data(r, a.remote), term_width(a.width), Paint(color_on()))))
     return 0
 
+TIER_RANK = {"T0": 0, "T1": 1, "T2": 2}
+REL_RANK = {"base": 0, "finetune": 1, "merge": 1, "quant": 2, "adapter": 2}
+def rank_of(r):
+    """Same order as the site and the API: official lab repos and base models first, then
+    fine-tunes, then quants and adapters. Order is never for sale."""
+    rel = (r.get("relation") or {}).get("type") or "base"
+    t = TIER_RANK.get(r.get("tier") or "")
+    if t is None:
+        norm = lambda x: re.sub(r"[^a-z0-9]", "", str(x or "").lower())
+        o, f = norm(r["id"].split("/")[0]), norm(r.get("family"))
+        t = 0.5 if rel == "base" and f and o and (f in o or o in f) else 2.5 if rel == "base" else 3
+    return round(t * 10) + REL_RANK.get(rel, 1)
+
 def api_get(path):
     return json.loads(fetch_bytes(ORIGIN + path))
 
@@ -337,7 +350,7 @@ def api_search(words, limit=1000):
     matches one text needle on id and display name, so send the longest word and keep the
     models whose id, name, task, format, section or license contain all words."""
     needle = max(words, key=len)
-    hits = api_get("/api/models?" + urllib.parse.urlencode({"search": needle, "limit": limit, "sort": "added"}))
+    hits = api_get("/api/models?" + urllib.parse.urlencode({"search": needle, "limit": limit, "sort": "rank"}))
     def text(h): return " ".join([h.get("id", ""), h.get("pipeline_tag") or "", h.get("library_name") or "", h.get("section") or "", h.get("license") or ""]).lower()
     ids = [h["id"] for h in hits if all(w in text(h) for w in words)]
     if not ids: return []
@@ -351,6 +364,7 @@ def cmd_search(a):
         rows = catalog_rows(False)
         def text(r): return " ".join([r["id"], r.get("display_name") or "", r["section"], " ".join(r.get("tasks") or []), " ".join(r.get("formats") or []), r.get("license_id") or "", r.get("license_class") or ""]).lower()
         hits = sorted((r for r in rows if all(w in text(r) for w in words)), key=lambda r: str(r.get("added_at") or ""), reverse=True)
+        hits.sort(key=rank_of)  # stable: rank first, newest first within a rank
     else:
         try: hits = api_search(words)
         except (urllib.error.URLError, OSError, ValueError) as e:
