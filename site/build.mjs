@@ -113,7 +113,7 @@ const ROWS = loadRows().map((r) => {
     linkOnly: r.license_class === 'non-commercial' || r.license_class === 'gated' || !r.manifest_url,
     sourceOnly: r.license_class === 'non-commercial' || !m,
     base: r.base_model, changed: r.what_changed, added: r.added_at, manifest: m || null,
-    kind: r.kind || null, relation: r.relation || null, audit: r.audit || null, tier: r.tier || null,
+    kind: r.kind || null, relation: r.relation || null, audit: r.audit || null, tier: r.tier || null, dl: (r.signals && r.signals.downloads_30d) || 0,
     unsigned: !!(m && !m.sample && !minisig[r.id]),
     wanted: r.status === 'wanted' || st.allFailed || !!(m && !m.sample && !minisig[r.id]), failedAt: st.allFailed ? st.last : null, lastCheck: st.last,
   };
@@ -129,8 +129,8 @@ const LISTED = ROWS.filter((r) => !r.wanted);
 const WANTED = ROWS.filter((r) => r.wanted);
 const modelUrl = (r) => `/${r.section}/${r.id}/`;
 const sectionUrl = (id) => `/${id}/`;
-const bySection = (id) => LISTED.filter((r) => r.section === id);
-const ENTRIES = () => [...LISTED, ...TOOL_ROWS];
+const bySection = (id) => TOP.filter((r) => r.section === id);
+const ENTRIES = () => [...TOP, ...TOOL_ROWS].sort(byRank);
 
 // ledger: ledger/*.csv. Columns are read loosely: date, direction (in/out) or a signed amount, type, description, amount*, invoice.
 const LEDGER = ls(path.join(ROOT, 'ledger'), /\.csv$/).flatMap((f) => csv(rd(f)).map((r) => ({ ...r, _file: path.basename(f) })));
@@ -361,6 +361,25 @@ for (const r of ROWS) {
   r.summary = summary(r);
   r.mSha = r.manifest && manifestFile[r.id] ? crypto.createHash('sha256').update(fs.readFileSync(manifestFile[r.id])).digest('hex') : null;
 }
+// ---------- Scale: ranking, variants, paging ----------
+// Order is never for sale. Official lab repos and base models first (tier T0 > T1 > T2; relation
+// base > finetune > quant/adapter), then 30-day downloads. An entry with no tier yet is read as an
+// official repo when it is a base model whose publisher name matches its section (deepseek-ai in
+// deepseek); every other untiered entry ranks below the tiered ones.
+const PAGE = 100; const CARD_SHARD = 100; const IDX_SHARD = 3000; const MAX_SSR_PAGES = 40;
+const TIER_RANK = { T0: 0, T1: 1, T2: 2 }; const REL_RANK = { base: 0, finetune: 1, merge: 1, quant: 2, adapter: 2 };
+const normKey = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+function rkOf(r) {
+  const rel = r.relation && r.relation.type; let t = TIER_RANK[r.tier];
+  if (t === undefined) { const o = normKey(r.org), f = normKey(r.fam); t = rel === 'base' && f && o && (o.includes(f) || f.includes(o)) ? 0.5 : rel === 'base' ? 2.5 : 3; }
+  return Math.round(t * 10) + (REL_RANK[rel] ?? 1);
+}
+const byRank = (a, b) => a.rk - b.rk || (b.dl || 0) - (a.dl || 0) || String(b.added || '').localeCompare(String(a.added || '')) || a.name.localeCompare(b.name);
+const LISTED_IDS = new Set(LISTED.map((r) => r.id));
+for (const r of ROWS) { r.rk = rkOf(r); r.isVar = !!(r.relation && (r.relation.type === 'quant' || r.relation.type === 'adapter') && r.relation.parent && LISTED_IDS.has(r.relation.parent) && r.relation.parent !== r.id); }
+const TOP = LISTED.filter((r) => !r.isVar).sort(byRank);
+const VARIANT_ROWS = LISTED.filter((r) => r.isVar).sort(byRank);
+const VARIANTS = {}; for (const v of VARIANT_ROWS) (VARIANTS[v.relation.parent] = VARIANTS[v.relation.parent] || []).push(v);
 const COLLECTIONS = [
   { slug: 'mac-256', name: 'Runs on a 256 GB Mac', blurb: 'Weights of 200 GB or less, counted from each signed manifest (the smallest GGUF or ONNX variant when a repo has several), so the model fits in 256 GB of unified memory with room for context.', test: (r) => !isData(r) && r.weight && r.weight <= 200e9 },
   { slug: 'laptop', name: 'Small enough for a laptop', blurb: 'Weights of 12 GB or less, counted from each signed manifest, so the model loads in 16 GB of memory with room to run.', test: (r) => !isData(r) && r.weight && r.weight <= 12e9 },
@@ -368,7 +387,7 @@ const COLLECTIONS = [
   { slug: 'speech', name: 'Speech', blurb: 'Speech recognition, text to speech and audio models.', test: (r) => r.section === 'alt.freeweights.speech' || r.tasks.some((t) => /speech|audio/.test(t)) },
   { slug: 'gguf', name: 'GGUF for llama.cpp and Ollama', blurb: 'Repos with GGUF files, ready for llama.cpp, Ollama and LM Studio.', test: (r) => r.formats.includes('gguf') },
   { slug: 'datasets', name: 'Open datasets', blurb: 'Training and evaluation datasets with a license that allows sharing.', test: isData },
-].map((c) => ({ ...c, rows: LISTED.filter(c.test) }));
+].map((c) => ({ ...c, rows: TOP.filter(c.test) }));
 for (const r of ROWS) r.coll = COLLECTIONS.filter((c) => c.test(r)).map((c) => c.slug);
 
 const FACETS = [
@@ -414,7 +433,7 @@ const TOOL_ROWS = TOOLS.map((t) => {
   const g = t.github || {}; const repo = g.repo || (t.id === 'fw-py' ? 'allternit/fw.py' : 'allternit/' + t.id); const [owner, name] = repo.split('/');
   const rel = g.release || {}; const spdx = g.license || t.license;
   return { kind: 'tool', tool: t, id: repo, key: repo.replace(/\//g, '__'), org: owner, repo: name, name: t.name, section: 'alt.freeweights.tools', fam: 'tools',
-    mono: t.name.replace(/[^a-z0-9]/gi, '').slice(0, 2).toUpperCase(), license: spdx, licClass: TOOL_LC(spdx), tasks: [], formats: [], size: null, params: null,
+    mono: t.name.replace(/[^a-z0-9]/gi, '').slice(0, 2).toUpperCase(), rk: 26, dl: 0, license: spdx, licClass: TOOL_LC(spdx), tasks: [], formats: [], size: null, params: null,
     added: rel.date || g.fetched || null, tag: rel.tag || '', summary: g.description && g.description.length > (t.what || '').length ? g.description : t.what,
     upstream: /^https?:/.test(t.url) ? `https://github.com/${repo}` : t.url, linkOnly: false, requiresTerms: false, badges: [], sample: false, lastByType: {} };
 });
@@ -440,6 +459,9 @@ function toolFits(t, r) {
 const runsWith = (r) => TOOL_ROWS.filter((tr) => tr.tool.works_with && tr.tool.works_with.role !== 'gets' && toolFits(tr.tool, r));
 const kindCount = (rows) => { const c = { model: 0, dataset: 0, tool: 0 }; rows.forEach((r) => c[r.kind === 'tool' ? 'tool' : isData(r) ? 'dataset' : 'model']++); return [['model', 'model'], ['dataset', 'dataset'], ['tool', 'tool']].filter(([k]) => c[k]).map(([k, w]) => plural(c[k], w)).join(' · ') || '0 models'; };
 const rowsJson = (rows) => `<script type="application/json" id="fw-rows">${JSON.stringify(rows.map(cardRow)).replace(/</g, '\\u003c')}</script>`;
+// Catalog cards in shards and inline: the facet values travel in the search index, not on each card.
+const shardCard = (r) => { const c = cardRow(r); delete c.fv; if (r.sample) c.smp = 1; return c; };
+const catalogJson = (rows) => `<script type="application/json" id="fw-rows">${JSON.stringify(rows.map(shardCard)).replace(/</g, '\\u003c')}</script>`;
 // Tiles (IDENTITY front, FACTS back, RECORD strip) for home, related models and the grid.
 const cards = (rows) => `<div class="cards tiles">${rows.map((r) => FWC.tile(cardRow(r))).join('')}</div>`;
 // The old single-face styles A to D, kept as references on /design/cards/ only.
@@ -546,7 +568,7 @@ const collTile = (c) => `<a class="coll" href="/collections/${c.slug}/"><b>${esc
   const trust = hs.trust ? md(hs.trust.md).html : '';
   const explore = hs.explore || null;
   const sorted = [...SECTIONS].sort((a, b) => secCount(b) - secCount(a));
-  const latest = [...LISTED].sort((a, b) => String(b.added || '').localeCompare(String(a.added || '')) || a.name.localeCompare(b.name)).slice(0, 6);
+  const latest = [...TOP].sort((a, b) => String(b.added || '').localeCompare(String(a.added || '')) || a.name.localeCompare(b.name)).slice(0, 6);
   const mission = MISSION_DOC ? (mdSections(MISSION_DOC.body).find((s) => s.id === 'mission') || {}).md || '' : MISSION;
   const verifyEx = LISTED.find((r) => r.manifest && minisig[r.id] && !r.requiresTerms) || first;
   page({ path: '/', nav: 'home', file: 'index.html', desc: HOME && HOME.fm.summary, body: `
@@ -625,21 +647,33 @@ function facetsHtml(rows, skipSec) {
     return `<fieldset class="facet" data-facet="${k}"><legend>${esc(label)}</legend>${vals.slice(0, 6).map(opt).join('')}${vals.length > 6 ? `<details class="more-opts"><summary>Show ${vals.length - 6} more</summary>${vals.slice(6).map(opt).join('')}</details>` : ''}</fieldset>`;
   }).join('');
 }
+// The dot monogram is 2 KB of rects, so list rows point at one cached sprite instead of repeating it.
+const MONO_SPRITE = {};
+function monoUse(m) {
+  if (!MONO_SPRITE[m]) { const svg = FWC.word(m, 9, 'mono-svg'); const g = svg.match(/viewBox="([^"]+)" height="9" width="([^"]+)"/); MONO_SPRITE[m] = { vb: g[1], w: g[2], body: svg.replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '') }; }
+  const x = MONO_SPRITE[m]; return `<svg class="mono-svg" viewBox="${x.vb}" height="9" width="${x.w}" fill="currentColor" aria-hidden="true"><use href="/assets/mono.svg#m-${esc(m)}"/></svg>`;
+}
 function listRow(r, first) {
   // RECORD face as one newsreader line: From and group under the subject, then size, params, license, date.
   const lg = r.kind === 'tool' ? LOGO_OWNER(r) : logoOf(r.org);
-  return `<a class="msg" href="${modelUrl(r)}" data-id="${esc(r.id)}"${first ? ' data-sel' : ''}><span class="s">${lg ? `<img class="org msg-org" src="${lg}" alt="" width="22" height="22" loading="lazy" decoding="async">` : `<span class="msg-org msg-mono">${FWC.word(r.mono, 9, 'mono-svg')}</span>`}<span class="s-t"><span class="s-n">${esc(r.name)}${r.sample ? sampleTag() : ''}</span><small><b>From:</b> ${esc(r.org)} <b>in</b> ${esc(r.section)}</small></span></span><span class="z mono">${r.kind === 'tool' ? esc(r.tag || 'no release') : fmtBytes(r.size)}</span><span class="pp mono">${r.params ? FWC.params(r.params) : '—'}</span><span class="lcc">${lcTag(r)}</span><span class="dt mono">${r.added ? String(r.added).slice(0, 10) : ''}</span></a>`;
+  return `<a class="msg" href="${modelUrl(r)}" data-id="${esc(r.id)}"${first ? ' data-sel' : ''}><span class="s">${lg ? `<img class="org msg-org" src="${lg}" alt="" width="22" height="22" loading="lazy" decoding="async">` : `<span class="msg-org msg-mono">${monoUse(r.mono)}</span>`}<span class="s-t"><span class="s-n">${esc(r.name)}${r.sample ? sampleTag() : ''}</span><small><b>From:</b> ${esc(r.org)} <b>in</b> ${esc(r.section)}</small></span></span><span class="z mono">${r.kind === 'tool' ? esc(r.tag || 'no release') : fmtBytes(r.size)}</span><span class="pp mono">${r.params ? FWC.params(r.params) : '—'}</span><span class="lcc">${lcTag(r)}</span><span class="dt mono">${r.added ? String(r.added).slice(0, 10) : ''}</span></a>`;
 }
 function preview(r) {
   const c = cardRow(r);
   return FWC.combined(c, { cls: 'fwk-pv', open: true });
 }
-function catalogPage({ sec, coll }) {
+function catalogPage({ sec, coll, pageNo = 1 }) {
   const rows = sec ? (sec.id === 'alt.freeweights.tools' ? TOOL_ROWS : bySection(sec.id)) : coll ? coll.rows : ENTRIES();
   const label = sec ? sec.id : coll ? coll.name : 'alt.freeweights.*';
   const base = sec ? sectionUrl(sec.id) : coll ? `/collections/${coll.slug}/` : '/alt.freeweights/';
+  const scope = sec ? 'sec:' + sec.family : coll ? 'coll:' + coll.slug : 'all';
+  const nPages = Math.min(MAX_SSR_PAGES, Math.max(1, Math.ceil(rows.length / PAGE)));
+  const pgUrl = (n) => (n === 1 ? base : `${base}page/${n}/`);
+  const pageRows = rows.slice((pageNo - 1) * PAGE, pageNo * PAGE);
+  const capped = rows.length > nPages * PAGE;
+  const pager = nPages > 1 || capped ? `<nav class="pager" aria-label="Pages" data-pager>${pageNo > 1 ? `<a class="btn sm" rel="prev" href="${pgUrl(pageNo - 1)}">&larr; Previous</a>` : '<span></span>'}<span class="mono small">Page ${pageNo} of ${nPages}${capped && pageNo === nPages ? `. Search for the other ${rows.length - nPages * PAGE} entries.` : ''}</span>${pageNo < nPages ? `<a class="btn sm" rel="next" href="${pgUrl(pageNo + 1)}">Next &rarr;</a>` : '<span></span>'}</nav>` : '';
   const secDoc = sec && content(`sections/${sec.family}.md`);
-  const intro = sec && sec.id === 'alt.freeweights.tools' ? `<p>${esc(sec.description)} ${plural(TOOL_ROWS.length, 'tool')}, newest release first. Freeweights links to the project and does not host tool binaries.</p>` : secDoc ? md(secDoc.body).html : sec ? `<p>${esc(sec.description)} ${rows.length ? `${plural(rows.length, 'model')}, newest first.` : ''} Order is never for sale.</p>` : coll ? `<p>${esc(coll.blurb)}</p>` : '<p>Sections are families; modality is a filter. Newest first. Order is never for sale.</p>';
+  const intro = sec && sec.id === 'alt.freeweights.tools' ? `<p>${esc(sec.description)} ${plural(TOOL_ROWS.length, 'tool')}, newest release first. Freeweights links to the project and does not host tool binaries.</p>` : secDoc ? md(secDoc.body).html : sec ? `<p>${esc(sec.description)} ${rows.length ? `${plural(rows.length, 'model')}, best first.` : ''} Order is never for sale.</p>` : coll ? `<p>${esc(coll.blurb)}</p>` : '<p>Sections are families; modality is a filter. Official lab repos and base models come first, then by downloads. Order is never for sale.</p>';
   const tree = `<a href="/alt.freeweights/"${!sec && !coll ? ' aria-current="page"' : ''} class="mono"><span>alt.freeweights.*</span><span class="c">${ENTRIES().length}</span></a>` +
     SECTIONS.map((s) => { const n = secCount(s); return `<a href="${sectionUrl(s.id)}" class="d mono${n ? '' : ' zero'}"${sec && sec.id === s.id ? ' aria-current="page"' : ''}><span>${esc(s.family)}</span><span class="c">${n || ''}</span></a>`; }).join('');
   const collLinks = COLLECTIONS.map((c) => `<a href="/collections/${c.slug}/"${coll && coll.slug === c.slug ? ' aria-current="page"' : ''}><span>${esc(c.name)}</span><span class="c">${c.rows.length}</span></a>`).join('');
@@ -650,15 +684,15 @@ function catalogPage({ sec, coll }) {
     : `<div class="empty"><b>No models here yet.</b><span>Rows appear when the license audit and the manifests are done.</span><span><a class="link" href="/docs/licenses/">What gets listed</a></span></div>`;
   const seg = (attr, items) => items.map(([v, l, ic]) => `<button type="button" class="segb" data-${attr}="${v}" aria-pressed="false" title="${esc(l)}">${ic || ''}<span${ic ? ' class="segl"' : ''}>${esc(l)}</span></button>`).join('');
   return {
-    path: base, nav: 'catalog', file: base.slice(1) + 'index.html', wide: true,
-    title: label, desc: sec ? `${sec.name} models on Allternit Freeweights: ${sec.description}` : coll ? `${coll.name}: ${coll.blurb}` : 'Every open model on Allternit Freeweights, by section, with license, size and where the bytes come from.',
+    path: pgUrl(pageNo), nav: 'catalog', file: pgUrl(pageNo).slice(1) + 'index.html', wide: true,
+    title: pageNo > 1 ? `${label} · page ${pageNo}` : label, desc: sec ? `${sec.name} models on Allternit Freeweights: ${sec.description}` : coll ? `${coll.name}: ${coll.blurb}` : 'Every open model on Allternit Freeweights, by section, with license, size and where the bytes come from.',
     body: `
 <div class="wrap page-head cat-head">
   <div class="eyebrow mono"><b>alt</b>.freeweights.* &nbsp;·&nbsp; ${SECTIONS.length} sections &nbsp;·&nbsp; ${plural(LISTED.length, 'model')} listed${coll ? ' &nbsp;·&nbsp; collection' : ''}</div>
   <h1 class="ph1${coll ? '' : ' mono'}">${esc(label)}</h1>
   <div class="lead">${intro}</div>
 </div>
-<div class="cat" data-catalog data-base="${base}" data-total="${rows.length}">
+<div class="cat" data-catalog data-base="${base}" data-scope="${scope}" data-page="${pageNo}" data-total="${rows.length}">
   <aside class="rail" aria-label="Sections and filters">
     <div class="rail-h"><b>Filters</b><button type="button" class="btn sm" data-rail-toggle>Done</button></div>
     <div class="pane-h">Sections</div><div class="tree">${tree}</div>
@@ -671,15 +705,17 @@ function catalogPage({ sec, coll }) {
       <label class="q">${ICON.search}<span class="sr">Search models</span><input type="search" name="q" data-search data-q placeholder="Search ${rows.length} ${rows.every((r) => r.kind === 'tool') ? 'tools' : 'entries'}" autocomplete="off"><i class="kbd mono hide-ph" aria-hidden="true">/</i></label>
       <div class="tools">
         <button type="button" class="btn sm show-ph" data-rail-toggle>${ICON.filter}Filters<span class="mono" data-fcount></span></button>
-        <label class="sort"><span class="sr">Sort</span><select data-sort><option value="new">Newest</option><option value="size">Size: largest</option><option value="small">Size: smallest</option><option value="params">Parameters: most</option><option value="name">Name A to Z</option><option value="dl" disabled>Downloads (counted from launch)</option></select></label>
+        <label class="sort"><span class="sr">Sort</span><select data-sort><option value="rank">Best first</option><option value="new">Newest</option><option value="size">Size: largest</option><option value="small">Size: smallest</option><option value="params">Parameters: most</option><option value="name">Name A to Z</option><option value="dl" disabled>Downloads (counted from launch)</option></select></label>
         <div class="seg" role="group" aria-label="View">${seg('view-btn', [['list', 'List', ICON.list], ['grid', 'Grid', ICON.grid], ['deck', 'Deck', ICON.deck]])}</div>
       </div>
     </div>
     <div class="results-h"><span data-count aria-live="polite">${kindCount(rows)}</span><div class="fchips" data-chips></div></div>
     <div class="view-list" data-list>
       <div class="list-h"><span>Subject</span><span class="r">Size</span><span class="r">Params</span><span>License</span><span>Date</span></div>
-      ${rows.map((r, i) => listRow(r, i === 0)).join('')}
+      ${pageRows.map((r, i) => listRow(r, i === 0)).join('')}
     </div>
+    ${pager}
+    <div class="load-more" data-more hidden><button type="button" class="btn sm" data-more-btn>Load more</button><span class="sub small" data-more-n></span></div>
     <div class="view-grid cards tiles" data-grid hidden></div>
     <div class="view-deck" data-deck hidden>
       <div class="deck-nav"><button type="button" class="iconbtn" data-deck-prev aria-label="Previous model">${ICON.left}</button><span class="mono deck-count" data-deck-count aria-live="polite"></span><button type="button" class="iconbtn" data-deck-next aria-label="Next model">${ICON.right}</button></div>
@@ -689,15 +725,20 @@ function catalogPage({ sec, coll }) {
     <div class="empty" data-nomatch hidden><b>No model matches these filters.</b><span>Remove a filter or search for something shorter.</span><span><button type="button" class="btn sm" data-clear>Clear all filters</button></span></div>
     <p class="sub small list-foot">Every row is downloadable or links to its source.<span class="hide-ph"> Press / to search, n and p to move in the list.</span></p>` : emptyMsg}
   </div>
-  <aside class="pane preview" data-preview aria-live="polite" aria-label="Preview">${rows[0] ? preview(rows[0]) : '<p class="sub small">Nothing to preview yet.</p>'}</aside>
+  <aside class="pane preview" data-preview aria-live="polite" aria-label="Preview">${pageRows[0] ? preview(pageRows[0]) : '<p class="sub small">Nothing to preview yet.</p>'}</aside>
 </div>
-${rowsJson(rows)}
+${catalogJson(pageRows.slice(0, 20))}
 <div class="statusbar mono"><span>${esc(goal[0])}: ${esc(goal[3])}</span><span class="meter"><i style="width:${goalPct}%"></i></span><span>${goalPct}% funded</span><a class="end" href="${CHARTER_PATH}">README: ${esc(CHARTER_LABEL.toLowerCase())}</a><span>Allternit, the open source alternative</span></div>`,
   };
 }
-page(catalogPage({}));
-SECTIONS.forEach((s) => page(catalogPage({ sec: s })));
-COLLECTIONS.forEach((c) => page(catalogPage({ coll: c })));
+function catalogPages(o) {
+  const rows = o.sec ? (o.sec.id === 'alt.freeweights.tools' ? TOOL_ROWS : bySection(o.sec.id)) : o.coll ? o.coll.rows : ENTRIES();
+  const n = Math.min(MAX_SSR_PAGES, Math.max(1, Math.ceil(rows.length / PAGE)));
+  for (let i = 1; i <= n; i++) page(catalogPage({ ...o, pageNo: i }));
+}
+catalogPages({});
+SECTIONS.forEach((s) => catalogPages({ sec: s }));
+COLLECTIONS.forEach((c) => catalogPages({ coll: c }));
 
 // ---------- Model pages ----------
 function useSnippets(r) {
@@ -724,6 +765,18 @@ function useSnippets(r) {
   return out;
 }
 function toolChip(tr) { const lg = LOGO_OWNER(tr); return `<a class="tchip" href="${modelUrl(tr)}">${lg ? `<img class="org" src="${lg}" alt="" width="16" height="16" loading="lazy" decoding="async">` : ''}${esc(tr.name)}</a>`; }
+const REL_LABEL = { quant: 'Quantized', adapter: 'Adapter', finetune: 'Fine-tune', merge: 'Merge', base: 'Base' };
+function variantNote(r) {
+  const p = r.relation && r.relation.parent; const base = p && LISTED.find((x) => x.id === p);
+  return base ? `<p class="sub small variant-of">${esc(REL_LABEL[r.relation.type] || 'Variant')} of <a class="link" href="${modelUrl(base)}">${esc(base.name)}</a>.</p>` : '';
+}
+function variantsHtml(r) {
+  const vs = VARIANTS[r.id]; if (!vs || !vs.length) return '';
+  const MAXV = 60; const shown = vs.slice(0, MAXV);
+  return `<div class="wrap sec" id="variants"><div class="sec-h"><h2 class="h2">Variants</h2>${vs.length > MAXV ? `<a class="more" href="/alt.freeweights/?q=${encodeURIComponent(r.repo)}">All ${vs.length} →</a>` : ''}</div>
+<p class="sub" style="margin:6px 0 10px">${plural(vs.length, 'quantized or adapter build')} of ${esc(r.name)}. Each has its own license check and page.</p>
+<div class="view-list variants"><div class="list-h"><span>Subject</span><span class="r">Size</span><span class="r">Params</span><span>License</span><span>Date</span></div>${shown.map((v) => listRow(v, false)).join('')}</div></div>`;
+}
 function runsWithHtml(r) {
   const tools = runsWith(r); if (!tools.length) return '';
   const groups = Object.keys(TOOL_ROLE).filter((k) => k !== 'gets').map((k) => [k, tools.filter((t) => t.tool.works_with.role === k)]).filter(([, g]) => g.length);
@@ -776,6 +829,7 @@ function modelPage(r) {
   <div class="eyebrow mono"><a class="more" href="${sectionUrl(r.section)}">${esc(r.section)}</a> / <b>${esc(r.name)}</b></div>
   ${FWC.combined(cardRow(r), { h1: true, cls: 'fwk-hero' })}
   <div class="meta m-meta"><span class="badges">${badges(r)}</span><span class="mono m-id">${esc(r.id)}</span>${r.sample ? sampleTag() : ''}${r.sourceOnly ? '' : `<span>Last check: ${fmtTime(r.lastCheck)}</span>`}</div>
+  ${variantNote(r)}
   ${runsWithHtml(r)}
   ${r.unsigned && !r.failedAt ? `<div class="notice err" role="alert" style="margin-top:16px">${ICON.alert}<div><b>Manifest not signed yet.</b> This model stays off the catalog and on the <a class="link" href="/wanted/">Wanted</a> list until its manifest is signed.</div></div>` : ''}
   ${r.failedAt ? `<div class="notice err" role="alert" style="margin-top:16px">${ICON.alert}<div><b>Source check failed at ${fmtTime(r.failedAt)}.</b> The source did not answer, or its file no longer matches the manifest. This model is on the <a class="link" href="/wanted/">Wanted</a> list until a source passes again.</div></div>` : ''}
@@ -796,6 +850,7 @@ function modelPage(r) {
     <div class="box pad"><div class="box-h">Source</div><a class="link mono small" href="${esc(r.upstream)}" rel="noopener" style="overflow-wrap:anywhere">${esc(String(r.upstream || '').replace(/^https?:\/\//, ''))} ${ICON.ext}</a></div>
   </div>
 </div>
+${variantsHtml(r)}
 ${rel.length ? `<div class="wrap sec"><div class="sec-h"><h2 class="h2">Related models</h2><a class="more" href="${sectionUrl(r.section)}">All of ${esc(r.section)} →</a></div>${cards(rel)}</div>` : ''}
 ${rowsJson(rel)}`,
   };
@@ -1023,6 +1078,7 @@ for (const f of fs.readdirSync(OUT)) fs.rmSync(path.join(OUT, f), { recursive: t
 const write = (rel, s) => { const f = path.join(OUT, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, s); };
 for (const p of pages) write(p.file, layout(p));
 fs.cpSync(path.join(SITE, 'assets'), path.join(OUT, 'assets'), { recursive: true });
+write('assets/mono.svg', `<svg xmlns="http://www.w3.org/2000/svg">${Object.entries(MONO_SPRITE).sort().map(([m, x]) => `<symbol id="m-${m}" viewBox="${x.vb}">${x.body}</symbol>`).join('')}</svg>`);
 for (const r of ROWS) if (r.manifest) {
   fs.mkdirSync(path.join(OUT, 'manifests', r.org), { recursive: true });
   fs.copyFileSync(manifestFile[r.id], path.join(OUT, 'manifests', `${r.id}.json`));
@@ -1030,6 +1086,40 @@ for (const r of ROWS) if (r.manifest) {
 }
 for (const f of ['chain.jsonl', 'head.json', 'head.json.minisig']) if (exists(path.join(ROOT, 'ledger', f))) fs.copyFileSync(path.join(ROOT, 'ledger', f), path.join(OUT, 'ledger', f));
 if (exists(path.join(ROOT, 'spec/keys/freeweights-v0.pub'))) { fs.mkdirSync(path.join(OUT, 'keys'), { recursive: true }); fs.copyFileSync(path.join(ROOT, 'spec/keys/freeweights-v0.pub'), path.join(OUT, 'keys/freeweights-v0.pub')); }
-write('data/catalog.json', JSON.stringify({ generated_from: dataSource, sections: SECTIONS.map((s) => ({ ...s, count: secCount(s) })), collections: COLLECTIONS.map(({ test, rows, ...c }) => ({ ...c, ids: rows.map((r) => r.id) })), rows: ROWS.map(({ manifest, wi, ...r }) => r) }, null, 2));
+// ---------- Data shards and the search index ----------
+// Card shards: the cards behind the catalog, CARD_SHARD to a file, in rank order (p<N>.json for top-level
+// entries, v<N>.json for variants). Search index: one compact record per entry, split by section into
+// files of IDX_SHARD records, read in the browser. Pages serves both as plain static files.
+const TOP_ALL = ENTRIES();
+const chunk = (a, n) => { const o = []; for (let i = 0; i < a.length; i += n) o.push(a.slice(i, i + n)); return o; };
+const cardPage = {};
+chunk(TOP_ALL, CARD_SHARD).forEach((rs, i) => { rs.forEach((r) => (cardPage[r.id] = i + 1)); write(`data/catalog/p${i + 1}.json`, JSON.stringify(rs.map(shardCard))); });
+chunk(VARIANT_ROWS, CARD_SHARD).forEach((rs, i) => { rs.forEach((r) => (cardPage[r.id] = i + 1)); write(`data/catalog/v${i + 1}.json`, JSON.stringify(rs.map(shardCard))); });
+{
+  const fkeys = FACETS.map(([k]) => k); const dict = Object.fromEntries(fkeys.map((k) => [k, []])); const dix = Object.fromEntries(fkeys.map((k) => [k, {}]));
+  const code = (k, v) => { const m = dix[k]; if (m[v] === undefined) { m[v] = dict[k].length; dict[k].push(v); } return m[v]; };
+  const all = [...TOP_ALL, ...VARIANT_ROWS]; const byFam = {};
+  for (const r of all) {
+    const c = cardRow(r);
+    const fv = fkeys.map((k) => { const a = c.fv[k].map((v) => code(k, v)); return a.length === 1 ? a[0] : a; });
+    const e = [r.id, r.name === r.repo ? '' : r.name, fv, r.size || 0, r.params || 0, r.added ? String(r.added).slice(0, 10) : '', r.rk, r.dl || 0, cardPage[r.id], (r.isVar ? 1 : 0) | (r.sample ? 2 : 0), COLLECTIONS.map((x, i) => (r.coll || []).includes(x.slug) ? i : -1).filter((i) => i >= 0)];
+    if (r.kind === 'tool') e.push([r.tool && toolKind(r.tool), c.lang, c.sum && c.sum.slice(0, 90)].filter(Boolean).join(' '), c.tag || '');
+    (byFam[r.fam] = byFam[r.fam] || []).push(e);
+  }
+  // Pack small sections into shared files (up to IDX_SHARD records) so the whole catalog loads in a few
+  // requests; a section bigger than one file gets its own files. A section page loads only files that hold it.
+  const shards = []; let cur = { fams: [], es: [] };
+  const flush = () => { if (!cur.es.length) return; const f = `s${shards.length + 1}.json`; shards.push({ f, n: cur.es.length, fams: cur.fams }); write(`data/search/${f}`, JSON.stringify(cur.es)); cur = { fams: [], es: [] }; };
+  for (const fam of Object.keys(byFam).sort()) {
+    const es = byFam[fam];
+    if (es.length >= IDX_SHARD) { flush(); chunk(es, IDX_SHARD).forEach((part) => { cur = { fams: [fam], es: part }; flush(); }); continue; }
+    if (cur.es.length + es.length > IDX_SHARD) flush();
+    cur.fams.push(fam); cur.es.push(...es);
+  }
+  flush();
+  const orgs = [...new Set(all.map((r) => r.org))]; const lg = {}; orgs.forEach((o) => { const l = logoOf(o) || (all.some((r) => r.org === o && r.kind === 'tool') ? '' : ''); if (l) lg[o] = l.replace('/assets/orgs/', ''); });
+  write('data/search/index.json', JSON.stringify({ v: 1, page: PAGE, fk: fkeys, dict, shards, coll: COLLECTIONS.map((c) => c.slug), mono: Object.fromEntries(all.map((r) => [r.fam, r.mono])), logos: lg, lc: FACET_LABEL.lc, total: TOP_ALL.length, variants: VARIANT_ROWS.length }));
+  write('data/catalog.json', JSON.stringify({ generated_from: dataSource, entries: TOP_ALL.length, variants: VARIANT_ROWS.length, sections: SECTIONS.map((s) => ({ ...s, count: secCount(s) })), collections: COLLECTIONS.map(({ test, rows, ...c }) => ({ ...c, count: rows.length })), shards: { cards: '/data/catalog/p<N>.json (top level) and v<N>.json (variants), ' + CARD_SHARD + ' per file', search: '/data/search/index.json' } }));
+}
 write('_redirects', [...['/alt.freeweights', ...SECTIONS.map((s) => s.id)].map((s) => `/${s} /${s}/ 301`), ...OLD_CHARTER.flatMap((o) => [`${o.slice(0, -1)} ${CHARTER_PATH} 301`, `${o} ${CHARTER_PATH} 301`])].join('\n') + '\n');
 console.log(`Freeweights site: ${pages.length} pages, ${LISTED.length} listed, ${WANTED.length} wanted, ${DOCS.length} docs, chain ${CHAIN.length} (${CHAIN_CHECK.bad ? 'BROKEN at ' + CHAIN_CHECK.bad : 'ok'}), head sig ${HEAD_SIG.state}, data from ${dataSource} -> ${path.relative(process.cwd(), OUT) || OUT}`);

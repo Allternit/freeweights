@@ -85,12 +85,15 @@
   // A section without model rows (the tools section) has no list/grid/deck: none of the
   // catalog interactions below apply there, so stop instead of wiring missing elements.
   if (!listEl || !gridEl || !deckEl || !stage) { cat = null; return; }
-  var rowsEls = {}; $$('.msg', listEl).forEach(function (el) { rowsEls[el.getAttribute('data-id')] = el; });
+  var base = cat.getAttribute('data-base') || location.pathname, scope = cat.getAttribute('data-scope') || 'all';
+  // A numbered page (/page/2/) is the no-JS fallback. With scripts the same list continues as you scroll.
+  if ((+cat.getAttribute('data-page') || 1) > 1) { location.replace(base + location.search + location.hash); return; }
+  function rowEl(id) { return $('.msg[data-id="' + (window.CSS && CSS.escape ? CSS.escape(id) : id) + '"]', listEl); }
   var facetForm = $('[data-facets]', cat), qEl = $('[data-q]', cat), sortEl = $('[data-sort]', cat);
   var countEl = $('[data-count]', cat), chipsEl = $('[data-chips]', cat), noMatch = $('[data-nomatch]', cat), fcount = $('[data-fcount]', cat);
-  var pv = $('[data-preview]', cat), total = list.length;
+  var pv = $('[data-preview]', cat), total = +cat.getAttribute('data-total') || list.length;
   var VIEWS = ['list', 'grid', 'deck'];
-  var state = { q: '', sort: 'new', f: {}, view: VIEWS.indexOf(store('fw-view')) >= 0 ? store('fw-view') : 'list', deck: 0, sel: list[0] && list[0].id, card: null };
+  var state = { q: '', sort: 'rank', f: {}, view: VIEWS.indexOf(store('fw-view')) >= 0 ? store('fw-view') : 'list', deck: 0, sel: list[0] && list[0].id, card: null };
   var params = new URLSearchParams(location.search);
   if (params.get('q')) state.q = params.get('q');
   if (params.get('sort')) state.sort = params.get('sort');
@@ -100,7 +103,7 @@
   facetKeys.forEach(function (k) { if (params.get(k)) state.f[k] = params.get(k).split(','); });
   // a facet value hidden under "Show more" that is active opens its group
   if (qEl) qEl.value = state.q;
-  if (sortEl) { sortEl.value = state.sort; if (sortEl.value !== state.sort) { state.sort = 'new'; sortEl.value = 'new'; } }
+  if (sortEl) { sortEl.value = state.sort; if (sortEl.value !== state.sort) { state.sort = 'rank'; sortEl.value = 'rank'; } }
   if (facetForm) $$('input[type=checkbox]', facetForm).forEach(function (i) {
     if ((state.f[i.name] || []).indexOf(i.value) >= 0) { i.checked = true; var d = i.closest('details'); if (d) d.open = true; }
   });
@@ -112,24 +115,26 @@
     var out = [['model', 'model', 'models'], ['dataset', 'dataset', 'datasets'], ['tool', 'tool', 'tools']].filter(function (k) { return c[k[0]]; }).map(function (k) { return c[k[0]] + ' ' + (c[k[0]] === 1 ? k[1] : k[2]); });
     return out.join(' · ') || '0 entries';
   }
-  function textOf(r) { return (r.id + ' ' + r.n + ' ' + r.sec + ' ' + (r.kind || '') + ' ' + (r.sum || '') + ' ' + (r.tkind || '') + ' ' + (r.lang || '') + ' ' + (r.task || []).join(' ') + ' ' + (r.fmt || []).join(' ') + ' ' + r.lic + ' ' + r.org + ' ' + (r.lc || '')).toLowerCase(); }
-  list.forEach(function (r) { r._t = textOf(r); });
   function matches(r, skip) {
+    if (r.v && !state.q) return false;
     if (state.q) { var words = state.q.toLowerCase().split(/\s+/).filter(Boolean); for (var w = 0; w < words.length; w++) if (r._t.indexOf(words[w]) < 0) return false; }
     for (var k in state.f) { if (k === skip || !state.f[k].length) continue; var vals = (r.fv && r.fv[k]) || []; if (!state.f[k].some(function (v) { return vals.indexOf(v) >= 0; })) return false; }
     return true;
   }
   var SORTS = {
+    rank: function (a, b) { return a.rk - b.rk || nameHit(a) - nameHit(b) || b.dl - a.dl || String(b.added || '').localeCompare(String(a.added || '')) || a.n.localeCompare(b.n); },
     'new': function (a, b) { return String(b.added || '').localeCompare(String(a.added || '')) || a.n.localeCompare(b.n); },
     size: function (a, b) { return b.size - a.size; }, small: function (a, b) { return a.size - b.size; },
     params: function (a, b) { return (b.params || 0) - (a.params || 0) || a.n.localeCompare(b.n); },
     name: function (a, b) { return a.n.localeCompare(b.n, 'en', { sensitivity: 'base' }); }
   };
+  var qWords = [];
+  function nameHit(r) { if (!qWords.length) return 0; var h = (r.id + ' ' + r.n).toLowerCase(); for (var i = 0; i < qWords.length; i++) if (h.indexOf(qWords[i]) < 0) return 1; return 0; }
   var vis = list.slice();
   function activeCount() { var n = 0; for (var k in state.f) n += state.f[k].length; return n; }
   function syncUrl() {
     var p = new URLSearchParams();
-    if (state.q) p.set('q', state.q); if (state.sort !== 'new') p.set('sort', state.sort);
+    if (state.q) p.set('q', state.q); if (state.sort !== 'rank') p.set('sort', state.sort);
     for (var k in state.f) if (state.f[k].length) p.set(k, state.f[k].join(','));
     if (state.view !== 'list') p.set('view', state.view);
     if (state.view === 'deck' && state.card) p.set('card', state.card);
@@ -138,19 +143,81 @@
   function chip(label, onclick) { var b = document.createElement('button'); b.type = 'button'; b.className = 'fchip'; b.innerHTML = label + ' <span aria-hidden="true">×</span>'; b.setAttribute('aria-label', 'Remove filter ' + label.replace(/<[^>]+>/g, '')); b.addEventListener('click', onclick); return b; }
   function esc(s) { return FW ? FW.esc(s) : String(s); }
 
+  // ---------- Index, card shards, paged rendering ----------
+  // The first page is in the HTML (and in #fw-rows). Everything else comes from static JSON:
+  // /data/search/*.json (compact records, split by section) and /data/catalog/p<N>.json cards.
+  var CH = 60, shown = 0, ready = false, entries = [], byId = {}, DICT = null, token = 0, shardP = {}, DECK_MAX = 400, dk = list;
+  function getJSON(u, again) { return fetch(u).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }, function (e) { if (again) throw e; return getJSON(u, 1); }); }
+  function decode(a) {
+    var fv = {}; DICT.fk.forEach(function (k, i) { var v = a[2][i]; v = Array.isArray(v) ? v : [v]; fv[k] = v.map(function (x) { return DICT.dict[k][x]; }); });
+    var id = a[0], fam = fv.sec[0], e = { id: id, org: id.split('/')[0], n: a[1] || id.split('/').slice(1).join('/'), fam: fam, sec: 'alt.freeweights.' + fam, fv: fv, kind: fv.kind[0],
+      size: a[3], params: a[4], added: a[5], rk: a[6], dl: a[7], c: a[8], v: !!(a[9] & 1), smp: !!(a[9] & 2), cl: a[10], tag: a[12] || '', lc: fv.lc[0] };
+    e._t = (id + ' ' + e.n + ' ' + e.sec + ' ' + e.kind + ' ' + (fv.task || []).join(' ') + ' ' + (fv.fmt || []).join(' ') + ' ' + e.lc + ' ' + (a[11] || '')).toLowerCase();
+    return e;
+  }
+  function inScope(e) {
+    if (scope === 'all') return true;
+    if (scope.indexOf('sec:') === 0) return e.fam === scope.slice(4);
+    var ci = DICT.coll.indexOf(scope.slice(5)); return e.cl.indexOf(ci) >= 0;
+  }
+  function loadIndex() {
+    return getJSON('/data/search/index.json').then(function (d) {
+      DICT = d; var want = d.shards.filter(function (h) { return scope.indexOf('sec:') !== 0 || h.fams.indexOf(scope.slice(4)) >= 0; });
+      return Promise.all(want.map(function (h) { return getJSON('/data/search/' + h.f); }));
+    }).then(function (parts) {
+      parts.forEach(function (arr) { arr.forEach(function (a) { var e = decode(a); if (inScope(e)) { entries.push(e); byId[e.id] = e; } }); });
+      ready = true;
+    });
+  }
+  function shardKey(e) { return (e.v ? 'v' : 'p') + e.c; }
+  function ensureCards(arr) {
+    var need = {}; arr.forEach(function (r) { if (!data[r.id] && byId[r.id]) need[shardKey(byId[r.id])] = 1; });
+    return Promise.all(Object.keys(need).map(function (k) {
+      if (!shardP[k]) shardP[k] = getJSON('/data/catalog/' + k + '.json').then(function (cards) { cards.forEach(function (c) { data[c.id] = c; }); });
+      return shardP[k];
+    }));
+  }
+  function rowHtml(e) {
+    var lg = DICT.logos[e.org] ? '/assets/orgs/' + DICT.logos[e.org] : '', mono = DICT.mono[e.fam] || '', isT = e.kind === 'tool';
+    var lcl = (DICT.lc[e.lc] || e.lc).replace(' (link only)', '');
+    return '<a class="msg" href="/' + esc(e.sec) + '/' + esc(e.id) + '/" data-id="' + esc(e.id) + '"><span class="s">' +
+      (lg ? '<img class="org msg-org" src="' + esc(lg) + '" alt="" width="22" height="22" loading="lazy" decoding="async">' : '<span class="msg-org msg-mono">' + FW.word(mono, 9, 'mono-svg') + '</span>') +
+      '<span class="s-t"><span class="s-n">' + esc(e.n) + (e.smp ? '<span class="sample">sample</span>' : '') + '</span><small><b>From:</b> ' + esc(e.org) + ' <b>in</b> ' + esc(e.sec) + '</small></span></span>' +
+      '<span class="z mono">' + (isT ? esc(e.tag || 'no release') : esc(FW.bytes(e.size))) + '</span><span class="pp mono">' + (e.params ? esc(FW.params(e.params)) : '—') + '</span>' +
+      '<span class="lcc"><span class="lc lc-' + esc(e.lc) + '">' + esc(lcl) + '</span></span><span class="dt mono">' + esc(e.added || '') + '</span></a>';
+  }
+  function moreUi() {
+    var m = $('[data-more]', cat), n = $('[data-more-n]', cat); if (!m) return;
+    var on = ready && (state.view === 'list' || state.view === 'grid') && shown < vis.length;
+    m.hidden = !on; if (n) n.textContent = on ? 'Showing ' + shown + ' of ' + vis.length : '';
+  }
+  function appendChunk(tk) {
+    var from = shown, to = Math.min(vis.length, shown + CH); if (from >= to) return; shown = to;
+    var part = vis.slice(from, to);
+    if (state.view === 'list') { listEl.insertAdjacentHTML('beforeend', part.map(rowHtml).join('')); moreUi(); return; }
+    ensureCards(part).then(function () { if (tk !== token) return; gridEl.insertAdjacentHTML('beforeend', part.map(function (r) { return data[r.id] ? FW.tile(data[r.id]) : ''; }).join('')); moreUi(); });
+  }
+  function loadMore() { if (ready && shown < vis.length) appendChunk(token); }
   function render() {
-    vis = list.filter(function (r) { return matches(r); }).sort(SORTS[state.sort] || SORTS['new']);
+    var tk = ++token;
+    qWords = state.q ? state.q.toLowerCase().split(/\s+/).filter(Boolean) : [];
+    var src = ready ? entries : null;
+    if (src) vis = src.filter(function (r) { return matches(r); }).sort(SORTS[state.sort] || SORTS.rank);
+    else if (!state.q && !activeCount() && state.sort === 'rank') vis = list;
+    else { countEl.textContent = 'Searching the catalog...'; return; }
     // facet counts: each facet counts against every other active filter
-    if (facetForm) $$('[data-facet]', facetForm).forEach(function (fs) {
+    if (facetForm && src) $$('[data-facet]', facetForm).forEach(function (fs) {
       var k = fs.getAttribute('data-facet');
-      var base = list.filter(function (r) { return matches(r, k); });
+      var base = src.filter(function (r) { return matches(r, k); });
+      var counts = {}; base.forEach(function (r) { ((r.fv && r.fv[k]) || []).forEach(function (v) { counts[v] = (counts[v] || 0) + 1; }); });
       $$('input', fs).forEach(function (i) {
-        var n = base.filter(function (r) { return ((r.fv && r.fv[k]) || []).indexOf(i.value) >= 0; }).length;
+        var n = counts[i.value] || 0;
         var oc = i.parentNode.querySelector('[data-oc]'); if (oc) oc.textContent = n;
         i.parentNode.classList.toggle('zero', n === 0 && !i.checked);
       });
     });
-    countEl.textContent = (vis.length === total ? '' : vis.length + ' of ' + total + ': ') + kindCount(vis);
+    var filtered = !!(state.q || activeCount());
+    countEl.textContent = (filtered ? vis.length + ' found: ' : '') + kindCount(vis);
     if (fcount) fcount.textContent = activeCount() ? ' ' + activeCount() : '';
     // chips
     chipsEl.innerHTML = '';
@@ -169,13 +236,14 @@
     cat.setAttribute('data-view', state.view);
     $$('[data-view-btn]', cat).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-view-btn') === state.view); });
     if (listEl) listEl.hidden = state.view !== 'list' || !vis.length; if (gridEl) gridEl.hidden = state.view !== 'grid' || !vis.length; if (deckEl) deckEl.hidden = state.view !== 'deck' || !vis.length;
-    if (state.view === 'list' && listEl) {
-      var shown = {}; vis.forEach(function (r) { var el = rowsEls[r.id]; if (el) { el.hidden = false; listEl.appendChild(el); shown[r.id] = 1; } });
-      for (var id in rowsEls) if (!shown[id]) rowsEls[id].hidden = true;
+    if (!src) { moreUi(); dk = list; if (state.view === 'grid') { shown = list.length; gridEl.innerHTML = list.map(function (r) { return FW.tile(r); }).join(''); } else if (state.view === 'deck') buildDeck(); return; }
+    shown = 0;
+    if (state.view === 'list') {
+      $$('.msg', listEl).forEach(function (el) { el.remove(); }); appendChunk(tk);
       if (vis.length && !vis.some(function (r) { return r.id === state.sel; })) showPreview(vis[0].id);
-    } else if (state.view === 'grid' && FW && gridEl) {
-      gridEl.innerHTML = vis.map(function (r) { return FW.tile(r); }).join('');
-    } else if (state.view === 'deck') buildDeck();
+    } else if (state.view === 'grid') { gridEl.innerHTML = ''; appendChunk(tk); }
+    else if (state.view === 'deck') { dk = vis.slice(0, DECK_MAX); buildDeck(); }
+    moreUi();
   }
   // ---------- Deck: a horizontal slide track ----------
   // Beat sheet. Drag/flick/trackpad/touch -> the track scrolls under the finger (native for touch
@@ -194,11 +262,13 @@
   }
   function targetX(i) { var s = slides[i]; return s ? s.offsetLeft + s.offsetWidth / 2 - track.clientWidth / 2 : 0; }
   function fill(i) { // render cards near the viewport only (current +-3), drop far ones
+    var lack = [];
     for (var j = 0; j < slides.length; j++) {
       var near = Math.abs(j - i) <= 3;
-      if (near && !built[j]) { slides[j].innerHTML = FW.combined(vis[j], { open: true }); built[j] = 1; }
+      if (near && !built[j]) { var cd = data[dk[j].id]; if (cd) { slides[j].innerHTML = FW.combined(cd, { open: true }); built[j] = 1; } else lack.push(dk[j]); }
       else if (!near && built[j] && Math.abs(j - i) > 6) { slides[j].innerHTML = ''; built[j] = 0; }
     }
+    if (lack.length) ensureCards(lack).then(function () { if (slides.length) { fill(slideAt()); falloff(); } });
   }
   function falloff() {
     if (reduce.matches) { slides.forEach(function (s) { s.style.transform = ''; s.style.opacity = ''; }); return; }
@@ -213,9 +283,9 @@
   function onPos() {
     var i = slideAt(); fill(i); falloff();
     if (i !== state.deck || !state.card) {
-      state.deck = i; state.card = vis[i] && vis[i].id;
-      $('[data-deck-count]', cat).textContent = (i + 1) + ' of ' + vis.length;
-      deckPrev.disabled = i === 0; deckNext.disabled = i === vis.length - 1;
+      state.deck = i; state.card = dk[i] && dk[i].id;
+      $('[data-deck-count]', cat).textContent = (i + 1) + ' of ' + dk.length;
+      deckPrev.disabled = i === 0; deckNext.disabled = i === dk.length - 1;
       slides.forEach(function (s, j) { s.setAttribute('aria-hidden', j !== i); s.inert = j !== i; });
       clearTimeout(urlTimer); urlTimer = setTimeout(syncUrl, 250);
     }
@@ -223,19 +293,19 @@
   var ticking = false;
   function onScroll() { if (ticking) return; ticking = true; requestAnimationFrame(function () { ticking = false; onPos(); }); }
   function buildDeck() {
-    if (!FW || !vis.length || !track) return;
+    if (!FW || !dk.length || !track) return;
     stopGlide(); built = {};
-    track.innerHTML = vis.map(function (r, i) { return '<div class="slide" role="group" aria-roledescription="slide" aria-label="' + (i + 1) + ' of ' + vis.length + '"></div>'; }).join('');
+    track.innerHTML = dk.map(function (r, i) { return '<div class="slide" role="group" aria-roledescription="slide" aria-label="' + (i + 1) + ' of ' + dk.length + '"></div>'; }).join('');
     slides = $$('.slide', track);
-    var want = state.card ? vis.findIndex(function (r) { return r.id === state.card; }) : state.deck;
-    state.deck = Math.max(0, Math.min(vis.length - 1, want < 0 ? 0 : want)); state.card = null;
+    var want = state.card ? dk.findIndex(function (r) { return r.id === state.card; }) : state.deck;
+    state.deck = Math.max(0, Math.min(dk.length - 1, want < 0 ? 0 : want)); state.card = null;
     fill(state.deck);
     track.style.scrollSnapType = 'none'; track.scrollLeft = targetX(state.deck); track.style.scrollSnapType = '';
     onPos();
   }
   function stopGlide() { if (glide) { cancelAnimationFrame(glide); glide = null; track.style.scrollSnapType = ''; } }
   function glideTo(i) {
-    stopGlide(); i = Math.max(0, Math.min(vis.length - 1, i)); fill(i);
+    stopGlide(); i = Math.max(0, Math.min(dk.length - 1, i)); fill(i);
     var x0 = track.scrollLeft, x1 = targetX(i), dist = x1 - x0;
     if (reduce.matches || Math.abs(dist) < 1) { track.style.scrollSnapType = 'none'; track.scrollLeft = x1; track.style.scrollSnapType = ''; onPos(); return; }
     var dur = Math.min(420, 260 + Math.abs(dist) / track.clientWidth * 80), t0 = null;
@@ -248,7 +318,7 @@
     };
     glide = requestAnimationFrame(step);
   }
-  function deckMove(d) { if (state.view !== 'deck' || !vis.length) return; glideTo(slideAt() + d); }
+  function deckMove(d) { if (state.view !== 'deck' || !dk.length) return; glideTo(slideAt() + d); }
   if (track) {
     track.addEventListener('scroll', onScroll, { passive: true });
     // Mouse drag with inertia (touch and trackpads scroll natively with momentum).
@@ -306,23 +376,23 @@
     if (state.view === 'list' && (e.key === 'n' || e.key === 'p') && previewVisible() && vis.length) {
       var i = vis.findIndex(function (r) { return r.id === state.sel; });
       var n = e.key === 'n' ? Math.min(vis.length - 1, i + 1) : Math.max(0, i - 1);
-      showPreview(vis[n].id); rowsEls[vis[n].id].focus();
+      showPreview(vis[n].id); var el = rowEl(vis[n].id); if (el) el.focus();
     }
     if (e.key === 'Escape' && cat.hasAttribute('data-rail-open')) toggleRail(false);
   });
   // preview pane (desktop list view)
   function previewVisible() { return pv && pv.offsetParent !== null; }
   function showPreview(id) {
-    var r = data[id]; if (!r || !pv || !FW) return; state.sel = id;
-    for (var k in rowsEls) rowsEls[k].toggleAttribute('data-sel', k === id);
-    pv.innerHTML = FW.combined(r, { cls: 'fwk-pv', open: true });
+    if (!pv || !FW) return; state.sel = id;
+    $$('.msg[data-sel]', listEl).forEach(function (el) { el.removeAttribute('data-sel'); }); var cur2 = rowEl(id); if (cur2) cur2.setAttribute('data-sel', '');
+    var put = function () { if (state.sel === id && data[id]) pv.innerHTML = FW.combined(data[id], { cls: 'fwk-pv', open: true }); };
+    if (data[id]) put(); else ensureCards([{ id: id }]).then(put);
   }
-  $$('.msg', listEl).forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      if (!previewVisible() || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
-      if (el.hasAttribute('data-sel')) return; // second click opens the page
-      e.preventDefault(); showPreview(el.getAttribute('data-id'));
-    });
+  listEl.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('.msg'); if (!el) return;
+    if (!previewVisible() || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    if (el.hasAttribute('data-sel')) return; // second click opens the page
+    e.preventDefault(); showPreview(el.getAttribute('data-id'));
   });
 
   // phone filter sheet
@@ -333,5 +403,9 @@
   }
   $$('[data-rail-toggle]', cat).forEach(function (b) { b.addEventListener('click', function () { toggleRail(); }); });
 
+  var mb = $('[data-more-btn]', cat); if (mb) mb.addEventListener('click', loadMore);
+  var mEl = $('[data-more]', cat);
+  if (mEl && window.IntersectionObserver) new IntersectionObserver(function (es) { if (es[0].isIntersecting) loadMore(); }, { rootMargin: '600px 0px' }).observe(mEl);
   render();
+  loadIndex().then(function () { cat.classList.add('enh'); render(); }, function () { var m = $('[data-more]', cat); if (m) m.hidden = true; countEl.textContent = kindCount(list) + ' on this page. The search index did not load; use the page links.'; });
 })();

@@ -50,6 +50,10 @@ Popularity never delists. Once listed, an entry stays when its numbers drop, so 
 - `tier`, and `signals`: downloads in the last 30 days, likes and trending rank when known.
 - `audit`: how the license verdict was reached and when. `tag` means the publisher's own license tag, with no person reading it, and the page says "license as declared by the publisher".
 
+## How the catalog is ordered {#order}
+
+The catalog and search list official lab repos first, then base models, then fine-tunes, then downloads in the last 30 days. Tier T0 comes before T1 and T2, and a base model comes before a fine-tune, a quantization or an adapter. A quantization or adapter whose base is listed does not get its own card in the catalog. It shows as a row under Variants on its base's page, and a search for its name still finds it. Order is never for sale.
+
 ## The review queue {#queue}
 
 A license text that is not on the table waits in the review queue and is not listed. Texts are grouped by their sha256, so one read clears every repo that ships the same text.
