@@ -11,11 +11,11 @@ Status: live at https://freeweights.allternit.com (Stage 0, 0 USD). Run by Allte
 | Path | What |
 |---|---|
 | spec/ | manifest-v0, catalog schema, hub API contract |
-| scripts/ | manifest builder, fw.py downloader/verifier, catalog builder |
+| scripts/ | manifest builder, fw.py downloader/verifier, catalog builder, classify.py (inclusion gates, no network), licenses.py, formats.py |
 | catalog/ | generated catalog rows; _audit/ license audit |
 | worker/ | Cloudflare Worker (read API, redirects, counts) |
 | site/ | static site (freeweights.allternit.com) |
-| policy/ | ethos, content policy, takedown, license allow-list, support terms |
+| policy/ | ethos, content and inclusion policy, takedown, license table (licenses.json), support terms |
 | ledger/, mirrors/ | public cost ledger, mirror registry |
 
 
@@ -28,5 +28,9 @@ pip install allternit-freeweights      # into the current Python environment
 ```
 
 Then `fw search qwen`, `fw info <model-id>`, `fw get <model-id>`. `fw get` checks the signed manifest with `minisign` (`brew install minisign`). The CLI uses only the Python standard library. From a checkout you can also run `python3 scripts/fw.py ...`. Reference: https://freeweights.allternit.com/docs/fw. Maintainers: see RELEASING.md.
+
+Checks: `python3 scripts/validate_spec.py` (schemas, catalog rows, license table), `python3 -m unittest discover -s scripts -p 'test_*.py'`,
+`python3 scripts/build_catalog.py --offline --no-sign` (rebuild rows with no network; never touches a signature), `python3 scripts/verify_ledger.py`.
+After editing policy/licenses.json, run `python3 scripts/licenses.py --write-docs`.
 
 Code: Apache-2.0 (LICENSE). Catalog, manifests and ledger data: CC0 (LICENSE-CC0.txt in each folder). Future C tools: MIT. Model weights keep their own licenses, listed per model.

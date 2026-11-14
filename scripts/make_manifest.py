@@ -117,6 +117,13 @@ def build(repo, revision, dataset, section, include=None):
             "sources": [{"type": "source", "url": resolve, "priority": 100, "last_checked": now}],
             "created_at": now, "generator": VERSION}
 
+def sign(path, repo, commit, key):
+    """Sign to a temp file, then replace: a signature is never removed before its replacement exists."""
+    sig, tmp = path + ".minisig", path + ".minisig.tmp"
+    if os.path.exists(tmp): os.remove(tmp)
+    subprocess.run(["minisign", "-S", "-m", path, "-s", key, "-x", tmp, "-t", f"freeweights manifest {repo} {commit[:12]}"], check=True, capture_output=True)
+    os.replace(tmp, sig)
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("repo"); ap.add_argument("--revision"); ap.add_argument("--dataset", action="store_true")
@@ -136,10 +143,7 @@ def main():
     os.makedirs(a.out_dir, exist_ok=True)
     out = os.path.join(a.out_dir, a.repo.replace("/", "__") + ".json")
     open(out, "w", encoding="utf-8", newline="\n").write(canonical(m))
-    if not a.no_sign:
-        sig = out + ".minisig"
-        if os.path.exists(sig): os.remove(sig)
-        subprocess.run(["minisign", "-S", "-m", out, "-s", a.key, "-x", sig, "-t", f"freeweights manifest {a.repo} {m['upstream']['commit'][:12]}"], check=True, capture_output=True)
+    if not a.no_sign: sign(out, a.repo, m["upstream"]["commit"], a.key)
     print(f"wrote {out} ({len(m['files'])} files, {sum(f['size'] for f in m['files'])} bytes)")
     return 0
 

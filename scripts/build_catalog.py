@@ -183,13 +183,6 @@ def row_file(r, ids):
     """catalog/rows/<org>__<repo>.json; a non-model entry whose id collides with another kind gets a kind prefix."""
     return fname(r["id"]) + ".json" if r["kind"] == "model" or ids[r["id"]] == 1 else f"{r['kind']}__{fname(r['id'])}.json"
 
-def sign(path, repo, commit, key):
-    """Sign to a temp file, then replace: the old signature is never removed before a new one exists."""
-    sig, tmp = path + ".minisig", path + ".minisig.tmp"
-    if os.path.exists(tmp): os.remove(tmp)
-    subprocess.run(["minisign", "-S", "-m", path, "-s", key, "-x", tmp, "-t", f"freeweights manifest {repo} {commit[:12]}"], check=True, capture_output=True)
-    os.replace(tmp, sig)
-
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--only", nargs="*"); ap.add_argument("--no-sign", action="store_true")
     ap.add_argument("--offline", action="store_true", help="no network: reuse existing manifests and catalog rows")
@@ -280,7 +273,8 @@ def main():
                 elif body != old: write(out, m)
             else:
                 if body != old: write(out, m)
-                sign(out, repo, m["upstream"]["commit"], key); signed.append(repo)
+                mm.sign(out, repo, m["upstream"]["commit"], key); signed.append(repo)
+                if os.path.exists(os.path.join(PENDING, fname(repo) + ".json")): os.remove(os.path.join(PENDING, fname(repo) + ".json"))
             info = net(lambda: meta(repo, m["upstream"]["commit"], dataset), repo)
             paths = [f["path"] for f in m["files"]]
             fm = formats_of(paths, dataset, info.get("library_name") == "mlx" or repo.startswith("mlx-community/"))
