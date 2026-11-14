@@ -48,6 +48,7 @@ def wave_of(rec, ver, waves):
         if w.get("relation") and ver["relation"]["type"] != w["relation"]: continue
         if not w.get("relation") and ver["relation"]["type"] == "quant" and org.lower() in {o.lower() for o in waves[0]["orgs"]}: continue
         if "tasks" in w and task not in w["tasks"]: continue
+        if task in w.get("exclude_tasks", []): continue
         if w.get("name_match") and not re.search(w["name_match"], name, re.I): continue
         return w
     return None
@@ -96,7 +97,18 @@ def main(argv=None):
         pools[w["id"]][r["org"]].append(rid)
 
     picked, by_wave = [], collections.OrderedDict()
-    dl = lambda rid: (-(recs[rid].get("downloads") or 0), -(recs[rid].get("likes") or 0), rid)
+    VARIANT = ("quant", "adapter")
+    # bases before variants inside an org, so a variant's parent can be picked first
+    dl = lambda rid: (vers[rid]["relation"]["type"] in VARIANT, -(recs[rid].get("downloads") or 0), -(recs[rid].get("likes") or 0), rid)
+    lower = {k.lower(): k for k in listed_sections}
+    def listed_parent(pid):
+        """The listed id of a parent (case and source renames resolved), or None."""
+        if not pid: return None
+        if pid in listed_sections: return pid
+        if pid.lower() in lower: return lower[pid.lower()]
+        ren = (recs.get(pid) or {}).get("renamed_to")
+        return listed_parent(ren) if ren and ren != pid else None
+    relations = {}
     # waves that need a listed parent pick last, after the waves that list the parents
     for w in sorted(waves, key=lambda w: bool(w.get("require_listed_parent"))):
         orgs = {o: sorted(ids, key=dl) for o, ids in pools[w["id"]].items()}
@@ -106,10 +118,15 @@ def main(argv=None):
                 while orgs[o] and len(got) < w["target"]:
                     rid = orgs[o].pop(0)
                     r, v = recs[rid], vers[rid]
-                    if w.get("require_listed_parent") and v["relation"]["parent"] not in listed_sections: noparent += 1; continue
-                    sec = section_for(r, v, w, fam, listed_sections)
+                    rel = dict(v["relation"])
+                    if rel["type"] in VARIANT or w.get("require_listed_parent"):
+                        # a quant or adapter shows as a Variants row on its base, so the base must be listed
+                        par = listed_parent(rel["parent"])
+                        if not par: noparent += 1; continue
+                        rel["parent"] = par
+                    sec = section_for(r, dict(v, relation=rel), w, fam, listed_sections)
                     if not sec: nosec += 1; continue
-                    got.append((rid, sec)); listed_sections[rid] = sec
+                    got.append((rid, sec)); listed_sections[rid] = sec; lower[rid.lower()] = rid; relations[rid] = rel
                     break
         by_wave[w["id"]] = {"picked": len(got), "target": w["target"], "skipped_no_section": nosec, "skipped_parent_not_listed": noparent}
         for rid, sec in got:
@@ -127,7 +144,7 @@ def main(argv=None):
             picked.append({"repo": rid, "kind": v["kind"], "wave": w["id"], "section": sec,
                            "upstream_url": f"https://huggingface.co/{rid}", "pinned_commit": r.get("sha") or "",
                            "license_id": lid or "unknown", "verdict": v["verdict"], "audit": v["audit"], "tier": v["tier"],
-                           "relation": v["relation"], "license_governed_by": gov, "gated": gated, "link_only": link_only,
+                           "relation": relations[rid], "license_governed_by": gov, "gated": gated, "link_only": link_only,
                            "link_note": note, "license_file": r.get("license_file") or "",
                            "signals": {"downloads_30d": r.get("downloads"), "likes": r.get("likes"), "trending": None},
                            "pipeline_tag": r.get("pipeline_tag"), "library_name": r.get("library_name")})
@@ -172,8 +189,10 @@ def main(argv=None):
             if c["key"].startswith("text:"):
                 tp = os.path.join(a.texts, c["key"][5:] + ".txt")
                 if os.path.exists(tp):
-                    txt = open(tp, encoding="utf-8", errors="replace").read()
-                    first = " ".join(txt.split())[:400]
+                    raw = open(tp, "rb").read()
+                    txt = raw.decode("utf-8", errors="replace")
+                    binary = raw[:5] == b"%PDF-" or txt.count("\ufffd") > len(txt) // 50
+                    first = "(a PDF or binary file: read it on the repo page)" if binary else " ".join(txt.split())[:400]
                     lines += [f"- text: {os.path.relpath(tp, ROOT)} ({len(txt):,} chars)", f"- starts: {first}"]
             lines.append("")
         os.makedirs(os.path.dirname(a.queue_head), exist_ok=True)

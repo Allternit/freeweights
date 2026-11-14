@@ -13,6 +13,7 @@
      "name_match": "whisper|wav2vec|xlsr|clap|speech|audio|voice"},
     {"id": "image-video", "target": 50,
      "orgs": ["Wan-AI", "Comfy-Org", "stabilityai", "black-forest-labs"],
+     "exclude_tasks": ["text-generation", "text2text-generation", "image-text-to-text", "fill-mask", "feature-extraction", "text-classification"],
      "link_only_orgs": ["stabilityai", "black-forest-labs"],
      "link_only_note": "Listed as a link only until a person reads the publisher's terms. Download from the source."},
     {"id": "vision", "target": 200, "section": "alt.freeweights.vision",
