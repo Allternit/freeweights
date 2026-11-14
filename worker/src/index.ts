@@ -24,7 +24,8 @@ const getManifest = (id: string): Manifest | null => {
   return m;
 };
 
-const CORS = { 'access-control-allow-origin': '*' };
+// Browsers may read paging (Link), caching (ETag) and the pinned commit; without expose-headers CORS hides them.
+const CORS = { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'Link, ETag, X-Repo-Commit, X-Total-Count' };
 const json = (body: unknown, status = 200, extra: HeadersInit = {}) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', ...CORS, ...extra } });
 const err = (status: number, error: string, message: string, extra: HeadersInit = {}) => json({ error, message }, status, extra);
