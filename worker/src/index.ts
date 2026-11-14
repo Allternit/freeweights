@@ -69,13 +69,30 @@ function summary(r: CatalogRow, m: Manifest | undefined, downloads: number) {
   };
 }
 
+const TIER_RANK: Record<string, number> = { T0: 0, T1: 1, T2: 2 };
+const REL_RANK: Record<string, number> = { base: 0, finetune: 1, merge: 1, quant: 2, adapter: 2 };
+const normKey = (s: unknown) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+// Mirrors rkOf() in site/build.mjs. An untiered base model whose publisher matches its family
+// (deepseek-ai in deepseek) reads as an official repo.
+function rankOf(r: CatalogRow): number {
+  const rel = (r.relation as { type?: string } | undefined)?.type || 'base';
+  let t = TIER_RANK[String(r.tier || '')];
+  if (t === undefined) {
+    const o = normKey(r.id.split('/')[0]), f = normKey(r.family);
+    t = rel === 'base' && f && o && (o.includes(f) || f.includes(o)) ? 0.5 : rel === 'base' ? 2.5 : 3;
+  }
+  return Math.round(t * 10) + (REL_RANK[rel] ?? 1);
+}
+
 async function search(env: Env, url: URL): Promise<Response> {
   const q = url.searchParams;
   const needle = (q.get('search') || '').toLowerCase();
   const maxSize = q.get('max_size') ? Number(q.get('max_size')) : null;
   const limit = Math.min(1000, Math.max(1, Number(q.get('limit')) || 50));
   const offset = Math.max(0, Number(q.get('cursor')) || 0);
-  const sort = q.get('sort') || 'added';
+  // With a search term the default order is rank (same rule as the site): official lab repos and
+  // base models first, then fine-tunes, then quants and adapters. Order is never for sale.
+  const sort = q.get('sort') || (needle ? 'rank' : 'added');
   let rows = CATALOG.models.filter((r) =>
     (!needle || r.id.toLowerCase().includes(needle) || r.display_name.toLowerCase().includes(needle)) &&
     (!q.get('section') || r.section === q.get('section')) &&
@@ -94,6 +111,7 @@ async function search(env: Env, url: URL): Promise<Response> {
     downloads: (a, b) => dl(b) - dl(a) || a.id.localeCompare(b.id),
     size: (a, b) => a.total_size - b.total_size || a.id.localeCompare(b.id),
     name: (a, b) => a.id.localeCompare(b.id),
+    rank: (a, b) => rankOf(a) - rankOf(b) || b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
   };
   rows = rows.sort(cmp[sort] || cmp.added);
   const page = rows.slice(offset, offset + limit);

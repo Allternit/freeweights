@@ -83,6 +83,16 @@ test('hf_ token is rejected with 401 on every route; alt_ is reserved', async ()
   assert.equal((await get('/api/models', { headers: { 'user-agent': 'hf_xet/1.0' } })).status, 200);
 });
 
+test('search ranks official lab base models above quants and fine-tunes', async () => {
+  const hit = await (await get('/api/models?search=deepseek')).json();
+  if (!hit.length) return; // catalog without DeepSeek rows (samples only)
+  const rel = (m) => (m.relation && m.relation.type) || 'base';
+  const firstNonBase = hit.findIndex((m) => rel(m) !== 'base');
+  const lastBase = hit.map(rel).lastIndexOf('base');
+  assert.ok(firstNonBase === -1 || lastBase < firstNonBase, hit.map((m) => m.id).join(', '));
+  assert.ok(hit[0].id.startsWith('deepseek-ai/'), hit[0].id);
+});
+
 test('search and filters', async () => {
   const all = await (await get('/api/models')).json();
   assert.ok(all.length >= 2);
