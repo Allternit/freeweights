@@ -688,7 +688,7 @@ function catalogPage({ sec, coll, pageNo = 1 }) {
     title: pageNo > 1 ? `${label} · page ${pageNo}` : label, desc: sec ? `${sec.name} models on Allternit Freeweights: ${sec.description}` : coll ? `${coll.name}: ${coll.blurb}` : 'Every open model on Allternit Freeweights, by section, with license, size and where the bytes come from.',
     body: `
 <div class="wrap page-head cat-head">
-  <div class="eyebrow mono"><b>alt</b>.freeweights.* &nbsp;·&nbsp; ${SECTIONS.length} sections &nbsp;·&nbsp; ${plural(LISTED.length, 'model')} listed${coll ? ' &nbsp;·&nbsp; collection' : ''}</div>
+  <div class="eyebrow mono"><b>alt</b>.freeweights.* &nbsp;·&nbsp; ${SECTIONS.length} sections &nbsp;·&nbsp; ${plural(LISTED.length, 'model')} listed${VARIANT_ROWS.length ? ` (${VARIANT_ROWS.length} shown under their base as variants)` : ''}${coll ? ' &nbsp;·&nbsp; collection' : ''}</div>
   <h1 class="ph1${coll ? '' : ' mono'}">${esc(label)}</h1>
   <div class="lead">${intro}</div>
 </div>
