@@ -45,7 +45,7 @@ The table below comes from `catalog/refused.json`, the refusal log at the time o
 
 ## Request a model {#request}
 
-After launch, open a GitHub issue in the public repository with the model id, the source link, the license and why it should be listed. Until the repository is public, email freeweights@allternit.com (placeholder until the issue tracker exists).
+Open a GitHub issue at https://github.com/Allternit/freeweights/issues with the model id, the source link, the license and why it should be listed. You can also email freeweights@allternit.com.
 
 We list only models that meet the content policy and the license list. Asking does not buy a place. Catalog order is never paid.
 

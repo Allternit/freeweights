@@ -98,7 +98,7 @@ It is a hash chain with a signed head. Run `python3 scripts/verify_ledger.py`. S
 See Mirrors. Read the agreement and the license list, then email us.
 
 ### How do I request a model?
-After launch, open a GitHub issue. Until then, email freeweights@allternit.com.
+Open a GitHub issue at https://github.com/Allternit/freeweights/issues, or email freeweights@allternit.com.
 
 ### How do I report a problem?
 Email freeweights@allternit.com. Role addresses for abuse, copyright and security reports are set up before launch. We decide within 72 hours.

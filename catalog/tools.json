@@ -602,12 +602,13 @@
     {
       "id": "fw-py",
       "name": "fw.py (Freeweights)",
-      "url": "/docs/",
-      "license": "Not yet published",
+      "url": "https://github.com/Allternit/freeweights",
+      "license": "Apache-2.0",
       "what": "Our downloader: checks the signature and every sha256, tries each source in order, resumes.",
       "kind": "ours",
       "install": [
-        "# copy scripts/fw.py from the Freeweights repository"
+        "curl -O https://raw.githubusercontent.com/Allternit/freeweights/main/scripts/fw.py",
+        "python3 fw.py --help"
       ],
       "use": "fw get <id>",
       "platforms": [
@@ -619,7 +620,10 @@
         "role": "gets",
         "all_hosted": true
       },
-      "install_verified": false
+      "install_verified": false,
+      "github": {
+        "repo": "Allternit/freeweights"
+      }
     }
   ]
 }
