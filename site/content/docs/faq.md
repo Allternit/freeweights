@@ -104,4 +104,4 @@ See Mirrors. Read the agreement and the license list, then email us.
 Open a GitHub issue at https://github.com/Allternit/freeweights/issues, or email freeweights@allternit.com.
 
 ### How do I report a problem?
-Copyright notices go to dmca@allternit.com. Everything else goes to freeweights@allternit.com. Role addresses for abuse and security reports are set up before launch. We decide within 72 hours.
+Banned content or a policy problem: abuse@allternit.com. Copyright notices and counter-notices: dmca@allternit.com. Malware, secrets or a security hole: security@allternit.com. Anything else: freeweights@allternit.com. We decide within 72 hours.

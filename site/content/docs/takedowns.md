@@ -17,8 +17,10 @@ Every removal is public. It is counted, and it is written to a signed record. Th
 
 ## Report an item {#report}
 
+- **Banned content or a policy problem:** abuse@allternit.com.
 - **Copyright notices and counter-notices:** dmca@allternit.com. Name the work, the item (its Freeweights id or URL), your contact details, a good-faith statement and a statement of authority, with a signature.
-- **Everything else** (banned content, malware, secrets, a wrong license): freeweights@allternit.com, with the model id and what you found.
+- **Malware, secrets or a security hole:** security@allternit.com.
+- **Anything else** (a wrong license, checksum or source): freeweights@allternit.com, with the model id and what you found.
 
 You get an acknowledgement. We decide within 72 hours. Malware and child sexual abuse material are handled at once.
 
@@ -27,12 +29,14 @@ You get an acknowledgement. We decide within 72 hours. Malware and child sexual 
 One command does all of it, in this order:
 
 1. **The entry stops at once.** The API, the download redirect, the manifest and the detail page answer 451 within a minute. No redeploy is needed.
-2. **Its weights are blocklisted.** The sha256 of each weight file goes on the blocklist (`policy/blocklist.json`). The catalog build refuses any repo with one of those files, so the same weights uploaded under another name are not listed.
+2. **Its weights are blocklisted.** The sha256 of each weight file goes on a blocklist. The catalog build refuses any repo with one of those files, so the same weights uploaded under another name are not listed.
 3. **It leaves the catalog.** Its row and its manifest are removed from the next build.
 4. **The counter goes up.** The takedown counter on the Operating Statement page shows every removal by reason class.
 5. **A signed line is written.** The registry chain gets one entry: the date, the id and the reason class.
 
 The record holds no names, no addresses and no text from the report.
+
+**Sensitive removals.** For child sexual abuse material (`csam`), non-consensual intimate imagery (`ncii`), personal data (`personal_data`) and a real person's likeness (`real_person_likeness`), the hashes go on a private list that is never published, and the counter and the signed line show only the date and the reason class, not the id, because the id can name a person or describe the material. We share those hashes on request with parties that need them to block the same files.
 
 ## What clients see {#what-you-see}
 
@@ -50,7 +54,7 @@ A 451 reply is never cached (`Cache-Control: no-store`), so a restore after a co
 
 - **Counter:** the Operating Statement page, section Takedown counter (from `policy/takedowns.json`).
 - **Registry chain:** `ledger/registry.jsonl` on the site and in the repository, one entry per takedown and per snapshot, linked by hashes. Its head, `ledger/registry-head.json`, is signed with the Freeweights key (id 2DC28CC7B26A283B).
-- **Blocklist:** `policy/blocklist.json` in the repository: the removed ids and their weight-file hashes. It holds no content.
+- **Blocklist:** `policy/blocklist.json` in the repository: the removed ids and their weight-file hashes for non-sensitive classes (copyright, license, publisher request and the like). It holds no content. Hashes for sensitive classes are on a private list, shared on request.
 
 ## Catalog snapshots {#snapshots}
 
@@ -75,4 +79,4 @@ cd site && node build.mjs && cd .. && python3 scripts/sync_r2.py --delete      #
 python3 scripts/fw_admin.py stats --remote                                     # downloads, top entries, takedown count
 ```
 
-Reason classes: `copyright`, `csam`, `real_person_likeness`, `crime_marketing`, `malware_or_secrets`, `license_violation`, `other`. Without `--apply`, the database command is printed and not run. Then deploy the Worker (its bundled catalog) and the site, and commit the blocklist, counter, catalog and registry files together.
+Reason classes: `copyright`, `license_violation`, `publisher_request`, `malware_or_secrets`, `crime_marketing`, `other` (public blocklist), and the sensitive `csam`, `ncii`, `personal_data`, `real_person_likeness` (private list at `~/.config/freeweights/blocklist-private.json`, or `$FREEWEIGHTS_PRIVATE_BLOCKLIST`; never committed; id withheld from the public record). The build refuses hashes from both lists, so build on a machine that has the private list. Without `--apply`, the database command is printed and not run. For a sensitive class, do not name the entry in the commit message. Then deploy the Worker (its bundled catalog) and the site, and commit the blocklist, counter, catalog and registry files together.

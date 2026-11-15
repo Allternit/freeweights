@@ -15,7 +15,8 @@ Files (all public, CC0):
 
 Entry types:
   snapshot  {count, root}                    root of every published manifest (see snapshot_root)
-  takedown  {id, kind, reason_class}         one removal; no personal data, no ticket text
+  takedown  {id, kind, reason_class}         one removal; no personal data, no ticket text; id is null for a
+                                             sensitive class (blocklist.SENSITIVE)
 
 entry_hash = sha256 of the canonical JSON of the entry without entry_hash (same rule as ledger_chain.py).
 Snapshot root: sort the (entry id, sha256 of the manifest file bytes) pairs by id, write one line

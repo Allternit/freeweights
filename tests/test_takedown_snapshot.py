@@ -53,10 +53,15 @@ class Signed(unittest.TestCase):
         self.key, self.pub = os.path.join(self.tmp, "k.key"), os.path.join(self.tmp, "k.pub")
         subprocess.run(["minisign", "-G", "-W", "-p", self.pub, "-s", self.key], check=True, capture_output=True)
         self.man, self.ledger = os.path.join(self.tmp, "manifests"), os.path.join(self.tmp, "ledger")
+        self.private = os.path.join(self.tmp, "private", "blocklist-private.json")  # never the real one
+        self.env = os.environ.get("FREEWEIGHTS_PRIVATE_BLOCKLIST")
+        os.environ["FREEWEIGHTS_PRIVATE_BLOCKLIST"] = self.private
         write(os.path.join(self.man, "org__one.json"), manifest("org/one", W1))
         write(os.path.join(self.man, "org__two.json"), manifest("org/two", W2))
 
     def tearDown(self):
+        if self.env is None: os.environ.pop("FREEWEIGHTS_PRIVATE_BLOCKLIST", None)
+        else: os.environ["FREEWEIGHTS_PRIVATE_BLOCKLIST"] = self.env
         shutil.rmtree(self.tmp)
 
     def verify(self):
@@ -97,7 +102,7 @@ class Signed(unittest.TestCase):
         _, err = vl.check_snapshot(p["snap"], reg, self.pub)
         self.assertIn("do not hash to its root", err)
 
-    def test_takedown_writes_blocklist_counter_registry_and_removes_entry(self):
+    def make_repo(self):
         root = self.tmp
         rows = [{"id": "org/one", "kind": "model", "section": "alt.freeweights.embed"},
                 {"id": "org/two", "kind": "model", "section": "alt.freeweights.embed"}]
@@ -107,6 +112,10 @@ class Signed(unittest.TestCase):
         wr(os.path.join(self.man, "org__one.json.minisig"), "sig")
         write(os.path.join(root, "policy", "takedowns.json"), {"schema_version": 0, "totals": {"copyright": 0}, "entries": []})
         rc.snapshot(True, self.key, self.man, self.ledger)
+        return root
+
+    def test_takedown_writes_blocklist_counter_registry_and_removes_entry(self):
+        root = self.make_repo()
         before = {p: rd(os.path.join(root, p)) for p in ("catalog/catalog.json", "policy/takedowns.json")}
         args = ["--root", root, "takedown", "org/one", "--reason", "copyright", "--key", self.key]
         with contextlib.redirect_stdout(io.StringIO()) as out:
@@ -135,6 +144,31 @@ class Signed(unittest.TestCase):
         with self.assertRaises(SystemExit):  # a second takedown of the same id stops
             with contextlib.redirect_stdout(io.StringIO()):
                 fw_admin.main(args)
+        self.assertFalse(os.path.exists(self.private))  # a copyright takedown never writes the private list
+
+    def test_sensitive_takedown_keeps_hashes_and_id_out_of_the_repo(self):
+        root = self.make_repo()
+        public = os.path.join(root, "policy", "blocklist.json")
+        args = ["--root", root, "takedown", "org/one", "--reason", "csam", "--key", self.key]
+        with contextlib.redirect_stdout(io.StringIO()) as out:
+            fw_admin.main(args + ["--dry-run"])
+        self.assertIn("PRIVATE list", out.getvalue())
+        self.assertFalse(os.path.exists(public))
+        self.assertFalse(os.path.exists(self.private))
+        with contextlib.redirect_stdout(io.StringIO()):
+            fw_admin.main(args)
+        self.assertFalse(os.path.exists(public))  # never touched, not even created
+        self.assertEqual(jl(self.private)["entries"][0]["sha256"], [W1])
+        self.assertEqual(oct(os.stat(self.private).st_mode & 0o777), "0o600")
+        td = jl(os.path.join(root, "policy", "takedowns.json"))
+        self.assertEqual(td["entries"][0]["id"], None)
+        self.assertEqual(td["entries"][0]["reason"], "csam")
+        reg, _ = self.verify()
+        line = [e for e in reg if e["type"] == "takedown"][0]
+        self.assertEqual((line["id"], line["reason_class"]), (None, "csam"))
+        for p in ("policy/takedowns.json", "ledger/registry.jsonl", "ledger/registry-head.json"):
+            self.assertNotIn(W1, rd(os.path.join(root, p)))
+            self.assertNotIn("org/one", rd(os.path.join(root, p)))
 
 
 class Blocklist(unittest.TestCase):
@@ -144,10 +178,25 @@ class Blocklist(unittest.TestCase):
         blocklist.write({"schema_version": 0, "entries": [
             {"id": "bad/model", "kind": "model", "date": "2026-11-14", "reason_class": "copyright", "sha256": [W1]}]}, self.path)
         self.old, blocklist.PATH = blocklist.PATH, self.path
+        self.private = os.path.join(self.tmp, "blocklist-private.json")
+        self.env = os.environ.get("FREEWEIGHTS_PRIVATE_BLOCKLIST")
+        os.environ["FREEWEIGHTS_PRIVATE_BLOCKLIST"] = self.private
 
     def tearDown(self):
         blocklist.PATH = self.old
+        if self.env is None: os.environ.pop("FREEWEIGHTS_PRIVATE_BLOCKLIST", None)
+        else: os.environ["FREEWEIGHTS_PRIVATE_BLOCKLIST"] = self.env
         shutil.rmtree(self.tmp)
+
+    def test_build_refuses_hash_only_in_the_private_list(self):
+        W3 = "f" * 64
+        self.assertIsNone(build_catalog.blocked("x/copy", manifest("x/copy", W3)))
+        blocklist.write({"schema_version": 0, "entries": [
+            {"id": "hidden/item", "kind": "model", "date": "2026-11-14", "reason_class": "csam", "sha256": [W3]}]}, self.private)
+        self.assertNotIn(W3, rd(self.path))
+        self.assertIn("weight hash", build_catalog.blocked("x/copy", manifest("x/copy", W3)))
+        recs = {"model:x/copy": {"id": "x/copy", "siblings": [{"rfilename": "m.gguf", "lfs": {"sha256": W3}}]}}
+        self.assertEqual(discover.drop_blocked(recs), ["model:x/copy"])
 
     def test_build_refuses_blocklisted_weight_hash_under_another_name(self):
         self.assertIn("weight hash", build_catalog.blocked("someone/renamed-copy", manifest("someone/renamed-copy", W1)))

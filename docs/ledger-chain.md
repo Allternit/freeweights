@@ -20,7 +20,7 @@ A second chain with the same entry rules records registry events, so the money c
 
 | File | What it is |
 | --- | --- |
-| `ledger/registry.jsonl` | One entry per event: `seq`, `prev_hash`, `type`, `date`, `entry_hash`, plus `count` and `root` (type `snapshot`) or `id`, `kind` and `reason_class` (type `takedown`). |
+| `ledger/registry.jsonl` | One entry per event: `seq`, `prev_hash`, `type`, `date`, `entry_hash`, plus `count` and `root` (type `snapshot`) or `id`, `kind` and `reason_class` (type `takedown`; `id` is null for the sensitive classes in `scripts/blocklist.py` SENSITIVE). |
 | `ledger/registry-head.json` (+ `.minisig`) | Head of the registry chain, signed. |
 | `ledger/snapshot.json` (+ `.minisig`) | The latest snapshot: `root`, `count`, `created`, `seq` and every `[id, manifest sha256]` pair. Signed with trusted comment `freeweights snapshot <root>`. |
 | `scripts/registry_chain.py` | Appends entries and signs. `build_catalog.py` calls it after a full signed run; `fw_admin.py takedown` calls it with the takedown line. |

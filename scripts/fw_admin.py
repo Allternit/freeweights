@@ -9,13 +9,18 @@ takedown, in this order:
      any R2 read and answers 451 on the entry's API detail, tree, resolve, manifest, signature and detail page,
      and drops it from search, with no redeploy. Runs only with --apply (live database) or --local (local
      test database); otherwise the exact wrangler command is printed for later. A failed D1 write stops here.
-  2. policy/blocklist.json: the entry's weight-file sha256 list, so discover.py and build_catalog.py refuse the
-     same weights under any name.
+  2. Blocklist: the entry's weight-file sha256 list, so discover.py and build_catalog.py refuse the same weights
+     under any name. Non-sensitive classes go to policy/blocklist.json (public). Sensitive classes (SENSITIVE:
+     csam, ncii, personal_data, real_person_likeness) go ONLY to the private list outside the repo,
+     ~/.config/freeweights/blocklist-private.json or $FREEWEIGHTS_PRIVATE_BLOCKLIST (hashes on request).
   3. The catalog: its row file, its catalog.json row and its manifest pair are removed (build_catalog.py skips it
      from now on because of the blocklist).
   4. policy/takedowns.json: the public counter (shown on the Operating Statement page).
   5. ledger/registry.jsonl: a signed takedown line (date, id, kind, reason class; no personal data, no ticket
      text) plus a new catalog snapshot, signed with ~/.config/freeweights/minisign.key.
+For a sensitive class the counter entry and the registry line carry the date, kind and class with id null:
+the id can name a person or describe the material. (The id was public before the removal, so git history
+still holds it; do not name the entry in the commit message either.)
 --dry-run prints every step and writes nothing. Reason classes are fixed (REASONS); the report itself and the
 reporter's details stay in the takedown mailbox, never in the repo.
 
@@ -27,7 +32,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import blocklist, registry_chain  # noqa: E402
 
-REASONS = ("copyright", "csam", "real_person_likeness", "crime_marketing", "malware_or_secrets", "license_violation", "other")
+REASONS = ("copyright", "license_violation", "publisher_request", "malware_or_secrets", "crime_marketing",
+           "real_person_likeness", "csam", "ncii", "personal_data", "other")
+SENSITIVE = blocklist.SENSITIVE  # private hashes; no entry id in the public counter or registry line
 ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*/[A-Za-z0-9][A-Za-z0-9._-]*$")
 WRANGLER = "wrangler@4.160.0"
 DB = "freeweights"
@@ -86,8 +93,8 @@ class Repo:
 def plan_takedown(repo, entry_id, kind):
     cat = load_json(repo.cat)
     row = next((r for r in cat["models"] if r["id"] == entry_id and r.get("kind", "model") == kind), None)
-    if blocklist.match(entry_id, data=blocklist.load(repo.blocklist)):
-        sys.exit(f"STOP: {entry_id} is already on policy/blocklist.json.")
+    if blocklist.match(entry_id, data=blocklist.load_all(repo.blocklist)):
+        sys.exit(f"STOP: {entry_id} is already on a blocklist (public or private).")
     if not row: sys.exit(f"STOP: no {kind} {entry_id} in catalog/catalog.json.")
     mpath = os.path.join(repo.man, fname(entry_id) + ".json")
     files = load_json(mpath)["files"] if os.path.exists(mpath) else []
@@ -104,6 +111,9 @@ def takedown(a, repo):
     if not ID_RE.match(entry_id): sys.exit(f"STOP: {entry_id!r} is not an org/repo id.")
     cat, row, hashes, row_files, manifest_files = plan_takedown(repo, entry_id, kind)
     at = now(); date = at[:10]
+    sensitive = reason in SENSITIVE
+    public_id = None if sensitive else entry_id
+    bl_path = blocklist.path_for(reason, repo.blocklist)
     sql = (f"INSERT INTO takedowns (kind, entry_id, reason_class, at) VALUES "
            f"({sql_str(kind)}, {sql_str(entry_id)}, {sql_str(reason)}, {sql_str(at)}) ON CONFLICT(kind, entry_id) DO NOTHING;")
     target = "remote" if a.apply else "local" if a.local else None
@@ -113,11 +123,12 @@ def takedown(a, repo):
     print(f"{tag}takedown {kind} {entry_id} ({row['section']}), reason class {reason}, {date}")
     print(f"  1. D1 ({'live database' if target == 'remote' else 'local database' if target else 'not run: pass --apply for the live database'}):")
     print(f"     {show(cmd, repo.worker)}")
-    print(f"  2. {rel(repo.blocklist)}: add {len(hashes)} weight sha256" + (f" ({hashes[0][:16]}...)" if hashes else " (link-only entry: no manifest, id only)"))
+    where = f"PRIVATE list {bl_path} (sensitive class: never committed)" if sensitive else rel(bl_path)
+    print(f"  2. {where}: add {len(hashes)} weight sha256" + (f" ({hashes[0][:16]}...)" if hashes else " (link-only entry: no manifest, id only)"))
     print(f"  3. catalog: remove {', '.join(rel(p) for p in row_files) or 'no row file'}; the catalog.json row; "
           f"{', '.join(rel(p) for p in manifest_files) or 'no manifest'}")
     print(f"  4. {rel(repo.takedowns)}: counter {reason} +1")
-    print(f"  5. {rel(os.path.join(repo.ledger, 'registry.jsonl'))}: signed line {{date: {date}, id: {entry_id}, kind: {kind}, reason_class: {reason}}} and a new snapshot")
+    print(f"  5. {rel(os.path.join(repo.ledger, 'registry.jsonl'))}: signed line {{date: {date}, id: {public_id or 'null (withheld)'}, kind: {kind}, reason_class: {reason}}} and a new snapshot")
     if a.dry_run:
         print("DRY RUN: nothing written, nothing run.")
         return 0
@@ -125,10 +136,10 @@ def takedown(a, repo):
         run_d1(cmd, repo.worker)
         print(f"  D1 row written ({target}). The Worker answers 451 within 60 seconds.")
     # 2. blocklist
-    bl = blocklist.load(repo.blocklist)
+    bl = blocklist.load(bl_path)
     bl = {"schema_version": bl.get("schema_version", 0), "entries": list(bl.get("entries", []))}
     bl["entries"].append({"id": entry_id, "kind": kind, "date": date, "reason_class": reason, "sha256": hashes})
-    blocklist.write(bl, repo.blocklist)
+    blocklist.write(bl, bl_path)
     # 3. catalog row, catalog.json, manifest pair
     for p in row_files + manifest_files: os.remove(p)
     cat["models"] = [r for r in cat["models"] if not (r["id"] == entry_id and r.get("kind", "model") == kind)]
@@ -140,14 +151,15 @@ def takedown(a, repo):
     td.setdefault("totals", {}); td.setdefault("entries", [])
     for r in REASONS: td["totals"].setdefault(r, 0)
     td["totals"][reason] += 1
-    td["entries"].append({"date": date, "id": entry_id, "kind": kind, "reason": reason, "status": "removed"})
+    td["entries"].append({"date": date, "id": public_id, "kind": kind, "reason": reason, "status": "removed"})
     td["updated"] = date
     write_json(repo.takedowns, td)
     # 5. registry line + snapshot (signed)
-    line = {"type": "takedown", "date": date, "id": entry_id, "kind": kind, "reason_class": reason}
+    line = {"type": "takedown", "date": date, "id": public_id, "kind": kind, "reason_class": reason}
     print("  " + registry_chain.snapshot(True, a.key, repo.man, repo.ledger, extra=[line]))
     if not target:
         print("  D1 NOT written. The Worker keeps serving this entry until you run the command in step 1 (or rerun with --apply).")
+    if sensitive: print("  Sensitive class: do not name the entry in the commit message or anywhere public.")
     print("Next: cd site && node build.mjs && cd .. && python3 scripts/sync_r2.py --delete; deploy the Worker (bundled catalog) and Pages; commit.")
     return 0
 
