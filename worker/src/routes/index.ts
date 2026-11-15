@@ -11,6 +11,9 @@ import { deviceRoute, deviceIndexRoute } from './device';
 import { pagesRoute } from './pages';
 import { resolveRoute } from './resolve';
 import { whoamiRoute } from './whoami';
+import { createRepoRoute, deleteRepoRoute, moveRepoRoute, repoSettingsRoute } from './repos';
+import { commitRoute, preuploadRoute } from './commit';
+import { lfsBatchRoute, lfsFinishRoute } from './lfs';
 
 // Write API routes (spec/parts/write-api.yaml) whose handlers land in later waves. Each one already checks the
 // credential (401 / 503 accounts_not_configured) so clients and tests see the final auth behaviour; past that
@@ -48,16 +51,18 @@ export const ROUTES: Route[] = [
 
   // ---- accounts (spec/accounts-v1.md) ----
   W(/^\/api\/whoami-v2$/, ['GET', 'HEAD'], whoamiRoute),
-  W(/^\/api\/repos\/(create|move)$/, P),
-  W(/^\/api\/repos\/delete$/, ['DELETE']),
-  W(new RegExp(`${REPO}/settings$`), ['PUT']),
-  W(new RegExp(`${REPO}/(preupload|commit)/([^/]+)$`), P),
+  W(/^\/api\/repos\/create$/, P, createRepoRoute),
+  W(/^\/api\/repos\/move$/, P, moveRepoRoute),
+  W(/^\/api\/repos\/delete$/, ['DELETE'], deleteRepoRoute),
+  W(new RegExp(`${REPO}/settings$`), ['PUT'], repoSettingsRoute),
+  W(new RegExp(`${REPO}/preupload/([^/]+)$`), P, preuploadRoute),
+  W(new RegExp(`${REPO}/commit/([^/]+)$`), P, commitRoute),
   W(new RegExp(`${REPO}/xet-write-token/([^/]+)$`), ['GET'], xetWrite),
   W(new RegExp(`${REPO}/discussions$`), P),
   W(new RegExp(`${REPO}/discussions/(\\d+)/(comment|status|title|merge)$`), P),
   W(new RegExp(`${REPO}/like$`), ['POST', 'DELETE']),
-  W(/^\/(?:(datasets|spaces)\/)?([^/]+)\/([^/]+)\.git\/info\/lfs\/objects\/batch$/, P),
-  W(/^\/api\/fw\/v1\/lfs\/([^/]+)\/(complete|verify)$/, P),
+  W(/^\/(?:(datasets|spaces|apps)\/)?([^/]+)\/([^/]+)\.git\/info\/lfs\/objects\/batch$/, P, lfsBatchRoute),
+  W(/^\/api\/fw\/v1\/lfs\/([^/]+)\/(complete|verify)$/, P, lfsFinishRoute),
   W(/^\/api\/collections$/, P),
   W(/^\/api\/collections\/([^/]+)\/([^/]+)$/, ['PATCH', 'DELETE']),
   W(/^\/api\/collections\/([^/]+)\/([^/]+)\/items$/, P),
