@@ -1,0 +1,67 @@
+{
+  "id": "litserve",
+  "name": "LitServe",
+  "repo": "Lightning-AI/LitServe",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install litserve"
+  ],
+  "install_check": [
+    "pip install litserve"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Fast serving engine for AI models built on FastAPI.",
+  "github": {
+    "repo": "Lightning-AI/LitServe",
+    "description": "A minimal Python framework for building custom AI inference servers with full control over logic, batching, and scaling.",
+    "homepage": "https://lightning.ai/litserve?utm_source=litserve_readme&utm_medium=referral&utm_campaign=litserve_readme",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "api",
+      "artificial-intelligence",
+      "deep-learning",
+      "developer-tools",
+      "fastapi",
+      "rest-api",
+      "serving",
+      "web"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 4003,
+    "pushed_at": "2026-11-01",
+    "archived": false,
+    "branch_commit": "68c4943be1eeabd18561ac6704b6043459d6fa40",
+    "release": {
+      "tag": "v0.2.19",
+      "date": "2026-09-09",
+      "url": "https://github.com/Lightning-AI/LitServe/releases/tag/v0.2.19",
+      "commit": "7675990d5d2f782f2be6d36a489dcf42db03e342"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.2.19",
+    "commit": "7675990d5d2f782f2be6d36a489dcf42db03e342",
+    "date": "2026-09-09"
+  }
+}

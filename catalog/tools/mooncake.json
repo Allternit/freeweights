@@ -1,0 +1,73 @@
+{
+  "id": "mooncake",
+  "name": "Mooncake",
+  "repo": "kvcache-ai/Mooncake",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install mooncake-transfer-engine"
+  ],
+  "install_check": [
+    "pip install mooncake-transfer-engine"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "vllm",
+    "sglang"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "KV-cache-centric serving platform and transfer engine for LLM inference.",
+  "github": {
+    "repo": "kvcache-ai/Mooncake",
+    "description": "Mooncake is the serving platform for Kimi, a leading LLM service provided by Moonshot AI.",
+    "homepage": "https://kvcache-ai.github.io/Mooncake/",
+    "language": "C++",
+    "topics": [
+      "disaggregation",
+      "inference",
+      "kvcache",
+      "llm",
+      "rdma",
+      "reinforcement-learning",
+      "sglang",
+      "tokenspeed",
+      "trt-llm",
+      "vllm"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 7041,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "504f2ae4a307abe095d3baa75d40ed2661b6481b",
+    "release": {
+      "tag": "v0.3.14",
+      "date": "2026-11-03",
+      "url": "https://github.com/kvcache-ai/Mooncake/releases/tag/v0.3.14",
+      "commit": "e1ea5d31bb5e46ff2df9f90e7c2fbaf52fcdee8c"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.3.14",
+    "commit": "e1ea5d31bb5e46ff2df9f90e7c2fbaf52fcdee8c",
+    "date": "2026-11-03"
+  }
+}

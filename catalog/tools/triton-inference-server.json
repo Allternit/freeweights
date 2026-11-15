@@ -1,0 +1,63 @@
+{
+  "id": "triton-inference-server",
+  "name": "Triton Inference Server",
+  "repo": "triton-inference-server/server",
+  "category": "inference",
+  "license": "BSD-3-Clause",
+  "install": [
+    "git clone -b r26.10 https://github.com/triton-inference-server/server.git"
+  ],
+  "install_check": [
+    "git clone -b r26.10 https://github.com/triton-inference-server/server.git"
+  ],
+  "platforms": [
+    "Linux"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "NVIDIA's server for deploying models from many frameworks on GPUs and CPUs.",
+  "github": {
+    "repo": "triton-inference-server/server",
+    "description": "The Triton Inference Server provides an optimized cloud and edge inferencing solution. ",
+    "homepage": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/index.html",
+    "language": "Python",
+    "topics": [
+      "cloud",
+      "datacenter",
+      "deep-learning",
+      "edge",
+      "gpu",
+      "inference",
+      "machine-learning"
+    ],
+    "default_branch": "main",
+    "license": "BSD-3-Clause",
+    "stars": 11142,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "1751a2c84904ef21d7c424179891ab7e0f7f5a89",
+    "release": {
+      "tag": "v2.74.0",
+      "date": "2026-11-02",
+      "url": "https://github.com/triton-inference-server/server/releases/tag/v2.74.0",
+      "commit": "46a0d50f54259cf82c6119bd74afaf7f200281b3"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.74.0",
+    "commit": "46a0d50f54259cf82c6119bd74afaf7f200281b3",
+    "date": "2026-11-02"
+  }
+}

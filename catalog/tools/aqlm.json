@@ -1,0 +1,53 @@
+{
+  "id": "aqlm",
+  "name": "AQLM",
+  "repo": "Vahe1994/AQLM",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install aqlm[gpu,cpu]"
+  ],
+  "install_check": [
+    "pip install aqlm[gpu,cpu]"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Extreme 2-bit compression of language models with additive quantization.",
+  "github": {
+    "repo": "Vahe1994/AQLM",
+    "description": "Official Pytorch repository for Extreme Compression of Large Language Models via Additive Quantization https://arxiv.org/pdf/2401.06118.pdf and PV-Tuning: Beyond Straight-Through Estimation for Extreme LLM Compression https://arxiv.org/abs/2405.14852",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 1331,
+    "pushed_at": "2026-02-26",
+    "archived": false,
+    "branch_commit": "e79a896ed6656fe4ed06193d42d004e7d0bbdbb2",
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "e79a896ed6656fe4ed06193d42d004e7d0bbdbb2",
+    "date": "2026-02-26"
+  }
+}

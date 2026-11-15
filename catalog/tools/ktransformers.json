@@ -1,0 +1,59 @@
+{
+  "id": "ktransformers",
+  "name": "KTransformers",
+  "repo": "kvcache-ai/ktransformers",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install ."
+  ],
+  "install_check": [
+    "pip install ."
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Runs large mixture-of-experts models with CPU and GPU together.",
+  "github": {
+    "repo": "kvcache-ai/ktransformers",
+    "description": "A Flexible Framework for Experiencing Heterogeneous LLM Inference/Fine-tune Optimizations",
+    "homepage": "https://kvcache-ai.github.io/ktransformers/",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 19673,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "ca198c50de70abb6827ba6f573bb6671e54436e2",
+    "release": {
+      "tag": "v0.7.2",
+      "date": "2026-10-15",
+      "url": "https://github.com/kvcache-ai/ktransformers/releases/tag/v0.7.2",
+      "commit": "a02efe36b5802e7ca79a6b29146e01cf3b97d305"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.7.2",
+    "commit": "a02efe36b5802e7ca79a6b29146e01cf3b97d305",
+    "date": "2026-10-15"
+  }
+}

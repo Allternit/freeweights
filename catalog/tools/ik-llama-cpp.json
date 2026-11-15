@@ -1,0 +1,51 @@
+{
+  "id": "ik-llama-cpp",
+  "name": "ik_llama.cpp",
+  "repo": "ikawrakow/ik_llama.cpp",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "git clone https://github.com/ikawrakow/ik_llama.cpp"
+  ],
+  "install_check": [
+    "git clone https://github.com/ikawrakow/ik_llama.cpp"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "gguf"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "llama.cpp fork with extra quantization types and faster CPU and hybrid inference.",
+  "github": {
+    "repo": "ikawrakow/ik_llama.cpp",
+    "description": "llama.cpp fork with additional SOTA quants and improved performance",
+    "homepage": "",
+    "language": "C++",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 3393,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "fcf7b364786ec621d0c53eae39223efc5492b8c5",
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "fcf7b364786ec621d0c53eae39223efc5492b8c5",
+    "date": "2026-11-14"
+  }
+}

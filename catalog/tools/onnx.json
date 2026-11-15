@@ -1,0 +1,72 @@
+{
+  "id": "onnx",
+  "name": "ONNX",
+  "repo": "onnx/onnx",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install onnx"
+  ],
+  "install_check": [
+    "pip install onnx"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors",
+      "onnx"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Open model exchange format and tools for moving models between frameworks.",
+  "github": {
+    "repo": "onnx/onnx",
+    "description": "Open standard for machine learning interoperability",
+    "homepage": "https://onnx.ai/",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "artificial-intelligence",
+      "deep-learning",
+      "deep-neural-networks",
+      "dnn",
+      "keras",
+      "machine-learning",
+      "ml",
+      "neural-network",
+      "onnx",
+      "pytorch",
+      "scikit-learn",
+      "tensorflow"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 21687,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "3c41120b9c69657a1dd13407b080bd451ed06c9c",
+    "release": {
+      "tag": "v1.23.2",
+      "date": "2026-10-06",
+      "url": "https://github.com/onnx/onnx/releases/tag/v1.23.2",
+      "commit": "e1ac8e74b620bbdc7ba07f0440806bd93f651a28"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.23.2",
+    "commit": "e1ac8e74b620bbdc7ba07f0440806bd93f651a28",
+    "date": "2026-10-06"
+  }
+}

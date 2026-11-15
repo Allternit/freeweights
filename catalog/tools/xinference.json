@@ -1,0 +1,82 @@
+{
+  "id": "xinference",
+  "name": "Xinference",
+  "repo": "xorbitsai/inference",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install xinference"
+  ],
+  "install_check": [
+    "pip install xinference"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Serves language, embedding and speech models behind one OpenAI-compatible API.",
+  "github": {
+    "repo": "xorbitsai/inference",
+    "description": "Open-source inference platform for language, vision, embedding, reranking, image, audio, and video models. Deploy with multiple engines across heterogeneous hardware, from a laptop to a distributed cluster. Serve models through OpenAI-compatible APIs.",
+    "homepage": "https://inference.readthedocs.io",
+    "language": "Python",
+    "topics": [
+      "artificial-intelligence",
+      "diffusers",
+      "gemma",
+      "glm",
+      "glm-5-3",
+      "inference",
+      "kimi",
+      "kimi-k3",
+      "llama-cpp",
+      "llamacpp",
+      "llm",
+      "machine-learning",
+      "mlx",
+      "openai-api",
+      "pytorch",
+      "qwen",
+      "sglang",
+      "transformers",
+      "vllm",
+      "whisper"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 9656,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "6fc86a09db24097b6bf119499195917613300e55",
+    "release": {
+      "tag": "v4.2.0",
+      "date": "2026-11-07",
+      "url": "https://github.com/xorbitsai/inference/releases/tag/v4.2.0",
+      "commit": "02e362e3c1710bf4d20f915c23fc98ac5b20ef4c"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v4.2.0",
+    "commit": "02e362e3c1710bf4d20f915c23fc98ac5b20ef4c",
+    "date": "2026-11-07"
+  }
+}

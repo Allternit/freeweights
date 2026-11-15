@@ -1,0 +1,65 @@
+{
+  "id": "transformers-js",
+  "name": "Transformers.js",
+  "repo": "huggingface/transformers.js",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "npm i @huggingface/transformers"
+  ],
+  "install_check": [
+    "npm i @huggingface/transformers"
+  ],
+  "platforms": [
+    "Web",
+    "Node.js"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "onnx"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Runs Hugging Face models in the browser and Node.js with ONNX Runtime.",
+  "github": {
+    "repo": "huggingface/transformers.js",
+    "description": "State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!",
+    "homepage": "https://huggingface.co/docs/transformers.js",
+    "language": "JavaScript",
+    "topics": [
+      "browser",
+      "javascript",
+      "transformers",
+      "webml"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 16418,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "205e9c2511622724bf9751b35f2afb07f1dd3aa6",
+    "release": {
+      "tag": "4.3.2",
+      "date": "2026-10-28",
+      "url": "https://github.com/huggingface/transformers.js/releases/tag/4.3.2",
+      "commit": "028721487d55aac3c7f6bad8d87d1b3511a1027c"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "4.3.2",
+    "commit": "028721487d55aac3c7f6bad8d87d1b3511a1027c",
+    "date": "2026-10-28"
+  }
+}

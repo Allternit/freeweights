@@ -1,0 +1,61 @@
+{
+  "id": "fastllm",
+  "name": "fastllm",
+  "repo": "ztxz16/fastllm",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "python -m pip install -U ftllm"
+  ],
+  "install_check": [
+    "python -m pip install -U ftllm"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows",
+    "Android"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "C++ inference engine for language models on CPU and GPU.",
+  "github": {
+    "repo": "ztxz16/fastllm",
+    "description": "fastllm是后端无依赖的高性能大模型推理库，帮助您在大部分设备上高效推理大模型！",
+    "homepage": "",
+    "language": "C++",
+    "topics": [],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 5128,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "66e1435258e9fc40d79c083b22d1562a10c5f863",
+    "release": {
+      "tag": "v1.9.1",
+      "date": "2026-11-06",
+      "url": "https://github.com/ztxz16/fastllm/releases/tag/v1.9.1",
+      "commit": "10ae14dcd2d0e32e4462bbae75e11f04657d092a"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.9.1",
+    "commit": "10ae14dcd2d0e32e4462bbae75e11f04657d092a",
+    "date": "2026-11-06"
+  }
+}

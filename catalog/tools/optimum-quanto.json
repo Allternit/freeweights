@@ -1,0 +1,61 @@
+{
+  "id": "optimum-quanto",
+  "name": "Optimum Quanto",
+  "repo": "huggingface/optimum-quanto",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install optimum-quanto"
+  ],
+  "install_check": [
+    "pip install optimum-quanto"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Quantizes PyTorch models to int8, int4 and float8.",
+  "github": {
+    "repo": "huggingface/optimum-quanto",
+    "description": "A pytorch quantization backend for optimum",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "optimum",
+      "pytorch",
+      "quantization"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 1056,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "7d55cb9988bcaa41a72d07e2c296a75edef86dcf",
+    "release": {
+      "tag": "v0.2.7",
+      "date": "2025-03-06",
+      "url": "https://github.com/huggingface/optimum-quanto/releases/tag/v0.2.7",
+      "commit": "089d86ef7954996440ca770b678be353d7a7d6cd"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.2.7",
+    "commit": "089d86ef7954996440ca770b678be353d7a7d6cd",
+    "date": "2025-03-06"
+  }
+}
