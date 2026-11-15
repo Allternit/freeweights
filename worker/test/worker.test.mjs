@@ -259,6 +259,12 @@ test('B3/B6: manifest signature and detail pages come from R2; etag answers 304;
   const bare = await get(`/${PAGE_KEY.replace(/\/index\.html$/, '')}`);
   assert.equal(bare.status, 301);
   assert.equal(new URL(bare.headers.get('location'), BASE).pathname, `/${PAGE_KEY.replace(/index\.html$/, '')}`);
+  // A Cloud Connector rewrite appends index.html: that form must answer exactly like the trailing-slash form.
+  const idx = await get(`/${PAGE_KEY}`);
+  assert.equal(idx.status, 200);
+  assert.match(idx.headers.get('content-type'), /text\/html/);
+  assert.equal(await idx.text(), PAGE_HTML);
+  assert.equal(idx.headers.get('content-security-policy'), csp);
   assert.equal((await get(`/${man.section}/page/2/`)).status, 404); // passthrough is off in tests: Pages would answer
   assert.equal((await get(`/${man.section}/nobody/none/`)).status, 404);
 });
