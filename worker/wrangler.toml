@@ -28,25 +28,22 @@ binding = "FW"
 bucket_name = "freeweights"
 
 # ---- Accounts (spec/accounts-v1.md, plan step 0.4) -----------------------------------------------------
-# COMMENTED OUT ON PURPOSE: created in step 0.4 gate by the coordinator after the owner's go. Until then the
-# Worker has no ACC/PRIVATE/QUARANTINE binding and every write route answers 503 accounts_not_configured.
-# To turn on: create the database and buckets, put the real database_id below, uncomment, and run the
-# migrations with `wrangler d1 migrations apply freeweights-accounts`.
+# Turned on 2026-11-15 at the step 0.4 gate (Eoj's go). Migrations: `wrangler d1 migrations apply freeweights-accounts --remote`.
 #
-# [[d1_databases]]
-# binding = "ACC"
-# database_name = "freeweights-accounts"
-# database_id = "<set at the gate>"
-# migrations_dir = "migrations-accounts"
-#
-# [[r2_buckets]]
-# binding = "PRIVATE"
-# bucket_name = "freeweights-private"
-#
-# [[r2_buckets]]
-# binding = "QUARANTINE"
-# bucket_name = "freeweights-quarantine"
-#
+[[d1_databases]]
+binding = "ACC"
+database_name = "freeweights-accounts"
+database_id = "2d367553-6b6b-4a11-b075-7c082ab95eab"
+migrations_dir = "migrations-accounts"
+
+[[r2_buckets]]
+binding = "PRIVATE"
+bucket_name = "freeweights-private"
+
+[[r2_buckets]]
+binding = "QUARANTINE"
+bucket_name = "freeweights-quarantine"
+
 # Secrets (wrangler secret put, never in this file): R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY
 # (presigned R2 URLs), WEBHOOK_SECRET_KEY (webhook secrets at rest).
 
@@ -63,8 +60,8 @@ ORIGIN_BUDGET_BYTES = "0"
 PAID_ORIGIN_HOSTS = ""
 # Pass non-Worker paths through to the Pages origin (production only; tests leave it unset).
 PASSTHROUGH = "1"
-# Accounts (commented out until the step 0.4 gate, see above). Values are public; no secret here.
-# CLERK_ISSUERS = "https://clerk.allternit.com,https://allternit.com/__clerk"
-# CLERK_JWKS_URL = "https://clerk.allternit.com/.well-known/jwks.json"
-# CLERK_AZP = "https://freeweights.allternit.com,https://fw-preview.allternit.com,https://ai.allternit.com,https://m.allternit.com"
-# ENTITLEMENT_URL = "https://api.allternit.com/api/v1/freeweights/entitlement"
+# Accounts (on since the 2026-11-15 step 0.4 gate). Values are public; no secret here.
+CLERK_ISSUERS = "https://clerk.allternit.com,https://allternit.com/__clerk"
+CLERK_JWKS_URL = "https://clerk.allternit.com/.well-known/jwks.json"
+CLERK_AZP = "https://freeweights.allternit.com,https://fw-preview.allternit.com,https://ai.allternit.com,https://m.allternit.com"
+ENTITLEMENT_URL = "https://api.allternit.com/api/v1/freeweights/entitlement"

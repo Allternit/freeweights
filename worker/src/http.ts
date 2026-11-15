@@ -23,6 +23,12 @@ export function withPageSecurity(res: Response): Response {
   if (!/^text\/html/i.test(res.headers.get('content-type') || '')) return res;
   const h = new Headers(res.headers);
   for (const [k, v] of Object.entries(PAGE_SECURITY_HEADERS)) if (!h.has(k)) h.set(k, v);
+  // no-transform: Cloudflare must not inject anything into our HTML (the Web Analytics beacon, email
+  // obfuscation, Rocket Loader). Anonymous pages load no third-party script (spec/accounts-v1.md section 10,
+  // Eoj 2026-11-15), and the CSP would block an injected script anyway.
+  const cc = h.get('cache-control');
+  if (!cc) h.set('cache-control', 'no-transform');
+  else if (!/\bno-transform\b/i.test(cc)) h.set('cache-control', `${cc}, no-transform`);
   return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
 }
 export const seg = (s: string) => decodeURIComponent(s);

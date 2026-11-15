@@ -96,8 +96,10 @@ function config(dir, srv, withKey) {
     '[[r2_buckets]]', 'binding = "FW"', 'bucket_name = "freeweights"',
     '[vars]', 'CHECK_MODE = "offline"', 'PASSTHROUGH = "0"', 'FRESH_MS = "600000"', 'HF_CHECK_CAP = "2000"', 'ORIGIN_BUDGET_BYTES = "0"',
     `CLERK_ISSUERS = "${ISS},https://other.example"`, `CLERK_JWKS_URL = "${srv}/jwks"`,
-    `CLERK_AZP = "${AZP},https://ai.allternit.com"`, `ENTITLEMENT_URL = "${srv}/entitlement"`,
-    ...(withKey ? [`ENTITLEMENT_PUBKEY = "${ENT_SPKI}"`] : []),
+    `CLERK_AZP = "${AZP},https://ai.allternit.com"`,
+    // Worker B has no ENTITLEMENT_URL: entitlement not configured. (The repo now bundles the real
+    // entitlement-v1 key, so "no key" can no longer be the unconfigured case.)
+    ...(withKey ? [`ENTITLEMENT_URL = "${srv}/entitlement"`, `ENTITLEMENT_PUBKEY = "${ENT_SPKI}"`] : []),
   ].join('\n'));
   return file;
 }
@@ -205,7 +207,7 @@ test('entitlement claim sub must match the Clerk session sub', async () => {
   await refused(await whoami(clerkJwt({ sub: 'user_Mismatch' })), 401, 'auth_required');
 });
 
-test('no entitlement public key (placeholder only): authed perk path answers 503, never fails open', async () => {
+test('entitlement not configured (no ENTITLEMENT_URL): authed perk path answers 503, never fails open', async () => {
   const before = hits.entitlement;
   await refused(await whoami(clerkJwt(), B), 503, 'accounts_not_configured');
   await refused(await whoami('alt_goodkey123', B), 503, 'accounts_not_configured');
