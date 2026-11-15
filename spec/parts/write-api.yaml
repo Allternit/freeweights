@@ -341,35 +341,6 @@ paths:
         '404': {$ref: '#/components/responses/NotFound'}
         '409': {$ref: '#/components/responses/Conflict'}
         '412': {description: parentCommit is not the head of rev., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
-  /api/{repoType}/{namespace}/{repo}/commits/{rev}:
-    get:
-      tags: [upload]
-      operationId: listCommits
-      summary: Commit history of a community repo, newest first. Public repos need no credential.
-      security: [{}, {fwBearer: []}]
-      parameters:
-        - $ref: '#/components/parameters/repoType'
-        - $ref: '#/components/parameters/namespace'
-        - $ref: '#/components/parameters/repo'
-        - $ref: '#/components/parameters/rev'
-        - {name: p, in: query, schema: {type: integer, minimum: 0}, description: Page (50 per page).}
-      responses:
-        '200':
-          description: Commits.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  required: [id, title, message, authors, date]
-                  properties:
-                    id: {$ref: '#/components/schemas/CommitOid'}
-                    title: {type: string}
-                    message: {type: string}
-                    authors: {type: array, items: {type: object, required: [user], properties: {user: {type: string}, avatar: {type: string}}}}
-                    date: {type: string, format: date-time}
-        '404': {$ref: '#/components/responses/NotFound'}
   /api/{repoType}/{namespace}/{repo}/refs:
     get:
       tags: [upload]
