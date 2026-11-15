@@ -31,7 +31,7 @@ import argparse, concurrent.futures, csv, datetime, glob, json, os, re, subproce
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_manifest as mm
 import licenses  # the one license table (policy/licenses.json)
-import classify, formats
+import classify, formats, abliteration
 import blocklist, registry_chain  # takedown blocklist (policy/blocklist.json), snapshot chain
 
 ROOT = mm.ROOT
@@ -65,6 +65,8 @@ ABLITERATED = {
         "Refusal directions removed from deepseek-ai/DeepSeek-V4.1-Flash-1017 by abliteration (huihui-ai, llama.cpp cvector method). "
         "Several series are built on ISTA-DASLab and unsloth quants of the same model."),
 }
+# Rows found abliterated from facts (scripts/abliteration.py): repo -> {reason, family, parent}. Filled in main().
+AUTO = {}
 BATCH_DIR = os.path.join(CAT, "_audit", "batches")
 CACHE = os.path.join(ROOT, "work", "build-cache")
 INFO_KEYS = ("pipeline_tag", "library_name", "cardData", "safetensors", "tags", "gated", "sha", "downloads", "likes")
@@ -211,6 +213,7 @@ def meta(repo, commit, dataset):
 def family_of(sec, repo):
     name = sec.rsplit(".", 1)[1]
     if repo in ABLITERATED: return ABLITERATED[repo][0]
+    if repo in AUTO: return AUTO[repo]["family"]
     return repo.split("/")[0] if name in ("speech", "embed", "image", "video", "music", "ocr", "datasets", "vision") else name
 
 # Same weights in another packaging (quantization, format conversion, ComfyUI repack) count as "quant".
@@ -255,8 +258,8 @@ def make_row(c, man, info, now_ts, cls, terms, note=None, link_only=False, total
     row = {"id": repo, "kind": c["kind"], "display_name": repo.split("/")[1], "section": sec, "family": family_of(sec, repo), "tasks": tasks,
            "license_id": c["license_id"], "redistribution": c["_redis"],
            "formats": fmts, "total_size": total, "params": params if isinstance(params, int) else None,
-           "base_model": base, "relation": relation_for(repo, info, base, dataset), "abliterated": repo in ABLITERATED,
-           "what_changed": ABLITERATED[repo][1] if repo in ABLITERATED else None, "badges": ["source"],
+           "base_model": base, "relation": relation_for(repo, info, base, dataset), "abliterated": repo in ABLITERATED or repo in AUTO,
+           "what_changed": ABLITERATED[repo][1] if repo in ABLITERATED else abliteration.what_changed(repo, AUTO[repo]["reason"], base) if repo in AUTO else None, "badges": ["source"],
            "upstream_url": c["upstream_url"], "added_at": now_ts, "license_class": cls, "requires_terms": terms,
            # every CSV row is a license a person read and recorded (catalog/_audit/licenses.csv)
            "audit": {"method": "reviewed", "at": now_ts}}
@@ -339,6 +342,15 @@ def drop_blocked(repo, why, blocked_ids):
         fp = os.path.join(MAN, fname(repo) + ext)
         if os.path.exists(fp): os.remove(fp)
 
+def mark_abliterated(r):
+    """Bring a kept row up to date with AUTO: abliterated section, family of the base, label text. True when it changed."""
+    a = AUTO.get(r["id"])
+    if not a or r["id"] in ABLITERATED: return False
+    want = dict(section=abliteration.SECTION, family=a["family"], abliterated=True,
+                what_changed=abliteration.what_changed(r["id"], a["reason"], r.get("base_model")))
+    if all(r.get(k) == v for k, v in want.items()): return False
+    r.update(want); return True
+
 def row_file(r, ids):
     """catalog/rows/<org>__<repo>.json; a non-model entry whose id collides with another kind gets a kind prefix."""
     return fname(r["id"]) + ".json" if r["kind"] == "model" or ids[r["id"]] == 1 else f"{r['kind']}__{fname(r['id'])}.json"
@@ -379,6 +391,21 @@ def main():
     def net(fn, repo):
         if not a.offline: return fn()
         return offline_info(prev.get(repo))
+    facts = []
+    for c in cands:
+        res = json.load(open(cache_path(c), encoding="utf-8")) if c.get("_batch") and os.path.exists(cache_path(c)) else {}
+        info, pv = res.get("info") or {}, prev.get(c["repo"]) or {}
+        rel = c.get("relation") or pv.get("relation") or {}
+        if c["kind"] == "dataset": continue
+        facts.append({"repo": c["repo"], "tags": info.get("tags") or [], "pipeline_tag": info.get("pipeline_tag") or c.get("pipeline_tag"),
+                      "parent": rel.get("parent"), "relation_type": rel.get("type")})
+    AUTO.clear()
+    for repo, why in abliteration.detect(facts).items():
+        if repo in ABLITERATED: continue
+        c = next(x for x in cands if x["repo"] == repo and x["kind"] != "dataset")
+        AUTO[repo] = {"reason": why, "family": family_of(c["section"], repo), "orig": c["section"]}
+    for c in cands:
+        if c["repo"] in AUTO and c["kind"] != "dataset": c["section"] = abliteration.SECTION
     for c in cands:
         repo = c["repo"]
         if repo in seen: print("dup skip", repo); continue
@@ -405,6 +432,7 @@ def main():
                 mf = res["manifest"]["files"]
                 rows.append(batch_row(c, res, False, ts, sum(f["size"] for f in mf), res.get("formats") or formats_of([f["path"] for f in mf], False, False))); continue
             m = res["manifest"]
+            m["section"] = c["section"]
             if repo not in prev:
                 twin = exact_reupload(m["files"], repo, listed_w)
                 if twin: reuploads.append((repo, twin)); print("exact re-upload of", twin, "(same weight sha256s), not listed:", repo); continue
@@ -518,6 +546,16 @@ def main():
     for rid in inherited: print("inherited a stricter base license:", rid)
     if not a.no_sign:
         for rid in sync_manifests(rows, set(inherited), key): print("manifest redistribution follows the row, signed again:", rid)
+    flipped = [r["id"] for r in rows if mark_abliterated(r)]
+    for r in rows:
+        out = os.path.join(MAN, fname(r["id"]) + ".json")
+        if not r.get("manifest_url") or not os.path.exists(out): continue
+        m = json.load(open(out, encoding="utf-8"))
+        if m.get("section") == r["section"]: continue
+        m["section"] = r["section"]
+        if a.no_sign: write(os.path.join(PENDING, fname(r["id"]) + ".json"), m); pending.append(r["id"])
+        else: write(out, m); mm.sign(out, r["id"], m["upstream"]["commit"], key); print("manifest section follows the row, signed again:", r["id"])
+    for rid in flipped: print("abliterated from facts:", rid, AUTO[rid]["reason"], AUTO[rid]["orig"], "->", abliteration.SECTION)
     # a row with no manifest_url is link only: a manifest left from an earlier build is no longer served
     stale = [r["id"] for r in rows if not r.get("manifest_url") and os.path.exists(os.path.join(MAN, fname(r["id"]) + ".json"))]
     for rid in stale:
