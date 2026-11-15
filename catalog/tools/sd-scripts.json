@@ -1,0 +1,56 @@
+{
+  "id": "sd-scripts",
+  "name": "sd-scripts",
+  "repo": "kohya-ss/sd-scripts",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone https://github.com/kohya-ss/sd-scripts.git"
+  ],
+  "install_check": [
+    "git clone https://github.com/kohya-ss/sd-scripts.git"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Training scripts for LoRA and fine-tuning of Stable Diffusion, SDXL and FLUX models.",
+  "github": {
+    "repo": "kohya-ss/sd-scripts",
+    "description": "",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 7264,
+    "pushed_at": "2026-11-10",
+    "archived": false,
+    "branch_commit": "cb70b96858477e716a2096292ab8aab433277f38",
+    "release": {
+      "tag": "v0.12.3",
+      "date": "2026-10-26",
+      "url": "https://github.com/kohya-ss/sd-scripts/releases/tag/v0.12.3",
+      "commit": "cb70b96858477e716a2096292ab8aab433277f38"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.12.3",
+    "commit": "cb70b96858477e716a2096292ab8aab433277f38",
+    "date": "2026-10-26"
+  }
+}

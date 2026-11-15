@@ -1,0 +1,66 @@
+{
+  "id": "metagpt",
+  "name": "MetaGPT",
+  "repo": "FoundationAgents/MetaGPT",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install --upgrade metagpt"
+  ],
+  "install_check": [
+    "pip install --upgrade metagpt"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Multi-agent framework that plays software team roles to turn one requirement into a repository.",
+  "github": {
+    "repo": "FoundationAgents/MetaGPT",
+    "description": "🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",
+    "homepage": "https://atoms.dev/",
+    "language": "Python",
+    "topics": [
+      "agent",
+      "gpt",
+      "llm",
+      "metagpt",
+      "multi-agent"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 71279,
+    "pushed_at": "2026-01-21",
+    "archived": false,
+    "branch_commit": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+    "release": {
+      "tag": "v0.8.1",
+      "date": "2024-04-22",
+      "url": "https://github.com/FoundationAgents/MetaGPT/releases/tag/v0.8.1",
+      "commit": "c036574507e7616c02512e7c8ad88dd847783afa"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.8.1",
+    "commit": "c036574507e7616c02512e7c8ad88dd847783afa",
+    "date": "2024-04-22"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "doctr",
+  "name": "docTR",
+  "repo": "mindee/doctr",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install python-doctr"
+  ],
+  "install_check": [
+    "pip install python-doctr"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Document text detection and recognition with PyTorch or TensorFlow.",
+  "github": {
+    "repo": "mindee/doctr",
+    "description": "docTR (Document Text Recognition) - a seamless, high-performing & accessible library for OCR-related tasks powered by Deep Learning. Ongoing development and maintenance by t2k.",
+    "homepage": "https://mindee.github.io/doctr/",
+    "language": "Python",
+    "topics": [
+      "deep-learning",
+      "document-parsing",
+      "document-recognition",
+      "documentai",
+      "layout-analysis",
+      "ocr",
+      "pytorch",
+      "table-structure-recognition",
+      "text-detection",
+      "text-recognition"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 6432,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "46fa0ad0ef0fafd941c6f5db16fd477f5389ce38",
+    "release": {
+      "tag": "v1.1.0",
+      "date": "2026-08-21",
+      "url": "https://github.com/mindee/doctr/releases/tag/v1.1.0",
+      "commit": "2d8e244bd051634704ed9e69a70dd975ce166c78"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.1.0",
+    "commit": "2d8e244bd051634704ed9e69a70dd975ce166c78",
+    "date": "2026-08-21"
+  }
+}

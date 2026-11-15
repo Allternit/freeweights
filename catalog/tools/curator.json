@@ -1,0 +1,70 @@
+{
+  "id": "curator",
+  "name": "Curator",
+  "repo": "bespokelabsai/curator",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install bespokelabs-curator"
+  ],
+  "install_check": [
+    "pip install bespokelabs-curator"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "parquet",
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Builds synthetic datasets and runs batch data pipelines with any model.",
+  "github": {
+    "repo": "bespokelabsai/curator",
+    "description": "Synthetic data curation for post-training and structured data extraction",
+    "homepage": "https://docs.bespokelabs.ai/bespoke-curator",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "deep-learning",
+      "fine-tuning",
+      "instruction-tuning",
+      "llm",
+      "machine-learning",
+      "natural-language-processing",
+      "prompt",
+      "python",
+      "synthetic-data",
+      "synthetic-dataset-generation"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 1767,
+    "pushed_at": "2026-11-02",
+    "archived": false,
+    "branch_commit": "fab184b26578429568c39c6b1e6b1d67e1650ae1",
+    "release": {
+      "tag": "v0.1.31",
+      "date": "2026-10-25",
+      "url": "https://github.com/bespokelabsai/curator/releases/tag/v0.1.31",
+      "commit": "8f0526353dd25cfa0d8be43ccc7f39e6bd56fb5f"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.1.31",
+    "commit": "8f0526353dd25cfa0d8be43ccc7f39e6bd56fb5f",
+    "date": "2026-10-25"
+  }
+}

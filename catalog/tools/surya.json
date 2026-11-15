@@ -1,0 +1,57 @@
+{
+  "id": "surya",
+  "name": "Surya",
+  "repo": "datalab-to/surya",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install surya-ocr"
+  ],
+  "install_check": [
+    "pip install surya-ocr"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "OCR, layout and table detection for 90+ languages.",
+  "github": {
+    "repo": "datalab-to/surya",
+    "description": "OCR, layout analysis, reading order, table recognition in 90+ languages",
+    "homepage": "https://www.datalab.to",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 21591,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "253888005c21865f0ded5d50872727f2a3b307f1",
+    "release": {
+      "tag": "v0.24.0",
+      "date": "2026-11-13",
+      "url": "https://github.com/datalab-to/surya/releases/tag/v0.24.0",
+      "commit": "253888005c21865f0ded5d50872727f2a3b307f1"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.24.0",
+    "commit": "253888005c21865f0ded5d50872727f2a3b307f1",
+    "date": "2026-11-13"
+  }
+}

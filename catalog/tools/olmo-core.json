@@ -1,0 +1,59 @@
+{
+  "id": "olmo-core",
+  "name": "OLMo-core",
+  "repo": "allenai/Olmo-core",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install ai2-olmo-core"
+  ],
+  "install_check": [
+    "pip install ai2-olmo-core"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Building blocks for training OLMo-style language models.",
+  "github": {
+    "repo": "allenai/Olmo-core",
+    "description": "PyTorch building blocks for the OLMo ecosystem",
+    "homepage": "https://olmo-core.readthedocs.io/en/latest/",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 1797,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "704625ad94a7c8bc93f9bea7a0b865b9a0c3d44e",
+    "release": {
+      "tag": "v3.0.0",
+      "date": "2026-10-01",
+      "url": "https://github.com/allenai/Olmo-core/releases/tag/v3.0.0",
+      "commit": "a800c06edcec8e4652de2f80fe0ea572d689fcc3"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v3.0.0",
+    "commit": "a800c06edcec8e4652de2f80fe0ea572d689fcc3",
+    "date": "2026-10-01"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "stable-diffusion-webui",
+  "name": "Stable Diffusion web UI",
+  "repo": "AUTOMATIC1111/stable-diffusion-webui",
+  "category": "apps",
+  "license": "AGPL-3.0",
+  "install": [
+    "git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+  ],
+  "install_check": [
+    "git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-to-image",
+      "image-to-image"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Gradio web UI for Stable Diffusion image models with a large extension ecosystem.",
+  "github": {
+    "repo": "AUTOMATIC1111/stable-diffusion-webui",
+    "description": "Stable Diffusion web UI",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "ai-art",
+      "deep-learning",
+      "diffusion",
+      "gradio",
+      "image-generation",
+      "image2image",
+      "img2img",
+      "pytorch",
+      "stable-diffusion",
+      "text2image",
+      "torch",
+      "txt2img",
+      "unstable",
+      "upscaling",
+      "web"
+    ],
+    "default_branch": "master",
+    "license": "AGPL-3.0",
+    "stars": 165317,
+    "pushed_at": "2026-03-02",
+    "archived": false,
+    "branch_commit": "82a973c04367123ae98bd9abdf80d9eda9b910e2",
+    "release": {
+      "tag": "v1.10.1",
+      "date": "2025-02-09",
+      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.10.1",
+      "commit": "82a973c04367123ae98bd9abdf80d9eda9b910e2"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.10.1",
+    "commit": "82a973c04367123ae98bd9abdf80d9eda9b910e2",
+    "date": "2025-02-09"
+  }
+}

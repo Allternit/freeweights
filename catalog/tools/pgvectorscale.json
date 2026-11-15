@@ -1,0 +1,60 @@
+{
+  "id": "pgvectorscale",
+  "name": "pgvectorscale",
+  "repo": "timescale/pgvectorscale",
+  "category": "retrieval",
+  "license": "PostgreSQL",
+  "install": [
+    "git clone --branch <version> https://github.com/timescale/pgvectorscale"
+  ],
+  "install_check": [
+    "git clone --branch <version> https://github.com/timescale/pgvectorscale"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "pgvector"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Adds a disk-based vector index and faster search to pgvector.",
+  "github": {
+    "repo": "timescale/pgvectorscale",
+    "description": "Postgres extension for vector search (DiskANN), complements pgvector for performance and scale. Postgres OSS licensed.",
+    "homepage": "",
+    "language": "Rust",
+    "topics": [],
+    "default_branch": "main",
+    "license": "PostgreSQL",
+    "stars": 3161,
+    "pushed_at": "2026-10-14",
+    "archived": false,
+    "branch_commit": "3ae6fccff8fe451f55825752e46a60b42dfdfa0d",
+    "release": {
+      "tag": "0.9.1",
+      "date": "2026-09-04",
+      "url": "https://github.com/timescale/pgvectorscale/releases/tag/0.9.1",
+      "commit": "9d9851ce9966f01cdbbdc80e510d4938e3cd26bf"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "0.9.1",
+    "commit": "9d9851ce9966f01cdbbdc80e510d4938e3cd26bf",
+    "date": "2026-09-04"
+  }
+}

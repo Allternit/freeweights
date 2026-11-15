@@ -1,0 +1,63 @@
+{
+  "id": "agentdojo",
+  "name": "AgentDojo",
+  "repo": "ethz-spylab/agentdojo",
+  "category": "safety",
+  "license": "MIT",
+  "install": [
+    "pip install agentdojo"
+  ],
+  "install_check": [
+    "pip install agentdojo"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Benchmark for how well agents resist prompt injection while using tools.",
+  "github": {
+    "repo": "ethz-spylab/agentdojo",
+    "description": "A Dynamic Environment to Evaluate Attacks and Defenses for LLM Agents.",
+    "homepage": "https://agentdojo.spylab.ai/",
+    "language": "Python",
+    "topics": [
+      "benchmark",
+      "large-language-models",
+      "prompt-injection",
+      "security"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 1035,
+    "pushed_at": "2026-06-02",
+    "archived": false,
+    "branch_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+    "release": {
+      "tag": "v0.1.35",
+      "date": "2025-10-27",
+      "url": "https://github.com/ethz-spylab/agentdojo/releases/tag/v0.1.35",
+      "commit": "a75aba7631d3ca5fb7ab938965c97ead2f9ff84b"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.1.35",
+    "commit": "a75aba7631d3ca5fb7ab938965c97ead2f9ff84b",
+    "date": "2025-10-27"
+  }
+}

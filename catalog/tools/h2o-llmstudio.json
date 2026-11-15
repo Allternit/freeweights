@@ -1,0 +1,73 @@
+{
+  "id": "h2o-llmstudio",
+  "name": "H2O LLM Studio",
+  "repo": "h2oai/h2o-llmstudio",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "docker pull h2oairelease/h2oai-llmstudio-app:latest"
+  ],
+  "install_check": [
+    "docker pull h2oairelease/h2oai-llmstudio-app:latest"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "No-code GUI for fine-tuning language models.",
+  "github": {
+    "repo": "h2oai/h2o-llmstudio",
+    "description": "H2O LLM Studio - a framework and no-code GUI for fine-tuning LLMs. Documentation: https://docs.h2o.ai/h2o-llmstudio/",
+    "homepage": "https://h2o.ai",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "chatbot",
+      "chatgpt",
+      "fedramp",
+      "fine-tuning",
+      "finetuning",
+      "generative",
+      "generative-ai",
+      "gpt",
+      "llama",
+      "llama2",
+      "llm",
+      "llm-training"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 5197,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "f7ad2a2390e42f64f4d4de009bb776e6914d8b02",
+    "release": {
+      "tag": "v1.15.4",
+      "date": "2026-11-04",
+      "url": "https://github.com/h2oai/h2o-llmstudio/releases/tag/v1.15.4",
+      "commit": "0a6167839f683f6b3f6e507b4ff76cdf074d2a46"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.15.4",
+    "commit": "0a6167839f683f6b3f6e507b4ff76cdf074d2a46",
+    "date": "2026-11-04"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "exo",
+  "name": "exo",
+  "repo": "exo-explore/exo",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone https://github.com/exo-explore/exo"
+  ],
+  "install_check": [
+    "git clone https://github.com/exo-explore/exo"
+  ],
+  "platforms": [
+    "macOS",
+    "Linux"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Runs one large model across several of your own devices.",
+  "github": {
+    "repo": "exo-explore/exo",
+    "description": "Run frontier AI locally.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 48417,
+    "pushed_at": "2026-11-06",
+    "archived": false,
+    "branch_commit": "a60b95698ca81737d367443674dd5563cbc9559b",
+    "release": {
+      "tag": "v1.0.71",
+      "date": "2026-04-23",
+      "url": "https://github.com/exo-explore/exo/releases/tag/v1.0.71",
+      "commit": "fd707de30b42db4211d15da96b9052e1dc280ed1"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.0.71",
+    "commit": "fd707de30b42db4211d15da96b9052e1dc280ed1",
+    "date": "2026-04-23"
+  }
+}

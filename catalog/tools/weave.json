@@ -1,0 +1,58 @@
+{
+  "id": "weave",
+  "name": "Weave",
+  "repo": "wandb/weave",
+  "category": "eval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install weave openai"
+  ],
+  "install_check": [
+    "pip install weave openai"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Traces and evaluates language model apps.",
+  "github": {
+    "repo": "wandb/weave",
+    "description": "Weave is a toolkit for developing AI-powered applications, built by Weights & Biases.",
+    "homepage": "https://wandb.me/weave",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 1146,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "1935e50af0fa7a3a9d7c657bdf01be3a9e875e3f",
+    "release": {
+      "tag": "v0.54.1",
+      "date": "2026-11-05",
+      "url": "https://github.com/wandb/weave/releases/tag/v0.54.1",
+      "commit": "92fa04d24a0a915ca48559ad38147b409fbcf896"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.54.1",
+    "commit": "92fa04d24a0a915ca48559ad38147b409fbcf896",
+    "date": "2026-11-05"
+  }
+}

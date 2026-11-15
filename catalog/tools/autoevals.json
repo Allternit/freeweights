@@ -1,0 +1,58 @@
+{
+  "id": "autoevals",
+  "name": "Autoevals",
+  "repo": "braintrustdata/autoevals",
+  "category": "eval",
+  "license": "MIT",
+  "install": [
+    "pip install autoevals"
+  ],
+  "install_check": [
+    "pip install autoevals"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Library of scorers for model output, with model-graded and heuristic checks.",
+  "github": {
+    "repo": "braintrustdata/autoevals",
+    "description": "AutoEvals is a tool for quickly and easily evaluating AI model outputs using best practices.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 1081,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "a5dd17115e0cf0724f27de8f5937ca710db71416",
+    "release": {
+      "tag": "py-0.4.1",
+      "date": "2026-10-21",
+      "url": "https://github.com/braintrustdata/autoevals/releases/tag/py-0.4.1",
+      "commit": "2786296339f4b99c907a4dc8a9a867f0fe57ad7a"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "py-0.4.1",
+    "commit": "2786296339f4b99c907a4dc8a9a867f0fe57ad7a",
+    "date": "2026-10-21"
+  }
+}

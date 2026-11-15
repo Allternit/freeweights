@@ -1,0 +1,56 @@
+{
+  "id": "exllamav2",
+  "name": "ExLlamaV2",
+  "repo": "turboderp-org/exllamav2",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "pip install ."
+  ],
+  "install_check": [
+    "pip install ."
+  ],
+  "platforms": [
+    "Linux (NVIDIA)",
+    "Windows (NVIDIA)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Fast local inference for GPTQ and EXL2 quantized models on NVIDIA GPUs.",
+  "github": {
+    "repo": "turboderp-org/exllamav2",
+    "description": "A fast inference library for running LLMs locally on modern consumer-class GPUs",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 4651,
+    "pushed_at": "2026-03-04",
+    "archived": false,
+    "branch_commit": "7dc12af3a81f34ac3f27cd7602ed539b638933ca",
+    "release": {
+      "tag": "v0.3.2",
+      "date": "2025-07-13",
+      "url": "https://github.com/turboderp-org/exllamav2/releases/tag/v0.3.2",
+      "commit": "6a2d8311408aa23af34e8ec32e28085ea68dada7"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.3.2",
+    "commit": "6a2d8311408aa23af34e8ec32e28085ea68dada7",
+    "date": "2025-07-13"
+  }
+}

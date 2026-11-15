@@ -1,0 +1,62 @@
+{
+  "id": "lollms-webui",
+  "name": "LoLLMs WebUI",
+  "repo": "ParisNeo/lollms-webui",
+  "category": "apps",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone --recursive https://github.com/ParisNeo/lollms-webui.git"
+  ],
+  "install_check": [
+    "git clone --recursive https://github.com/ParisNeo/lollms-webui.git"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Web UI that connects to many local and hosted model backends with personalities and tools.",
+  "github": {
+    "repo": "ParisNeo/lollms-webui",
+    "description": "Lord of Large Language and Multi modal Systems Web User Interface",
+    "homepage": "https://lollms.com",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "llm",
+      "text-generation"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 4793,
+    "pushed_at": "2026-11-03",
+    "archived": false,
+    "branch_commit": "725d93f9103175f5182dd1e72012c5c9fa08bd3f",
+    "release": {
+      "tag": "v14",
+      "date": "2024-11-11",
+      "url": "https://github.com/ParisNeo/lollms-webui/releases/tag/v14",
+      "commit": "a904ec0cd0e90bf3b4eeab946e03364463983592"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v14",
+    "commit": "a904ec0cd0e90bf3b4eeab946e03364463983592",
+    "date": "2024-11-11"
+  }
+}

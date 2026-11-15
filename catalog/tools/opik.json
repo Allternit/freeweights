@@ -1,0 +1,72 @@
+{
+  "id": "opik",
+  "name": "Opik",
+  "repo": "comet-ml/opik",
+  "category": "eval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install opik"
+  ],
+  "install_check": [
+    "pip install opik"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Traces, tests and monitors language model apps and agents.",
+  "github": {
+    "repo": "comet-ml/opik",
+    "description": "Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.",
+    "homepage": "https://www.comet.com/docs/opik/",
+    "language": "Python",
+    "topics": [
+      "evaluation",
+      "hacktoberfest",
+      "hacktoberfest2025",
+      "langchain",
+      "llama-index",
+      "llm",
+      "llm-evaluation",
+      "llm-observability",
+      "llmops",
+      "open-source",
+      "openai",
+      "playground",
+      "prompt-engineering"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 23420,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "5ea60d2633a022f0ddb31d2ec81ef21810e0fe52",
+    "release": {
+      "tag": "2.2.143",
+      "date": "2026-11-06",
+      "url": "https://github.com/comet-ml/opik/releases/tag/2.2.143",
+      "commit": "ad8002cbe4bd5892582bbf88307f1e5f5a0adda8"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "2.2.143",
+    "commit": "ad8002cbe4bd5892582bbf88307f1e5f5a0adda8",
+    "date": "2026-11-06"
+  }
+}

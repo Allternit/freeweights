@@ -1,0 +1,65 @@
+{
+  "id": "github-mcp-server",
+  "name": "GitHub MCP Server",
+  "repo": "github/github-mcp-server",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "docker run -i --rm \\",
+    "  -e GITHUB_PERSONAL_ACCESS_TOKEN=<your-token> \\",
+    "  ghcr.io/github/github-mcp-server"
+  ],
+  "install_check": [
+    "-e GITHUB_PERSONAL_ACCESS_TOKEN=<your-token>",
+    "ghcr.io/github/github-mcp-server"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "MCP server that lets agents read and change GitHub repositories and issues.",
+  "github": {
+    "repo": "github/github-mcp-server",
+    "description": "GitHub's official MCP Server",
+    "homepage": "",
+    "language": "Go",
+    "topics": [
+      "github",
+      "mcp",
+      "mcp-server"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 34471,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "0663b830582af923e30fb14cb2e10dd3248baa86",
+    "release": {
+      "tag": "v2.1.0",
+      "date": "2026-11-03",
+      "url": "https://github.com/github/github-mcp-server/releases/tag/v2.1.0",
+      "commit": "4bcdcdf8d7beee98c9448e73e257308280924cc4"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.1.0",
+    "commit": "4bcdcdf8d7beee98c9448e73e257308280924cc4",
+    "date": "2026-11-03"
+  }
+}

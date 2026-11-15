@@ -1,0 +1,61 @@
+{
+  "id": "private-gpt",
+  "name": "PrivateGPT",
+  "repo": "zylon-ai/private-gpt",
+  "category": "apps",
+  "license": "Apache-2.0",
+  "install": [
+    "brew install private-gpt"
+  ],
+  "install_check": [
+    "brew install private-gpt"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Ask questions about your documents with local models, with an API and a Gradio UI.",
+  "github": {
+    "repo": "zylon-ai/private-gpt",
+    "description": "Complete API layer for private AI applications on local models: RAG, skills, tools, MCP, text-to-sql, and more. Works with any OpenAI-compatible inference server.",
+    "homepage": "https://www.zylon.ai/private-gpt",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "ai-tools",
+      "on-premise"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 57635,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "9d37a133f1d50e9b10ed527ce198ffd7ded1af70",
+    "release": {
+      "tag": "v1.0.1",
+      "date": "2026-06-18",
+      "url": "https://github.com/zylon-ai/private-gpt/releases/tag/v1.0.1",
+      "commit": "88d7e259a455625796e3d5cd829c7de78f076231"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.0.1",
+    "commit": "88d7e259a455625796e3d5cd829c7de78f076231",
+    "date": "2026-06-18"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "oumi",
+  "name": "Oumi",
+  "repo": "oumi-ai/oumi",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "uv pip install oumi"
+  ],
+  "install_check": [
+    "uv pip install oumi"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Platform for training, evaluating and deploying open models from one config.",
+  "github": {
+    "repo": "oumi-ai/oumi",
+    "description": "Easily fine-tune (SFT/RL), evaluate, and deploy Qwen, Gemma, or any open agentic LLM/VLM!",
+    "homepage": "https://oumi.ai",
+    "language": "Python",
+    "topics": [
+      "agentic-ai",
+      "dpo",
+      "fine-tuning",
+      "gemma",
+      "gpt-oss",
+      "grpo",
+      "inference",
+      "llama",
+      "llm",
+      "llm-as-a-judge",
+      "llm-evaluation",
+      "llms",
+      "lora",
+      "pytorch",
+      "qwen",
+      "reinforcement-learning",
+      "sft",
+      "synthetic-data",
+      "tool-calling",
+      "vlm"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 9433,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "16517c8cd29921a044a4ea97ceac05b1e30e10a6",
+    "release": {
+      "tag": "v0.9",
+      "date": "2026-09-16",
+      "url": "https://github.com/oumi-ai/oumi/releases/tag/v0.9",
+      "commit": "2e3b6fd3a2ce8c850a3e2a68a0a848a3b8a0a5c3"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.9",
+    "commit": "2e3b6fd3a2ce8c850a3e2a68a0a848a3b8a0a5c3",
+    "date": "2026-09-16"
+  }
+}

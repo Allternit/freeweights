@@ -1,0 +1,65 @@
+{
+  "id": "streaming",
+  "name": "StreamingDataset",
+  "repo": "mosaicml/streaming",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install mosaicml-streaming"
+  ],
+  "install_check": [
+    "pip install mosaicml-streaming"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "parquet",
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Streams training data from cloud storage with fast resume and shuffling.",
+  "github": {
+    "repo": "mosaicml/streaming",
+    "description": "A Data Streaming Library for Efficient Neural Network Training",
+    "homepage": "https://streaming.docs.mosaicml.com",
+    "language": "Python",
+    "topics": [
+      "dataset",
+      "deep-learning",
+      "machine-learning",
+      "neural-network",
+      "pytorch",
+      "streaming"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 1572,
+    "pushed_at": "2026-11-03",
+    "archived": false,
+    "branch_commit": "1381ca1213fc95b6573efb44e5ec9f85c765ce1c",
+    "release": {
+      "tag": "v0.13.0",
+      "date": "2025-07-15",
+      "url": "https://github.com/mosaicml/streaming/releases/tag/v0.13.0",
+      "commit": "adeeeebe8f5d42cb429c05bd4e62df2176ef20ab"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.13.0",
+    "commit": "adeeeebe8f5d42cb429c05bd4e62df2176ef20ab",
+    "date": "2025-07-15"
+  }
+}

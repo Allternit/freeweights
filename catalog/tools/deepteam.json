@@ -1,0 +1,66 @@
+{
+  "id": "deepteam",
+  "name": "DeepTeam",
+  "repo": "confident-ai/deepteam",
+  "category": "safety",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install -U deepteam"
+  ],
+  "install_check": [
+    "pip install -U deepteam"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "deepeval"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Red-teams language model apps for jailbreaks, bias and leakage, built on DeepEval.",
+  "github": {
+    "repo": "confident-ai/deepteam",
+    "description": "DeepTeam is a framework to red team LLMs and AI agents.",
+    "homepage": "https://trydeepteam.com",
+    "language": "Python",
+    "topics": [
+      "llm-guardrails",
+      "llm-red-teaming",
+      "llm-safety",
+      "llm-seecurity",
+      "python"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3104,
+    "pushed_at": "2026-10-23",
+    "archived": false,
+    "branch_commit": "6306f0ff319a932955399405af82f78ee91e9370",
+    "release": {
+      "tag": "v1.0.9",
+      "date": "2025-11-12",
+      "url": "https://github.com/confident-ai/deepteam/releases/tag/v1.0.9",
+      "commit": "d9f7b80be1eefbc746824ff730047b2003695e35"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.0.9",
+    "commit": "d9f7b80be1eefbc746824ff730047b2003695e35",
+    "date": "2025-11-12"
+  }
+}

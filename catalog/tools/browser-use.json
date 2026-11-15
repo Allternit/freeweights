@@ -1,0 +1,78 @@
+{
+  "id": "browser-use",
+  "name": "browser-use",
+  "repo": "browser-use/browser-use",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install 'browser-use==1.0.5'"
+  ],
+  "install_check": [
+    "pip install 'browser-use==1.0.5'"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Lets an agent drive a web browser to complete tasks.",
+  "github": {
+    "repo": "browser-use/browser-use",
+    "description": "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealth browsers and a hosted agent API.",
+    "homepage": "https://browser-use.com",
+    "language": "Python",
+    "topics": [
+      "ai-agents",
+      "ai-tools",
+      "browser-agent",
+      "browser-automation",
+      "browser-use",
+      "cdp",
+      "cloud-browser",
+      "computer-use",
+      "headless-browser",
+      "llm",
+      "mcp",
+      "playwright",
+      "python",
+      "remote-browser",
+      "stealth-browser",
+      "web-automation",
+      "web-scraping"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 121050,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "e717df1839a2d7368b108de6694f01e9c659b0de",
+    "release": {
+      "tag": "1.0.5",
+      "date": "2026-11-14",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5",
+      "commit": "e717df1839a2d7368b108de6694f01e9c659b0de"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "1.0.5",
+    "commit": "e717df1839a2d7368b108de6694f01e9c659b0de",
+    "date": "2026-11-14"
+  }
+}

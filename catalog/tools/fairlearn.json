@@ -1,0 +1,71 @@
+{
+  "id": "fairlearn",
+  "name": "Fairlearn",
+  "repo": "fairlearn/fairlearn",
+  "category": "safety",
+  "license": "MIT",
+  "install": [
+    "pip install fairlearn"
+  ],
+  "install_check": [
+    "pip install fairlearn"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Measures and reduces unfairness in model predictions across groups.",
+  "github": {
+    "repo": "fairlearn/fairlearn",
+    "description": "A Python package to assess and improve fairness of machine learning models.",
+    "homepage": "https://fairlearn.org",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "ai-systems",
+      "artificial-intelligence",
+      "fairness",
+      "fairness-ai",
+      "fairness-assessment",
+      "fairness-ml",
+      "group-fairness",
+      "harms",
+      "machine-learning",
+      "responsible-ai",
+      "unfairness-mitigation"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 2308,
+    "pushed_at": "2026-11-07",
+    "archived": false,
+    "branch_commit": "4b2aa83bddf0b0e7ae1202e787a6ec6050a24204",
+    "release": {
+      "tag": "v0.15.0",
+      "date": "2026-10-12",
+      "url": "https://github.com/fairlearn/fairlearn/releases/tag/v0.15.0",
+      "commit": "771c282907f41757a731674ffe51219e6fd030a6"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.15.0",
+    "commit": "771c282907f41757a731674ffe51219e6fd030a6",
+    "date": "2026-10-12"
+  }
+}

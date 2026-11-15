@@ -1,0 +1,67 @@
+{
+  "id": "instructor",
+  "name": "Instructor",
+  "repo": "567-labs/instructor",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install instructor"
+  ],
+  "install_check": [
+    "pip install instructor"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Gets validated, typed objects out of language models using Pydantic.",
+  "github": {
+    "repo": "567-labs/instructor",
+    "description": "structured outputs for llms ",
+    "homepage": "https://python.useinstructor.com/",
+    "language": "Python",
+    "topics": [
+      "openai",
+      "openai-function-calli",
+      "openai-functions",
+      "pydantic-v2",
+      "python",
+      "validation"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 14112,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "1e85ddf38807084182aeefb5bb67f4deee821163",
+    "release": {
+      "tag": "v1.17.0",
+      "date": "2026-09-09",
+      "url": "https://github.com/567-labs/instructor/releases/tag/v1.17.0",
+      "commit": "f539bf2bf43ef4d1cb4e2a405751d6a8815ce05f"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.17.0",
+    "commit": "f539bf2bf43ef4d1cb4e2a405751d6a8815ce05f",
+    "date": "2026-09-09"
+  }
+}

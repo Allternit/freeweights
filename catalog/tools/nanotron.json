@@ -1,0 +1,59 @@
+{
+  "id": "nanotron",
+  "name": "nanotron",
+  "repo": "huggingface/nanotron",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "uv pip install -e ."
+  ],
+  "install_check": [
+    "uv pip install -e ."
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Minimal library for large-scale pretraining of transformer models.",
+  "github": {
+    "repo": "huggingface/nanotron",
+    "description": "Minimalistic large language model 3D-parallelism training",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 2863,
+    "pushed_at": "2026-10-08",
+    "archived": false,
+    "branch_commit": "a1d47c7ef0f2442a25871e9d5aa4105313d1c37a",
+    "release": {
+      "tag": "v0.4",
+      "date": "2024-03-04",
+      "url": "https://github.com/huggingface/nanotron/releases/tag/v0.4",
+      "commit": "f2c83832cc787621388bc54afbc0f003ac2af9fc"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.4",
+    "commit": "f2c83832cc787621388bc54afbc0f003ac2af9fc",
+    "date": "2024-03-04"
+  }
+}

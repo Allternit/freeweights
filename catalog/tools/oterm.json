@@ -1,0 +1,72 @@
+{
+  "id": "oterm",
+  "name": "oterm",
+  "repo": "ggozad/oterm",
+  "category": "apps",
+  "license": "MIT",
+  "install": [
+    "uvx oterm"
+  ],
+  "install_check": [
+    "uvx oterm"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Terminal chat client for Ollama with saved chats and tools.",
+  "github": {
+    "repo": "ggozad/oterm",
+    "description": "the terminal client for LLMs",
+    "homepage": "https://ggozad.github.io/oterm/",
+    "language": "Python",
+    "topics": [
+      "anthropic",
+      "chatbot",
+      "llm",
+      "mcp",
+      "ollama",
+      "openai",
+      "pydantic-ai",
+      "python",
+      "terminal",
+      "textual",
+      "tui"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 2447,
+    "pushed_at": "2026-11-06",
+    "archived": false,
+    "branch_commit": "77335b656c425517cd2bd3eb154c1e215038ee32",
+    "release": {
+      "tag": "0.26.1",
+      "date": "2026-10-21",
+      "url": "https://github.com/ggozad/oterm/releases/tag/0.26.1",
+      "commit": "48c6f29e1d4f8b2efe8d9c7b6023e3d3eb5fbd5a"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "0.26.1",
+    "commit": "48c6f29e1d4f8b2efe8d9c7b6023e3d3eb5fbd5a",
+    "date": "2026-10-21"
+  }
+}

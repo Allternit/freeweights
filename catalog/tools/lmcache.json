@@ -1,0 +1,74 @@
+{
+  "id": "lmcache",
+  "name": "LMCache",
+  "repo": "LMCache/LMCache",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install lmcache"
+  ],
+  "install_check": [
+    "pip install lmcache"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "vllm",
+    "sglang"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "KV cache layer that reuses attention state across requests for vLLM and SGLang.",
+  "github": {
+    "repo": "LMCache/LMCache",
+    "description": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
+    "homepage": "https://lmcache.ai/",
+    "language": "Python",
+    "topics": [
+      "amd",
+      "cuda",
+      "fast",
+      "inference",
+      "intel",
+      "kv-cache",
+      "llm",
+      "pytorch",
+      "rocm",
+      "speed",
+      "vllm"
+    ],
+    "default_branch": "dev",
+    "license": "Apache-2.0",
+    "stars": 12366,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "bcafb031401d404a5dabae4853f5e23bf9e5685c",
+    "release": {
+      "tag": "v0.5.7.post1",
+      "date": "2026-11-12",
+      "url": "https://github.com/LMCache/LMCache/releases/tag/v0.5.7.post1",
+      "commit": "1181bea5c65a6f477e3680acd14ffac988b13dc3"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.5.7.post1",
+    "commit": "1181bea5c65a6f477e3680acd14ffac988b13dc3",
+    "date": "2026-11-12"
+  }
+}

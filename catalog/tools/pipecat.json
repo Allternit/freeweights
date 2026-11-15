@@ -1,0 +1,65 @@
+{
+  "id": "pipecat",
+  "name": "Pipecat",
+  "repo": "pipecat-ai/pipecat",
+  "category": "speech",
+  "license": "BSD-2-Clause",
+  "install": [
+    "uv tool install \"pipecat-ai[cli]\""
+  ],
+  "install_check": [
+    "uv tool install \"pipecat-ai[cli]\""
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Framework for real-time voice and multimodal agents.",
+  "github": {
+    "repo": "pipecat-ai/pipecat",
+    "description": "Open Source framework for voice agents, multimodal apps, and realtime AI. Maintained by Daily and the community.",
+    "homepage": "https://pipecat.ai",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "chatbot-framework",
+      "chatbots",
+      "real-time",
+      "voice",
+      "voice-assistant"
+    ],
+    "default_branch": "main",
+    "license": "BSD-2-Clause",
+    "stars": 17268,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "1bc2e37b15566cd34bb6941a335ce09c3bbbab8c",
+    "release": {
+      "tag": "v1.16.0",
+      "date": "2026-11-12",
+      "url": "https://github.com/pipecat-ai/pipecat/releases/tag/v1.16.0",
+      "commit": "7cf75afc37f321ecce1822901351bc5fdc372e0b"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.16.0",
+    "commit": "7cf75afc37f321ecce1822901351bc5fdc372e0b",
+    "date": "2026-11-12"
+  }
+}

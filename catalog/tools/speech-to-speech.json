@@ -1,0 +1,68 @@
+{
+  "id": "speech-to-speech",
+  "name": "Speech-to-Speech",
+  "repo": "huggingface/speech-to-speech",
+  "category": "speech",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install speech-to-speech"
+  ],
+  "install_check": [
+    "pip install speech-to-speech"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Modular pipeline from voice activity detection through speech recognition and a language model to speech output.",
+  "github": {
+    "repo": "huggingface/speech-to-speech",
+    "description": "Build voice agents with open-source models",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "assistant",
+      "language-model",
+      "machine-learning",
+      "python",
+      "speech",
+      "speech-synthesis",
+      "speech-to-text",
+      "speech-translation"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 13693,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "d1dc31deab44510188ffcd7edfc87203ed9077fb",
+    "release": {
+      "tag": "v1.1.0",
+      "date": "2026-10-24",
+      "url": "https://github.com/huggingface/speech-to-speech/releases/tag/v1.1.0",
+      "commit": "8ebde045cb7d72f5acd55327b80cfa1670a33936"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.1.0",
+    "commit": "8ebde045cb7d72f5acd55327b80cfa1670a33936",
+    "date": "2026-10-24"
+  }
+}

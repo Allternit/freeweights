@@ -1,0 +1,59 @@
+{
+  "id": "flash-attention",
+  "name": "FlashAttention",
+  "repo": "Dao-AILab/flash-attention",
+  "category": "training",
+  "license": "BSD-3-Clause",
+  "install": [
+    "pip install flash-attn --no-build-isolation"
+  ],
+  "install_check": [
+    "pip install flash-attn --no-build-isolation"
+  ],
+  "platforms": [
+    "Linux (NVIDIA)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Fast, memory-efficient exact attention kernels.",
+  "github": {
+    "repo": "Dao-AILab/flash-attention",
+    "description": "Fast and memory-efficient exact attention",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "BSD-3-Clause",
+    "stars": 25294,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "bd26bc8e10e7c8f10dce6e17276156accecd2994",
+    "release": {
+      "tag": "v2.8.3.post2",
+      "date": "2026-10-13",
+      "url": "https://github.com/Dao-AILab/flash-attention/releases/tag/v2.8.3.post2",
+      "commit": "49774b31c8d1172a5b28f72e9aed0f322bf4ccba"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.8.3.post2",
+    "commit": "49774b31c8d1172a5b28f72e9aed0f322bf4ccba",
+    "date": "2026-10-13"
+  }
+}

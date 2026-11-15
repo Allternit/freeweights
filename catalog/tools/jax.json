@@ -1,0 +1,59 @@
+{
+  "id": "jax",
+  "name": "JAX",
+  "repo": "jax-ml/jax",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install -U jax"
+  ],
+  "install_check": [
+    "pip install -U jax"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Array library with autodiff and compilation for training on CPU, GPU and TPU.",
+  "github": {
+    "repo": "jax-ml/jax",
+    "description": "Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more",
+    "homepage": "https://docs.jax.dev",
+    "language": "Python",
+    "topics": [
+      "jax"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 36625,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "a4ed83c9cb70611b48c81cff3994ff9ce165c03c",
+    "release": {
+      "tag": "jax-v0.12.0.1",
+      "date": "2026-10-22",
+      "url": "https://github.com/jax-ml/jax/releases/tag/jax-v0.12.0.1",
+      "commit": "dc4af684446e65ee98eee8090e1ff6f8211473fb"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "jax-v0.12.0.1",
+    "commit": "dc4af684446e65ee98eee8090e1ff6f8211473fb",
+    "date": "2026-10-22"
+  }
+}

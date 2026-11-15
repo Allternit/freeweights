@@ -1,0 +1,57 @@
+{
+  "id": "tinygrad",
+  "name": "tinygrad",
+  "repo": "tinygrad/tinygrad",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "python3 -m pip install -e ."
+  ],
+  "install_check": [
+    "python3 -m pip install -e ."
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Small deep learning framework that runs models on many accelerators.",
+  "github": {
+    "repo": "tinygrad/tinygrad",
+    "description": "You like pytorch? You like micrograd? You love tinygrad! ❤️ ",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 33917,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "1acdebee3f0bec48f78c1ae54574db03d854a11d",
+    "release": {
+      "tag": "v0.14.0",
+      "date": "2026-08-24",
+      "url": "https://github.com/tinygrad/tinygrad/releases/tag/v0.14.0",
+      "commit": "6f87158d77f66a36d5f8bbe915170b24e2acabe8"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.14.0",
+    "commit": "6f87158d77f66a36d5f8bbe915170b24e2acabe8",
+    "date": "2026-08-24"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "easyr1",
+  "name": "EasyR1",
+  "repo": "hiyouga/EasyR1",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone https://github.com/hiyouga/EasyR1.git"
+  ],
+  "install_check": [
+    "git clone https://github.com/hiyouga/EasyR1.git"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Reinforcement learning for language and vision-language models, forked from verl.",
+  "github": {
+    "repo": "hiyouga/EasyR1",
+    "description": "EasyR1: An Efficient, Scalable, Multi-Modality RL Training Framework based on veRL",
+    "homepage": "https://verl.readthedocs.io",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "deepseek",
+      "gpt",
+      "llm",
+      "nlp",
+      "qwen",
+      "reinforcement-learning",
+      "rl"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 5215,
+    "pushed_at": "2026-11-08",
+    "archived": false,
+    "branch_commit": "a73346d028ba0335aa42da104972c86e6cd0fe69",
+    "release": {
+      "tag": "v0.3.2",
+      "date": "2025-09-18",
+      "url": "https://github.com/hiyouga/EasyR1/releases/tag/v0.3.2",
+      "commit": "a23fb5b06be61d0eaa5819430533bf11136609cf"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.3.2",
+    "commit": "a23fb5b06be61d0eaa5819430533bf11136609cf",
+    "date": "2025-09-18"
+  }
+}

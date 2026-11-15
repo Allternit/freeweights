@@ -1,0 +1,66 @@
+{
+  "id": "gemini-cli",
+  "name": "Gemini CLI",
+  "repo": "google-gemini/gemini-cli",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "npm install -g @google/gemini-cli"
+  ],
+  "install_check": [
+    "npm install -g @google/gemini-cli"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Terminal agent for coding and shell tasks, with MCP support.",
+  "github": {
+    "repo": "google-gemini/gemini-cli",
+    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+    "homepage": "https://geminicli.com",
+    "language": "TypeScript",
+    "topics": [
+      "ai",
+      "ai-agents",
+      "cli",
+      "gemini",
+      "gemini-api",
+      "mcp-client",
+      "mcp-server"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 108837,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "4ed06ed0ddc523a6d356a4ad35ddfea331041888",
+    "release": {
+      "tag": "v0.68.0",
+      "date": "2026-11-10",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0",
+      "commit": "5a5c7180ff3f0a02511f54b54db7f228d4982a30"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.68.0",
+    "commit": "5a5c7180ff3f0a02511f54b54db7f228d4982a30",
+    "date": "2026-11-10"
+  }
+}

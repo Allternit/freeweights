@@ -1,0 +1,79 @@
+{
+  "id": "neural-compressor",
+  "name": "Neural Compressor",
+  "repo": "intel/neural-compressor",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install neural-compressor-pt"
+  ],
+  "install_check": [
+    "pip install neural-compressor-pt"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Intel's library for quantizing and pruning models across frameworks.",
+  "github": {
+    "repo": "intel/neural-compressor",
+    "description": "SOTA low-bit LLM quantization (INT8/FP8/MXFP8/INT4/MXFP4/NVFP4) & sparsity; leading model compression techniques on PyTorch, TensorFlow, and ONNX Runtime",
+    "homepage": "https://intel.github.io/neural-compressor/",
+    "language": "Python",
+    "topics": [
+      "auto-tuning",
+      "awq",
+      "fp4",
+      "gptq",
+      "int4",
+      "int8",
+      "knowledge-distillation",
+      "large-language-models",
+      "low-precision",
+      "mxformat",
+      "post-training-quantization",
+      "pruning",
+      "quantization",
+      "quantization-aware-training",
+      "smoothquant",
+      "sparsegpt",
+      "sparsity"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 2732,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "9d95229f7e18c5e403b470934447134a7d611452",
+    "release": {
+      "tag": "v3.10",
+      "date": "2026-09-29",
+      "url": "https://github.com/intel/neural-compressor/releases/tag/v3.10",
+      "commit": "de444fef482c6b066d4f621780462b444e955f29"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v3.10",
+    "commit": "de444fef482c6b066d4f621780462b444e955f29",
+    "date": "2026-09-29"
+  }
+}

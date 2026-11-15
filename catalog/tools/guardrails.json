@@ -1,0 +1,64 @@
+{
+  "id": "guardrails",
+  "name": "Guardrails",
+  "repo": "guardrails-ai/guardrails",
+  "category": "safety",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install guardrails-ai"
+  ],
+  "install_check": [
+    "pip install guardrails-ai"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Adds input and output validators to language model calls and checks structured output.",
+  "github": {
+    "repo": "guardrails-ai/guardrails",
+    "description": "Adding guardrails to large language models.",
+    "homepage": "https://www.guardrailsai.com/docs",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "foundation-model",
+      "gpt-3",
+      "llm",
+      "openai"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 7609,
+    "pushed_at": "2026-11-11",
+    "archived": false,
+    "branch_commit": "06d0ff2c5f9bcb493d976b76f885e37e41ce845d",
+    "release": {
+      "tag": "v0.11.0",
+      "date": "2026-08-14",
+      "url": "https://github.com/guardrails-ai/guardrails/releases/tag/v0.11.0",
+      "commit": "27a5d7ca568291c61c33a189206802c09b61701c"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.11.0",
+    "commit": "27a5d7ca568291c61c33a189206802c09b61701c",
+    "date": "2026-08-14"
+  }
+}

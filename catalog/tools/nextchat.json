@@ -1,0 +1,77 @@
+{
+  "id": "nextchat",
+  "name": "NextChat",
+  "repo": "ChatGPTNextWeb/NextChat",
+  "category": "apps",
+  "license": "MIT",
+  "install": [
+    "docker pull yidadaa/chatgpt-next-web"
+  ],
+  "install_check": [
+    "docker pull yidadaa/chatgpt-next-web"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Light, fast chat web app you host yourself, with a desktop build, for OpenAI-compatible endpoints.",
+  "github": {
+    "repo": "ChatGPTNextWeb/NextChat",
+    "description": "✨ Zero-config AI chat assistant. No API key needed — sign up and instantly chat with GPT-5, Claude 4, Gemini 2.5, DeepSeek & 100+ top models. Pay-as-you-go saves you more. Available on Web, iOS, macOS, Android, Linux, Windows.",
+    "homepage": "https://nextchat.club",
+    "language": "TypeScript",
+    "topics": [
+      "calclaude",
+      "claude",
+      "cross-platform",
+      "desktop",
+      "fe",
+      "gemini",
+      "gemini-pro",
+      "gemini-server",
+      "gemini-ultra",
+      "gpt-4o",
+      "groq",
+      "nextjs",
+      "ollama",
+      "react",
+      "tauri",
+      "tauri-app",
+      "vercel",
+      "webui"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 88964,
+    "pushed_at": "2026-10-20",
+    "archived": false,
+    "branch_commit": "1d3dc331512929a4b1d3e82354e72acce33b5c7a",
+    "release": {
+      "tag": "v2.16.1",
+      "date": "2025-07-29",
+      "url": "https://github.com/ChatGPTNextWeb/NextChat/releases/tag/v2.16.1",
+      "commit": "557a2cce357749c6fb3176d42e03ff6f7de4d355"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.16.1",
+    "commit": "557a2cce357749c6fb3176d42e03ff6f7de4d355",
+    "date": "2025-07-29"
+  }
+}

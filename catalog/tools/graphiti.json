@@ -1,0 +1,63 @@
+{
+  "id": "graphiti",
+  "name": "Graphiti",
+  "repo": "getzep/graphiti",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install graphiti-core"
+  ],
+  "install_check": [
+    "pip install graphiti-core"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Builds temporal knowledge graphs as memory for agents.",
+  "github": {
+    "repo": "getzep/graphiti",
+    "description": "Build Real-Time Knowledge Graphs for AI Agents",
+    "homepage": "https://help.getzep.com/graphiti",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "graph",
+      "llms",
+      "rag"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 32813,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "3a8a78c997a07cceeb3411ede533b0f342d71c64",
+    "release": {
+      "tag": "v0.31.2",
+      "date": "2026-10-20",
+      "url": "https://github.com/getzep/graphiti/releases/tag/v0.31.2",
+      "commit": "d72407dcedac911e1be9fc15b55e8c05a3efcc36"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.31.2",
+    "commit": "d72407dcedac911e1be9fc15b55e8c05a3efcc36",
+    "date": "2026-10-20"
+  }
+}

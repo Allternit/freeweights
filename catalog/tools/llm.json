@@ -1,0 +1,64 @@
+{
+  "id": "llm",
+  "name": "LLM",
+  "repo": "simonw/llm",
+  "category": "apps",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install llm"
+  ],
+  "install_check": [
+    "pip install llm"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Command-line tool and Python library for prompting local and hosted models, with logging.",
+  "github": {
+    "repo": "simonw/llm",
+    "description": "Access large language models from the command-line",
+    "homepage": "https://llm.datasette.io",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "llms",
+      "openai"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 12760,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "ee842355700de177bcfe44ad55c30273bd71a4de",
+    "release": {
+      "tag": "0.37.2",
+      "date": "2026-11-11",
+      "url": "https://github.com/simonw/llm/releases/tag/0.37.2",
+      "commit": "5dfa8027ea596c4394f41e63cc0cd763bde31781"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "0.37.2",
+    "commit": "5dfa8027ea596c4394f41e63cc0cd763bde31781",
+    "date": "2026-11-11"
+  }
+}

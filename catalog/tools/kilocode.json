@@ -1,0 +1,73 @@
+{
+  "id": "kilocode",
+  "name": "Kilo Code",
+  "repo": "Kilo-Org/kilocode",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "npm install -g @kilocode/cli"
+  ],
+  "install_check": [
+    "npm install -g @kilocode/cli"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Coding agent for the terminal and editors with many model providers.",
+  "github": {
+    "repo": "Kilo-Org/kilocode",
+    "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+    "homepage": "https://kilo.ai/",
+    "language": "TypeScript",
+    "topics": [
+      "ai",
+      "ai-age",
+      "ai-coding",
+      "ai-developer-tools",
+      "chatgpt",
+      "claude",
+      "cli",
+      "gemini",
+      "jetbrains",
+      "sonnet",
+      "vscode",
+      "vscode-extension"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 27988,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "85eb887a7560f452211bcd382eafe8cb2f8df497",
+    "release": {
+      "tag": "v7.8.27",
+      "date": "2026-11-05",
+      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.27",
+      "commit": "03a6f07d053cd7e6aa88fa1e258e93510335259f"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v7.8.27",
+    "commit": "03a6f07d053cd7e6aa88fa1e258e93510335259f",
+    "date": "2026-11-05"
+  }
+}

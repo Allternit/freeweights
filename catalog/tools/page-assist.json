@@ -1,0 +1,66 @@
+{
+  "id": "page-assist",
+  "name": "Page Assist",
+  "repo": "n4ze3m/page-assist",
+  "category": "apps",
+  "license": "MIT",
+  "install": [
+    "git clone https://github.com/n4ze3m/page-assist.git"
+  ],
+  "install_check": [
+    "git clone https://github.com/n4ze3m/page-assist.git"
+  ],
+  "platforms": [
+    "Chrome",
+    "Firefox",
+    "Edge"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Browser extension and web UI for chatting with local models.",
+  "github": {
+    "repo": "n4ze3m/page-assist",
+    "description": "Use your locally running AI models to assist you in your web browsing",
+    "homepage": "https://chromewebstore.google.com/detail/page-assist-a-web-ui-for/jfgfiigpkhlkbnfnbobbkinehhfdhndo",
+    "language": "TypeScript",
+    "topics": [
+      "chat-application",
+      "chrome-extension",
+      "localllm",
+      "ollama",
+      "open-source"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 8335,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "3f16eb53e943ff8322a6f247ed0e428ddc41498a",
+    "release": {
+      "tag": "v1.5.91",
+      "date": "2026-11-08",
+      "url": "https://github.com/n4ze3m/page-assist/releases/tag/v1.5.91",
+      "commit": "3f16eb53e943ff8322a6f247ed0e428ddc41498a"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.5.91",
+    "commit": "3f16eb53e943ff8322a6f247ed0e428ddc41498a",
+    "date": "2026-11-08"
+  }
+}

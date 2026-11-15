@@ -1,0 +1,64 @@
+{
+  "id": "baml",
+  "name": "BAML",
+  "repo": "BoundaryML/baml",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "brew install baml"
+  ],
+  "install_check": [
+    "brew install baml"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Language for writing typed model calls that compile to Python, TypeScript and other clients.",
+  "github": {
+    "repo": "BoundaryML/baml",
+    "description": "The programming language for agents",
+    "homepage": "https://boundaryml.com/explore",
+    "language": "Rust",
+    "topics": [
+      "boundaryml",
+      "guardrails",
+      "llm",
+      "programming-language",
+      "structured-data"
+    ],
+    "default_branch": "canary",
+    "license": "Apache-2.0",
+    "stars": 9509,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "51df16c70a1356957f90de7fcbb6b0b208c27d71",
+    "release": {
+      "tag": "baml-language-0.25.3-nightly.20261113.a",
+      "date": "2026-11-14",
+      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.25.3-nightly.20261113.a",
+      "commit": "f8f559fa544d2d69be726d0355de42800c6c8dfc"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "baml-language-0.25.3-nightly.20261113.a",
+    "commit": "f8f559fa544d2d69be726d0355de42800c6c8dfc",
+    "date": "2026-11-14"
+  }
+}

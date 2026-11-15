@@ -1,0 +1,60 @@
+{
+  "id": "opencode",
+  "name": "opencode",
+  "repo": "anomalyco/opencode",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "curl -fsSL https://opencode.ai/v2/install | bash"
+  ],
+  "install_check": [
+    "curl -fsSL https://opencode.ai/v2/install | bash"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Terminal coding agent that works with many model providers and local models.",
+  "github": {
+    "repo": "anomalyco/opencode",
+    "description": "The open source coding agent.",
+    "homepage": "https://opencode.ai",
+    "language": "TypeScript",
+    "topics": [],
+    "default_branch": "dev",
+    "license": "MIT",
+    "stars": 226902,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "d432a06b9c07bab0be4e8d642173b1cb14137f11",
+    "release": {
+      "tag": "v1.19.5",
+      "date": "2026-10-28",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.5",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "date": "2026-10-28"
+  }
+}

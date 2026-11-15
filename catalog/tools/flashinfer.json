@@ -1,0 +1,70 @@
+{
+  "id": "flashinfer",
+  "name": "FlashInfer",
+  "repo": "flashinfer-ai/flashinfer",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install flashinfer-python"
+  ],
+  "install_check": [
+    "pip install flashinfer-python"
+  ],
+  "platforms": [
+    "Linux (NVIDIA)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "GPU kernel library for LLM serving, used inside vLLM and SGLang.",
+  "github": {
+    "repo": "flashinfer-ai/flashinfer",
+    "description": "FlashInfer: Kernel Library for LLM Serving",
+    "homepage": "https://flashinfer.ai",
+    "language": "Cuda",
+    "topics": [
+      "attention",
+      "cuda",
+      "distributed-inference",
+      "gpu",
+      "jit",
+      "large-large-models",
+      "llm-inference",
+      "moe",
+      "nvidia",
+      "pytorch"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 6927,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "9c50996794564e1e3b2a4b0683e9aa2bcc528df8",
+    "release": {
+      "tag": "v0.7.4",
+      "date": "2026-11-11",
+      "url": "https://github.com/flashinfer-ai/flashinfer/releases/tag/v0.7.4",
+      "commit": "77039051b0be921788dc2784ec41423b558878ec"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.7.4",
+    "commit": "77039051b0be921788dc2784ec41423b558878ec",
+    "date": "2026-11-11"
+  }
+}

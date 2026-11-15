@@ -1,0 +1,64 @@
+{
+  "id": "semantic-kernel",
+  "name": "Semantic Kernel",
+  "repo": "microsoft/semantic-kernel",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install semantic-kernel"
+  ],
+  "install_check": [
+    "pip install semantic-kernel"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "SDK for building agents and plugins in Python, C# and Java.",
+  "github": {
+    "repo": "microsoft/semantic-kernel",
+    "description": "Integrate cutting-edge LLM technology quickly and easily into your apps",
+    "homepage": "https://aka.ms/semantic-kernel",
+    "language": "C#",
+    "topics": [
+      "ai",
+      "artificial-intelligence",
+      "llm",
+      "openai",
+      "sdk"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 28769,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "ff22ec32ed31096c98ad63376d4ecc9aefe0ff38",
+    "release": {
+      "tag": "dotnet-1.82.0",
+      "date": "2026-11-07",
+      "url": "https://github.com/microsoft/semantic-kernel/releases/tag/dotnet-1.82.0",
+      "commit": "df1cb33d0d32699c8d6a2e5b3ea7e5f8990d86d5"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "dotnet-1.82.0",
+    "commit": "df1cb33d0d32699c8d6a2e5b3ea7e5f8990d86d5",
+    "date": "2026-11-07"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "bitnet",
+  "name": "BitNet",
+  "repo": "microsoft/BitNet",
+  "category": "inference",
+  "license": "MIT",
+  "install": [
+    "git clone --recursive https://github.com/microsoft/BitNet.git"
+  ],
+  "install_check": [
+    "git clone --recursive https://github.com/microsoft/BitNet.git"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "gguf"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Inference framework for 1-bit and ternary language models on CPUs.",
+  "github": {
+    "repo": "microsoft/BitNet",
+    "description": "Official inference framework for 1-bit LLMs",
+    "homepage": "",
+    "language": "C++",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 41584,
+    "pushed_at": "2026-07-27",
+    "archived": false,
+    "branch_commit": "0b341e582afbf9e1011f24744b554c96a3477eb5",
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "0b341e582afbf9e1011f24744b554c96a3477eb5",
+    "date": "2026-07-27"
+  }
+}

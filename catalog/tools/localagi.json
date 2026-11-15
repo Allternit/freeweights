@@ -1,0 +1,60 @@
+{
+  "id": "localagi",
+  "name": "LocalAGI",
+  "repo": "mudler/LocalAGI",
+  "category": "apps",
+  "license": "MIT",
+  "install": [
+    "git clone https://github.com/mudler/LocalAGI"
+  ],
+  "install_check": [
+    "git clone https://github.com/mudler/LocalAGI"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "localai"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Self-hosted agent platform with a web UI that runs on LocalAI.",
+  "github": {
+    "repo": "mudler/LocalAGI",
+    "description": "LocalAGI is a powerful, self-hostable AI Agent platform designed for maximum privacy and flexibility. A complete drop-in replacement for OpenAI's Responses APIs with advanced agentic capabilities. No clouds.  Local AI that works on consumer-grade hardware (CPU and GPU).",
+    "homepage": "",
+    "language": "Go",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 2016,
+    "pushed_at": "2026-11-01",
+    "archived": false,
+    "branch_commit": "7aa0c8fea076722b277ca521038ae9f132d3f4d1",
+    "release": {
+      "tag": "v2.9.0",
+      "date": "2026-05-08",
+      "url": "https://github.com/mudler/LocalAGI/releases/tag/v2.9.0",
+      "commit": "37810d918a871c2b4ea20f75aa55e91ab1319322"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.9.0",
+    "commit": "37810d918a871c2b4ea20f75aa55e91ab1319322",
+    "date": "2026-05-08"
+  }
+}

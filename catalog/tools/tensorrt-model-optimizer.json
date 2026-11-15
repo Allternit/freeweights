@@ -1,0 +1,59 @@
+{
+  "id": "tensorrt-model-optimizer",
+  "name": "TensorRT Model Optimizer",
+  "repo": "NVIDIA/Model-Optimizer",
+  "category": "quantization",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install -U nvidia-modelopt[all]"
+  ],
+  "install_check": [
+    "pip install -U nvidia-modelopt[all]"
+  ],
+  "platforms": [
+    "Linux (NVIDIA)"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Quantization, pruning and distillation for deployment on NVIDIA GPUs.",
+  "github": {
+    "repo": "NVIDIA/Model-Optimizer",
+    "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+    "homepage": "https://nvidia.github.io/Model-Optimizer/",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 5605,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "ef893e77084198c161cc908eb91380b3a47eccad",
+    "release": {
+      "tag": "0.48.0",
+      "date": "2026-11-02",
+      "url": "https://github.com/NVIDIA/Model-Optimizer/releases/tag/0.48.0",
+      "commit": "e2f328a19de789e73b91aca2908042388cf6d496"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "0.48.0",
+    "commit": "e2f328a19de789e73b91aca2908042388cf6d496",
+    "date": "2026-11-02"
+  }
+}

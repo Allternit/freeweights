@@ -1,0 +1,75 @@
+{
+  "id": "vane",
+  "name": "Vane",
+  "repo": "ItzCrazyKns/Vane",
+  "category": "apps",
+  "license": "MIT",
+  "install": [
+    "docker run -d -p 3000:3000 -v vane-data:/home/vane/data --name vane itzcrazykns1337/vane:latest"
+  ],
+  "install_check": [
+    "docker run -d -p 3000:3000 -v vane-data:/home/vane/data --name vane itzcrazykns1337/vane:latest"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Self-hosted answer engine that searches the web and cites sources, with local models.",
+  "github": {
+    "repo": "ItzCrazyKns/Vane",
+    "description": "Vane is an AI-powered answering engine.",
+    "homepage": "",
+    "language": "TypeScript",
+    "topics": [
+      "ai-agents",
+      "ai-search-engine",
+      "answering-engine",
+      "artificial-intelligence",
+      "llm",
+      "machine-learning",
+      "open-source-ai-search-engine",
+      "perplexica",
+      "rag",
+      "search-engine",
+      "searxng",
+      "searxng-copilot",
+      "self-hosted-ai",
+      "vane"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 38212,
+    "pushed_at": "2026-09-01",
+    "archived": false,
+    "branch_commit": "348feca3e378fb4157b217724ed508dc707f853f",
+    "release": {
+      "tag": "v1.12.2",
+      "date": "2026-04-10",
+      "url": "https://github.com/ItzCrazyKns/Vane/releases/tag/v1.12.2",
+      "commit": "9e8d883768c43520464345fefe58654f5cee451b"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.12.2",
+    "commit": "9e8d883768c43520464345fefe58654f5cee451b",
+    "date": "2026-04-10"
+  }
+}

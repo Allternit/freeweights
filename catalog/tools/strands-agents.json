@@ -1,0 +1,81 @@
+{
+  "id": "strands-agents",
+  "name": "Strands Agents",
+  "repo": "strands-agents/harness-sdk",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install strands-agents"
+  ],
+  "install_check": [
+    "pip install strands-agents"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Model-driven agent SDK with tools, MCP and local model support.",
+  "github": {
+    "repo": "strands-agents/harness-sdk",
+    "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+    "homepage": "http://strandsagents.com/",
+    "language": "TypeScript",
+    "topics": [
+      "agent-framework",
+      "agentic",
+      "agentic-ai",
+      "agents",
+      "ai",
+      "ai-agents",
+      "anthropic",
+      "autonomous-agents",
+      "bedrock",
+      "generative-ai",
+      "harness",
+      "llm",
+      "llm-agent",
+      "mcp",
+      "multi-agent-systems",
+      "openai",
+      "python",
+      "sdk",
+      "strands-agents",
+      "typescript"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 9217,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "c8e1351a5a6218c8f5c2417534aedbd021882a76",
+    "release": {
+      "tag": "python/v1.65.0",
+      "date": "2026-11-13",
+      "url": "https://github.com/strands-agents/harness-sdk/releases/tag/python/v1.65.0",
+      "commit": "74e995387d0bf4e115a025702c8cd3844e25a164"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "python/v1.65.0",
+    "commit": "74e995387d0bf4e115a025702c8cd3844e25a164",
+    "date": "2026-11-13"
+  }
+}

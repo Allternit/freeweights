@@ -1,0 +1,76 @@
+{
+  "id": "giskard",
+  "name": "Giskard",
+  "repo": "Giskard-AI/giskard-oss",
+  "category": "safety",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install giskard"
+  ],
+  "install_check": [
+    "pip install giskard"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Tests language model apps for hallucination, leakage and other failures.",
+  "github": {
+    "repo": "Giskard-AI/giskard-oss",
+    "description": "🐢 Open-Source Evaluation & Testing library for LLM Agents",
+    "homepage": "https://docs.giskard.ai",
+    "language": "Python",
+    "topics": [
+      "agent-evaluation",
+      "ai-red-team",
+      "ai-security",
+      "ai-testing",
+      "fairness-ai",
+      "llm",
+      "llm-eval",
+      "llm-evaluation",
+      "llm-security",
+      "llmops",
+      "ml-testing",
+      "ml-validation",
+      "mlops",
+      "rag-evaluation",
+      "red-team-tools",
+      "responsible-ai",
+      "trustworthy-ai"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 5951,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "32fb9cf8e9344e9e2847bc22bdcf985a42f1e06c",
+    "release": {
+      "tag": "giskard-agents/v1.0.6",
+      "date": "2026-10-25",
+      "url": "https://github.com/Giskard-AI/giskard-oss/releases/tag/giskard-agents/v1.0.6",
+      "commit": "12c06e8383661b4431be9f1a5747ae2ae8136e7f"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "giskard-agents/v1.0.6",
+    "commit": "12c06e8383661b4431be9f1a5747ae2ae8136e7f",
+    "date": "2026-10-25"
+  }
+}

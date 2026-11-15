@@ -1,0 +1,61 @@
+{
+  "id": "aibrix",
+  "name": "AIBrix",
+  "repo": "vllm-project/aibrix",
+  "category": "inference",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone https://github.com/vllm-project/aibrix.git"
+  ],
+  "install_check": [
+    "git clone https://github.com/vllm-project/aibrix.git"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "vllm"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Kubernetes building blocks for serving vLLM at scale.",
+  "github": {
+    "repo": "vllm-project/aibrix",
+    "description": "Cost-efficient and pluggable Infrastructure components for GenAI inference",
+    "homepage": "",
+    "language": "Go",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 5186,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "c06ce5afbca799532469169c725cb87dde983589",
+    "release": {
+      "tag": "v0.8.0",
+      "date": "2026-10-13",
+      "url": "https://github.com/vllm-project/aibrix/releases/tag/v0.8.0",
+      "commit": "453ab36db68ac859f86ac94e32d0e02cec4c1505"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.8.0",
+    "commit": "453ab36db68ac859f86ac94e32d0e02cec4c1505",
+    "date": "2026-10-13"
+  }
+}

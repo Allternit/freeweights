@@ -1,0 +1,66 @@
+{
+  "id": "sdnext",
+  "name": "SD.Next",
+  "repo": "vladmandic/sdnext",
+  "category": "apps",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone https://github.com/vladmandic/sdnext"
+  ],
+  "install_check": [
+    "git clone https://github.com/vladmandic/sdnext"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-to-image",
+      "image-to-image"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Image generation web UI with many diffusion model backends.",
+  "github": {
+    "repo": "vladmandic/sdnext",
+    "description": "SD.Next: All-in-one WebUI for AI generative image and video creation, captioning and processing",
+    "homepage": "https://vladmandic.github.io/sdnext/",
+    "language": "Python",
+    "topics": [
+      "ai-art",
+      "caption",
+      "diffusers",
+      "generative-art",
+      "python",
+      "pytorch",
+      "sdnext",
+      "stable-diffusion",
+      "transformers",
+      "webui"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 7378,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "6657d06112ed8e924e93eed099af44ea8d892417",
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "6657d06112ed8e924e93eed099af44ea8d892417",
+    "date": "2026-11-14"
+  }
+}

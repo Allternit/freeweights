@@ -1,0 +1,58 @@
+{
+  "id": "olive",
+  "name": "Olive",
+  "repo": "microsoft/Olive",
+  "category": "quantization",
+  "license": "MIT",
+  "install": [
+    "pip install olive-ai"
+  ],
+  "install_check": [
+    "pip install olive-ai"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "converts",
+    "formats": [
+      "safetensors",
+      "onnx"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Optimizes and quantizes models for ONNX Runtime across hardware targets.",
+  "github": {
+    "repo": "microsoft/Olive",
+    "description": "Olive: Simplify ML Model Finetuning, Conversion, Quantization, and Optimization for CPUs, GPUs and NPUs.",
+    "homepage": "https://microsoft.github.io/Olive/",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 2414,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "c513fd7e7990d2d1cc7806cc68cb9edea384d207",
+    "release": {
+      "tag": "v0.13.0",
+      "date": "2026-06-09",
+      "url": "https://github.com/microsoft/Olive/releases/tag/v0.13.0",
+      "commit": "8a9489d65421a658f6603727a2ae63e14c7aa969"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.13.0",
+    "commit": "8a9489d65421a658f6603727a2ae63e14c7aa969",
+    "date": "2026-06-09"
+  }
+}

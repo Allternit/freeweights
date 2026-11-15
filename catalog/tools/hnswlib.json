@@ -1,0 +1,59 @@
+{
+  "id": "hnswlib",
+  "name": "hnswlib",
+  "repo": "nmslib/hnswlib",
+  "category": "retrieval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install ."
+  ],
+  "install_check": [
+    "pip install ."
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Header-only library for fast approximate nearest-neighbor search.",
+  "github": {
+    "repo": "nmslib/hnswlib",
+    "description": "Header-only C++/python library for fast approximate nearest neighbors",
+    "homepage": "https://github.com/nmslib/hnswlib",
+    "language": "C++",
+    "topics": [],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 5367,
+    "pushed_at": "2026-09-15",
+    "archived": false,
+    "branch_commit": "ca426729609b3221563047ceb269cc1213e0d376",
+    "release": {
+      "tag": "v0.9.0",
+      "date": "2026-03-28",
+      "url": "https://github.com/nmslib/hnswlib/releases/tag/v0.9.0",
+      "commit": "d9b3608c83d83b46c96e25088cb1d729b29dcfe9"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.9.0",
+    "commit": "d9b3608c83d83b46c96e25088cb1d729b29dcfe9",
+    "date": "2026-03-28"
+  }
+}

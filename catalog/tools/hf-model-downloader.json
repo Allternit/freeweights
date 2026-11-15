@@ -1,0 +1,60 @@
+{
+  "id": "hf-model-downloader",
+  "name": "HuggingFace Model Downloader",
+  "repo": "bodaay/HuggingFaceModelDownloader",
+  "category": "distribution",
+  "license": "Apache-2.0",
+  "install": [
+    "docker pull ghcr.io/bodaay/huggingfacemodeldownloader:latest"
+  ],
+  "install_check": [
+    "docker pull ghcr.io/bodaay/huggingfacemodeldownloader:latest"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "gets",
+    "all_hosted": true
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Multi-connection downloader for model repositories, with resume.",
+  "github": {
+    "repo": "bodaay/HuggingFaceModelDownloader",
+    "description": "Simple go utility to download HuggingFace Models and Datasets",
+    "homepage": "",
+    "language": "Go",
+    "topics": [
+      "golang",
+      "huggingface",
+      "llm",
+      "transformers"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 1213,
+    "pushed_at": "2026-10-04",
+    "archived": false,
+    "branch_commit": "20f4be12d05012afbefbf54ad13dcfc12c6560b9",
+    "release": {
+      "tag": "v3.4.0",
+      "date": "2026-10-04",
+      "url": "https://github.com/bodaay/HuggingFaceModelDownloader/releases/tag/v3.4.0",
+      "commit": "20f4be12d05012afbefbf54ad13dcfc12c6560b9"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v3.4.0",
+    "commit": "20f4be12d05012afbefbf54ad13dcfc12c6560b9",
+    "date": "2026-10-04"
+  }
+}

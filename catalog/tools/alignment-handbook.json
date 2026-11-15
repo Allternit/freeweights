@@ -1,0 +1,57 @@
+{
+  "id": "alignment-handbook",
+  "name": "Alignment Handbook",
+  "repo": "huggingface/alignment-handbook",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "uv pip install ."
+  ],
+  "install_check": [
+    "uv pip install ."
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Recipes for fine-tuning and aligning language models with open data.",
+  "github": {
+    "repo": "huggingface/alignment-handbook",
+    "description": "Robust recipes to align language models with human and AI preferences",
+    "homepage": "https://huggingface.co/HuggingFaceH4",
+    "language": "Python",
+    "topics": [
+      "llm",
+      "rlhf",
+      "transformers"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 5713,
+    "pushed_at": "2026-09-23",
+    "archived": false,
+    "branch_commit": "53c11c328684f965162f41ff93185bb9e0448263",
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "53c11c328684f965162f41ff93185bb9e0448263",
+    "date": "2026-09-23"
+  }
+}

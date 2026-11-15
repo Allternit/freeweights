@@ -1,0 +1,64 @@
+{
+  "id": "xgrammar",
+  "name": "XGrammar",
+  "repo": "mlc-ai/xgrammar",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install xgrammar"
+  ],
+  "install_check": [
+    "pip install xgrammar"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "vllm",
+    "sglang"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Fast structured-generation engine used by vLLM, SGLang and MLC LLM.",
+  "github": {
+    "repo": "mlc-ai/xgrammar",
+    "description": "Fast, Flexible and Portable Structured Generation",
+    "homepage": "https://xgrammar.mlc.ai/docs",
+    "language": "Python",
+    "topics": [
+      "large-language-models",
+      "structured-generation"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 2014,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "1ec3f9904c0a3213d76c824683d6f8560ae43c89",
+    "release": {
+      "tag": "v0.2.9",
+      "date": "2026-11-09",
+      "url": "https://github.com/mlc-ai/xgrammar/releases/tag/v0.2.9",
+      "commit": "8f9a1279fdbed47739bd75b4099d1d059a1ce3e0"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.2.9",
+    "commit": "8f9a1279fdbed47739bd75b4099d1d059a1ce3e0",
+    "date": "2026-11-09"
+  }
+}

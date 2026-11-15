@@ -1,0 +1,70 @@
+{
+  "id": "outlines",
+  "name": "Outlines",
+  "repo": "dottxt-ai/outlines",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install outlines"
+  ],
+  "install_check": [
+    "pip install outlines"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "vllm",
+    "llama-cpp"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Constrains model output to a schema, regex or grammar.",
+  "github": {
+    "repo": "dottxt-ai/outlines",
+    "description": "Structured Outputs",
+    "homepage": "https://dottxt-ai.github.io/outlines/",
+    "language": "Python",
+    "topics": [
+      "cfg",
+      "generative-ai",
+      "json",
+      "llms",
+      "prompt-engineering",
+      "regex",
+      "structured-generation",
+      "symbolic-ai"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 16010,
+    "pushed_at": "2026-09-21",
+    "archived": false,
+    "branch_commit": "c52af8472c6fe8a607a733ec11b709476af77a96",
+    "release": {
+      "tag": "1.3.3",
+      "date": "2026-08-06",
+      "url": "https://github.com/dottxt-ai/outlines/releases/tag/1.3.3",
+      "commit": "3d251f8d758a01cfee4ddc99646886845dbd8c6d"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "1.3.3",
+    "commit": "3d251f8d758a01cfee4ddc99646886845dbd8c6d",
+    "date": "2026-08-06"
+  }
+}
