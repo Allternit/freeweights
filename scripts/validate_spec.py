@@ -102,6 +102,14 @@ if os.path.exists(os.path.join(CAT, "catalog.json")):
         elif want.get(lc) != v and not (r.get("link_reason") == "not-reviewed" and not hosted):
             e.append(f"{r['id']}: license_class {lc!r} but the table says {v!r} for {r.get('license_id')!r}")
     report("catalog rows agree with policy/licenses.json (and no hosted row has a link-only license)", e)
+    e = []
+    for r in rows:
+        mp = os.path.join(ROOT, "manifests", r["id"].replace("/", "__") + ".json")
+        if not os.path.exists(mp): continue
+        mr = load(mp).get("license", {}).get("redistribution"); want_r = licenses.redistribution(r.get("license_class"))
+        if mr != want_r or (r.get("redistribution") not in (None, mr)):
+            e.append(f"{r['id']}: class {r.get('license_class')!r} means {want_r!r}, row says {r.get('redistribution')!r}, signed manifest says {mr!r}")
+    report("every row's license class and its signed manifest's redistribution agree", e)
     report("license table docs are generated from policy/licenses.json",
            [f"{os.path.relpath(p, ROOT)} is out of date: run scripts/licenses.py --write-docs" for p, ok in licenses.docs_status() if not ok])
 # negative test: schema must reject a bad manifest

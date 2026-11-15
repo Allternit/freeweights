@@ -104,6 +104,58 @@ class Logic(unittest.TestCase):
         self.assertEqual(jobs[1]["author"], "A")
 
 
+def hot(key, score, sources=("model/trendingScore",)):
+    return {"key": key, "trending_score": score, "sources": list(sources)}
+
+
+class Trending(unittest.TestCase):
+    def recs(self, *rs):
+        return {r["key"]: r for r in rs}
+
+    def test_two_consecutive_runs_needed(self):
+        run1 = self.recs(hot("model:a/x", 90), hot("model:b/y", 80), hot("model:c/z", 0))
+        st = d.apply_trending(run1, {}, "2026-11-14", top=2)
+        self.assertEqual([r["trending_runs"] for r in run1.values()], [1, 1, 0])
+        run2 = self.recs(hot("model:a/x", 70), hot("model:d/w", 60), hot("model:b/y", 5))
+        st = d.apply_trending(run2, st, "2026-11-15", top=2)
+        self.assertEqual(run2["model:a/x"]["trending_runs"], 2)
+        self.assertEqual(run2["model:d/w"]["trending_runs"], 1)
+        self.assertEqual(run2["model:b/y"]["trending_runs"], 0)
+        self.assertEqual(run2["model:a/x"]["trending_rank"], 1)
+        self.assertEqual(st["prev_keys"], ["model:a/x", "model:b/y"])
+
+    def test_same_day_rerun_does_not_count_as_second_run(self):
+        st = d.apply_trending(self.recs(hot("model:a/x", 9)), {}, "2026-11-14")
+        again = self.recs(hot("model:a/x", 9))
+        d.apply_trending(again, st, "2026-11-14")
+        self.assertEqual(again["model:a/x"]["trending_runs"], 1)
+
+    def test_only_trending_listing_counts(self):
+        r = self.recs(hot("model:a/x", 50, ("model/downloads",)))
+        d.apply_trending(r, {}, "2026-11-14")
+        self.assertEqual(r["model:a/x"]["trending_runs"], 0)
+
+
+class Reupload(unittest.TestCase):
+    def files(self, weight_sha, readme_sha="r1"):
+        return [{"lfs": False, "path": "README.md", "sha256": readme_sha, "size": 2100},
+                {"lfs": False, "path": "config.json", "sha256": "c" + readme_sha, "size": 800},
+                {"lfs": True, "path": "model-00001-of-00002.safetensors", "sha256": weight_sha + "1", "size": 4_000_000_000},
+                {"lfs": True, "path": "model-00002-of-00002.safetensors", "sha256": weight_sha + "2", "size": 1_500_000_000}]
+
+    def test_same_weights_other_readme_is_reupload(self):
+        import build_catalog as b
+        listed = {b.formats.weight_sha_set(self.files("aa")): "org/orig"}
+        self.assertEqual(b.exact_reupload(self.files("aa", "r2"), "copy/orig", listed), "org/orig")
+
+    def test_different_weights_or_itself_is_not(self):
+        import build_catalog as b
+        listed = {b.formats.weight_sha_set(self.files("aa")): "org/orig"}
+        self.assertIsNone(b.exact_reupload(self.files("bb"), "copy/orig", listed))
+        self.assertIsNone(b.exact_reupload(self.files("aa"), "org/orig", listed))
+        self.assertIsNone(b.exact_reupload([{"lfs": False, "path": "README.md", "sha256": "x", "size": 9}], "copy/orig", listed))
+
+
 class Paging(unittest.TestCase):
     def run_job(self, size, mx, since=None, fail=0, state=None, tmp=None):
         tmp = tmp or tempfile.mkdtemp()

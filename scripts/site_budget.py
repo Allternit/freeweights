@@ -13,7 +13,7 @@ projection shows that cost plainly. The per-entry class uses the measured ratio 
 import json, math, os, sys
 
 FILE_LIMIT = 20000; BYTE_LIMIT = 25 * 1024 * 1024
-PAGE = 100; MAX_SSR_PAGES = 40; CARD_SHARD = 100; IDX_SHARD = 3000
+PAGE = 100; CARD_SHARD = 100; IDX_SHARD = 3000
 
 
 def classify(rel):
@@ -56,7 +56,7 @@ def main():
     for e in (1000, 10000, 50000):
         top = e * top_share
         lists = [top] + [top / secs] * secs + [top * 0.4 / colls] * colls
-        paged_html = sum(min(MAX_SSR_PAGES, max(1, math.ceil(x / PAGE))) for x in lists) - len(lists)   # page 1 of each list is fixed
+        paged_html = sum(max(1, math.ceil(x / PAGE)) for x in lists) - len(lists)   # page 1 of each list is fixed
         shards = math.ceil(top / CARD_SHARD) + math.ceil((e - top) / CARD_SHARD) + math.ceil(e / IDX_SHARD) + secs//2 + 1
         files_e = fixed + e * per_entry + paged_html + shards
         paged_mb = cls.get("paged", [0, 0])[1] / 1e6 * e / max(1, n)
@@ -66,7 +66,7 @@ def main():
     print("\nWith detail pages on R2 (B5): files = fixed + paged only")
     for e in (1000, 10000, 50000):
         top = e * top_share; lists = [top] + [top / secs] * secs + [top * 0.4 / colls] * colls
-        paged_html = sum(min(MAX_SSR_PAGES, max(1, math.ceil(x / PAGE))) for x in lists) - len(lists)
+        paged_html = sum(max(1, math.ceil(x / PAGE)) for x in lists) - len(lists)
         shards = math.ceil(top / CARD_SHARD) + math.ceil((e - top) / CARD_SHARD) + math.ceil(e / IDX_SHARD) + secs//2 + 1
         print(f"{e:>9,} {fixed + paged_html + shards:>9,.0f}")
     print("\nRESULT:", "FAIL (over a Pages limit)" if bad else "ok")

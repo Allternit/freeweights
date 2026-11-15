@@ -383,7 +383,7 @@ for (const r of ROWS) {
 // base > finetune > quant/adapter), then 30-day downloads. An entry with no tier yet is read as an
 // official repo when it is a base model whose publisher name matches its section (deepseek-ai in
 // deepseek); every other untiered entry ranks below the tiered ones.
-const PAGE = 100; const CARD_SHARD = 100; const IDX_SHARD = 3000; const MAX_SSR_PAGES = 40;
+const PAGE = 100; const CARD_SHARD = 100; const IDX_SHARD = 3000;
 const TIER_RANK = { T0: 0, T1: 1, T2: 2 }; const REL_RANK = { base: 0, finetune: 1, merge: 1, quant: 2, adapter: 2 };
 const normKey = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 function rkOf(r) {
@@ -685,11 +685,10 @@ function catalogPage({ sec, coll, pageNo = 1 }) {
   const label = sec ? sec.id : coll ? coll.name : 'alt.freeweights.*';
   const base = sec ? sectionUrl(sec.id) : coll ? `/collections/${coll.slug}/` : '/alt.freeweights/';
   const scope = sec ? 'sec:' + sec.family : coll ? 'coll:' + coll.slug : 'all';
-  const nPages = Math.min(MAX_SSR_PAGES, Math.max(1, Math.ceil(rows.length / PAGE)));
+  const nPages = Math.max(1, Math.ceil(rows.length / PAGE));
   const pgUrl = (n) => (n === 1 ? base : `${base}page/${n}/`);
   const pageRows = rows.slice((pageNo - 1) * PAGE, pageNo * PAGE);
-  const capped = rows.length > nPages * PAGE;
-  const pager = nPages > 1 || capped ? `<nav class="pager" aria-label="Pages" data-pager>${pageNo > 1 ? `<a class="btn sm" rel="prev" href="${pgUrl(pageNo - 1)}">&larr; Previous</a>` : '<span></span>'}<span class="mono small">Page ${pageNo} of ${nPages}${capped && pageNo === nPages ? `. Search for the other ${rows.length - nPages * PAGE} entries.` : ''}</span>${pageNo < nPages ? `<a class="btn sm" rel="next" href="${pgUrl(pageNo + 1)}">Next &rarr;</a>` : '<span></span>'}</nav>` : '';
+  const pager = nPages > 1 ? `<nav class="pager" aria-label="Pages" data-pager>${pageNo > 1 ? `<a class="btn sm" rel="prev" href="${pgUrl(pageNo - 1)}">&larr; Previous</a>` : '<span></span>'}<span class="mono small">Page ${pageNo} of ${nPages}</span>${pageNo < nPages ? `<a class="btn sm" rel="next" href="${pgUrl(pageNo + 1)}">Next &rarr;</a>` : '<span></span>'}</nav>` : '';
   const secDoc = sec && content(`sections/${sec.family}.md`);
   const intro = sec && sec.id === 'alt.freeweights.tools' ? `<p>${esc(sec.description)} ${plural(TOOL_ROWS.length, 'tool')}, newest release first. Freeweights links to the project and does not host tool binaries.</p>` : secDoc ? md(secDoc.body).html : sec ? `<p>${esc(sec.description)} ${rows.length ? `${plural(rows.length, 'model')}, best first.` : ''} Order is never for sale.</p>` : coll ? `<p>${esc(coll.blurb)}</p>` : '<p>Sections are families; modality is a filter. Official lab repos and base models come first, then by downloads. Order is never for sale.</p>';
   const tree = `<a href="/alt.freeweights/"${!sec && !coll ? ' aria-current="page"' : ''} class="mono"><span>alt.freeweights.*</span><span class="c">${ENTRIES().length}</span></a>` +
@@ -751,7 +750,7 @@ ${catalogJson(pageRows.slice(0, 20))}
 }
 function catalogPages(o) {
   const rows = o.sec ? (o.sec.id === 'alt.freeweights.tools' ? TOOL_ROWS : bySection(o.sec.id)) : o.coll ? o.coll.rows : ENTRIES();
-  const n = Math.min(MAX_SSR_PAGES, Math.max(1, Math.ceil(rows.length / PAGE)));
+  const n = Math.max(1, Math.ceil(rows.length / PAGE));
   for (let i = 1; i <= n; i++) page(catalogPage({ ...o, pageNo: i }));
 }
 catalogPages({});
@@ -1143,6 +1142,7 @@ chunk(VARIANT_ROWS, CARD_SHARD).forEach((rs, i) => { rs.forEach((r) => (cardPage
     const fv = fkeys.map((k) => { const a = c.fv[k].map((v) => code(k, v)); return a.length === 1 ? a[0] : a; });
     const e = [r.id, r.name === r.repo ? '' : r.name, fv, r.size || 0, r.params || 0, r.added ? String(r.added).slice(0, 10) : '', r.rk, r.dl || 0, cardPage[r.id], (r.isVar ? 1 : 0) | (r.sample ? 2 : 0), COLLECTIONS.map((x, i) => (r.coll || []).includes(x.slug) ? i : -1).filter((i) => i >= 0)];
     if (r.kind === 'tool') e.push([r.tool && toolKind(r.tool), c.lang, c.sum && c.sum.slice(0, 90)].filter(Boolean).join(' '), c.tag || '');
+    else e.push([c.lic, c.sum && c.sum.slice(0, 200)].filter(Boolean).join(' '));
     (byFam[r.fam] = byFam[r.fam] || []).push(e);
   }
   // Pack small sections into shared files (up to IDX_SHARD records) so the whole catalog loads in a few

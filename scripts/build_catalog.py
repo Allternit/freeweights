@@ -297,6 +297,24 @@ def inherit(rows):
             changed.append(r["id"])
     return changed
 
+def exact_reupload(files, repo, listed):
+    """The id of an already listed repo whose weight sha256 set equals this one's, else None. `listed` maps weight set -> id."""
+    ws = formats.weight_sha_set(files)
+    other = listed.get(ws) if ws else None
+    return other if other and other != repo else None
+
+def sync_manifests(rows, ids, key):
+    """An inherited row's redistribution is the manifest's too: rewrite and sign again only the manifests that differ."""
+    done = []
+    for r in rows:
+        out = os.path.join(MAN, fname(r["id"]) + ".json")
+        if r["id"] not in ids or not r.get("manifest_url") or not os.path.exists(out): continue
+        m = json.load(open(out, encoding="utf-8"))
+        if m["license"]["redistribution"] == r["redistribution"]: continue
+        m["license"]["redistribution"] = r["redistribution"]
+        write(out, m); mm.sign(out, r["id"], m["upstream"]["commit"], key); done.append(r["id"])
+    return done
+
 def migrate(r, c):
     """Bring a row written before kind/relation/audit up to the current schema (kind from the audit CSV, never the section)."""
     r = dict(r)
@@ -336,6 +354,12 @@ def main():
     prev = {}
     for old in glob.glob(os.path.join(CAT, "rows", "*.json")):
         d = json.load(open(old, encoding="utf-8")); prev[d["id"]] = d
+    reuploads, listed_w = [], {}
+    for pid, pr_ in prev.items():
+        mp = os.path.join(MAN, fname(pid) + ".json")
+        if pr_.get("manifest_url") and os.path.exists(mp):
+            ws = formats.weight_sha_set(json.load(open(mp, encoding="utf-8")).get("files"))
+            if ws: listed_w.setdefault(ws, pid)
     def net(fn, repo):
         if not a.offline: return fn()
         return offline_info(prev.get(repo))
@@ -360,8 +384,12 @@ def main():
             if batch_terms(c, res)[4]:  # cached as hosted, but its license is link only now: no manifest
                 mf = res["manifest"]["files"]
                 rows.append(batch_row(c, res, False, ts, sum(f["size"] for f in mf), res.get("formats") or formats_of([f["path"] for f in mf], False, False))); continue
-            out = os.path.join(MAN, fname(repo) + ".json"); sig = out + ".minisig"
             m = res["manifest"]
+            if repo not in prev:
+                twin = exact_reupload(m["files"], repo, listed_w)
+                if twin: reuploads.append((repo, twin)); print("exact re-upload of", twin, "(same weight sha256s), not listed:", repo); continue
+            listed_w.setdefault(formats.weight_sha_set(m["files"]), repo)
+            out = os.path.join(MAN, fname(repo) + ".json"); sig = out + ".minisig"
             if os.path.exists(out) and os.path.exists(sig):
                 have = json.load(open(out, encoding="utf-8"))
                 if have["upstream"]["commit"] == m["upstream"]["commit"] and have["section"] == m["section"]: m = have
@@ -455,6 +483,7 @@ def main():
         except Offline:
             if pr: rows.append(migrate(pr, c)); offline_skip.append(repo); print("offline: kept previous row", repo)
             else: print("offline: skipped, needs network", repo)
+    if reuploads: print(f"exact re-uploads left out: {len(reuploads)}")
     print(f"\nmanifests: {len(signed)} signed, {len(unchanged)} unchanged, {len(pending)} pending a signature (.pending/manifests/, not served)")
     if a.only: return
     # validate + write
@@ -462,7 +491,10 @@ def main():
         p = prev.get(r["id"]) or {}
         if p.get("added_at"): r["added_at"] = p["added_at"]
         if r.get("audit") and r is not p: r["audit"]["at"] = (p.get("audit") or {}).get("at") or r["added_at"]
-    for rid in inherit(rows): print("inherited a stricter base license:", rid)
+    inherited = inherit(rows)
+    for rid in inherited: print("inherited a stricter base license:", rid)
+    if not a.no_sign:
+        for rid in sync_manifests(rows, set(inherited), key): print("manifest redistribution follows the row, signed again:", rid)
     # a row with no manifest_url is link only: a manifest left from an earlier build is no longer served
     stale = [r["id"] for r in rows if not r.get("manifest_url") and os.path.exists(os.path.join(MAN, fname(r["id"]) + ".json"))]
     for rid in stale:

@@ -16,6 +16,12 @@ ACCEPTED = ("safetensors", "gguf", "mlx", "onnx", "coreml", "ctranslate2", "tfli
 PICKLE_EXT = (".bin", ".pt", ".pth", ".pkl", ".pickle", ".ckpt")
 MAX_CHECKS = 4                        # range reads per repo, at most
 
+WEIGHT_EXT = (".safetensors", ".gguf", ".onnx", ".tflite", ".bin", ".pt", ".pth", ".ckpt", ".ggml", ".npz", ".h5", ".msgpack", ".mlmodel", ".ot")
+
+def weight_sha_set(files):
+    """sha256 set of the weight files in a manifest's file list; READMEs, configs and tokenizers are ignored."""
+    return frozenset(f["sha256"] for f in files or [] if f.get("sha256") and f.get("lfs") and f["path"].lower().endswith(WEIGHT_EXT))
+
 def _low(p): return p.lower()
 
 def candidates(paths):

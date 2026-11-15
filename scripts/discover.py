@@ -28,6 +28,8 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WATCHLIST = os.path.join(ROOT, "catalog", "watchlist.json")
 WORK = os.path.join(ROOT, "work")
+TRENDING_STATE = os.path.join(ROOT, "catalog", "_audit", "trending-state.json")  # committed: the previous run must survive a new checkout
+TRENDING_TOP = 1000
 API = "https://huggingface.co/api"
 PAGE = 1000
 FIELDS = ["author", "createdAt", "lastModified", "downloads", "likes", "tags", "pipeline_tag",
@@ -240,6 +242,29 @@ def link_same_as(records):
             r["same_as_basis"] = "weights" if weight_hashes(r) else "commit"
         n += 1
     return n
+
+
+def trending_top(records, top=TRENDING_TOP):
+    """Keys in the top `top` of the trendingScore listing, best first. Records need that listing in sources."""
+    hot = [r for r in records.values() if (r.get("trending_score") or 0) > 0
+           and any(src.endswith("/trendingScore") for src in r.get("sources", []))]
+    hot.sort(key=lambda r: (-r["trending_score"], r["key"]))
+    return [r["key"] for r in hot[:top]]
+
+
+def apply_trending(records, state, today, top=TRENDING_TOP):
+    """Set trending_runs (0, 1 or 2) and trending_rank on every record; return the state to save.
+
+    A repo has trending_runs 2 only when it was in the top set on this run and on the run before.
+    State is {"date", "keys", "prev_keys"}; a second run on the same date replaces keys and keeps prev_keys."""
+    keys = trending_top(records, top)
+    prev = set(state.get("prev_keys") or []) if state.get("date") == today else set(state.get("keys") or [])
+    now_set, rank = set(keys), {k: i + 1 for i, k in enumerate(keys)}
+    for r in records.values():
+        k = r["key"]
+        r["trending_runs"] = (k in now_set) + (k in now_set and k in prev)
+        r["trending_rank"] = rank.get(k)
+    return {"date": today, "keys": keys, "prev_keys": sorted(prev)}
 
 
 def plan_jobs(kind, limit, orgs, org_limit, sorts, org_sort="createdAt"):
@@ -615,6 +640,12 @@ def main(argv=None):
         print("license texts read: %d" % n, file=sys.stderr)
     link_variants(recs)
     link_same_as(recs)
+    if "trendingScore" in a.sorts.split(","):
+        tstate = load_state(TRENDING_STATE) if os.path.exists(TRENDING_STATE) else {}
+        tstate = apply_trending(recs, tstate, today)
+        os.makedirs(os.path.dirname(TRENDING_STATE), exist_ok=True)
+        with open(TRENDING_STATE, "w") as f:
+            json.dump(tstate, f, separators=(",", ":"))
     with open(out_path, "w") as f:
         for r in sorted(recs.values(), key=lambda r: r["key"]):
             f.write(json.dumps(r, separators=(",", ":")) + "\n")
