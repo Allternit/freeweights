@@ -72,6 +72,10 @@ if (existsSync(join(odir, 'sources.json'))) {
     if (v && v.file && existsSync(join(odir, v.file))) logos[org] = v.file;
   }
 }
+// Allternit Cloud map (catalog/overlay/cloud.json, written by scripts/cloud_map.py): id -> cloud entry. A few entries.
+const cloud = {};
+const cloudPath = join(root, 'catalog', 'overlay', 'cloud.json');
+if (existsSync(cloudPath)) for (const [id, v] of Object.entries(JSON.parse(readFileSync(cloudPath, 'utf8')))) if (!id.startsWith('_')) cloud[id] = v;
 const SITE_ORIGIN = 'https://freeweights.allternit.com';
 catalog = { ...catalog, models: catalog.models.map((r) => {
   const f = logos[r.id.split('/')[0]];
@@ -89,6 +93,7 @@ writeFileSync(
     `export const CATALOG_JSON = ${JSON.stringify(catalogJson)};\n` +
     `export const CATALOG_ETAG = ${JSON.stringify(etag)};\n` +
     `export const LOGOS: Record<string, string> = ${JSON.stringify(logos)};\n` +
+    `export const CLOUD: Record<string, { model: string; provider: string | null; context_length: number | null; via_parent?: boolean }> = ${JSON.stringify(cloud)};\n` +
     `export const HOSTED: Record<string, string> = ${JSON.stringify(hosted)};\n`,
 );
 mkdirSync(join(root, 'worker', '.data'), { recursive: true });

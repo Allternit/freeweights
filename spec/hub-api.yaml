@@ -332,6 +332,17 @@ components:
         license: {type: string}
         badges: {type: array, items: {type: string, enum: [hosted, seeded, source]}}
         publisher_logo: {type: [string, 'null'], format: uri, description: "Absolute URL of the publisher's logo as the site serves it (https://freeweights.allternit.com/assets/orgs/<org>.png), or null when there is none."}
+        allternit:
+          description: Allternit Cloud model that serves this entry, or null. `via_parent` is true when a quantized build maps to the model it was made from.
+          oneOf:
+            - type: 'null'
+            - type: object
+              required: [model]
+              properties:
+                model: {type: string, description: Model id for `POST https://api.allternit.com/v1/chat/completions`.}
+                provider: {type: [string, 'null']}
+                context_length: {type: [integer, 'null']}
+                via_parent: {type: boolean}
     ModelDetail:
       allOf:
         - $ref: '#/components/schemas/ModelSummary'

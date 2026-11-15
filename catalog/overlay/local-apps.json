@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "purpose": "Local apps checked for a one-click link from a model page. A link is shown only for an app that accepts a custom endpoint or a local file through a documented URL. Checked 2026-11-15.",
+    "rule": "If unsure, leave it out. No entry here has a deep link yet, so the site shows none."
+  },
+  "_apps": [
+    {
+      "app": "Jan",
+      "accepts_custom_endpoint": true,
+      "deep_link": null,
+      "note": "Connects to any OpenAI-compatible endpoint, but only through its settings screen. No documented URL that pre-fills it.",
+      "source": "https://jan.ai/docs/desktop/remote-models/custom-endpoint"
+    },
+    {
+      "app": "LM Studio",
+      "accepts_custom_endpoint": false,
+      "deep_link": null,
+      "note": "Its documented download link pulls from the Hugging Face host only. Not checked against a custom endpoint, so left out.",
+      "source": "https://lmstudio.ai/docs/app/deeplinks"
+    },
+    {
+      "app": "Open WebUI",
+      "accepts_custom_endpoint": true,
+      "deep_link": null,
+      "note": "Accepts OpenAI-compatible endpoints in its admin settings. No pre-fill URL found.",
+      "source": "https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/starting-with-openai-compatible"
+    }
+  ]
+}

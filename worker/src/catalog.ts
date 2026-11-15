@@ -1,5 +1,5 @@
 import type { CatalogRow } from './types';
-import { CATALOG_JSON, HOSTED, LOGOS } from './data.generated';
+import { CATALOG_JSON, CLOUD, HOSTED, LOGOS } from './data.generated';
 
 export const CATALOG: { sections: unknown[]; models: CatalogRow[] } = JSON.parse(CATALOG_JSON);
 export const ROWS = new Map(CATALOG.models.map((r) => [r.id, r]));
@@ -18,5 +18,6 @@ export function summary(r: CatalogRow, downloads: number) {
     tags: [...r.tasks, ...r.formats, `license:${r.license_id}`, r.section],
     downloads, lastModified: r.added_at, section: r.section, license: r.license_id, badges: r.badges,
     publisher_logo: publisherLogo(r.id),
+    allternit: CLOUD[r.id] ?? null,
   };
 }

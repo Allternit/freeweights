@@ -5,6 +5,7 @@
   fw.py verify <dir> <model-id | manifest> [--pubkey ...] [--no-verify-sig]
   fw.py info <model-id | manifest-path> [--remote] [--width N]
   fw.py search <words...> [--remote] [--width N] [--limit N]
+  fw.py run <model-id> [--remote] [--overlay cloud.json]
 
 Verifies the minisign signature of the manifest (needs the minisign binary), then downloads
 every file from the sources in priority order with resume, and checks size and sha256.
@@ -343,6 +344,48 @@ def cmd_info(a):
     print("\n".join(render_card(card_data(r, a.remote), term_width(a.width), Paint(color_on()))))
     return 0
 
+CLOUD_API = "https://api.allternit.com/v1"
+CHAT_URL = "https://ai.allternit.com/?model="
+
+def cloud_for(row, remote, overlay=None):
+    """The Allternit Cloud entry for a catalog row (dict with `model`) or None. Reads an overlay file
+    (--overlay, or catalog/overlay/cloud.json in a checkout); when installed it asks the hub API."""
+    path = overlay or (None if remote or not LOCAL else os.path.join(ROOT, "catalog", "overlay", "cloud.json"))
+    if path:
+        try: return json.load(open(path, encoding="utf-8")).get(row["id"])
+        except (OSError, ValueError): return None
+    try: return api_get(f"/api/models/{row['id']}").get("allternit")
+    except (urllib.error.URLError, OSError, ValueError): return None
+
+def run_lines(row, cloud):
+    rid = row["id"]
+    if cloud:
+        via = " (the model this build was made from)" if cloud.get("via_parent") else ""
+        return [f"{rid} is on Allternit Cloud as {cloud['model']}{via}.", "",
+                f"curl {CLOUD_API}/chat/completions \\",
+                '  -H "Authorization: Bearer $ALLTERNIT_API_KEY" \\',
+                '  -H "Content-Type: application/json" \\',
+                f"""  -d '{{"model": "{cloud['model']}", "messages": [{{"role": "user", "content": "Hello"}}]}}'""", "",
+                f"Chat with it: {CHAT_URL}{urllib.parse.quote(cloud['model'])}"]
+    out = [f"{rid} is not on Allternit Cloud. To run it on this machine:", ""]
+    if "gguf" in (row.get("formats") or []):
+        out += [f"HF_ENDPOINT={ORIGIN} hf download {rid} --include '*Q4_K_M*' --local-dir ./{rid.split('/')[-1]}", f"llama-server -m ./{rid.split('/')[-1]}/<file>.gguf"]
+    elif "mlx" in (row.get("formats") or []):
+        out += [f"HF_ENDPOINT={ORIGIN} mlx_lm.generate --model {rid} --prompt 'Hello'"]
+    elif "text-generation" in (row.get("tasks") or []) or "image-text-to-text" in (row.get("tasks") or []):
+        out += [f"HF_ENDPOINT={ORIGIN} vllm serve {rid}"]
+    else:
+        out += [f"python3 fw.py get {rid} --dir ./{rid.split('/')[-1]}"]
+    return out
+
+def cmd_run(a):
+    a.remote = a.remote or not LOCAL
+    r = find_row(catalog_rows(a.remote), a.model)
+    if not r:
+        print(f"no model {a.model} in the catalog. Try: fw search {a.model.split('/')[-1]}", file=sys.stderr); return 1
+    print("\n".join(run_lines(r, cloud_for(r, a.remote, a.overlay))))
+    return 0
+
 TIER_RANK = {"T0": 0, "T1": 1, "T2": 2}
 REL_RANK = {"base": 0, "finetune": 1, "merge": 1, "quant": 2, "adapter": 2}
 def rank_of(r):
@@ -418,13 +461,15 @@ def main(argv=None):
     se = sub.add_parser("search", help="find models and print their cards"); se.add_argument("words", nargs="+")
     se.add_argument("--limit", type=int, default=20, help="most matches to list (default 20)"); se.add_argument("--cards", type=int, default=3, help="print full cards when there are at most this many matches (default 3)")
     se.add_argument("--local", action="store_true", help="search the catalog in this repository checkout instead of the live API")
+    ru = sub.add_parser("run", help="show how to run a model: Allternit Cloud call if it is there, else a local command"); ru.add_argument("model", help="model id (org/name) or its name")
+    ru.add_argument("--remote", action="store_true", help="read from the live hub API"); ru.add_argument("--overlay", help="read the Allternit Cloud map from this JSON file")
     for p in (i, se): p.add_argument("--remote", action="store_true", help=f"read from {ORIGIN} (the default when installed; search always uses the live API unless --local)"); p.add_argument("--width", type=int, help="card width in columns (at least 60; default: the terminal, up to 100)")
-    for p in (g, v, i, se):
+    for p in (g, v, i, se, ru):
         p.add_argument("--origin", help="catalog and manifest server (default: $FREEWEIGHTS_URL or https://freeweights.allternit.com)")
     g.add_argument("--mirror", action="append", default=[], help="a Hugging Face-compatible hub to try first for file bytes (repeatable; also $FREEWEIGHTS_MIRROR, comma-separated). Files must still match the signed manifest.")
     a = ap.parse_args(argv)
     if getattr(a, "origin", None): ORIGIN = a.origin.rstrip("/")
     MIRRORS.extend(u.rstrip("/") for u in getattr(a, "mirror", []) if u)
-    return {"get": cmd_get, "verify": cmd_verify, "info": cmd_info, "search": cmd_search}[a.cmd](a)
+    return {"get": cmd_get, "verify": cmd_verify, "info": cmd_info, "search": cmd_search, "run": cmd_run}[a.cmd](a)
 
 if __name__ == "__main__": sys.exit(main())
