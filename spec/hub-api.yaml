@@ -17,7 +17,10 @@ info:
     Public reads need no account and no token. Later stages add tokens with the `alt_` prefix
     (`Authorization: Bearer alt_...`). A request that carries a Hugging Face token (`hf_` prefix) in any
     header or query is refused with 401 `hf_token_rejected`. The token value is never logged, never
-    stored, and never forwarded; only the fact of the rejection is counted.
+    stored, and never forwarded; only the fact of the rejection is counted. An `alt_` key or a Clerk session
+    token sent on a public read is ignored: the read is served as anonymous and the credential is not checked
+    (only the write API in parts/write-api.yaml reads one). Public read routes answer GET and HEAD; any other
+    method answers 405 `method_not_allowed` with `Allow: GET, HEAD`.
 
     ## Source states
     Each manifest source (`hosted`, `seeded`, `source`) is in one state:

@@ -21,6 +21,10 @@ Operating Statement promise and accounts do not change it:
 A request without `Authorization` is never refused because it has no account. Anonymous rate limits stay
 as they are. Accounts are needed only to write, and to read private repos.
 
+A Clerk session token or `alt_` key sent on a public read is ignored: the read is served exactly as an
+anonymous one, the credential is not checked, and nothing ties the request to the caller. This is what lets
+`HF_TOKEN=alt_...` stay set for downloads. Only the routes in `parts/write-api.yaml` read a credential.
+
 ## 2. Credentials
 
 Every authenticated request sends `Authorization: Bearer <credential>`. The Worker never reads a cookie
@@ -53,7 +57,8 @@ The Worker verifies the session token itself with WebCrypto. No Clerk SDK runs i
    that send no `azp` are accepted on the other checks.
 7. `sub` is a Clerk user id (`user_...`). It is the account id everywhere in Freeweights.
 
-Failure answers 401 `auth_required` with no detail about which check failed.
+Failure answers 401 `auth_required` with no detail about which check failed. When the JWKS cannot be
+fetched and no keys are known, the answer is 503 `entitlement_unavailable` with `Retry-After`.
 
 A Clerk session can do everything its user can do: its scopes are `freeweights.read` and
 `freeweights.write`. Community writes that need no plan (like, comment, follow, discussion, collection)
@@ -72,7 +77,14 @@ scopes:
 
 A key with none of these scopes is refused on Freeweights write routes with 403 `insufficient_scope`.
 In `whoami-v2` a key shows as `auth.type: "access_token"` with role `write`, `read` or `fineGrained` (for
-`repo:` scopes), so Hugging Face clients read it the way they read their own tokens.
+`repo:` scopes), so Hugging Face clients read it the way they read their own tokens. A fine-grained key lists
+each repo as `{"entity": {"type": "repo", "name": "rp_..."}, "permissions": ["repo.content.read",
+"repo.write"]}`. A key with no Freeweights scope gets 403 `insufficient_scope` from `whoami-v2` too.
+
+`whoami-v2` always reads the claim (also for a session) for `isPro` (true when `plan` is not `free`), `orgs`
+(claim `orgs[]`: `slug` as the name, `admin` as `admin`, `member` as `contributor`) and the `allternit`
+block. `name` is the handle from the accounts database; a signed-in user with no handle yet gets 404
+`profile_not_found`.
 
 ## 3. Entitlement claim
 
@@ -102,12 +114,14 @@ credential, and for a key also checks that it is not revoked.
 | `iat`, `exp` | Issued at; expires 10 minutes later. |
 
 **Verify.** The Worker checks the signature with the Ed25519 public key in `spec/keys/entitlement-v1.pub`
-(bundled at build time), `kid`, `iss`, `aud`, `exp` (60 seconds skew), and for a session that `sub` equals
-the JWT's `sub`. A failed check is treated as no claim.
+(bundled at build time; the optional `ENTITLEMENT_PUBKEY` var can add a public key, as `[kid=]<PEM or base64
+SPKI>`), `kid`, `iss`, `aud`, every payload field's presence and type, `exp` (60 seconds skew), `cred`
+against the credential sent, and for a session that `sub` equals the JWT's `sub`. A claim that does not
+verify answers 503 `entitlement_unavailable`; a claim for another user answers 401 `auth_required`.
 
 **Cache.** Claims are cached by `sha256(bearer)`, in isolate memory and the Workers Cache API, until 30
-seconds before `exp`. The credential itself is never a cache key. A revoked key or a plan change can take
-up to 10 minutes to show.
+seconds before `exp` and never longer than 5 minutes. A cached claim is verified again when read. The
+credential itself is never a cache key. A revoked key or a plan change can take up to 5 minutes to show.
 
 **When it is fetched.** Always for `alt_` keys (it is how the key is checked). For a Clerk session, only
 when the route needs a plan, perk, storage limit or org seat: create repo, upload, private settings,
@@ -117,8 +131,11 @@ webhooks, private collections, endpoints, account page.
 `Retry-After`. Public reads and downloads never wait on cloud-api.
 
 **Keys.** A new signing key gets a new file (`entitlement-v2.pub`) and `kid`; the Worker accepts both
-during the change-over. Until the PEM block in `entitlement-v1.pub` is filled, no claim verifies and those
-routes answer 503 `accounts_not_configured`.
+during the change-over. Until the PEM block in `entitlement-v1.pub` is filled (and while `ENTITLEMENT_URL`
+is unset), no claim verifies and those routes answer 503 `accounts_not_configured`, as does every `alt_` key
+and `whoami-v2`. The credential is never sent to cloud-api while no key could verify the answer. Every write
+route also answers 503 `accounts_not_configured` while the accounts database (`ACC`) or the Clerk settings
+are missing. A Clerk session that fails its checks still gets 401 first.
 
 **Perks in replies.** When a plan does not include something, or its limit is used, the reply is 402
 `perk_required` or `perk_limit` with the perk name and a link to `/plans/`. The plans page reads its
@@ -258,10 +275,21 @@ owner (see `catalog/overlay/README.md`):
 Errors use the read API's body: `{"error": "<code>", "message": "..."}`. Codes: `auth_required`,
 `hf_token_rejected`, `insufficient_scope`, `forbidden`, `repo_not_found` (also for a private repo the
 caller cannot see), `repo_exists`, `handle_taken`, `namespace_reserved`, `perk_required`, `perk_limit`,
-`xet_not_supported`, `entitlement_unavailable`, `accounts_not_configured`, `rate_limited`.
+`xet_not_supported`, `entitlement_unavailable`, `accounts_not_configured`, `rate_limited`,
+`profile_not_found`, `method_not_allowed`, `not_implemented`.
 
-Signed-in API request limits per 5 minutes are a perk from the claim. Anonymous limits are unchanged.
-Every authenticated reply carries `Cache-Control: private, no-store`.
+Signed-in API request limits per 5 minutes are the claim perk `api_requests_5m` (a number), counted per
+account per Worker isolate once a claim is in hand. With no such perk Freeweights counts nothing itself. Over
+the limit: 429 `rate_limited` with `Retry-After`. Anonymous limits are unchanged.
+
+Every reply on an auth route (success or error) carries `Cache-Control: private, no-store`,
+`Content-Security-Policy: default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'`,
+`X-Content-Type-Options: nosniff` and `Referrer-Policy: no-referrer`.
+
+Methods: each route answers only its listed methods. Any other method answers 405 `method_not_allowed` with
+`Allow` (paths no route owns are read-only: `Allow: GET, HEAD`). A CORS preflight on an auth route lists that
+route's methods and allows the `Authorization` header. A write route that is specified but not built yet
+checks the credential and then answers 501 `not_implemented`.
 
 ## 11. Versions
 

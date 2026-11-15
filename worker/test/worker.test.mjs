@@ -88,7 +88,7 @@ test('non-LFS file has ETag but no X-Linked headers', async () => {
   assert.equal(r.headers.get('x-linked-size'), null);
 });
 
-test('hf_ token is rejected with 401 on every route; alt_ is reserved', async () => {
+test('hf_ token is rejected with 401 on every route; alt_ on a public read is ignored (served anonymous)', async () => {
   for (const p of [rpath(lfs), '/api/models', `/api/models/${id}`, '/api/catalog']) {
     const r = await get(p, { headers: { authorization: 'Bearer hf_x' } });
     assert.equal(r.status, 401, p);
@@ -98,8 +98,7 @@ test('hf_ token is rejected with 401 on every route; alt_ is reserved', async ()
   }
   assert.equal((await get('/api/models?token=hf_abc')).status, 401);
   const a = await get('/api/models', { headers: { authorization: 'Bearer alt_x' } });
-  assert.equal(a.status, 401);
-  assert.equal((await a.json()).error, 'alt_tokens_not_yet');
+  assert.equal(a.status, 200);
   assert.equal((await get('/api/models', { headers: { 'user-agent': 'hf_xet/1.0' } })).status, 200);
 });
 

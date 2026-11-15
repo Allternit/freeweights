@@ -15,3 +15,21 @@ export const gonePage = (id: string) => new Response(
   `<!doctype html><meta charset="utf-8"><title>451 Removed</title><h1>Removed after a takedown</h1><p>${id.replace(/[<>&"]/g, '')} was removed after a takedown. <a href="/operating-statement/#takedown-counter">Takedown counter</a>.</p>`,
   { status: 451, headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', ...CORS } });
 export const seg = (s: string) => decodeURIComponent(s);
+
+// ---- Authenticated replies (spec/accounts-v1.md section 10) ----------------------------------------------
+// Every reply on an auth route (success or error) is private and never stored, and carries a CSP that lets
+// the JSON load nothing and be framed by nobody. CORS stays "*": the credential is a bearer header, never a
+// cookie, so no credentialed CORS is needed.
+export const AUTH_HEADERS = {
+  'cache-control': 'private, no-store',
+  'content-security-policy': "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+  'x-content-type-options': 'nosniff',
+  'referrer-policy': 'no-referrer',
+};
+export const authJson = (body: unknown, status = 200, extra: HeadersInit = {}) => json(body, status, { ...AUTH_HEADERS, ...extra });
+export const authErr = (status: number, error: string, message: string, extra: HeadersInit = {}) => authJson({ error, message }, status, extra);
+/** CORS preflight for an auth route: its own methods, and Authorization allowed (bearer, no credentials mode). */
+export const authPreflight = (methods: Iterable<string>) => ({
+  'access-control-allow-origin': '*', 'access-control-allow-methods': [...methods, 'OPTIONS'].join(', '),
+  'access-control-allow-headers': 'Authorization, Content-Type, If-None-Match', 'access-control-max-age': '86400',
+});

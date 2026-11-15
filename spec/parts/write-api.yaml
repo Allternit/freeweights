@@ -18,8 +18,14 @@ info:
     ## Auth
     Every route here needs `Authorization: Bearer <credential>`, where the credential is a Clerk session
     JWT (the site, Desktop, web) or an Allternit key with the `alt_` prefix (tools, CLI, scripts). Tokens
-    with the `hf_` prefix are refused with 401 `hf_token_rejected`. Replies to authenticated requests carry
-    `Cache-Control: private, no-store`.
+    with the `hf_` prefix are refused with 401 `hf_token_rejected`. Every reply on these routes (success or
+    error) carries `Cache-Control: private, no-store`, `Content-Security-Policy: default-src 'none';
+    frame-ancestors 'none'; base-uri 'none'; form-action 'none'`, `X-Content-Type-Options: nosniff` and
+    `Referrer-Policy: no-referrer`.
+
+    Each route answers only the methods listed here; any other method answers 405 `method_not_allowed` with
+    `Allow`. A CORS preflight lists the route's methods and allows `Authorization`. A route whose handler is
+    not built yet checks the credential, then answers 501 `not_implemented`.
 
     Scopes: `freeweights.read` (read private repos the caller can see), `freeweights.write` (every write),
     `freeweights.repo:<repo id>` (writes to that one repo only). A Clerk session has read and write.
@@ -55,6 +61,9 @@ paths:
       tags: [identity]
       operationId: whoamiV2
       summary: Who the credential belongs to (Hugging Face shape, plus the Allternit plan).
+      description: |
+        Always reads the entitlement claim (also for a Clerk session), so it answers 503 while no claim can be
+        verified (`accounts_not_configured`) or cloud-api is down (`entitlement_unavailable`).
       responses:
         '200':
           description: The caller.
@@ -62,6 +71,9 @@ paths:
             application/json:
               schema: {$ref: '#/components/schemas/WhoAmI'}
         '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {description: Signed in but no Freeweights profile yet (profile_not_found). Pick a handle with POST /api/fw/v1/account., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '429': {description: Over the account's api_requests_5m perk (rate_limited). Retry-After says when the window resets., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
         '503': {$ref: '#/components/responses/NotConfigured'}
 
   # ------------------------------------------------------------------------------------------------- repos
@@ -898,7 +910,7 @@ paths:
       responses:
         '200': {description: Account., content: {application/json: {schema: {$ref: '#/components/schemas/Account'}}}}
         '401': {$ref: '#/components/responses/Unauthorized'}
-        '404': {description: Signed in but no Freeweights profile yet (pick a handle with POST)., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '404': {description: Signed in but no Freeweights profile yet (profile_not_found; pick a handle with POST)., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
     post:
       tags: [allternit]
       operationId: createAccount
@@ -1306,7 +1318,7 @@ components:
         name: {type: string, description: Handle.}
         fullname: {type: [string, 'null']}
         avatarUrl: {type: [string, 'null']}
-        isPro: {type: boolean, description: True on any paid plan. Hugging Face clients read this field.}
+        isPro: {type: boolean, description: True when the claim plan is not "free". Hugging Face clients read this field.}
         orgs:
           type: array
           items:

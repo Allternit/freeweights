@@ -28,6 +28,11 @@ export interface Env {
   CLERK_AZP?: string;
   /** cloud-api GET /api/v1/freeweights/entitlement. */
   ENTITLEMENT_URL?: string;
+  /**
+   * Optional extra entitlement public keys, on top of the ones bundled from spec/keys/entitlement-v<n>.pub:
+   * a comma list of "[kid=]<PEM or base64 SPKI>" (no kid = entitlement-v1). A public key, not a secret.
+   */
+  ENTITLEMENT_PUBKEY?: string;
   /** Secrets for presigning R2 S3-API URLs (R2 bindings cannot presign). Set with `wrangler secret put`. */
   R2_ACCOUNT_ID?: string;
   R2_ACCESS_KEY_ID?: string;
@@ -95,8 +100,11 @@ export interface EntitlementOrg {
   plan: string; perks: Record<string, number | boolean | string>; addon_bytes: { public: number; private: number }; seats?: number;
 }
 
-/** Who made the request, after D1 + D2. */
-export interface Caller { userId: string; claim: EntitlementClaim; cred: 'session' | 'key' }
+/**
+ * Who made the request. A Clerk session is known from its JWT alone (claim fetched only when a route needs a
+ * plan or perk); an alt_ key is known only through its claim, so `claim` is always set for a key.
+ */
+export interface Caller { userId: string; cred: 'session' | 'key'; scopes: FwScope[]; claim?: EntitlementClaim; bearer: string }
 
 // Rows of worker/migrations-accounts/0001_accounts.sql. Times are ISO 8601 UTC text; 0/1 are SQLite booleans.
 type Bit = 0 | 1;
