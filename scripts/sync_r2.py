@@ -19,7 +19,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WRANGLER = ["npx", "--yes", "wrangler@4.160.0"]
 API = "https://api.cloudflare.com/client/v4"
 TYPES = {".html": "text/html; charset=utf-8", ".json": "application/json", ".minisig": "text/plain; charset=utf-8"}
-MANAGED = re.compile(r"^(manifests/|alt\.freeweights\.)")
+# Keys the build owns. alt.freeweights.community/ is written by the Worker (community uploads), never by
+# the build, so --delete must never touch it.
+MANAGED = re.compile(r"^(manifests/|alt\.freeweights\.(?!community/))")
 RATE = 3.8  # requests per second, under 1,200 per 300 s
 
 
