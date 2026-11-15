@@ -31,10 +31,12 @@ import { build as operatingStatement } from './pages/operating-statement.mjs';
 import { build as docs } from './pages/docs.mjs';
 import { build as design } from './pages/design.mjs';
 import { build as studio } from './pages/studio.mjs';
+import { build as account } from './pages/account.mjs';
+import { build as plans } from './pages/plans.mjs';
 import { build as notFound } from './pages/notfound.mjs';
 
 // Page order matters: the code-block counter runs across pages in this order.
-for (const build of [home, catalog, sections, collections, models, tools, wanted, mirrors, ledger, operatingStatement, docs, design, studio, notFound]) build();
+for (const build of [home, catalog, sections, collections, models, tools, wanted, mirrors, ledger, operatingStatement, docs, design, studio, account, plans, notFound]) build();
 
 // ---------- write ----------
 resetOut();

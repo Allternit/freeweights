@@ -1,0 +1,53 @@
+/* Member card and plan tickets for /account/ and /plans/. Look ported from allternit-ai
+   src/components/billing/PlanCard.tsx (TIER table, MemberCard, PlanTicket). Art in /assets/plans (see NOTICE).
+   Page surfaces use the site tokens (white + neutral fill, graphite in dark). The cards keep their own art. */
+.fwp{--t-text:#1b1b1a;--t-sub:rgba(0,0,0,.55);--t-stamp:#1b1b1a;--t-stamp-ink:#fff}
+.fwp[data-tier=plus]{--t-text:#F2F1EC;--t-sub:rgba(255,255,255,.6);--t-stamp:#F2F1EC;--t-stamp-ink:#111}
+.fwp[data-tier=max]{--t-text:#2B1C07;--t-sub:rgba(43,28,7,.62);--t-stamp:#2B1C07;--t-stamp-ink:#E7C27A}
+.fwp[data-tier=ultra]{--t-text:#1E2024;--t-sub:rgba(30,32,36,.6);--t-stamp:#1E2024;--t-stamp-ink:#F1F1EF}
+.fwp-stamp{font-family:var(--font-allternit-mono);font-weight:700;letter-spacing:.14em;padding:2px 6px;border-radius:3px;background:var(--t-stamp);color:var(--t-stamp-ink);font-size:11px;line-height:1.4;white-space:nowrap}
+
+/* MemberCard: credit-card ratio, sizes scale with the card width through container units. */
+.fwp-card{container-type:inline-size;position:relative;overflow:hidden;width:320px;max-width:100%;aspect-ratio:1.586;border-radius:14px;background:center/cover no-repeat;color:var(--t-text);box-shadow:0 14px 30px rgba(0,0,0,.22)}
+.fwp-card[data-tier=free]{background-image:url(/assets/plans/card-free.jpg);border:1px solid rgba(0,0,0,.08)}
+.fwp-card[data-tier=plus]{background-image:url(/assets/plans/card-plus.jpg)}
+.fwp-card[data-tier=max]{background-image:url(/assets/plans/card-max.jpg)}
+.fwp-card[data-tier=ultra]{background-image:url(/assets/plans/card-ultra.jpg);box-shadow:0 18px 36px rgba(0,0,0,.28),inset 0 0 0 1px rgba(255,255,255,.5)}
+.fwp-card::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;background:linear-gradient(117deg,transparent 30%,rgba(255,255,255,.28) 51%,transparent 62%)}
+.fwp-card[data-tier=plus]::after{background:linear-gradient(117deg,transparent 30%,rgba(255,255,255,.07) 51%,transparent 62%)}
+.fwp-card-top{position:absolute;left:5.5%;top:8%;display:flex;align-items:center;gap:8px}
+.fwp-card-top img{height:calc(3.4cqw);min-height:9px;width:auto}
+.fwp-card-top .fwp-stamp{font-size:calc(2.9cqw);padding:2px 5px}
+.fwp-card-bot{position:absolute;left:5.5%;bottom:7%;font-family:var(--font-allternit-mono);max-width:70%}
+.fwp-card-bot small{display:block;font-size:calc(2.6cqw);letter-spacing:.16em;color:var(--t-sub);margin-top:6px}
+.fwp-card-bot small:first-child{margin-top:0}
+.fwp-card-bot b{display:block;font-weight:400;font-size:calc(4.4cqw);letter-spacing:.05em;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-transform:uppercase}
+.fwp-card.is-empty .fwp-card-bot b{text-transform:none;letter-spacing:.02em}
+
+/* PlanTicket: art on the left, dashed perforation, stub on the right with the two punched notches. */
+.fwp-tickets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;list-style:none;margin:0;padding:0}
+@media (max-width:760px){.fwp-tickets{grid-template-columns:1fr}}
+.fwp-ticket{position:relative;display:flex;min-height:150px;overflow:hidden;border-radius:16px;color:var(--t-text);background:no-repeat 0% 30%/160% auto;box-shadow:0 8px 18px rgba(0,0,0,.16)}
+.fwp-ticket[data-tier=free]{background-image:url(/assets/plans/card-free.jpg);border:1px solid var(--line)}
+.fwp-ticket[data-tier=plus]{background-image:url(/assets/plans/card-plus.jpg)}
+.fwp-ticket[data-tier=max]{background-image:url(/assets/plans/card-max.jpg)}
+.fwp-ticket[data-tier=ultra]{background-image:url(/assets/plans/card-ultra.jpg);box-shadow:0 10px 22px rgba(0,0,0,.22),inset 0 0 0 1px rgba(255,255,255,.55)}
+.fwp-ticket.is-current{outline:2px solid var(--accent);outline-offset:2px}
+.fwp-ticket-main{flex:1;min-width:0;padding:14px 16px}
+.fwp-ticket-main ul{list-style:none;margin:10px 0 0;padding:0;font-size:12.5px;line-height:1.6}
+.fwp-ticket-stub{position:relative;flex:none;width:128px;display:flex;align-items:flex-end;padding:8px;border-left:1.5px dashed rgba(0,0,0,.25)}
+.fwp-ticket[data-tier=plus] .fwp-ticket-stub{border-left-color:rgba(255,255,255,.3)}
+.fwp-ticket-stub .fwp-stamp,.fwp-ticket-stub a{display:block;width:100%;text-align:center;font-size:11.5px;padding:8px 6px;border-radius:8px;text-decoration:none;font-family:var(--font-allternit-sans);font-weight:600;letter-spacing:0;white-space:normal;line-height:1.3}
+.fwp-ticket i{position:absolute;right:119px;width:18px;height:18px;border-radius:50%;background:var(--bg)}
+.fwp-ticket i.n1{top:-9px}.fwp-ticket i.n2{bottom:-9px}
+@media (max-width:420px){.fwp-ticket-stub{width:104px}.fwp-ticket i{right:95px}}
+
+/* Account page layout */
+.fwa{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:28px;align-items:start;padding-top:8px;padding-bottom:40px}
+@media (max-width:760px){.fwa{grid-template-columns:1fr}}
+.fwa-side{display:grid;gap:10px;min-width:0}
+.fwa-panel{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--bg);display:grid;gap:10px;font-size:14px;color:var(--ink2)}
+.fwa-panel b{color:var(--ink)}
+.fwa-panel .btn{width:fit-content}
+.fwa-panel .btn.solid{background:var(--btn,#1A1A1A);color:var(--btnink,#fff);border-color:transparent}
+.fwa-note{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--fill);color:var(--ink2)}

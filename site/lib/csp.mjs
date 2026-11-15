@@ -15,16 +15,18 @@ export const THEME_SCRIPT_HASH = `'sha256-${createHash('sha256').update(THEME_SC
 //  img-src      'self' data: only. Publisher READMEs are rendered by site/lib/markdown.mjs, which turns every
 //               image into a text link, so no page loads a third-party image. If README images are ever
 //               inlined, this is the line to widen (to https:), and it should then be reviewed.
-//  connect-src  'self': the island fetches catalog JSON and the Worker API on this origin. Sign-in (Clerk) will
-//               add its own origins here when it ships.
+//  connect-src  'self' + clerk.allternit.com: islands fetch catalog JSON and the Worker API on this origin; the
+//               account island talks to Clerk's frontend API after a Sign in click or a __client_uat hint.
+//  script-src   also names https://clerk.allternit.com, the only host clerk-js loads from (pinned version, same
+//               rule: no other third-party script). Anonymous pages never request it.
 //  frame-ancestors 'none': no page is meant to be embedded. form-action 'self': the only form is the search form.
 export const CSP = [
   "default-src 'none'",
-  `script-src 'self' ${THEME_SCRIPT_HASH}`,
+  `script-src 'self' ${THEME_SCRIPT_HASH} https://clerk.allternit.com`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",
-  "connect-src 'self'",
+  "connect-src 'self' https://clerk.allternit.com",
   "manifest-src 'self'",
   "frame-src 'none'",
   "worker-src 'none'",
