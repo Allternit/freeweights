@@ -150,7 +150,11 @@ def connector(add):
     step("GET", path, note="read the Cloud Connector rules (PUT replaces the whole list)")
     keep = []
     if APPLY:
-        keep = [r for r in ok(*call("GET", path), "read connector rules").get("result") or [] if not str(r.get("description", "")).startswith(CC_MARK)]
+        s, d = call("GET", path)
+        # A zone with no connector rules yet answers 10003 (no entrypoint ruleset in that phase): treat it as an empty list.
+        none_yet = any(e.get("code") == 10003 for e in d.get("errors") or [])
+        current = [] if none_yet else (ok(s, d, "read connector rules").get("result") or [])
+        keep = [r for r in current if not str(r.get("description", "")).startswith(CC_MARK)]
     body = keep + ([CONNECTOR] if add else [])
     shown = (["<every existing rule whose description does not start with " + json.dumps(CC_MARK) + ", unchanged>"] if not APPLY else []) + body
     step("PUT", path, shown if not APPLY else body, note=("add" if add else "remove") + " the freeweights-cc rule, keep the others")
