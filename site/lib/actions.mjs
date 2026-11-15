@@ -16,7 +16,9 @@ export const COMPUTE_MAX_BYTES = 96 * 1e9;
 // src/lib/model-lab/studio-jobs.ts isTrainableBase (its trainers fine-tune causal language models from a
 // redistributable safetensors base, not a GGUF/MLX repo or a quant). Change both together.
 export function studioTrainable(r) {
-  if (!r || r.kind !== 'model' || !r.manifest_url || r.redistribution === 'no') return false;
+  // Site rows (lib/catalog.mjs ROWS) carry manifestUrl and kind may be null on older rows; catalog
+  // entries carry manifest_url. Accept both shapes.
+  if (!r || (r.kind && r.kind !== 'model') || !(r.manifestUrl || r.manifest_url) || r.redistribution === 'no') return false;
   const f = r.formats || [];
   if (!f.includes('safetensors') || f.some((x) => x === 'mlx' || x === 'gguf')) return false;
   if (r.relation && r.relation.type === 'quant') return false;
