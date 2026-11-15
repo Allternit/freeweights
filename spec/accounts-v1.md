@@ -419,8 +419,10 @@ Admin actions are written to `audit_log`.
   clean; one held file makes the repo `held`, and nothing of that commit is served. If a stream copy of a
   file near `file_max_bytes` fails on the free plan, the fallback is a server-side S3 CopyObject by the
   scanner into a separate community bucket (plan U8); the key scheme does not change.
-- **Downloads.** Resolve of a community file checks that the repo is `live` (else 404 `file_not_ready`, or
-  451 `removed_after_takedown`), then answers 302 to a presigned GET valid 5 minutes, with
+- **Downloads.** Resolve of a community file serves only the head commit and the commits before it (the head
+  moves only when a whole commit is clean, so a commit that is scanning or held is never reachable, and the
+  last clean head stays downloadable meanwhile). A file not in a served commit yet answers 404
+  `file_not_ready`; a takedown answers 451 `removed_after_takedown`. Otherwise it answers 302 to a presigned GET valid 5 minutes, with
   `Cache-Control: private, no-store`. A takedown therefore takes effect within 5 minutes. Community blob
   keys are never linked directly.
 

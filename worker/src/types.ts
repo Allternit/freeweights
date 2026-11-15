@@ -208,7 +208,11 @@ export interface ScanJob {
   id: string; repo_id: string; commit_oid: string | null; path: string; sha256: string; size: number;
   file_class: FileClass; attempt: number; url: string; url_expires_at: string; claimed_until: string;
 }
-export interface ScanSweep { expired_uploads: number; requeued: number; errored: number; held_deleted: number }
+export interface ScanSweep {
+  expired_uploads: number; requeued: number; errored: number; held_deleted: number;
+  /** Uploads of repos removed by their owner or by account deletion whose objects were deleted and bytes released. */
+  purged_uploads?: number;
+}
 export interface ScanClaimReply { jobs: ScanJob[]; sweep: ScanSweep }
 /** Body of POST /api/fw/v1/scan/{id}/result. */
 export interface ScanResultBody { attempt: number; status: 'clean' | 'held' | 'error'; findings: ScanFinding[]; scanner_version: string }
