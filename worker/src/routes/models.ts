@@ -1,0 +1,68 @@
+import type { Env, CatalogRow } from '../types';
+import { allTotals, takenDownIds, totalsFor } from '../db';
+import { CATALOG, summary } from '../catalog';
+import { json } from '../http';
+import { d1 } from '../pause';
+import type { Handler } from '../router';
+
+const TIER_RANK: Record<string, number> = { T0: 0, T1: 1, T2: 2 };
+const REL_RANK: Record<string, number> = { base: 0, finetune: 1, merge: 1, quant: 2, adapter: 2 };
+const normKey = (s: unknown) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+// Mirrors rkOf() in site/build.mjs. An untiered base model whose publisher matches its family
+// (deepseek-ai in deepseek) reads as an official repo.
+function rankOf(r: CatalogRow): number {
+  const rel = (r.relation as { type?: string } | undefined)?.type || 'base';
+  let t = TIER_RANK[String(r.tier || '')];
+  if (t === undefined) {
+    // the site's family is the section's last part (alt.freeweights.deepseek -> deepseek)
+    const o = normKey(r.id.split('/')[0]), f = normKey(r.section.replace(/^alt\.freeweights\./, ''));
+    t = rel === 'base' && f && o && (o.includes(f) || f.includes(o)) ? 0.5 : rel === 'base' ? 2.5 : 3;
+  }
+  return Math.round(t * 10) + (REL_RANK[rel] ?? 1);
+}
+
+async function search(env: Env, url: URL): Promise<Response> {
+  const q = url.searchParams;
+  const needle = (q.get('search') || '').toLowerCase();
+  const maxSize = q.get('max_size') ? Number(q.get('max_size')) : null;
+  const limit = Math.min(1000, Math.max(1, Number(q.get('limit')) || 50));
+  const offset = Math.max(0, Number(q.get('cursor')) || 0);
+  // With a search term the default order is rank (same rule as the site): official lab repos and
+  // base models first, then fine-tunes, then quants and adapters. Order is never for sale.
+  const sort = q.get('sort') || (needle ? 'rank' : 'added');
+  const removed = await takenDownIds(env); // taken down since this bundle was built
+  let rows = CATALOG.models.filter((r) => !removed.has(r.id) &&
+    (!needle || r.id.toLowerCase().includes(needle) || r.display_name.toLowerCase().includes(needle)) &&
+    (!q.get('section') || r.section === q.get('section')) &&
+    (!q.get('author') || r.id.split('/')[0].toLowerCase() === q.get('author')!.toLowerCase()) &&
+    (!q.get('pipeline_tag') || r.tasks.includes(q.get('pipeline_tag')!)) &&
+    // license ids are SPDX case in the catalog (Apache-2.0); a filter matches either case (apache-2.0)
+    (!q.get('license') || r.license_id.toLowerCase() === q.get('license')!.toLowerCase()) &&
+    (!q.get('library') || r.formats.includes(q.get('library')!)) &&
+    (!q.get('source') || r.badges.includes(q.get('source')!)) &&
+    // total_size 0 = unknown (gated link-only rows have no file listing), so a size filter never matches them.
+    (maxSize === null || (r.total_size > 0 && r.total_size <= maxSize)));
+  // Sorting by downloads needs every total; any other sort reads totals for the page only.
+  let totals = sort === 'downloads' ? await allTotals(env, 'model') : new Map<string, number>();
+  const dl = (r: CatalogRow) => totals.get(r.id) ?? 0;
+  const dl30 = (r: CatalogRow) => Number((r.signals as { downloads_30d?: number } | undefined)?.downloads_30d) || 0;
+  const cmp: Record<string, (a: CatalogRow, b: CatalogRow) => number> = {
+    added: (a, b) => b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
+    downloads: (a, b) => dl(b) - dl(a) || a.id.localeCompare(b.id),
+    size: (a, b) => a.total_size - b.total_size || a.id.localeCompare(b.id),
+    name: (a, b) => a.id.localeCompare(b.id),
+    // "Best first", the site's byRank: rank, then 30-day downloads at the source, then newest, then name
+    rank: (a, b) => rankOf(a) - rankOf(b) || dl30(b) - dl30(a) || b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
+  };
+  rows = rows.sort(cmp[sort] || cmp.added);
+  const page = rows.slice(offset, offset + limit);
+  if (sort !== 'downloads') totals = await totalsFor(env, 'model', page.map((r) => r.id));
+  const headers: Record<string, string> = {};
+  if (offset + limit < rows.length) {
+    const next = new URL(url); next.searchParams.set('cursor', String(offset + limit));
+    headers.Link = `<${next.pathname}${next.search}>; rel="next"`;
+  }
+  return json(page.map((r) => summary(r, dl(r))), 200, headers);
+}
+
+export const modelsRoute: Handler = ({ env, url }) => d1(() => search(env, url));
