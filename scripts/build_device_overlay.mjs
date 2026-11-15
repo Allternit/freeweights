@@ -13,8 +13,8 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const GB = 1e9;
 const ENGINE = { gguf: 'llama.cpp', mlx: 'mlx', onnx: 'webgpu' };
-const BIT = { phone: 1, laptop: 2, workstation: 4, browser: 8 };
-const CLASSES = Object.keys(BIT);
+const BIT = { phone: 1, laptop: 2, workstation: 4, browser: 8, phone_browser: 16 };
+const CLASSES = ['phone', 'laptop', 'workstation', 'browser'];
 // Recommended ids must never match these (case-insensitive, on the id). The catalog `abliterated` flag is not used.
 const MAINSTREAM = /^(Q2_K|Q3_K_M|Q4_0|Q4_K_S|Q4_K_M|Q5_K_M|Q6_K|Q8_0|IQ4_XS|F16|BF16|MXFP4)$/;
 // A recommended model needs a usable-quality quant (about 4-bit or better) that fits the class, not a 1-2 bit squeeze.
@@ -81,15 +81,20 @@ export function onnxQuants(files) {
 
 // Thresholds follow spec/on-device/fit.md ("Fits" = need * 5 <= budget * 4) and the iPhone 15 measurement
 // (S2): 2.24 GB without the increased-memory-limit entitlement, so phone = need <= 1.8 GB. The entitlement
-// (2.99 GB) is not approved for production, so "Tight fit" on phone is not counted. Browser: 2 GB tab cap,
-// "Fits" = need <= 1.6 GB. Phone browsers (0.45 GB) cannot fit any model under the 0.4 GB overhead rule.
+// (2.99 GB) is not approved for production, so "Tight fit" on phone is not counted.
+// need = size * 1.2 + 0.4 GB for native engines. For webgpu quants need = size * 1.2 with no overhead, because
+// the browser budget is a GPU buffer cap (C1 spec fix). Browser = webgpu need <= 1.6 GB (0.8 x the 2 GB tab
+// cap, size <= ~1.33 GB). 'phone_browser' (a fifth best_for value, bit 16 in the index mask) = webgpu need
+// <= 0.36 GB (0.8 x the 0.45 GB phone-browser budget, size <= 300 MB).
+export const needOf = (q) => q.ram_est ?? (q.engine === 'webgpu' || q.format === 'onnx' ? q.size * 1.2 : q.size * 1.2 + 0.4 * GB);
 export function bestFor(q) {
-  const need = q.ram_est ?? q.size * 1.2 + 0.4 * GB; // fit spec fallback
+  const need = needOf(q);
   const out = [];
   if (need <= 1.8 * GB) out.push('phone');
   if (need <= 12 * GB) out.push('laptop');
   else out.push('workstation');
   if (q.format === 'onnx' && need <= 1.6 * GB) out.push('browser');
+  if (q.format === 'onnx' && need <= 0.36 * GB) out.push('phone_browser');
   return out;
 }
 const mask = (b) => b.reduce((a, c) => a | BIT[c], 0);

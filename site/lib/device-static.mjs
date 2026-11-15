@@ -8,7 +8,7 @@ import { writeTo } from './assets.mjs';
 //   device/<org>/<repo>.json   {id, quants, device_formats, generated_at}   read by GET /api/models/:org/:name/device
 //   device/index.json          {generated_at, models:{id:[[engine,name,size,ram_est,mask]]}, recommended}
 // They are not bundled into the Worker (device.json is about 7 MB; the index about 230 KB gzip).
-const BIT = { phone: 1, laptop: 2, workstation: 4, browser: 8 };
+const BIT = { phone: 1, laptop: 2, workstation: 4, browser: 8, phone_browser: 16 };
 export function emitDeviceStatic() {
   const f = path.join(ROOT, 'catalog', 'overlay', 'device.json');
   if (!exists(f)) return 0;
