@@ -1,0 +1,1 @@
+GGUF version of https://huggingface.co/allenai/OLMo-2-1124-7B-Instruct

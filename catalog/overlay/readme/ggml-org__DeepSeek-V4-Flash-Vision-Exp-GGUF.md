@@ -1,0 +1,19 @@
+# DeepSeek-V4-Flash-Vision-Exp
+
+Run it in the Llama app: https://llama.app
+
+Or from the terminal:
+
+```bash
+llama serve -hf ggml-org/DeepSeek-V4-Flash-Vision-Exp-GGUF
+```
+
+### Source models
+- https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp
+
+### Notes
+- Includes a Q8_0 mmproj for the vision encoder.
+- Currently, the Q2 models do not use an imatrix calibration due to lack of one.
+
+> [!IMPORTANT]
+> This model is automatically converted using https://github.com/ggml-org/convert

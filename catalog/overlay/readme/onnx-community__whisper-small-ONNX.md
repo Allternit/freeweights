@@ -1,0 +1,1 @@
+https://huggingface.co/openai/whisper-small with ONNX weights to be compatible with Transformers.js.

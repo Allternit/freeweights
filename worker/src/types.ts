@@ -19,7 +19,7 @@ export interface ManifestSource {
   url?: string; magnet?: string; priority: number; last_checked: string | null;
 }
 export interface Manifest {
-  id: string; section: string; takedown?: boolean;
+  id: string; section: string; takedown?: boolean; created_at?: string;
   upstream: { host: string; repo: string; commit: string; url: string };
   license: { id: string };
   files: ManifestFile[]; sources: ManifestSource[];

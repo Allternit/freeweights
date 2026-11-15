@@ -1,0 +1,163 @@
+<div align="center">
+<img src="https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/resolve/main/media/readme/title.gif" width="100%" alt="SenseNova 6.8 Code2Video · Every frame is code. · 把脑洞，码成片">
+<h1>SenseNova 6.8 Code2Video</h1>
+<p>A code-driven video creation model, fine-tuned from Qwen3.8-27B</p>
+<img src="https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/resolve/main/media/readme/typing_en.svg" width="90%" alt="One model for math explainers / paper-craft films / isometric worlds / kinetic type / data stories / character animation / product promos">
+</div>
+
+<div align="center" style="line-height: 1;"><a href="https://github.com/OpenSenseNova/SenseNova-6.8-Code2Video"><img src="https://img.shields.io/badge/GitHub-skill_%C2%B7_prompts-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" style="display: inline-block; vertical-align: middle; margin: 2px;"></a> <img src="https://img.shields.io/badge/License-Apache_2.0-2563eb?style=flat-square" alt="License: Apache 2.0" style="display: inline-block; vertical-align: middle; margin: 2px;"> <img src="https://img.shields.io/badge/Params-27B-db2777?style=flat-square" alt="Params: 27B" style="display: inline-block; vertical-align: middle; margin: 2px;"> <img src="https://img.shields.io/badge/Context-512K-0891b2?style=flat-square" alt="Context: 512K" style="display: inline-block; vertical-align: middle; margin: 2px;"> <a href="https://discord.com/invite/BuTXPHmQub"><img src="https://img.shields.io/badge/Discord-OpenSenseNova-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord: OpenSenseNova" style="display: inline-block; vertical-align: middle; margin: 2px;"></a></div>
+
+<a href="https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/resolve/main/media/launch/sensenova_codevideo_launch_film.mp4"><img src="https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/resolve/main/media/launch/sensenova_codevideo_launch_film.gif" width="100%" alt="SenseNova 6.8 Code2Video launch film"></a>
+
+<p align="center"><a href="https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/resolve/main/media/launch/sensenova_codevideo_launch_film.mp4">Launch film (90 s, with sound)</a>, made by SenseNova 6.8 Code2Video</p>
+
+We present SenseNova 6.8 Code2Video, a lightweight open model for code-driven video creation. The model builds and renders videos by generating executable code, and currently focuses on short videos implemented entirely in code. Preliminary results show good visual composition and motion choreography in motion design, suggesting the potential of lightweight models for programmatic video creation.
+
+We chose code as the entry point to video creation partly for its ability to connect different models and creative tools. Beyond building and rendering visual content directly, code can call image generation, video generation, 3D modelling and video editing models and tools, chaining generation, editing and compositing into a complete creative workflow.
+
+We believe code can become a common language between ideas and finished work. Our long-term goal is a model that coordinates different generative models and creative tools through code to create digital content across media. SenseNova 6.8 Code2Video is a first step in this direction. Next, we will scale the model further and extend these abilities to editing, compositing, animation and 3D content creation.
+
+## Released Resources
+
+| Resource | Location | Description |
+|---|---|---|
+| **Model weights** | [This repository](https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/tree/main) | Weights, config and tokenizer |
+| **Example trajectories** | [`trajectories/`](https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/blob/main/trajectories/all.openai.jsonl) | Message and tool logs with figures |
+| **Production skill** | [GitHub](https://github.com/OpenSenseNova/SenseNova-6.8-Code2Video/tree/main/skills/code-video) | Workflow, craft guides, rendering tools |
+
+## Deployment
+
+
+### [LightLLM](https://github.com/ModelTC/LightLLM)
+
+```bash
+docker run --rm --gpus all --ipc=host -p 8000:8000 \
+  -v /path/to/SenseNova-6.8-Code2Video:/model \
+  ghcr.io/modeltc/lightllm:main \
+  python -m lightllm.server.api_server \
+    --model_dir /model \
+    --tp 4 \
+    --max_req_total_len 524288 \
+    --host 0.0.0.0 --port 8000
+```
+
+### [vLLM](https://github.com/vllm-project/vllm)
+
+```bash
+docker run --rm --gpus all --ipc=host -p 8000:8000 \
+  -e VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 \
+  -v /path/to/SenseNova-6.8-Code2Video:/model \
+  vllm/vllm-openai:latest \
+    --model /model \
+    --tensor-parallel-size 4 \
+    --max-model-len 524288 \
+    --reasoning-parser qwen3 \
+    --enable-auto-tool-choice \
+    --tool-call-parser qwen3_coder \
+    --host 0.0.0.0 --port 8000
+```
+
+### [SGLang](https://github.com/sgl-project/sglang)
+
+```bash
+docker run --rm --gpus all --ipc=host -p 8000:8000 \
+  -e SGLANG_ALLOW_OVERWRITE_LONGER_CONTEXT_LEN=1 \
+  -v /path/to/SenseNova-6.8-Code2Video:/model \
+  lmsysorg/sglang:latest \
+  python -m sglang.launch_server \
+    --model-path /model \
+    --tp-size 4 \
+    --context-length 524288 \
+    --reasoning-parser qwen3 \
+    --tool-call-parser qwen3_coder \
+    --host 0.0.0.0 --port 8000
+```
+
+## Recommended harness: Claude Code
+
+A complete film is a long-horizon task: the model writes and renders code, reviews the frames and revises, turn after turn. SenseNova 6.8 Code2Video sustains runs of **more than 10 hours and more than 2,000 turns**. Configure Claude Code for runs of that length:
+
+| Setting | Value | Configuration |
+|---|---|---|
+| Context window | 512K | `CLAUDE_CODE_MAX_CONTEXT_TOKENS=524288` |
+| Auto-compaction | 0.8 | `CLAUDE_AUTOCOMPACT_PCT_OVERRIDE=80` |
+| Max output | 64K | `CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000` |
+| Turns per run | 2,000+ | `--max-turns 2000` or more |
+| Time per run | 10 h+ | `timeout 10h` or more |
+
+Set the context window explicitly, since Claude Code otherwise treats an unknown model as a 200K model. With compaction at 0.8 and 64K of output, every request stays within the 512K server limit.
+
+Put the endpoint and these variables in a private settings file, and supply the credential through `ANTHROPIC_AUTH_TOKEN` or `ANTHROPIC_API_KEY`:
+
+```json
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://your-endpoint.example.com",
+    "ANTHROPIC_MODEL": "your-deployed-model-name",
+    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "524288",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "80",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "64000"
+  },
+  "model": "your-deployed-model-name"
+}
+```
+
+Avoid slow shell initialization: every Bash call starts a new shell.
+
+## Usage
+
+Producing a film has three stages:
+
+| Stage | Performed by | Output |
+|---|---|---|
+| 1. Prompt enhancement | A strong general model (we use Claude Opus 5.5) with the [Enhance prompt template](https://github.com/OpenSenseNova/SenseNova-6.8-Code2Video/blob/main/prompts/enhance_prompt.md) | `dense_prompt.md` |
+| 2. Production | SenseNova 6.8 Code2Video in Claude Code with the `code-video` skill | `out/final.mp4`, `SPEC.md`, `VERIFY.md` |
+| 3. Revision (optional) | The creator writes notes; SenseNova 6.8 Code2Video applies them in the same project | A new version of the film |
+
+Stage 2 with the settings above:
+
+```bash
+cd /path/to/task   # contains dense_prompt.md, assets/ and .claude/skills/code-video
+claude -p --settings /path/to/private-settings.json --model your-deployed-model-name \
+  --max-turns 2000 --permission-mode acceptEdits --allowedTools "Bash,Read,Write,Edit,Glob,Grep,Skill" \
+  'Use the project code-video skill. Read .claude/skills/code-video/SKILL.md and dense_prompt.md, then the relevant craft guides. Produce the complete video and deliver out/final.mp4, SPEC.md and VERIFY.md.'
+```
+
+The run executes shell commands without asking, so start it in an isolated working environment. For a revision, run `claude -p --continue` in the same folder with the creator's notes as the prompt.
+
+Copy the skill into `.claude/skills/code-video` unchanged and put task-specific requirements in the prompt. Setup steps and dependencies are in the [GitHub repository](https://github.com/OpenSenseNova/SenseNova-6.8-Code2Video).
+
+## Production trajectories
+
+[`trajectories/all.openai.jsonl`](https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/blob/main/trajectories/all.openai.jsonl) holds one film per line, in OpenAI messages format.
+
+Each line contains `messages`, `tools`, `images`, `enable_thinking` and `metadata`. The messages include reasoning, tool calls and results, retries and compaction summaries. Images appear as `<image>` placeholders; the ordered `images` array gives their paths relative to `trajectories/`, and all 357 figures are in [`trajectories/figures/`](https://huggingface.co/sensenova/SenseNova-6.8-Code2Video/tree/main/trajectories/figures). Private paths and hosts are anonymized, so recorded commands are not directly replayable.
+
+## License
+
+Released under the Apache License 2.0.
+
+## Contributors
+
+We thank the following contributors for their work on SenseNova 6.8 Code2Video:
+
+- [moolean0](https://huggingface.co/moolean0)
+- [sysssyssy](https://huggingface.co/sysssyssy)
+- [TTTTTony](https://huggingface.co/TTTTTony)
+- [craigwu](https://huggingface.co/craigwu)
+- [dder4567](https://huggingface.co/dder4567)
+- [M1M1cooL](https://huggingface.co/M1M1cooL)
+- [egugu](https://huggingface.co/egugu)
+- [luotto](https://huggingface.co/luotto)
+
+## Community Quantizations
+
+We thank the community researchers and contributors below for creating and sharing quantized versions of SenseNova 6.8 Code2Video. Their work makes the model more accessible across a wider range of hardware and helps the community experiment with code-driven video creation.
+
+| Contributor | Model repository |
+|---|---|
+| [OliviaRossi](https://huggingface.co/OliviaRossi) | [SenseNova-6.8-Code2Video-GSQ-RCO-GGUF](https://huggingface.co/OliviaRossi/SenseNova-6.8-Code2Video-GSQ-RCO-GGUF) |
+| [Abiray](https://huggingface.co/Abiray) | [SenseNova-6.8-Code2Video-MTP-GGUF](https://huggingface.co/Abiray/SenseNova-6.8-Code2Video-MTP-GGUF) |
+| [bartowski](https://huggingface.co/bartowski) | [sensenova_SenseNova-6.8-Code2Video-GGUF](https://huggingface.co/bartowski/sensenova_SenseNova-6.8-Code2Video-GGUF) |
+| [BennyDaBall](https://huggingface.co/BennyDaBall) | [SenseNova-6.8-Code2Video-NVFP4-GGUF](https://huggingface.co/BennyDaBall/SenseNova-6.8-Code2Video-NVFP4-GGUF) |
+| [Hayabala](https://huggingface.co/Hayabala) | [SenseNova-6.8-Code2Video-EXL3](https://huggingface.co/Hayabala/SenseNova-6.8-Code2Video-EXL3) |

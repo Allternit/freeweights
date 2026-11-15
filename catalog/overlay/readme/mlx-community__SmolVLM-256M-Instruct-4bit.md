@@ -1,0 +1,12 @@
+# mlx-community/SmolVLM-256M-Instruct-4bit
+This model was converted to MLX format from [`HuggingFaceTB/SmolVLM-256M-Instruct`]() using mlx-vlm version **0.1.11**.
+Refer to the [original model card](https://huggingface.co/HuggingFaceTB/SmolVLM-256M-Instruct) for more details on the model.
+## Use with mlx
+
+```bash
+pip install -U mlx-vlm
+```
+
+```bash
+python -m mlx_vlm.generate --model mlx-community/SmolVLM-256M-Instruct-4bit --max-tokens 100 --temp 0.0 --prompt "Describe this image." --image <path_to_image>
+```

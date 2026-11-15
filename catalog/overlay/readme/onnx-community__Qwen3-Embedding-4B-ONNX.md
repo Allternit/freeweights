@@ -1,0 +1,1 @@
+This is an ONNX version of Qwen/Qwen3-Embedding-4B. It was converted using the main_export function (from optimum.exporters.onnx).

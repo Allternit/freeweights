@@ -3,6 +3,7 @@ import { modelsRoute } from './models';
 import { catalogRoute } from './catalog';
 import { xetRoute } from './xet';
 import { treeRoute, modelInfoRoute } from './model-info';
+import { commitsRoute } from './commits';
 import { manifestsRoute } from './manifests';
 import { pagesRoute } from './pages';
 import { resolveRoute } from './resolve';
@@ -14,6 +15,7 @@ export const ROUTES: Route[] = [
   route(/^\/api\/catalog$/, catalogRoute),
   route(/^\/api\/models\/([^/]+)\/([^/]+)\/xet-read-token\/([^/]+)$/, xetRoute),
   route(/^\/api\/models\/([^/]+)\/([^/]+)\/tree\/([^/]+)$/, treeRoute),
+  route(/^\/api\/models\/([^/]+)\/([^/]+)\/commits\/([^/]+)$/, commitsRoute),
   route(/^\/api\/models\/([^/]+)\/([^/]+)(?:\/revision\/[^/]+)?$/, modelInfoRoute),
   route(/^\/manifests\/([^/]+)\/([^/]+?)\.json(\.minisig)?$/, manifestsRoute),
   route(/^\/(alt\.freeweights\.[a-z0-9.-]+)\/([^/]+)\/([^/]+)(\/(?:index\.html)?)?$/, pagesRoute),

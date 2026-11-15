@@ -140,6 +140,25 @@ paths:
         '401': {$ref: '#/components/responses/HfTokenRejected'}
         '404': {$ref: '#/components/responses/Error'}
         '451': {$ref: '#/components/responses/TakenDown'}
+  /api/models/{org}/{repo}/commits/{rev}:
+    get:
+      tags: [hub]
+      operationId: listCommits
+      summary: Pinned commit history
+      description: Hugging Face compatible commit list (`list_repo_commits`), newest first. Each entry is an upstream commit this catalog has pinned for the model, so most models return one. `rev` is `main` (the whole list) or one of the listed commit ids (that commit and older).
+      parameters:
+        - {$ref: '#/components/parameters/org'}
+        - {$ref: '#/components/parameters/repo'}
+        - {$ref: '#/components/parameters/rev'}
+      responses:
+        '200':
+          description: Commits, newest first. The `X-Repo-Commit` header carries the first id.
+          content:
+            application/json:
+              schema: {type: array, items: {$ref: '#/components/schemas/CommitEntry'}}
+        '401': {$ref: '#/components/responses/HfTokenRejected'}
+        '404': {$ref: '#/components/responses/Error'}
+        '451': {$ref: '#/components/responses/TakenDown'}
   /{org}/{repo}/resolve/{rev}/{path}:
     parameters:
       - {$ref: '#/components/parameters/org'}
@@ -358,6 +377,17 @@ components:
             manifest_url: {type: string, format: uri}
             upstream_url: {type: string, format: uri}
             catalog: {$ref: 'catalog-schema.json#/$defs/row'}
+    CommitEntry:
+      type: object
+      required: [id, authors, date, title, message, formatted_title, formatted_message]
+      properties:
+        id: {type: string, description: Upstream commit id pinned by the manifest.}
+        authors: {type: array, items: {type: object, properties: {user: {type: string}}}, description: Always empty; the publisher's authors are not copied.}
+        date: {type: string, format: date-time}
+        title: {type: string}
+        message: {type: string}
+        formatted_title: {type: string}
+        formatted_message: {type: string}
     TreeEntry:
       type: object
       required: [type, path, size, oid]

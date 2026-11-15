@@ -1,0 +1,1 @@
+This model has been converted for use with [mlx-audio](https://github.com/Blaizzy/mlx-audio). See [kyutai/pocket-tts](https://huggingface.co/kyutai/pocket-tts) for the original model card and license info.

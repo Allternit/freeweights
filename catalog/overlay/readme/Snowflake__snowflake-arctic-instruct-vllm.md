@@ -1,0 +1,1 @@
+This is a vLLM optimized version of [https://huggingface.co/Snowflake/snowflake-arctic-instruct](https://huggingface.co/Snowflake/snowflake-arctic-instruct).

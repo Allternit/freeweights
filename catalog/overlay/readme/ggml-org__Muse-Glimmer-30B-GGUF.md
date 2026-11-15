@@ -1,0 +1,20 @@
+# Muse-Glimmer-30B
+
+Run it in the Llama app: https://llama.app
+
+Or from the terminal:
+
+```bash
+llama serve -hf ggml-org/Muse-Glimmer-30B-GGUF
+```
+
+### Source models
+- https://huggingface.co/meta-models/Muse-Glimmer-30B
+- https://huggingface.co/meta-models/Muse-Glimmer-30B-assistant
+
+### Notes
+- Includes a Q8_0 mmproj for the vision encoder.
+- Includes a DFlash drafter sidecar (BF16, Q8_0 and Q4_0) for speculative decoding.
+
+> [!IMPORTANT]
+> This model is automatically converted using https://github.com/ggml-org/convert

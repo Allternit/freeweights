@@ -1,0 +1,12 @@
+# mlx-community/Qwen2.5-VL-7B-Instruct-8bit
+This model was converted to MLX format from [`Qwen/Qwen2.5-VL-7B-Instruct`]() using mlx-vlm version **0.1.11**.
+Refer to the [original model card](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) for more details on the model.
+## Use with mlx
+
+```bash
+pip install -U mlx-vlm
+```
+
+```bash
+python -m mlx_vlm.generate --model mlx-community/Qwen2.5-VL-7B-Instruct-8bit --max-tokens 100 --temp 0.0 --prompt "Describe this image." --image <path_to_image>
+```

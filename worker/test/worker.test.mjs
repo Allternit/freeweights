@@ -169,6 +169,19 @@ test('search and filters', async () => {
   assert.deepEqual(lower.map((m) => m.id), spdx.map((m) => m.id));
 });
 
+test('commits: Hugging Face shaped list from the pinned history', async () => {
+  const r = await get(`/api/models/${id}/commits/main`);
+  assert.equal(r.status, 200);
+  const list = await r.json();
+  assert.equal(list[0].id, man.upstream.commit);
+  assert.equal(r.headers.get('x-repo-commit'), man.upstream.commit);
+  for (const k of ['id', 'authors', 'date', 'title', 'message', 'formatted_title', 'formatted_message']) assert.ok(k in list[0], k);
+  assert.ok(Array.isArray(list[0].authors));
+  assert.equal((await get(`/api/models/${id}/commits/${man.upstream.commit}`)).status, 200);
+  assert.equal((await get(`/api/models/${id}/commits/deadbeef`)).status, 404);
+  assert.equal((await get('/api/models/nobody/nothing/commits/main')).status, 404);
+});
+
 test('detail, tree, catalog, manifest passthrough', async () => {
   const d = await (await get(`/api/models/${id}`)).json();
   assert.equal(d.id, id);
