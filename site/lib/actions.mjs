@@ -15,13 +15,16 @@ export const COMPUTE_MAX_BYTES = 96 * 1e9;
 const STUDIO_TASKS = /^(text-generation|image-text-to-text|text2text-generation|feature-extraction|sentence-similarity|text-classification|token-classification|fill-mask|question-answering|summarization|translation|conversational)$/;
 
 // Does the model fit a Compute box? Order: overlay device.quants (catalog/overlay/device.json, may be absent):
-// yes when any quant is best_for "workstation" or its ram_est (bytes) is within COMPUTE_MAX_BYTES.
+// yes when the memory any quant needs (ram_est, else the C1 rule in scripts/build_device_overlay.mjs needOf)
+// is within COMPUTE_MAX_BYTES. Not best_for "workstation": that means "needs more than 12 GB", no upper bound.
 // Without it, the smallest runnable weights from the manifest: the smallest .gguf file, else the sum of the
 // .safetensors files. catalog total_size is not used, it adds every quant in a repo.
+// Same as scripts/build_device_overlay.mjs needOf (spec/on-device/fit.md): webgpu/onnx size x 1.2, native + 0.4 GB.
+const quantNeed = (q) => Number(q.ram_est) > 0 ? Number(q.ram_est) : Number(q.size) > 0 ? (q.engine === 'webgpu' || q.format === 'onnx' ? q.size * 1.2 : q.size * 1.2 + 0.4e9) : 0;
 export function fitsCompute(r) {
   const q = r.overlay && r.overlay.device && r.overlay.device.quants;
   if (Array.isArray(q) && q.length) {
-    return q.some((x) => x && ((Array.isArray(x.best_for) && x.best_for.includes('workstation')) || (Number(x.ram_est) > 0 && Number(x.ram_est) <= COMPUTE_MAX_BYTES)));
+    return q.some((x) => { const n = x && quantNeed(x); return n > 0 && n <= COMPUTE_MAX_BYTES; });
   }
   const files = (r.manifest && r.manifest.files) || [];
   const gguf = files.filter((f) => /\.gguf$/i.test(f.path) && f.size > 0).map((f) => f.size);
