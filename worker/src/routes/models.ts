@@ -1,6 +1,7 @@
 import type { Env, CatalogRow } from '../types';
 import { allTotals, takenDownIds, totalsFor } from '../db';
 import { CATALOG, summary } from '../catalog';
+import { CLOUD, FACETS } from '../data.generated';
 import { json } from '../http';
 import { d1 } from '../pause';
 import type { Handler } from '../router';
@@ -21,10 +22,18 @@ function rankOf(r: CatalogRow): number {
   return Math.round(t * 10) + (REL_RANK[rel] ?? 1);
 }
 
+const lc = (a: string[]) => a.map((x) => x.toLowerCase());
+// Comma-separated values of one query parameter; a row matches when it has every listed value (apps, language) or any (library).
+const listOf = (v: string | null) => (v ? v.split(',').map((x) => x.trim().toLowerCase()).filter(Boolean) : []);
+// Parameter count: the catalog's own, else the one read from the model name (facets overlay).
+const paramsOf = (r: CatalogRow): number => Number(r.params) || FACETS[r.id]?.[4] || 0;
+
 async function search(env: Env, url: URL): Promise<Response> {
   const q = url.searchParams;
   const needle = (q.get('search') || '').toLowerCase();
   const maxSize = q.get('max_size') ? Number(q.get('max_size')) : null;
+  const libs = listOf(q.get('library')), langs = listOf(q.get('language')), apps = listOf(q.get('apps'));
+  const pMin = q.get('params_min') ? Number(q.get('params_min')) : null, pMax = q.get('params_max') ? Number(q.get('params_max')) : null;
   const limit = Math.min(1000, Math.max(1, Number(q.get('limit')) || 50));
   const offset = Math.max(0, Number(q.get('cursor')) || 0);
   // With a search term the default order is rank (same rule as the site): official lab repos and
@@ -38,7 +47,13 @@ async function search(env: Env, url: URL): Promise<Response> {
     (!q.get('pipeline_tag') || r.tasks.includes(q.get('pipeline_tag')!)) &&
     // license ids are SPDX case in the catalog (Apache-2.0); a filter matches either case (apache-2.0)
     (!q.get('license') || r.license_id.toLowerCase() === q.get('license')!.toLowerCase()) &&
-    (!q.get('library') || r.formats.includes(q.get('library')!)) &&
+    (!libs.length || libs.some((l) => r.formats.includes(l) || lc(FACETS[r.id]?.[0] || []).includes(l))) &&
+    (!langs.length || langs.every((l) => lc(FACETS[r.id]?.[1] || []).includes(l))) &&
+    (!apps.length || apps.every((a) => lc(FACETS[r.id]?.[2] || []).includes(a))) &&
+    // a row with no parameter count never matches a parameter bound
+    ((pMin === null && pMax === null) || (paramsOf(r) > 0 && (pMin === null || paramsOf(r) >= pMin) && (pMax === null || paramsOf(r) < pMax))) &&
+    // cloud=1: only models Allternit Cloud serves (the same map as the allternit field)
+    (!['1', 'true', 'yes'].includes((q.get('cloud') || '').toLowerCase()) || !!CLOUD[r.id]) &&
     (!q.get('source') || r.badges.includes(q.get('source')!)) &&
     // total_size 0 = unknown (gated link-only rows have no file listing), so a size filter never matches them.
     (maxSize === null || (r.total_size > 0 && r.total_size <= maxSize)));

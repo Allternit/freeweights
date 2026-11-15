@@ -95,7 +95,12 @@ paths:
         - {name: author, in: query, schema: {type: string}, description: Organization part of the id.}
         - {name: pipeline_tag, in: query, schema: {type: string}, description: Task tag.}
         - {name: license, in: query, schema: {type: string}, description: "License id, SPDX case in the catalog (Apache-2.0); matched without case."}
-        - {name: library, in: query, schema: {type: string, enum: [safetensors, gguf, mlx]}, description: Format.}
+        - {name: library, in: query, schema: {type: string}, description: "Format or library, case-insensitive, comma-separated for any of: safetensors, gguf, mlx, onnx, transformers, diffusers, sentence-transformers, peft, and so on."}
+        - {name: language, in: query, schema: {type: string}, description: "ISO 639-1 code (en, zh) or multilingual, comma-separated; a model must list every one."}
+        - {name: apps, in: query, schema: {type: string}, description: "Local app that can run the weights (llama.cpp, LM Studio, Ollama, Jan, MLX LM, vLLM, SGLang, whisper.cpp, Draw Things, DiffusionBee), comma-separated; a model must support every one. Derived from the formats and tasks, not tested per model."}
+        - {name: params_min, in: query, schema: {type: integer, minimum: 0}, description: "Parameters, lower bound inclusive. A model with no parameter count never matches a bound."}
+        - {name: params_max, in: query, schema: {type: integer, minimum: 0}, description: "Parameters, upper bound exclusive."}
+        - {name: cloud, in: query, schema: {type: boolean}, description: "true or 1: only models Allternit Cloud serves (those with an allternit field)."}
         - {name: source, in: query, schema: {type: string, enum: [hosted, seeded, source]}, description: Badge filter.}
         - {name: max_size, in: query, schema: {type: integer, minimum: 0}, description: Total size limit in bytes.}
         - {name: sort, in: query, schema: {type: string, enum: [added, downloads, size, name, rank], default: added}, description: "rank is the site's Best first order: official lab repos and base models first, then fine-tunes, then quantizations and adapters, then 30-day downloads at the source. With a search term and no sort, rank is the default; with neither, added."}

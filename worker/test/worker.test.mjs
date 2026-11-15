@@ -112,6 +112,26 @@ test('search ranks official lab base models above quants and fine-tunes', async 
   assert.ok(hit[0].id.startsWith('deepseek-ai/'), hit[0].id);
 });
 
+test('library, apps, language and params filters narrow /api/models', async () => {
+  const all = await (await get('/api/models?limit=1000')).json();
+  const gguf = await (await get('/api/models?library=GGUF&limit=1000')).json();
+  // a row matches by format or by the library name Hugging Face lists for it (facets overlay), so every gguf-format row is in
+  const fmt = all.filter((m) => m.tags.includes('gguf'));
+  assert.ok(gguf.length > 0 && fmt.every((m) => gguf.some((g) => g.id === m.id)));
+  assert.ok(gguf.length <= all.length || all.length === 1000);
+  const both = await (await get('/api/models?library=gguf,mlx&limit=1000')).json();
+  assert.ok(both.length >= gguf.length);
+  const ollama = await (await get('/api/models?apps=Ollama&limit=1000')).json();
+  assert.ok(ollama.every((m) => m.tags.includes('gguf')), 'Ollama rows are GGUF rows');
+  const big = await (await get('/api/models?params_min=70000000000&limit=1000')).json();
+  const small = await (await get('/api/models?params_max=1000000000&limit=1000')).json();
+  const bigIds = new Set(big.map((m) => m.id));
+  assert.ok(small.every((m) => !bigIds.has(m.id)), 'params_min and params_max ranges are disjoint');
+  const cloud = await (await get('/api/models?cloud=1&limit=1000')).json();
+  assert.ok(cloud.length > 0 && cloud.every((m) => m.allternit), 'cloud=1 keeps only rows with an allternit field');
+  assert.equal((await (await get('/api/models?language=zz&limit=1000')).json()).length, 0);
+});
+
 test('sort=rank with no search is best first (rank, then 30-day downloads); no sort keeps the added order', async () => {
   const cat = await (await get('/api/catalog')).json();
   const rows = new Map(cat.models.map((r) => [r.id, r]));

@@ -3,8 +3,9 @@ import { licName, plural } from './util.mjs';
 import { TOOLS, logoOf, minisig, modelUrl } from './catalog.mjs';
 import { FWC } from './faces.mjs';
 import { inline } from './markdown.mjs';
-import { HOW, SRC_LABEL, hostOf, isData, paramBucket, sizeBucket, summary, taskName } from './rows.mjs';
+import { HOW, SRC_LABEL, hostOf, isData, sizeBucket, summary, taskName } from './rows.mjs';
 import { TOP, byRank, bySection } from './paging.mjs';
+import { FACETS_OVERLAY, FACET_LABELS_OVERLAY, FACET_LABEL_FN, FACET_ORDER_OVERLAY } from './facets.mjs';
 
 
 export const FACETS = [
@@ -14,10 +15,10 @@ export const FACETS = [
   ['lc', 'License class', (r) => [r.licClass || 'unknown']],
   ['fmt', 'Format', (r) => (r.formats.length ? r.formats : ['other'])],
   ['sz', 'Size', (r) => [sizeBucket(r.size)]],
-  ['pb', 'Parameters', (r) => [paramBucket(r.params)]],
   ['how', 'Listing', (r) => [HOW(r)]],
   ['src', 'Bytes from', (r) => [SRC_LABEL(r)]],
   ['rt', 'Terms', (r) => [r.requiresTerms ? 'yes' : 'no']],
+  ...FACETS_OVERLAY,
 ];
 // Tools have no size, parameters, format, task or terms: those facets give them no value, so a
 // filter on one of them leaves tools out instead of mislabelling them.
@@ -27,11 +28,11 @@ export const FACET_LABEL = {
   kind: { model: 'Models', dataset: 'Datasets', tool: 'Tools' },
   lc: { copyleft: 'Copyleft (GPL)', permissive: 'Permissive', custom: 'Custom terms', 'non-commercial': 'Non-commercial (link only)', gated: 'Gated (link only)', territory: 'Territory-limited (link only)', unreviewed: 'License not reviewed (link only)', unknown: 'Not stated' },
   sz: { s: 'Under 4 GB', m: '4 to 40 GB', l: '40 to 200 GB', xl: '200 GB and up' },
-  pb: { p1: 'Under 3B', p2: '3B to 15B', p3: '15B to 70B', p4: '70B to 300B', p5: '300B and up', none: 'Not stated' },
+  ...FACET_LABELS_OVERLAY,
   rt: { yes: 'Requires accepting terms', no: 'No extra terms' },
 };
-export const FACET_ORDER = { kind: ['model', 'dataset', 'tool'], sz: ['s', 'm', 'l', 'xl'], pb: ['p1', 'p2', 'p3', 'p4', 'p5', 'none'], rt: ['no', 'yes'] };
-export const facetLabel = (k, v) => (FACET_LABEL[k] && FACET_LABEL[k][v]) || (k === 'task' ? taskName(v) : v);
+export const FACET_ORDER = { kind: ['model', 'dataset', 'tool'], sz: ['s', 'm', 'l', 'xl'], rt: ['no', 'yes'], ...FACET_ORDER_OVERLAY };
+export const facetLabel = (k, v) => (FACET_LABEL[k] && FACET_LABEL[k][v]) || (k === 'task' ? taskName(v) : FACET_LABEL_FN[k] ? FACET_LABEL_FN[k](v) : v);
 export function cardRow(r) {
   if (r.kind === 'tool') return toolCardRow(r);
   const m = r.manifest; const up = (m && m.upstream) || {};

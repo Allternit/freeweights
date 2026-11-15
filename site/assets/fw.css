@@ -324,6 +324,7 @@ html:not(.js) [data-needs-js]{display:none!important}
 .opt.zero{opacity:.45}
 .more-opts summary{font-size:12.5px;color:var(--ink2);padding:3px 6px;cursor:pointer;list-style:none}
 .more-opts summary::-webkit-details-marker{display:none}
+.more-opts[open]{max-height:260px;overflow-y:auto;overscroll-behavior:contain}
 .more-opts summary:hover{color:var(--ink)}
 .more-opts[open] summary{display:none}
 .cat-main{padding:16px 18px}

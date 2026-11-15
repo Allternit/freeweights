@@ -6,13 +6,14 @@ import { CHARTER_LABEL, CHARTER_PATH, content, md } from '../lib/markdown.mjs';
 import { summary } from '../lib/rows.mjs';
 import { COLLECTIONS, PAGE, VARIANT_ROWS, bySection } from '../lib/paging.mjs';
 import { ENTRIES, FACETS, FACET_ORDER, TOOL_ROWS, cards, catalogJson, facetLabel, facetVals, kindCount, secCount } from '../lib/cards.mjs';
+import { SINGLE_OK } from '../lib/facets.mjs';
 import { listRow, preview } from '../lib/list.mjs';
 import { goal, goalPct, page } from '../lib/registry.mjs';
 
 export function facetsHtml(rows, skipSec) {
   return FACETS.filter(([k]) => !(skipSec && k === 'sec')).map(([k, label, f]) => {
     const counts = {}; rows.forEach((r) => facetVals(k, f, r).forEach((v) => (counts[v] = (counts[v] || 0) + 1)));
-    let vals = Object.keys(counts); if (vals.length < 2 && k !== 'lc') return '';
+    let vals = Object.keys(counts); if (vals.length < (SINGLE_OK.has(k) ? 1 : 2) && k !== 'lc') return '';
     vals = FACET_ORDER[k] ? FACET_ORDER[k].filter((v) => counts[v]) : vals.sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
     const opt = (v) => `<label class="opt"><input type="checkbox" name="${k}" value="${esc(v)}"><span class="ol">${esc(facetLabel(k, v))}</span><span class="oc mono" data-oc>${counts[v]}</span></label>`;
     return `<fieldset class="facet" data-facet="${k}"><legend>${esc(label)}</legend>${vals.slice(0, 6).map(opt).join('')}${vals.length > 6 ? `<details class="more-opts"><summary>Show ${vals.length - 6} more</summary>${vals.slice(6).map(opt).join('')}</details>` : ''}</fieldset>`;

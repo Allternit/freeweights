@@ -84,6 +84,17 @@ catalog = { ...catalog, models: catalog.models.map((r) => {
 const catalogJson = JSON.stringify(catalog);
 const etag = '"' + createHash('sha256').update(catalogJson).digest('hex').slice(0, 32) + '"';
 
+// Filter facets for /api/models (library, language, apps, parameters): id -> [libraries, languages, apps, params_bin, params_est],
+// from catalog/overlay/facets.json when it exists. Empty arrays and '' stay as is; about 40 bytes per entry before gzip.
+const facets = {};
+const fpath = join(root, 'catalog', 'overlay', 'facets.json');
+if (existsSync(fpath)) {
+  for (const [id, v] of Object.entries(JSON.parse(readFileSync(fpath, 'utf8')))) {
+    if (id.startsWith('_')) continue;
+    facets[id] = [v.libraries || [], v.languages || [], v.apps || [], v.params_bin || '', v.params_est || 0];
+  }
+}
+
 // id -> pinned upstream commit, for every manifest (hosted entry). About 100 bytes per entry.
 const hosted = Object.fromEntries(Object.entries(manifests).map(([id, { json }]) => [id, JSON.parse(json).upstream.commit]));
 // Pin history (catalog/overlay/history.json, scripts/history_index.py): only models whose pin changed are
@@ -115,6 +126,7 @@ writeFileSync(
     `export const CLOUD: Record<string, { model: string; provider: string | null; context_length: number | null; via_parent?: boolean }> = ${JSON.stringify(cloud)};\n` +
     `export const HOSTED: Record<string, string> = ${JSON.stringify(hosted)};\n` +
     `export const HISTORY: Record<string, [string, string, number, number][]> = ${JSON.stringify(history)};\n` +
+    `export const FACETS: Record<string, [string[], string[], string[], string, number]> = ${JSON.stringify(facets)};\n` +
     `export const ENTITLEMENT_KEYS: Record<string, string> = ${JSON.stringify(entitlementKeys)};\n`,
 );
 mkdirSync(join(root, 'worker', '.data'), { recursive: true });
