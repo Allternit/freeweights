@@ -1,6 +1,6 @@
 {
   "about": "Repos held for a person before they are listed. Since the list-all rule, a license no person has read no longer holds a repo: it is listed as a link only with \"License not reviewed\". Only the content gate holds a repo here (real-person likeness, voice cloning, fraud or attack tools). Facts as declared at the source.",
-  "batch": "batch2",
+  "batch": "batch3",
   "clusters": [
     {
       "downloads_30d": 832169,
@@ -9,6 +9,33 @@
       ],
       "key": "content:Qwen/Qwen3-TTS-12Hz-0.6B-Base",
       "reason": "a person decides ('voice-clone': real-person likeness, voice clone, fraud or attack tool)",
+      "repos": 1
+    },
+    {
+      "downloads_30d": 311891,
+      "examples": [
+        "cybersectony/phishing-email-detection-distilbert_v2.4.1"
+      ],
+      "key": "content:cybersectony/phishing-email-detection-distilbert_v2.4.1",
+      "reason": "a person decides ('phishing': real-person likeness, voice clone, fraud or attack tool)",
+      "repos": 1
+    },
+    {
+      "downloads_30d": 25474,
+      "examples": [
+        "BreezeBlue/Breeze-TTS-2"
+      ],
+      "key": "content:BreezeBlue/Breeze-TTS-2",
+      "reason": "a person decides ('voice-clone': real-person likeness, voice clone, fraud or attack tool)",
+      "repos": 1
+    },
+    {
+      "downloads_30d": 25133,
+      "examples": [
+        "buildborderless/CommunityForensics-DeepfakeDet-ViT"
+      ],
+      "key": "content:buildborderless/CommunityForensics-DeepfakeDet-ViT",
+      "reason": "a person decides ('deepfake': real-person likeness, voice clone, fraud or attack tool)",
       "repos": 1
     },
     {
@@ -48,11 +75,38 @@
       "repos": 1
     },
     {
+      "downloads_30d": 770,
+      "examples": [
+        "aaronkantrowitz/ai-image-detection"
+      ],
+      "key": "content:aaronkantrowitz/ai-image-detection",
+      "reason": "a person decides ('deepfake': real-person likeness, voice clone, fraud or attack tool)",
+      "repos": 1
+    },
+    {
+      "downloads_30d": 770,
+      "examples": [
+        "capcheck/ai-image-detection"
+      ],
+      "key": "content:capcheck/ai-image-detection",
+      "reason": "a person decides ('deepfake': real-person likeness, voice clone, fraud or attack tool)",
+      "repos": 1
+    },
+    {
       "downloads_30d": 766,
       "examples": [
         "onnx-community/phishing-email-detection-distilbert_v2.4.1-ONNX"
       ],
       "key": "content:onnx-community/phishing-email-detection-distilbert_v2.4.1-ONNX",
+      "reason": "a person decides ('phishing': real-person likeness, voice clone, fraud or attack tool)",
+      "repos": 1
+    },
+    {
+      "downloads_30d": 491,
+      "examples": [
+        "Horizon-Labs/phishing-scam-detector-base"
+      ],
+      "key": "content:Horizon-Labs/phishing-scam-detector-base",
       "reason": "a person decides ('phishing': real-person likeness, voice clone, fraud or attack tool)",
       "repos": 1
     },
@@ -80,6 +134,15 @@
         "onnx-community/bert-small-phishing-ONNX"
       ],
       "key": "content:onnx-community/bert-small-phishing-ONNX",
+      "reason": "a person decides ('phishing': real-person likeness, voice clone, fraud or attack tool)",
+      "repos": 1
+    },
+    {
+      "downloads_30d": 20,
+      "examples": [
+        "David-Egea/bert-small-phishing"
+      ],
+      "key": "content:David-Egea/bert-small-phishing",
       "reason": "a person decides ('phishing': real-person likeness, voice clone, fraud or attack tool)",
       "repos": 1
     },
