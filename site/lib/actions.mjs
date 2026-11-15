@@ -45,6 +45,8 @@ export function fitsCompute(r) {
 
 export const chatUrl = (cloud) => `${AI_URL}?model=${encodeURIComponent(cloud.model)}`;
 export const studioUrl = (r) => `${AI_URL}?view=model-lab&model=${encodeURIComponent(r.id)}`;
+// "Fine-tune in Studio": the app's Train form with this model as the base (allternit-ai #1081).
+export const trainUrl = (r) => `${studioUrl(r)}&tab=train`;
 
 // Which actions apply to row r, in display order.
 export function actionsFor(r) {
@@ -53,7 +55,7 @@ export function actionsFor(r) {
   return {
     cloud: hosted && cloud ? cloud : null,
     chat: hosted && cloud ? chatUrl(cloud) : null,
-    studio: hosted && studioTrainable(r) ? studioUrl(r) : null,
+    studio: hosted && studioTrainable(r) ? trainUrl(r) : null,
     home: hosted && fitsCompute(r) ? COMPUTE_URL : null,
     help: SERVICES_URL,
   };
