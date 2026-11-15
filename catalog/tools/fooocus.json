@@ -1,0 +1,61 @@
+{
+  "id": "fooocus",
+  "name": "Fooocus",
+  "repo": "lllyasviel/Fooocus",
+  "category": "apps",
+  "license": "GPL-3.0",
+  "install": [
+    "git clone https://github.com/lllyasviel/Fooocus.git"
+  ],
+  "install_check": [
+    "git clone https://github.com/lllyasviel/Fooocus.git"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-to-image",
+      "image-to-image"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Image generator with a simple prompt-first interface for Stable Diffusion XL models.",
+  "github": {
+    "repo": "lllyasviel/Fooocus",
+    "description": "Focus on prompting and generating",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "GPL-3.0",
+    "stars": 53928,
+    "pushed_at": "2025-12-01",
+    "archived": false,
+    "branch_commit": "ae05379cc97bc4361ec8b4ec90193dab21be763f",
+    "release": {
+      "tag": "v2.5.5",
+      "date": "2024-08-12",
+      "url": "https://github.com/lllyasviel/Fooocus/releases/tag/v2.5.5",
+      "commit": "8da1d3ff68942e2d976675939fe72c95746e366e"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.5.5",
+    "commit": "8da1d3ff68942e2d976675939fe72c95746e366e",
+    "date": "2024-08-12"
+  }
+}

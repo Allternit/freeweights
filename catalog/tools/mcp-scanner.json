@@ -1,0 +1,63 @@
+{
+  "id": "mcp-scanner",
+  "name": "MCP Scanner",
+  "repo": "cisco-ai-defense/mcp-scanner",
+  "category": "safety",
+  "license": "Apache-2.0",
+  "install": [
+    "uv tool install --python 3.13 cisco-ai-mcp-scanner"
+  ],
+  "install_check": [
+    "uv tool install --python 3.13 cisco-ai-mcp-scanner"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Scans MCP servers and tools for malicious or unsafe behavior.",
+  "github": {
+    "repo": "cisco-ai-defense/mcp-scanner",
+    "description": "Scan MCP servers for potential threats & security findings.",
+    "homepage": "https://blogs.cisco.com/ai/securing-the-ai-agent-supply-chain-with-ciscos-open-source-mcp-scanner",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "ai",
+      "mcp",
+      "security"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 1118,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "9ff8fc84b792aae315a838cf4e37b40ef46a0293",
+    "release": {
+      "tag": "4.8.7",
+      "date": "2026-10-20",
+      "url": "https://github.com/cisco-ai-defense/mcp-scanner/releases/tag/4.8.7",
+      "commit": "b27af3b0e66ea8d5ab9c294b47aba137f4c30752"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "4.8.7",
+    "commit": "b27af3b0e66ea8d5ab9c294b47aba137f4c30752",
+    "date": "2026-10-20"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "gradio",
+  "name": "Gradio",
+  "repo": "gradio-app/gradio",
+  "category": "apps",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install --upgrade gradio"
+  ],
+  "install_check": [
+    "pip install --upgrade gradio"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Python library for building web demos and UIs around a model in a few lines.",
+  "github": {
+    "repo": "gradio-app/gradio",
+    "description": "Build and share delightful machine learning apps, all in Python. 🌟 Star to support our work!",
+    "homepage": "http://www.gradio.app",
+    "language": "Python",
+    "topics": [
+      "data-analysis",
+      "data-science",
+      "data-visualization",
+      "deep-learning",
+      "deploy",
+      "gradio",
+      "gradio-interface",
+      "interface",
+      "machine-learning",
+      "models",
+      "python",
+      "python-notebook",
+      "ui",
+      "ui-components"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 44059,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "ec06278ed72e5eb73494a9d171ca851d553dc82a",
+    "release": {
+      "tag": "gradio@6.32.0",
+      "date": "2026-11-12",
+      "url": "https://github.com/gradio-app/gradio/releases/tag/gradio%406.32.0",
+      "commit": "99cb78fd277e2992da5c7b3eb459ddd222fa7752"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "gradio@6.32.0",
+    "commit": "99cb78fd277e2992da5c7b3eb459ddd222fa7752",
+    "date": "2026-11-12"
+  }
+}

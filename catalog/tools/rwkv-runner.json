@@ -1,0 +1,66 @@
+{
+  "id": "rwkv-runner",
+  "name": "RWKV Runner",
+  "repo": "josStorer/RWKV-Runner",
+  "category": "apps",
+  "license": "MIT",
+  "install": [
+    "git clone https://github.com/josStorer/RWKV-Runner"
+  ],
+  "install_check": [
+    "git clone https://github.com/josStorer/RWKV-Runner"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "One-click app to run RWKV models, with an OpenAI-compatible API.",
+  "github": {
+    "repo": "josStorer/RWKV-Runner",
+    "description": "A RWKV management and startup tool, full automation, only 8MB. And provides an interface compatible with the OpenAI API. RWKV is a large language model that is fully open source and available for commercial use.",
+    "homepage": "https://www.rwkv.com",
+    "language": "TypeScript",
+    "topics": [
+      "api",
+      "api-client",
+      "chatgpt",
+      "llm",
+      "rwkv",
+      "tool",
+      "wails"
+    ],
+    "default_branch": "master",
+    "license": "MIT",
+    "stars": 6502,
+    "pushed_at": "2026-11-02",
+    "archived": false,
+    "branch_commit": "09192321a7f2d35abd84d04220ff71f44c993a66",
+    "release": {
+      "tag": "v1.9.12",
+      "date": "2026-07-07",
+      "url": "https://github.com/josStorer/RWKV-Runner/releases/tag/v1.9.12",
+      "commit": "2c907fdc060b4602ad67be4c69fb9ce18220101d"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.9.12",
+    "commit": "2c907fdc060b4602ad67be4c69fb9ce18220101d",
+    "date": "2026-07-07"
+  }
+}

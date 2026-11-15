@@ -1,0 +1,75 @@
+{
+  "id": "invokeai",
+  "name": "InvokeAI",
+  "repo": "invoke-ai/InvokeAI",
+  "category": "apps",
+  "license": "Apache-2.0",
+  "install": [
+    "Download the Launcher from https://github.com/invoke-ai/launcher/releases/latest"
+  ],
+  "install_check": [
+    "https://github.com/invoke-ai/launcher/releases/latest"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-to-image",
+      "image-to-image"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Creative engine for Stable Diffusion models with a node editor and canvas.",
+  "github": {
+    "repo": "invoke-ai/InvokeAI",
+    "description": "Invoke is a leading creative engine that uses image and video generation models to empower professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies. The solution offers an industry-leading application interface, and serves as the foundation for multiple commercial products.",
+    "homepage": "https://invoke-ai.github.io/InvokeAI/",
+    "language": "TypeScript",
+    "topics": [
+      "ai-art",
+      "artificial-intelligence",
+      "generative-art",
+      "image-generation",
+      "img2img",
+      "inpainting",
+      "latent-diffusion",
+      "linux",
+      "macos",
+      "outpainting",
+      "stable-diffusion",
+      "txt2img",
+      "windows"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 29094,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "9264acf9e542d51a21467013029b755686dee375",
+    "release": {
+      "tag": "v6.14.4",
+      "date": "2026-11-03",
+      "url": "https://github.com/invoke-ai/InvokeAI/releases/tag/v6.14.4",
+      "commit": "95785064801f7eaf2c3cdb3afa9710c0328a38ef"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v6.14.4",
+    "commit": "95785064801f7eaf2c3cdb3afa9710c0328a38ef",
+    "date": "2026-11-03"
+  }
+}

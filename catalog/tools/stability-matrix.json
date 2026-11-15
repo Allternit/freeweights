@@ -1,0 +1,71 @@
+{
+  "id": "stability-matrix",
+  "name": "Stability Matrix",
+  "repo": "LykosAI/StabilityMatrix",
+  "category": "apps",
+  "license": "AGPL-3.0",
+  "install": [
+    "Download the release from https://github.com/LykosAI/StabilityMatrix/releases/latest"
+  ],
+  "install_check": [
+    "https://github.com/LykosAI/StabilityMatrix/releases/latest"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-to-image",
+      "image-to-image"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Package manager and launcher for image generation UIs such as ComfyUI, with a shared model folder.",
+  "github": {
+    "repo": "LykosAI/StabilityMatrix",
+    "description": "Multi-Platform Package Manager for Stable Diffusion",
+    "homepage": "https://lykos.ai",
+    "language": "C#",
+    "topics": [
+      "ai",
+      "automatic1111",
+      "avalonia",
+      "comfyui",
+      "dotnet",
+      "python",
+      "sd-webui",
+      "stable-diffusion",
+      "text2image"
+    ],
+    "default_branch": "main",
+    "license": "AGPL-3.0",
+    "stars": 9029,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "54c66e2067e41234de711f63208369ea33fcf6b3",
+    "release": {
+      "tag": "v2.16.5",
+      "date": "2026-10-21",
+      "url": "https://github.com/LykosAI/StabilityMatrix/releases/tag/v2.16.5",
+      "commit": "663f5257e69303101d39019f4258b8dc23b1e1c3"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.16.5",
+    "commit": "663f5257e69303101d39019f4258b8dc23b1e1c3",
+    "date": "2026-10-21"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "detoxify",
+  "name": "Detoxify",
+  "repo": "unitaryai/detoxify",
+  "category": "safety",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install detoxify"
+  ],
+  "install_check": [
+    "pip install detoxify"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "scans",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Classifies text for toxicity with small open models.",
+  "github": {
+    "repo": "unitaryai/detoxify",
+    "description": "Trained models & code to predict toxic comments on all 3 Jigsaw Toxic Comment Challenges. Built using ⚡ Pytorch Lightning and 🤗 Transformers. ",
+    "homepage": "https://www.unitary.ai/",
+    "language": "Python",
+    "topics": [
+      "bert",
+      "bert-model",
+      "hate-speech",
+      "hate-speech-detection",
+      "hatespeech",
+      "huggingface",
+      "huggingface-transformers",
+      "kaggle-competition",
+      "nlp",
+      "pytorch-lightning",
+      "sentence-classification",
+      "toxic-comment-classification",
+      "toxic-comments",
+      "toxicity",
+      "toxicity-classification"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 1318,
+    "pushed_at": "2026-11-11",
+    "archived": false,
+    "branch_commit": "7ef6576274b91bfc6e06a41f69ad41cc04eaccf1",
+    "release": {
+      "tag": "v0.5.4",
+      "date": "2026-10-14",
+      "url": "https://github.com/unitaryai/detoxify/releases/tag/v0.5.4",
+      "commit": "144f244397b0c153c3008b7dafd307eb164dbf1f"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.5.4",
+    "commit": "144f244397b0c153c3008b7dafd307eb164dbf1f",
+    "date": "2026-10-14"
+  }
+}
