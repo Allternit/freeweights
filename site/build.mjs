@@ -18,6 +18,7 @@ import { pages } from './lib/registry.mjs';
 import { resetOut, emitPages, copyStatic, write } from './lib/assets.mjs';
 import { headersFile } from './lib/csp.mjs';
 import { writeSearchData } from './lib/search.mjs';
+import { emitDeviceStatic } from './lib/device-static.mjs';
 import { build as home } from './pages/home.mjs';
 import { build as catalog } from './pages/catalog.mjs';
 import { build as sections } from './pages/sections.mjs';
@@ -42,6 +43,7 @@ for (const build of [home, catalog, sections, collections, models, tools, wanted
 resetOut();
 const { detailBytes, detailCount, detailMax } = emitPages(pages);
 copyStatic();
+console.log(`Device overlay: ${emitDeviceStatic()} models -> device/ in the R2 tree`);
 writeSearchData(write);
 write('_headers', headersFile()); // CSP + nosniff + referrer-policy for every Pages response (the Worker adds the same to HTML it serves)
 write('_redirects', [...['/alt.freeweights', ...SECTIONS.map((s) => s.id)].map((s) => `/${s} /${s}/ 301`), ...OLD_CHARTER.flatMap((o) => [`${o.slice(0, -1)} ${CHARTER_PATH} 301`, `${o} ${CHARTER_PATH} 301`])].join('\n') + '\n');

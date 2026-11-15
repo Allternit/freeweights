@@ -34,6 +34,9 @@ const [gid, gmf] = Object.entries(FILES).find(([k, v]) => k !== id && JSON.parse
 const gman = JSON.parse(readFileSync(gmf.file, 'utf8'));
 const GONE_PAGE = `${gman.section}/${gid}/index.html`;
 
+const DEVICE = { id, quants: [{ name: 'Q4_K_M', format: 'gguf', engine: 'llama.cpp', files: ['m-Q4_K_M.gguf'], size: 2707513696, best_for: ['laptop'] }], device_formats: ['gguf'], generated_at: '2026-11-15T00:00:00Z' };
+const DEVICE_INDEX = { generated_at: DEVICE.generated_at, models: { [id]: [['llama.cpp', 'Q4_K_M', 2707513696, null, 2]] }, recommended: { phone: [], laptop: [id], workstation: [], browser: [] } };
+
 before(async () => {
   const wr = (...a) => execFileSync('npx', ['wrangler', ...a, '--persist-to', persist], { cwd: here, stdio: 'pipe' });
   wr('d1', 'execute', 'freeweights', '--local', '--file=schema.sql');
@@ -45,6 +48,11 @@ before(async () => {
   put(`manifests/${gid}.json`, gmf.file, 'application/json');
   if (gmf.sig) put(`manifests/${gid}.json.minisig`, gmf.sig, 'text/plain');
   put(GONE_PAGE, pageFile, 'text/html');
+  // Device overlay objects (site/lib/device-static.mjs writes these to the R2 tree).
+  const devFile = join(persist, 'device.json'); writeFileSync(devFile, JSON.stringify(DEVICE));
+  const idxFile = join(persist, 'device-index.json'); writeFileSync(idxFile, JSON.stringify(DEVICE_INDEX));
+  put(`device/${id}.json`, devFile, 'application/json');
+  put('device/index.json', idxFile, 'application/json');
   wr('d1', 'execute', 'freeweights', '--local', '--command',
     `INSERT INTO takedowns (kind, entry_id, reason_class, at) VALUES ('model', '${gid}', 'copyright', '2026-11-14T00:00:00Z')`);
   proc = spawn('npx', ['wrangler', 'dev', '--local', '--port', PORT, '--persist-to', persist, '--var', 'CHECK_MODE:offline', '--var', 'PASSTHROUGH:0'], { cwd: here, stdio: 'ignore' });
@@ -353,4 +361,29 @@ test('taken-down entry: 451 on API detail, tree, resolve, manifest, signature an
   // the entry that was not taken down is still served
   assert.equal((await get(`/manifests/${id}.json`)).status, 200);
   assert.equal((await get(`/api/models/${id}`)).status, 200);
+});
+
+test('device: per-model overlay with manifest links; unknown id is 404 no_device_data', async () => {
+  const r = await get(`/api/models/${id}/device`);
+  assert.equal(r.status, 200);
+  const b = await r.json();
+  assert.equal(b.id, id);
+  assert.equal(b.quants[0].size, 2707513696);
+  assert.deepEqual(b.device_formats, ['gguf']);
+  assert.equal(b.manifest.url, `https://freeweights.allternit.com/manifests/${id}.json`);
+  assert.equal(b.manifest.signed, true);
+  assert.equal(r.headers.get('access-control-allow-origin'), '*');
+  const none = await get('/api/models/nobody/nothing/device');
+  assert.equal(none.status, 404);
+  assert.equal((await none.json()).error, 'no_device_data');
+});
+
+test('device: index serves with an ETag and answers 304 to If-None-Match', async () => {
+  const r = await get('/api/device/index');
+  assert.equal(r.status, 200);
+  const etag = r.headers.get('etag');
+  assert.ok(etag);
+  assert.deepEqual((await r.json()).models[id][0].slice(0, 2), ['llama.cpp', 'Q4_K_M']);
+  const again = await get('/api/device/index', { headers: { 'if-none-match': etag } });
+  assert.equal(again.status, 304);
 });

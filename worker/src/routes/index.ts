@@ -7,6 +7,7 @@ import { xetRoute } from './xet';
 import { treeRoute, modelInfoRoute } from './model-info';
 import { commitsRoute } from './commits';
 import { manifestsRoute } from './manifests';
+import { deviceRoute, deviceIndexRoute } from './device';
 import { pagesRoute } from './pages';
 import { resolveRoute } from './resolve';
 import { whoamiRoute } from './whoami';
@@ -40,6 +41,8 @@ export const ROUTES: Route[] = [
   route(/^\/api\/models\/([^/]+)\/([^/]+)\/commits\/([^/]+)$/, commitsRoute),
   route(/^\/api\/models\/([^/]+)\/([^/]+)(?:\/revision\/[^/]+)?$/, modelInfoRoute),
   route(/^\/manifests\/([^/]+)\/([^/]+?)\.json(\.minisig)?$/, manifestsRoute),
+  route(/^\/api\/models\/([^/]+)\/([^/]+)\/device$/, deviceRoute),
+  route(/^\/api\/device\/index$/, deviceIndexRoute),
   route(/^\/(alt\.freeweights\.[a-z0-9.-]+)\/([^/]+)\/([^/]+)(\/(?:index\.html)?)?$/, pagesRoute),
   route(/^\/([^/]+)\/([^/]+)\/resolve\/([^/]+)\/(.+)$/, resolveRoute),
 
