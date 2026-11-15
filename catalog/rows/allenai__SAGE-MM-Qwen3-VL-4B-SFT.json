@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen3-VL-4B-Instruct",
+  "display_name": "SAGE-MM-Qwen3-VL-4B-SFT",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/SAGE-MM-Qwen3-VL-4B-SFT",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/SAGE-MM-Qwen3-VL-4B-SFT.json",
+  "params": 4437815808,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen3-VL-4B-Instruct",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 132,
+    "likes": 6,
+    "trending": null
+  },
+  "tasks": [
+    "video-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 9669595326,
+  "upstream_url": "https://huggingface.co/allenai/SAGE-MM-Qwen3-VL-4B-SFT",
+  "what_changed": null
+}

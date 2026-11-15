@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T04:16:42Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE.md",
+      "sha256": "222c691afe0dcdc498bb9a31cb4b331ce72a55a2351cab8d98ce246dd7799ffa",
+      "size": 1072
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "27e66f4731a299f34a16ecfb1beaafe1f04fdfb76a41f4a281dd4cc979345305",
+      "size": 2660
+    },
+    {
+      "lfs": false,
+      "path": "autoencoders_demo.ipynb",
+      "sha256": "0a8a9fafaa06ef0ed8d333be9b28fad2912a669216f61665bdfea9998d1cc086",
+      "size": 1618612
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "27c1e6200995fef58a0c198e33211950ced9d64782f08b9dc9c1ddce9df488a3",
+      "size": 540
+    },
+    {
+      "lfs": false,
+      "path": "data_preprocessing_recipe.py",
+      "sha256": "d9bedaacbf8c9004e4ced1b09e69bbba5a21b6238fdab1220993a3883f78cfb4",
+      "size": 7674
+    },
+    {
+      "lfs": false,
+      "path": "data_utils.py",
+      "sha256": "20d0e47ad37bccc0398b2321e2a6dd4ffc68657fea5c3cd7feefd0e1a5c0f301",
+      "size": 1104
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_pytorch_model.safetensors",
+      "sha256": "4b07cfaad692d5e60669b5bfe0432de71eb11ad6925bf9e0bd333b69d15c5e62",
+      "size": 221317280
+    },
+    {
+      "lfs": false,
+      "path": "environment.yml",
+      "sha256": "b7c39c6056ef5e8fb4141e404cff3a0fed3df9d9015ab4189730567529277d30",
+      "size": 433
+    },
+    {
+      "lfs": true,
+      "path": "example_data/mri_complex_images.npz",
+      "sha256": "69a6b217303b2147957ac2f1dbcee976b5ed509621acd94ca55110a1c8f02e5c",
+      "size": 2022432
+    },
+    {
+      "lfs": false,
+      "path": "inference.py",
+      "sha256": "b7db834e312a441357ef842a6b048c003d98c975cdd18ac44ad495a2ce7eac56",
+      "size": 1466
+    },
+    {
+      "lfs": false,
+      "path": "metrics.py",
+      "sha256": "df8d951cc1b4d8907c41137897cc7b857200538fc6087e9cba92571e75d33f6e",
+      "size": 1068
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/mri-autoencoder-v0.1",
+  "license": {
+    "file_path": "LICENSE.md",
+    "file_sha256": "222c691afe0dcdc498bb9a31cb4b331ce72a55a2351cab8d98ce246dd7799ffa",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:16:42Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/mri-autoencoder-v0.1/resolve/b4b3a763958612f7a5e42c1313dc44c1ae94dcea/"
+    }
+  ],
+  "upstream": {
+    "commit": "b4b3a763958612f7a5e42c1313dc44c1ae94dcea",
+    "host": "huggingface.co",
+    "repo": "microsoft/mri-autoencoder-v0.1",
+    "url": "https://huggingface.co/microsoft/mri-autoencoder-v0.1/tree/b4b3a763958612f7a5e42c1313dc44c1ae94dcea"
+  }
+}

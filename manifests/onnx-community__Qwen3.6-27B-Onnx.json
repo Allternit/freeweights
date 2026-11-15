@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:29:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "e0fc46d047a3fbb02cdeb0768587acb09bcd5896d527164bd5232aa26d869b5a",
+      "size": 1618
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5a8db3eaa671347fe93fb68901f5c97ca0e676e9e14c5a308a403222daf337f7",
+      "size": 62671
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "size": 7764
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3c38267a03d502323a4bca502c82f90c806c81601b689610329c32bd0f348818",
+      "size": 3691
+    },
+    {
+      "lfs": false,
+      "path": "genai_config.json",
+      "sha256": "3cafff0ef9e833c7dff6127a89a7be2fe6350fd28e728974f965856b07a5889a",
+      "size": 1537
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx",
+      "sha256": "d4de6232ec26f0fa1f8e1059f8c6066dbe5f8bf238b7d83d0aa345e2bcbc9a51",
+      "size": 1539825
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx.data",
+      "sha256": "107e2f198a50ceee9e4c15f575cf2a9c48e731d4c7849239c1e9124f7932c566",
+      "size": 51318685696
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "66e427c470fe580fe8c7b5725d857af23d8417e37fae62667ec698306a19987b",
+      "size": 1124
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Qwen3.6-27B-Onnx",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5a8db3eaa671347fe93fb68901f5c97ca0e676e9e14c5a308a403222daf337f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:29:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Qwen3.6-27B-Onnx/resolve/b8c7bf580715466a2fdbe6231447698bc86273f1/"
+    }
+  ],
+  "upstream": {
+    "commit": "b8c7bf580715466a2fdbe6231447698bc86273f1",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Qwen3.6-27B-Onnx",
+    "url": "https://huggingface.co/onnx-community/Qwen3.6-27B-Onnx/tree/b8c7bf580715466a2fdbe6231447698bc86273f1"
+  }
+}

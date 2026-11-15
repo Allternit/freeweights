@@ -1,0 +1,3228 @@
+{
+  "created_at": "2026-11-15T03:49:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "83da85fd7618761a7d4e733cbc7b125c530470e4e556c90d52e4951baa589210",
+      "size": 40535
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5965f14f64073730e0d57680ca02aa8f6844a9bfc7d618e8ea4290420bec3d5f",
+      "size": 4759
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "caecca0fb438a9812c871e7f1ad6d7fcb14bca2af7b4afad54e466d3035024f1",
+      "size": 2348
+    },
+    {
+      "lfs": false,
+      "path": "configuration_bolmo.py",
+      "sha256": "f271446d4a6a474a259bd526f9609c0ffa78d7a1320854f826609e16787a43c4",
+      "size": 14345
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e331a45024d01aac94848274bc4081746cab75b2d02c802811aa231578749bc8",
+      "size": 131
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00007.safetensors",
+      "sha256": "81f8066229794b0a0e47fe6c7bf8561eae00a97ada22c81fb6367e2cdc7ef176",
+      "size": 4886163184
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00007.safetensors",
+      "sha256": "c9f33172be62508dafd949c4882ebe226e0fb9b3eba72a019b392025f7588538",
+      "size": 4857404864
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00007.safetensors",
+      "sha256": "a7b3725524bec299eb0e7d2cd6b4ae0f42000c13e68aceaba74eeb25ee398823",
+      "size": 4857404880
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00007.safetensors",
+      "sha256": "09544694501e0155166d09c13394f759e07cb02d70e7a286b2ee2f50cca071ba",
+      "size": 4857404928
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00007.safetensors",
+      "sha256": "00f2f618fbc0f28b5d5014d5cd60e5b10f759b476c9f2e9166a4d0bc37dc73e8",
+      "size": 4857404928
+    },
+    {
+      "lfs": true,
+      "path": "model-00006-of-00007.safetensors",
+      "sha256": "fa5e5b88a94da922bda6f3460d1e202d4c72a2e9aba341ae1fe93cd8787bf1c4",
+      "size": 4857404928
+    },
+    {
+      "lfs": true,
+      "path": "model-00007-of-00007.safetensors",
+      "sha256": "17d220b8dd89c36a635cb2fcb90a57eff5c5013369ada364319cf6e77849e31d",
+      "size": 1359202312
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "b17e53ed62054e878725f5d26c37ecd371c3d051b2d625127e6f756f215bb67e",
+      "size": 37570
+    },
+    {
+      "lfs": false,
+      "path": "modeling_bolmo.py",
+      "sha256": "f0e19e3e6b0c338b34a0a530a68231c379af60ad1cbf069ccc41afa5070a0e8f",
+      "size": 62382
+    },
+    {
+      "lfs": false,
+      "path": "olmo_core/.metadata.json",
+      "sha256": "db8d50c4cb86d946572fc1d91017b211bbf31f07365888a5e7aeed5952c8eb08",
+      "size": 20
+    },
+    {
+      "lfs": false,
+      "path": "olmo_core/config.json",
+      "sha256": "e968fa2ba5f07d0589a5441f16894d2b5f6c5eeed87daefdbcdf215bd593ad9b",
+      "size": 12795
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/.metadata",
+      "sha256": "d226d4df3f8b40ba639641867a687cad7cf295ab52e3efcdc1aadb38a275054f",
+      "size": 9450495
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_0.distcp",
+      "sha256": "1fde3916824ea77107fe98a10cd264cbf48cfc786abfb433740460a0003ea6a1",
+      "size": 179234958
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_1.distcp",
+      "sha256": "10980e12c3db08d331302e306468cc0377ba625b1a4092d82fbd1bcdc4899659",
+      "size": 179234958
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_10.distcp",
+      "sha256": "556ce5527abdfe9790dba105a0a56396f89f505b13ca92366f3b389451dbc928",
+      "size": 179672297
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_11.distcp",
+      "sha256": "fab5a12c2161877514ec0a5f6d13897d19a90b49a892cdeed0ef49a9e1247906",
+      "size": 179672297
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_12.distcp",
+      "sha256": "e14c0a4f7c1f46e41e3ee187e65a513966de7a237cc555662e6d13b651a983fc",
+      "size": 179280658
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_13.distcp",
+      "sha256": "b4d1e8af43fa91f5972d537bce7397c73e16930d4615ab03839af4a79945b45f",
+      "size": 179280658
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_14.distcp",
+      "sha256": "b790e6f14a76309144a942046be664dd21489fff9014d8bdc82fabe53fe7b646",
+      "size": 180056746
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_15.distcp",
+      "sha256": "a97a37b6df0446af12dcb6301bbe7a7af8c864361a086b3121930981d6f2ce7f",
+      "size": 180055169
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_2.distcp",
+      "sha256": "18a1c51f2b7ba82c1cc633c4f4305c71a2ea178ba7cddf6f55b4e2672a62adc7",
+      "size": 179236535
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_3.distcp",
+      "sha256": "1637ee8cd584c7186271c88473a45e8a9055c7fedd159c9d084c8b58753706c5",
+      "size": 179345878
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_4.distcp",
+      "sha256": "40b8b057823abbee8227b5b9b0c493defdf5f77b71847f5859533a254d08bf11",
+      "size": 179344617
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_5.distcp",
+      "sha256": "1e9bbec4a5a7282e2e69857efde14becefab09b82c04b687d58042e3122b9d2a",
+      "size": 179344617
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_6.distcp",
+      "sha256": "83bbf408da0a0ab10c4e9c69f23b9db392911a11e8d9e649060e446d52d590f4",
+      "size": 179672297
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_7.distcp",
+      "sha256": "ca5bc3ab73fef5efc91a7f2311dca3741be6e9456bd1365bf37250e58ffb0263",
+      "size": 179672297
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_8.distcp",
+      "sha256": "c04b53514e3fc2ec72789ce8b6cf4cf303056efa07c7aa0e3b757af8faf8be2d",
+      "size": 179672297
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__0_9.distcp",
+      "sha256": "2a05df82c033265d09355a5896191c6032b61b6c1e473dfdfa6db4089c3c8aa6",
+      "size": 179672297
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_0.distcp",
+      "sha256": "dbb5fac97c9b75ec68cf760f6c9b9318d16604691f68fc1b97889268937cb93f",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_1.distcp",
+      "sha256": "569a71c136e97d2746545a32addb7127b0b1d071437bdea1ae924c15c013d9f2",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_10.distcp",
+      "sha256": "5c1757135ce728caecb55e79a83eededc9d7d432c3440dcff76be32f4feebe18",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_11.distcp",
+      "sha256": "9c8d3632eb2c3112095bc1b844af4c922afff5623c2168cda3713f87e420fa5e",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_12.distcp",
+      "sha256": "eb8caef839b9d1bf84959c53c64bfb3f85f82708ffe6a96d8317326d88e60f15",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_13.distcp",
+      "sha256": "86017597935cf303efd55164064aa86a180a41576a34f47039627a5c4a156d45",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_14.distcp",
+      "sha256": "0e9cc0aedad97f6f8c6c9eb14b791220c353d9fd02476213d95141aa40aee4b7",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_15.distcp",
+      "sha256": "de14d46b4098bc6a5e4e911f9bd479a9871bb99d7237a914d2590f9866251d89",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_2.distcp",
+      "sha256": "10f4f79877a2121215d81cb18a4dc5429390eaa6b39bd9566c69908008c654cf",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_3.distcp",
+      "sha256": "f116a86923d2096a055aafd1e520f9b61e5c6796578c8415b56f4a85f92c45b0",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_4.distcp",
+      "sha256": "3eae74a28adb5e9c57bc924fbba1205a423e6488f3ba89c62cc3b7f7694a1da1",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_5.distcp",
+      "sha256": "1cc74c4ea7f53200e309217958585660d18665e920730e5076082d04a6484a05",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_6.distcp",
+      "sha256": "2ff41964b709da0d9e5a17e38c9a44ed00aa6cf20a412e17a9522b3b7377ac29",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_7.distcp",
+      "sha256": "c06b8804f9d426d55ce0683baf08b5fec2015c4771137609a1ec933d01a58fb8",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_8.distcp",
+      "sha256": "4d018b5f2ff0b158574a00ccd1106ca6df8a0a8a829b0a509b76ac88937ca311",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__10_9.distcp",
+      "sha256": "9e1312e5cd760fd83c909b20d3b430c1488112a39c7057d6b2298e34503570b6",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_0.distcp",
+      "sha256": "f55336df7daef34ed8ffaeac38da44ae6c65111665821411305869a2ea17ca95",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_1.distcp",
+      "sha256": "f1290ebf674851c99ade037dfd8e628906396a2e1c49b7f5e6ce943c8e90dcc3",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_10.distcp",
+      "sha256": "11c5895fda2bc149ce8c4b532a8f3698873087326fc26093dfc6c1291fc16b0c",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_11.distcp",
+      "sha256": "9f9a6a095e3fa712117ec5de5ebbad6cf0e7ac482a7b429b341ab7243ee2a499",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_12.distcp",
+      "sha256": "749e9683ef7ab1cbceffe47b5d2c2e1ddf0c270fd1bcd2e739350c515cf2fb8e",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_13.distcp",
+      "sha256": "9ac0b3c96fa5b4b7de7be230e4b377ab0e884b565c281c58c92f74015effc21c",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_14.distcp",
+      "sha256": "609775f6385e0f6ca2b4765b328730fd314e24f5dd14443449159c6d0ab7c2bb",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_15.distcp",
+      "sha256": "5ccb1922d13ad5112b32010f868fb70cab17ea8e1171911aa96d350b659dd344",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_2.distcp",
+      "sha256": "9e7fdac412f40813a7e73205770e612f355f25a3a546ae6d0f0708747a84be18",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_3.distcp",
+      "sha256": "b34429d67974a376317b3b60e1f32c0561d5428f3348ef6e013ddaef683c25ac",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_4.distcp",
+      "sha256": "0b8c66fa5e2d3387017972391fb28d02577951c3040f33fb68d6c08fc18e3ca4",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_5.distcp",
+      "sha256": "1dd8b974d7a4fa4ef8478057b6075ccb524c3dbc82f5fef650c922bb35c03a1a",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_6.distcp",
+      "sha256": "f204ddb999a622d73b9a72e02e94fe6ab9a62f57b97752237d1cd93cf9cdf259",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_7.distcp",
+      "sha256": "297de0e482eda03814b1505476278af6106ad65850b86cc4a2e8314a3de72a55",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_8.distcp",
+      "sha256": "d8830281490bd57fc298d9b678074a1d5d2d8c81c004e40c66b5da2a67a68e86",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__11_9.distcp",
+      "sha256": "575b5a33d5ec305707dd339f09be65420d4b8cf4254ea5f842eb7b97a1a51367",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_0.distcp",
+      "sha256": "ed2f771fd0e21882dd98eeb3c03a6b2ac075a1f6bd39d669d37b185510a281e9",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_1.distcp",
+      "sha256": "11c9876ced9944dd0f354e3c56fb11bd2e8b00109975412093a75dc440d4404f",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_10.distcp",
+      "sha256": "6c9aef93b2d79406dc9146712e49ba14fee8a88e9030b63a08e6b22bf4606b9d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_11.distcp",
+      "sha256": "d5987431acd24f40e928d7db67ea0a5ccde06ec5c727108dd1da2bff55f78b62",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_12.distcp",
+      "sha256": "905536591c3a81f6f3a5fe83ad3258842605794176ce8133f5fe94e90c483343",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_13.distcp",
+      "sha256": "e8c115acf5f8219ebfc68e098b00a39ef4ff37488ff082eb47a7f4b1e363aab4",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_14.distcp",
+      "sha256": "e8d954a8f41082ff1f6aa4d36f887b62c910d9f9e230e592105982696564ffce",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_15.distcp",
+      "sha256": "a6383d5d5f9ba5835c257cb2d7f6da1d6c29858a061eb067bc5069edb1bdfe10",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_2.distcp",
+      "sha256": "c97296541be4b65492860ca7653d3e702b36e86ea29280370379df1fef99e6fd",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_3.distcp",
+      "sha256": "c3713efaff2c239e26e1a62934d2133609de9d46a4f677eebbbad214e0f9ae83",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_4.distcp",
+      "sha256": "dd8b6a7d01505afa267105a3a361898b53d71391057f280118d13bb9b99128d1",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_5.distcp",
+      "sha256": "f08113730e9255e0a6d5a4135eb3f71a11450cc209525df2f80ba566964b4c49",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_6.distcp",
+      "sha256": "bc72982828a7dbd0cbd7344e5deeb0cf0622875af10064d909c2ff84d12c9e48",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_7.distcp",
+      "sha256": "165d07307bf238c7ee8b0413ff526360390ff8911a00bb37f63e1debdd42ed4d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_8.distcp",
+      "sha256": "52a41d6ef153a9723a7e08819ddeaa74300e8f6050323406e0db63c917fe1f1b",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__12_9.distcp",
+      "sha256": "52fd4bb3f4e59d11072fad60f24ef3bd64256037ba33c1b483fc769556f9d4bb",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_0.distcp",
+      "sha256": "26f8f792907ec68c9bdfb817dd6df55e8e8905faff07358f16e04f3a69c43ebc",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_1.distcp",
+      "sha256": "59addf2e485caf903616699c509a386f726cd52d46eedf1de97dabbc49e827ad",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_10.distcp",
+      "sha256": "0f186e2b06b75b0fb8c0b2e361f05c1f9ddf8e8753b9e22cf5020831589ed3de",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_11.distcp",
+      "sha256": "bd195280c1e69b3797d316d7f4734dbafe4729bb8f94e9458f43585ea60b3175",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_12.distcp",
+      "sha256": "72f72f75d581817517f2184f6df2ffa9046bc94c5d8d72e1be3351e2726a686f",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_13.distcp",
+      "sha256": "9fecd63a11aaa7d20698bfb2d0f102ccc04e1cc86f39cc832187d912a2d18da5",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_14.distcp",
+      "sha256": "e267b3fae19d9425a1b6ddb308aba44c9ce7c79c594668f4d268cef9d3b8eaf4",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_15.distcp",
+      "sha256": "f184411fa2bd4b4fc0797cad28cdb7caf5b22813d21b7799910211e33743ae57",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_2.distcp",
+      "sha256": "e0310e30f2ed11fc66ccd6391c6254182376efbf7149a5e8d19317f0aefda98b",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_3.distcp",
+      "sha256": "035fb841a56945704f8bc5cf2bdfeb2d70cfebf4cb4dcec22ad0f3b0dda55eff",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_4.distcp",
+      "sha256": "d1c82cda5c3f6408d6f2391b773d9cf5754c36d471c79d79fcfaae07145dde36",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_5.distcp",
+      "sha256": "d6f40bc4af771eeb0dfe966abd9c5b410566d4ec08c049f33674bb7f6fafd203",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_6.distcp",
+      "sha256": "383aef59f75f4a48e1bbc447623c2f0160a377fbc2b62b31a54235d91abbc683",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_7.distcp",
+      "sha256": "2e73eb6795d8eb3439a39302b2c00f644924075b082c3681f573374c8d58669b",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_8.distcp",
+      "sha256": "3b4c6cc1952d1ac1c7d3fec52969f8f73e59c244e10553c0aab8543e9f7214f2",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__13_9.distcp",
+      "sha256": "21596ec79d5cfa5b30695e4ed55999e50126799df2acc03458745d2300828bc9",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_0.distcp",
+      "sha256": "9c566802e170d03605c5ec9c00dd399140443b3903a7dcb6b25d5de68c5adbdd",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_1.distcp",
+      "sha256": "f4862c5bb9d0fda2376a9b126aa61bf91a4ad3817df5b8a24f3d7d29eb5afdfa",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_10.distcp",
+      "sha256": "fb794470d9583cebfabf3e745cb66c9f1965aeb6f58ac75c23c8d42fa154be46",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_11.distcp",
+      "sha256": "bbbebe0057398b0ad1781ec23d331b921438094a5c10e4084fffca57b2f916fc",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_12.distcp",
+      "sha256": "666a38afd685589dc3cbbf08f01cfb891329b522d07ba758918b32ce31d95a8b",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_13.distcp",
+      "sha256": "5c789580ca0599ad9466d13a395af47a2139e206dddcccca5942396e047eaaac",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_14.distcp",
+      "sha256": "d5462bf01a0b2e55f3691be968955040ebae552968396ca2ee02cbb8ab087844",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_15.distcp",
+      "sha256": "262d538c23137dcf437d6af30ee931e1b1f5d3f0acc09eb66f6c32741076ae8b",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_2.distcp",
+      "sha256": "d07949e17171ad4e17e43de02357987f815c1dd468e51aad3f5612610fefdb72",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_3.distcp",
+      "sha256": "9a4123ea2856d2496684f229f8f7fbfda569605e7807188bca097c104ed5dc21",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_4.distcp",
+      "sha256": "c1288bea9d5a6029c63025d190d01a556cb8fcfcf668588aaa0710b177755b90",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_5.distcp",
+      "sha256": "ac8682571539c4cc163d0c51e827d413dce83df3c2d01c51f1a509e2544f8341",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_6.distcp",
+      "sha256": "b490a0af88edd1450e3a3f9d7982e7b2db3d09f39af1bf220aa7f2bf2aaec976",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_7.distcp",
+      "sha256": "14f74594ca2bc484488c4113109aa09c7767b074d2c756735ac9d4e557fae777",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_8.distcp",
+      "sha256": "f495155aa49db4643827fb168ccadbd439cebd3e297f37b3fbd09f524e42c101",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__14_9.distcp",
+      "sha256": "7b847819088c0e23d13d192109d94ac8e6ccfca1940f0fba68ee04e2d318313a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_0.distcp",
+      "sha256": "16e44f878f973328be0aae05940fe50e36c71e6a6f587bdf9238267a4b6dd0c2",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_1.distcp",
+      "sha256": "dab20a1e64b7dd42e302628e2a235eed81daac538bd2d4d586a7c9df14462e84",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_10.distcp",
+      "sha256": "d1c7fe6144fa67b2d3e0fd15433d661cf591f1dc6a7fbe816702c756e190621a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_11.distcp",
+      "sha256": "668547f1004cda99749e236824a0ee117d11282d33c13b5002f2cea805c3b191",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_12.distcp",
+      "sha256": "d6e4dc9c107323418b1fa8a47b87485df02c2b109c8d5b13027f0a7f25a9c9ee",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_13.distcp",
+      "sha256": "f7936f421fcb6e85ac92901957e3e0d712308c18c6f279374dc138e16a756d29",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_14.distcp",
+      "sha256": "2a9f9059c84a9d37f31d995daf754097c73cab076ade75cf7021d27f5d67f604",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_15.distcp",
+      "sha256": "0e5417f6a2e803f9b442a9cd2afa31a750292c9a5ab5da9b9dc2ad63e222dcdb",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_2.distcp",
+      "sha256": "e1142c1e9484b654d2b12bf2bb62eb945a0b992b20789ffbcbb309af3552eabd",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_3.distcp",
+      "sha256": "da903b14aefe627ed76356427c18a11418125aecd90d9e9c2c5dd47e53c5e1a7",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_4.distcp",
+      "sha256": "60fc155c2196b2d7360641a7970e000415ef1516b7de29cd6b15eb27e39b8baf",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_5.distcp",
+      "sha256": "6ada477d7d770a33e4c24ce64ccb588f0e84707ab6ee3efd2084329b169351ee",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_6.distcp",
+      "sha256": "4f0d77b95619e747c42c79ee09c92cae9d4ded73253e0d537e80cd34db551f63",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_7.distcp",
+      "sha256": "a267a33d46540205cf2bb0eedba532e8f3c4a25e439e20db06794d10c35fdca5",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_8.distcp",
+      "sha256": "47d0c873c65bd0cd5800ed4b4dfeb3df36e44108300cccad0574a17353f99f86",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__15_9.distcp",
+      "sha256": "adce4060c0805b813e57059bd8308abaabb11241aef7ff878e3b53a2a3757595",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_0.distcp",
+      "sha256": "18e26c4985c80a8af7e40ee09acd69d44125e644dba94728941bbfadb75ea403",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_1.distcp",
+      "sha256": "78b79149af9a67411dc6efdb1d031839b45cf1272d2c6245e66cc5d8928208a0",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_10.distcp",
+      "sha256": "3a28bf6ed80387534ff4f0ee276811c90260488d7cdd4723637dd73ae21742a5",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_11.distcp",
+      "sha256": "b93afe77213b01c1d67780a974d73e795daf7bfd3c81a4e44b9f7485352261b2",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_12.distcp",
+      "sha256": "41d4d997a7b44effc5a21a811ffab12e6f3f52872249c0cc188b8a37bae1a589",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_13.distcp",
+      "sha256": "d26b7f9b4a00ccb3d5ad2eb33f05bdf33229c77de865909a0cbdc0ab6ae29396",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_14.distcp",
+      "sha256": "d87c5fae98a5afa177dfef3b8c481377d6711c5cbc010b0c6e31ab325114071f",
+      "size": 179047257
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_15.distcp",
+      "sha256": "9faf7fd549ca492855e093432042033fae845c18aa3cc62cd3f48c1376f8656d",
+      "size": 179047257
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_2.distcp",
+      "sha256": "4de432a171f1609bd4884fed3a9f55419971b57dbe058d4cfcf122b976e7df61",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_3.distcp",
+      "sha256": "62df6477148e78b3e00db260b0161cd6cd7d03225c597ec6517efcba34e04199",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_4.distcp",
+      "sha256": "a483dbac81b188deb896099f7a1e24801c2afdb05f8d79a6d424d34d57526748",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_5.distcp",
+      "sha256": "8322111b17e3fe829ae721b816de49f4778b0c5b921cee57fe06ae49d56d6b91",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_6.distcp",
+      "sha256": "c96586491f1ab5bc6e126e74bdb82da16f2a7898412547d56a0e92327180fcd7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_7.distcp",
+      "sha256": "b40b5b473f6d3e17bc6fa95a73db10b539e5cc76e9b4c8f2be23843cc98a6b7b",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_8.distcp",
+      "sha256": "169f8cb64e7f0fa74c9b076e3b8d51f0c37a69ff5f4c3eeab1281e32840f9f7d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__16_9.distcp",
+      "sha256": "fe8ac74ecc472dc872e2da5480a0d0e1025784f510b24e26ce188f6597938d85",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_0.distcp",
+      "sha256": "43f5abd5cb1943ad701603b5b3afcb94913598b89dc0ca0f7684b85dbc1ec32d",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_1.distcp",
+      "sha256": "74f49c41f485dee2f212e2699db86c0de5ceeab517ffa7a18cde1810db3692c5",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_10.distcp",
+      "sha256": "c45843838548e42ebe6e3412b50d76edb10af3feedc7d11b1d3161d29b183cf7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_11.distcp",
+      "sha256": "4642eeeee7fec9eb28c1698585fdbfbbe83f7fa6aed2eb47c4c5320941f9c42b",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_12.distcp",
+      "sha256": "12e9b4d2e21a133bbc1723598f6dc586e80891cab58e53028758eb0d31ebb923",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_13.distcp",
+      "sha256": "81f89931cbdeeff44c7f3bcfdc66b83e9950505bbccbb485508945acb0438286",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_14.distcp",
+      "sha256": "574516c99ee82aa8ae7a48b22548903aed65101bb4efdc300fde39a464547d41",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_15.distcp",
+      "sha256": "bbc8ebe179af8c602ae264ac4f481464f89078621959b625765834cd5f553baa",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_2.distcp",
+      "sha256": "36450c2d8d8631aa4490dd1b659e735a147744ff54e4c304ba342c7468df18a3",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_3.distcp",
+      "sha256": "e13b78bae3189ea15a1bc6a663107b58fda2db57b203472031f6a1daff19c034",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_4.distcp",
+      "sha256": "7a20681649f0f34190d877a1baf97aa86ac11a3cf75591a67ffd6c3f67fe4358",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_5.distcp",
+      "sha256": "ac4e1693b54d408f0dc287dd75cc0709044acc4a12c7b4d2a43ab4ad65f30a64",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_6.distcp",
+      "sha256": "ef05486206c0a11ceaed180d34aacd3999d8573daaec90128e2f07e5e28d3a57",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_7.distcp",
+      "sha256": "f4b924a4f3d1ab3243e35bad6bda2d8d9b93ecca007a2a0c6dcfd3c22038891a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_8.distcp",
+      "sha256": "5d99cd8b17bcd051d21405468eee6ca4886881c5d92cab986f8933f2213c18d0",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__17_9.distcp",
+      "sha256": "e71ac4146c5361aa47b1edfe3a01508e337fd00bdb96448ae2979b5c31b1a00f",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_0.distcp",
+      "sha256": "e39f987c44816f71ffafec83eed09b6fd865023fce2bd8237ec0a479170a0b84",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_1.distcp",
+      "sha256": "7f4e13a6e988e1856bd084ddbb4c9c9fd0285e69c24c15f1a3e4329e7e914570",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_10.distcp",
+      "sha256": "550482d7382fa92d3bb99f98b0f5a5aba7e57a0bdfc0c6a3fe29b4d8bd24bb1d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_11.distcp",
+      "sha256": "bfe10ba4f6404a1af0cda839e2ac3bcdab3d98356785bbf4161cd79db1a9854c",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_12.distcp",
+      "sha256": "4db7777f2e8a6167fc11b3a4cd14cfe0d79b69df0567d1a19621a0954495e067",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_13.distcp",
+      "sha256": "614635f26b4f378051623eaf6e081e2f3af2b59121939a0e8c393a98f11db78f",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_14.distcp",
+      "sha256": "7cc62db05306a67b56f19c7e54efb195ae71a2d347f6a7e101bff1fe8eea61ba",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_15.distcp",
+      "sha256": "820d70fbbecbd3a044d31a11142a430a059ac7575ad15e781f3246461ddc2321",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_2.distcp",
+      "sha256": "852461fa570a74b2cdee1f0b0eb0cd543c819f13ef9e903d76ee39d26c236e91",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_3.distcp",
+      "sha256": "72261f4e11a54c8b4498d1db0fb75bfd1eb8c04bba42704507f4f6f341be945a",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_4.distcp",
+      "sha256": "3d363de8560375434de12d7351157c95125f276fcb323511ed73956549c84b60",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_5.distcp",
+      "sha256": "1eec4bd3ddcf80017f7d1f0d9e41d9d07e75d78ac8cc71d5af148df742cc2088",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_6.distcp",
+      "sha256": "744322cdf5a4d772b328d03656c7570ef99afa679fa2fa3b10abdf1274f6bd2d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_7.distcp",
+      "sha256": "64e8b392ba9d0db9a5196ba092dc0144eedc49eeb7b3687fd2b0b92ff22629b7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_8.distcp",
+      "sha256": "f22c8f894a234a020bb817090e4b7958ca69ff0e57ec7a0a4bec5e179a1e7498",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__18_9.distcp",
+      "sha256": "e2d4197462c3a8454e271b2c21415e23ab042e7753ed7a017978c262dbc09006",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_0.distcp",
+      "sha256": "f4bfb7a4da6b6b36e416651438d3c51147da156b268ece627f009f4358d19f5d",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_1.distcp",
+      "sha256": "3bddbe6c12738c566fc1617c543798ad12436838e6729cd14a400db4e953930b",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_10.distcp",
+      "sha256": "f1586d742720b62e1a9467bc383284e59657aa87cba04c42c5d4c9058b7b0467",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_11.distcp",
+      "sha256": "9dc6e03eed2f1aca68715aacc091a98fd9b72e9338998fa6668a4b95bcb49f24",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_12.distcp",
+      "sha256": "de0f6fd6eb1c2d8768ffdb9b64316c0018cf9f1e7e920af38f78ef942f8d1483",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_13.distcp",
+      "sha256": "83e7fdba50fec12910a3a759f9ee9130b1b36242e1e9f2a0a73f5c7296ff22da",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_14.distcp",
+      "sha256": "8942bf01c16ecac4eeaca49a20844ca39d5e0c9efdfe5cb4377a8095eee24f0d",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_15.distcp",
+      "sha256": "96cfb360fd0fec5b6feeb92901ff30c75a1e6eec4528c48afd0872bb4cc063ee",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_2.distcp",
+      "sha256": "06823ffd9d15a26c814f2b754ac02014eff874665e1ee6e314595f155fe60f22",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_3.distcp",
+      "sha256": "4af1544501154cb42810f11c5b55a6c58bfb6b78d3bf6fe3c2fdc93075206b12",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_4.distcp",
+      "sha256": "70fa15ce5ee37c0590968c79bf225badc967884883642c4d22c5a6c96bea0392",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_5.distcp",
+      "sha256": "efd69d762c9111b34df9f6038caeadc790fb8d5829501b0d8510e014505c8c4d",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_6.distcp",
+      "sha256": "b916be42d5fcba066300f8d54fe54f2bb44803a2e7b8126d9ee4982c4010160e",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_7.distcp",
+      "sha256": "77dca1251b748ca0047f7a67e98a75e7a9a84866982f1d472f13ebe608b81543",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_8.distcp",
+      "sha256": "21a250b93a6bae531e516c2759edd5d94ce5a8995545c3e8830b3d843665db4c",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__19_9.distcp",
+      "sha256": "4b4cc710eec4e67462e1c951852e369eafddbb7a3537d5d4b183e55d6c2e567a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_0.distcp",
+      "sha256": "ab9fff39ed52d576d1888d6c296a03ceb770750a189190db3ac2f2c02b4a4435",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_1.distcp",
+      "sha256": "e40e1412068373330a3974adaea1bc6be32f5d0e3aa36d84713193e0a0316aa2",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_10.distcp",
+      "sha256": "ec20d5677906952906eccdee55f845a1474cb0d21f4dd728c84b7fd1f231a693",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_11.distcp",
+      "sha256": "2222f0365a2d417eed1eb4fe2c0bc9f14369c2efeb80bb2f5ec7ab23d0161679",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_12.distcp",
+      "sha256": "008e6226199bb87e6e007439cf1ce31cb3f7f3a2064274368937eb8e25df1288",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_13.distcp",
+      "sha256": "c18614e07abe136ee6ea73bef62a2f9db2e7f3a40161f6d19eaa361f23680053",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_14.distcp",
+      "sha256": "a5388af23327bce8154778fd906ec0675e3336d2813662695393c386c0c556b7",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_15.distcp",
+      "sha256": "a33d31cd8cddaa91150113d820a56bf931880dd17e59bde8538a2c27e9246c68",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_2.distcp",
+      "sha256": "f28c908bf70241fd2eb1f6828cd16b5edd807f40592fbb9337700cd6df3f3776",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_3.distcp",
+      "sha256": "1c83db9a3ae5927013c4970369d9ea1761409b39e5c07a8a94628359ed6b4f79",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_4.distcp",
+      "sha256": "a4db4ce38456d461aa15d5e91ad2c6dc3b209990805e3e9591545874830ed01d",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_5.distcp",
+      "sha256": "9d0ee7169385f319a9418138b49b7b8d8d9bc7ff2ba2feb910c2713312725f2f",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_6.distcp",
+      "sha256": "8e38bd92f0c36539caede885e0285cc4c0691217e600d3dc2da52b5ffeb9d678",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_7.distcp",
+      "sha256": "0d5cdb4940cc292f9b34093a32da33e51b21f68ac1bf9da403ea9af3d16128f3",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_8.distcp",
+      "sha256": "1518b8945cb21e0d2cc1f5cc43c9015d46d3ea5b7da945cd78471006e03b57ed",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__1_9.distcp",
+      "sha256": "2d3eb7bed3481f7e5581c021a295aeaddb8d6b7a95b9273dee69ccd77bbeba2c",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_0.distcp",
+      "sha256": "ae7fbb51a0a9a43a2a6e828a28e774e9742150bd06cee2ae7acbbab56e6b38af",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_1.distcp",
+      "sha256": "f65d53d16fa66d2bbd0ff5ad0b873182039e082384e336d5c4ac21ea6ff5ad90",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_10.distcp",
+      "sha256": "918b0e88da8d517d29e313b2b4367ef1339ba3bba68b9e81cb301d5296b07eaf",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_11.distcp",
+      "sha256": "f46d03a0d516a991a6c394a3b4cc8e466f2bf4f2147164b7eb4731f8769138e5",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_12.distcp",
+      "sha256": "5ce06009021118aa7111f60071671d0ce7a8382a6e466d59682197151a03fef8",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_13.distcp",
+      "sha256": "4c3fbd0f39605c3b45d35c50800108841f606ff7a76b72a18c991393d6d4d34d",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_14.distcp",
+      "sha256": "60cb3c1f9eeca50bbc9d437ce3211137e60e87fff312fd232ecf8aad4c1dc78c",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_15.distcp",
+      "sha256": "9b00ef681c1426ff44a004d780b9e1869e0a5cbe0d9665bdc3bc6ef5db4482d0",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_2.distcp",
+      "sha256": "f1271877b57c9e6ba9f5807ee39368716033d88a822b7b344feb11b0cfbc13b2",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_3.distcp",
+      "sha256": "68ba47a3ba3760b3bc3cba24eb3b0e3f4f795ef202ca9021fe22b6637f961aad",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_4.distcp",
+      "sha256": "f91b82d02656a2b1546815f382923b91b13722eb04cff966f22daa70f1f9e4ee",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_5.distcp",
+      "sha256": "68cac1855f8814102ae2b886e41b88fe5e5a0f9a3b31d0f52eea42e5acfca92a",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_6.distcp",
+      "sha256": "5e201d17d809f37abb9267650d05846736b8619d124c22e5ec47cb1cb351dbd7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_7.distcp",
+      "sha256": "745787a503d03304dbafc2fdf6d591c9c107cdee29e8cc01ea984864c9bfd88a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_8.distcp",
+      "sha256": "5b68c7038c60198caf1a58b5e27b5a7359cd3e2d2b31ac29def6b85df6b98576",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__20_9.distcp",
+      "sha256": "1f81d7c5ca664d39d598d5a8f40a92805de64cd928aa177729be6a0f4b25e0a8",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_0.distcp",
+      "sha256": "a36359f2b83731762310fa8f279f0be1c1518692bfbd020ceb0795fdd95dcf33",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_1.distcp",
+      "sha256": "9da77be6280c0bfef976eb23f6bc21a8612a401a9325bc1faa1cede2213e0662",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_10.distcp",
+      "sha256": "e9a92827e10beb1537ad06c5a216c740caf24891562c3b1b3479886af1cd154a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_11.distcp",
+      "sha256": "2b18801dbd6b59d50b4ea7ef97e4fc745ff72ae501a9f9be35727f2d22316a74",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_12.distcp",
+      "sha256": "f240f7c0d4392d4a67f2feb25471fb8a82b905bf73f8a4cf529697ff73622cc9",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_13.distcp",
+      "sha256": "447952b004fa4b586d49554125b6cbc127282b8c8fa8ac89aed6f69a8e62fc38",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_14.distcp",
+      "sha256": "11b511d8f18399939fc8d99d19559058eb5059f6c79ef5b12d4f03e06b08160b",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_15.distcp",
+      "sha256": "ecadc44051893c0a51effc834bfda3709e030f9b41fc50d926aaa19c97d3191c",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_2.distcp",
+      "sha256": "8c36407ae30fcea03d7635f9887757ccae48e480048e84cfbab61ce5abe04c47",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_3.distcp",
+      "sha256": "365a6267d7a32f604b992f4460eb9ad92dbbc28f41ddca4741f583b765f64bef",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_4.distcp",
+      "sha256": "78f088f87897b139248fea626e9c8e7f10e6fc1f1b7ecf32336991eba951fa24",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_5.distcp",
+      "sha256": "d8ff5016c1647b4e9f7e72064d35d0936e8ede848ec2aba7fc5415cbc0937f52",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_6.distcp",
+      "sha256": "a161ae101b95e581937d5ceba6558e9ae6203163d53d7274c2e21f073772f53d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_7.distcp",
+      "sha256": "290fe69dabcb15437d43ed69dd8a2b6846a1b8d2a60a12c1685db120f06b08e8",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_8.distcp",
+      "sha256": "5b59e66b0aa64236d224e864727fa838c7caaac2a40d5681e50b2f60737f7c69",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__21_9.distcp",
+      "sha256": "8885782b68949074a29d0b8621a9159ea82e791e667c82ddfbb86238bc2b8313",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_0.distcp",
+      "sha256": "7556325d127e09c6390a94503b421d12b9a81c8002fc8c05bda516c92d88b504",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_1.distcp",
+      "sha256": "18f55ebf9f67725fde1ef1e59ff1bc824f36dfe13a8c5814312755ee4194ee2f",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_10.distcp",
+      "sha256": "06b1e62bce697f33702ded6fe0bc9d37dff065854b12a207c26e0df10ee83b94",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_11.distcp",
+      "sha256": "62a21501b90f31243592894c9fd72de380926e08ee7d5e0d2e343e1536598217",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_12.distcp",
+      "sha256": "028c871e4ffaf26c01a0930cacc32d45480e6326cf989299d68459c66d9e239c",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_13.distcp",
+      "sha256": "7d8cbaff2a3d46e306b0590a7cab98bca282ef7e14c3648135bc1da3e41eeac6",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_14.distcp",
+      "sha256": "c59b501fb0ff80a63a05ffc7bceddf7c736d66620356e978b25db7e46edd7079",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_15.distcp",
+      "sha256": "f7c23aee0b9cb262203e6e05aa47575c790a658a0675e4449133a04b2d5fb249",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_2.distcp",
+      "sha256": "c0f3988a1e18fc617d33f53da1b6f9c7eb255babfc92bcf28f32ffaf6de6aad3",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_3.distcp",
+      "sha256": "e5020827e174ad3e03ae53bd5cb8fa3298bda9e7a3b74571fff0c623a1d7977c",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_4.distcp",
+      "sha256": "8886bd9b7afb1d35eb7e1e4c83c64b9ed3884c23d9fb0fa01926678ccca0fbd8",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_5.distcp",
+      "sha256": "72345df36ce88d14cfc65a93a43c8a7d97fabe32df73937c07ad8d592a60d78d",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_6.distcp",
+      "sha256": "ecd3652c7c23609192c6bb5675215a5408629abfb7135a21b7bec63904cc5c2b",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_7.distcp",
+      "sha256": "ed30bf8e6b3d17565b930715afb6347c9e6296fb9bcc4a67378dcd5f95f3ceee",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_8.distcp",
+      "sha256": "047795eb041c2f5a24d813f270cb94f4fdd8bade70bad581b7ca70e4b0bd6ff0",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__22_9.distcp",
+      "sha256": "b4b3e0104ea28116dc11c47adfab4bde59ae49a3a1b983defbe41e7e0e6c96b9",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_0.distcp",
+      "sha256": "f2d9af1aac3db4a4bebaa9ae8a358b6a0c752b81b4e4e009fd42c3ff4c94e540",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_1.distcp",
+      "sha256": "21c14e0eae602d97c85e2b03855dfda6f796426aa9e8fb7949d5fdbf2201100e",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_10.distcp",
+      "sha256": "513c592a08ab82e5865d4af90ca8f110fac5fc29a57f31082dabda501da02160",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_11.distcp",
+      "sha256": "a2ad36bacf7f6e1014f4d7bdea30f2d22fb3d769db5e423651a79b3adba8355c",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_12.distcp",
+      "sha256": "159daeed95dbb11ea166d5c972621f9d814a599b582e441ca2724d562e7c0387",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_13.distcp",
+      "sha256": "d42e97caf8ac8d75b40783d3fdac7bf5a2c72dba3de9ac7eaa3f6b87b65f138d",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_14.distcp",
+      "sha256": "b34bb036cb0d5b02796bd08cd664b63722c22f9d1a1e129166f4c775cc9cbd10",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_15.distcp",
+      "sha256": "25ef87f14e1d581df9762f5aab3ca1142ee72a59500e40ad3cd4cdf2a7e2cc8e",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_2.distcp",
+      "sha256": "b709257786eef3704ebdf70481a74eb26b9060e3c5a8c055146ef327b806623d",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_3.distcp",
+      "sha256": "aecb2029c772cd5fe089d8480170ca66532737b78165b6bbc80f23df4387177b",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_4.distcp",
+      "sha256": "8e475c71dd00c57fbb0ff6ada896ab67ccc1e25c2f56a8cdff93f02b7df46031",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_5.distcp",
+      "sha256": "b8ff15ff9be766ceac5068cc8b11088c8732863d668310198f686f8858bea28c",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_6.distcp",
+      "sha256": "8bdf362072025e3bf31093d5fd3e97ee7bb9a4110f10387ec682f482461f01c9",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_7.distcp",
+      "sha256": "d60db4eab57f9da4d8e948f7dfcd1cc8436999409c66cc351f76cbdf1df28990",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_8.distcp",
+      "sha256": "6b0f47a266e082bf3bcd91658a9227087043dd7f188cdebe04c270626e8ad48e",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__23_9.distcp",
+      "sha256": "570edc6171166a9f681b920b77e26b358f8564bdf3eda3cd4ecd0b223adcc097",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_0.distcp",
+      "sha256": "160090133062e8aaf2d8abe0dd8e333106f4a83b44e8d0927a260b996fb1a7e7",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_1.distcp",
+      "sha256": "632ab90f178903250136ae341a3eb9de00030067e4807056e106e7a54712e6b7",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_10.distcp",
+      "sha256": "f69f344438a2b1ede4dba681d42ff5f728f4073901ccf69a54894cee7f6dc69d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_11.distcp",
+      "sha256": "c944f0d3661cf5da0da253b0ab642d8d147658857ecea069422034b37291a215",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_12.distcp",
+      "sha256": "a20f759989e72aeeb0182a4a22a0afef1f7616497713cc94fb3b24d6492d6391",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_13.distcp",
+      "sha256": "dfe14f8907fafd2283bf612d76a5375d1705cb48b6f6f25d02bdc23d495cb6e1",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_14.distcp",
+      "sha256": "e46e6ead53ce1a4f59ac1c31672bf7b705632e2a132d02a326467b145a6c6ecc",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_15.distcp",
+      "sha256": "6f6462389f5cdd39c6bea6bf8e7231605ed4cd0e88af68fbc82b7f65056f22fe",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_2.distcp",
+      "sha256": "e8867df83bcb6afbf8d1fd38a0e35608b95719dcd5986216dd0a5a674952844a",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_3.distcp",
+      "sha256": "f54ed97335711fbf4c6042125d1025bc1d4651fbe599fdd4a654bc97ad0f9385",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_4.distcp",
+      "sha256": "9877673e925373d4004a60b8d13c652b881025f21b7cc223430d34235bf3527a",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_5.distcp",
+      "sha256": "9c517134e8790495d2099ba4aa595c05e2cf2d79eb455d36f0f76f86fa55e741",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_6.distcp",
+      "sha256": "96b7a29430e94b45b8ce0b05dcfe59dbfc269484a30b83f8e2c5f92a09b19697",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_7.distcp",
+      "sha256": "38ce47e75a82d6fdb470ce8ad4b5a76eec16cd64a070fd9cf51cb6d0769b37ca",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_8.distcp",
+      "sha256": "cc1ffff4cbf3606d32415c6fdadd7c00fc400bf8e1ee798f2543ada8fefd2af6",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__24_9.distcp",
+      "sha256": "53c1be9ca3bbb870ec2636179f3ce4fceec0c8211250d6132bf8b84d12888642",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_0.distcp",
+      "sha256": "0994f3a371e30bb9c45fdbb93e4ceecf8beeb7d61feb62339449e34764e63b0d",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_1.distcp",
+      "sha256": "ca18492b032369b3958bcdcc841ed86ab1a37e1527df2003832aaf9c5571537f",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_10.distcp",
+      "sha256": "25c30d3b5c06eb8abb95f71e94b5bf2ab7f263f1f59712dd86b06cfb5e012625",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_11.distcp",
+      "sha256": "9ebc83c365035031c092a55fb94e7e58a7fb98ccc7edb2755815b777dc8eb863",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_12.distcp",
+      "sha256": "a2bba46b847e75e4910e791e84bcf2f96d3b817090259398bc130dfc03425f2f",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_13.distcp",
+      "sha256": "8b7cd061f79c178782c3cb4700ea1b102b07aad8203a272d19178d668b395807",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_14.distcp",
+      "sha256": "22f8a15a0f98eee93f0c905af2f3cafa690805e5494fca6fe4a904840995a8c8",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_15.distcp",
+      "sha256": "99cbd6b4132d827b181a41333a25b0a07d61edbcf87c1f7cd478350ae14f983d",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_2.distcp",
+      "sha256": "8274f68e2435b83a9b2c012c935558bd97efc0c0e7b00c566392aa07ad6257fa",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_3.distcp",
+      "sha256": "69a0e8c84d5422ff16b42edad3dc389975e35ef7c4f114238fdb4cd4dfdf8b11",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_4.distcp",
+      "sha256": "94c81fa56504a6146db1b7026d5e079b54f293d46b47d6f5e662f89cddf7c0aa",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_5.distcp",
+      "sha256": "f1c0fc7953409026f264f6f6c777e87673af29047da3750fe966fc672e2ea7bd",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_6.distcp",
+      "sha256": "eb4577d1fab963133da9acddef9577a4abe6b82f0d576e6a7940a8455f1188d7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_7.distcp",
+      "sha256": "95811e6a079571102f5a2200f85a8814e6ea9740ac6b2232bcd146686664e655",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_8.distcp",
+      "sha256": "b4af995f57d746a642d20931069522bf7dc45aae3f1d425e9aedda9562da6dc3",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__25_9.distcp",
+      "sha256": "b44e7924bfd040e311b302300f532519b6d2bb965ec4465e4a275490acc9b6d9",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_0.distcp",
+      "sha256": "1fb3c8af399e0fbb5e471964207ba89278f3bb85c3190ddd5a3f22b2ebd6c214",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_1.distcp",
+      "sha256": "c5b79d15fa13492aafdde4a5906e1addae13161136180154c2bed2d74657ee64",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_10.distcp",
+      "sha256": "e1b188b503905fcb998143b9dd5b20325f50801865007b03d6963366640dec7d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_11.distcp",
+      "sha256": "be834256d307c79908d71cb296e7b7606ca86ada395f144a5e8bcc591a71e162",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_12.distcp",
+      "sha256": "5eb674fb38034810fce28ae2511fac0b02b5e59d9a5cb3ca3dcf964a1279de7f",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_13.distcp",
+      "sha256": "936fe3c6d53fd0789c4170c1bfa00ddd750ef3c4e616db2ff3ec5148e339ef18",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_14.distcp",
+      "sha256": "5544a70f412dad7feb96c082309910359e3c460d20f49900b470007cfb2df6b6",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_15.distcp",
+      "sha256": "3d35bcb58d70140d77c08ae3957c4d4e10af74fdc7f32329ae0ad6f56544eb5e",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_2.distcp",
+      "sha256": "d7a2466f8528d8045d63d5d3d8acf66a3f62a13dc76c65c71928f9618ed96302",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_3.distcp",
+      "sha256": "a243e1ad0bd9f38d85b3993aebefce161d5da8586e48f7e2ab8c1915025c07b0",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_4.distcp",
+      "sha256": "1d279454087e166cceaeff826f86db7c3be2ed5166e92b7946b4cad0222d675b",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_5.distcp",
+      "sha256": "97687bbe8ea3cc410f068aa6720122d6540def61fcbaa3dfb5d928745ca0a0c4",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_6.distcp",
+      "sha256": "707c103728893f4f8c73f57a20fcc3e6d18bcef3fd2803b3a4deb72965fd96b1",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_7.distcp",
+      "sha256": "37d21ba2eaaf143fe76ba156fcab32b92f5f8353603dee430c4c336e87e8f5f7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_8.distcp",
+      "sha256": "64340092fea4ffb62e69fdf8756d0c744e5a24d7bbe13e9615c43e5f201d9982",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__26_9.distcp",
+      "sha256": "a73d07884655d0bb2387e364f947dfa83fac347a43a6161db0473d89dfd2e9db",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_0.distcp",
+      "sha256": "eaa1b5003e0cd982acde86e1e2362f5e489b72d10f7a8e9862d5eea426c4d523",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_1.distcp",
+      "sha256": "939c7e69b62ec338d1b8202430ec4fac64dd21965721d110577c145de96dad04",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_10.distcp",
+      "sha256": "73ece569c6731ccc0607706b23add3baceb11b34ca2a74f7d13e1c46a42c397a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_11.distcp",
+      "sha256": "73f264df7ff89d876b75faa41e6b409b8f9ad6bb38d5f08f9f6fb5bc6c7163f5",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_12.distcp",
+      "sha256": "812a804250b2e7af0053f6f776850798776633a187e30e8c6dd40fdcac5c117c",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_13.distcp",
+      "sha256": "790a63c31b55cf3738534972668e4235bcb3f5643536cf172f777ca5c18bb38a",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_14.distcp",
+      "sha256": "e73aa0eab4ff0b5c7253bd44c5afa79dd1ada6ae59630bae626a0728e04559ac",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_15.distcp",
+      "sha256": "423abfdef8df1fded6cb85bb2f9f0bf17d7429d52bf6c214f786f823a683f83e",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_2.distcp",
+      "sha256": "03db464b21fc24340fd6d0ea4a30121d4a9b54db07614c623df1c623adf7f2f8",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_3.distcp",
+      "sha256": "c698f79b01cc281fc075b826925e614834415b4a9a1c87b016ad72c170e32603",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_4.distcp",
+      "sha256": "c10a12629108a98f6c3167a33ee4be2c4ab9737d25e996f66ca701dcbd0ddb71",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_5.distcp",
+      "sha256": "b7b038768beaba65aab7df72a6f9cee6e84a347b7b81397bb9e9155781dc8aab",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_6.distcp",
+      "sha256": "fada603a6a9f17f444d3b81911592c0764020df2ac847bd2875459dfa8e27209",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_7.distcp",
+      "sha256": "9f9145890a22ee0c7c870e11c80105b64baaf5947ca186730cd89e82ba92470c",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_8.distcp",
+      "sha256": "e024d2d4a18bf3803221a7f957c8ffbc1f7c53c5aa3ccb139bca6c30cbcdf667",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__27_9.distcp",
+      "sha256": "73d5ceb5665ccd756745551d2fc0628084b9b66539240a8d8602e80961c5b745",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_0.distcp",
+      "sha256": "6173b1be9305640c17a51dc4e34907572084cf720f3d6e285c96e863ca4ec3e2",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_1.distcp",
+      "sha256": "d7aedaf631ab6f4d127af9b8c40e0bb5203b6b8ecc0e232d8a218a0d033afd79",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_10.distcp",
+      "sha256": "e928cf94e47fed1955886e5205875fbd9417d4c01c048b26d033d5a6e95c399b",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_11.distcp",
+      "sha256": "d52744a194af863e8848c7c9187839d25e05a8afbd511d81fb80fc2a282f46dc",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_12.distcp",
+      "sha256": "67bc1300c2b03b73bd0f2658be0f2d821492c2ed23d3010684bcb84889cad128",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_13.distcp",
+      "sha256": "7d5656a6c23821000b0bf2d498654728c64834746af905a6f4dbdec830d6d7e1",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_14.distcp",
+      "sha256": "77f4b83f7247ad9169a5424164c03d959b6e6c72fb2d7ef9ce79c5590f4be392",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_15.distcp",
+      "sha256": "7c9df335c594a09981ac844cec5da9fc82e483f0e5a8ac40f2a9ce598b7902c0",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_2.distcp",
+      "sha256": "e63f2d59630bcc7903a17f6c6ab4c441965b5a0bae92b01361896c2d55d59535",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_3.distcp",
+      "sha256": "3b926bf191214dc0d571aabdb9e2efab19e139fc9cb47d9682793498045c6829",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_4.distcp",
+      "sha256": "3d49e0f3c28dcd2388ebbc017aa944d966aeca58b4ec9139c6fbe98f25ae9b95",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_5.distcp",
+      "sha256": "47368c47632570d79e40793d36bc0cf532fd4804562c975d32fdbf318c4a5527",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_6.distcp",
+      "sha256": "26350aa62196498cf8e144fb603e35cf904571a76637e6c49780150475d9b4ae",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_7.distcp",
+      "sha256": "a883d8d73fef612e3bfe8ec84a89ec2d74324aed8b0a69985aad0190456bcac8",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_8.distcp",
+      "sha256": "db45574c005e117cc6f9694ae3e279413336cd98e5d4bfb1b33e6ee718776068",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__28_9.distcp",
+      "sha256": "686271b41518ca7a917d21029140d44244c0ee594b097c8a6bc38b55981e6e1c",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_0.distcp",
+      "sha256": "1869a257275f1cce785f83df152bd3fb17b60ccefae5de6fe18335be2391ea6c",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_1.distcp",
+      "sha256": "e8de3654d4d563c42b5933063c7159547730f32ddb9a94e6181dac55883185f9",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_10.distcp",
+      "sha256": "e34660f89019df29fee2abf0ad791bac9b84077d0dd112dee347a4dd99d49725",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_11.distcp",
+      "sha256": "18f9c42960370a3faebd5ed979af392f42da5e07178a5d3997e33b38c57ce6a8",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_12.distcp",
+      "sha256": "f1ee7eb9496fe90e64ad4fc5b063c515fdb357efabb44c6645e658aeaabba2ea",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_13.distcp",
+      "sha256": "c6f9b06c215715d5a04fd6b0604f78ab02e20a362928584bdaa019b9421b1fb9",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_14.distcp",
+      "sha256": "0209fff05bc8f198954f199f479799fab0cb4d5a35a62bd13204a84b33f01685",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_15.distcp",
+      "sha256": "bdecd1a80fa8f905836bc045cc65520555b73b68e603f033c1ee894d72e26639",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_2.distcp",
+      "sha256": "a1b819171ed643d8396e2dc7883bb91122cf1c541f766a5f5d202f2995971296",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_3.distcp",
+      "sha256": "a658bc932f454e8ec21c3965d72ae990a9e70cc43ceed4eb03a285c8078c590d",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_4.distcp",
+      "sha256": "0e0a68e1aa6f0d6c6ba36ea864f45cc8a5d545f86e9b7cc121fa8b331a538919",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_5.distcp",
+      "sha256": "a3b2b362e59b5441f092362a5cc2903f82084d152095c62fc57cb5e2a31840bf",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_6.distcp",
+      "sha256": "c40c08903e914ca312c014697910df92c40289f9066faab858d2789eecde2747",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_7.distcp",
+      "sha256": "10cd9e5adc0ee55deb9ead07640cf9635ccf4f205eac4bdac9516af530959921",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_8.distcp",
+      "sha256": "8fbabcaa4220baef6a2f6c5d3cf66b0a72290c471cfe6e49e3e6a7f104bc1497",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__29_9.distcp",
+      "sha256": "44aed9c940d7e0a9b63b07302744b0845b6fe5980c81549dc03662413fb9c7ff",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_0.distcp",
+      "sha256": "ae414020ee10ee235e7d8888a0815edd94f4bc4fb193323aa0d74dff86d6eab7",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_1.distcp",
+      "sha256": "0c519326bcc86d6d207d513176cccc7a0991bb5e2dea2c412fc8dd8ce78b1e91",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_10.distcp",
+      "sha256": "3a597d44a649d42c5d358c6ee3119e1aa20d2691fec0c5dbfbca1d667fd8ca78",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_11.distcp",
+      "sha256": "63f96ab90bc0ae1815af1ea38235ca538b79347c260fc384d77b3cf58001b151",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_12.distcp",
+      "sha256": "84503e91f1368edb6d5e4ddf9d84b663e46678a16b76d8ac5a04a75c5d4f4fda",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_13.distcp",
+      "sha256": "85a4107988e588f77cdac19dc8af38250a1616c440515957e705cf2d6352791f",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_14.distcp",
+      "sha256": "c0405151bf12b5b3637e1ca45ac25af2f936407d4ce12ce3a43957706f3b54c6",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_15.distcp",
+      "sha256": "3c36b270b5f061f5b65d392f800f985b229bc3677411d5598f531fcf24b6ddae",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_2.distcp",
+      "sha256": "17903c116a7b37437a9425dc1d30ebaf5ca3b6743c9643216ca082f6b5f1ac5b",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_3.distcp",
+      "sha256": "7ecbcff643d89fc1195bc722ad60415ffb5bb415d136bff3268530fb5336bf07",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_4.distcp",
+      "sha256": "16b3442040ec242e843bddf57e7a0e62f5c105c7af648f86e23c39e8a3a19fd5",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_5.distcp",
+      "sha256": "282dad22053a012731d963366839f1132d0ffc0450cbb71eb3f1b6c37664d36b",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_6.distcp",
+      "sha256": "a5a65f18bfaf653d61a0b049ee0fdf72bb1a105d0c612b4f37b4b7340c2e54e2",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_7.distcp",
+      "sha256": "0506cb9022de0da8f32d3b0675fd1a16b582d857c5e8d1f1cce72b3d7e74c624",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_8.distcp",
+      "sha256": "99d1364cff27f0733c00b610447186b0e9cfecd803ec4d031bb5ae31253d69fb",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__2_9.distcp",
+      "sha256": "245ad9e71d282b2157c8bd6ae230ce75a6e28c2bf62faca019a5953a4134f7d0",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_0.distcp",
+      "sha256": "305411cd783e20695407c2865d4454d68d2ad07502524db3e4fa6937997eecc0",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_1.distcp",
+      "sha256": "9c57fb03f9a9fd4e177d7bd2fe51e1593c1a30c57512f80d75e0666383490d64",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_10.distcp",
+      "sha256": "e2a3e3714cbff098a38b3000de296e9c54107cb17a877ef476e42f7eb0caacde",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_11.distcp",
+      "sha256": "afb955f37b09d641b1fd4178495ce398647ea877a50312ab81492db9251458e6",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_12.distcp",
+      "sha256": "a8488b6ec7900138087dc0abef5f1c5807928212e42b481c15eca94a3cc5fffc",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_13.distcp",
+      "sha256": "309b2cb3b8458b5648c2c0dfe710eab683527fdd65d3e87d58257df0feb355f7",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_14.distcp",
+      "sha256": "386fe19e5a822ac8636542c1ed2e33a99c4d7ec6e4e05aa6900b4cf1c65b6a03",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_15.distcp",
+      "sha256": "23aaf68f0fe03413d8bdeb54af71299da6a49ccff6d21751037e9e9391d7cea7",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_2.distcp",
+      "sha256": "c93e8c2e672e42a84ba85ad80e5fb251c4473843204c44a6d1f28e6a0af43ec5",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_3.distcp",
+      "sha256": "57de22d67cd9c2a44830d69ac002ed86b4be9d16f25e2e90cf5463535da71fc5",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_4.distcp",
+      "sha256": "984b3465fd25b19aeb5e70c3e07d436ebd174fe328bab738445ea0f493915cda",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_5.distcp",
+      "sha256": "9db18881954a79741a7540bc789001dd3a038376035accb9d6f662dfa1004c18",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_6.distcp",
+      "sha256": "d32b89bb3b7a7a16097dd4ca350543eb37ef0b22681749f114ae9875a2cbe646",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_7.distcp",
+      "sha256": "a4a73a13b04f94cb09dcfb74b89410bcd2d1930541def6d16d1d6e263af53131",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_8.distcp",
+      "sha256": "5141811a667d9c30c525599fdc8deb8ed5ae61c944f23c792fe93a203e85e152",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__30_9.distcp",
+      "sha256": "d3c8330e0306315639dbf3c72612415f3623e2862ce8d23e9e1ff8c2350059a2",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_0.distcp",
+      "sha256": "38f282abbe4e5901b79b20fb7382daedcec0e76077b88105cdf0100651e6db79",
+      "size": 178654988
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_1.distcp",
+      "sha256": "b86b0c09ae7fc5e6fe90553ae2589bb941a8363aa269638feb01f4deca7e18b8",
+      "size": 178654988
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_10.distcp",
+      "sha256": "49dfe8e92a391d8784c3507895ddba813f2803457dbd225d89f17ebe57e53ca7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_11.distcp",
+      "sha256": "819ba6264721cf439a0a56c0b31a80776c787fc56094144b0e0e3cc1cd974571",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_12.distcp",
+      "sha256": "492fb73704a3b328851a78b9a07d12ef230f9575c112b399e7977595724dcaa9",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_13.distcp",
+      "sha256": "7caddb4cf42ce2a524fc65e10073bd61585e6ec29f1dda714ba3ffd6feac2ca9",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_14.distcp",
+      "sha256": "4de935d2f8dfef1036092aef4af3da5616c923fc8fc931d28b45d0dc13088b2f",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_15.distcp",
+      "sha256": "33f9e0d8ec5033aec40bf0cc7103c07c93f3241d77304be4e1aee6e2d17dbd41",
+      "size": 179001867
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_2.distcp",
+      "sha256": "7768b9b693737ae7bda4f6938124dbc43dbe4f4e9af21b852f0fc2ef32a79a10",
+      "size": 178656565
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_3.distcp",
+      "sha256": "c894100025f6734922686866418d9b7d3917c99975262e014035b8f8a930eb75",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_4.distcp",
+      "sha256": "5f660f9bb327b2568325618a9cdecf64f780f78426cbc784fa5590bc246aa445",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_5.distcp",
+      "sha256": "a50c35c0d75a16439bf4703e951fb6c74632bb3a7fc1f7b60a8770f60fd287d2",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_6.distcp",
+      "sha256": "93a2b0d39fcd3fec31762f0ffd3fcb9f0ed323fcc133a979bc985eac2c496399",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_7.distcp",
+      "sha256": "9ae7aeb27bd2e17ceeae8671c0d590ea6778a8977e82ac269b4c90682c92114a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_8.distcp",
+      "sha256": "668505a10c6130843a3d2f9c2b95bea732c1ffeb3aa06623f8251d435ee0cad7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__31_9.distcp",
+      "sha256": "2d1479e5fd03304336f61ae0d053b0f5eb26a17a60558881eaaf47bb0690b851",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_0.distcp",
+      "sha256": "3aadb5d0dd88dc78243c9d219b78c450cd707c4e209864d22b063cf3ab134d7f",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_1.distcp",
+      "sha256": "b4a223a251c65a6f8f0dd42af6a85958f57a78a63139215beb97dedd41926544",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_10.distcp",
+      "sha256": "5bbfca648a3de14966282ec7922860466e5e822704916d4880f1b752b000527f",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_11.distcp",
+      "sha256": "2eeddf48723eb31eba5d8587ed45c237c48fc60162b6cbbb909ace92f441d7a2",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_12.distcp",
+      "sha256": "3cdda4fa9d06a2fcac54aefe879f452404cec79054be6563a4b19256cf383c61",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_13.distcp",
+      "sha256": "c931f39a88857c8f7ea19c18253f00c9badd908cc00f7a6a3908fffa51211a7a",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_14.distcp",
+      "sha256": "5bfe944304b7528bcb133a769dae089469f712d2128b843c57d3cbc3be1e29e6",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_15.distcp",
+      "sha256": "36e635d158da32f3dc4e77dfe7f5cb090b2792b5771c227b95e7d76a1e7dcea9",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_2.distcp",
+      "sha256": "bf0e22f3bfe0dff5f693afe8b1cbb6c7ce8fd582b6af11ab0f71e77163ba78c5",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_3.distcp",
+      "sha256": "f93667c87457514a5bda260adcba27581a13e7fb415baa6886405dbb6cbac97f",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_4.distcp",
+      "sha256": "8d2c2958dcd71c7dd587fd2a7e15f97d892dcfe318e3370e9bb387eb486b1cfd",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_5.distcp",
+      "sha256": "7913238754cba0018898af74b3f08089445453ed0eba37fa591c06f770e8f059",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_6.distcp",
+      "sha256": "3698a634d33fdf1e194a8b6ca4aa218255e327ee6cbd1528ec5d0b474396eb84",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_7.distcp",
+      "sha256": "c67383633a4c249bff4a9852b3482064e19bbbd5dd48ab83ee76124237feb403",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_8.distcp",
+      "sha256": "b36c481aca94074c9942da3bd4ade7e667aa624e7cc453fadc8e8436eb9a239d",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__3_9.distcp",
+      "sha256": "a19d0db598f7985d9a330ba6fb2697aea3e1988da1f354289b50cd37b76ab28a",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_0.distcp",
+      "sha256": "02aee1b49881d984b021b54fc4dea81a9063f82082faf371827e64fe71a65f57",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_1.distcp",
+      "sha256": "353087b759de4d79587bc55849ff1b44e5eb272807ad3ec4cb6f0e19afa366ad",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_10.distcp",
+      "sha256": "0b673b1d3b6a5e4143dc0385d9fb10cb71785bbfc77972dca5742e7dab72f407",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_11.distcp",
+      "sha256": "94ff205316d75eb885b1e683a1a166bf2670a5a02fb51e647ef96c01b70049ae",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_12.distcp",
+      "sha256": "e716670a06315005273ae16b989f3a3922b3b9e5e9c7802e930496e6604fae12",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_13.distcp",
+      "sha256": "410db76aa5342990536c46c72c469db5a8c8c47fe9f0d0a6e654656739e7a2a5",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_14.distcp",
+      "sha256": "ad97e1d33564d926530d1c539224b55b0cf7397abe487bf772684400d073cc5c",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_15.distcp",
+      "sha256": "76cc54acca35c7f32eef3ba63ab630010a656106c56c1ac8e0d91b8438d64b80",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_2.distcp",
+      "sha256": "d5b626488f833406d3b32ecc76d90b545cfb8c68583953495a2807f77d0064dc",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_3.distcp",
+      "sha256": "b067db561a01a5560f32afa90f93d8dd6e6394511b86aae87c057e5b1ceee8bf",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_4.distcp",
+      "sha256": "3f0cd4ffc8e8d2dc0ba993518e620814bba43b3932302b23a5b0739c177b28e8",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_5.distcp",
+      "sha256": "4f2f945e1eed3f87ae7054081a23f60e18ff94bc9703363d62010515542a94af",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_6.distcp",
+      "sha256": "c33147c3eee20c15a15240e4164bab9951848b95ce367a6b1745ba7a3e8dbe90",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_7.distcp",
+      "sha256": "1aeee04364fe584ea6b277c686d52e44fd89fcebf001d6f12b57a2c4dedae71e",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_8.distcp",
+      "sha256": "b81945df6021d0c3430bb6e13947b88d494ca30ef9d45246c7dd0d62c2306705",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__4_9.distcp",
+      "sha256": "ceb2bcb5816bdeeb155991d4a69c63eb34fe05bb7aa794d9bfb3166880977768",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_0.distcp",
+      "sha256": "19f56c6f433518bea5c02a5daf72c5461fd62db07460e59073a4dfe2263c4bd0",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_1.distcp",
+      "sha256": "ad1e2db560b52dac2e917b83bcda4e54c89b32229a3a755deed4c5f3745d254a",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_10.distcp",
+      "sha256": "68f3ae7fc1892ab56459d6123319e00169ffcdd6e9c08eb31e8461f20d336aff",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_11.distcp",
+      "sha256": "e8df74ba5d7792500c240e2964826c6653f84b9f6da8ffdd99e566f0c03710f7",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_12.distcp",
+      "sha256": "313ac6c4e3866d1a3c3003e1872a17d622cdd9df3f6c1348236374970b935f31",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_13.distcp",
+      "sha256": "33821a1eca460d610c177b9e5f5f9885cdc01b6a5c06624449020af0e7eac6d2",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_14.distcp",
+      "sha256": "a2c744d65de19b00f73b39c8f26baa0192dd5ce5b979de787632af67fb2c87b7",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_15.distcp",
+      "sha256": "35e80b2fcedb9beebb5958bbfaae31ee1440bd46ed7c5f8efab3830a8737c9da",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_2.distcp",
+      "sha256": "9ddc13cac880a18dafebaed2422037f4843745394e9789842821bc7eb3241a78",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_3.distcp",
+      "sha256": "fe46e4181afcc4aee7b683df332aceb2cf41dbc6c925fbafacc9fd58d5de0845",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_4.distcp",
+      "sha256": "ebc3ef4c6db43e27e00b2ee2bac5c1f65689f377b4b60aade2925f2d35df402c",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_5.distcp",
+      "sha256": "496c562ab7d8751bf3cd42052282ef3cf974d541700360230ec4cde588322351",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_6.distcp",
+      "sha256": "169519953d6e5c88321635a89e0d28d51953325e49ce4d925fd8c220319f1752",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_7.distcp",
+      "sha256": "8e2372de94f584114c26c3cd442b5574a7d3ab989cf1d43b4a4ff3fc56a24e04",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_8.distcp",
+      "sha256": "9c4bf163d29700e1c555b1b68336a61a236bcaefeef1408d5c113e2e6a5fa7d4",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__5_9.distcp",
+      "sha256": "72a8efbf2fbe1fd95f509fecab9805fedc411ed82c323f983fcbd29f6721a951",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_0.distcp",
+      "sha256": "acea748f49f96fe17c324e4100721952264a0a66f2991ad42941ff9ca9fc25d4",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_1.distcp",
+      "sha256": "d85ed4cf6e4f1331226a37b1200c8520e2e0a833571003497e48d9cba6c98bc1",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_10.distcp",
+      "sha256": "99d86e65b4c2cf22f9ca6299fda113bf4d71e9d4b49cd3a6d45a5826a26cd7b3",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_11.distcp",
+      "sha256": "c015c2a59e3f085bc01b6054815d35898970b71c16282da2a0152dbdb177e786",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_12.distcp",
+      "sha256": "e2d205dc8ee7d411890da4e07c004b10c4501a12a8808246ade07777884a3bb5",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_13.distcp",
+      "sha256": "5c7dd7b7b4ad269a964e8344811261041125e84542ecd6c67e409d81bd243103",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_14.distcp",
+      "sha256": "524b7d6ca242c4cdfe898411e0ce83f14311f97bf61677119777ba77feda7dd1",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_15.distcp",
+      "sha256": "152088ad157206c8b9099f31e42d226b04bb2543267313198b75eda49bb71a3c",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_2.distcp",
+      "sha256": "0bacacdd6e087f92a3e4e97d92607dec94104975ebcbfc045ea33f69ba8e96e0",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_3.distcp",
+      "sha256": "4652693c3c6ae8dfc62e563da3d01577b284cf5bc6a75fa2fb7fa83f4bbc6935",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_4.distcp",
+      "sha256": "3a85b11e705dde9a53ae3bd03c6b5769d47bc8ec00bda540469454910962969b",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_5.distcp",
+      "sha256": "e2090134db70a2b3347de6d31b2dab9f636969c74d01659c32fccd8c88804d9e",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_6.distcp",
+      "sha256": "176876abcb833e102c4cbe0bbb9ffe80fe19930dc1b63ddd6089507771d0cbb1",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_7.distcp",
+      "sha256": "4ac755028ca3320cb64f9a64da14a7dd12471dc5c8b6661525ee5c42486476b8",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_8.distcp",
+      "sha256": "072812ab392fc306733ed62d6e1d5c027837dac27bef75b8167f88c82db67816",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__6_9.distcp",
+      "sha256": "db53f701c303f873aeb693560ca973b53107090f07e95f41f5f4a15485d88b55",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_0.distcp",
+      "sha256": "e7fa4fe89ad636f2cf83a8d5b165184d961ffe598269871561ad613fa45ed84b",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_1.distcp",
+      "sha256": "7d45ce5ebf02f823558ac835fcd38533dcea7480746dc9a583f9ac0a01ab53b2",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_10.distcp",
+      "sha256": "7553358ed49da80d1b7c8367e08ae6e25225d6bce75a47e4ca8d5813658fad32",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_11.distcp",
+      "sha256": "12e04e3e7c842db16da798f30ee11ba5336722e8b1bcda8a2b14b72a71a8ec3c",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_12.distcp",
+      "sha256": "23dab1c1818ef72b3499331ba9f19f9d0fd2e316e6d4ba533456f18391d27acd",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_13.distcp",
+      "sha256": "9cf72b4be8b1eaf604b3b0f9ef9333034c14340c18272391e0bd2abcf7d114de",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_14.distcp",
+      "sha256": "09482ec0473f99d2c79cf76f144ac640a2fa692db195bebfb8a614c279a8409c",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_15.distcp",
+      "sha256": "94aa25bc2be6d88ebf02fc0ec78e678646ea4daa86424d9e79fa2a43699047eb",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_2.distcp",
+      "sha256": "c2e46d29d162655b9e5fccc5e6ff62f9330fb297aecef53e4b1931d04b1812c2",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_3.distcp",
+      "sha256": "1518ac08cff709a376332f6b9fc20141a21639f25e06a53323d305a44132748d",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_4.distcp",
+      "sha256": "4e5f024ac9f5ac7052f3926d41f315501eeddf52eb15a7c72bf5608e69ecf0c3",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_5.distcp",
+      "sha256": "9966c193ab17ece808432a71396c72993e2e93e796759e28a1464ceab204be64",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_6.distcp",
+      "sha256": "b1d71373ced79bf2e773afb76d677c956514f354ac967ca08829d404d0687ebf",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_7.distcp",
+      "sha256": "a73038633ae24889b33b8136094b11016b34eb31064fe3d7dc7fb28d8b71237e",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_8.distcp",
+      "sha256": "83ced2d3e01653196c5481813439da0e009667f8e5da3e742b26a8c8c8b4a555",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__7_9.distcp",
+      "sha256": "31b6426a5ee8a569fbb02a231e8d232bf71c9b6542e8a1af232399dfd7149cbc",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_0.distcp",
+      "sha256": "dc2b6ea633aff220a8dfe78c6523c88ff48bc144d7f403dcc6f272f293530ae4",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_1.distcp",
+      "sha256": "e8b4baa1c8154d5154afce46dcd018e964a6b3d030d777d01e74e7663c188014",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_10.distcp",
+      "sha256": "a17e9f66d8a29eb026e748c73d401c7bed2e65071477476abbbe21a6268c6509",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_11.distcp",
+      "sha256": "4729b82dcd9718a36ac1ada3e0c08ef38409cf307f087caa394056d38c3f342f",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_12.distcp",
+      "sha256": "26fc491b336fa8d1a89aec0b848553baf95502b93461b262da5940d223118094",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_13.distcp",
+      "sha256": "fe0fae1f025da6d6b216b8ca79858fd678e50d3db3dc35374407b8fc41906a66",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_14.distcp",
+      "sha256": "96261aca0aefd1e1c5a10159fe4646da4ce00000f37cb25215b0037b0a8d41ae",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_15.distcp",
+      "sha256": "2bbb5b5efc2470146af0cc9635f5950e0066562bca58fce73a44e55c00969159",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_2.distcp",
+      "sha256": "0ffd2bc1d4a2f704b0ce002b4fbb8ae8547960851100e9a24d6ffb1bbc9a15ad",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_3.distcp",
+      "sha256": "d285aa3f596bf6213d564ad360f81a95901507a4d2846afaae4d2c7201ced267",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_4.distcp",
+      "sha256": "cc7a44312ea9db83efd68e25145c9ec658861618bd444f506a98c8b9736f9bc1",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_5.distcp",
+      "sha256": "5d410f0cd9244696166fb25b84e3a0a3b7d6bbae3f22da3bcfd7c4c7d8999eba",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_6.distcp",
+      "sha256": "651a1874083c8b5da9e1da77edadf88a5f3890d6b316b2ae43fe8300efe90cab",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_7.distcp",
+      "sha256": "a825ba46d27af7687ff4e4e829802502ba5731a856920119764703fc824e04b3",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_8.distcp",
+      "sha256": "a6ba817b9cc1185442e12c1f71e4f289dcea0488318d25d73ecdfbf06a2c1eb3",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__8_9.distcp",
+      "sha256": "713d8f52d35a8e3b6a45ece8075ecfec12615cb4add6e91c11d405ecc7fb69bb",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_0.distcp",
+      "sha256": "2a3e75780bcedc15d202a43a80af90c78fe5cdf1181aa70afaa5865cc197e68b",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_1.distcp",
+      "sha256": "3d5e4f65d01485ed45346aec4f25abc72cf2b48ca964b018774cd83a267516b4",
+      "size": 178818828
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_10.distcp",
+      "sha256": "39a3e6e7048cf2b141b1f308311f89961140f8b1e2303747a66a7fc9f0282413",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_11.distcp",
+      "sha256": "2fff40dc5162caf810db62717dc60a57fe924be4ac2fde94553ef483dd1a3ed0",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_12.distcp",
+      "sha256": "9cf2f541047ea0ea9b19d8b6e6bbe927d713c2dbfd043113ffa71a299d4e2310",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_13.distcp",
+      "sha256": "afe7cc2e97522b584f5a0565f63bc55b78e1e49a547759f785c12276ff21b8e2",
+      "size": 178865789
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_14.distcp",
+      "sha256": "4fac16837f59b268d58485d0f37e27480d8633457953ca10526d5d25baf760dc",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_15.distcp",
+      "sha256": "b1d0168b0c24f5e656f9f8cd3afd0ea77ae28479e620f087b6f42be00fef7d99",
+      "size": 179294937
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_2.distcp",
+      "sha256": "3fe5dd3a6ea321d1919ed36b30e9e294352b266a8a75c892a1e4dcfb9e677836",
+      "size": 178820405
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_3.distcp",
+      "sha256": "0f1df46214c0f8184c229d8985a1942bdf9429020ee6c6d40e096fff7bce05e3",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_4.distcp",
+      "sha256": "23e7b94f800d48b7e45f4aca1467f44e6f6e363b278692158cf1a78d97504f26",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_5.distcp",
+      "sha256": "69ceb27dc991bef2e5f8eba8b0e194c4f697e1321b3366930a360f55ab681e0f",
+      "size": 178929748
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_6.distcp",
+      "sha256": "7f180de7773aa8141093fc6e403cabc7ae3807240abd9831a8e2953220aa63b9",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_7.distcp",
+      "sha256": "69bf67b931072c1cc057fae0da46046467a94c84c93aee8bbc5e14fa5cd98b04",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_8.distcp",
+      "sha256": "c55e0b1e45aa5ba0f571dd9852cb9b741aeb8c5e9b8d6ba108e9f52c65090f1b",
+      "size": 179257428
+    },
+    {
+      "lfs": true,
+      "path": "olmo_core/model_and_optim/__9_9.distcp",
+      "sha256": "b3e4ddb86d0161632d71799a068c6c713b8d221d0aa581f4127a01d2ceef8c77",
+      "size": 179257428
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "61dc85913c84188702b232238e5d664290f0b404802f8dda879067c1db72cde5",
+      "size": 75
+    },
+    {
+      "lfs": false,
+      "path": "tokenization_bolmo.py",
+      "sha256": "ec47aee0bc176b7369837f547d4445f287053c2a092e34895e248300e42bbad5",
+      "size": 17355
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6a1384c1d5c91e58c1069dd8be2c61d6808c5fa9cb53ca0fd24002e42c3de583",
+      "size": 1064
+    },
+    {
+      "lfs": false,
+      "path": "utils_bolmo.py",
+      "sha256": "60fa44de5c21894ef940f88b96975e66e7a6c3355611699a70dd5ae9c0b5208e",
+      "size": 4061
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/Bolmo-7B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5965f14f64073730e0d57680ca02aa8f6844a9bfc7d618e8ea4290420bec3d5f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:49:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/Bolmo-7B/resolve/11586e083d5f02977045893f3a0f38e41fba1d0a/"
+    }
+  ],
+  "upstream": {
+    "commit": "11586e083d5f02977045893f3a0f38e41fba1d0a",
+    "host": "huggingface.co",
+    "repo": "allenai/Bolmo-7B",
+    "url": "https://huggingface.co/allenai/Bolmo-7B/tree/11586e083d5f02977045893f3a0f38e41fba1d0a"
+  }
+}

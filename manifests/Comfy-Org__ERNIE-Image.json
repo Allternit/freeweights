@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:29:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "951be8e2e16394dd24cc18c80255314fb3f5a1f409f4a5e57b7e87d1f3da2609",
+      "size": 2288
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/ernie-image-turbo.safetensors",
+      "sha256": "741a4cc0467d4b9f04490d7faa9a5869ff4aa97eb2914927a1df9abb070e8e52",
+      "size": 16067025480
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/ernie-image.safetensors",
+      "sha256": "94a35abaa0899cccc34d2e37310abf74a0a714256526117bba782c7eb4eb91c7",
+      "size": 16067025480
+    },
+    {
+      "lfs": true,
+      "path": "text_encoders/ernie-image-prompt-enhancer.safetensors",
+      "sha256": "e823e002626858be92e6600609f72fde33c5f21d3c6574721ce9f41bf1c50771",
+      "size": 6877439999
+    },
+    {
+      "lfs": true,
+      "path": "text_encoders/ministral-3-3b.safetensors",
+      "sha256": "49a750a128863854eac7d85e1a277a7b44bf6ec3646405b84686dfeeca3708ca",
+      "size": 7717637511
+    },
+    {
+      "lfs": true,
+      "path": "vae/flux2-vae.safetensors",
+      "sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5",
+      "size": 336213556
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/ERNIE-Image",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "951be8e2e16394dd24cc18c80255314fb3f5a1f409f4a5e57b7e87d1f3da2609",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:29:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/50509a88bc4fb9e89583a98605f4c81dc221eb8c/"
+    }
+  ],
+  "upstream": {
+    "commit": "50509a88bc4fb9e89583a98605f4c81dc221eb8c",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/ERNIE-Image",
+    "url": "https://huggingface.co/Comfy-Org/ERNIE-Image/tree/50509a88bc4fb9e89583a98605f4c81dc221eb8c"
+  }
+}

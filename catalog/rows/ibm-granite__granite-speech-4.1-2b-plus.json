@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "ibm-granite/granite-4.0-1b-base",
+  "display_name": "granite-speech-4.1-2b-plus",
+  "family": "granite",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "ibm-granite/granite-speech-4.1-2b-plus",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/ibm-granite/granite-speech-4.1-2b-plus.json",
+  "params": 2111812956,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "ibm-granite/granite-4.0-1b-base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.granite",
+  "signals": {
+    "downloads_30d": 18754,
+    "likes": 103,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T0",
+  "total_size": 4231156312,
+  "upstream_url": "https://huggingface.co/ibm-granite/granite-speech-4.1-2b-plus",
+  "what_changed": null
+}

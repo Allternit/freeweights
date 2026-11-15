@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T03:39:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9989afbfc2edd983eba80341651fa8efcf9963d8bc99ee2ec6f12d74bfdc0791",
+      "size": 4094
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0bb59b8d65cc846aad5fd413c3ad76e95a72834bc547ab16b913e98eba5de80d",
+      "size": 2159
+    },
+    {
+      "lfs": false,
+      "path": "configuration_tips.py",
+      "sha256": "bd2285cb5ce529242c2e29249972b52632425e06843e9be064998be6aeaebb6c",
+      "size": 1725
+    },
+    {
+      "lfs": false,
+      "path": "image_encoder.py",
+      "sha256": "862fab50ddd623222112bd589b348bba57ead44523ac4dcc399422955ad76de3",
+      "size": 30766
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "092cae42ed7352196a37e35914b47ddb036156ff2edef7499880c0c56373d1e1",
+      "size": 6095705712
+    },
+    {
+      "lfs": false,
+      "path": "modeling_tips.py",
+      "sha256": "11dae40ee6aa32cd0bb0ddcbfdcd871abbc358a489e7d916651342acecff8a8f",
+      "size": 4681
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "e41a8840f901f56bbaf6ed63bc84f391d4705f937947ba59790f6679793bd791",
+      "size": 347
+    },
+    {
+      "lfs": false,
+      "path": "text_encoder.py",
+      "sha256": "04addbc2f19664e48ef963452e855d1bce185be9aaf276fbd9e0a70d7f0918df",
+      "size": 10490
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "4c40e7723348d5d9a3d3c2bdcec5120d97fb29edfe1bf118b4494bce02fc7624",
+      "size": 731655
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0da353fd61bc490106aa9f0ae2e097802182106d1af182cfe4aa654df0ce729b",
+      "size": 292
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/tipsv1-g14-lowres",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9989afbfc2edd983eba80341651fa8efcf9963d8bc99ee2ec6f12d74bfdc0791",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:39:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/tipsv1-g14-lowres/resolve/a8c59ff3ac1b229c7178e8d7f626036d812358a4/"
+    }
+  ],
+  "upstream": {
+    "commit": "a8c59ff3ac1b229c7178e8d7f626036d812358a4",
+    "host": "huggingface.co",
+    "repo": "google/tipsv1-g14-lowres",
+    "url": "https://huggingface.co/google/tipsv1-g14-lowres/tree/a8c59ff3ac1b229c7178e8d7f626036d812358a4"
+  }
+}

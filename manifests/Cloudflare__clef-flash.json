@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-15T02:35:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".eval_results/Cloudflare__clef-flash.yaml",
+      "sha256": "4ee39a04dc803f6e90520edbc2253377bd7b1646cf5f47c8c2c8812e54825e9e",
+      "size": 1110
+    },
+    {
+      "lfs": false,
+      "path": ".eval_results/safeagents-judge-bench.yaml",
+      "sha256": "c6f02c4738621231b1b9039928646000ac2234eac2426ba341600cf02eabaa82",
+      "size": 1187
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "size": 11544
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "53a3dc4ac96a1b2f17e6c03d9cf19a50b25ddad8d270fbe655902f6ce68bb4b5",
+      "size": 11132
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "size": 7756
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238",
+      "size": 2832
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "45707f8467bf4e54e112c6095a1b2d1f2d63651cf86816344cfff21f02dda0d4",
+      "size": 116
+    },
+    {
+      "lfs": true,
+      "path": "joint_head.safetensors",
+      "sha256": "19cdcec8c81dc9212be320fff47462ab342fbc1278be4368fb3da71241cf5ba0",
+      "size": 243538016
+    },
+    {
+      "lfs": false,
+      "path": "joint_head_config.json",
+      "sha256": "77efe959a38b5b17b241543e129e695f3c77465ece55a25985279bd8176279a0",
+      "size": 119
+    },
+    {
+      "lfs": false,
+      "path": "joint_schema_model.py",
+      "sha256": "0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3",
+      "size": 23263
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "8b45a8e968141cdcc58fb71c9adfc258e2c77b5f062bc636c1fd5bc5d916b565",
+      "size": 4942706120
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "7590856c713eed844a2dcf48e6c43c4de165b788bc3f80e328311183cdbc7db8",
+      "size": 4987757928
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "e6eac2467952c33361ed7dcb3c7959d1086bbe57201cd3749c3d769fdc17fe63",
+      "size": 4954810240
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "9fcecc6556b39171238373a465f409794b7f821fb4cd1e6459e3a9c0fe317af7",
+      "size": 3934446832
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "941305ff9f77551e145a6cea976ef456cd5cb208cbece99f168376c752fcf96c",
+      "size": 69253
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+      "size": 1191
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72",
+      "size": 1075
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Cloudflare/clef-flash",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:35:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Cloudflare/clef-flash/resolve/22b75507981345858dd152fbd9a6f8c0c4068b0a/"
+    }
+  ],
+  "upstream": {
+    "commit": "22b75507981345858dd152fbd9a6f8c0c4068b0a",
+    "host": "huggingface.co",
+    "repo": "Cloudflare/clef-flash",
+    "url": "https://huggingface.co/Cloudflare/clef-flash/tree/22b75507981345858dd152fbd9a6f8c0c4068b0a"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:21:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "098e29e79bb7c54c0bbda68e4138144a5ab02df2ac1501eeef22c50b084a0db4",
+      "size": 11109
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b05e73ab9087d0c2a8705df32a0615546c42d356471e18675afc8c33bcc7cd0a",
+      "size": 834
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "cd22f08997eb2353c809a1d9b523c42c924247eb8619aa3e408bba3448f6e270",
+      "size": 111
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "674a58bea450ec3f41df9cfa9bfd1b97d51623d1fb4e912f845db89a220ae2b6",
+      "size": 4983064520
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "294ed1632f1d11c106830de97c2f11d48f2d72a718336033ba8f0a5fbc40e2ba",
+      "size": 2667697392
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "7e808637b9153fd4df9ec1a10a8f090bf851acec1a953bfbbd9f50d9d2cb1060",
+      "size": 27399
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+      "size": 414
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be12f4375d655cc740864e3a9041bcddd8477942f209d9e7f27f6c8767162638",
+      "size": 17078368
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2f88dc9c9d3cf8178b5d8c1636614c174c14328715c00509361097434b2937b6",
+      "size": 177216
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "swiss-ai/Apertus-v1.1-4B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "098e29e79bb7c54c0bbda68e4138144a5ab02df2ac1501eeef22c50b084a0db4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:21:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/swiss-ai/Apertus-v1.1-4B/resolve/5e18f2c64c9d49fd441977e01c14e667b34374e8/"
+    }
+  ],
+  "upstream": {
+    "commit": "5e18f2c64c9d49fd441977e01c14e667b34374e8",
+    "host": "huggingface.co",
+    "repo": "swiss-ai/Apertus-v1.1-4B",
+    "url": "https://huggingface.co/swiss-ai/Apertus-v1.1-4B/tree/5e18f2c64c9d49fd441977e01c14e667b34374e8"
+  }
+}

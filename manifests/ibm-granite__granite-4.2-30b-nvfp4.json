@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:00:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c8748766e6fd683778fa1a5f4412f8f081b9cc2245b534789b7b07d900d5f766",
+      "size": 375
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f0ba43f79b3cabca5e5a7584c77aec92f49feae45cdf7779c87d9fc54cd90258",
+      "size": 9013
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "702230e0b9b82fd9d2837dd8103f667db3361117407fc65aa39c7dcacc4e93d2",
+      "size": 2282
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "1b9baf0a7959d31d7fb58ff6b506c27d09a73d395cadccc7e6dd1d4b7e43fd9d",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "granite_thinking_parser.py",
+      "sha256": "cd5eef99f559f33dc402e0475174a97dcb43724d7e810149c702e9bbc473048a",
+      "size": 4649
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+      "size": 916646
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "cc474dbf5e76f12eddc54b3cca03ad758f0f57f714bc0e01984f3cb5be70967a",
+      "size": 4998358072
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "aa6370e1f7a39caac8b2d3eb0b96d97a5759b1677cddc3d1518cbcef9361bb53",
+      "size": 4993715584
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "d80dbd5a16a52df52a86f68fe1b41938c7c26274bc1f2033664966dbd9a15ae7",
+      "size": 4934995552
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "488ce18cd24a72716ec80dc2ed0e69f7014b8330f9c354d765b9deebaf795477",
+      "size": 2723841120
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "ef3f19914d28ec598fbd261bec53e1ebdbf25306ba619ba17ec963f58e3d2d56",
+      "size": 174017
+    },
+    {
+      "lfs": false,
+      "path": "model.sig",
+      "sha256": "66685a3dd4ce3bfafd06de484ee3469071a1f62b4cf4f96813666ea03d892765",
+      "size": 11756
+    },
+    {
+      "lfs": false,
+      "path": "recipe.yaml",
+      "sha256": "d59dfc4b603846bd667f9eab797df8a4c14a6cfb171ae456343357efeabf7fed",
+      "size": 264
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "e9435fefd6d838fd9fcbbc44b97a8e3ff322be7f6dfb7e4fd2468586574bb52b",
+      "size": 563
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "883975314d58743726347caaf2c32ac89afd5ad57222cffbc4f052f2ab27b2d7",
+      "size": 7153414
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2007f26df166ed10a2d6fa881c1c8f3cdd151e451469f59b274897f14449835f",
+      "size": 17677
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "a1be0c1e0a89b5bacda6af6f8b63df09668cb8d1f656229ee9123140c9507810",
+      "size": 1612694
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-4.2-30b-nvfp4",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c8748766e6fd683778fa1a5f4412f8f081b9cc2245b534789b7b07d900d5f766",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:00:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-4.2-30b-nvfp4/resolve/bddf34bc6db17e5c4f586e49c1668c8e97610446/"
+    }
+  ],
+  "upstream": {
+    "commit": "bddf34bc6db17e5c4f586e49c1668c8e97610446",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-4.2-30b-nvfp4",
+    "url": "https://huggingface.co/ibm-granite/granite-4.2-30b-nvfp4/tree/bddf34bc6db17e5c4f586e49c1668c8e97610446"
+  }
+}

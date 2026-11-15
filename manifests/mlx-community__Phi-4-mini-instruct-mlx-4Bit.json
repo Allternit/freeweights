@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:15:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b7abb8741a718c8edb77216ccfdfdcaa4ee8f7bc17d2feab74f5cc106b96d54c",
+      "size": 1328
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "febf589225c9728ab791f52e8897d7607a823d45368f0a4c92fa68997b40cce9",
+      "size": 423
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d2b15a69fc2edd68fe3bd43a1b4aa4fd6bc27aa7beeea176918b7115774e5a69",
+      "size": 3382
+    },
+    {
+      "lfs": false,
+      "path": "configuration_phi3.py",
+      "sha256": "ec2044b77d0b8111640ac134daa3af1f40dc552a739f8959626e7e58ea3352df",
+      "size": 10875
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3e3f48753753f92d2b958679151861d4fd7bf26e4dfc41fd47056116c4914dcd",
+      "size": 168
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "335fc22ddc8e9070a2359fa278c90e0cabdea0e31f16a4340524598abe0476d4",
+      "size": 2158101119
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "40cf6c64a926f978cec52e664d71bed98180d73b486d34af0222678991cc90e2",
+      "size": 32594
+    },
+    {
+      "lfs": false,
+      "path": "modeling_phi3.py",
+      "sha256": "d5fd551a7fe759b1d25e5b16b5012aa98b9b8bd400d26c7ee69c0090a245d6cd",
+      "size": 54268
+    },
+    {
+      "lfs": false,
+      "path": "sample_finetune.py",
+      "sha256": "ec9ead444318c31095e5be48ec4b17ec031134836dd7906a73186265c323348a",
+      "size": 6167
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "7ea8bdf68c3e7549a3fb4342523288ce628f6ab56a618f9a4dfb234a0b4d46a8",
+      "size": 15524476
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2fe233f0932af65a3351d7c7d5a1a16073e18bba23e0d75eaf0869dffb68f7f9",
+      "size": 320
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Phi-4-mini-instruct-mlx-4Bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b7abb8741a718c8edb77216ccfdfdcaa4ee8f7bc17d2feab74f5cc106b96d54c",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.phi",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:15:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Phi-4-mini-instruct-mlx-4Bit/resolve/d848c30f6d5419b9892433cf6b1062626d15340e/"
+    }
+  ],
+  "upstream": {
+    "commit": "d848c30f6d5419b9892433cf6b1062626d15340e",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Phi-4-mini-instruct-mlx-4Bit",
+    "url": "https://huggingface.co/mlx-community/Phi-4-mini-instruct-mlx-4Bit/tree/d848c30f6d5419b9892433cf6b1062626d15340e"
+  }
+}

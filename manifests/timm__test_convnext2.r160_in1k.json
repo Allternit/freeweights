@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:26:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8edb2c9b29aff74bdfc9e043ba779052e175c6dd4fb03f637e7aeb9694ed8e15",
+      "size": 5375
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a3a9ee33c96e886b6c5a841e574c6a55b5d695d0c73fd5d43f27f4add119542d",
+      "size": 559
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "dd1f18fb7ba6954031ff5ead19dc4099d2535be8b98a9300f196d0fc791cc6b7",
+      "size": 1916376
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "a3b5443eddea32490d63ceb38313bedc83fbfdae756fe450d0d0b41a481a198d",
+      "size": 1932118
+    },
+    {
+      "lfs": true,
+      "path": "test/owl_tensors.safetensors",
+      "sha256": "5cee04fb397e23523e5dc686e251105a4a303954845a152cfd72751bdc7dfa0c",
+      "size": 324824
+    },
+    {
+      "lfs": true,
+      "path": "test/rand_tensors.safetensors",
+      "sha256": "790b9f400aadb6d5e916108ddd972e1d5f4bfa7bb528225e242a90528e145b21",
+      "size": 1298360
+    },
+    {
+      "lfs": false,
+      "path": "test/test_owl.jpg",
+      "sha256": "e9ee19efca9099211776da24390b831679e5f4b429c99aee816e609efe8dde7c",
+      "size": 601233
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/test_convnext2.r160_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8edb2c9b29aff74bdfc9e043ba779052e175c6dd4fb03f637e7aeb9694ed8e15",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:26:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/test_convnext2.r160_in1k/resolve/cf66909d51806c68e55af7728125ec2bc0ceb63d/"
+    }
+  ],
+  "upstream": {
+    "commit": "cf66909d51806c68e55af7728125ec2bc0ceb63d",
+    "host": "huggingface.co",
+    "repo": "timm/test_convnext2.r160_in1k",
+    "url": "https://huggingface.co/timm/test_convnext2.r160_in1k/tree/cf66909d51806c68e55af7728125ec2bc0ceb63d"
+  }
+}

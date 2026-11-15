@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "black-forest-labs/FLUX.2-klein-4B",
+  "display_name": "FLUX.2-klein-4B-FP8",
+  "family": "unsloth",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "unsloth/FLUX.2-klein-4B-FP8",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/FLUX.2-klein-4B-FP8.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "black-forest-labs/FLUX.2-klein-4B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.image",
+  "signals": {
+    "downloads_30d": 238655,
+    "likes": 6,
+    "trending": null
+  },
+  "tasks": [
+    "image-to-image"
+  ],
+  "tier": "T1",
+  "total_size": 25109905210,
+  "upstream_url": "https://huggingface.co/unsloth/FLUX.2-klein-4B-FP8",
+  "what_changed": null
+}

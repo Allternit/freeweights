@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T04:32:24Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "MiniCPM4_1-8B-Eagle3-GPTQ/config.json",
+      "sha256": "a86021a4580f998f94adf0f864f8ee2dea8bd3ebb20062be4b0c80af76906c49",
+      "size": 4355
+    },
+    {
+      "lfs": true,
+      "path": "MiniCPM4_1-8B-Eagle3-GPTQ/model.safetensors",
+      "sha256": "3214778ef8aa6add55a037a92439ca91de02db2ccfcdbc19f9a67b800056e21b",
+      "size": 421844472
+    },
+    {
+      "lfs": false,
+      "path": "MiniCPM4_1-8B-Eagle3-bf16/config.json",
+      "sha256": "321eddb27b5e683f8dc1336eec08fdc4e00092c0523495ead0f4ba788a995698",
+      "size": 4176
+    },
+    {
+      "lfs": true,
+      "path": "MiniCPM4_1-8B-Eagle3-bf16/pytorch_model.bin",
+      "sha256": "01ad40f59f37610d12f4b7402063f373fb28e6ad99e1ec7afbe33c08209e5e77",
+      "size": 874879771
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9c47049c1f1d355ba16ca9c86d789f2a952309f70a937bcd9329a0ca9842d3e1",
+      "size": 6583
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM4.1-8B-Eagle3",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9c47049c1f1d355ba16ca9c86d789f2a952309f70a937bcd9329a0ca9842d3e1",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:32:24Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM4.1-8B-Eagle3/resolve/78689e7a50de89baab0c146f3b012267df70b5f2/"
+    }
+  ],
+  "upstream": {
+    "commit": "78689e7a50de89baab0c146f3b012267df70b5f2",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM4.1-8B-Eagle3",
+    "url": "https://huggingface.co/openbmb/MiniCPM4.1-8B-Eagle3/tree/78689e7a50de89baab0c146f3b012267df70b5f2"
+  }
+}

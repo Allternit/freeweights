@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:35:33Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c60973fbc789e9c122e8d41cfd5a91eda6fe8beb47fff0c9ec373d8a745935f7",
+      "size": 3800
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "18f84d052b292bcad97bf30bbd3dcc37b6a856a29863f7d0788b97ccef1addf5",
+      "size": 843
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "3571477a89761f392128de1c5b0a636703abe15a1f1d2b9e7823905425f406bc",
+      "size": 4965305552
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "9f505916ba600c03b1c65298a2f2cd658c5a18245e4e6c733adea1661954c59c",
+      "size": 4273097520
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "0ad1f7862e6e0d129732c0527c823a167e1529db5e6dd2ce49b97d96198fe896",
+      "size": 22871
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535",
+      "size": 301
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "2f7e8b61d1cb49d927a5f5aaeecdac9cb173cccb3ec1897cb5d7bb08bda54907",
+      "size": 17157913
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "c5d168d413c308b430d7a1005ffd2a33484a13ee31df760e92a434aca9cf0ca8",
+      "size": 1042
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "arcee-ai/AFM-4.5B-Base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c60973fbc789e9c122e8d41cfd5a91eda6fe8beb47fff0c9ec373d8a745935f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:35:33Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/arcee-ai/AFM-4.5B-Base/resolve/dab7922f9c868d479b365410304f466b007b1c5a/"
+    }
+  ],
+  "upstream": {
+    "commit": "dab7922f9c868d479b365410304f466b007b1c5a",
+    "host": "huggingface.co",
+    "repo": "arcee-ai/AFM-4.5B-Base",
+    "url": "https://huggingface.co/arcee-ai/AFM-4.5B-Base/tree/dab7922f9c868d479b365410304f466b007b1c5a"
+  }
+}

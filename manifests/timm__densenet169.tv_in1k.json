@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:46:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "caf737771e416ca8353ba5219004ad1a6d12049151d5a7dd82c73a972b2a17da",
+      "size": 3515
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "62ea7561f5ec6e9a3d6088879b7925d35595f3fd608a2e0cd966b0491c8d3c60",
+      "size": 579
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e982149feee635eebfc55d68b2fa623a59450d08f03b8d9a19205056366e37f0",
+      "size": 57350342
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "45a4d0997175cacab92f55b9ccbdfe96b58cdec30cb32ce55a84187088e9b8d0",
+      "size": 57612664
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/densenet169.tv_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "caf737771e416ca8353ba5219004ad1a6d12049151d5a7dd82c73a972b2a17da",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:46:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/densenet169.tv_in1k/resolve/0c393a8ab0b369cfeb596c45fbaff58d0d4272b8/"
+    }
+  ],
+  "upstream": {
+    "commit": "0c393a8ab0b369cfeb596c45fbaff58d0d4272b8",
+    "host": "huggingface.co",
+    "repo": "timm/densenet169.tv_in1k",
+    "url": "https://huggingface.co/timm/densenet169.tv_in1k/tree/0c393a8ab0b369cfeb596c45fbaff58d0d4272b8"
+  }
+}

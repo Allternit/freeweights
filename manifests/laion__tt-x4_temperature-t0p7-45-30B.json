@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T04:16:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "de80bb6edf1a833ee29462d6cd72903a73880454d897febf28a9959c3c4c42a8",
+      "size": 1636
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "00581576a27d2ff503453435ca459be5c4643cc45a4fe27f69ac5c2b46b2f1d9",
+      "size": 1624
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "5a38bfa05833266240066aedc497decc9b00cc0d3e3b8cceea98cf530196ab06",
+      "size": 6211
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e8b91d3d30aae0cc141cb2412d434445f8b19dae5a77d01bb332d744d4d72005",
+      "size": 1024
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "2cb42f3bbca69b7dbf925354f69a3a8c5ef2184f33f8c2cd744d24aaa8e6ca69",
+      "size": 217
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "e5029c8807069460caeee0303c3f25e5dc9c121825e1df1d3597c3b98ef9cd8f",
+      "size": 50001000776
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "b2bde9895666a274b7a0fefb4ceca4d04a70d738a435d1347bbdcc0d4389d03e",
+      "size": 11065610128
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "8056f5e61a77bcc39322368320783ace12dfd0877cf642821620e33341d5d25e",
+      "size": 1699795
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "45d3581eb7a1eba4265c25dab7825032d4945f8829fec21deeee33cb1f359881",
+      "size": 693
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/metrics.csv",
+      "sha256": "c34185118be297a6a3b60c4d9981dba18e6ca26642e2d89480b13cb9e28dda7a",
+      "size": 90627
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/report.md",
+      "sha256": "f450ffd20392055a6d46981743fb31eb70de8f3161f5187775976100ded6d92f",
+      "size": 27714
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/reward_plot.png",
+      "sha256": "312cb24d06aa8d727195594a53f5041ddc77e0b996c9927bd4142d1ecb16ea65",
+      "size": 599538
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/rl_config.json",
+      "sha256": "f8420d5b669f5f5aada2daa41aac6555da34391fc269c684029a62e5877a3514",
+      "size": 9351
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/tt-x4_temperature-t0p7_out_logs.tar.gz",
+      "sha256": "44c205c7b2b56993674e48140edde5a341b675cc095ec65231b64a49f24053d6",
+      "size": 3767718
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/vllm_metrics.csv",
+      "sha256": "69144f73cd21a76d7c26c55009b6c45061a59f5fc659bd334f603042d6add86d",
+      "size": 7552026
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/tt-x4_temperature-t0p7-45-30B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "00581576a27d2ff503453435ca459be5c4643cc45a4fe27f69ac5c2b46b2f1d9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:16:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/tt-x4_temperature-t0p7-45-30B/resolve/a4b0c5a14ccecb302ff718cbdbe72a0b28649763/"
+    }
+  ],
+  "upstream": {
+    "commit": "a4b0c5a14ccecb302ff718cbdbe72a0b28649763",
+    "host": "huggingface.co",
+    "repo": "laion/tt-x4_temperature-t0p7-45-30B",
+    "url": "https://huggingface.co/laion/tt-x4_temperature-t0p7-45-30B/tree/a4b0c5a14ccecb302ff718cbdbe72a0b28649763"
+  }
+}

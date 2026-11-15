@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "zai-org/GLM-4.1V-9B-Base",
+  "display_name": "WebVIA-Agent",
+  "family": "glm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "zai-org/WebVIA-Agent",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/zai-org/WebVIA-Agent.json",
+  "params": 10292777472,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "zai-org/GLM-4.1V-9B-Base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.glm",
+  "signals": {
+    "downloads_30d": 409,
+    "likes": 21,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 20605690148,
+  "upstream_url": "https://huggingface.co/zai-org/WebVIA-Agent",
+  "what_changed": null
+}

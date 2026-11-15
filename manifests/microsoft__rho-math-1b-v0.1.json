@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:56:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e82da548552f36d0a1188624810ce6fe0903694360270b48cd1d61afff4799a0",
+      "size": 7569
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "68fd78fa499d9cb69fb39a870e22c660938497448448c3b91582d8c982bc10b8",
+      "size": 674
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "79d9e7b0cc44b60b14c3a6a7b1f5103e124b85ed524e9c80098a1c48aa6eca2d",
+      "size": 111
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "87ce667a33ba1d6847e60d16042bbd7cc5e081c0c5ad2a60952327dd2c274542",
+      "size": 4400216536
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+      "size": 414
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "bcd04f0eadf90287bd26e1a183ac487d8a141b09b06aecb7725bbdd343640f2e",
+      "size": 1842767
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "size": 499723
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e3dd4025f0dc9f23a8bea840afceb093dc4c3f250f6555ec0c536cc0615e0695",
+      "size": 918
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/rho-math-1b-v0.1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e82da548552f36d0a1188624810ce6fe0903694360270b48cd1d61afff4799a0",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:56:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/rho-math-1b-v0.1/resolve/0b1db8d22b330c281cc810899d7938f023d78195/"
+    }
+  ],
+  "upstream": {
+    "commit": "0b1db8d22b330c281cc810899d7938f023d78195",
+    "host": "huggingface.co",
+    "repo": "microsoft/rho-math-1b-v0.1",
+    "url": "https://huggingface.co/microsoft/rho-math-1b-v0.1/tree/0b1db8d22b330c281cc810899d7938f023d78195"
+  }
+}

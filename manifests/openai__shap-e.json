@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-15T02:51:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "72d4b85c6d82e61b337e897a9931d20882d7bedbdbf3a2e9b58670598818a499",
+      "size": 3899
+    },
+    {
+      "lfs": false,
+      "path": "model_index.json",
+      "sha256": "a039954b51ec9df6ae850f6cd4569e766514a218673739f50a73226a236fd2d1",
+      "size": 458
+    },
+    {
+      "lfs": false,
+      "path": "prior/config.json",
+      "sha256": "adc182bfcce5b1f1b311c06c5f8bbc6d4bbbdf29f474460cc7a25815c40ab13f",
+      "size": 489
+    },
+    {
+      "lfs": true,
+      "path": "prior/diffusion_pytorch_model.bin",
+      "sha256": "df21cb49c7f10eb02f6ce485a59c86601d03707b80d715335f0be6be89b1226e",
+      "size": 1262937295
+    },
+    {
+      "lfs": true,
+      "path": "prior/diffusion_pytorch_model.fp16.safetensors",
+      "sha256": "04ad95e7374796a817f5b5a32b885be457b013ffdadf5da2f99883886f417aac",
+      "size": 631435880
+    },
+    {
+      "lfs": false,
+      "path": "renderer/config.json",
+      "sha256": "34a775996b2412e8703a4a9add265b2cd39b9e4c6b38db4442baaedb0319b220",
+      "size": 496
+    },
+    {
+      "lfs": true,
+      "path": "renderer/diffusion_pytorch_model.bin",
+      "sha256": "2751cbad694f7fef9022f88673c065df49283d977ff93e88e133f3585e2dfd28",
+      "size": 905200536
+    },
+    {
+      "lfs": true,
+      "path": "renderer/diffusion_pytorch_model.fp16.safetensors",
+      "sha256": "394d52e159447b2bfb944d3bfa4f438180b72ba40644dc4c730282e7a9b62c65",
+      "size": 452597858
+    },
+    {
+      "lfs": false,
+      "path": "scheduler/scheduler_config.json",
+      "sha256": "dfbcacfd3b975b08c85c433a17a3d59101733a09ef21deb0d4718d27d6a6564c",
+      "size": 276
+    },
+    {
+      "lfs": false,
+      "path": "shap_e_renderer/config.json",
+      "sha256": "a54045639b11b7bc650a9cd12dd228a14fa4f325896913fade7ed581cad25915",
+      "size": 551
+    },
+    {
+      "lfs": true,
+      "path": "shap_e_renderer/diffusion_pytorch_model.bin",
+      "sha256": "2b63c2b52fbff7cc2c0b88b196f169e8adbcc2c298cadab30afe63c8a7241a05",
+      "size": 905233202
+    },
+    {
+      "lfs": false,
+      "path": "text_encoder/config.json",
+      "sha256": "2aae30af8293e549e2b0f842c6f4bed27e370921d971882e90c0f1a32cef6e53",
+      "size": 626
+    },
+    {
+      "lfs": true,
+      "path": "text_encoder/model.fp16.safetensors",
+      "sha256": "fc42badf529dd83f2f7c3d20fe6bda1e22036162f37c4c668b9e130884e20561",
+      "size": 247324608
+    },
+    {
+      "lfs": true,
+      "path": "text_encoder/pytorch_model.bin",
+      "sha256": "85f5bcf101dde33d8ab9f7e5e1678339fa4258ea07bc65e6ca66e01f9de99622",
+      "size": 494664885
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/special_tokens_map.json",
+      "sha256": "c4864a9376a8401918425bed71fc14fc0e81f9b59ec45c1cf96cccb2df508eac",
+      "size": 472
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/tokenizer_config.json",
+      "sha256": "19d7b034cb0cc3ce9766c2231373ab8aa8991fc72e2c8f76558bfaae3de0d563",
+      "size": 737
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/vocab.json",
+      "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349",
+      "size": 1059962
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openai/shap-e",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "72d4b85c6d82e61b337e897a9931d20882d7bedbdbf3a2e9b58670598818a499",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:51:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openai/shap-e/resolve/7bd337afdea1c17842e1c3cc45c4e268356dba40/"
+    }
+  ],
+  "upstream": {
+    "commit": "7bd337afdea1c17842e1c3cc45c4e268356dba40",
+    "host": "huggingface.co",
+    "repo": "openai/shap-e",
+    "url": "https://huggingface.co/openai/shap-e/tree/7bd337afdea1c17842e1c3cc45c4e268356dba40"
+  }
+}

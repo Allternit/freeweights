@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:09:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "07c5b857e4f4528a6c0b3dfc902ef586874eded8939ce5a4f199016dda23a0bc",
+      "size": 6598
+    },
+    {
+      "lfs": false,
+      "path": "adapters/humanizer-dpo/adapter_config.json",
+      "sha256": "18ae504f3d36831177a8aa655bb373e491d01fc5844c6713594bd7dbfd333bb1",
+      "size": 6963
+    },
+    {
+      "lfs": true,
+      "path": "adapters/humanizer-dpo/adapters.safetensors",
+      "sha256": "101a8d2833a7ad5f0610a112aadeedfc1571eacb9809464c1ce1f088ab2e269b",
+      "size": 119050013
+    },
+    {
+      "lfs": false,
+      "path": "adapters/humanizer-dpo/optiq_lora_config.json",
+      "sha256": "a9e8eeb9707bffbb09c51534dc0f06b156da96c86f1ae36f376a4f933cec65f2",
+      "size": 6757
+    },
+    {
+      "lfs": false,
+      "path": "adapters/humanizer-sft/adapter_config.json",
+      "sha256": "18ae504f3d36831177a8aa655bb373e491d01fc5844c6713594bd7dbfd333bb1",
+      "size": 6963
+    },
+    {
+      "lfs": true,
+      "path": "adapters/humanizer-sft/adapters.safetensors",
+      "sha256": "2dd9685946a90b65dcd123a83a1f401b5b47ccbd6a68c09b19d8b6d2fe98e650",
+      "size": 119206006
+    },
+    {
+      "lfs": false,
+      "path": "adapters/humanizer-sft/optiq_lora_config.json",
+      "sha256": "32b81b1e27cd77d61195e1e2c781528fd4e711c2f9f699c17cb2e007ebb700b5",
+      "size": 6701
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "7451a05cf1e28a79d97d7c0bc951028c0b1915119bf9046acd06a0e3d931f47c",
+      "size": 9062
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "94b1ac84fc7333f4beccd73766543c150d7c005d1fb2e8eaecee2326f8d83227",
+      "size": 37200
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "92afd6424501426eddcf7e1542f013d19e5987544977b4ee7bd26359bd5fd2ab",
+      "size": 213
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "886f8e1d6112313b1d6359d120a4cf41c7a169ff66182251707c9da314b7b14d",
+      "size": 1576
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "88bb686ed4a28f7c2065e27aabef7669f84961ac47c83efe2d003436c179e2e4",
+      "size": 906870787
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "ca14de0908516d022466afc9864cb3bd1f915b36498e5c8a95ba4ee56d3dad92",
+      "size": 39380
+    },
+    {
+      "lfs": false,
+      "path": "optiq_metadata.json",
+      "sha256": "03576e65c1039e55131619a3efc37ade27cf0f76e79e063c6e6c5e23e028d03a",
+      "size": 14924
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3e065a558a034185fe299917b398685c1facd0169a9eea1e629eb30c171fed81",
+      "size": 9894271
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b99b837295c979cc956b9e018fe710123a5547df9d4143894ba7b95a7f08c42b",
+      "size": 460
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/humanizer-1B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "07c5b857e4f4528a6c0b3dfc902ef586874eded8939ce5a4f199016dda23a0bc",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/humanizer-1B-OptiQ-4bit/resolve/8df1a5f5572407ff777481dc5096f9698bc463b9/"
+    }
+  ],
+  "upstream": {
+    "commit": "8df1a5f5572407ff777481dc5096f9698bc463b9",
+    "host": "huggingface.co",
+    "repo": "mlx-community/humanizer-1B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/humanizer-1B-OptiQ-4bit/tree/8df1a5f5572407ff777481dc5096f9698bc463b9"
+  }
+}

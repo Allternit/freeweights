@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:22:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a734b2e4e619610b34da54fb4b7d93eb5b2d33e1ef525e944c0fa014f0999f07",
+      "size": 7866
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "eb3c3e390507d454f516d6aa6ed7c25b6001c3541dc5824aa3a18d0757a50721",
+      "size": 1094
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "febca115252fd0df2a17987daf13bb3044e2b95ce4e620e74bfffedd4f782531",
+      "size": 132
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "c3b25f87ca5b6c3633457e8208dc3fc21c42e6f8eef8ed373fec7ee4f8990e11",
+      "size": 503948290
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "e7a8e7592d664198912626a0bd256b1fecd666c2090b08451a8912ed1f63595b",
+      "size": 157931444
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "6cfff35209330a228bccf2ad339a15ba52aa6bd8cbfb7a4692c53ede064728d3",
+      "size": 126787087
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "e48e30025223b72f970a11d7a3f8836c91a1635275c34235011f4f44dc8f8590",
+      "size": 164222404
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "6cfff35209330a228bccf2ad339a15ba52aa6bd8cbfb7a4692c53ede064728d3",
+      "size": 126787087
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "27ae8b13c6ce846afd2436243337c7388e93b50d3cdf35568f8377099552da64",
+      "size": 126787129
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Supra2-100M-Base-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a734b2e4e619610b34da54fb4b7d93eb5b2d33e1ef525e944c0fa014f0999f07",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:22:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Supra2-100M-Base-ONNX/resolve/21005393683dbcd653c0497dedabccd78f15420d/"
+    }
+  ],
+  "upstream": {
+    "commit": "21005393683dbcd653c0497dedabccd78f15420d",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Supra2-100M-Base-ONNX",
+    "url": "https://huggingface.co/onnx-community/Supra2-100M-Base-ONNX/tree/21005393683dbcd653c0497dedabccd78f15420d"
+  }
+}

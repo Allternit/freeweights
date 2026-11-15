@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:44:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5c8b8eb7d39dedd6bd31e55c200143556503eb9690891178a59da235544d17c4",
+      "size": 1676
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/longcat_image_bf16.safetensors",
+      "sha256": "7c83c314a3d879d43e5700072033256000f46a56900ae48b209a77ac1921488b",
+      "size": 12541383144
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/longcat_image_edit_bf16.safetensors",
+      "sha256": "8e65ba6ab2f6b323c1619347cd681e4ff78a017b608c82c7bf30f1d125925fab",
+      "size": 12541383144
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/longcat_image_edit_turbo_bf16.safetensors",
+      "sha256": "985119e16854831d1f75d9d141ab4e5af4a643b35abc396593a95654e0b4cd3d",
+      "size": 12541383144
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/LongCat-Image",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5c8b8eb7d39dedd6bd31e55c200143556503eb9690891178a59da235544d17c4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:44:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/LongCat-Image/resolve/d49457a376940fa670ac73f4e21763c56638f19c/"
+    }
+  ],
+  "upstream": {
+    "commit": "d49457a376940fa670ac73f4e21763c56638f19c",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/LongCat-Image",
+    "url": "https://huggingface.co/Comfy-Org/LongCat-Image/tree/d49457a376940fa670ac73f4e21763c56638f19c"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:26:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "4ed6ad77b99e51d3736680d7459e4cabf3c604658be1b4b69cf91481905962bf",
+      "size": 1622
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a31655b366cef7b1c99ba2d7c48342ea44230e5b1c4e0f2c3f500c1cf4d6861a",
+      "size": 77689
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a92e1dd97cb1cb175c9b70c0828e146bea4371c2643319b661b777e89811972e",
+      "size": 7909
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a9a340f5287a2bd5190a19584daeca3e88e86cf73f586141437bcc36c6bed62b",
+      "size": 2910
+    },
+    {
+      "lfs": false,
+      "path": "genai_config.json",
+      "sha256": "0acb7107fbc732bed242751042ec08fbf35965bef381ea97b368584f339b1280",
+      "size": 1581
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx",
+      "sha256": "36e1d9daafdca2eb242a2996fb2648f0381bd33d159111e4d1f6737005afa4cc",
+      "size": 783523
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx.data",
+      "sha256": "dd3e328978ef508b193f18ca1862f981abab950d85247755d6d8540367e2ca19",
+      "size": 15941435392
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7265308b78a3cd7071a7e6a69e49def4e54a01b9f9d0872885de7b8ef1ad073e",
+      "size": 1129
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Qwen3.5-9B-Onnx",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a31655b366cef7b1c99ba2d7c48342ea44230e5b1c4e0f2c3f500c1cf4d6861a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:26:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Qwen3.5-9B-Onnx/resolve/40112c9ca55989bc0405ddf7671a6c15a99a8924/"
+    }
+  ],
+  "upstream": {
+    "commit": "40112c9ca55989bc0405ddf7671a6c15a99a8924",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Qwen3.5-9B-Onnx",
+    "url": "https://huggingface.co/onnx-community/Qwen3.5-9B-Onnx/tree/40112c9ca55989bc0405ddf7671a6c15a99a8924"
+  }
+}

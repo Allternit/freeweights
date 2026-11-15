@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:26:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b320e625788049725bf587d2bdfb30afb8325ee30686bf15bc85588c9ad78d5d",
+      "size": 4880
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "219fe4ea30d255c4fa0de7070b3f0c6f1277f741a492594f589d046951e9635f",
+      "size": 2368
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "19c9ffbfd4a6e75f15fa789e4b0c4c028af0b3ecb8bab4d6105321f77dc6a0d4",
+      "size": 378307508
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "617bd0950f8cc9ac4062e8c73a7be60305ca5790a243df55fa6f44fb671b55b1",
+      "size": 257
+    },
+    {
+      "lfs": true,
+      "path": "runs/reconstructed/events.out.tfevents.1768846795.b004a82bd71f.2662.0",
+      "sha256": "d8ead51360e5b3979234bf35b1f657663832a1d7a0816877cea145586f4a7d76",
+      "size": 13039
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "9046da57c270c8e74d0f38832b4adce269c9d914ef21d2a0925e7772152dd793",
+      "size": 96
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6f2b1da40bb8a9838af8639cb672bfa4d9bc98fed7a7cea38452eb3afc30e430",
+      "size": 1178
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "12e850157104fb63d82373c93c9020d69e433ce6c0f4b77daf03698dd4b742c0",
+      "size": 5304
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "4178db26b3c7570f6a47f14ac6a1c7b32950b8c2800fb097287e53776934f1c5",
+      "size": 358
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Dpngtm/wav2vec2-emotion-recognition",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b320e625788049725bf587d2bdfb30afb8325ee30686bf15bc85588c9ad78d5d",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:26:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Dpngtm/wav2vec2-emotion-recognition/resolve/033a5751a5bbe5b0b67c2c71e6102c38de35a346/"
+    }
+  ],
+  "upstream": {
+    "commit": "033a5751a5bbe5b0b67c2c71e6102c38de35a346",
+    "host": "huggingface.co",
+    "repo": "Dpngtm/wav2vec2-emotion-recognition",
+    "url": "https://huggingface.co/Dpngtm/wav2vec2-emotion-recognition/tree/033a5751a5bbe5b0b67c2c71e6102c38de35a346"
+  }
+}

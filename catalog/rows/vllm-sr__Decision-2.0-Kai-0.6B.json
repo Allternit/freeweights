@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen3-0.6B-Base",
+  "display_name": "Decision-2.0-Kai-0.6B",
+  "family": "vllm-sr",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "vllm-sr/Decision-2.0-Kai-0.6B",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/vllm-sr/Decision-2.0-Kai-0.6B.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen3-0.6B-Base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 1051,
+    "likes": 43,
+    "trending": null
+  },
+  "tasks": [
+    "zero-shot-classification"
+  ],
+  "tier": "T2",
+  "total_size": 1521692916,
+  "upstream_url": "https://huggingface.co/vllm-sr/Decision-2.0-Kai-0.6B",
+  "what_changed": null
+}

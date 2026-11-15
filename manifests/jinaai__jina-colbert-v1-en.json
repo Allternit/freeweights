@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:55:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "82678e242037a6f4459873c03dd6e7a6ee76dbcdf9b8088f374cfe6a4de91936",
+      "size": 10638
+    },
+    {
+      "lfs": false,
+      "path": "artifact.metadata",
+      "sha256": "750b4a924678ef9b5dd68f8b0842ca21bc43e2e15510df15599bfca2066458a0",
+      "size": 1810
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "33395c2c81adc619e7d8862c42d05940645ba48f9c6d2ffa181c72ab0de86113",
+      "size": 1140
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9a1d4dfaebf3eb111bd01bebd765edcbebe2613b1f8e80a50c3ca2593a5a78e4",
+      "size": 549888200
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "e9f999ac74497843ed9f4303246a8f43d9f100ee8aab8e133667903f447ceb48",
+      "size": 711573
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "95ba08ef8e1932981fd3bf0720e576e87200613db15d9ab1c7e77f1312c99007",
+      "size": 1243
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "109753d618dbb576a35112f9c20ef35cf3517d46106175bcf010c986a4bef1df",
+      "size": 231589
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "jinaai/jina-colbert-v1-en",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "82678e242037a6f4459873c03dd6e7a6ee76dbcdf9b8088f374cfe6a4de91936",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:55:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/jinaai/jina-colbert-v1-en/resolve/31bb5a4d063a793f4aaaf6ecb9bf4ef1879ddf7d/"
+    }
+  ],
+  "upstream": {
+    "commit": "31bb5a4d063a793f4aaaf6ecb9bf4ef1879ddf7d",
+    "host": "huggingface.co",
+    "repo": "jinaai/jina-colbert-v1-en",
+    "url": "https://huggingface.co/jinaai/jina-colbert-v1-en/tree/31bb5a4d063a793f4aaaf6ecb9bf4ef1879ddf7d"
+  }
+}

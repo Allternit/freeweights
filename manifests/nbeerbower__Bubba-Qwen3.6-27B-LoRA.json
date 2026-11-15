@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T05:26:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "c6dabd974e4363690a8c190f253d8074e8d572ffb746a4b8d32c7ad716e968c5",
+      "size": 1623
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "58a4b1b7e66415bfd1ad2fb6a78b97687dff082755d42ed1ede42711abef2174",
+      "size": 5649
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "739da4c93419045e08993faa79d0381f49653490c9f3ac19bc9f54373e2f0610",
+      "size": 1094
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "bc4779adb1fb45d71c6ac3dd49cdd03ab6afbf7ed740d744fe283d3cccb2b07f",
+      "size": 637610624
+    },
+    {
+      "lfs": true,
+      "path": "bubba_header.png",
+      "sha256": "4996cb6a858391f33fd6da6094cef6f289dd80c3f273a66c8ca044d7bcd3da13",
+      "size": 377540
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "size": 7764
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d",
+      "size": 1125
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nbeerbower/Bubba-Qwen3.6-27B-LoRA",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "58a4b1b7e66415bfd1ad2fb6a78b97687dff082755d42ed1ede42711abef2174",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:26:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nbeerbower/Bubba-Qwen3.6-27B-LoRA/resolve/a054807d4bb397a83a1db2c9b1592462fe8661fc/"
+    }
+  ],
+  "upstream": {
+    "commit": "a054807d4bb397a83a1db2c9b1592462fe8661fc",
+    "host": "huggingface.co",
+    "repo": "nbeerbower/Bubba-Qwen3.6-27B-LoRA",
+    "url": "https://huggingface.co/nbeerbower/Bubba-Qwen3.6-27B-LoRA/tree/a054807d4bb397a83a1db2c9b1592462fe8661fc"
+  }
+}

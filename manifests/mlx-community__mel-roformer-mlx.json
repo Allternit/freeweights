@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T02:34:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3e0e15fa0c5cc81675bd69af8eb469d128a725c1a7bfc71f03b7877b7b650567",
+      "size": 21
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6acce689a874fe92c3e474d42a98352205ff46e88c8b686686ab0b57a01e72c2",
+      "size": 440
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "86eee1472d825bf978bc6b6bb104bb71cb7950c4fea9dd192a8c55ed2db28b27",
+      "size": 912885288
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/mel-roformer-mlx",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3e0e15fa0c5cc81675bd69af8eb469d128a725c1a7bfc71f03b7877b7b650567",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:34:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/mel-roformer-mlx/resolve/639de4848eb79a9e29cc8cba3c01170ddf165eef/"
+    }
+  ],
+  "upstream": {
+    "commit": "639de4848eb79a9e29cc8cba3c01170ddf165eef",
+    "host": "huggingface.co",
+    "repo": "mlx-community/mel-roformer-mlx",
+    "url": "https://huggingface.co/mlx-community/mel-roformer-mlx/tree/639de4848eb79a9e29cc8cba3c01170ddf165eef"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:31:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cab0af19aa75f409684d165407c32a0d845cc8fc660606c379f4b0663f87abae",
+      "size": 734
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6b160bc9b19e24ecb21e84bc14f8a7da21fdf47ec72d42450bc5cf514b61804a",
+      "size": 470
+    },
+    {
+      "lfs": true,
+      "path": "kitten_tts_mini_v0_8.onnx",
+      "sha256": "0f5bbae4fc4800c98dbc544a87ecfa79510de2fb8222db30d12e5bfe9177df91",
+      "size": 78268016
+    },
+    {
+      "lfs": true,
+      "path": "voices.npz",
+      "sha256": "40ad2638952b77b7b2f30127e2608e169fc69dd256b53bd8aaa3409a33193c42",
+      "size": 3278902
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "KittenML/kitten-tts-mini-0.8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cab0af19aa75f409684d165407c32a0d845cc8fc660606c379f4b0663f87abae",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:31:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/KittenML/kitten-tts-mini-0.8/resolve/c02725660cea441db4c383af69f1f26f5cd00947/"
+    }
+  ],
+  "upstream": {
+    "commit": "c02725660cea441db4c383af69f1f26f5cd00947",
+    "host": "huggingface.co",
+    "repo": "KittenML/kitten-tts-mini-0.8",
+    "url": "https://huggingface.co/KittenML/kitten-tts-mini-0.8/tree/c02725660cea441db4c383af69f1f26f5cd00947"
+  }
+}

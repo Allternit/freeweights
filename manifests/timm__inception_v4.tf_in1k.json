@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:30:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "26e14bfd278e1600789d95c029c34cd71c1cc84a16018192a122a3393c21e54c",
+      "size": 3792
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f47d6d9d5e4a9bd5eb283a8e4014f261d6c51653b41643dd1ab4dae15b691e6a",
+      "size": 570
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a756a086851c8d5a8de135ec15c76b90ea56cb5aef450e3299107e659e725bb1",
+      "size": 171064452
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "f9790cf2fe0adc95131bae29f3a395d61ae8128691c4518b0be58b59b9b3446a",
+      "size": 171292429
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/inception_v4.tf_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "26e14bfd278e1600789d95c029c34cd71c1cc84a16018192a122a3393c21e54c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:30:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/inception_v4.tf_in1k/resolve/ad5d294cda312745a9afa433e45d9ccd956a1548/"
+    }
+  ],
+  "upstream": {
+    "commit": "ad5d294cda312745a9afa433e45d9ccd956a1548",
+    "host": "huggingface.co",
+    "repo": "timm/inception_v4.tf_in1k",
+    "url": "https://huggingface.co/timm/inception_v4.tf_in1k/tree/ad5d294cda312745a9afa433e45d9ccd956a1548"
+  }
+}

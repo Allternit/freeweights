@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:36:24Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "179633b469a2f03c65cb38f72b4d424579f2e00f06046c2e98f089dc6df2f914",
+      "size": 3075
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "96c557d42a94c3a557a6f6cae4cf38dcc9a1e040485cc707fb1b6cf109f70839",
+      "size": 1285
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9f8c77dd886e6e1f39fc9d241cbb1ac69c0d15b55137efd2fb6334dffbf79183",
+      "size": 154
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6af91e32a2f16180845a63d436c9dc9daea8aa9d5d0641525b231a9b5a47fd8c",
+      "size": 5572148568
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "size": 636
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "f559f2189f392b4555613965f089e7c4d300b41fbe080bf79da0d676e33ee7f0",
+      "size": 34356041
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "size": 4241003
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "885bfdeda5b7a75bcb4aff07a655531138db218b3ca3f3c57b2f08d5910d9724",
+      "size": 41504
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/gemma-7b-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "179633b469a2f03c65cb38f72b4d424579f2e00f06046c2e98f089dc6df2f914",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:36:24Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/gemma-7b-bnb-4bit/resolve/1eee0c076e000bb00794d0c86227c3439e448ad1/"
+    }
+  ],
+  "upstream": {
+    "commit": "1eee0c076e000bb00794d0c86227c3439e448ad1",
+    "host": "huggingface.co",
+    "repo": "unsloth/gemma-7b-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/gemma-7b-bnb-4bit/tree/1eee0c076e000bb00794d0c86227c3439e448ad1"
+  }
+}

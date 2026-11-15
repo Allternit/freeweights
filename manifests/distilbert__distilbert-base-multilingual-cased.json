@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:27:02Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a368a21c472071feec9095f63d5f7d3433826c1c476a6995f072b6755ccc6f59",
+      "size": 399
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5e6b3a60b4ee7b458dd5a0beda20f66988c6a3d4d993dab3d2fcb90a2c52f558",
+      "size": 7316
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "67ab80c9a476e7c2d189cd03f95d297b04bd1d90e99765323af155ab6308960e",
+      "size": 466
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx",
+      "sha256": "15e32f6737a3072fb03f659368f1662b85490687a3217193fb84e5caa02939aa",
+      "size": 909169064
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "fcf002be901b9ad708e0df430b8d18deaa4b3fe3519e24e9017a5ee17ca2c228",
+      "size": 541795680
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "0b528805ec3a430d9b678885d87615ac86d1ef8f4e9292a1b08b88799da70ba4",
+      "size": 541808922
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "633897a535573d2e368c033791c5e9396cbaff802371312ca97f5ca497057dba",
+      "size": 910749124
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f4a4d5bf7301717e261fafbe26e1eb967f6ba4cb3ae0ab7a29f4642ec229f386",
+      "size": 1961828
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "fe0fda7c425b48c516fc8f160d594c8022a0808447475c1a7c6d6479763f310c",
+      "size": 995526
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "distilbert/distilbert-base-multilingual-cased",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5e6b3a60b4ee7b458dd5a0beda20f66988c6a3d4d993dab3d2fcb90a2c52f558",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:27:02Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/distilbert/distilbert-base-multilingual-cased/resolve/45c032ab32cc946ad88a166f7cb282f58c753c2e/"
+    }
+  ],
+  "upstream": {
+    "commit": "45c032ab32cc946ad88a166f7cb282f58c753c2e",
+    "host": "huggingface.co",
+    "repo": "distilbert/distilbert-base-multilingual-cased",
+    "url": "https://huggingface.co/distilbert/distilbert-base-multilingual-cased/tree/45c032ab32cc946ad88a166f7cb282f58c753c2e"
+  }
+}

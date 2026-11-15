@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:47:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "4bf7240f6dbb73e7a53f16da5ba7e3842fb57db8c32f4269d88b4dfded34928c",
+      "size": 1593
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "87d7f156ed1b056717cc036428028940b49a940ea62be24b087f38331174ac86",
+      "size": 13548
+    },
+    {
+      "lfs": true,
+      "path": "bitnet-embeddings-270m-bf16-i2_s.gguf",
+      "sha256": "8ee5ae971b103cd55758934be54e5c9f7cc2b58b15890615acce8e649988c751",
+      "size": 367487040
+    },
+    {
+      "lfs": false,
+      "path": "fig1_quant_per_task.png",
+      "sha256": "af14d99b6a5c370218161bc4cb2dd3eb13c58edb5b04fd6ef76939b73f26f84d",
+      "size": 62892
+    },
+    {
+      "lfs": false,
+      "path": "mteb_v2_eval_prompts.json",
+      "sha256": "edca128f74638be6582bb9bb74333d099b2380c74484c103c9da0c40325dfe14",
+      "size": 11715
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/bitnet-embedding-270m",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "87d7f156ed1b056717cc036428028940b49a940ea62be24b087f38331174ac86",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:47:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/bitnet-embedding-270m/resolve/5f1c2fd19f37ca653a3d719c8ee6cc1895f4b64f/"
+    }
+  ],
+  "upstream": {
+    "commit": "5f1c2fd19f37ca653a3d719c8ee6cc1895f4b64f",
+    "host": "huggingface.co",
+    "repo": "microsoft/bitnet-embedding-270m",
+    "url": "https://huggingface.co/microsoft/bitnet-embedding-270m/tree/5f1c2fd19f37ca653a3d719c8ee6cc1895f4b64f"
+  }
+}

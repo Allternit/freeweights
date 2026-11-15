@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "ibm-granite/granite-vision-3.3-2b",
+  "display_name": "granite-vision-3.3-2b-chart2csv-preview",
+  "family": "granite",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "ibm-granite/granite-vision-3.3-2b-chart2csv-preview",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/ibm-granite/granite-vision-3.3-2b-chart2csv-preview.json",
+  "params": 2975396928,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "ibm-granite/granite-vision-3.3-2b",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.granite",
+  "signals": {
+    "downloads_30d": 2593,
+    "likes": 17,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 6157121865,
+  "upstream_url": "https://huggingface.co/ibm-granite/granite-vision-3.3-2b-chart2csv-preview",
+  "what_changed": null
+}

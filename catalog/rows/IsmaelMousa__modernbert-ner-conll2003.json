@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "answerdotai/ModernBERT-base",
+  "display_name": "modernbert-ner-conll2003",
+  "family": "IsmaelMousa",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "IsmaelMousa/modernbert-ner-conll2003",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/IsmaelMousa/modernbert-ner-conll2003.json",
+  "params": 149611785,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "answerdotai/ModernBERT-base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 1220,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "T2",
+  "total_size": 602097068,
+  "upstream_url": "https://huggingface.co/IsmaelMousa/modernbert-ner-conll2003",
+  "what_changed": null
+}

@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T03:42:09Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "101b0b681cf994725247abbf38ca30ebe0fb7c444a01ead39ffbc9395f2e90e8",
+      "size": 1785
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9328d2146a2a3edc9dfcc9e0708c71cc37f7e8bd50b746a526c6033f97109a6e",
+      "size": 11393
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "cc945752db555d60949b16989df4ccfeb52a313d6b4b5c5229dd786e2e9fcf1c",
+      "size": 9060
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4329e012eb71be025875b362aad9a3cdb7c09a1fd62628f9f35ce63a3a0053b1",
+      "size": 791
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "8643a6f784ffacefd3441fe1225237ea2123f107709be2bbcb36bf461892a042",
+      "size": 237
+    },
+    {
+      "lfs": true,
+      "path": "media/banner.png",
+      "sha256": "17eee9967a72bdcc5bc1ca3b635d6699140bebc8a341f25cf1a45262f1f11931",
+      "size": 1336968
+    },
+    {
+      "lfs": true,
+      "path": "media/colgrep-demo.gif",
+      "sha256": "2c555f4a478f86e486638c4770d907694433b67d8e039c8d6a721ce0d03c12f1",
+      "size": 137560
+    },
+    {
+      "lfs": true,
+      "path": "media/colgrep_performance_vs_model_size.png",
+      "sha256": "9295b5c91584b432bcd416ff2930f7f6916cd44506426f90212bb007277d4196",
+      "size": 263094
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "19c22d8e7c3d1f3276889b5277c4bd9d1d7631687b8797285f56809d1de18f36",
+      "size": 4498783184
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "22be60355777581fe0ded99c7bf1b0d72d3a4ae863c069f5fbb4ff36549c483f",
+      "size": 534773888
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "58a788415aad8027fdea0c07f00d65c0144b57a905a0a15c5c1b549d25e9bf77",
+      "size": 31379
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3e065a558a034185fe299917b398685c1facd0169a9eea1e629eb30c171fed81",
+      "size": 9894271
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5378dcce33a455cfa6a7cd4a5ab54511e787b84b7334ec2d04e54b1d5a1a3cb4",
+      "size": 434
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lightonai/colgrep-agent-2B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9328d2146a2a3edc9dfcc9e0708c71cc37f7e8bd50b746a526c6033f97109a6e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:42:09Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lightonai/colgrep-agent-2B/resolve/f798a61129c6decb5166864e0a3c98373e62c764/"
+    }
+  ],
+  "upstream": {
+    "commit": "f798a61129c6decb5166864e0a3c98373e62c764",
+    "host": "huggingface.co",
+    "repo": "lightonai/colgrep-agent-2B",
+    "url": "https://huggingface.co/lightonai/colgrep-agent-2B/tree/f798a61129c6decb5166864e0a3c98373e62c764"
+  }
+}

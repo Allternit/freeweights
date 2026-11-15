@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "OpenMOSS-Team/MOSS-Image-Base",
+  "display_name": "MOSS-Image-SFT",
+  "family": "OpenMOSS-Team",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "OpenMOSS-Team/MOSS-Image-SFT",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/OpenMOSS-Team/MOSS-Image-SFT.json",
+  "params": 5082308624,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "OpenMOSS-Team/MOSS-Image-Base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.image",
+  "signals": {
+    "downloads_30d": 23809,
+    "likes": 960,
+    "trending": null
+  },
+  "tasks": [
+    "text-to-image"
+  ],
+  "tier": "T1",
+  "total_size": 27229060886,
+  "upstream_url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT",
+  "what_changed": null
+}

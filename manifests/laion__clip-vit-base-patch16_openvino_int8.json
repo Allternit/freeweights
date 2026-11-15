@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:31:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+      "size": 31
+    },
+    {
+      "lfs": true,
+      "path": "openai--clip-vit-base-patch16.bin",
+      "sha256": "77dfe0237f01a8426c31ba5a09773fc18d837c7dde4651b11fa2f178ad618523",
+      "size": 299242374
+    },
+    {
+      "lfs": false,
+      "path": "openai--clip-vit-base-patch16.xml",
+      "sha256": "75a1d9c3faa4f516ab24dd8d1f750a19b7afe554160ba0ed78aaefcd312fc52b",
+      "size": 1013810
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/clip-vit-base-patch16_openvino_int8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/clip-vit-base-patch16_openvino_int8/resolve/1455cac395acdc800337e276cb16a9a16ca0c260/"
+    }
+  ],
+  "upstream": {
+    "commit": "1455cac395acdc800337e276cb16a9a16ca0c260",
+    "host": "huggingface.co",
+    "repo": "laion/clip-vit-base-patch16_openvino_int8",
+    "url": "https://huggingface.co/laion/clip-vit-base-patch16_openvino_int8/tree/1455cac395acdc800337e276cb16a9a16ca0c260"
+  }
+}

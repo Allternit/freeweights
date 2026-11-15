@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T05:30:13Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f8d24528efc3ce3852bd3b6a64fe7a2a761ecfbff1dc8e879e1ac12190eb1437",
+      "size": 6863
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d6abd48ff8ad04d67971d1c9a91183a35f4a1f1d0cb270721e050e9c7e229a1e",
+      "size": 1319
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "67cc50d2e80cce3846f79043dfd32019a48c529f0be91c53611c02172a2b9ac7",
+      "size": 3726
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ae922a5d081219b03a0b4e28922530c00e72617241654fd3170f022980a076f8",
+      "size": 151061672
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx",
+      "sha256": "0b14c8efac652dc3e65f1d04b5982cc4ee44fee2504eec3e0f734c3839660402",
+      "size": 118449103
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx",
+      "sha256": "d449654067379d5be40920c7e172ab03f44744f0f0a3cc3ad5ed6d5ef5c3052a",
+      "size": 30054396
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model.onnx",
+      "sha256": "9b90a06ab67facb59eda82415b6f767c795646233911fa63ed32362fdd813535",
+      "size": 32878338
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model_quantized.onnx",
+      "sha256": "7691957efa96b5907a148b42675ba23534c68dbb279e203e12c8fe71ee53accc",
+      "size": 10087575
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "994838f1fa6462c8b9b3c90edada831f11f3dd8b4664634e18f4694d005c9dbf",
+      "size": 356
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "8c648fa85aafc59a07435ed751322499bd4238b819ca9200ddd2b5ba4df50e68",
+      "size": 409
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691",
+      "size": 2194
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "7b469ff15eb7816315aa45eec391f5943d639b9d73d110f5c003df5192fd54e3",
+      "size": 3930494
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "21a4fc0483c14b87f4e0bbc177a9a357479bfa7c95aaf21ad53d71e9c5afafb9",
+      "size": 282713
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "souba67/whisper-tiny-sundanese",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f8d24528efc3ce3852bd3b6a64fe7a2a761ecfbff1dc8e879e1ac12190eb1437",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:30:13Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/souba67/whisper-tiny-sundanese/resolve/4337c3fc3421553608be4a33aa38821eb617fa6a/"
+    }
+  ],
+  "upstream": {
+    "commit": "4337c3fc3421553608be4a33aa38821eb617fa6a",
+    "host": "huggingface.co",
+    "repo": "souba67/whisper-tiny-sundanese",
+    "url": "https://huggingface.co/souba67/whisper-tiny-sundanese/tree/4337c3fc3421553608be4a33aa38821eb617fa6a"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:02:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "55f0015faf3ff4e9511670aefab659780b855b288082e49bbddf92151ff9b603",
+      "size": 1202
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "cc945752db555d60949b16989df4ccfeb52a313d6b4b5c5229dd786e2e9fcf1c",
+      "size": 9060
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "aa0fa827a83a29f2bc8b1b9c681914b0689554762f11f3d7240725133f8a104f",
+      "size": 886
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9ac4f32e5f32358697a9f438a3ea89ef80e6ba786c72c49e932f9f21c122fdb1",
+      "size": 213
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "82db8e423c5df99a5989f1b73dad1f44941a7800b308915f6ae7142966b32e40",
+      "size": 2674327290
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "50747e37090508f851cdea2f4d5a71c59c2a26a09c8e95c505371ac669e2ac36",
+      "size": 68721
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3e065a558a034185fe299917b398685c1facd0169a9eea1e629eb30c171fed81",
+      "size": 9894271
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b89503c3e5070c6b6d33daf2e20cb4a5c88537c1670d9b7e0cfb4506a61448a9",
+      "size": 435
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/MiniCPM5-2B-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "55f0015faf3ff4e9511670aefab659780b855b288082e49bbddf92151ff9b603",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:02:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/MiniCPM5-2B-8bit/resolve/2d20e8e672ce892d50f7265bfd3fc9b59b718f2a/"
+    }
+  ],
+  "upstream": {
+    "commit": "2d20e8e672ce892d50f7265bfd3fc9b59b718f2a",
+    "host": "huggingface.co",
+    "repo": "mlx-community/MiniCPM5-2B-8bit",
+    "url": "https://huggingface.co/mlx-community/MiniCPM5-2B-8bit/tree/2d20e8e672ce892d50f7265bfd3fc9b59b718f2a"
+  }
+}

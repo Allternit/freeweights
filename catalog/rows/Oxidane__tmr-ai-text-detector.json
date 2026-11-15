@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "FacebookAI/roberta-base",
+  "display_name": "tmr-ai-text-detector",
+  "family": "Oxidane",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "Oxidane/tmr-ai-text-detector",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/Oxidane/tmr-ai-text-detector.json",
+  "params": 124647170,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "FacebookAI/roberta-base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 6071,
+    "likes": 11,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "T2",
+  "total_size": 503439907,
+  "upstream_url": "https://huggingface.co/Oxidane/tmr-ai-text-detector",
+  "what_changed": null
+}

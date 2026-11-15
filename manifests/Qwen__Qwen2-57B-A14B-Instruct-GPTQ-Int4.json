@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:12:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "size": 11343
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6be45fe9efaea236acad55a605cace61cddce15c307a01f12d4c40b159632491",
+      "size": 4184
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4253029dcb662b4905cbed7e0b41a4db5e88f85540953a8999456f504b65c2f8",
+      "size": 8474
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "758d6aed2f4947bba541c57491ad53d8ba67067cbdfb9a0ce2821c834350501f",
+      "size": 248
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "size": 1671839
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00007.safetensors",
+      "sha256": "c38e4ae951ddf488538ba4aa42b4eecb5425b22911874048a0295b2a61f9a20c",
+      "size": 4999522136
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00007.safetensors",
+      "sha256": "25ae449a731118465e5ae8a4b92f88ebd480924a278927827712b6c7f5f83794",
+      "size": 4997833808
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00007.safetensors",
+      "sha256": "c6d46f429bae885dd7b53b443c4f0bda5f37ae3fe395901e463c92670e6feb08",
+      "size": 4997837072
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00007.safetensors",
+      "sha256": "f6addb3eb3f87c696f894dada780667a35a65f9aa1df93f6f1eeaf448c83f7b4",
+      "size": 4997840728
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00007.safetensors",
+      "sha256": "2d6b0ee97bede2593cbc482861a5d2c040b71971aec636c893940b2adfd7566b",
+      "size": 4996650128
+    },
+    {
+      "lfs": true,
+      "path": "model-00006-of-00007.safetensors",
+      "sha256": "ec313d9d255e56f17f9613f948ba0671dd95906355bc5b9cbb860c6098a0c322",
+      "size": 4997838536
+    },
+    {
+      "lfs": true,
+      "path": "model-00007-of-00007.safetensors",
+      "sha256": "2864eaa5027ec502057891a5410fa0ba54f3b6f3a504d19f2c48a90283535d92",
+      "size": 1572239520
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "fad964cbd74e9b03dfa00dd2dfc772685a96df0475309871ecf05fdefcbafc3f",
+      "size": 2498206
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "43870833234196e714e59c21a59eed8b1cfd4bb17a4afa06267937cd87443468",
+      "size": 295
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f7c9b2dba4a296b1aa76c16a34b8225c0c118978400d4bb66bff0902d702f5b8",
+      "size": 7028015
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6249f34d22c7780ba17edfd8de88fc0582b5b32dbfd52b60ae1d607984925c4c",
+      "size": 1286
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Qwen/Qwen2-57B-A14B-Instruct-GPTQ-Int4",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:12:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Qwen/Qwen2-57B-A14B-Instruct-GPTQ-Int4/resolve/28996f1efabf870018dc35d4c531850a2477cec8/"
+    }
+  ],
+  "upstream": {
+    "commit": "28996f1efabf870018dc35d4c531850a2477cec8",
+    "host": "huggingface.co",
+    "repo": "Qwen/Qwen2-57B-A14B-Instruct-GPTQ-Int4",
+    "url": "https://huggingface.co/Qwen/Qwen2-57B-A14B-Instruct-GPTQ-Int4/tree/28996f1efabf870018dc35d4c531850a2477cec8"
+  }
+}

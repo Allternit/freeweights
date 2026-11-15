@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T04:58:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "bcd626bd151b417d4b02a64e1887478b861512a29864693b68bf03cbc67357f7",
+      "size": 1789
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "eda7395ea37e04c3af1d6b82d481d6012eb2299461e11724503ff614ac0c926a",
+      "size": 4949
+    },
+    {
+      "lfs": true,
+      "path": "devstral.gguf",
+      "sha256": "af8a54aaedb3e67a7475a35831b18b3a3f446fdd24ff39144087a2d86052ff99",
+      "size": 47153518560
+    },
+    {
+      "lfs": true,
+      "path": "devstralQ4_0.gguf",
+      "sha256": "7978367b5b56553e22e516329031547464d12269a753dd716cdb245663264bbf",
+      "size": 13441800160
+    },
+    {
+      "lfs": true,
+      "path": "devstralQ4_K_M.gguf",
+      "sha256": "4a9ec4e1b7fa7b8d3b26e56a54efe251349bb67d8a623bae662353a9d84e4b9b",
+      "size": 14333908960
+    },
+    {
+      "lfs": true,
+      "path": "devstralQ5_K_M.gguf",
+      "sha256": "b1c6722c376a795a5a1d85838d3c9d2af183d4dba5cb85270f29ab676944fb12",
+      "size": 16763983840
+    },
+    {
+      "lfs": true,
+      "path": "devstralQ8_0.gguf",
+      "sha256": "91dbc2c97e13ee7a714206a69ebc33cb0e8170627f15507c7406cb5bd7d4e974",
+      "size": 25054779360
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mistralai/Devstral-Small-2505_gguf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "eda7395ea37e04c3af1d6b82d481d6012eb2299461e11724503ff614ac0c926a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:58:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mistralai/Devstral-Small-2505_gguf/resolve/def988cdf156b21442504f149ec0296ddbbe1e07/"
+    }
+  ],
+  "upstream": {
+    "commit": "def988cdf156b21442504f149ec0296ddbbe1e07",
+    "host": "huggingface.co",
+    "repo": "mistralai/Devstral-Small-2505_gguf",
+    "url": "https://huggingface.co/mistralai/Devstral-Small-2505_gguf/tree/def988cdf156b21442504f149ec0296ddbbe1e07"
+  }
+}

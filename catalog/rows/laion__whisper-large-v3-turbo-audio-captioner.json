@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-large-v3-turbo",
+  "display_name": "whisper-large-v3-turbo-audio-captioner",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "laion/whisper-large-v3-turbo-audio-captioner",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/laion/whisper-large-v3-turbo-audio-captioner.json",
+  "params": 808878080,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-large-v3-turbo",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 111,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T0",
+  "total_size": 3241348307,
+  "upstream_url": "https://huggingface.co/laion/whisper-large-v3-turbo-audio-captioner",
+  "what_changed": null
+}

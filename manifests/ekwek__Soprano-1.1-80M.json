@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:22:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ff7688fe44cddaca6218920b962080af8789d3dc03721b3aef3d854a9f3b88b5",
+      "size": 6599
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b4e487a7a3bbee21fa0fc3c0faaaf404911e5f843058b3a10d1102170d4c2bb5",
+      "size": 1118
+    },
+    {
+      "lfs": true,
+      "path": "decoder.pth",
+      "sha256": "11245487e4588b0f4128d6b4c82035212bad42ffb26f36e059e9c7f861c1f8c4",
+      "size": 121448447
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "83e8d44a0cfae1f40801b6f96ba8090286cfd5f707ae7fa3ec64e6f68550828c",
+      "size": 111
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "10e8c4223e14115688a1c8a1c5464ebb78826f17fb98ad459da9bce5471866ed",
+      "size": 159449112
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c68f391a753fa4ff6df6890a62fd584eba54ee5d1773c5f388e80f521ebba942",
+      "size": 28
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "eb27ca6c9b55d2f880659a9619d6b8f9b9e6d8553d3ea424f5427788688d7286",
+      "size": 1630675
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "06e83fdb0bdf94eef83ebb08f30620c8ab640344babb4d405ff27befd1a4c270",
+      "size": 1366802
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ekwek/Soprano-1.1-80M",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ff7688fe44cddaca6218920b962080af8789d3dc03721b3aef3d854a9f3b88b5",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:22:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ekwek/Soprano-1.1-80M/resolve/27b5a5f5f541a1db3a51d6fd1b0fc7147b92cd01/"
+    }
+  ],
+  "upstream": {
+    "commit": "27b5a5f5f541a1db3a51d6fd1b0fc7147b92cd01",
+    "host": "huggingface.co",
+    "repo": "ekwek/Soprano-1.1-80M",
+    "url": "https://huggingface.co/ekwek/Soprano-1.1-80M/tree/27b5a5f5f541a1db3a51d6fd1b0fc7147b92cd01"
+  }
+}

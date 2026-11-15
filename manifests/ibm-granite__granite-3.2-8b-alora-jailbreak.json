@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:31:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4f2f939dc6781d6efb0ff515efe42a0404c18a3d10811a1df91db24c6aaf1eb8",
+      "size": 5935
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "13d9b52aaa9bae35d94707d00bb62f184f3eab64ca096bf1944f757221fd12bb",
+      "size": 814
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "90f1ef3d76e2a38e3aee040760b5668e218c9a592a6a4746ed31f5b09415a45a",
+      "size": 94404160
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-3.2-8b-alora-jailbreak",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4f2f939dc6781d6efb0ff515efe42a0404c18a3d10811a1df91db24c6aaf1eb8",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-3.2-8b-alora-jailbreak/resolve/39c7205bea68259b8be5ace1715850be1849a20a/"
+    }
+  ],
+  "upstream": {
+    "commit": "39c7205bea68259b8be5ace1715850be1849a20a",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-3.2-8b-alora-jailbreak",
+    "url": "https://huggingface.co/ibm-granite/granite-3.2-8b-alora-jailbreak/tree/39c7205bea68259b8be5ace1715850be1849a20a"
+  }
+}

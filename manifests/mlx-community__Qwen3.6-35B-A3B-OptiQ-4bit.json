@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T04:55:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "09a752e0df75ef4b52ee98ae4a657f33a4420dff8d7526a77703dca5a6ec5f88",
+      "size": 5458
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "size": 7764
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "57525fc2a4faa6f4aac6d7a70efcd2e66997e6332bf3fc7b8823bd82ebc01466",
+      "size": 115697
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "1abb3cb8cb0a840b41848c630f71ff3201ed98e9718b657b152483edc1196396",
+      "size": 248
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "34846a2678e2d390454af58e9296859b730beaa3dc6974644262e2d07110edc5",
+      "size": 660
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "eebcbf65aeae9db53d72a1ac9239ed2ea2ab24ff4f91de6bd81bc4eb322fb81f",
+      "size": 5354469690
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "532e2b8e7c51e7c9e4da7d262f7457bb494c30196bd8a63464860411eb2ffe7a",
+      "size": 5367895914
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "5ab41a5838aed1083c224363c54bb707a3be180cdd88ae1583214a2344ee0945",
+      "size": 5247553415
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "be5be221a9989aae3736f30745c08eaf12c690634c0d4fb238a031588c7bbc6f",
+      "size": 5185753324
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "942e8b6e192a43a918d0d4941e5ce551d29d9131d17660b7b790910b0c254871",
+      "size": 979903453
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "87ec7a4ca4b5c1c2afe0f9e916fe18670219bac081f86815bb42731ac4133519",
+      "size": 206754
+    },
+    {
+      "lfs": true,
+      "path": "optiq/mtp.safetensors",
+      "sha256": "a20795925ae0131f7934d85a16f38a44ae62f207a42532934def5ebbccbffb80",
+      "size": 487458979
+    },
+    {
+      "lfs": true,
+      "path": "optiq/optiq_vision.safetensors",
+      "sha256": "0125eeb6c29b935d0b1c6a6eb1a3c9ba13f9671680439c4e0aff16b95c7b8ab5",
+      "size": 893179469
+    },
+    {
+      "lfs": false,
+      "path": "optiq_metadata.json",
+      "sha256": "174ac15cbce7d596ce2f28075f5af99026bff04361df07c9943d1c9b226f21c0",
+      "size": 55984
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b2bed5e033438f09f22b0ce9522115b4807d9bbcc3b82bf23372cb74d93ed081",
+      "size": 1135
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwen3.6-35B-A3B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "09a752e0df75ef4b52ee98ae4a657f33a4420dff8d7526a77703dca5a6ec5f88",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:55:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwen3.6-35B-A3B-OptiQ-4bit/resolve/08567bc6e2bcb36630b3efb9aca40611c9832795/"
+    }
+  ],
+  "upstream": {
+    "commit": "08567bc6e2bcb36630b3efb9aca40611c9832795",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwen3.6-35B-A3B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Qwen3.6-35B-A3B-OptiQ-4bit/tree/08567bc6e2bcb36630b3efb9aca40611c9832795"
+  }
+}

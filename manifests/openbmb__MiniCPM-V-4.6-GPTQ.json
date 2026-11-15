@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T04:42:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1db4aa47cd0a80e580bc03ead786631bc0a4e943f0ee1d8b90353f50998b4950",
+      "size": 21772
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "dfe1fa43a3444f065406d3a2b9aa315602f5c146b80cf22e0426a6c1466d85aa",
+      "size": 7301
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d625bed0cfb8d0ef13a69476b8a7cb5e9a0d652804a072dd6235f8525a76e575",
+      "size": 3381
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "355e944b910ce784e4c561d67b8e7fee9c6c89385cc790e5a6affb7747b1f118",
+      "size": 214
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2a04b41da9824d78fa507afa254febd7bfd812a3a1b97eaa9692388d712c609a",
+      "size": 1866140792
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "008f1064bddcbe8db845dbed14a1becac22d9598db6a3270d91f392c6df5705e",
+      "size": 102374
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "eb7cd430865c06eeaad22fcd28c6c606ce26b6fd54d3d6d0e99370779b3197a5",
+      "size": 315
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "4352533549e8a6d02325a4af0ebf27356207acb06c7180d58d9946fb14f73bb9",
+      "size": 286
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "33861e37bb955af1e3f3061182b820f347eba2b9c2c1011c82794bf0d6e77b54",
+      "size": 19992481
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f08d15030f1157ca8826aa92f64408dba6ecf50292f5dd74a6287d6aec0c4660",
+      "size": 8997
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM-V-4.6-GPTQ",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1db4aa47cd0a80e580bc03ead786631bc0a4e943f0ee1d8b90353f50998b4950",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:42:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.6-GPTQ/resolve/0b7d13bbc0fd90fbafc01a96f71e07019a876855/"
+    }
+  ],
+  "upstream": {
+    "commit": "0b7d13bbc0fd90fbafc01a96f71e07019a876855",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM-V-4.6-GPTQ",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-4.6-GPTQ/tree/0b7d13bbc0fd90fbafc01a96f71e07019a876855"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "display_name": "d3-edge",
+  "family": "vllm-sr",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "vllm-sr/d3-edge",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/vllm-sr/d3-edge.json",
+  "params": 594321600,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen3.5-0.8B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 5680,
+    "likes": 59,
+    "trending": null
+  },
+  "tasks": [
+    "zero-shot-classification"
+  ],
+  "tier": "T2",
+  "total_size": 1215725322,
+  "upstream_url": "https://huggingface.co/vllm-sr/d3-edge",
+  "what_changed": null
+}

@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:24:10Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "18691591180732df1f260c85a106e7bb11a38a20eb900a8a09a46c32575be0f2",
+      "size": 5313
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "654162ab4a5373344d6e93ea744b577814224c442a02a08bde4a04c516d28795",
+      "size": 1288
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "586b8e92031953b2c4aa830a418e1443d3c49442c5202f505f4561b3629384ad",
+      "size": 4288955320
+    },
+    {
+      "lfs": false,
+      "path": "model.sig",
+      "sha256": "769231856b6b1531201f5e12e0944c3202efb3800825247ca6871b33116bf78f",
+      "size": 9541
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c08676c49fd7969a3130f72be6d4bf34da66aa484a6e21dffe359893a1bd5f2e",
+      "size": 579
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d44f7e5085ab278d3fc497b2d4fda2da84074c62d2980817229919b007e45b1a",
+      "size": 7153467
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f7d756d106b80285c3f77c433e53a44bca3666111f14074a78ff0d80631b192e",
+      "size": 17710
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-swash-2b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "18691591180732df1f260c85a106e7bb11a38a20eb900a8a09a46c32575be0f2",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:24:10Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-swash-2b/resolve/af1e3227100b61088eead48389ab5409b5d0e39c/"
+    }
+  ],
+  "upstream": {
+    "commit": "af1e3227100b61088eead48389ab5409b5d0e39c",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-swash-2b",
+    "url": "https://huggingface.co/ibm-granite/granite-swash-2b/tree/af1e3227100b61088eead48389ab5409b5d0e39c"
+  }
+}

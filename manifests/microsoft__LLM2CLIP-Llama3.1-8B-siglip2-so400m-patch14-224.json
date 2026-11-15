@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T04:32:04Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ad1d6c529e750e9a497f2d48ef01f1386845acc607c8a0fe6e11cca03fb9aa4e",
+      "size": 1643
+    },
+    {
+      "lfs": false,
+      "path": "CLIP.png",
+      "sha256": "308a3ca4503f1c7a07803916c369d78c4ef501e5ab7fc727da9b5e1d2f9ec85b",
+      "size": 252444
+    },
+    {
+      "lfs": false,
+      "path": "LLM2CLIP-Llama-3.1-8B/README.md",
+      "sha256": "5a93d484bdd3241b65399b083128d3e586eb4276ffd6796e4ce6ebee8b0c60dc",
+      "size": 5106
+    },
+    {
+      "lfs": false,
+      "path": "LLM2CLIP-Llama-3.1-8B/adapter_config.json",
+      "sha256": "40955949043b5cf8c6a65874c546a0405292eb4272c5aee221c75efaa4082b13",
+      "size": 828
+    },
+    {
+      "lfs": true,
+      "path": "LLM2CLIP-Llama-3.1-8B/adapter_model.safetensors",
+      "sha256": "62908416e55a6b6c8e3dfba15650c0a1a53dc2b3514cf230d8424dc98d498e06",
+      "size": 83943504
+    },
+    {
+      "lfs": false,
+      "path": "LLM2CLIP-Llama-3.1-8B/llm2vec_config.json",
+      "sha256": "0411696359fdaca95d479c681273f1685e609f088bae576059f6b28fcede83fe",
+      "size": 110
+    },
+    {
+      "lfs": false,
+      "path": "LLM2CLIP-Llama-3.1-8B/special_tokens_map.json",
+      "sha256": "1b1835caa5b4d70acaa210fa222b0036f1882f9525c4660fd4810fb3e1e40ff8",
+      "size": 325
+    },
+    {
+      "lfs": false,
+      "path": "LLM2CLIP-Llama-3.1-8B/tokenizer.json",
+      "sha256": "3b9251f8112f38c214bb70ddde4c1d7efa650c7f13c942034f55e826fefb8b0d",
+      "size": 9085919
+    },
+    {
+      "lfs": false,
+      "path": "LLM2CLIP-Llama-3.1-8B/tokenizer_config.json",
+      "sha256": "05d0de6d831b5940c3f2eae4e495b9f77612cbb05b5804846733ab617f0dfe9b",
+      "size": 55380
+    },
+    {
+      "lfs": false,
+      "path": "LLM2CLIP-Llama-3.1-8B/trainer_state.json",
+      "sha256": "5ead1a218e2994c13bf102b98b6601fbc432a9e46a02a4ac4a35f22cb2455dfe",
+      "size": 54376
+    },
+    {
+      "lfs": true,
+      "path": "LLM2CLIP-Llama-3.1-8B/training_args.bin",
+      "sha256": "f338329cf83eeb118f3a5f4b30409d3780838ef2437d995ad1ab058daaf626a1",
+      "size": 6456
+    },
+    {
+      "lfs": true,
+      "path": "LLM2CLIP-SigLIP2-So-14-224.pt",
+      "sha256": "71ababccf764efd7aab3beeee07aec4cb338c52c5e1f8ec46419f5da0593f290",
+      "size": 1401910391
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fb8766dd23531fd804391172bfab4b6eff7808f918fa76dc3ab2905e9c1458df",
+      "size": 3833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/LLM2CLIP-Llama3.1-8B-siglip2-so400m-patch14-224",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fb8766dd23531fd804391172bfab4b6eff7808f918fa76dc3ab2905e9c1458df",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.llama",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:32:04Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/LLM2CLIP-Llama3.1-8B-siglip2-so400m-patch14-224/resolve/dac0e79d6b8cb804ae59568663557c0913b62ce7/"
+    }
+  ],
+  "upstream": {
+    "commit": "dac0e79d6b8cb804ae59568663557c0913b62ce7",
+    "host": "huggingface.co",
+    "repo": "microsoft/LLM2CLIP-Llama3.1-8B-siglip2-so400m-patch14-224",
+    "url": "https://huggingface.co/microsoft/LLM2CLIP-Llama3.1-8B-siglip2-so400m-patch14-224/tree/dac0e79d6b8cb804ae59568663557c0913b62ce7"
+  }
+}

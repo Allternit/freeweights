@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:20:17Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a3d91afd3b4b63ad34011febb742db29b6dc4495a7ea28dd04b2a0aafa7d85a0",
+      "size": 3331
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5d21f41e25acc8bc5cc5b2da19ceaf8ee1b55ef3ba55b695d897863e74d230e9",
+      "size": 6570
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "f7febe9695cd6f71120abbeb0642d3d6b6c6bcc36f0ba1d79b66d302b5860814",
+      "size": 15434994
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "6cbf6e47742a87d690930871f7ed59a22d01bb2e7e1602632b9971282c1d766e",
+      "size": 10830816
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "ee34d851a43b1300b73b3a5d16c125de0aa8acc1f0ae7035ca0ee7c86885f51c",
+      "size": 4807354
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "89be82b117a293194ee73bfa4e8d76ec1260d51f226ff6f3f07b8e5476220fb9",
+      "size": 10921805
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "ee34d851a43b1300b73b3a5d16c125de0aa8acc1f0ae7035ca0ee7c86885f51c",
+      "size": 4807354
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "5dca767237986666c7ba4488c1ae839c2fe5bf0dbfa24c5238840a47eb496578",
+      "size": 4807428
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "cd38cd59999e7a95d68e487fbe5132df3d4e5c32a0836add57e6126ba0c4eaf1",
+      "size": 444
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/dfine-nano-coco-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a3d91afd3b4b63ad34011febb742db29b6dc4495a7ea28dd04b2a0aafa7d85a0",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:17Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/dfine-nano-coco-ONNX/resolve/89df95b0e8575ff9879f13351bafe69bbe8e6823/"
+    }
+  ],
+  "upstream": {
+    "commit": "89df95b0e8575ff9879f13351bafe69bbe8e6823",
+    "host": "huggingface.co",
+    "repo": "onnx-community/dfine-nano-coco-ONNX",
+    "url": "https://huggingface.co/onnx-community/dfine-nano-coco-ONNX/tree/89df95b0e8575ff9879f13351bafe69bbe8e6823"
+  }
+}

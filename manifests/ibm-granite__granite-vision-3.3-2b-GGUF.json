@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T05:09:07Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "0eaa4d2a26879d420cffdc1eee4eae65bafa82193741c29ecd082af62c831d56",
+      "size": 1988
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ac8a35a1822cbb41c059ddc7c064e6a24873a3b1a60d025757478634cd4a3752",
+      "size": 2650
+    },
+    {
+      "lfs": true,
+      "path": "granite-vision-3.3-2b-Q4_K_M.gguf",
+      "sha256": "f9e2f442dd94d702b1a707401a269f2e2ddaecb949aee2f888d04cade6e1c98c",
+      "size": 1545294400
+    },
+    {
+      "lfs": true,
+      "path": "granite-vision-3.3-2b-Q5_K_M.gguf",
+      "sha256": "7f0c39bb82713c1abda7718c5c314ccaac6850622d75f3961f7dfbbc06178fba",
+      "size": 1804816960
+    },
+    {
+      "lfs": true,
+      "path": "granite-vision-3.3-2b-Q6_K.gguf",
+      "sha256": "6626621c0fe0feedbd1fbe6026ac023dcd35d14ca1532a1383548a4c18a772d0",
+      "size": 2080559680
+    },
+    {
+      "lfs": true,
+      "path": "granite-vision-3.3-2b-Q8_0.gguf",
+      "sha256": "bbdf0c778030a7025e395c1d70300f0a2769f1cf2191fff1b84c6fec123b47b7",
+      "size": 2694109696
+    },
+    {
+      "lfs": true,
+      "path": "granite-vision-3.3-2b-bf16.gguf",
+      "sha256": "f8d51c2c95049b36094fd5b21b853637d735ee159e85616a91a84d2017fa3319",
+      "size": 5069142016
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-model-f16.gguf",
+      "sha256": "1cc6701f5b3eeb51987e16f21928a68113961601b398e801dad7026d01fa8341",
+      "size": 892544608
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-vision-3.3-2b-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ac8a35a1822cbb41c059ddc7c064e6a24873a3b1a60d025757478634cd4a3752",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:07Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-vision-3.3-2b-GGUF/resolve/7edb59cacbffaeb016e29c760321c350fb43c429/"
+    }
+  ],
+  "upstream": {
+    "commit": "7edb59cacbffaeb016e29c760321c350fb43c429",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-vision-3.3-2b-GGUF",
+    "url": "https://huggingface.co/ibm-granite/granite-vision-3.3-2b-GGUF/tree/7edb59cacbffaeb016e29c760321c350fb43c429"
+  }
+}

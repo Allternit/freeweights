@@ -1,0 +1,378 @@
+{
+  "created_at": "2026-11-15T04:34:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "9a19acb5cb7e12414628da0f4f0388e3c82a895052031b8b28f296dcfe59d9a5",
+      "size": 1873
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "202d02b14796563546e1a1d1e761410fa9e399bf7e1b85d8b43c972658341202",
+      "size": 11335
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cdd7764b72a38651d0ab6c7235a91ab00626003714f1c50e3449f1fd8b5e309d",
+      "size": 6796
+    },
+    {
+      "lfs": false,
+      "path": "README_ZH.md",
+      "sha256": "b128b48c8dfb690428f2c4121c0d32ece6dd84231ff582e7b054d555a94b5019",
+      "size": 6094
+    },
+    {
+      "lfs": false,
+      "path": "code/requirements.txt",
+      "sha256": "24dddef7c40b23a170b9ce4bbcee347e36a5601123f553e4f6f521c685f0d71e",
+      "size": 57
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/e2e_refinement/refine_dataset.py",
+      "sha256": "221e7d059f845f3be4e8e702596974af1774784b95d2ecb8e3b7f9290e71aede",
+      "size": 6878
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/function_construction/function_construction.py",
+      "sha256": "6ed11d66bc32afd63f8eb60053190f32137209d4720ee55c56028484d12c0b2e",
+      "size": 38169
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/model_training/train.sh",
+      "sha256": "a497859aff5f25588a1cf0492327ce7164ba9846fd4eb115a076c4a5cb5b8529",
+      "size": 1242
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/prompt_optimization/api_client.py",
+      "sha256": "afdfd4c1dce096f799c201b8d3101f2a3724695753b6b49f96045e5a4548a810",
+      "size": 4819
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/prompt_optimization/config.py",
+      "sha256": "a4dae3d6e5ea0a3fb541c50bd22ddd48981fa5c275b6c1b8ab7d792395f5743a",
+      "size": 1447
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/prompt_optimization/data_sampler.py",
+      "sha256": "d75b19b681e904b8ca89d1adc7d14ddf9644fe1180dad8f7cacba536fd51a8f4",
+      "size": 3068
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/prompt_optimization/evaluator.py",
+      "sha256": "d28ffc30ac9fa90007764c32124c6cb8384ad87360a49a6d00322657d6eb4198",
+      "size": 6585
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/prompt_optimization/main.py",
+      "sha256": "d07cc928d49cfe70d3e0ad4158afba194ce6b9db14df8379cc5f217eae1c55ee",
+      "size": 8329
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/prompt_optimization/optimizer.py",
+      "sha256": "64a5c6e2a3a23472520b9a5613082a245d9ce8716b9c342144da097585cf2e35",
+      "size": 29516
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/prompt_optimization/refinement_prompt_en.txt",
+      "sha256": "92eeb77776c963bb9d7f5dd59b79233672e235acb5079488d5b30ceee884ef03",
+      "size": 8676
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/seed_preprocessing/sliding_window_splitter.py",
+      "sha256": "0a7a1c956aef3a6b7d01539bec3c2415ccb543b64b574c55be3e40c8da8e92b9",
+      "size": 9072
+    },
+    {
+      "lfs": false,
+      "path": "code/stage1_model_construction/sft_data_building/sample_and_format.py",
+      "sha256": "eaf84b79b4e579c5310bccf266116a61f3d6ec40ec0c6d1aa4bc788ef182b6cf",
+      "size": 8312
+    },
+    {
+      "lfs": false,
+      "path": "code/stage2_large_scale_execution/inference/inference.py",
+      "sha256": "0c6ed974bad6f4c5979bd2923eda7ead79ca192aea2004b5c6fbe25dbb848d79",
+      "size": 34174
+    },
+    {
+      "lfs": false,
+      "path": "code/stage2_large_scale_execution/post_processing/post_process_and_execute.py",
+      "sha256": "84a7501766e15c90cc837d6748a664d49605c08cc8381981d367a96a250b86b0",
+      "size": 29550
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/args.json",
+      "sha256": "80116ded3909ceac1851e5abca2a8c4e8490afc47675888b497c263ea7148900",
+      "size": 20953
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "size": 4168
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/config.json",
+      "sha256": "07e111ca5ddda0c65ffb269903677c43a592ec36ea1067648b848148fa8a2b6e",
+      "size": 1361
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/generation_config.json",
+      "sha256": "19d9395705449004ddebeeaf62841338a48cc8df85cddb1ca0b2c60396d95c96",
+      "size": 214
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX-No-Instruction/model.safetensors",
+      "sha256": "6659476674fe57befdc739da02e87eebaeeb8b7771c32955e1df897632186363",
+      "size": 1192135096
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX-No-Instruction/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/tokenizer_config.json",
+      "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0",
+      "size": 5404
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/trainer_state.json",
+      "sha256": "54503a8962db1387f5ae92a444810ffbac5dfe287523ed8bc8a21c3ff825383f",
+      "size": 105032
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX-No-Instruction/training_args.bin",
+      "sha256": "04cf2f27c2741e1e06fbd443035f69e6f550e1ba1d35ac83af7c8bd1df836777",
+      "size": 9617
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-No-Instruction/vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/args.json",
+      "sha256": "1dc01236fd86a31844050b0193ae7a117495201c51072960cc38e18a823a17a0",
+      "size": 21093
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "size": 4168
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/config.json",
+      "sha256": "07e111ca5ddda0c65ffb269903677c43a592ec36ea1067648b848148fa8a2b6e",
+      "size": 1361
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/generation_config.json",
+      "sha256": "19d9395705449004ddebeeaf62841338a48cc8df85cddb1ca0b2c60396d95c96",
+      "size": 214
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX-Preservation-Weighted/model.safetensors",
+      "sha256": "0d2cb01af211ed9f0087761a904705d40a9ad80128bb499e1b4a3b30614e36ac",
+      "size": 1192135096
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX-Preservation-Weighted/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/tokenizer_config.json",
+      "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0",
+      "size": 5404
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/trainer_state.json",
+      "sha256": "b6b070a18c7745416ceba4fbbef8f1bb2829e7ec0c2ce09cd10ed2736ac6417e",
+      "size": 168430
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX-Preservation-Weighted/training_args.bin",
+      "sha256": "3832c89bc01925f5362c6391db5e2275a8ffd105134fd1975fde3d32f410712e",
+      "size": 9681
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX-Preservation-Weighted/vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/args.json",
+      "sha256": "a95e8b15b180206c51190a869025521409a799834de5c8a76eeb5d445d12da29",
+      "size": 21058
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "size": 4168
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/config.json",
+      "sha256": "07e111ca5ddda0c65ffb269903677c43a592ec36ea1067648b848148fa8a2b6e",
+      "size": 1361
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/generation_config.json",
+      "sha256": "19d9395705449004ddebeeaf62841338a48cc8df85cddb1ca0b2c60396d95c96",
+      "size": 214
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX/model.safetensors",
+      "sha256": "282d3d6f01055e341482ca4f532c1739bf08cf7e24efce288003aca5869ce724",
+      "size": 1192135096
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/tokenizer_config.json",
+      "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0",
+      "size": 5404
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/trainer_state.json",
+      "sha256": "c3f94f54c12810131086caf134348227ef496e0961f0a56ff9562f0381921b97",
+      "size": 104978
+    },
+    {
+      "lfs": true,
+      "path": "models/UltraX/training_args.bin",
+      "sha256": "3471173a90c1af0c2a416e7d887f6fea0ce4f1683e6cb82a2bffebc2ff88efd6",
+      "size": 9681
+    },
+    {
+      "lfs": false,
+      "path": "models/UltraX/vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/UltraX-0.6B-Preview",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "202d02b14796563546e1a1d1e761410fa9e399bf7e1b85d8b43c972658341202",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:34:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/UltraX-0.6B-Preview/resolve/18d7c03559cea29ce4aac2741706b099819c5c68/"
+    }
+  ],
+  "upstream": {
+    "commit": "18d7c03559cea29ce4aac2741706b099819c5c68",
+    "host": "huggingface.co",
+    "repo": "openbmb/UltraX-0.6B-Preview",
+    "url": "https://huggingface.co/openbmb/UltraX-0.6B-Preview/tree/18d7c03559cea29ce4aac2741706b099819c5c68"
+  }
+}

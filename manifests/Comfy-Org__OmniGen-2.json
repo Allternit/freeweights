@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:38:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f64566feaaefb83852541c745971b6e4fb0d7a5470e43123768d336b394db460",
+      "size": 2602
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/omnigen2_fp16.safetensors",
+      "sha256": "60dbde45107762d164bac463e1cf365e074b377fa843dc90cb2985fb211cd4de",
+      "size": 7934384176
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/qwen_2.5_vl_fp16.safetensors",
+      "sha256": "ba05dd266ad6a6aa90f7b2936e4e775d801fb233540585b43933647f8bc4fbc3",
+      "size": 7509337224
+    },
+    {
+      "lfs": true,
+      "path": "split_files/vae/ae.safetensors",
+      "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+      "size": 335304388
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/OmniGen-2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f64566feaaefb83852541c745971b6e4fb0d7a5470e43123768d336b394db460",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:38:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/OmniGen-2/resolve/babe908cd4ed58efc7359e9e35b426cd73071949/"
+    }
+  ],
+  "upstream": {
+    "commit": "babe908cd4ed58efc7359e9e35b426cd73071949",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/OmniGen-2",
+    "url": "https://huggingface.co/Comfy-Org/OmniGen-2/tree/babe908cd4ed58efc7359e9e35b426cd73071949"
+  }
+}

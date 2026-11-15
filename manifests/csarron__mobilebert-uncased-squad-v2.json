@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:40:47Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a368a21c472071feec9095f63d5f7d3433826c1c476a6995f072b6755ccc6f59",
+      "size": 399
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "415ca18ae8e1d992e6d9c1b74e944c0774348af74b46bd8287a162c93c05820c",
+      "size": 5238
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3ac196c44711dc206bd7d21704cc5753c95018b9d8d4aefb1d2c3b0e413b0ad1",
+      "size": 765
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx",
+      "sha256": "545d75decc2b153877571d3857845a9a7cc3be4ed8e8976cf4eb2c51c1751ffb",
+      "size": 99025546
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "5a9adc5001ddb8b9760606c20ac9bb2109e1eb292a3d914c9816235daa218269",
+      "size": 98470130
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "226fbd74da60509880994c22d927f06f4e620f674fdf436211ad6902f01de7fb",
+      "size": 98612899
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b13116b0941ee0b93b1b2d75c3dd87e9e4897e4a21e737c06ca1e94a78dddd6e",
+      "size": 85
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "b27e5e03c784063ec2616a4a8e24ecf4a025831374da352c982b138ec77e6459",
+      "size": 1683
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "csarron/mobilebert-uncased-squad-v2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "415ca18ae8e1d992e6d9c1b74e944c0774348af74b46bd8287a162c93c05820c",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:40:47Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/csarron/mobilebert-uncased-squad-v2/resolve/6d49c30d06c6042041039f6fe076b011f0c2053c/"
+    }
+  ],
+  "upstream": {
+    "commit": "6d49c30d06c6042041039f6fe076b011f0c2053c",
+    "host": "huggingface.co",
+    "repo": "csarron/mobilebert-uncased-squad-v2",
+    "url": "https://huggingface.co/csarron/mobilebert-uncased-squad-v2/tree/6d49c30d06c6042041039f6fe076b011f0c2053c"
+  }
+}

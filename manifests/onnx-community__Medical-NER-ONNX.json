@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T05:28:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5081f259d77c59e08357c7cfe41edbb61d67d7d403eada6e740597462533dd28",
+      "size": 873
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cd446d0d330e0119f8339265bf4ac85c50ccbb6ce046263b9a7c972c3717e583",
+      "size": 5194
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "66c49e36c71f7a0f839646674c2acb221944ed962052d75ca5634c41b59782ec",
+      "size": 772431908
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "345d291ff7e3b094b76effc59513c5ed5bab670f95304424efa4e39cad2ed770",
+      "size": 480261266
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "410a9f0a694de9820e4ccc71b6f78798288c7719bc8555c406cc7c683a735fc3",
+      "size": 386564953
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "33dc0abe711c91b2c8d38fee9c5bfc7cc763e9c8e26dceb9aec7b056ef1f9a03",
+      "size": 222808139
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "2a654be9cdcf6acd9f325c35af5b65b6ddde84ab1048c84226299c93f7b71f08",
+      "size": 485573129
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "d41cbe7f357d93dcf051abdc8bc7d112709aa116a0df3fd7a03e346ef6d8d1c5",
+      "size": 264390669
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "33dc0abe711c91b2c8d38fee9c5bfc7cc763e9c8e26dceb9aec7b056ef1f9a03",
+      "size": 222808139
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "1e150d87b5e33560c7a9ef200785047303aed105a2402d291b4fe9d06c0ec77c",
+      "size": 222808139
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b2f1b2f15f29a6b6d9d6ea4eca1675d2c231a71477f151d48f79cc83a625ba21",
+      "size": 970
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "133b1071a455bb96ec0d7aa1242e616cc42ec29652fded524fb6883832afa903",
+      "size": 8648962
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e6ca7ef61ef901730c4fb3f6c1310e66f29343682563db0fa5ad494b07c3a627",
+      "size": 1422
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Medical-NER-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5081f259d77c59e08357c7cfe41edbb61d67d7d403eada6e740597462533dd28",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:28:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Medical-NER-ONNX/resolve/56dd247a73f5b32aa4dd3013f2e93dee44939e4a/"
+    }
+  ],
+  "upstream": {
+    "commit": "56dd247a73f5b32aa4dd3013f2e93dee44939e4a",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Medical-NER-ONNX",
+    "url": "https://huggingface.co/onnx-community/Medical-NER-ONNX/tree/56dd247a73f5b32aa4dd3013f2e93dee44939e4a"
+  }
+}

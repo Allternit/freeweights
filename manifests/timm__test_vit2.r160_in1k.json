@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:32:02Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4594657fd204f79136361f0b7b2fff8121aaeaae081f57b49f5bc8aebe90c274",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0cef69816e4da4c8183a063ec68e9add721e8c120ee41fda905ea15401222327",
+      "size": 563
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "c7c53c5a841ea4066ee6b19a96f49e1abbbf72876f4a768745c0cf4f5df84201",
+      "size": 1833160
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "3e9aed879a20e1445cada26b3447cf62fe6b836200031be50c4371c6f871b960",
+      "size": 1866154
+    },
+    {
+      "lfs": true,
+      "path": "test/owl_tensors.safetensors",
+      "sha256": "1cb10a3ed9b2a7c542acb755f6390afc7cb34e76354e96df863ca86b3cba5d8f",
+      "size": 337616
+    },
+    {
+      "lfs": true,
+      "path": "test/rand_tensors.safetensors",
+      "sha256": "b2baeb78ed8ccc62391d69957851bd5499e0949feaaec9ea847bb468b623c621",
+      "size": 1349560
+    },
+    {
+      "lfs": false,
+      "path": "test/test_owl.jpg",
+      "sha256": "e9ee19efca9099211776da24390b831679e5f4b429c99aee816e609efe8dde7c",
+      "size": 601233
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/test_vit2.r160_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4594657fd204f79136361f0b7b2fff8121aaeaae081f57b49f5bc8aebe90c274",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:32:02Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/test_vit2.r160_in1k/resolve/f924790766bd9147ad5027d57cd7547fdb312b2c/"
+    }
+  ],
+  "upstream": {
+    "commit": "f924790766bd9147ad5027d57cd7547fdb312b2c",
+    "host": "huggingface.co",
+    "repo": "timm/test_vit2.r160_in1k",
+    "url": "https://huggingface.co/timm/test_vit2.r160_in1k/tree/f924790766bd9147ad5027d57cd7547fdb312b2c"
+  }
+}

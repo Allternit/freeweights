@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:24:33Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "80c5243a75df287b7c399887348a8ed8102ff61a2f396b22f71bdef05c38c15f",
+      "size": 406
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cb09888f0b5fc2a058fbe4a84d15765415fd8220b43825198bcaf705f97ceadc",
+      "size": 738
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "1fceb2a58ec3bfb7c75e7313571b5abc2c54a23d71a3039af92033480c7f098a",
+      "size": 332805969
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "3737a3b0f70c65388dacc4e9357f4df32aea729f1f386230f0161bf6b57a56e7",
+      "size": 136379062
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "ef8b5ce66ee03761152c04cfed53ffe802a58e6194153b185050b7eebc4f1612",
+      "size": 166604219
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "e37ffdc95688b005de45d8c1241697a4f95e325a129ea5e1ab45b2ddaf65c047",
+      "size": 84740686
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "933961c58aea07c257ceb0377a5f8f46a05d967ab26b4a5f731e2c989f9ebfbb",
+      "size": 139949894
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "64e816d4d66a1dae9648cc53bf048cf6544cbb4aaf9c1e23088b6de2e242cecb",
+      "size": 84471217
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "cd682e9bd91142c5bc74ac53ac5cb5a87e0ee16a95ca33ffc902b8d4a3e1283a",
+      "size": 84740686
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "cd682e9bd91142c5bc74ac53ac5cb5a87e0ee16a95ca33ffc902b8d4a3e1283a",
+      "size": 84740686
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "5df7e578c37e907a431daf47fd592fc49fa50d23ed4c41285a0a34a58a9d2e06",
+      "size": 468
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "92e1e31d71a7f63cd75b4dfa1469377bd2cd6b8292cf70b3ff5b7082b0edc1c9",
+      "size": 133
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6d9109cc838977f3ca94a379eec36aecc7c807e1785cd729660ca2fc0171fb35",
+      "size": 3642073
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f97b07bf147d9e4dbdb5f98941d35fc0b9412263a183483f73893adf756ede3e",
+      "size": 726
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363",
+      "size": 862328
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/TinyCLIP-ViT-39M-16-Text-19M-YFCC15M-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "80c5243a75df287b7c399887348a8ed8102ff61a2f396b22f71bdef05c38c15f",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:24:33Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/TinyCLIP-ViT-39M-16-Text-19M-YFCC15M-ONNX/resolve/3db5c5bb7947742868eaa7aa12ea4649f9d4f082/"
+    }
+  ],
+  "upstream": {
+    "commit": "3db5c5bb7947742868eaa7aa12ea4649f9d4f082",
+    "host": "huggingface.co",
+    "repo": "onnx-community/TinyCLIP-ViT-39M-16-Text-19M-YFCC15M-ONNX",
+    "url": "https://huggingface.co/onnx-community/TinyCLIP-ViT-39M-16-Text-19M-YFCC15M-ONNX/tree/3db5c5bb7947742868eaa7aa12ea4649f9d4f082"
+  }
+}

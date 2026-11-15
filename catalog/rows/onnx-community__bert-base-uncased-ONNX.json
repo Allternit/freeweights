@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google-bert/bert-base-uncased",
+  "display_name": "bert-base-uncased-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/bert-base-uncased-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/bert-base-uncased-ONNX.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google-bert/bert-base-uncased",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 55,
+    "likes": 0,
+    "trending": null
+  },
+  "tasks": [
+    "fill-mask"
+  ],
+  "tier": "variant",
+  "total_size": 1206526455,
+  "upstream_url": "https://huggingface.co/onnx-community/bert-base-uncased-ONNX",
+  "what_changed": null
+}

@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T02:30:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "400b270bc8f5cb44fda65b1a4532ceca0fb452d0637425e861829560cf393ae2",
+      "size": 1227
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fb70f13f418fe0d2728982ba050df3daa47f595f19f6858221b64200a2120265",
+      "size": 3062
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8441374a5e33099b00da344bd19eb6ed67e697bd54c0720d0e97e714981e20ed",
+      "size": 4995
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "d744b846a71ce6ccdb49d7bfe5097eadc41e766ffd28481e1636ed796e820165",
+      "size": 265722260
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "b027673a3307002bc2c34795e627691e1a0b906ee3480036fb9a5b06d269f547",
+      "size": 265743541
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "size": 125
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "435667fab0c06c165b1283ecb422497c37124f2d6a35b2ac73dc876332fc9518",
+      "size": 711494
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7070b097c5c26dd42e3810db48bf58a9ed1785440cf3b9cf5cded238b7e6382e",
+      "size": 373
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "d4data/biomedical-ner-all",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fb70f13f418fe0d2728982ba050df3daa47f595f19f6858221b64200a2120265",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:30:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/d4data/biomedical-ner-all/resolve/015a4050c9ac99722e61c547aa9b4282bcbedc7f/"
+    }
+  ],
+  "upstream": {
+    "commit": "015a4050c9ac99722e61c547aa9b4282bcbedc7f",
+    "host": "huggingface.co",
+    "repo": "d4data/biomedical-ner-all",
+    "url": "https://huggingface.co/d4data/biomedical-ner-all/tree/015a4050c9ac99722e61c547aa9b4282bcbedc7f"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:36:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".checkpoint_complete",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fbaa43f02a1dbbfe2d4f436c6a3c8cf61600a7ede6151f02611f715a96998fd7",
+      "size": 5049
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "d0eee281dec542894f3864ff2320c3f5998cdb8ab88e31366042ee4ebf4ca6b9",
+      "size": 7741
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+      "size": 3161
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "716e09da441dea847d26ef2cb687ea2d661f1ec9751f7b74c2a58686463e456d",
+      "size": 115
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2798d7a8908ae1384c6dab9e4fee35822a5f5c4cb704a64b3d4ef26d319c93cd",
+      "size": 8411558400
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7b0fac742429dadf21d71bb5078f2f468b2cd869e6aafd2ec9b33c53983d9c13",
+      "size": 15127
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/tmax-4b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fbaa43f02a1dbbfe2d4f436c6a3c8cf61600a7ede6151f02611f715a96998fd7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:36:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/tmax-4b/resolve/c733e09b808d837ae7450eccc8cb8dace07316d6/"
+    }
+  ],
+  "upstream": {
+    "commit": "c733e09b808d837ae7450eccc8cb8dace07316d6",
+    "host": "huggingface.co",
+    "repo": "allenai/tmax-4b",
+    "url": "https://huggingface.co/allenai/tmax-4b/tree/c733e09b808d837ae7450eccc8cb8dace07316d6"
+  }
+}

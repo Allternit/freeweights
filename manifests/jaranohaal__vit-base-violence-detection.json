@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:37:41Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "eec62e115b63cf716cdd6c6cda33580b6afe476f5e24a55185e754a832f87076",
+      "size": 1736
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "03652439b83bb9626e74675127b66e0278da16d74660e581a3be48663f75c626",
+      "size": 523
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9eec3237288742eb4267cb2cbbbdacba5bee889be4673215bfe40e1dbd5621a5",
+      "size": 343214896
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "5e6895a8a80efa00a98656b6c24d202d7582614ceea87aa122f861120dc833c0",
+      "size": 580
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "8d5cb834bdca086c9bf1b071042f49c859675714f92800b55eebc936b37bd43e",
+      "size": 343259818
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "jaranohaal/vit-base-violence-detection",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "eec62e115b63cf716cdd6c6cda33580b6afe476f5e24a55185e754a832f87076",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:37:41Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/jaranohaal/vit-base-violence-detection/resolve/31931091dfd4ea08a30c42be0db8e1488263cbd5/"
+    }
+  ],
+  "upstream": {
+    "commit": "31931091dfd4ea08a30c42be0db8e1488263cbd5",
+    "host": "huggingface.co",
+    "repo": "jaranohaal/vit-base-violence-detection",
+    "url": "https://huggingface.co/jaranohaal/vit-base-violence-detection/tree/31931091dfd4ea08a30c42be0db8e1488263cbd5"
+  }
+}

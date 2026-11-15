@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:35:24Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE.md",
+      "sha256": "2320b1f7cba5b613c818159c035c07bc8e5f5446eaa0b9e7183cb01f5e3599ee",
+      "size": 996
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0f2a5c9c724fa757b45d37d60577921122864b414b1bb1079a4e34ccae98984a",
+      "size": 5579
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8de498bfe69617e522c5ad1c12288e4feb64c15e18ecc18b3667349b1199dd91",
+      "size": 4240
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "206f8317e5df76b74d66853eea34ccae4313b06822f1c7135e390243b1770e33",
+      "size": 2235715264
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "3a56def25aa40facc030ea8b0b87f3688e4b3c39eb8b45d5702b3a1300fe2a20",
+      "size": 17082734
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "704ea4319eb620ec52a13b27479cb8cf9e4cc504a4d55b6ed3029813ff86524f",
+      "size": 1182
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "tabularisai/eu-pii-safeguard",
+  "license": {
+    "file_path": "LICENSE.md",
+    "file_sha256": "2320b1f7cba5b613c818159c035c07bc8e5f5446eaa0b9e7183cb01f5e3599ee",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:35:24Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/tabularisai/eu-pii-safeguard/resolve/de0c1400125ca0b834e3c901df06a8b1870e57ad/"
+    }
+  ],
+  "upstream": {
+    "commit": "de0c1400125ca0b834e3c901df06a8b1870e57ad",
+    "host": "huggingface.co",
+    "repo": "tabularisai/eu-pii-safeguard",
+    "url": "https://huggingface.co/tabularisai/eu-pii-safeguard/tree/de0c1400125ca0b834e3c901df06a8b1870e57ad"
+  }
+}

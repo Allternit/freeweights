@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:13:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".eval_results/typed-decisions.yaml",
+      "sha256": "2bde00fe0adb94aee8c0489110f7db553b82bcd8fc377254b0aaf218714baba3",
+      "size": 2043
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "size": 11544
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "87509ee2673e2702fa0e9a922b5fd5d334db644abef6b32e7d59cfe26a0fc35a",
+      "size": 8495
+    },
+    {
+      "lfs": false,
+      "path": "__pycache__/clef_mlx.cpython-312.pyc",
+      "sha256": "16f1fc31be584d5dfaf9560e4afdb1d9811eac29e5745f893a825db188f54057",
+      "size": 38461
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "size": 8952
+    },
+    {
+      "lfs": false,
+      "path": "clef_mlx.py",
+      "sha256": "852223c944819a32fad5cf798d9d1dff30419820eaf5ad1f10cb9698afec97d5",
+      "size": 33670
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "babed436c433c5498245d9a4660260a7fea7077def84b49be31087e52685eec1",
+      "size": 5031
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "dc36854b2b25176764cfeeda32a3d80fb4fcffbef2b00d55c6614079bf21eb9f",
+      "size": 214
+    },
+    {
+      "lfs": true,
+      "path": "joint_head.safetensors",
+      "sha256": "a010ac04f078e699988e4049cbea5e62c962393f59fec366640b64e8d69a4953",
+      "size": 256125024
+    },
+    {
+      "lfs": false,
+      "path": "joint_head_config.json",
+      "sha256": "890be585d75b981201eb96a35f98a9967afe37bc8d220cfdea2e72d56507534f",
+      "size": 119
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "6cc1508e96fb5d0865dfd5753a79f4ec60651bf3e2a82844a7e8ae9c60528c0d",
+      "size": 5343268662
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "6b0933f831ddcfacd2ae4d4d1dc326db0578fddc5fcf48319eed20b202f9c962",
+      "size": 5354185130
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "f97fd037229334ce55a1d74f401546279a43113fe8d01adf4213f0c98a546585",
+      "size": 5357087557
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "13b840162b4cb35c66fef7df072f7dbb4717908204364f5e5d9f9655a2758fa8",
+      "size": 218281
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+      "size": 1191
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f",
+      "size": 19989339
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7d884d6eaf8142a3343a933ca5ab6ccc2fa93d52591cdbbe2ea33559bb2b503a",
+      "size": 1190
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/clef-4bit",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:13:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/clef-4bit/resolve/b973b6f405d02f8e9b83208c7e82ddf43a742eb6/"
+    }
+  ],
+  "upstream": {
+    "commit": "b973b6f405d02f8e9b83208c7e82ddf43a742eb6",
+    "host": "huggingface.co",
+    "repo": "mlx-community/clef-4bit",
+    "url": "https://huggingface.co/mlx-community/clef-4bit/tree/b973b6f405d02f8e9b83208c7e82ddf43a742eb6"
+  }
+}

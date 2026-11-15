@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:28:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "ad7d951c80c5fc2b2bce035f2041bc0a0dbf9028c8ecc4c9a8e1fba8130b6b59",
+      "size": 12500
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "78ed151959087404d65b6748d2e3ba0150500a436e2247981d7c3eb59f30e9a0",
+      "size": 4566
+    },
+    {
+      "lfs": true,
+      "path": "geometry_estimation/moge_1_vitl_fp16.safetensors",
+      "sha256": "34cab296d0474b02ab477fcef0cc3deee859f3edd4fd6f947d8ff096760a3d56",
+      "size": 628391652
+    },
+    {
+      "lfs": true,
+      "path": "geometry_estimation/moge_2_vitl_normal_fp16.safetensors",
+      "sha256": "cb1a692d03235671e959e81360d7b4d9f44aefadb1f852d6ca6aa17799d5e31f",
+      "size": 661859924
+    },
+    {
+      "lfs": true,
+      "path": "geometry_estimation/moge_3_vitg_fp16.safetensors",
+      "sha256": "a587e42936ae7080b419df4c047b0f0b075d3492418f76ce81fb0779925a1fe6",
+      "size": 2501605198
+    },
+    {
+      "lfs": true,
+      "path": "geometry_estimation/moge_3_vitl_fp16.safetensors",
+      "sha256": "52ad9a13037a28fd65003cae7df056c8f903f5aed2c3a5c802be0f5c74a6a7b8",
+      "size": 740652334
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/MoGe",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "ad7d951c80c5fc2b2bce035f2041bc0a0dbf9028c8ecc4c9a8e1fba8130b6b59",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:28:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/MoGe/resolve/1484985258ba7ef45c314144fcf0e90924ffbf44/"
+    }
+  ],
+  "upstream": {
+    "commit": "1484985258ba7ef45c314144fcf0e90924ffbf44",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/MoGe",
+    "url": "https://huggingface.co/Comfy-Org/MoGe/tree/1484985258ba7ef45c314144fcf0e90924ffbf44"
+  }
+}

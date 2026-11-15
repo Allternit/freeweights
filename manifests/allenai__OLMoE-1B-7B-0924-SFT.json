@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T03:47:49Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "024e2a20b13452b182889af8e6af2ef2930e475e2887780116d53c82f81934bd",
+      "size": 2783
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "42ea6f5fe31e9243290ba3c348a4ad615b88a6fbc6e10544e21a87b6dff5da6c",
+      "size": 759
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "77cf3f0caaa5e6d6972d910c70ca03f64fc47eccb4374082bdc8fc7b2c524a45",
+      "size": 120
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "660f006150a625e0b2f6df2bb1344a1d33ba2185fe92dccfffbf3f7494856c6b",
+      "size": 4997744872
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "5688cc530e68648e30a86f33a0a682c31e764e54b4feca21e866b9298a50e390",
+      "size": 4997235176
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "ed7c22a0294829f52e8a6a66571c3acaeb1cc53b0c890075622b21f43ceebe59",
+      "size": 3843741912
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "0e2e1e0d8d357ac7af817cff28410c3dbad398f060c517a433e4076b2aae5579",
+      "size": 287214
+    },
+    {
+      "lfs": false,
+      "path": "olmoe-logo.png",
+      "sha256": "482000c8d723923ba1c2fd39c4334fcf95c9d88102576a3f956fa264172626de",
+      "size": 23827
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "3833da6f48716676ed122442f50e7d673e80c566ec5f8565d197e48e115ca65b",
+      "size": 439
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "a094266ac6c4982efba277bc251349a5a6d6ad37efb39a2a90f53d8be2a40a40",
+      "size": 2115417
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "52d63b6b818ee69d57b459d8fca6f53fcdf162e35bd5b8373150f30778c3b779",
+      "size": 5821
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/OLMoE-1B-7B-0924-SFT",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "024e2a20b13452b182889af8e6af2ef2930e475e2887780116d53c82f81934bd",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:47:49Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/OLMoE-1B-7B-0924-SFT/resolve/215cc4f73147dd68bd11e7a7dcc56bac397f4221/"
+    }
+  ],
+  "upstream": {
+    "commit": "215cc4f73147dd68bd11e7a7dcc56bac397f4221",
+    "host": "huggingface.co",
+    "repo": "allenai/OLMoE-1B-7B-0924-SFT",
+    "url": "https://huggingface.co/allenai/OLMoE-1B-7B-0924-SFT/tree/215cc4f73147dd68bd11e7a7dcc56bac397f4221"
+  }
+}

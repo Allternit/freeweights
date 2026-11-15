@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/gemma-4-31B-it",
+  "display_name": "gemma-4-31B-it-uncensored-heretic",
+  "family": "gemma",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "llmfan46/gemma-4-31B-it-uncensored-heretic",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/llmfan46/gemma-4-31B-it-uncensored-heretic.json",
+  "params": 31273086512,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/gemma-4-31B-it",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.gemma",
+  "signals": {
+    "downloads_30d": 2599,
+    "likes": 174,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T2",
+  "total_size": 62578695097,
+  "upstream_url": "https://huggingface.co/llmfan46/gemma-4-31B-it-uncensored-heretic",
+  "what_changed": null
+}

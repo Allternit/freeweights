@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T02:31:19Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98c91dabef4df27b2fc7c8454d220aba47476f73593cbd034d961fe4927304c1",
+      "size": 445
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "83acf576ac2b22546b139ba48e690bace7c1de4b40c65d2fbd1cc9950eda75dd",
+      "size": 11973
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "be48115d52314bc27327e160bf10197760db02ea689d10adb24db4102edf7a8a",
+      "size": 689
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "fbc167e52fa30c56fbed46e8b45c25893c4afb165ef666864abc0e70d5c117a4",
+      "size": 6230463910
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "b90eadacf585a743a30ea51e8b5c88b8d282a2a34dc0c7e556d0987cdbd68805",
+      "size": 124
+    },
+    {
+      "lfs": false,
+      "path": "generation_config_for_text_generation.json",
+      "sha256": "a69e99c4a690c2015aaaeaef066516f1df9316317b3605869039fa896108efce",
+      "size": 165
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0f8b28eb05a8075f48b61b6f35332978c74fc7763fa9fb4051a1c30511736a6a",
+      "size": 6431829964
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "cd2a29e31040ef64d9362cb96801969c9f67b9e0bdbd6e00b9dda57cdbe17435",
+      "size": 6431878936
+    },
+    {
+      "lfs": true,
+      "path": "rust_model.ot",
+      "sha256": "7b92a55d852494754e2856681833ee0ff05580ee32c1d8d60a1177bbf1f4703a",
+      "size": 6753580552
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "47d4a280f9274f015e8dd1e7e2e1066415fc1f37030ec30d00615973e750e578",
+      "size": 6231102792
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+      "size": 1355256
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f",
+      "size": 26
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783",
+      "size": 1042301
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openai-community/gpt2-xl",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "83acf576ac2b22546b139ba48e690bace7c1de4b40c65d2fbd1cc9950eda75dd",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:31:19Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openai-community/gpt2-xl/resolve/15ea56dee5df4983c59b2538573817e1667135e2/"
+    }
+  ],
+  "upstream": {
+    "commit": "15ea56dee5df4983c59b2538573817e1667135e2",
+    "host": "huggingface.co",
+    "repo": "openai-community/gpt2-xl",
+    "url": "https://huggingface.co/openai-community/gpt2-xl/tree/15ea56dee5df4983c59b2538573817e1667135e2"
+  }
+}

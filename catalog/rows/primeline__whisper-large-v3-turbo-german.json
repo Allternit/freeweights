@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "primeline/whisper-large-v3-german",
+  "display_name": "whisper-large-v3-turbo-german",
+  "family": "primeline",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "primeline/whisper-large-v3-turbo-german",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/primeline/whisper-large-v3-turbo-german.json",
+  "params": 808878080,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "primeline/whisper-large-v3-german",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 26264,
+    "likes": 67,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T1",
+  "total_size": 1619746356,
+  "upstream_url": "https://huggingface.co/primeline/whisper-large-v3-turbo-german",
+  "what_changed": null
+}

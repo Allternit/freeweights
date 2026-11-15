@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T04:41:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5026c095388a742274abeac83458e5fea19307075d1bec2ba1589c2abb9ed597",
+      "size": 1831
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a77e89502ec8b0fc264b5e6acdcab17a540f99fef39e0ce81cc6e3c31c4f068f",
+      "size": 289
+    },
+    {
+      "lfs": true,
+      "path": "SmolVLM2-500M-Video-Instruct-Q8_0.gguf",
+      "sha256": "6f67b8036b2469fcd71728702720c6b51aebd759b78137a8120733b4d66438bc",
+      "size": 436808704
+    },
+    {
+      "lfs": true,
+      "path": "SmolVLM2-500M-Video-Instruct-f16.gguf",
+      "sha256": "80f7e3f04bc2d3324ac1a9f52f5776fe13a69912adf74f8e7edacf773d140d77",
+      "size": 820424704
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-SmolVLM2-500M-Video-Instruct-Q8_0.gguf",
+      "sha256": "921dc7e259f308e5b027111fa185efcbf33db13f6e35749ddf7f5cdb60ef520b",
+      "size": 108785184
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-SmolVLM2-500M-Video-Instruct-f16.gguf",
+      "sha256": "b5dc8ebe7cbeab66a5369693960a52515d7824f13d4063ceca78431f2a6b59b0",
+      "size": 199470624
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/SmolVLM2-500M-Video-Instruct-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a77e89502ec8b0fc264b5e6acdcab17a540f99fef39e0ce81cc6e3c31c4f068f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:41:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/SmolVLM2-500M-Video-Instruct-GGUF/resolve/ccd7aae53bcb1997355c2f094959e72b3642ce17/"
+    }
+  ],
+  "upstream": {
+    "commit": "ccd7aae53bcb1997355c2f094959e72b3642ce17",
+    "host": "huggingface.co",
+    "repo": "ggml-org/SmolVLM2-500M-Video-Instruct-GGUF",
+    "url": "https://huggingface.co/ggml-org/SmolVLM2-500M-Video-Instruct-GGUF/tree/ccd7aae53bcb1997355c2f094959e72b3642ce17"
+  }
+}

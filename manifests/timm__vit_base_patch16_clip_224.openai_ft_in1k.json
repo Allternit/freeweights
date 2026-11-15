@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:25:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ace9a23fd167e6557504680b12441ef87ed4d02b4ca5e14a9f91e9bb38cc79b4",
+      "size": 4379
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "41d51f78726034939d99723d9c8779d2b465244da4ff9bc69a93cead75e62ed7",
+      "size": 627
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a46cbc417c83033cf6ae5bd91d9c6b2aec7a949fb85e8d83aa1d370afea14285",
+      "size": 346287868
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "939a0ca15a6edcf1eac6b7ff35f7c0087c1ac67b5c2fb04f4c49dbe5329c10f8",
+      "size": 346294449
+    },
+    {
+      "lfs": false,
+      "path": "train_args.yaml",
+      "sha256": "6693cf1ec54f75ab436a2679a3f6b1f8d256f3f9d007773a06abc6a331b23b71",
+      "size": 2082
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_base_patch16_clip_224.openai_ft_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ace9a23fd167e6557504680b12441ef87ed4d02b4ca5e14a9f91e9bb38cc79b4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:25:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_base_patch16_clip_224.openai_ft_in1k/resolve/7387a25349670886b6c494fc4daa43c42408dd74/"
+    }
+  ],
+  "upstream": {
+    "commit": "7387a25349670886b6c494fc4daa43c42408dd74",
+    "host": "huggingface.co",
+    "repo": "timm/vit_base_patch16_clip_224.openai_ft_in1k",
+    "url": "https://huggingface.co/timm/vit_base_patch16_clip_224.openai_ft_in1k/tree/7387a25349670886b6c494fc4daa43c42408dd74"
+  }
+}

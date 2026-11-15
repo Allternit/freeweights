@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:41:10Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4a47d5d24eff924b4c541f3e1a00459d62aac396f6da6a39e0a01e76a2604c11",
+      "size": 10239
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "73bba6c6dc73baeb3e78d39eebde4bba4b13b715112766f5fd6660299b75a9c9",
+      "size": 614
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ebb1e0717935621d857d7441c700ebcec4daa4de066cffb11692a7171ceace8c",
+      "size": 90082480
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "4ecaf79c1b02d62e0df65e9ca0ee5460aff1bd81bd8a14d65dacfc1481686fba",
+      "size": 90138362
+    },
+    {
+      "lfs": false,
+      "path": "train_hparams.yaml",
+      "sha256": "ebb641e879b97d0c06ac712e3a69de4760eb2f8ca5b288f1098faafac4e2c58c",
+      "size": 2546
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_little_patch16_reg4_gap_256.sbb_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4a47d5d24eff924b4c541f3e1a00459d62aac396f6da6a39e0a01e76a2604c11",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:41:10Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_little_patch16_reg4_gap_256.sbb_in1k/resolve/933907dcb0abf67c7f5a314f64a8b7c3b69a427c/"
+    }
+  ],
+  "upstream": {
+    "commit": "933907dcb0abf67c7f5a314f64a8b7c3b69a427c",
+    "host": "huggingface.co",
+    "repo": "timm/vit_little_patch16_reg4_gap_256.sbb_in1k",
+    "url": "https://huggingface.co/timm/vit_little_patch16_reg4_gap_256.sbb_in1k/tree/933907dcb0abf67c7f5a314f64a8b7c3b69a427c"
+  }
+}

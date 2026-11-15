@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen2.5-32B",
+  "display_name": "OREAL-32B-SFT",
+  "family": "internlm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "internlm/OREAL-32B-SFT",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/internlm/OREAL-32B-SFT.json",
+  "params": 32763876352,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen2.5-32B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 1599,
+    "likes": 7,
+    "trending": null
+  },
+  "tasks": [
+    "question-answering"
+  ],
+  "tier": "T0",
+  "total_size": 65533246766,
+  "upstream_url": "https://huggingface.co/internlm/OREAL-32B-SFT",
+  "what_changed": null
+}

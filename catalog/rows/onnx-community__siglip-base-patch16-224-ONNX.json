@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/siglip-base-patch16-224",
+  "display_name": "siglip-base-patch16-224-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/siglip-base-patch16-224-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/siglip-base-patch16-224-ONNX.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/siglip-base-patch16-224",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 189,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "zero-shot-image-classification"
+  ],
+  "tier": "variant",
+  "total_size": 1880087354,
+  "upstream_url": "https://huggingface.co/onnx-community/siglip-base-patch16-224-ONNX",
+  "what_changed": null
+}

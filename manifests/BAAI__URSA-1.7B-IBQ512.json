@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T04:19:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "caf3ca02d5e883f643e939cbed54f94237f94c171797f0dfea5e25c7e33315b3",
+      "size": 1580
+    },
+    {
+      "lfs": false,
+      "path": ".gitignore",
+      "sha256": "1be12a43f56e33a25cc41b939d8ead5d23cbcf8a79aa3ec406a540413476b804",
+      "size": 546
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "size": 10173
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3b492c2bf83be6d640f3ba79be946a02492b648534297c0ae45e12e9fd30c84c",
+      "size": 3719
+    },
+    {
+      "lfs": false,
+      "path": "model_index.json",
+      "sha256": "5c1a6b62e57c239423d8645dc560929f4553867c07e6a036a867728b601b007a",
+      "size": 303
+    },
+    {
+      "lfs": false,
+      "path": "scheduler/__scheduler__.py",
+      "sha256": "10b1965b0b78b87618f317842286edc8b18a057f25782e6bd3fd14f2d5f60f3a",
+      "size": 779
+    },
+    {
+      "lfs": false,
+      "path": "scheduler/scheduler_config.json",
+      "sha256": "a335a17ec969bf9cd470231cd3f70a4b170d0d17144a7516824573a892e923c1",
+      "size": 104
+    },
+    {
+      "lfs": true,
+      "path": "scheduler/scheduler_model.pth",
+      "sha256": "7d254e136e0c38644cee77ece94a5ba03add1016363cf1638e84d2877762254d",
+      "size": 134219425
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/tokenizer_config.json",
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "size": 9732
+    },
+    {
+      "lfs": false,
+      "path": "transformer/__transformer__.py",
+      "sha256": "68d4c0239b7743853131556e0289f176590fd69600d5f1ec289b7af802ba368d",
+      "size": 797
+    },
+    {
+      "lfs": false,
+      "path": "transformer/config.json",
+      "sha256": "33fa2f084977e401a89c70dd9f57976870e23a35b9c4d65b0c4d50e98d508d6f",
+      "size": 294
+    },
+    {
+      "lfs": true,
+      "path": "transformer/diffusion_pytorch_model.safetensors",
+      "sha256": "06c37e51d66109429efba80cf8cbd9552b90076f1d22618cf22632e5158d97ba",
+      "size": 4513833632
+    },
+    {
+      "lfs": false,
+      "path": "vae/__vae__.py",
+      "sha256": "faa41a773ce247669fa936f8b1bf2aaa7f5c1781b6bbff99fef0e711e0830d99",
+      "size": 778
+    },
+    {
+      "lfs": false,
+      "path": "vae/config.json",
+      "sha256": "0df902d3f5dd355154119b0515c87c1c323bde48b095bc367e0d444758751335",
+      "size": 473
+    },
+    {
+      "lfs": true,
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "sha256": "daa8384c8b38164f7b264c04d147bd28418eeb866c505ed3d64b74205fe8f30a",
+      "size": 910736030
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/URSA-1.7B-IBQ512",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:19:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/URSA-1.7B-IBQ512/resolve/017fa465f36b9205106f1d9984f8beb0d9cdbb97/"
+    }
+  ],
+  "upstream": {
+    "commit": "017fa465f36b9205106f1d9984f8beb0d9cdbb97",
+    "host": "huggingface.co",
+    "repo": "BAAI/URSA-1.7B-IBQ512",
+    "url": "https://huggingface.co/BAAI/URSA-1.7B-IBQ512/tree/017fa465f36b9205106f1d9984f8beb0d9cdbb97"
+  }
+}

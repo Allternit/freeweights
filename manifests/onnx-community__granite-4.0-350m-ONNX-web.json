@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:09:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5eb33170d4b83c5e7fd73cdeb7dcdb950fdb12d06d57352985243b7f18bff526",
+      "size": 1761
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0e3ff38102d53163f5c04786c0b971d3a231f2636f9d41a4a70866812b465e5c",
+      "size": 29160
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "9524df67b77a7b25a2dfee898f75b316a157eb9d855b51e32aeac79d7c8a83ce",
+      "size": 6418
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "714a51cfcfcf3860a941d3551eb5a47c4f70ddf6ccb37f410517e1b135e865c2",
+      "size": 2018
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "4a5e80bbcf4116a96b385e0af3ff94b03a7393d424a1201cb1f974e9ffc2e1da",
+      "size": 147
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+      "size": 916646
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "54858022addd029de225df049f8df337959df273ceeb98cfb858e168a0e0241a",
+      "size": 201480
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "938068f56e45d2ca909182380c6cf663e62ed4a11c9a1d7456a7affcc9952fab",
+      "size": 1417908224
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "df4d6f2b8c768dfee7ab791bd8b0a7eb656710d07c4282dbddc5fad19746962c",
+      "size": 202945
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "bce32e5f8a431b8ee97b46247d1b0c454c70ea38dab152990375abcd32cc6661",
+      "size": 708954112
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "17e171e1d30f1c644eda76d673e662996ff6b89cdb22a11e2ecadde9c158535f",
+      "size": 272846
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "c322cb280cd7168e37d5d187656973ac7ccecc1465c29f52c5547b2f6e557799",
+      "size": 575639552
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "45f09bdd73e9e485f5780ba0ff3f24071a3dfb7d12d09b2467fa5cdac45682a5",
+      "size": 274549
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "f6760446f26cd76f2acbfe1c9568fb1c6ff2d14d815cc93f746b7544c340e5ea",
+      "size": 350210048
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c08676c49fd7969a3130f72be6d4bf34da66aa484a6e21dffe359893a1bd5f2e",
+      "size": 579
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ea076a8bccab905484daa97acc7021a915fe30c1ad48fa85bd4b82a5d1ceb797",
+      "size": 4131199
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "36d15e9ab9ed50ac434fcfd2620b829615c80d745f36a98f2454620a3fc395c5",
+      "size": 24747
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "8af71076de8b0b626eed0f4c984faf0a7c062479164b2a31308a948524d4f69c",
+      "size": 1612704
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/granite-4.0-350m-ONNX-web",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0e3ff38102d53163f5c04786c0b971d3a231f2636f9d41a4a70866812b465e5c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/granite-4.0-350m-ONNX-web/resolve/62fc8f345c8aed0e1a28f856dc7e79b4cdb55cae/"
+    }
+  ],
+  "upstream": {
+    "commit": "62fc8f345c8aed0e1a28f856dc7e79b4cdb55cae",
+    "host": "huggingface.co",
+    "repo": "onnx-community/granite-4.0-350m-ONNX-web",
+    "url": "https://huggingface.co/onnx-community/granite-4.0-350m-ONNX-web/tree/62fc8f345c8aed0e1a28f856dc7e79b4cdb55cae"
+  }
+}

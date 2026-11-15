@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T02:30:13Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6c177c1af08f6f927b2795f5283e81407eea8b577ec9962c6620aeb5690348e2",
+      "size": 5561
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/hidream_e1_1_bf16.safetensors",
+      "sha256": "b5d14b8d55fbbd42a1f2aaf6d0974623d48275fab4bbeae2663ace4ac13ad241",
+      "size": 34211675392
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/hidream_e1_full_bf16.safetensors",
+      "sha256": "b645503c5d5d583a135d7e77c655237ebc6dc132d49d763759c1dd51683bd1dd",
+      "size": 34211675392
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/hidream_i1_dev_bf16.safetensors",
+      "sha256": "09a56b88b61ce2d0cc0eacebbab2e841fd758f858f2e717d01d8947cfe8fac6c",
+      "size": 34211675392
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/hidream_i1_dev_fp8.safetensors",
+      "sha256": "9a372d7384d56e34a8cc7fd77a0fa3d26d6b75d82c7582fd5347e2fd9e6f8664",
+      "size": 17105946040
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/hidream_i1_fast_bf16.safetensors",
+      "sha256": "fdae2014b7178c5387e49e5c46742e1975310f62349f577a1bb5104eddd3ae70",
+      "size": 34211675392
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/hidream_i1_fast_fp8.safetensors",
+      "sha256": "2d471e82523234e157b9ddd44c0428c89907eeb4e7923b316d49362d17020236",
+      "size": 17105946040
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/hidream_i1_full_fp16.safetensors",
+      "sha256": "8bbebd53a19ff0ff685c51b9425cee9529f283e3efb052e22add4a28f414ab3e",
+      "size": 34211673776
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/hidream_i1_full_fp8.safetensors",
+      "sha256": "807e458dd2ea31e69e40db27afadde4a14ffd0c4c0a23b8c9a0833102e055337",
+      "size": 17105946040
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/clip_g_hidream.safetensors",
+      "sha256": "3771e70e36450e5199f30bad61a53faae85a2e02606974bcda0a6a573c0519d5",
+      "size": 1389743104
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/clip_l_hidream.safetensors",
+      "sha256": "706fdb88e22e18177b207837c02f4b86a652abca0302821f2bfa24ac6aea4f71",
+      "size": 247586528
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors",
+      "sha256": "9f86897bbeb933ef4fd06297740edb8dd962c94efcd92b373a11460c33765ea6",
+      "size": 9081258056
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "sha256": "a498f0485dc9536735258018417c3fd7758dc3bccc0a645feaa472b34955557a",
+      "size": 5157348688
+    },
+    {
+      "lfs": true,
+      "path": "split_files/vae/ae.safetensors",
+      "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+      "size": 335304388
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/HiDream",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6c177c1af08f6f927b2795f5283e81407eea8b577ec9962c6620aeb5690348e2",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:30:13Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/HiDream/resolve/942970a008493fc9bf05b4827374009e69f6a993/"
+    }
+  ],
+  "upstream": {
+    "commit": "942970a008493fc9bf05b4827374009e69f6a993",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/HiDream",
+    "url": "https://huggingface.co/Comfy-Org/HiDream/tree/942970a008493fc9bf05b4827374009e69f6a993"
+  }
+}

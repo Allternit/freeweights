@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T04:29:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": true,
+      "path": "0_StaticEmbedding/model.safetensors",
+      "sha256": "8245ab78ee71dded845a82d2270fcb9e785b29dad0e1619f69d5390c47d9ba00",
+      "size": 433680480
+    },
+    {
+      "lfs": false,
+      "path": "0_StaticEmbedding/tokenizer.json",
+      "sha256": "11aaf894a4ccf3d95e8830e27c0f8152791fbbff2b988e29a265580b86edd216",
+      "size": 2563370
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b260d2478e1a5ce62fe82a076dd093a02657df817bf54cf62c1bd83f4a08f24f",
+      "size": 149193
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "01b2222cc3c92acb38035fa5a036a82bf10c19cc93f0b1472b33f9002129fff8",
+      "size": 214
+    },
+    {
+      "lfs": false,
+      "path": "img/similarity_matryoshka.png",
+      "sha256": "dbaa5531d5aed00df01b2cd39a48e3bb0720f02a3ed07ee09f355b944512067c",
+      "size": 90074
+    },
+    {
+      "lfs": false,
+      "path": "img/similarity_mteb_eval.png",
+      "sha256": "2088f7afc4f1e33cee65555a12593102d578ba1ad87861ab26f4aa9d83b26545",
+      "size": 88041
+    },
+    {
+      "lfs": false,
+      "path": "img/similarity_speed.png",
+      "sha256": "cdee5af44ad547f7b7ecaeb453bee1f985a4dd021454d59ade5d8667e6c3a7a4",
+      "size": 36202
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "bbae5b9edb81bf37718a6b45d921a404d129ccafb5918d2dc13146ef0e8ede34",
+      "size": 141
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "f9240f0d516953af8458b80a19e8070be1856f7195b65216c016b08e230e4fa0",
+      "size": 433684847
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "4e335f587328cb283c326467f520d7450311e43857558b0c53432b4523817f44",
+      "size": 433684866
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "fcdf6c63211755d3e79c2e75a280e5826f1c0c002d90c9dd60519af9503352ab",
+      "size": 216844889
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "9eaf678438a0c2669e7388e90fd8ef25c3138dd3155cb0d62fd8114760405a3a",
+      "size": 108424888
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "4e335f587328cb283c326467f520d7450311e43857558b0c53432b4523817f44",
+      "size": 433684866
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "808eb814d651b2839391bd0c66502f8e60b591ece028a9ece9b739b5918dbc28",
+      "size": 216844908
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "9eaf678438a0c2669e7388e90fd8ef25c3138dd3155cb0d62fd8114760405a3a",
+      "size": 108424888
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "9eaf678438a0c2669e7388e90fd8ef25c3138dd3155cb0d62fd8114760405a3a",
+      "size": 108424888
+    },
+    {
+      "lfs": false,
+      "path": "train.py",
+      "sha256": "54d316d42fe966c4d1704c5112445ebbceb59908d2b69375185395ef42354031",
+      "size": 14476
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "sentence-transformers/static-similarity-mrl-multilingual-v1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b260d2478e1a5ce62fe82a076dd093a02657df817bf54cf62c1bd83f4a08f24f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:29:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/sentence-transformers/static-similarity-mrl-multilingual-v1/resolve/b68f4122911bcffcd6e1f695f2d99cd6788972d8/"
+    }
+  ],
+  "upstream": {
+    "commit": "b68f4122911bcffcd6e1f695f2d99cd6788972d8",
+    "host": "huggingface.co",
+    "repo": "sentence-transformers/static-similarity-mrl-multilingual-v1",
+    "url": "https://huggingface.co/sentence-transformers/static-similarity-mrl-multilingual-v1/tree/b68f4122911bcffcd6e1f695f2d99cd6788972d8"
+  }
+}

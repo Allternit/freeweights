@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:33:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a20d0ae0c9465e312e2e7d79a3778a21f006344f1df814fa5cf03d744636c930",
+      "size": 951
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "dcef1db183ebe876461286b3e0b1859c1068a187b32d6274306794c2ee428a93",
+      "size": 680
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "95e42d42bc879213d49d940e0884024eb153fb6daccf2229864cca0fbbbb268a",
+      "size": 217333883
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "c89dd3632bb97cdc002cbcdeec00e93c569bcc56e88c52a35612039654595f43",
+      "size": 20898
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "d6987802b7ab3904b190fa17c8dc47757892cc67d02ac571074e67441bc6f70f",
+      "size": 158
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "5952e532af20bc935a29293725394bdb32a6a286e811a22f930a594ece59102c",
+      "size": 1792331
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "1bd29465c2834d676be5ceaf32272a604522ef85659a2cb09a8ae1ea7d40ba76",
+      "size": 1494887
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Soprano-80M-bf16",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a20d0ae0c9465e312e2e7d79a3778a21f006344f1df814fa5cf03d744636c930",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:33:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Soprano-80M-bf16/resolve/b7da048eff3dfd556409a44b78b9c61a9dd4ccfa/"
+    }
+  ],
+  "upstream": {
+    "commit": "b7da048eff3dfd556409a44b78b9c61a9dd4ccfa",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Soprano-80M-bf16",
+    "url": "https://huggingface.co/mlx-community/Soprano-80M-bf16/tree/b7da048eff3dfd556409a44b78b9c61a9dd4ccfa"
+  }
+}

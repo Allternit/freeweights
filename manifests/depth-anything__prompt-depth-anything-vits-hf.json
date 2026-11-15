@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:22:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "747b00fd961d4052ca056cb42af0bcc531f487834fe0513f74ffc447df78f9f4",
+      "size": 2223
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2aef1ceef354f6149f1cf6c3a50abb00ad94ba3118fc88d65923b82643a34261",
+      "size": 1053
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b8dcec4ab96b47771addbfec2b7b410d801f472366b52fb5f20e2599e8d8c015",
+      "size": 100368820
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "e66d3972962427b98fa91bc51dc37b7946e3807e68998fb571fb6ffad4196164",
+      "size": 487
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "depth-anything/prompt-depth-anything-vits-hf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "747b00fd961d4052ca056cb42af0bcc531f487834fe0513f74ffc447df78f9f4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:22:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/depth-anything/prompt-depth-anything-vits-hf/resolve/6f3768a5383d95a904ec00d2a7ca3bd186f8797e/"
+    }
+  ],
+  "upstream": {
+    "commit": "6f3768a5383d95a904ec00d2a7ca3bd186f8797e",
+    "host": "huggingface.co",
+    "repo": "depth-anything/prompt-depth-anything-vits-hf",
+    "url": "https://huggingface.co/depth-anything/prompt-depth-anything-vits-hf/tree/6f3768a5383d95a904ec00d2a7ca3bd186f8797e"
+  }
+}

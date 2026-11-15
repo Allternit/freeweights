@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T05:22:07Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5715492aa6ad5a157012f51e58e65dbf49c53d2a20264c3474b441db07ee42bf",
+      "size": 13439
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8ca4f8b5347c88e3171d8dc41aedb00402f3c48bc2e6462e04541bd74fec6ec5",
+      "size": 635
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "4c8fc532961089fa299590b1ce7d5c468129513bcd3be599eaa0e88f17fd61d0",
+      "size": 496594810
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "af900e4f04bccc884f5df3664445cabe37323530518dc14adc47466056d3785a",
+      "size": 204643132
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "4d902e9dd9db897d25481977728d1ed942ae68826095aaafb9f2e0725528cfe0",
+      "size": 248471360
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "8a839f67332edd4acc5eb551b898eb144bb085dd39fb0f97694e4adf070a43de",
+      "size": 124825816
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "b599714f485f1a570763a473c2ea5bbb8e5784561364fdcdac0ffde2fea2d1e2",
+      "size": 209951092
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "5e47c10f049f9956bddf279dbf9f6cf5640dfcf7beb0e7a530e7fd35ee33c82a",
+      "size": 126376746
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "8a839f67332edd4acc5eb551b898eb144bb085dd39fb0f97694e4adf070a43de",
+      "size": 124825816
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "ac873e83b9c7e0b7091bc2dcc67af333c29532a027b43fd7a5373ecfcc690350",
+      "size": 124825848
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "0001cd9fd9ef17918f38ad084d7abd372ff0fa587d8b12298bf659154ad6f045",
+      "size": 1196141
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7bc31ee8321cf2e6020a80ea4fe9c4a17e48e850842e822ad6710cf3a3d50a83",
+      "size": 1486
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "cf103a3207ce9ce64c4d9e306c2cb433e5987b6050a9d869914e1a8e2c781ad6",
+      "size": 399162
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/sentence-bert-swedish-cased-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5715492aa6ad5a157012f51e58e65dbf49c53d2a20264c3474b441db07ee42bf",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:22:07Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/sentence-bert-swedish-cased-ONNX/resolve/f91689df4028b1ae13e0aa7c58d4298cd7fc4fbb/"
+    }
+  ],
+  "upstream": {
+    "commit": "f91689df4028b1ae13e0aa7c58d4298cd7fc4fbb",
+    "host": "huggingface.co",
+    "repo": "onnx-community/sentence-bert-swedish-cased-ONNX",
+    "url": "https://huggingface.co/onnx-community/sentence-bert-swedish-cased-ONNX/tree/f91689df4028b1ae13e0aa7c58d4298cd7fc4fbb"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T04:57:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "bd281f6e9abde681d4912d99e44b68b9088161fe3f9a252b7d2c25fa0db3b41b",
+      "size": 3621
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "59a64ebb4df6d1489d09a91267cf3ceb106162d4a893c4f84833cfb8c897ff63",
+      "size": 3916
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294",
+      "size": 65345
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "aaed5b26f1cae55c1ceb58fc483c3cd65ee8d386b61daec3d7a9df82432d9205",
+      "size": 126
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "54262cf80074467b4f4f28ed92e70e4ced2690cb1475edd67d7928e4ee01e2fc",
+      "size": 5349381654
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "2c601963d8825c50663bf3a7fdcd429c0c4f57cfd1a81c88ded6ff183f4e7d31",
+      "size": 1751328472
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "2225ecf6ae3a86b10e7156b729a355311d79fefd8fc49c3faff6002b89cdc435",
+      "size": 95099
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "a24c18289ccdeda32140f8a30cf2147b8d8a1864d5bdeed849d7b4eebf1cf359",
+      "size": 26736
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6f7dacab12a17729c5896510007c946f3a04347e7e33537ca66521ec623ee9ad",
+      "size": 1201
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/MiMo-V2.6-Distill-Qwen-9B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "bd281f6e9abde681d4912d99e44b68b9088161fe3f9a252b7d2c25fa0db3b41b",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:57:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/MiMo-V2.6-Distill-Qwen-9B-OptiQ-4bit/resolve/60061fc7499d25ce238e0687154557e504ea690a/"
+    }
+  ],
+  "upstream": {
+    "commit": "60061fc7499d25ce238e0687154557e504ea690a",
+    "host": "huggingface.co",
+    "repo": "mlx-community/MiMo-V2.6-Distill-Qwen-9B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/MiMo-V2.6-Distill-Qwen-9B-OptiQ-4bit/tree/60061fc7499d25ce238e0687154557e504ea690a"
+  }
+}

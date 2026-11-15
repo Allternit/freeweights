@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:49:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "68d265ae4508aaefc3a084ec28fb58c7c5e1f0c1628e6d398e85261b094e7e7f",
+      "size": 3512
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7ab86de498e25a9055b6c93c21cc11561708fc80d707894c674047789c4fb909",
+      "size": 4848
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c9c97b37cf591a477db7f8e40b37c4de56a68a61a75fbd0e222a072f4e698def",
+      "size": 160
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0374fcfc30395cbb321c916535c8b3d66046921f57c3453c4bc6887803d8509a",
+      "size": 795822904
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "39322731f26bbe5f125a5f650c33aef9d92c7829623120d343c3d14dcd9b32e9",
+      "size": 477
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "6b208b1545c60a3071a6955e123b42748f3ddac8e56eee6a6c03ae2b90afbe05",
+      "size": 277
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "b6f5871f48c795dab37040781043d08c4b457c79c1a3f22a394f97cbbfe0a9b8",
+      "size": 7863545
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5f5119e4e02fea4c3074ae6585cdb7d5586056f6bf96d7ee29741e0e9b18bbab",
+      "size": 4047007
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ByteDance/Dolphin",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "68d265ae4508aaefc3a084ec28fb58c7c5e1f0c1628e6d398e85261b094e7e7f",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:49:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ByteDance/Dolphin/resolve/0ff4b22d8c00b20750cdba75cfe1336bd603b249/"
+    }
+  ],
+  "upstream": {
+    "commit": "0ff4b22d8c00b20750cdba75cfe1336bd603b249",
+    "host": "huggingface.co",
+    "repo": "ByteDance/Dolphin",
+    "url": "https://huggingface.co/ByteDance/Dolphin/tree/0ff4b22d8c00b20750cdba75cfe1336bd603b249"
+  }
+}

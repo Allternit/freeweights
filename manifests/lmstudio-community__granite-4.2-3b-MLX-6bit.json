@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:20:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "95fcb73990ae7140af2f81661ca7e4ab8cd038481a79202a57f2171647f966fc",
+      "size": 2373
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f0ba43f79b3cabca5e5a7584c77aec92f49feae45cdf7779c87d9fc54cd90258",
+      "size": 9013
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "05ac110671676777f6a57ffcd5273613472432da06b815d3330fdebe3ba441e8",
+      "size": 1185
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "1b9baf0a7959d31d7fb58ff6b506c27d09a73d395cadccc7e6dd1d4b7e43fd9d",
+      "size": 207
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "79ac882a6cc5addf51724bbd7ca0799f75010f417ab9a7363e155c9bec130b5d",
+      "size": 2973888288
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "ed4b5175c650a56999f04e81b206c172aab71c2f465eb253455ad648413aa8be",
+      "size": 65461
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "883975314d58743726347caaf2c32ac89afd5ad57222cffbc4f052f2ab27b2d7",
+      "size": 7153414
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "856442330f3066df1f922cccbe107c4bc3b6764c791b803b475eecf88666b2a3",
+      "size": 9783
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/granite-4.2-3b-MLX-6bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "95fcb73990ae7140af2f81661ca7e4ab8cd038481a79202a57f2171647f966fc",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/granite-4.2-3b-MLX-6bit/resolve/b6fbecfdf696460a1fa0790c6e5bc5029506d9fd/"
+    }
+  ],
+  "upstream": {
+    "commit": "b6fbecfdf696460a1fa0790c6e5bc5029506d9fd",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/granite-4.2-3b-MLX-6bit",
+    "url": "https://huggingface.co/lmstudio-community/granite-4.2-3b-MLX-6bit/tree/b6fbecfdf696460a1fa0790c6e5bc5029506d9fd"
+  }
+}

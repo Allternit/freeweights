@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T03:40:47Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "af417ad46ee61e6ac75ec778c1573c9dcfebffb90cf8005a360305b19dbab580",
+      "size": 2185
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2fc175a2422867bf8c61ee4738e8fa23b5bddf2347264fe178435d365d5daea2",
+      "size": 10780
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "464c779844a5eaebebe42b03c8f3e3aa04374e8f198663e9fc6dec40f8c40ebf",
+      "size": 223
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "14f38c5492ffc9cbcdf808647ca0c025bb5b9b4eb737526347134d500ace6098",
+      "size": 4383
+    },
+    {
+      "lfs": true,
+      "path": "figures/examples/bread_input_pangram.png",
+      "sha256": "841560a97a391d5d4f7371c21ad90c354635504924a272db06dbc61a7990f600",
+      "size": 495383
+    },
+    {
+      "lfs": true,
+      "path": "figures/examples/bread_output_pangram.png",
+      "sha256": "c107c854cd805044c783da18859ac3a53a7424159343e61a32f8730377a202cb",
+      "size": 474662
+    },
+    {
+      "lfs": true,
+      "path": "figures/examples/moon_input_pangram.png",
+      "sha256": "c9029e42baef3b1e444c08b5a1efc65a6f2feddd290e5e3ecf96868fe1bb2e4b",
+      "size": 573044
+    },
+    {
+      "lfs": true,
+      "path": "figures/examples/moon_output_pangram.png",
+      "sha256": "e4aaac46aa0139117f6193799122a9eefcb6347a4034722d3cf2549d790e3bde",
+      "size": 580492
+    },
+    {
+      "lfs": true,
+      "path": "figures/examples/recount_input_pangram.png",
+      "sha256": "15238083f6ac20ccb1e2f375ce69582317962e6763649ee7ab13c4c5df86b7da",
+      "size": 591853
+    },
+    {
+      "lfs": true,
+      "path": "figures/examples/recount_output_pangram.png",
+      "sha256": "403ccec0996718254412530dbab975dbb09ad805153c728589e623bf274e5d37",
+      "size": 551878
+    },
+    {
+      "lfs": true,
+      "path": "figures/smaug_humanizer_method.png",
+      "sha256": "1fc29b2446708908690316bf52ef321e66f96c6ac1b84c34bcdbafb1b25c88bd",
+      "size": 262874
+    },
+    {
+      "lfs": true,
+      "path": "figures/smaug_humanizer_reward_curve.png",
+      "sha256": "09a51a8d8f6ba422a558097851f067f10e6fadeed4acdb41074e9ea4f214e005",
+      "size": 301298
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "1e357d4ae6deffdc73456508338d80d53207bedf2011e6e7a45f573bd050e595",
+      "size": 277
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "c877a5052a1007a56d2a8c0a61fb3407cda34c0a33c3627ac96010816bc30cbd",
+      "size": 23919549408
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "6b938e76555b3e9946890770e1abcd442a4718f34041a58e8139dc8ad34545c9",
+      "size": 1382
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "12bac982b793c44b03d52a250a9f0d0b666813da566b910c24a6da0695fd11e6",
+      "size": 32170070
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "94413a660cdd703eaf6460f6fe50af071decfbad21e683c1600ef0a41137e1c2",
+      "size": 1484
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "abacusai/Smaug-Humanizer",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:40:47Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/abacusai/Smaug-Humanizer/resolve/02666472dbbe7bf1d9ed0abbf684f640e0346f06/"
+    }
+  ],
+  "upstream": {
+    "commit": "02666472dbbe7bf1d9ed0abbf684f640e0346f06",
+    "host": "huggingface.co",
+    "repo": "abacusai/Smaug-Humanizer",
+    "url": "https://huggingface.co/abacusai/Smaug-Humanizer/tree/02666472dbbe7bf1d9ed0abbf684f640e0346f06"
+  }
+}

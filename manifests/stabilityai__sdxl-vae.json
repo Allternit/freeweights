@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T02:25:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "53a552bcc5cb660bd17d53e463690cd8f4d0205671603536fffbce8719d21f77",
+      "size": 3172
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1ab8e39aeac945453e4c4bd1dd4d0953c566cb9eb9291f87cd316e75c61073cf",
+      "size": 607
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_pytorch_model.bin",
+      "sha256": "48b7606461b0646c5a578e686e2fddbb54ae789823ab82ca07f4b898261f6383",
+      "size": 334712113
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_pytorch_model.safetensors",
+      "sha256": "1598f3d24932bcfe6634e8b618ea1e30ab1d57f5aad13a6d2de446d2199f2341",
+      "size": 334643268
+    },
+    {
+      "lfs": true,
+      "path": "sdxl_vae.safetensors",
+      "sha256": "63aeecb90ff7bc1c115395962d3e803571385b61938377bc7089b36e81e92e2e",
+      "size": 334641164
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "stabilityai/sdxl-vae",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "53a552bcc5cb660bd17d53e463690cd8f4d0205671603536fffbce8719d21f77",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:25:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/stabilityai/sdxl-vae/resolve/6f5909a7e596173e25d4e97b07fd19cdf9611c76/"
+    }
+  ],
+  "upstream": {
+    "commit": "6f5909a7e596173e25d4e97b07fd19cdf9611c76",
+    "host": "huggingface.co",
+    "repo": "stabilityai/sdxl-vae",
+    "url": "https://huggingface.co/stabilityai/sdxl-vae/tree/6f5909a7e596173e25d4e97b07fd19cdf9611c76"
+  }
+}

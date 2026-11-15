@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:31:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4fce482da541e7e3055616920efd952662eed1137f6485899364d75981745fbc",
+      "size": 5110
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "5dede7319329300c9bd5a276b8e25b1a06529c966f2d0cc08b30669f6c113f8c",
+      "size": 731
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "a6a634dcffde9663e319be5742124d3a2521ddf2192002adebf5c24af52be5af",
+      "size": 12800680
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-3.2-8b-lora-jailbreak",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4fce482da541e7e3055616920efd952662eed1137f6485899364d75981745fbc",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-3.2-8b-lora-jailbreak/resolve/085aea732ac65c22052cac6a9a0a53942da93bda/"
+    }
+  ],
+  "upstream": {
+    "commit": "085aea732ac65c22052cac6a9a0a53942da93bda",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-3.2-8b-lora-jailbreak",
+    "url": "https://huggingface.co/ibm-granite/granite-3.2-8b-lora-jailbreak/tree/085aea732ac65c22052cac6a9a0a53942da93bda"
+  }
+}

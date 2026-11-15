@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T05:12:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cbcf474948c26a2c960eff4ccd681bc2bf5255a697b99197f1e86eed56d195fd",
+      "size": 8264
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "a94c56096001713e3eb9a34b1a545a8c1d5e8034ed2fb81f897c8cb54b420121",
+      "size": 41
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.json",
+      "sha256": "45322f23f68a640be65652ea24b7aa72f070da2f95f59ad062c0a9414bf68793",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2a367f36e8e5f712fe33af431d99ae236fa6dc158a271dfedebe50506202b64d",
+      "size": 1901
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "a27f76bdcab3532baecca0f90b5d2787c51d2ea4bd2041379b140bab7dce4dc3",
+      "size": 136
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8910dceda68545980a2a8e16bf7d621a00fa84f6fc4502eb51af150fee257d05",
+      "size": 4296768258
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ecef425c1d3ee91f5e05144c4d107389f9fefd04a424d5cbfc3fb6e0525b8c55",
+      "size": 772
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d608a8ab2b0c3aee1414e1154c09aabef5b2e91ce1d05ddf3407c87321b3c3d5",
+      "size": 177
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "358c249e2fb29060c6b73157d428853b0c48710deffc8ee670ab1013880946c9",
+      "size": 552
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "94d6cec71c9be5c8036bd8e4f2798ce54741449e27a590d9522739b0c772fbb7",
+      "size": 3506115
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "dadfd56d766715c61d2ef780a525ab43b8e6da4de6865bda3d95fdef5e134055",
+      "size": 493443
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "92ff311a5735509bbd2720925227bab0bd68335f578b91d4ebfb931a7b2c8712",
+      "size": 1489
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/llava-v1.6-mistral-7b-hf-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cbcf474948c26a2c960eff4ccd681bc2bf5255a697b99197f1e86eed56d195fd",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:12:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/llava-v1.6-mistral-7b-hf-bnb-4bit/resolve/9152689d3f1b6adbbb977353a383f4bd69cc010d/"
+    }
+  ],
+  "upstream": {
+    "commit": "9152689d3f1b6adbbb977353a383f4bd69cc010d",
+    "host": "huggingface.co",
+    "repo": "unsloth/llava-v1.6-mistral-7b-hf-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/llava-v1.6-mistral-7b-hf-bnb-4bit/tree/9152689d3f1b6adbbb977353a383f4bd69cc010d"
+  }
+}

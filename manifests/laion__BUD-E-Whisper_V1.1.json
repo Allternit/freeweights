@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T04:16:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ec46f9fda68dbaf6fc4e8b20973fc5f6c31bde9eb5855d0f554f837029bb06f3",
+      "size": 2632
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "87b48f14cae61948f72f61f4229303a9b372cf2d26a3a2e2593ffc835188d5e8",
+      "size": 1374
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "0fe721f62a067007d6a9f7fbd8798a80047753a675aaef0785405ea6b5dad9ee",
+      "size": 3744
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ead909372a2a766b617993f043dad8ff1a11db8a899965f7dfbac94be38e36d2",
+      "size": 966995080
+    },
+    {
+      "lfs": true,
+      "path": "optimizer.pt",
+      "sha256": "44634153b29535e1e880df19ce8bc7f5844756840b937b705b0ecf808e514f62",
+      "size": 1925074589
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d",
+      "size": 339
+    },
+    {
+      "lfs": true,
+      "path": "rng_state.pth",
+      "sha256": "4dbde3d16d238f431ad72913d705cad907865e263e6e7e2857de211ea4d33697",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "scheduler.pt",
+      "sha256": "02e5f7f9540ce3531a31ffc42733cd24272cb816c4d68435ce7e4716362c26bc",
+      "size": 1507
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "f4587a446a1f0ddcdc3cc0c00c66fd164859b23f8559ee66f59bd85654d3b67c",
+      "size": 23596
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "a9d5aa7e7e3f9001a7603fc3c3bbe51c76cadea792556380fa7785b8747c7cd0",
+      "size": 5585
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/BUD-E-Whisper_V1.1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ec46f9fda68dbaf6fc4e8b20973fc5f6c31bde9eb5855d0f554f837029bb06f3",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:16:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/BUD-E-Whisper_V1.1/resolve/9a4b11214f2f37e87a05dc75a51edd472e7bba59/"
+    }
+  ],
+  "upstream": {
+    "commit": "9a4b11214f2f37e87a05dc75a51edd472e7bba59",
+    "host": "huggingface.co",
+    "repo": "laion/BUD-E-Whisper_V1.1",
+    "url": "https://huggingface.co/laion/BUD-E-Whisper_V1.1/tree/9a4b11214f2f37e87a05dc75a51edd472e7bba59"
+  }
+}

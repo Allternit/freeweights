@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:24:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cfdc626c3b5cc4e47f9a4d51245a104d0524d9bc8669a88cb3479a962c112cd5",
+      "size": 9959
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c51b179c7405c99f2a0600692bee93da1ff4d9526ac9636e7d6328796ebc78da",
+      "size": 6397
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "c91a6dedca6c31e03ba4e801023378a4435f3c92e43298ffb0f209b992aa882e",
+      "size": 1584121956
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "4889d43d5bb1480426cfeaaaef48c857b8e97f5b3d89c4bde0ca7a222a155092",
+      "size": 400969128
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "011425d4d88aeba1ff1f0726203c1ff450d59ba53fb937ab8da5d3ae2b3247b8",
+      "size": 397183063
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "4a894202f75d718d1b5e1424ea9b5c865e0140100a6cbc1df55cf2bc4c54f828",
+      "size": 422480501
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "011425d4d88aeba1ff1f0726203c1ff450d59ba53fb937ab8da5d3ae2b3247b8",
+      "size": 397183063
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "6a76be4611c2b235e7a4e24d0c938a60c47f5d1fd6c37a8f2390032841e57a83",
+      "size": 397183120
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/von-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cfdc626c3b5cc4e47f9a4d51245a104d0524d9bc8669a88cb3479a962c112cd5",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:24:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/von-ONNX/resolve/f18dbebb3f8081927520eb0f8d54e2d9fa2a4e69/"
+    }
+  ],
+  "upstream": {
+    "commit": "f18dbebb3f8081927520eb0f8d54e2d9fa2a4e69",
+    "host": "huggingface.co",
+    "repo": "onnx-community/von-ONNX",
+    "url": "https://huggingface.co/onnx-community/von-ONNX/tree/f18dbebb3f8081927520eb0f8d54e2d9fa2a4e69"
+  }
+}

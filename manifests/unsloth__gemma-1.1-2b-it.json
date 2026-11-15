@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:42:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "613705690927e70e626ac7895e3a8e24da098fcd9804b32b0fe7175829f7ebb9",
+      "size": 3075
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a2724d74fedba414a172b6e66524814ea699b925586f3d7825062e539c56c3c0",
+      "size": 732
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "4358ba9459393634465be72b3428013c0e946aef4c18f50f26f94443070d3f8a",
+      "size": 154
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "584d0f7d939d235ee14a4ba307b40dbc3f03d5483181b9381e9f10636b618933",
+      "size": 5012363856
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "size": 636
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "7da53ca29fb16f6b2489482fc0bc6a394162cdab14d12764a1755ebc583fea79",
+      "size": 17518525
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "size": 4241003
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0807d35bd578032f64c7d0f9aeff6c75905dbc4fd6dbbc347bc3533747b81060",
+      "size": 40634
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/gemma-1.1-2b-it",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "613705690927e70e626ac7895e3a8e24da098fcd9804b32b0fe7175829f7ebb9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:42:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/gemma-1.1-2b-it/resolve/619e546640669a280738627cc623f4bd74a7b069/"
+    }
+  ],
+  "upstream": {
+    "commit": "619e546640669a280738627cc623f4bd74a7b069",
+    "host": "huggingface.co",
+    "repo": "unsloth/gemma-1.1-2b-it",
+    "url": "https://huggingface.co/unsloth/gemma-1.1-2b-it/tree/619e546640669a280738627cc623f4bd74a7b069"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:47:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6ca5bf6a4044736509e30a85072797305e46146df63c7edae867ef1ee6b5d597",
+      "size": 3800
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f545c8c40b769584656eb827a479e0e684fc17e37feccca298a1507a08b82399",
+      "size": 14948
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "fb15cc4a23907575ec2205e20e0b6997692a9ade3a12afdaf8a2f04f9ce5a72b",
+      "size": 4512302192
+    },
+    {
+      "lfs": false,
+      "path": "notebook_finetuning.ipynb",
+      "sha256": "98ccdc0d774fd3a55897455b50744196918da5f0028fdac8dfb9c1152f324dc1",
+      "size": 544786
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "f0e7dd970a0a214f8c5f049dd94e900e3eef085c5ae5c354618ad1c5615a2cc8",
+      "size": 1464
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/vjepa2-vitg-fpc64-384-ssv2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6ca5bf6a4044736509e30a85072797305e46146df63c7edae867ef1ee6b5d597",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:47:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-384-ssv2/resolve/9f5fd615cb6f79065a28edcf1cc3ef25010dddfa/"
+    }
+  ],
+  "upstream": {
+    "commit": "9f5fd615cb6f79065a28edcf1cc3ef25010dddfa",
+    "host": "huggingface.co",
+    "repo": "facebook/vjepa2-vitg-fpc64-384-ssv2",
+    "url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-384-ssv2/tree/9f5fd615cb6f79065a28edcf1cc3ef25010dddfa"
+  }
+}

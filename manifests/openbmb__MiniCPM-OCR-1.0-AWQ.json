@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T04:45:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "3b0749ff7885fec1612bcc8b28f5dd80bd712e6a6afcbd3a4b31a301d315b335",
+      "size": 2213
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b41825311fea177699a7b4d3e921368574dfe04be6e0e817888b16f54a12d415",
+      "size": 18837
+    },
+    {
+      "lfs": false,
+      "path": "README_zh.md",
+      "sha256": "565b43ff42de707f97a7c0b450a7ef209b51d5ed0a6764a5757c889b6ebe82b4",
+      "size": 17935
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "c6a5f1387c6baa0befecc39e36f293e44baba865a9c7809ac93fae1604b2c210",
+      "size": 7344
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0bc10696c1699654d04c2d8871a74c3068c774c6471c9f0710dbf21b222be4b6",
+      "size": 2611
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7cecf81e246f8db6bcc4c14f22313dd7decf2d6a70dd1b45c4d237a2e6927405",
+      "size": 133
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2802f4b339bd00c8528aca1f1dab701671dd9628c8b46cbd1aac10dc55c76f21",
+      "size": 1865177152
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7b46cf09f350fa1cd3bfd4d20fe8b8532e76dcc5d892a0052660f803c8ad532b",
+      "size": 340
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "b71fbc3e22a7dbe04622e1a2641e8553375bc1434875ac438066c58a88b974b1",
+      "size": 46
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "6269eb38f25c20c0f2ba676577f2e5603f79eab3be573dfdaa727ca6eeb5522d",
+      "size": 19993565
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "74f51078120066292803d9dfe5437f67b778c5ef6d16eb04dbc6a3f7a13e5826",
+      "size": 1463
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM-OCR-1.0-AWQ",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b41825311fea177699a7b4d3e921368574dfe04be6e0e817888b16f54a12d415",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:45:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM-OCR-1.0-AWQ/resolve/b7e9594897a3677f0ccff15a10cfe80b4305f70c/"
+    }
+  ],
+  "upstream": {
+    "commit": "b7e9594897a3677f0ccff15a10cfe80b4305f70c",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM-OCR-1.0-AWQ",
+    "url": "https://huggingface.co/openbmb/MiniCPM-OCR-1.0-AWQ/tree/b7e9594897a3677f0ccff15a10cfe80b4305f70c"
+  }
+}

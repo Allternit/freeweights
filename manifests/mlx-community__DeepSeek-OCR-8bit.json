@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T03:33:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "102ef25cc8af02639d741d82cccf6c3b26b2d8e4f1846e494a1acc7c74b9406e",
+      "size": 653
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "b4e4771e69892ebc712ed6986bcce490c65041d1545e85599cd4a531cfab98a5",
+      "size": 191
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.json",
+      "sha256": "9aec9391d364b0da5bdee6af557e3d76b3e2ae999610888186df2679f7b27ef7",
+      "size": 217
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0cab2fa0ea343a83eee80ad801f7adfa3bbf9a0e771a4425d2592eff473ed409",
+      "size": 3398
+    },
+    {
+      "lfs": false,
+      "path": "configuration_deepseek_v2.py",
+      "sha256": "6ab21f29a4722e26fa28c8e0d4277591689a598df17cf6c712330e8f62b3fc7c",
+      "size": 10646
+    },
+    {
+      "lfs": false,
+      "path": "conversation.py",
+      "sha256": "ec7b6ce89bcda643de1f43269ffa66a7b2e65dc3ed30e427958f776546b4ba03",
+      "size": 9253
+    },
+    {
+      "lfs": false,
+      "path": "deepencoder.py",
+      "sha256": "0ae2fb6d1e5ae8cf100fc32f854830acd08c821a0a1f23a94a76588c222ddcf2",
+      "size": 38008
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "fb3cf7b019cedc21ab22ac08fd9e83d4fffa92d3581d73b47e6d0ee5bf308aa0",
+      "size": 3919426465
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "276274f47b11187d0d65a45c31d38786808b4b4332e5062b001eb8243a5fc1f0",
+      "size": 72573
+    },
+    {
+      "lfs": false,
+      "path": "modeling_deepseekocr.py",
+      "sha256": "5835e0b9e1942fe36df9123009d1d80a2b78ccbe6a2d535668a6561e3d4068b1",
+      "size": 40133
+    },
+    {
+      "lfs": false,
+      "path": "modeling_deepseekv2.py",
+      "sha256": "69184a0493d1fdac21c360f9f9eabc5b5af3188e0265df44cfaeafc44f9095e3",
+      "size": 82224
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "0fe7ba9aa6b967a90e4af40d43c8030cbdd3dbcfbb387b8907625d5e54f0dbbe",
+      "size": 460
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ab4bd57ce17d62e39e0a39e739de1e407484f090f0b2c7e391312bca7a5b061a",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "a02f8fd5228c90256bb4f6554c34a579d48f909e5beb232dc4afad870b55a8b4",
+      "size": 9979544
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fe8b80f22dd322ca2c50a2ed97daabdbf4a672cd21ff90bf4a9851574bb3f9d4",
+      "size": 577
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/DeepSeek-OCR-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "102ef25cc8af02639d741d82cccf6c3b26b2d8e4f1846e494a1acc7c74b9406e",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.deepseek",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:33:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/DeepSeek-OCR-8bit/resolve/0e2b0e49226b5d9efc4799f4c5b1a5f423a90178/"
+    }
+  ],
+  "upstream": {
+    "commit": "0e2b0e49226b5d9efc4799f4c5b1a5f423a90178",
+    "host": "huggingface.co",
+    "repo": "mlx-community/DeepSeek-OCR-8bit",
+    "url": "https://huggingface.co/mlx-community/DeepSeek-OCR-8bit/tree/0e2b0e49226b5d9efc4799f4c5b1a5f423a90178"
+  }
+}

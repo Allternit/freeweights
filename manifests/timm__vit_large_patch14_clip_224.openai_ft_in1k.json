@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:36:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1765298ba035280ac5e6e4595ab9fadd10e66fb301213dea96014ea7ac0b25a0",
+      "size": 1434
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "450ef7aa2dae55f51158c1710e259e1bdab8148f06f64d8c5aec684b26611b2c",
+      "size": 4384
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5241c160fe8dab528d10ca8479c27ad9d5f0cd01c6d78fa014a67cb81f4fdbf2",
+      "size": 629
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f478c5bd2f83f40684f22003a1ba973d6d8b5fe52f32eb6aa7566e0af42d728b",
+      "size": 1216847338
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "fa5128e5434a96a4174d968fcaf6ce5fa5d2aa1ddf75e8bf3215189dc29b7dfc",
+      "size": 1216863239
+    },
+    {
+      "lfs": false,
+      "path": "train_args.yaml",
+      "sha256": "beca193b74577ad711146a29f3c665cdb60c940ce2eaa352abf14c34fe0154a5",
+      "size": 2069
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_large_patch14_clip_224.openai_ft_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "450ef7aa2dae55f51158c1710e259e1bdab8148f06f64d8c5aec684b26611b2c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:36:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_large_patch14_clip_224.openai_ft_in1k/resolve/96ad42109298a86e85fb739609f7394bba9292e0/"
+    }
+  ],
+  "upstream": {
+    "commit": "96ad42109298a86e85fb739609f7394bba9292e0",
+    "host": "huggingface.co",
+    "repo": "timm/vit_large_patch14_clip_224.openai_ft_in1k",
+    "url": "https://huggingface.co/timm/vit_large_patch14_clip_224.openai_ft_in1k/tree/96ad42109298a86e85fb739609f7394bba9292e0"
+  }
+}

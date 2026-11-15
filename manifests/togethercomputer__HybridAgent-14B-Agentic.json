@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:42:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9018c31f6c92c061e27217c4feb1e2a6ff58c91fcefc86bc236fd75caa851bd2",
+      "size": 3036
+    },
+    {
+      "lfs": true,
+      "path": "adapter.pt",
+      "sha256": "635118c9790755a4e9baff6d9025790edd2b73e8cfe6466504101e56dd994844",
+      "size": 104922253
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "99c9b2e4a3a957bfd6a78da7973d1679952e0f146d464a69ec7a13eef03ceb00",
+      "size": 38
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "size": 4116
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "95fd09d216e7d78421e9703c64a12b37497f23ac9fc69b64f4ca560ef9a563d1",
+      "size": 1683
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e0ccfaf3d3fd26c00cc64a0e97d3c4d5ad912486d7683e75805728a2cbd96564",
+      "size": 139
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "478cc3a0855ef3a169bee6768c6fa8478477e440ef9364854a623a65d723d5e5",
+      "size": 29531239072
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "e3d0e3a96786f3ad1e667f478fc7d32ef83ca61bd506a3e11b912c88508296aa",
+      "size": 11423021
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "dbf6280f1f3ec8c24bc38d006cfabcf2c99f33ab95d3db8469148a2b03468c59",
+      "size": 445
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "togethercomputer/HybridAgent-14B-Agentic",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9018c31f6c92c061e27217c4feb1e2a6ff58c91fcefc86bc236fd75caa851bd2",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:42:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/togethercomputer/HybridAgent-14B-Agentic/resolve/1b726e326a4bfd38dc3c2251451f6fe0106d0d1c/"
+    }
+  ],
+  "upstream": {
+    "commit": "1b726e326a4bfd38dc3c2251451f6fe0106d0d1c",
+    "host": "huggingface.co",
+    "repo": "togethercomputer/HybridAgent-14B-Agentic",
+    "url": "https://huggingface.co/togethercomputer/HybridAgent-14B-Agentic/tree/1b726e326a4bfd38dc3c2251451f6fe0106d0d1c"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "ByteDance-Seed/UI-TARS-2B-SFT",
+  "display_name": "GUI-Actor-Verifier-2B",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "microsoft/GUI-Actor-Verifier-2B",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/microsoft/GUI-Actor-Verifier-2B.json",
+  "params": 2208560128,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "ByteDance-Seed/UI-TARS-2B-SFT",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 817,
+    "likes": 17,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 4433198621,
+  "upstream_url": "https://huggingface.co/microsoft/GUI-Actor-Verifier-2B",
+  "what_changed": null
+}

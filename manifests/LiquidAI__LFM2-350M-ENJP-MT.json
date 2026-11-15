@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:43:24Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "61d7e939a05911c765b7e98ffaa1ab5ca6c0174a65350766c25cb10197d19fc8",
+      "size": 10644
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "56ed15d3bb640f381c1e54b0442522ad717802f5b0e6cfb2db3d1397e26a6b35",
+      "size": 29751
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "89e790f027916b5a2bca145a6a8454e06ffc7a5043bf3b6d97829aff86bb543f",
+      "size": 1296
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f6c60a3c04605a1d50161f872ed8f618cc6a320c989a76a8bdc45e3293aac913",
+      "size": 1279
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "93a20028b6fb1f83d8ab33bcad0dd3878f74975dd4881e5435bc6d5dd21915bc",
+      "size": 137
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "dc2e535657c3fc70508129cf3310147f86bf9bd39122ce5fd0ed2b65b8313f5c",
+      "size": 708984464
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "742aefe2b7dec496e8caffdba03a75d0c1a9925d53bd3f3e0d388c96b591b6f4",
+      "size": 434
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "fbb4071ea653afe958c24562139c2c09618f90bb6bf50d7669dfe10a0fa02e68",
+      "size": 4732404
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7ca0d77fb4efd7a7b3b957ef1f7749de4143e163e36eddfdf5a3de6822825eb8",
+      "size": 91567
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "LiquidAI/LFM2-350M-ENJP-MT",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "61d7e939a05911c765b7e98ffaa1ab5ca6c0174a65350766c25cb10197d19fc8",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:43:24Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/LiquidAI/LFM2-350M-ENJP-MT/resolve/80367784d525777ad7565b24534ba5810eeac59f/"
+    }
+  ],
+  "upstream": {
+    "commit": "80367784d525777ad7565b24534ba5810eeac59f",
+    "host": "huggingface.co",
+    "repo": "LiquidAI/LFM2-350M-ENJP-MT",
+    "url": "https://huggingface.co/LiquidAI/LFM2-350M-ENJP-MT/tree/80367784d525777ad7565b24534ba5810eeac59f"
+  }
+}

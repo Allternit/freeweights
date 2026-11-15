@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T02:26:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".eval_results/open_asr_leaderboard.yaml",
+      "sha256": "0fc9e33d2bef30eef17538cc5c5c3192bd65ff19207b82b1e21c6af893471bd9",
+      "size": 2130
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a09613f18bdf229a26826f2d023431c0dd86f954531cb156ceeed1e2d18ca504",
+      "size": 1722
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7a4306a43f395e3a716e77f1d81c03db18a0a355d7b566bb1d6307213ba0302b",
+      "size": 42888
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e747b85e1bdfd300c8b8ac63bac8dd5221f8fe9bc275b48d06c735fcd6971b6e",
+      "size": 1153
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "b141de6ec6d7f982ece13f98f604e3fe1807ea9c0e839185d0ab7064604209d0",
+      "size": 289
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "3a2026366188c8c68598edbbff92f8d11590a08e0ae2e6775544e7b07d6a5e11",
+      "size": 2508311120
+    },
+    {
+      "lfs": true,
+      "path": "parakeet-tdt-0.6b-v3.nemo",
+      "sha256": "3cbdc85877e668ca7b82d0d56770eb1fac76691f55d6b97545e8d61ca588d10d",
+      "size": 2509332480
+    },
+    {
+      "lfs": true,
+      "path": "parakeet-tdt-0.6b-v3.q8_0.gguf",
+      "sha256": "e3880d0aaaaf2c308ea2c35016b2b895c423eb3fda924c1b463d1c19b7f4d32e",
+      "size": 713975456
+    },
+    {
+      "lfs": true,
+      "path": "plots/asr.png",
+      "sha256": "43df117825ce8148acce53c1c35cb54e9ecd111b835b171ff903b380429ee105",
+      "size": 114075
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "8346a93a3b987fa1dec57a78f045cd0817d21786589a5a096b41a57a446fd1d7",
+      "size": 392
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "bd321b096832a3f270bd3b2a88823957920f1a5c5ada71114a26ea729d0cbe91",
+      "size": 1159960
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0b2fe0037599ee335f0b972fa682bf0ece74e4ccfec755cb7daa3405d3d3e874",
+      "size": 290
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nvidia/parakeet-tdt-0.6b-v3",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7a4306a43f395e3a716e77f1d81c03db18a0a355d7b566bb1d6307213ba0302b",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:26:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3/resolve/541d1f99c6b0c3cd0b11a95167540bb8edefd82b/"
+    }
+  ],
+  "upstream": {
+    "commit": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "host": "huggingface.co",
+    "repo": "nvidia/parakeet-tdt-0.6b-v3",
+    "url": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3/tree/541d1f99c6b0c3cd0b11a95167540bb8edefd82b"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:23:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c",
+      "size": 10574
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "65a56f0e8d62a8d6194acd3d9e5deb321be58045bf9f21c7b53e53c3036b206d",
+      "size": 10444
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "46cd92afe7fee81fc1d71c19a140fd74d89e5e971b272230c5444475aa1b0bf9",
+      "size": 4294
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "95073c73f8c3e2ff746a562cf5953059859db53620ebfe6f575430f6567e5aa3",
+      "size": 1207
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "8b9c36bf5e4c8a8254ec8292914834faa69b295a1e98e0fd93e3025a466730a6",
+      "size": 230
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9a57e48f4f70c56d4a2c7718de5cd89bee5c0402ee74b4e5da3ec519192b5c77",
+      "size": 16936006912
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "c4687c0046da6579aba6f9aa713e9bed61e5fd210b0e012028ae57751d028689",
+      "size": 17905589
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "20e733ea2a34610118e22a41867b33595df15c26e8318c1c51f08beb79878c26",
+      "size": 333
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "LiquidAI/LFM2.5-8B-A1B-Base",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:23:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B-Base/resolve/6cfb83b04b0f0f12a64cb38ab553275d3ffe95d8/"
+    }
+  ],
+  "upstream": {
+    "commit": "6cfb83b04b0f0f12a64cb38ab553275d3ffe95d8",
+    "host": "huggingface.co",
+    "repo": "LiquidAI/LFM2.5-8B-A1B-Base",
+    "url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B-Base/tree/6cfb83b04b0f0f12a64cb38ab553275d3ffe95d8"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "deepset/roberta-base-squad2",
+  "display_name": "roberta-base-squad2-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/roberta-base-squad2-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "CC-BY-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/roberta-base-squad2-ONNX.json",
+  "note": "The license of the base model deepset/roberta-base-squad2 applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "deepset/roberta-base-squad2",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 330,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "question-answering"
+  ],
+  "tier": "variant",
+  "total_size": 1666427898,
+  "upstream_url": "https://huggingface.co/onnx-community/roberta-base-squad2-ONNX",
+  "what_changed": null
+}

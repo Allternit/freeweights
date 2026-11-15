@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:33:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fd07f0d54ddfc24c021c0184acf88f94910e0d703a09a795ab00da58ad46690f",
+      "size": 3068
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d3046487bf69225b2b56547db1946960614f70e181b4da82dbe327da7bef4fac",
+      "size": 701
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "4358ba9459393634465be72b3428013c0e946aef4c18f50f26f94443070d3f8a",
+      "size": 154
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "99d4b12f7d89fe2eff1dfc2767e8531d089a43769152fd407d8e4ee92ba50025",
+      "size": 5012363856
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+      "size": 555
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "3f8311e1140366e2d063d2f47f5af652e2cce5fdda518a7e5cb7d74524744f7f",
+      "size": 17525399
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "583f2ebd2a1936009b7da991ea255504db68c7a9713a78673d1335a87098966c",
+      "size": 4241023
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "db2d08b948a40f46dc5d9f0f372eb473a1c17056ef2d76dad3727d5348b8ce1e",
+      "size": 46346
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/codegemma-2b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fd07f0d54ddfc24c021c0184acf88f94910e0d703a09a795ab00da58ad46690f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:33:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/codegemma-2b/resolve/5903569be58fd5a967ef10e9b8ffacbf2f7690dd/"
+    }
+  ],
+  "upstream": {
+    "commit": "5903569be58fd5a967ef10e9b8ffacbf2f7690dd",
+    "host": "huggingface.co",
+    "repo": "unsloth/codegemma-2b",
+    "url": "https://huggingface.co/unsloth/codegemma-2b/tree/5903569be58fd5a967ef10e9b8ffacbf2f7690dd"
+  }
+}

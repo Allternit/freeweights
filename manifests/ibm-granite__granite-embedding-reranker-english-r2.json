@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:42:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5659eaf6633de5848f13eacffe4c240f7c42c80cc1d4b1a00e84ed717618b6a6",
+      "size": 15841
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "bcefb1b941a5860a41cfe83a527cf50172cc59cd2b6275b67cbd228b02a9e12f",
+      "size": 1527
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e72c8f7087dbfbdbfb9d75077f7b7b05b01b459730f735b468cbde71d66090e6",
+      "size": 598436708
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049",
+      "size": 694
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "39bc3f741c62ba10b6f412f2bfaf2ee0e3241bd3801c3a056bb4e0dbdabcf416",
+      "size": 3583486
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fd514e3fd112962cfd80ee86828cc970dfdfa2b8176eb5a469d200b241c656b5",
+      "size": 21032
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-embedding-reranker-english-r2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5659eaf6633de5848f13eacffe4c240f7c42c80cc1d4b1a00e84ed717618b6a6",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:42:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-embedding-reranker-english-r2/resolve/d09d3d6971b689bf9c23839e45a470874d46e13a/"
+    }
+  ],
+  "upstream": {
+    "commit": "d09d3d6971b689bf9c23839e45a470874d46e13a",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-embedding-reranker-english-r2",
+    "url": "https://huggingface.co/ibm-granite/granite-embedding-reranker-english-r2/tree/d09d3d6971b689bf9c23839e45a470874d46e13a"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "microsoft/deberta-v3-small",
+  "display_name": "deberta-small-long-nli",
+  "family": "tasksource",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "tasksource/deberta-small-long-nli",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/tasksource/deberta-small-long-nli.json",
+  "params": 141897219,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "microsoft/deberta-v3-small",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 10083,
+    "likes": 52,
+    "trending": null
+  },
+  "tasks": [
+    "zero-shot-classification"
+  ],
+  "tier": "T1",
+  "total_size": 1146381852,
+  "upstream_url": "https://huggingface.co/tasksource/deberta-small-long-nli",
+  "what_changed": null
+}

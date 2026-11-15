@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "allenai/OLMoE-1B-7B-0125-SFT",
+  "display_name": "OLMoE-1B-7B-0125-DPO",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/OLMoE-1B-7B-0125-DPO",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/OLMoE-1B-7B-0125-DPO.json",
+  "params": 6919161856,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "allenai/OLMoE-1B-7B-0125-SFT",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 1075,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 27682342564,
+  "upstream_url": "https://huggingface.co/allenai/OLMoE-1B-7B-0125-DPO",
+  "what_changed": null
+}

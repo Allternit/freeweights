@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T03:48:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "7a863c89bf364f2659f55e42193ccb377ac9f870d8a2fb9157409adf5ab93f12",
+      "size": 1643
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "78dd25d771d1ea4dc7c6aa931942a46132fc910c688b22ce60d03f4cea48ca72",
+      "size": 14828
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "081bdeaf76fc5463cc2e20fbadf17ad9eb569bb5343b120cc64b98840754f96c",
+      "size": 87
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d1b466e3c97c6ac449ff129f47181813c0bfe75ae5c72450cef1907eabc90f96",
+      "size": 791
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "eaa59e9c6c7040b5eb7a35fd88c0d6b6d40765cddf943c4d1922e86647ce191f",
+      "size": 132
+    },
+    {
+      "lfs": true,
+      "path": "images/factuality_roc_curve.png",
+      "sha256": "9d1b113c60437cd121463d127ee9b0f65d3378592267624f1f7eb5917b72fa1b",
+      "size": 194948
+    },
+    {
+      "lfs": true,
+      "path": "images/pipeline.png",
+      "sha256": "722848227b0857952e0f7d7b2a2fd51bae9839674f0354bf12458c8d21e429cc",
+      "size": 111639
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "e3e9b3fcedffc429f5e43dc27729237500af3be3376c16c0dff7ae3fa82b8a7c",
+      "size": 4974661520
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "83466b8e8ac6e215a1533e0b22fbe55ef9508a8e88e21d5a500802d1f000c6bc",
+      "size": 4991447808
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "c8dfa4208fa8c84f4703bb3c20e07051220e1255325b975b248f4fb9a68814fa",
+      "size": 4970460032
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "37cdc40f91637aa775cb361f140df16472938c9d92362d2ec83a29e7c48d7ff1",
+      "size": 1405169256
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "32fab6382f4cba5428af1b28ed350b6b33d6a413863e952fc10cc286328324e6",
+      "size": 29836
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f38e426447352365a68bf52e0b895581b8107f9eaea3c27c54467489b48cb073",
+      "size": 587
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ed944c0b3d71e2d651a5ba0f8e7b350faff30031c8e3353de70b12b9c1bf5654",
+      "size": 3475806
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "529debfd43c6f4550629dbdaafbeb159e2305d217370f062c3956aa3ed2abd56",
+      "size": 10372
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-guardian-3.2-8b-factuality-detection",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "78dd25d771d1ea4dc7c6aa931942a46132fc910c688b22ce60d03f4cea48ca72",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:48:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-guardian-3.2-8b-factuality-detection/resolve/de0c27b0ed657529269b573e106a3c72d18f85f9/"
+    }
+  ],
+  "upstream": {
+    "commit": "de0c27b0ed657529269b573e106a3c72d18f85f9",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-guardian-3.2-8b-factuality-detection",
+    "url": "https://huggingface.co/ibm-granite/granite-guardian-3.2-8b-factuality-detection/tree/de0c27b0ed657529269b573e106a3c72d18f85f9"
+  }
+}

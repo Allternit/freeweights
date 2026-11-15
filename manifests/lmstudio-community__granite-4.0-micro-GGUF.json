@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T05:09:17Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "8c66cf0ef0967180d3fef06f49632c6d4e0b820873f5387808ab0c80cb8e6b9b",
+      "size": 1713
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9c0a8bc5e308bada6ddc7922df0a3cc7e1f8b6eeb1b43daba7dd0f8e6fdb0ce3",
+      "size": 2163
+    },
+    {
+      "lfs": true,
+      "path": "granite-4.0-micro-Q4_K_M.gguf",
+      "sha256": "157f2fe54439e7178f8b18fc4aff00eca5ad80f3e5eaadb687b8df16b05b8aed",
+      "size": 2099502112
+    },
+    {
+      "lfs": true,
+      "path": "granite-4.0-micro-Q6_K.gguf",
+      "sha256": "86eeb24350a43d8b935d0e6c5e5ec2ae4645a663a57fc0bcc6560a481916b2e3",
+      "size": 2795617312
+    },
+    {
+      "lfs": true,
+      "path": "granite-4.0-micro-Q8_0.gguf",
+      "sha256": "77ab58de5a76dfad05e13184c02fc18a9d9aba7149364e5689964fdccd558b9e",
+      "size": 3619691552
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/granite-4.0-micro-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9c0a8bc5e308bada6ddc7922df0a3cc7e1f8b6eeb1b43daba7dd0f8e6fdb0ce3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:17Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/granite-4.0-micro-GGUF/resolve/13fae50cc38721c556756b41ade9c2ea86e47475/"
+    }
+  ],
+  "upstream": {
+    "commit": "13fae50cc38721c556756b41ade9c2ea86e47475",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/granite-4.0-micro-GGUF",
+    "url": "https://huggingface.co/lmstudio-community/granite-4.0-micro-GGUF/tree/13fae50cc38721c556756b41ade9c2ea86e47475"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "deepset/bert-base-uncased-squad2",
+  "display_name": "bert-base-uncased-squad2-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/bert-base-uncased-squad2-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "CC-BY-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/bert-base-uncased-squad2-ONNX.json",
+  "note": "The license of the base model deepset/bert-base-uncased-squad2 applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "deepset/bert-base-uncased-squad2",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 29,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "question-answering"
+  ],
+  "tier": "variant",
+  "total_size": 1374317241,
+  "upstream_url": "https://huggingface.co/onnx-community/bert-base-uncased-squad2-ONNX",
+  "what_changed": null
+}

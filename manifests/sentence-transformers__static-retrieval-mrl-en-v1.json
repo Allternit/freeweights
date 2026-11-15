@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:34:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": true,
+      "path": "0_StaticEmbedding/model.safetensors",
+      "sha256": "164fc63ee9f9267be7378fcbd7df99d09788a2f45244c92aa99ae5a574925716",
+      "size": 125018208
+    },
+    {
+      "lfs": false,
+      "path": "0_StaticEmbedding/tokenizer.json",
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "size": 711396
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "dba997a221d2ea592d9e680ede40d63e8007d463fdefaae668781b524ee24596",
+      "size": 669749
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "5f6e0d37fdb5cc3d7812a204acd8fa26298ce75a4e5d99b903e8068d1a007653",
+      "size": 226
+    },
+    {
+      "lfs": false,
+      "path": "img/nano_beir_matryoshka.png",
+      "sha256": "959f96671871acfe979a77e89c1126fb456561a397e67ffe9916248b61029f82",
+      "size": 90129
+    },
+    {
+      "lfs": false,
+      "path": "img/nano_beir_vs_speed_cpu.png",
+      "sha256": "68a2b9680fc5630587553adf45edc88db36f00fbc59b04f15ec0996dd13205b8",
+      "size": 88232
+    },
+    {
+      "lfs": false,
+      "path": "img/nano_beir_vs_speed_gpu.png",
+      "sha256": "a090f07cb1e146ecffb3f0aa70ef3d096e6aade5034fda44bc0719586a0332ba",
+      "size": 89940
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "bbae5b9edb81bf37718a6b45d921a404d129ccafb5918d2dc13146ef0e8ede34",
+      "size": 141
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "d8de707b8658b225116030e9647ff26342354325ee43bfc6906fb48211e5ba1c",
+      "size": 125022572
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "72a1fcc3946327ef973fa4efbff5c9d801d816e6ebb18ddd3ed7d6f0c7de90a0",
+      "size": 125022591
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "3a179ea0a6e7405a9c2caefadff61c8687b05b55c6f72901691f39aac8f313ec",
+      "size": 62513753
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "6dfc7847e73fede1c6474f69ecd283e0ad8c83737d18a4997ffbd9d3396403f4",
+      "size": 31259319
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "72a1fcc3946327ef973fa4efbff5c9d801d816e6ebb18ddd3ed7d6f0c7de90a0",
+      "size": 125022591
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "8b5e79d80a42656a7e3587a40cc440c457f0638f5606738648116da364e2f9db",
+      "size": 62513772
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "6dfc7847e73fede1c6474f69ecd283e0ad8c83737d18a4997ffbd9d3396403f4",
+      "size": 31259319
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "6dfc7847e73fede1c6474f69ecd283e0ad8c83737d18a4997ffbd9d3396403f4",
+      "size": 31259319
+    },
+    {
+      "lfs": false,
+      "path": "train.py",
+      "sha256": "358db0d74f45f9eb77536d2242725d005028b4939f65cd96522b0237a772ab7c",
+      "size": 10960
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "sentence-transformers/static-retrieval-mrl-en-v1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "dba997a221d2ea592d9e680ede40d63e8007d463fdefaae668781b524ee24596",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:34:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/sentence-transformers/static-retrieval-mrl-en-v1/resolve/f60985c706f192d45d218078e49e5a8b6f15283a/"
+    }
+  ],
+  "upstream": {
+    "commit": "f60985c706f192d45d218078e49e5a8b6f15283a",
+    "host": "huggingface.co",
+    "repo": "sentence-transformers/static-retrieval-mrl-en-v1",
+    "url": "https://huggingface.co/sentence-transformers/static-retrieval-mrl-en-v1/tree/f60985c706f192d45d218078e49e5a8b6f15283a"
+  }
+}

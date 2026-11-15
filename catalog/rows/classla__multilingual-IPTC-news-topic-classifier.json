@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "FacebookAI/xlm-roberta-large",
+  "display_name": "multilingual-IPTC-news-topic-classifier",
+  "family": "classla",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "classla/multilingual-IPTC-news-topic-classifier",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "CC-BY-SA-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/classla/multilingual-IPTC-news-topic-classifier.json",
+  "params": 559907857,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "FacebookAI/xlm-roberta-large",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 16273,
+    "likes": 21,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "T1",
+  "total_size": 2261869228,
+  "upstream_url": "https://huggingface.co/classla/multilingual-IPTC-news-topic-classifier",
+  "what_changed": null
+}

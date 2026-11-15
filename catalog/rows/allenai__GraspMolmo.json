@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "allenai/Molmo-7B-D-0924",
+  "display_name": "GraspMolmo",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/GraspMolmo",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/GraspMolmo.json",
+  "params": 8021025280,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "allenai/Molmo-7B-D-0924",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 1976,
+    "likes": 12,
+    "trending": null
+  },
+  "tasks": [
+    "robotics"
+  ],
+  "tier": "T0",
+  "total_size": 32100403058,
+  "upstream_url": "https://huggingface.co/allenai/GraspMolmo",
+  "what_changed": null
+}

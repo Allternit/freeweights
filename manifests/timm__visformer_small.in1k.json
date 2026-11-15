@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:37:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ac3c1518a39eb4e5533bfdb5872471a704aaf2d1519dc8939aa3d97cce492fa8",
+      "size": 2834
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4c1aa80d60f0f525fb77ccdbccc2035a45cddf5db53ecb00a679a19ee0bc2452",
+      "size": 562
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "322de7c0427d7e5d797cebdd23230c82829981e544b0597022464faf963950b8",
+      "size": 160999326
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "06966b9df3f2e8b940ec71f8c420e38f52147d4ff043c7edd01b8b2876d42cfd",
+      "size": 161051329
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/visformer_small.in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ac3c1518a39eb4e5533bfdb5872471a704aaf2d1519dc8939aa3d97cce492fa8",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:37:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/visformer_small.in1k/resolve/7c2f2cde5cc711870d60823dbc4d9f70bf6df6b8/"
+    }
+  ],
+  "upstream": {
+    "commit": "7c2f2cde5cc711870d60823dbc4d9f70bf6df6b8",
+    "host": "huggingface.co",
+    "repo": "timm/visformer_small.in1k",
+    "url": "https://huggingface.co/timm/visformer_small.in1k/tree/7c2f2cde5cc711870d60823dbc4d9f70bf6df6b8"
+  }
+}

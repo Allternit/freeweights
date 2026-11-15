@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T02:27:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98c91dabef4df27b2fc7c8454d220aba47476f73593cbd034d961fe4927304c1",
+      "size": 445
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "04834cd9007b2cdd1b1bdd501b571579577331e467be6e24e47d40f060558a29",
+      "size": 9181
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060",
+      "size": 571
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "6a8d759d881d9c1b39dbf4ee451fb8a8c2d43ccbd180218863a54ffd9b4d2447",
+      "size": 496233457
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ac5db66fdcfecb400345d09787b71009d60805ef9883451071669cf951b5e2c7",
+      "size": 496254442
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "e0b64ccefc1bcb569b604baea27eb873e5482fdf6eb3ceff1fb5368397db5aed",
+      "size": 496313727
+    },
+    {
+      "lfs": true,
+      "path": "rust_model.ot",
+      "sha256": "5a16ed126bbc8c4cf794406bac0c7946f62d0f175c02dc54d77a00a6255597ed",
+      "size": 498638704
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c611b1f7d416eb001ee4f293d903ea8c88e703463f1d403f1866a0352743fd00",
+      "size": 772
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "9b672dd16f09f6f805d407800278e60217b9d7c040df1dde5098765a40cdc88a",
+      "size": 496513256
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7a33226d4265e3989cc6341666af179d0cc710136f4059aae0dd8c0797cba556",
+      "size": 79
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "06b4d46c8e752d410213d9548eb27a54db70fda0319b6271fb8d59dead5e1cab",
+      "size": 898822
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "deepset/roberta-base-squad2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "04834cd9007b2cdd1b1bdd501b571579577331e467be6e24e47d40f060558a29",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:27:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/deepset/roberta-base-squad2/resolve/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4/"
+    }
+  ],
+  "upstream": {
+    "commit": "adc3b06f79f797d1c575d5479d6f5efe54a9e3b4",
+    "host": "huggingface.co",
+    "repo": "deepset/roberta-base-squad2",
+    "url": "https://huggingface.co/deepset/roberta-base-squad2/tree/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4"
+  }
+}

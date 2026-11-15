@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T04:59:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4f81e71962b7ffd9d2174aab1fd7611692bc07aa72d86db4ab85d8efb6601d4d",
+      "size": 399
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d4d347e95b00f4b1a0ea7eaf32bbbb2c246539ce1e64da89ffc0700c4a61ac8a",
+      "size": 26860
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "249b57721b7752442ec10dc3ace6f7dcd3ff0460d2c98a8709925ce5b72b69e0",
+      "size": 346659433
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "f8d365922e23f890c9ceea323c05a6251f123524bbc66f260a0c12a2c3808721",
+      "size": 54707755
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "910808cad2642170d7606326e0615c02a86fdce047767b8cd7106f11c5e9c6b9",
+      "size": 173471361
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "6739e480a4faf4651f60d2238b0eb8cd58bead2a07ae1da5e2fbc72e3f7c98a6",
+      "size": 90592065
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "0f50b4abd54d454ef092236e485f09ed85e16f49a2fe8ba81189fb5ff8a25510",
+      "size": 60015643
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "484d2feb90e636a1c449eb16b2fc13d54f703cdd01700fad6ac63c82df33e8d4",
+      "size": 51388564
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "65116d63d3a34eae4dbb9c403e0f2dd48ef5c576aa38eb4e298e15c5c3d5f741",
+      "size": 90592065
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "65116d63d3a34eae4dbb9c403e0f2dd48ef5c576aa38eb4e298e15c5c3d5f741",
+      "size": 90592065
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "8d04ba5a9c6fca5d39d0de2b1fd05ecf79deb589fbba279728bbebac39934231",
+      "size": 297
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/ast-finetuned-audioset-10-10-0.4593-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4f81e71962b7ffd9d2174aab1fd7611692bc07aa72d86db4ab85d8efb6601d4d",
+    "id": "BSD-3-Clause",
+    "name": "BSD 3-Clause License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:59:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/ast-finetuned-audioset-10-10-0.4593-ONNX/resolve/2fe67046c486b8b8bc90a7b469239b2dec822f72/"
+    }
+  ],
+  "upstream": {
+    "commit": "2fe67046c486b8b8bc90a7b469239b2dec822f72",
+    "host": "huggingface.co",
+    "repo": "onnx-community/ast-finetuned-audioset-10-10-0.4593-ONNX",
+    "url": "https://huggingface.co/onnx-community/ast-finetuned-audioset-10-10-0.4593-ONNX/tree/2fe67046c486b8b8bc90a7b469239b2dec822f72"
+  }
+}

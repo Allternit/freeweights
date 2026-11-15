@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:42:13Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0e9658ade83f0ea73b5190652ba65546fd3e8dad697a235b121c0e5a7d1938b0",
+      "size": 2813
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f0f4c9d4364d6ad19d8c7f79d646f77611d61771c5bd06a895fa3d7f64c3e567",
+      "size": 6873
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "3ac6ea37c6c995ed65a10beeda703249e97aac1bb40bda18cfaa1c2f6cdca4c5",
+      "size": 251619400
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7e9e2245806aa3ef068a5321f5eebee3116fa4cec560173231954ffaca930eca",
+      "size": 470
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ustc-community/dfine-xlarge-coco",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0e9658ade83f0ea73b5190652ba65546fd3e8dad697a235b121c0e5a7d1938b0",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:42:13Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ustc-community/dfine-xlarge-coco/resolve/ea4f6be7350bbe3c199ec6febc74168346cb5a68/"
+    }
+  ],
+  "upstream": {
+    "commit": "ea4f6be7350bbe3c199ec6febc74168346cb5a68",
+    "host": "huggingface.co",
+    "repo": "ustc-community/dfine-xlarge-coco",
+    "url": "https://huggingface.co/ustc-community/dfine-xlarge-coco/tree/ea4f6be7350bbe3c199ec6febc74168346cb5a68"
+  }
+}

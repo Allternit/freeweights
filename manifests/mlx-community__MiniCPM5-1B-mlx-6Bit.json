@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:05:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cbee08677b5d6df328a164a66deba1cf237f49a5cb53e867c47e70a7ceb42991",
+      "size": 1138
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "7451a05cf1e28a79d97d7c0bc951028c0b1915119bf9046acd06a0e3d931f47c",
+      "size": 9062
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ba2c87dd95e1378efa298a3821e1b893f584b1c6fc9d27f2a40a0d55c4b54159",
+      "size": 886
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "92afd6424501426eddcf7e1542f013d19e5987544977b4ee7bd26359bd5fd2ab",
+      "size": 213
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e0ea2ecdc02a9df6396c9549dc6a341d2369bd159b6dce1b3a64f0462cd485ae",
+      "size": 878166035
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "aed0450df9030b2d91f51faf451736faa57af2006e7cb033ab6a5e5e36fa873d",
+      "size": 39380
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3e065a558a034185fe299917b398685c1facd0169a9eea1e629eb30c171fed81",
+      "size": 9894271
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b10e7419dd49eef06e33b32aaa4bf1bcde79b2885ea8c70044b46e4851b3deb9",
+      "size": 431
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/MiniCPM5-1B-mlx-6Bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cbee08677b5d6df328a164a66deba1cf237f49a5cb53e867c47e70a7ceb42991",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:05:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/MiniCPM5-1B-mlx-6Bit/resolve/f4ff69f73671ae207dcebc1b05f17e332be5bc6d/"
+    }
+  ],
+  "upstream": {
+    "commit": "f4ff69f73671ae207dcebc1b05f17e332be5bc6d",
+    "host": "huggingface.co",
+    "repo": "mlx-community/MiniCPM5-1B-mlx-6Bit",
+    "url": "https://huggingface.co/mlx-community/MiniCPM5-1B-mlx-6Bit/tree/f4ff69f73671ae207dcebc1b05f17e332be5bc6d"
+  }
+}

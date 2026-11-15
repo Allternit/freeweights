@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:04:19Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5ed52735204b26574ecfba4bd6ea085d8b4bf905ab482d2b166315475bac76fd",
+      "size": 896
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "fed2756d2d24e127b951dcf139d0b03ab7db8ef23a456128ebc9c2db4901d476",
+      "size": 6099
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4e7692aa044e9faefc7ef89a09844f4db1d038e08ee9862eaf34cae209c0651f",
+      "size": 1067
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9117fb03fed79dbb459373edeef9a3eec966bce52a1842e03a6716e83117f0d1",
+      "size": 147
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "cff9d052cc3c68ea66b3d364788eb96fca2be82868d9ad92bd968e73b125194d",
+      "size": 2127162429
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "7e986d9c490d1ae27e1acbc2d3227ed90c5e5d38872813fd7a8591f073b30165",
+      "size": 65320
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "24665f2815ee47aba521e4710bfc52f8ca045a552ec3f60925cce5e0edecb657",
+      "size": 7153434
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fb2f8b5d9980cc7c2e4aa3361b34d3f43c6ff94f675276ac2e32fb2e9b751594",
+      "size": 418
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/granite-4.1-3b-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5ed52735204b26574ecfba4bd6ea085d8b4bf905ab482d2b166315475bac76fd",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:04:19Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/granite-4.1-3b-4bit/resolve/b1b476b5a17c46b7d6cd663b4a8ed44b66720aef/"
+    }
+  ],
+  "upstream": {
+    "commit": "b1b476b5a17c46b7d6cd663b4a8ed44b66720aef",
+    "host": "huggingface.co",
+    "repo": "mlx-community/granite-4.1-3b-4bit",
+    "url": "https://huggingface.co/mlx-community/granite-4.1-3b-4bit/tree/b1b476b5a17c46b7d6cd663b4a8ed44b66720aef"
+  }
+}

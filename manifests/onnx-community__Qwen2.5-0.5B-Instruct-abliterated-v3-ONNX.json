@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-15T05:16:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "eebd8f07176f6849597b10ae89dda3f7306e7a1bc1aa01cf29f3f542495f7412",
+      "size": 6551
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+      "size": 605
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e515424850a46f4a340ecd6129aae8c1056f08934efdc98a4e870db11a483b95",
+      "size": 791
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3894374dad6ad89424e24c400eea704ac9cecccb0b5ebcaa73287424a2f9d53d",
+      "size": 121
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "512e9f2f6ccb462b3a4edb2d9321a7fe3aad080618aca74298b2dd374a404b98",
+      "size": 1976804717
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "32a2c2ce4e58e57838630f1d6a4fe81447af5af7796b1b3c3e91628dd9a85a18",
+      "size": 746801928
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "a5cbcb45b15baebdeb1c9dd9c04f3e7fc1ec459b8c9fe2044d089505ee23ce5d",
+      "size": 988750289
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "86d6983917ab0bd0593b75252283ed94b8f4bcba6ff745abb00e7663bef3cf97",
+      "size": 495104511
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "ef5f901cfc0f026c9638a128c31ca2d8d96fb8b679015d22fbcd7bba4b0cc9f8",
+      "size": 769164744
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "4e64bd83ca9ded48ef6589913a0e0d994bb26e54bf8025e325f25ec14e901e67",
+      "size": 474399372
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "86d6983917ab0bd0593b75252283ed94b8f4bcba6ff745abb00e7663bef3cf97",
+      "size": 495104511
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "19f8d01ff647dcdb1e2aa8b545b7f9c733f78bc64b37b4ca177794b546eaac07",
+      "size": 495104590
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "70f61db8708568fa3ee6e66ecbcfdb8a89b9069feadff679dea00b097e521c98",
+      "size": 312
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+      "size": 11421896
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "eb504827224f1ee0275788d2f78134f58696eb662113ff71e4a3baa26939efb2",
+      "size": 7879
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Qwen2.5-0.5B-Instruct-abliterated-v3-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "eebd8f07176f6849597b10ae89dda3f7306e7a1bc1aa01cf29f3f542495f7412",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:16:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct-abliterated-v3-ONNX/resolve/8cc98c761aa9b690625940ef22c7d6153def84da/"
+    }
+  ],
+  "upstream": {
+    "commit": "8cc98c761aa9b690625940ef22c7d6153def84da",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Qwen2.5-0.5B-Instruct-abliterated-v3-ONNX",
+    "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct-abliterated-v3-ONNX/tree/8cc98c761aa9b690625940ef22c7d6153def84da"
+  }
+}

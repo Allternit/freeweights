@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/gemma-4-31B-it-qat-q4_0-unquantized",
+  "display_name": "gemma-4-31B-it-qat-GGUF",
+  "family": "gemma",
+  "formats": [
+    "gguf"
+  ],
+  "id": "unsloth/gemma-4-31B-it-qat-GGUF",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/gemma-4-31B-it-qat-GGUF.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/gemma-4-31B-it-qat-q4_0-unquantized",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.gemma",
+  "signals": {
+    "downloads_30d": 80192,
+    "likes": 226,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "variant",
+  "total_size": 24974733310,
+  "upstream_url": "https://huggingface.co/unsloth/gemma-4-31B-it-qat-GGUF",
+  "what_changed": null
+}

@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T02:32:19Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d3e59ff0d28f85ca348317edc58eec7b227f23a7b5b7b088a57f9dcd7154b046",
+      "size": 4753
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/qwen_image_edit_2509_int8_convrot.safetensors",
+      "sha256": "638402843782296122f42f2ff557a63a9535c4fbc3f6978308042c8d0f4012b4",
+      "size": 20499083752
+    },
+    {
+      "lfs": true,
+      "path": "embeddings/marigold_v2_albedo_conditioning.safetensors",
+      "sha256": "f3d70cc7d4d37743e3f4da197b97a2d2847a8a172a50f86112642ecfa99834fd",
+      "size": 2573432
+    },
+    {
+      "lfs": true,
+      "path": "embeddings/marigold_v2_depth_conditioning.safetensors",
+      "sha256": "9f5c00a2df993136c541cdbc37bcfb81ab1ba81adaec25bfb9cbfff81edd7c9c",
+      "size": 2422904
+    },
+    {
+      "lfs": true,
+      "path": "embeddings/marigold_v2_normals_conditioning.safetensors",
+      "sha256": "a0f82526b471482dfb2c2403aa63582f7732241d706f1f5b0daeda88762eeb5f",
+      "size": 2537592
+    },
+    {
+      "lfs": true,
+      "path": "loras/marigold_v2_albedo.safetensors",
+      "sha256": "263ec11bb29625c5ec7b145ea2fbc9e8e7854ad4a229031e020e55d614e8e919",
+      "size": 1703764632
+    },
+    {
+      "lfs": true,
+      "path": "loras/marigold_v2_depth_log_stage2.safetensors",
+      "sha256": "ec1f5649eef5ddb487b4de2222f6b62837f094c02d652843bd4fceb481037ca0",
+      "size": 1703764632
+    },
+    {
+      "lfs": true,
+      "path": "loras/marigold_v2_normals.safetensors",
+      "sha256": "94a96e203f47797b23a21c6fe0bf169db178342698871f6a95d944537a680135",
+      "size": 1703764632
+    },
+    {
+      "lfs": true,
+      "path": "vae/marigold_v2_albedo_vae.safetensors",
+      "sha256": "91524d3ecafcbb25ceea3d7a76b09581eb27664fb1ba09996db3da2b1f91563f",
+      "size": 253806278
+    },
+    {
+      "lfs": true,
+      "path": "vae/marigold_v2_depth_log_stage2_vae.safetensors",
+      "sha256": "0c1a95f7410678a93b59ba42b3a069f50b54ff9f6e35525699eb8fcd63ce332c",
+      "size": 253806278
+    },
+    {
+      "lfs": true,
+      "path": "vae/marigold_v2_normals_vae.safetensors",
+      "sha256": "66db6213a47b53e8835df48c9977f06cd74c9a973c6f0ac4d65a725de03add71",
+      "size": 253806278
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/marigold-v2-0",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d3e59ff0d28f85ca348317edc58eec7b227f23a7b5b7b088a57f9dcd7154b046",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:32:19Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/marigold-v2-0/resolve/c304e4370a1bc677a98c906c3683ace49a6bdadd/"
+    }
+  ],
+  "upstream": {
+    "commit": "c304e4370a1bc677a98c906c3683ace49a6bdadd",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/marigold-v2-0",
+    "url": "https://huggingface.co/Comfy-Org/marigold-v2-0/tree/c304e4370a1bc677a98c906c3683ace49a6bdadd"
+  }
+}

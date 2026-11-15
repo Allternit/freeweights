@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T04:54:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "270d0fb6dec3930c1723977813d6f6380c706d1ef53ab233b02a19cddc06c756",
+      "size": 1769
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "68e11ba6d9a98a2f9d7494cd003a8c28b7f9d651dc93d399b52ef4194465d6c2",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "34fa09eb0d37f7c4872039dcd05aad42e8c2c7fc70da1a0734b1d2a8ed22ec38",
+      "size": 546
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "e693ad26ea4bb4cf2b3be2c85d890172c17532191f13e17912df7909b4fe3899",
+      "size": 85200
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-vllm-d3-edge-BF16.gguf",
+      "sha256": "2ed9817e322355bd5dfd130322bea6f0dce7507f75a42b5cd4a6fa175428b4f1",
+      "size": 207346464
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-vllm-d3-edge-Q8_0.gguf",
+      "sha256": "496eef8fbecf31c35ad832061cabf8c6fc5638d0ad15385cf2aa1c49a4335769",
+      "size": 115923744
+    },
+    {
+      "lfs": true,
+      "path": "vllm-d3-edge-BF16.gguf",
+      "sha256": "c999882db62cfbc5542ae6d921d4713100b3f1a7033f43137d14191a7dc61289",
+      "size": 1507324320
+    },
+    {
+      "lfs": true,
+      "path": "vllm-d3-edge-Q8_0.gguf",
+      "sha256": "bdffd3a44a2535d8672d3ca7cf110c61bf1fe95788a3d249f18b3310cc0f85cd",
+      "size": 806232480
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/vllm-d3-edge-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "34fa09eb0d37f7c4872039dcd05aad42e8c2c7fc70da1a0734b1d2a8ed22ec38",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:54:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/vllm-d3-edge-GGUF/resolve/e59a4bd76e00c243e08f01182f55fd1893142d95/"
+    }
+  ],
+  "upstream": {
+    "commit": "e59a4bd76e00c243e08f01182f55fd1893142d95",
+    "host": "huggingface.co",
+    "repo": "ggml-org/vllm-d3-edge-GGUF",
+    "url": "https://huggingface.co/ggml-org/vllm-d3-edge-GGUF/tree/e59a4bd76e00c243e08f01182f55fd1893142d95"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T05:07:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "0e6c942b36348ea541297e3b292b5e89fda34900629a09f7ce5c0291799c3693",
+      "size": 183
+    },
+    {
+      "lfs": true,
+      "path": "Biggie_SmolLM_400M_q8_0.gguf",
+      "sha256": "f43c27a28456e93ca9ec1e9488d9f197457948793fad5382572d95e498c700d7",
+      "size": 478351744
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "37211b4807d8380d5431324c2a2b25667d347e45bb7c5daf1d167067099a8cd6",
+      "size": 743
+    },
+    {
+      "lfs": true,
+      "path": "biggie_trained_2bit.gguf",
+      "sha256": "06eb7e7b92b30a27a23f8efa1439f490c7bcc5e6f8895682bbe1830a048f5b50",
+      "size": 228460064
+    },
+    {
+      "lfs": true,
+      "path": "biggie_trained_4bit.gguf",
+      "sha256": "003ae79c4a3ea090c4fed367ad411a29c81bb968cc5ad5df43db7a407669159b",
+      "size": 306892064
+    },
+    {
+      "lfs": true,
+      "path": "biggie_trained_5bit.gguf",
+      "sha256": "efc6502de6a9ae1acb385ba703eb9e526ca3897ff6cb7089639b3756937b2ef2",
+      "size": 346866464
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "95a499f4217b78c93bc4e82b42ef27edc93a51bdca180cb4e0e604b114aaeb2f",
+      "size": 731
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "size": 466391
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "26cb4687dd1eea3cec627535feeb782ab0916a09ada9e5a8df70728c571455ca",
+      "size": 723767570
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2b7379f3ae813529281a5c602bc5a11c1d4e0a99107aaa597fe936c1e813ca52",
+      "size": 655
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+      "size": 2104556
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "75668bda11eb0d5ece137b4eb3fb2ad679f847fd19846b726369a26d92f9f28e",
+      "size": 3590
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79",
+      "size": 800662
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nisten/Biggie-SmoLlm-0.4B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "37211b4807d8380d5431324c2a2b25667d347e45bb7c5daf1d167067099a8cd6",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:07:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nisten/Biggie-SmoLlm-0.4B/resolve/5a0a8f9f851af8c9686b10399702d46adb38141b/"
+    }
+  ],
+  "upstream": {
+    "commit": "5a0a8f9f851af8c9686b10399702d46adb38141b",
+    "host": "huggingface.co",
+    "repo": "nisten/Biggie-SmoLlm-0.4B",
+    "url": "https://huggingface.co/nisten/Biggie-SmoLlm-0.4B/tree/5a0a8f9f851af8c9686b10399702d46adb38141b"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen3.8-27B",
+  "display_name": "clef",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "Cloudflare/clef",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/Cloudflare/clef.json",
+  "params": 27356728560,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen3.8-27B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 74442,
+    "likes": 2360,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T1",
+  "total_size": 54989897247,
+  "upstream_url": "https://huggingface.co/Cloudflare/clef",
+  "what_changed": null
+}

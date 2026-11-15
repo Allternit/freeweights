@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T04:51:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6355d6abefbe5b8e86a10218ba747d73a14c526bf93eb259a0c9b48649489d21",
+      "size": 2202
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f8d9255777615591a7cc1a7c932f5a69e181128902295e1b81221d20d983cac7",
+      "size": 15934
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6f9d9cad9aa6013d7e77576179d28d3e472073732d6bb8044b9403c7334ab3c0",
+      "size": 1938
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "199566674b96510c3b9a1141b494223a86a3ff83097e2c2f259c4d94fafc5847",
+      "size": 165
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "07e59e3bc2b5bc6fd6d5811d149a4f23113333140fb3f4c54bff6e2111ccecad",
+      "size": 5300310715
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "a626763e06e8bb3c00e372bde53c74cf7b1dfd76ffc6a15e671f1a0ee36d37dd",
+      "size": 5249474280
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "c3cb9e56fb04f964af6d648a2865253899da8631ec8932404d4c6e45865293e0",
+      "size": 5249474388
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "1a467316b47807f6126e1e5fcbff0315b9dde56f46c41be3a91a2b44e6297417",
+      "size": 5249474388
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "cd43034462c3e4c7ce454ac0f9259ada7902342f9c417ea13822fc5b3af5fbd4",
+      "size": 1179828533
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "a4618a4ed9d3fb32bc9f89c8432aac3755ee5d2ebb7b2cd851f89bdfc44574d4",
+      "size": 73592
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8464cabd6eda239fe46ebf8ae63b46c417721784a961a022f6b59174a2cda0e2",
+      "size": 440
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3",
+      "size": 27868174
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0b9149c8aef7be6ded52e773f8520c6c8530e1971f4c3723c5c1e854c100de94",
+      "size": 4196
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/gpt-oss-20b-MLX-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6355d6abefbe5b8e86a10218ba747d73a14c526bf93eb259a0c9b48649489d21",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gpt-oss",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:51:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/gpt-oss-20b-MLX-8bit/resolve/d23249e3b54df6248c79b67c155bab2f836742dd/"
+    }
+  ],
+  "upstream": {
+    "commit": "d23249e3b54df6248c79b67c155bab2f836742dd",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/gpt-oss-20b-MLX-8bit",
+    "url": "https://huggingface.co/lmstudio-community/gpt-oss-20b-MLX-8bit/tree/d23249e3b54df6248c79b67c155bab2f836742dd"
+  }
+}

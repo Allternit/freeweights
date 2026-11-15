@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:21:10Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a51bf41adbafa59b5205377802caa989bbdaa9b62d426e5b2d4849fbf722d05e",
+      "size": 344
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a7cc3affeaf4d32d22347ee48ee0b1b6b8c5112d6372e22fd504edaf1ef501fb",
+      "size": 706
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "e4a282be53e414ba9372f27d156a6e442fd125770cdd2ac34e5cc62277daf324",
+      "size": 611966733
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "c726aecfd57ec149efb1727f782f97cd853d0ac7a9bba52b8c4f810420e990f0",
+      "size": 183942460
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "0ab7d6485e13ced6d454a019dc20c5fc918457d65a5c5fccd32db4565b22971c",
+      "size": 306285370
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "da62dbb5589017825d5ccd1e369c90ac967430d7963a7f6001f1c374ab44e852",
+      "size": 156319651
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "453588621a67a50e1e38421509db6ca487d9bb35cc81751c9a8061b0a767a479",
+      "size": 191723992
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "d19633f7d0db7839aa11a59a14d46be0d2ae4591238bbfd5728eee4c7c4e06a6",
+      "size": 127306055
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "aabff321fbd0953f2914a6c69e44bf2dfa05ca539319fd665b591d6832e9352f",
+      "size": 156319651
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "aabff321fbd0953f2914a6c69e44bf2dfa05ca539319fd665b591d6832e9352f",
+      "size": 156319651
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "74638b936b2971d0748e98ed3bef1e7df6951edddb8ba997b15078dd6167278a",
+      "size": 522
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f118ab3a983206e4f32583448de6bd6aae4ee21869135cef1f5848a753cdaab6",
+      "size": 460
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "c748fe6027dff0040fbabedc43f4a20724fefa53cce66860e27618f24990622f",
+      "size": 3642207
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fe34b651bf01e591e60b550a864fbf94c24b1d16ffb999aefb58a19f65e85bae",
+      "size": 926
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363",
+      "size": 862328
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/owlvit-base-patch32-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a51bf41adbafa59b5205377802caa989bbdaa9b62d426e5b2d4849fbf722d05e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:21:10Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/owlvit-base-patch32-ONNX/resolve/4cba1467c378f89779ae66c7eff8f0f64985a0e3/"
+    }
+  ],
+  "upstream": {
+    "commit": "4cba1467c378f89779ae66c7eff8f0f64985a0e3",
+    "host": "huggingface.co",
+    "repo": "onnx-community/owlvit-base-patch32-ONNX",
+    "url": "https://huggingface.co/onnx-community/owlvit-base-patch32-ONNX/tree/4cba1467c378f89779ae66c7eff8f0f64985a0e3"
+  }
+}

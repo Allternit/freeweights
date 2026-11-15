@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T02:47:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1d1299516e6b5f5b82112358f59ce663be86424d20f32de3c4d69886bf1c0fda",
+      "size": 2313
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ba71810007d0bc241027cddf9d9eb9dd990aca2fd98ee9827feffde8490c9aa5",
+      "size": 16404
+    },
+    {
+      "lfs": false,
+      "path": "README_en.md",
+      "sha256": "0bef774c4a0e7e008376f2ad99412c883ae31a153e2b7912b660d95c57964b62",
+      "size": 17401
+    },
+    {
+      "lfs": true,
+      "path": "Wan2.1_VAE.pth",
+      "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+      "size": 507609880
+    },
+    {
+      "lfs": false,
+      "path": "configuration.json",
+      "sha256": "0459fd62549fa78e18181a0892aed1d60d430c8f4eacc6509a75e2f813476e76",
+      "size": 1121
+    },
+    {
+      "lfs": false,
+      "path": "google/umt5-xxl/special_tokens_map.json",
+      "sha256": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d",
+      "size": 6623
+    },
+    {
+      "lfs": true,
+      "path": "google/umt5-xxl/spiece.model",
+      "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "size": 4548313
+    },
+    {
+      "lfs": true,
+      "path": "google/umt5-xxl/tokenizer.json",
+      "sha256": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+      "size": 16837417
+    },
+    {
+      "lfs": false,
+      "path": "google/umt5-xxl/tokenizer_config.json",
+      "sha256": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05",
+      "size": 61728
+    },
+    {
+      "lfs": false,
+      "path": "high_noise_model/config.json",
+      "sha256": "2e1b1971cf1a1810b9dc4cdad5864fc88cdf0990189f3e30bc5e3e46a8077060",
+      "size": 606
+    },
+    {
+      "lfs": true,
+      "path": "high_noise_model/diffusion_pytorch_model.safetensors",
+      "sha256": "b242a310d161460d3ecf8430d4f8ee01398bebc3925a479c267b71318e8e30ad",
+      "size": 29584580312
+    },
+    {
+      "lfs": false,
+      "path": "low_noise_model/config.json",
+      "sha256": "2e1b1971cf1a1810b9dc4cdad5864fc88cdf0990189f3e30bc5e3e46a8077060",
+      "size": 606
+    },
+    {
+      "lfs": true,
+      "path": "low_noise_model/diffusion_pytorch_model.safetensors",
+      "sha256": "277a7b0374f9d0d5ba0e769fa9648687301cfff8b32d32c9b57d122dbea24c02",
+      "size": 29584580312
+    },
+    {
+      "lfs": true,
+      "path": "models_t5_umt5-xxl-enc-bf16.pth",
+      "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d",
+      "size": 11361920418
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "alibaba-pai/Wan2.2-Fun-A14B-Control-Camera",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ba71810007d0bc241027cddf9d9eb9dd990aca2fd98ee9827feffde8490c9aa5",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.video",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:47:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/alibaba-pai/Wan2.2-Fun-A14B-Control-Camera/resolve/da1f119dcf5626b2fa41219ce42ac175752f3892/"
+    }
+  ],
+  "upstream": {
+    "commit": "da1f119dcf5626b2fa41219ce42ac175752f3892",
+    "host": "huggingface.co",
+    "repo": "alibaba-pai/Wan2.2-Fun-A14B-Control-Camera",
+    "url": "https://huggingface.co/alibaba-pai/Wan2.2-Fun-A14B-Control-Camera/tree/da1f119dcf5626b2fa41219ce42ac175752f3892"
+  }
+}

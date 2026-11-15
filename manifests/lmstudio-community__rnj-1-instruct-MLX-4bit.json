@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:29:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "65bc95349eaf8971b837113dfbff0fb06a2f085d8fb2b7df5668bfd55d84d438",
+      "size": 2178
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "4065869b8ec00130819269c3bef69cbb8052fbb9ea522ec00257b912f7dc4402",
+      "size": 5341
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e4f0bf04f6a2ccae92dcbd1d8fc984d8455a7584ab34c4372aabae6b540dcdc0",
+      "size": 2265
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "65f479740c4038bc832ae2af82e094cf27955763bfbaa98ac3ff5c3b2bba70f5",
+      "size": 226
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "776409dabdc9afbf791d552469418b36abd9cd2fbe2a95de9d7349111ac34a30",
+      "size": 5195973082
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "c9c7442f7e15746475592e1c9b4fd981137dc414c84c884a088e241da2579c26",
+      "size": 62064
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535",
+      "size": 301
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "96a2db531b75969ce3aeaaf126eb7957f7e07a28c7e770705787ef035f19d9da",
+      "size": 17209795
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fec45036cd2634bd53fe24873c42eff332caa3cb13c21acd37208bfe71519158",
+      "size": 55969
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/rnj-1-instruct-MLX-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "65bc95349eaf8971b837113dfbff0fb06a2f085d8fb2b7df5668bfd55d84d438",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:29:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/rnj-1-instruct-MLX-4bit/resolve/70b80d166f5edc71aa083de0d7b3c5086dcbce10/"
+    }
+  ],
+  "upstream": {
+    "commit": "70b80d166f5edc71aa083de0d7b3c5086dcbce10",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/rnj-1-instruct-MLX-4bit",
+    "url": "https://huggingface.co/lmstudio-community/rnj-1-instruct-MLX-4bit/tree/70b80d166f5edc71aa083de0d7b3c5086dcbce10"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T03:42:11Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "12c41a7ba5be96ba9c532f4842cabb0a6e4dc79381f528a300302ff94904838d",
+      "size": 592
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "062e7ee4cc8defa88a5938b5d456dc60366ffd80647f918946ee747bf09ddc7c",
+      "size": 4606
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e2261bca3c99586518b63394dde5004451813ac98dfc3a6471140d12dbc6bc75",
+      "size": 2080
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "4e2a3412f65b2a21d315d928986c55723d3e60dfb92c3982a5b9fd56835b0aa5",
+      "size": 165
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f616d5bc38d8221444e94f0c84b63dbca1d1d1ce10f61f6ce802cc2a816e30d0",
+      "size": 1583785269
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "6ca5fcf1b75fac742f7e69ef8cabaf59ed49286d69b6d9612c7569c8227e0038",
+      "size": 55990
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "02cc50c36240882ae35e8cd4077a25a379664108185d728d261cb785aefeccff",
+      "size": 367
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "19dafea5bd6415c50e2da43a31583dab39f9496673260ad33d9fa6c638a1d077",
+      "size": 597
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "aa0fd058c73a5718bb191f6672dc16d122ee0147b20c123d1726514298f9968a",
+      "size": 6838609
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7a76fcb27abbc2cb0249d81884fef972b2c27194e3e13db54baae50f58f141fb",
+      "size": 1066
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/GLM-OCR-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "12c41a7ba5be96ba9c532f4842cabb0a6e4dc79381f528a300302ff94904838d",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.glm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:42:11Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/GLM-OCR-8bit/resolve/350a346bea43468bcd202abb833f7d32e9a17237/"
+    }
+  ],
+  "upstream": {
+    "commit": "350a346bea43468bcd202abb833f7d32e9a17237",
+    "host": "huggingface.co",
+    "repo": "mlx-community/GLM-OCR-8bit",
+    "url": "https://huggingface.co/mlx-community/GLM-OCR-8bit/tree/350a346bea43468bcd202abb833f7d32e9a17237"
+  }
+}

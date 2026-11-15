@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "ibm-granite/granite-3.1-2b-instruct",
+  "display_name": "granite-vision-3.2-2b",
+  "family": "granite",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "ibm-granite/granite-vision-3.2-2b",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/ibm-granite/granite-vision-3.2-2b.json",
+  "params": 2975396928,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "ibm-granite/granite-3.1-2b-instruct",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.granite",
+  "signals": {
+    "downloads_30d": 3034,
+    "likes": 126,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 5954489189,
+  "upstream_url": "https://huggingface.co/ibm-granite/granite-vision-3.2-2b",
+  "what_changed": null
+}

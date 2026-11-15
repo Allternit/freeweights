@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T03:22:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4a686f099ce8bece38423540881733655ef391e11953388697f32855655c6e44",
+      "size": 17697
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "35e3cc79de6a46a9d61133f4a18e675f37de4cee9bddcafefe726516904f5ed8",
+      "size": 1322
+    },
+    {
+      "lfs": false,
+      "path": "configuration_olmo.py",
+      "sha256": "8b2be746d9336588c1073d51c900ce8093500f4a2fb92cd8673d526f8156b4b5",
+      "size": 31
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b1d7671818c11442286bb3edfd40f727de3d56f8b1677fc07bba61c8a3aebf63",
+      "size": 27552398824
+    },
+    {
+      "lfs": false,
+      "path": "modeling_olmo.py",
+      "sha256": "6284dc49fa90f58c4253ff21bb117c6a322930d5ea35770c0b8ae16c9ed1427b",
+      "size": 36
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "c691ecdf9ec32368e950af49421a699e321b6efad9d21387011c0ba9e985706f",
+      "size": 27552427238
+    },
+    {
+      "lfs": false,
+      "path": "requirements.txt",
+      "sha256": "bc4a1282caf3c67f1b39b7baf36fa80e170012a5a10f1fa77ca2d8e19f9dfd4a",
+      "size": 16
+    },
+    {
+      "lfs": false,
+      "path": "revisions.txt",
+      "sha256": "9dbac7c01aa1690366beec1c4f3b0641dc9bd9827656a5db14a744cb2377222e",
+      "size": 12469
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b77491e270c6fcc5b2ecf22370f7318a6a18d3cabea09ba7bab92e9bf12656c2",
+      "size": 65
+    },
+    {
+      "lfs": false,
+      "path": "tokenization_olmo_fast.py",
+      "sha256": "69cd937386fed1d35189c05e2421366ae74a3f25935e8c4b4b38f24a6552f5e0",
+      "size": 61
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "9ad33b4b39a9f83973c3f8c42a01948dd5b877a28ac9a5356956c4ff4ed0b714",
+      "size": 2115113
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2076c0f5842818df6372ac9699df1056cee7a44e01650677599e0d1d57de5755",
+      "size": 5492
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/OLMo-7B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4a686f099ce8bece38423540881733655ef391e11953388697f32855655c6e44",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:22:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/OLMo-7B/resolve/0f605aa2bf7f9585bcedfa9b419326f15b453ddd/"
+    }
+  ],
+  "upstream": {
+    "commit": "0f605aa2bf7f9585bcedfa9b419326f15b453ddd",
+    "host": "huggingface.co",
+    "repo": "allenai/OLMo-7B",
+    "url": "https://huggingface.co/allenai/OLMo-7B/tree/0f605aa2bf7f9585bcedfa9b419326f15b453ddd"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T04:49:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "9d9c5c46f84dcd05f346fbe365f3f56e81b32a06c1129f86987ad2b392b3d973",
+      "size": 1671
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "b7f5acddc0d70df6b7db78abed3dfeb17089ab3d65105a33f1bf75f597f7eaef",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5bc745f7ce4f32fb910d855484d27754f583c0ba1811504f875f265821557101",
+      "size": 577
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "1c39a6755cee14b86d73a9b3624ed4e88f901820d51603b45b68a52743be30c5",
+      "size": 208116
+    },
+    {
+      "lfs": true,
+      "path": "lev-BF16.gguf",
+      "sha256": "07593251f415474908b751a96245543ef6d8a0da48cd07f92583919aa9209db0",
+      "size": 8424395712
+    },
+    {
+      "lfs": true,
+      "path": "lev-Q4_K_M.gguf",
+      "sha256": "bff94af408cc9ea616dd2543abf77afacefeec27d32d635ebe0ed0eb7ccd7efe",
+      "size": 3032093632
+    },
+    {
+      "lfs": true,
+      "path": "lev-Q8_0.gguf",
+      "sha256": "fb8779adec0185b423c768afce7fc07f49f7446aec5bbeca74da2a29d086ae7f",
+      "size": 4482405312
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/lev-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5bc745f7ce4f32fb910d855484d27754f583c0ba1811504f875f265821557101",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:49:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/lev-GGUF/resolve/2ef3b3c3ab3defcab1058ab34cac52c467fa9304/"
+    }
+  ],
+  "upstream": {
+    "commit": "2ef3b3c3ab3defcab1058ab34cac52c467fa9304",
+    "host": "huggingface.co",
+    "repo": "ggml-org/lev-GGUF",
+    "url": "https://huggingface.co/ggml-org/lev-GGUF/tree/2ef3b3c3ab3defcab1058ab34cac52c467fa9304"
+  }
+}

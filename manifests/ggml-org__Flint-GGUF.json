@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T04:39:44Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f483f7fe4912167dbd4aabb6725a5c4cd64cb5203367b457a6f0b9b8734e2382",
+      "size": 1677
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "0c7148de70c583390af599346eaf349025f59f8c8d0e3083a694ccc0c4c26442",
+      "size": 49
+    },
+    {
+      "lfs": true,
+      "path": "Flint-BF16.gguf",
+      "sha256": "bddf310fc9f33ad394674a6d94f1ba3fe4d83c0ad57bb69f72cc0d443146ff2e",
+      "size": 79625761760
+    },
+    {
+      "lfs": true,
+      "path": "Flint-Q4_K_M.gguf",
+      "sha256": "c3c4d93f9db92627a2fc47ea8fe8c64a094cabd3549db544bcdd2c00e9a9a347",
+      "size": 23387911136
+    },
+    {
+      "lfs": true,
+      "path": "Flint-Q8_0.gguf",
+      "sha256": "8a257b63c0fd1611947db267e3fa84ac3de0ed6f4c43255612236afd226a4f93",
+      "size": 42350359520
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "157606bb0c670d4346a0c61889bc421d5f159a664a3ebe8ea50dc713ac42f030",
+      "size": 838
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "52dd468ddef1edec533e5b699e1749443a642ca3b36a670d1aed66a1da7ccdd8",
+      "size": 358462
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/Flint-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "157606bb0c670d4346a0c61889bc421d5f159a664a3ebe8ea50dc713ac42f030",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:39:44Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/Flint-GGUF/resolve/b6763353f6f47bb4ae94f9f57d2d36906d2e4543/"
+    }
+  ],
+  "upstream": {
+    "commit": "b6763353f6f47bb4ae94f9f57d2d36906d2e4543",
+    "host": "huggingface.co",
+    "repo": "ggml-org/Flint-GGUF",
+    "url": "https://huggingface.co/ggml-org/Flint-GGUF/tree/b6763353f6f47bb4ae94f9f57d2d36906d2e4543"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-11-15T02:51:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "07c3cc5bce0f470c78c812c24c1c21ecd6df4726d758031e1eb47235af374a96",
+      "size": 452
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/ming3_tts_tiny_int8_convrot.safetensors",
+      "sha256": "37d83a48dcb20d989c48313e93f0f0876a3c81d570966c2442409cf302a03e53",
+      "size": 9069165598
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Ming-3.0-TTS",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "07c3cc5bce0f470c78c812c24c1c21ecd6df4726d758031e1eb47235af374a96",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:51:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Ming-3.0-TTS/resolve/fde007af929a8878ff457c8aa2a2b93274d5113c/"
+    }
+  ],
+  "upstream": {
+    "commit": "fde007af929a8878ff457c8aa2a2b93274d5113c",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Ming-3.0-TTS",
+    "url": "https://huggingface.co/Comfy-Org/Ming-3.0-TTS/tree/fde007af929a8878ff457c8aa2a2b93274d5113c"
+  }
+}

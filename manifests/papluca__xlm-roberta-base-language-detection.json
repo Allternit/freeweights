@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:30:11Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "312753546a1e6fe30c9adb3ba51feed9163d00dca06f4d2042cc438f6dbf9cea",
+      "size": 7184
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9",
+      "size": 1417
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a835d6e8ed50ef6b3c180db87446a83ee5ac437e981c932c8e1e239aacbe08b7",
+      "size": 1112264584
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "eb6bded160fdd712245e1bd19c4de417e1508094a9f69d92ae287f32a8732888",
+      "size": 1112318701
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+      "size": 239
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "d6417044a1451c9a5fd302579ee5d39bae3831b0cd57bd008b61e79d33156f6e",
+      "size": 1112525696
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "2a0d7366dd7780ea36cc42431dd74cd79289b783ab01acd33013fcc96865a8e9",
+      "size": 9081351
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0606f1a769dcea369f11010642c030cbd0a0a545ac21b11f2f86e9ae975dac3f",
+      "size": 502
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "papluca/xlm-roberta-base-language-detection",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "312753546a1e6fe30c9adb3ba51feed9163d00dca06f4d2042cc438f6dbf9cea",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:30:11Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/papluca/xlm-roberta-base-language-detection/resolve/9865598389ca9d95637462f743f683b51d75b87b/"
+    }
+  ],
+  "upstream": {
+    "commit": "9865598389ca9d95637462f743f683b51d75b87b",
+    "host": "huggingface.co",
+    "repo": "papluca/xlm-roberta-base-language-detection",
+    "url": "https://huggingface.co/papluca/xlm-roberta-base-language-detection/tree/9865598389ca9d95637462f743f683b51d75b87b"
+  }
+}

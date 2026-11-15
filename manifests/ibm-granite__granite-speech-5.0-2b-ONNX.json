@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T04:59:49Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "c0a02fe7c51e6b9d15328c1c211cdf3e2ecc31e1c0fe7ecdfe1a5cf0c4b819a6",
+      "size": 1735
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f1aa2b6c95c489cef1ded657715bc5faf0dfc612bd5943dcb9fe983851376b8d",
+      "size": 3457
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e3219da52634178f68696475ea4518ade9d1b5c9a71b825f28312b73afc432c0",
+      "size": 193
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "02b51bee4d1d43b5a97b3790b4bfa6b33eba10615b6e95a3a1b664ddc72ec793",
+      "size": 2589
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "49e27b593a1057329889c68003977df06a12b1b2218568644c5bd45d5cba3e82",
+      "size": 234
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q4.onnx",
+      "sha256": "65ea640f0557bc1c0bed768ed42ee12b0c0afd57ff22a1f202e91345d43f2ad4",
+      "size": 349494
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q4.onnx_data",
+      "sha256": "210bf66d52d0c8aced5dd0819f5d0958cd5f2cae75acde163fc49a78c3275a58",
+      "size": 658277008
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4f16.onnx",
+      "sha256": "fff26602eb8fc32e8861ef730b8db8ebdcba588599a6b82f8643aab86641448c",
+      "size": 437192
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4f16.onnx_data",
+      "sha256": "74b722b1d979c0457049fb224b93a4d3d8b11e5c008e93d126382f080dedc38e",
+      "size": 947786912
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4f16.onnx",
+      "sha256": "5bd332cac37108126d86a686e1683bdcdc3ef62dc02caa99bdadad552a365cea",
+      "size": 1064
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4f16.onnx_data",
+      "sha256": "b265c93bb0628ae21177033fd80bee89859210c9cc0674886ef9a8198ed5c687",
+      "size": 118817952
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "8fe82953593c3bd01c3577e5849f4c659122074e2cca632138892f378f148167",
+      "size": 335
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "a9da8ef4f301c6d189bb5aba7ecf1fa64eee4a752853ae3533d18def74149a27",
+      "size": 415
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "66e62df31f24dbae69a580f0eb05966504c8b5946d09bc1efbd1a2da1af5b5af",
+      "size": 4131268
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "874a26731ee9f4f9932f8e2f21951ce08b36efb5e5b704a58d39d4c21b7a809d",
+      "size": 675
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-speech-5.0-2b-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f1aa2b6c95c489cef1ded657715bc5faf0dfc612bd5943dcb9fe983851376b8d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:59:49Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-speech-5.0-2b-ONNX/resolve/a9cf1d13d045d65813b4bc80bde8fdd62db4c35c/"
+    }
+  ],
+  "upstream": {
+    "commit": "a9cf1d13d045d65813b4bc80bde8fdd62db4c35c",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-speech-5.0-2b-ONNX",
+    "url": "https://huggingface.co/ibm-granite/granite-speech-5.0-2b-ONNX/tree/a9cf1d13d045d65813b4bc80bde8fdd62db4c35c"
+  }
+}

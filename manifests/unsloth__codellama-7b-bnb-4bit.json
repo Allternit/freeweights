@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:40:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a118d10db4e8f80595251c1d33c2a09f5e209127786fa661ccb5b7496f3fa332",
+      "size": 2930
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7f1bdd7fbbd71455438f5d0563c9c82b531c532e4e72c5262894af37453805e8",
+      "size": 1236
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "0c3bd958d0475b26d47d8551191abc7e96927990438239ca490866c147b97106",
+      "size": 155
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "77c6ef940402724bd88cd1043177aae981e269badc0dac59847e29097a26810c",
+      "size": 3866304467
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "e71a338a890ae593770e8f98667f08e6301667763b9f6b99b8dba168baf6ded0",
+      "size": 539
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "291f17d67e18966968c59917e7e1d2308a713053295404ce082be31d54581103",
+      "size": 1844191
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "45ccb9c8b6b561889acea59191d66986d314e7cbd6a78abc6e49b139ca91c1e6",
+      "size": 500058
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "c37d94e103275f86e3c506d7a840d26cb84c20b68ab4826ea8f80b914968fe6c",
+      "size": 1866
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/codellama-7b-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a118d10db4e8f80595251c1d33c2a09f5e209127786fa661ccb5b7496f3fa332",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.llama",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:40:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/codellama-7b-bnb-4bit/resolve/ee00fa423f9db655a3da737f1e9cfc27e20134a7/"
+    }
+  ],
+  "upstream": {
+    "commit": "ee00fa423f9db655a3da737f1e9cfc27e20134a7",
+    "host": "huggingface.co",
+    "repo": "unsloth/codellama-7b-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/codellama-7b-bnb-4bit/tree/ee00fa423f9db655a3da737f1e9cfc27e20134a7"
+  }
+}

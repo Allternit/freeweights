@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T02:46:07Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ea2cf45fb0972c15b310cd3e29c69261e3ec6e1d6d82c5fc639ad6e92b477675",
+      "size": 1387
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/ovis_image_bf16.safetensors",
+      "sha256": "eb3d9e1b201412b3b527472cf82a2c5add6b5a40a37e94d99f11c381f18a9e2b",
+      "size": 14740943536
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/ovis_2.5.safetensors",
+      "sha256": "f453ee5e7a25cb23cf2adf7aae3e5b405f22097cb67f2cfcca029688cb3f740d",
+      "size": 5140950080
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Ovis-Image",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ea2cf45fb0972c15b310cd3e29c69261e3ec6e1d6d82c5fc639ad6e92b477675",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:46:07Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Ovis-Image/resolve/b7d0cb855e82448c28936c9907a143bf319c80a0/"
+    }
+  ],
+  "upstream": {
+    "commit": "b7d0cb855e82448c28936c9907a143bf319c80a0",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Ovis-Image",
+    "url": "https://huggingface.co/Comfy-Org/Ovis-Image/tree/b7d0cb855e82448c28936c9907a143bf319c80a0"
+  }
+}

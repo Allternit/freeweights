@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:30:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11766e5171641f6c68b9f14099fdb4e7b3d610f0a69451893e356c8334812257",
+      "size": 1638
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "561d5be7e53782570096e27ab87ec5ded82ddd34d76cf19944ebef2612565440",
+      "size": 531
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8140e904969074968403a32b0d95dff45211969365b06ab55a743ff75541db31",
+      "size": 793
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7ddfd08e31c171584f507985662b36b677a6eac7dc49e58b78ca112db8798c9d",
+      "size": 115
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "8425e74424ffa9aff7aaa0fdb43ec9c955dcb9e001093ad011390d91397ff85b",
+      "size": 336141
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "c521148f30d9746b383ad30c9f015b995ead7198139939fcca331ca2b2fb37be",
+      "size": 4707057664
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "a27b0c2c507bb6c182217786b32b3cb2343900aa5a191550d77209bcb26a5796",
+      "size": 1016416799
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "f69026379317badd02be4c4795a67d2a326604a3d7cb532e20d114ef85f6e745",
+      "size": 344733
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "5afbef2399be656b62e3103df313a92e3fa5677e704a1f461c8c988c2bb4b27d",
+      "size": 2353528832
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "d07d3aad9b3e6c469b22f947208554895f3bdc2ad8776d8ee70c2288874189c7",
+      "size": 1177215056
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "7dfa87ed30fe8c72a35cc1a6b0c1511e1b4d20991f3c804fe2d0744b28cb0916",
+      "size": 1083524767
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "5e221e9391f4b5337f3dd56a5b3c6dbcdc8b4460ab70da5e8af13d896d77dd3a",
+      "size": 810378736
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "d07d3aad9b3e6c469b22f947208554895f3bdc2ad8776d8ee70c2288874189c7",
+      "size": 1177215056
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "fa85880dc08901fc1298759107f0223c1321eaca9c2e195ec6adaf4051b76e3d",
+      "size": 1177215114
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "8da6e4e50ef7c210ba66a98a4256e6d60e38cef8a9a9c74d327251aaf4e78767",
+      "size": 285
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "fb9368e9e3b2dfaee1d5c8f6fe08ac6057b57f46325da07fbcb4da185e85db77",
+      "size": 295
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "8e2c49673774cc96724c2b8e92327a32f99e821d9baf33ef789ac5811736f2e0",
+      "size": 3564883
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "20899789303ffebe50f26c91b5ad426c3910346476dce36682c1c4b949d65380",
+      "size": 5374
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/AMD-OLMo-1B-SFT",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "561d5be7e53782570096e27ab87ec5ded82ddd34d76cf19944ebef2612565440",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:30:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/AMD-OLMo-1B-SFT/resolve/011b675f1f6ec6e8f96dea341ae0e5f69305d548/"
+    }
+  ],
+  "upstream": {
+    "commit": "011b675f1f6ec6e8f96dea341ae0e5f69305d548",
+    "host": "huggingface.co",
+    "repo": "onnx-community/AMD-OLMo-1B-SFT",
+    "url": "https://huggingface.co/onnx-community/AMD-OLMo-1B-SFT/tree/011b675f1f6ec6e8f96dea341ae0e5f69305d548"
+  }
+}

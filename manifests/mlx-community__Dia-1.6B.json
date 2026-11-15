@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T03:36:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0b10be66c998478eb9abc27f43ab88166aeff600c351606c4a84db3349789297",
+      "size": 679
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3158423f81a7a069e5f3a21bb5c63911e2a0740def5bd48ccf90d6d56a649d4d",
+      "size": 1014
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9c9b0b846a4a4a954a17a30f503579b77221a56250c3c39ae903838fe071f810",
+      "size": 6444682909
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Dia-1.6B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0b10be66c998478eb9abc27f43ab88166aeff600c351606c4a84db3349789297",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:36:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Dia-1.6B/resolve/de4fa8c178ca5cc4e9d884b55b03fcfaa0995162/"
+    }
+  ],
+  "upstream": {
+    "commit": "de4fa8c178ca5cc4e9d884b55b03fcfaa0995162",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Dia-1.6B",
+    "url": "https://huggingface.co/mlx-community/Dia-1.6B/tree/de4fa8c178ca5cc4e9d884b55b03fcfaa0995162"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T05:06:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "640530a19ef0fd6f2549430e689b633b9966c3d9ed2d384e4d13da1119de43af",
+      "size": 1643
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "e0d617185ff87a37f0002b19055a2e0a46195f675a072e43fe276bb6ad1d15e1",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cbdd709d081512a131ad02595fe7b6457695a8718644d24a4d4d6b7f6a443905",
+      "size": 433
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "db951a211f82811de9082b3bc2dec96396a0e70895abfa906497a691d0dc64c2",
+      "size": 165537
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-26B-A4B-BF16.gguf",
+      "sha256": "73ddb4890f4819cfb6f3ef2ba04b7e40e7daa8e85ce790799c3ece9177823e82",
+      "size": 50505118208
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-26B-A4B-Q8_0.gguf",
+      "sha256": "bec30ec9593d382e7e43b262be2193ef0d86a0578e0caabf481b504589c34478",
+      "size": 26859842048
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/gemma-4-26B-A4B-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cbdd709d081512a131ad02595fe7b6457695a8718644d24a4d4d6b7f6a443905",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:06:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/gemma-4-26B-A4B-GGUF/resolve/8e0675ed78145a657a48bd987f7326aa58a64da3/"
+    }
+  ],
+  "upstream": {
+    "commit": "8e0675ed78145a657a48bd987f7326aa58a64da3",
+    "host": "huggingface.co",
+    "repo": "ggml-org/gemma-4-26B-A4B-GGUF",
+    "url": "https://huggingface.co/ggml-org/gemma-4-26B-A4B-GGUF/tree/8e0675ed78145a657a48bd987f7326aa58a64da3"
+  }
+}

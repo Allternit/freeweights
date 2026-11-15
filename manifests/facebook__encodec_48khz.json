@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:21:34Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e9f653ec649257de80305592b9447778dcce4cf2430e2379ee5e4919bc065150",
+      "size": 8299
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4a914ed15ed5a69e19932d05b0c51f2d22c68ffac70e959a757594cb0cd6e2a7",
+      "size": 803
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "47a15ffbaf7bb76176d0833e10590de0a8988a7848748608cefc36a1c88adfdc",
+      "size": 76291152
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "df1268bac588b486545baa1d0b6c9c32366c817efbd113158b4c2ef74f6eefeb",
+      "size": 231
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "0a6bd2506e38ec181c7aa65ef8314d7165fe8fac131c213bb1ad9b6ab4505232",
+      "size": 76338125
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/encodec_48khz",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e9f653ec649257de80305592b9447778dcce4cf2430e2379ee5e4919bc065150",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:21:34Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/encodec_48khz/resolve/c3def8e7185ac8c8efdce6eb8c4a651e487a503e/"
+    }
+  ],
+  "upstream": {
+    "commit": "c3def8e7185ac8c8efdce6eb8c4a651e487a503e",
+    "host": "huggingface.co",
+    "repo": "facebook/encodec_48khz",
+    "url": "https://huggingface.co/facebook/encodec_48khz/tree/c3def8e7185ac8c8efdce6eb8c4a651e487a503e"
+  }
+}

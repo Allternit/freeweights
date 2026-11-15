@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "d4data/biomedical-ner-all",
+  "display_name": "biomedical-ner-all-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/biomedical-ner-all-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/biomedical-ner-all-ONNX.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "d4data/biomedical-ner-all",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 68,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "variant",
+  "total_size": 914599497,
+  "upstream_url": "https://huggingface.co/onnx-community/biomedical-ner-all-ONNX",
+  "what_changed": null
+}

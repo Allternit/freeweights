@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T02:27:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "427b9a6a4a32477e9df8790ef92f5cbcde790ee148ee5dd8c36f77d9556998a2",
+      "size": 16538
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f50e6b694fbf4a683206e37869990d68333fe95d285730f084c838a34b0d98c2",
+      "size": 1434
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "117ac8e63e2af7cae3665e5a632d6eb03f5f384915519ceb6403c15ec6533f63",
+      "size": 2399
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9939fc9388b79bd70757f938b87381e817173d6a6158f5af6506c0b73e775c3c",
+      "size": 165
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2db53c7d81bd9b8cbc6a074e89be2c968a0d373fb4ee68bb1b1e14f7042dfee1",
+      "size": 4076193080
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "bc0b230081b44e629dd5b9045b78495615c1831b4b9f4cffe97bd37e82a6156a",
+      "size": 487
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05",
+      "size": 11429653
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "945e980986de2ca7768f3326bfdbb4fbea3406f972b8ae0be233089f2b253c11",
+      "size": 998
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Qwen/Qwen3-ASR-1.7B-hf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "427b9a6a4a32477e9df8790ef92f5cbcde790ee148ee5dd8c36f77d9556998a2",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:27:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B-hf/resolve/bcd2b5b7f32b480ab5790554cfa8347f246a14f3/"
+    }
+  ],
+  "upstream": {
+    "commit": "bcd2b5b7f32b480ab5790554cfa8347f246a14f3",
+    "host": "huggingface.co",
+    "repo": "Qwen/Qwen3-ASR-1.7B-hf",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B-hf/tree/bcd2b5b7f32b480ab5790554cfa8347f246a14f3"
+  }
+}

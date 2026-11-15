@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:45:44Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9a1effbe460f863c59f37f1023496e3f7297ea03ecda5f94d790e95c2d99f21b",
+      "size": 7960
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f2073049d85ebf3d02825a35e6355004d59310568a1098779e4421b01333a2b1",
+      "size": 976
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "abf6644989715d3704713bf6e5542b433ddc891583b3a89ce31a7614d124c1aa",
+      "size": 189
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e020c79d0a979a7ec099f718ff1cd2f19e92aead230d69654bca5975a8e1b862",
+      "size": 246079928
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "99272fe8ccfab114b68b478681ea47ee3a1ce62bb788cb92dd6e4f69fb1f1da2",
+      "size": 215
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6579793438bc4fbafffacf699169ff53e3769c5a0a0f5e71cdee8853e8130deb",
+      "size": 1985530
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "moonshine-ai/moonshine-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9a1effbe460f863c59f37f1023496e3f7297ea03ecda5f94d790e95c2d99f21b",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:45:44Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/moonshine-ai/moonshine-base/resolve/7a73d8d55ac0ba2ef3ae761593f6784b51f96dcf/"
+    }
+  ],
+  "upstream": {
+    "commit": "7a73d8d55ac0ba2ef3ae761593f6784b51f96dcf",
+    "host": "huggingface.co",
+    "repo": "moonshine-ai/moonshine-base",
+    "url": "https://huggingface.co/moonshine-ai/moonshine-base/tree/7a73d8d55ac0ba2ef3ae761593f6784b51f96dcf"
+  }
+}

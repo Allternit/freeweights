@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T04:14:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9ecead44a1ffc1d87039457e315ccd2594afdfd16cded5e3c4940e1386f5d6a9",
+      "size": 6944
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ceb88e2326b332ed97f3833edae510f8cee0058c82acc9a0a3c6ac14947a167f",
+      "size": 3421
+    },
+    {
+      "lfs": false,
+      "path": "img/.DS_Store",
+      "sha256": "442780a79db09250aaac14d27f1ab661857dca8fe5ba10b5858078a43f7fe3ae",
+      "size": 6148
+    },
+    {
+      "lfs": false,
+      "path": "img/classify.png",
+      "sha256": "f61ddfe8a9b1820de0abe48e121ea0d5751da87b7f8368bbf2ded14c6c925ff5",
+      "size": 47619
+    },
+    {
+      "lfs": false,
+      "path": "img/classify_exp.png",
+      "sha256": "e901a8c1d21e7c5693cc3939cd674a21b2b1c9d8bf4c53cc64750eb3134975bf",
+      "size": 46875
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0597708ae15fdcce27850e947653857d31f2e161a0ff46c53185ad58b644908c",
+      "size": 2271194860
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "6710678b12670bc442b99edc952c4d996ae309a7020c1fa0096dd245c2faf790",
+      "size": 17082821
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7e4c1cc848840aeccdd763458c18dd525eb0f795c992e00ebe9c28554e7db2d4",
+      "size": 1173
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "f9874523712554248b44da1e536f4d9cd5ba16c3642fa0254bab3c8ba804290b",
+      "size": 537036
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "16a60324779f4561552c1e524383f6591f97b80e0adc5098445a110a72360d23",
+      "size": 5240
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/IndustryCorpus2_Classifier",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9ecead44a1ffc1d87039457e315ccd2594afdfd16cded5e3c4940e1386f5d6a9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:14:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/IndustryCorpus2_Classifier/resolve/c3e596f92a4616769a4111a04c57886a1f2b9655/"
+    }
+  ],
+  "upstream": {
+    "commit": "c3e596f92a4616769a4111a04c57886a1f2b9655",
+    "host": "huggingface.co",
+    "repo": "BAAI/IndustryCorpus2_Classifier",
+    "url": "https://huggingface.co/BAAI/IndustryCorpus2_Classifier/tree/c3e596f92a4616769a4111a04c57886a1f2b9655"
+  }
+}

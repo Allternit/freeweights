@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T02:29:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "eedaa232843a5fee706aa818a601221bf17acb6c304888d1f69c04725e03ebb7",
+      "size": 791
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8f5f99f1dd68da5eb957c75c9022ba61f91eb54f4ca5f0ae3aed723bcd6fe7b3",
+      "size": 3135
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c",
+      "size": 957
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e29f120dfe1f0e3bd60823967efe31eb9104ca546e40222fc4a63eaa554ea081",
+      "size": 47153570
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "3acf3c98b1f80cfd8cdbf45178993636be89c320df713cbcac0f25d31ab36b3d",
+      "size": 47168503
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "04432fdeb8050b81e982d9297bb99965795f8cafb70691ef549c878cc7e769de",
+      "size": 468029
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "516fd96be4d67381d7c54c8f819fd6f5f9d7a2c2e11751c6d8ebf2f5d53e80e1",
+      "size": 377
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "f23c30b6a1f1b21926ef659a07c1bfaddd2fce80fbfd388226c5c10a0b8d80be",
+      "size": 241082
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "cointegrated/rubert-tiny-toxicity",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8f5f99f1dd68da5eb957c75c9022ba61f91eb54f4ca5f0ae3aed723bcd6fe7b3",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:29:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/cointegrated/rubert-tiny-toxicity/resolve/5d37eff844868e243467e4c38898bad46c271af2/"
+    }
+  ],
+  "upstream": {
+    "commit": "5d37eff844868e243467e4c38898bad46c271af2",
+    "host": "huggingface.co",
+    "repo": "cointegrated/rubert-tiny-toxicity",
+    "url": "https://huggingface.co/cointegrated/rubert-tiny-toxicity/tree/5d37eff844868e243467e4c38898bad46c271af2"
+  }
+}

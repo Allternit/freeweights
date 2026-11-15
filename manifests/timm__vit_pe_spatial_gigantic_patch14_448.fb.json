@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:28:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "707efd98717c5f36840a5f1c110cd1c297e48d41939d98653dc3d7807ed4a833",
+      "size": 4375
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5f7a2c288def28601b6d3a4373524c4da712637279fbbf7b684466c8b0a5dba0",
+      "size": 602
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "db69c2e41d38a72cf3f852707367934edbea3f47c3d8b07dc3e082b8caff8d8d",
+      "size": 7407615928
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "6797b7b5f66e55c3e0b820af112618cb80f85176c0dbc74324d6680fe9a157e1",
+      "size": 7407808278
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_pe_spatial_gigantic_patch14_448.fb",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "707efd98717c5f36840a5f1c110cd1c297e48d41939d98653dc3d7807ed4a833",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:28:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_pe_spatial_gigantic_patch14_448.fb/resolve/f2cea21ca9d5900061bee5e896031ab4e8352936/"
+    }
+  ],
+  "upstream": {
+    "commit": "f2cea21ca9d5900061bee5e896031ab4e8352936",
+    "host": "huggingface.co",
+    "repo": "timm/vit_pe_spatial_gigantic_patch14_448.fb",
+    "url": "https://huggingface.co/timm/vit_pe_spatial_gigantic_patch14_448.fb/tree/f2cea21ca9d5900061bee5e896031ab4e8352936"
+  }
+}

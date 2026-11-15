@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T04:42:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "07b3b4b04ce1da1f27be4f1ff90006c9b8ace80cc0eb81bdd182a11257f4498c",
+      "size": 1618
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "bea65e025b9cd44605694e6f8963c3342b891668eeee4d681f0792d5bd2e9770",
+      "size": 2637
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "b0f58f04a0b9b6d57252425680efcd90c82898e11727204886f0b96b94bfa593",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ea5f2d73915a058e2bd7cadee271b63d4db25cb41187b54777d46db7bfa22e8d",
+      "size": 95281
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "ac52ac4e326beae33b9dd33f5fca0301fc563e34becfe98ee210ee2b853d93bb",
+      "size": 135
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "e2e726d36fec013572a4204e3a5e880c0b1e3a5cc072478b06a32c2b60616e9b",
+      "size": 5279665535
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "4fa46ae051b4f1cf9c4c80622581af70c55a321953027be38ac1e57d687b3edb",
+      "size": 5282482723
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "efc65d5e61c8711ae2bfd7bba8e26565cdee453041f2b87e5d8118f1410106a5",
+      "size": 5282482779
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "68f6482188d19be2b09f16cdce15e322282c03afb799c2f5c7638b526d8ea83b",
+      "size": 4144172361
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "664a049408e8694e5867312145b74b1971ad5472061a1f176e0806dec9b3d21c",
+      "size": 57907
+    },
+    {
+      "lfs": false,
+      "path": "params.json",
+      "sha256": "925d9c90e80dea268272b3af30cf6127b6ced8e165f8ba20ba09a2009adcddfb",
+      "size": 768
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "c4497eba07fc4cdecf1ddcd7ac3e31301579a98bb1daa359399b0b23e8c692e7",
+      "size": 667
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "4ceef0d0cbf062ffd522d85fcbf5248c2db8659c589afcc47b2f26810e7d9a58",
+      "size": 189
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5bc5d1c106bf86895473568ef5211f3fde8415e6fdee039223d6db8ca52cbe01",
+      "size": 21311
+    },
+    {
+      "lfs": true,
+      "path": "tekken.json",
+      "sha256": "6e2501687ccd0e1f30f36319eaf2b46958b897811e246cd8eb5d385b9e3de7d1",
+      "size": 19399895
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "b76085f9923309d873994d444989f7eb6ec074b06f25b58f1e8d7b7741070949",
+      "size": 17078037
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "bf55306985c4e304196b5b5a30d45321db76ed5728d55a3d0c7a70af8e4f7b90",
+      "size": 201057
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/Mistral-Small-3.2-24B-Instruct-2506-MLX-6bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "bea65e025b9cd44605694e6f8963c3342b891668eeee4d681f0792d5bd2e9770",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:42:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/Mistral-Small-3.2-24B-Instruct-2506-MLX-6bit/resolve/df6e3caef03053d5a285f0f9e58168b6a0bf735b/"
+    }
+  ],
+  "upstream": {
+    "commit": "df6e3caef03053d5a285f0f9e58168b6a0bf735b",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/Mistral-Small-3.2-24B-Instruct-2506-MLX-6bit",
+    "url": "https://huggingface.co/lmstudio-community/Mistral-Small-3.2-24B-Instruct-2506-MLX-6bit/tree/df6e3caef03053d5a285f0f9e58168b6a0bf735b"
+  }
+}

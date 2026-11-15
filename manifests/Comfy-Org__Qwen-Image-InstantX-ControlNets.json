@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T02:34:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "23d4a8f5bec0e59547694273e1b24a81bca841431b42da6508db36c9f45a1c53",
+      "size": 3303
+    },
+    {
+      "lfs": true,
+      "path": "split_files/controlnet/Qwen-Image-InstantX-ControlNet-Inpainting.safetensors",
+      "sha256": "49c01aafe6545c1f6e7627a724c8fb13357fe74efee235622158f0a8f30e5458",
+      "size": 4234599432
+    },
+    {
+      "lfs": true,
+      "path": "split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors",
+      "sha256": "d51dca0073366a675108d5b83c3b7ef941cf2214c9a1c95c23f1e9a228ddbdb0",
+      "size": 3536027816
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Qwen-Image-InstantX-ControlNets",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "23d4a8f5bec0e59547694273e1b24a81bca841431b42da6508db36c9f45a1c53",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:34:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Qwen-Image-InstantX-ControlNets/resolve/90cf72c3b0e4b11f9a0037727459dbdd03ae029b/"
+    }
+  ],
+  "upstream": {
+    "commit": "90cf72c3b0e4b11f9a0037727459dbdd03ae029b",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Qwen-Image-InstantX-ControlNets",
+    "url": "https://huggingface.co/Comfy-Org/Qwen-Image-InstantX-ControlNets/tree/90cf72c3b0e4b11f9a0037727459dbdd03ae029b"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T05:09:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "442cb51d0008510f27a52bf5cfd21c8a95772d482cefd673743b758ae7b5cf1c",
+      "size": 23623
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "39f03c383413f531fd302c06c7e982ad98c83f0657a8339ae25478ccb81fdcda",
+      "size": 6206
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "534aac0955b63b77b4253c4dc286c060ef12ac62eb5230545f263541f8a8ccc0",
+      "size": 5459
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e0923390059f84a9180b00e5501778acc45ea9856cd7f2fd68208b360927c677",
+      "size": 131
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "d28541961e6a1f21b5f291ad1b90a5d3e07f667ab6193663616a5335e80ad5a2",
+      "size": 4999669838
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "4af524865d2e32879a6fb605073fc51c813265ccf268b19722dec002aea2d45e",
+      "size": 2341701511
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "660a49afac60dba2605c0a76da878cc4501e2d75abec3ca4aa0102e54fe7e323",
+      "size": 174996
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "ece2373c2ae391bce18785a1810543bc6173a1f28b6767cffab2c35dbea5f002",
+      "size": 976
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "577575622324b2e099e2648be26bdeb5e5815ffe66d7004e9e3ddbf421db6bf1",
+      "size": 17078110
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "38d8dcc1aa2012176fdd357ebcc5d690e6f59bc372bb4f1de6d1a7a15dc525c4",
+      "size": 48580
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/Ministral-3-8B-Reasoning-2512-unsloth-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "442cb51d0008510f27a52bf5cfd21c8a95772d482cefd673743b758ae7b5cf1c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/Ministral-3-8B-Reasoning-2512-unsloth-bnb-4bit/resolve/b2938b07761003df7b1d283fccfdb301088cafc0/"
+    }
+  ],
+  "upstream": {
+    "commit": "b2938b07761003df7b1d283fccfdb301088cafc0",
+    "host": "huggingface.co",
+    "repo": "unsloth/Ministral-3-8B-Reasoning-2512-unsloth-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/Ministral-3-8B-Reasoning-2512-unsloth-bnb-4bit/tree/b2938b07761003df7b1d283fccfdb301088cafc0"
+  }
+}

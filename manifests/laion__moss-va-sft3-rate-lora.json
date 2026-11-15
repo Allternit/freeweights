@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T05:30:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f35c5d45748b772ec1ae8ff5a9c09d7341641d79b59f51190223259f4113417b",
+      "size": 12379
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "0287ff865ebb4a80789122f530fa4b480e70928e33a91df3fe07c1c24af90def",
+      "size": 1663
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "4966c70522fb9ca2686f6e7e63faa4f22b957aef482488af54a4e1dd897b8ddb",
+      "size": 137503280
+    },
+    {
+      "lfs": false,
+      "path": "checkpoints/step3788/adapter_config.json",
+      "sha256": "0287ff865ebb4a80789122f530fa4b480e70928e33a91df3fe07c1c24af90def",
+      "size": 1663
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/step3788/adapter_model.safetensors",
+      "sha256": "4966c70522fb9ca2686f6e7e63faa4f22b957aef482488af54a4e1dd897b8ddb",
+      "size": 137503280
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/moss-va-sft3-rate-lora",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f35c5d45748b772ec1ae8ff5a9c09d7341641d79b59f51190223259f4113417b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:30:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/moss-va-sft3-rate-lora/resolve/cb6c668f2e37ea8d113df09970f9bde048a964bb/"
+    }
+  ],
+  "upstream": {
+    "commit": "cb6c668f2e37ea8d113df09970f9bde048a964bb",
+    "host": "huggingface.co",
+    "repo": "laion/moss-va-sft3-rate-lora",
+    "url": "https://huggingface.co/laion/moss-va-sft3-rate-lora/tree/cb6c668f2e37ea8d113df09970f9bde048a964bb"
+  }
+}

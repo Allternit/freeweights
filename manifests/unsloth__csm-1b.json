@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:46:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ed0190855a95b424c08e2b4eaa5b4ea0f58139489f0a00de3febcaf97b1ef9f8",
+      "size": 6861
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "b43753fbbc23be93160cccf825d2cf97dec39538cb274350216940e7acbc0fe7",
+      "size": 2002
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "497208badddb751a2e0c2b2ebf1e7fd6f96e7dba200f54347b3ec52e2e52b0f1",
+      "size": 3121
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7e8155f5846542bb15f8910a8dff0724d2961b28f10e4d98c58327825239b452",
+      "size": 264
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1c81da3653c0177283d17d0a94e8136e76429fcabed60ed336cea6abea6e81c3",
+      "size": 4153376052
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "8648040cda0469976874c733acbec88c0ef094cd95628ab63b32950f01872af9",
+      "size": 271
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "03d62862d41de30db9e05cb4865de4f36c48ab3032327139fcdfacc5798a4828",
+      "size": 449
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "80f511469b4aceda8c17ccafef2310eceeda9dd4589cf2c062bd0279eef5646d",
+      "size": 17209980
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "250bef77ad6788610c416ccf4e0f6466607a12c0dc3156cca1031c2269170311",
+      "size": 50563
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/csm-1b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ed0190855a95b424c08e2b4eaa5b4ea0f58139489f0a00de3febcaf97b1ef9f8",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:46:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/csm-1b/resolve/39e8c756bec133ad7eb9ea1097c84a2bd891c949/"
+    }
+  ],
+  "upstream": {
+    "commit": "39e8c756bec133ad7eb9ea1097c84a2bd891c949",
+    "host": "huggingface.co",
+    "repo": "unsloth/csm-1b",
+    "url": "https://huggingface.co/unsloth/csm-1b/tree/39e8c756bec133ad7eb9ea1097c84a2bd891c949"
+  }
+}

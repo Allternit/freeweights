@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen3.5-9B",
+  "display_name": "d3-flash",
+  "family": "vllm-sr",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "vllm-sr/d3-flash",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/vllm-sr/d3-flash.json",
+  "params": 8392695024,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen3.5-9B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 102614,
+    "likes": 118,
+    "trending": null
+  },
+  "tasks": [
+    "zero-shot-classification"
+  ],
+  "tier": "T1",
+  "total_size": 16815718986,
+  "upstream_url": "https://huggingface.co/vllm-sr/d3-flash",
+  "what_changed": null
+}

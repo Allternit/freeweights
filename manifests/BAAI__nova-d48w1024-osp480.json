@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-15T04:16:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": ".gitignore",
+      "sha256": "1be12a43f56e33a25cc41b939d8ead5d23cbcf8a79aa3ec406a540413476b804",
+      "size": 546
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "size": 10173
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "826d8720c5eee90b8845181cf242f848581b46dd644a904b23a214f2678ccef5",
+      "size": 4070
+    },
+    {
+      "lfs": false,
+      "path": "model_index.json",
+      "sha256": "ad05cb4199d2e8a0c5f94427f7fae55775233147690d2b1507e5cc1f639f5c37",
+      "size": 370
+    },
+    {
+      "lfs": false,
+      "path": "scheduler/scheduler_config.json",
+      "sha256": "cc4b259b16a9d8e81b84da83bc5ab287c12375fcff2e72209f15e2f1211e5f67",
+      "size": 182
+    },
+    {
+      "lfs": false,
+      "path": "text_encoder/__text_encoder__.py",
+      "sha256": "dacab42f94f469b4ceed4b8fbc9d7ae4637384647be07fae6589fdeb8835251e",
+      "size": 773
+    },
+    {
+      "lfs": false,
+      "path": "text_encoder/config.json",
+      "sha256": "60af0af54b5fb14096fd45af127b68f9289601abcbf2fd2c44a3d9c1fef7bb04",
+      "size": 539
+    },
+    {
+      "lfs": true,
+      "path": "text_encoder/model-00001-of-00002.safetensors",
+      "sha256": "7fbcdefa72edf7527bf5da40535b57d9f5bd3d16829b94a9d25d2b457df62e84",
+      "size": 4995584424
+    },
+    {
+      "lfs": true,
+      "path": "text_encoder/model-00002-of-00002.safetensors",
+      "sha256": "17b98759e4b7953cbcf63ec49be7edbc9b863b57c207d84a52f5d2f5bcfcf6b4",
+      "size": 563832976
+    },
+    {
+      "lfs": false,
+      "path": "text_encoder/model.safetensors.index.json",
+      "sha256": "0c77ac4c30d55a7ef763fd224cbc0073c0d808562fa682ba439265c2f3fea730",
+      "size": 35716
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/tokenizer.json",
+      "sha256": "337da36be7a71a6e88aa9148967a7bc8736f4b47c7de8e19ba92b89e80734cfc",
+      "size": 2114924
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/tokenizer_config.json",
+      "sha256": "656065bb0801f286eb0301ea8c9158baa8e9bc890e2c57e1ba4447233cdd4473",
+      "size": 7370
+    },
+    {
+      "lfs": false,
+      "path": "transformer/__transformer__.py",
+      "sha256": "48719bd32842f00283af54b43f62b06e1a14a218cc0fbf8470e6a5df8cf3f186",
+      "size": 797
+    },
+    {
+      "lfs": false,
+      "path": "transformer/config.json",
+      "sha256": "a2d75e3e21034e27c1b831f8e492aa5ef0b4f86457068f50fa84bbbe94c2afe5",
+      "size": 328
+    },
+    {
+      "lfs": true,
+      "path": "transformer/diffusion_pytorch_model.safetensors",
+      "sha256": "21dec394e82e040a4173f8de6369ff8cc84cedb3c041ccf0e85d36c4ed99958d",
+      "size": 1291088736
+    },
+    {
+      "lfs": false,
+      "path": "vae/__vae__.py",
+      "sha256": "6334f9b6606139a7344189696ff508ff7f7431cf6d18147d6378066ab6bbc16d",
+      "size": 795
+    },
+    {
+      "lfs": false,
+      "path": "vae/config.json",
+      "sha256": "d01d864154114fe87d94e050bae1112ad635abb369a3ed90f76fab7d3fd130e1",
+      "size": 551
+    },
+    {
+      "lfs": true,
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "sha256": "1e860e79354462b9f3df3b2afd1a35ef258b986c9f01f1497f9acfec4c0da046",
+      "size": 478407926
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/nova-d48w1024-osp480",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.video",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:16:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/nova-d48w1024-osp480/resolve/1e66007b8ad15409cb2094950d1c99173a533099/"
+    }
+  ],
+  "upstream": {
+    "commit": "1e66007b8ad15409cb2094950d1c99173a533099",
+    "host": "huggingface.co",
+    "repo": "BAAI/nova-d48w1024-osp480",
+    "url": "https://huggingface.co/BAAI/nova-d48w1024-osp480/tree/1e66007b8ad15409cb2094950d1c99173a533099"
+  }
+}

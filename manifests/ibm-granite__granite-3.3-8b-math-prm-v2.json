@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-15T03:29:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "06c7d298fa2e8b61ed7894cde18f2a5ccb56419ba162f1cefbaa737ee03b3cc9",
+      "size": 1702
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4e388e6c424db0c6dbe68b0cf8b4ae604ea89a27a63346bb1c6403b430e25170",
+      "size": 15128
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "c82c247886905cd10096a6b18581c23bb6503b81b6e18e16648fc98b05dd5a2a",
+      "size": 3702
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "70632f3d733c9b120bd741644f41cbc2b0c1210b25fef7877e4ebb5f01629061",
+      "size": 784
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "212b94ec015ada9c2c7975bb9f1997118d2a606198009ec096cef7db1c1ccd2e",
+      "size": 154
+    },
+    {
+      "lfs": true,
+      "path": "images/PRMv2_Benchmarks.jpg",
+      "sha256": "3df1964031a7dca30232660c361cc3201f9ab071943043739fee160f8df0e89d",
+      "size": 546006
+    },
+    {
+      "lfs": true,
+      "path": "images/PRMv2_BoN.jpg",
+      "sha256": "fcc850b7bea2c8252ea867f6d178ab469a09bb7b326196ea506dd05ce977c18d",
+      "size": 430175
+    },
+    {
+      "lfs": true,
+      "path": "images/PRMv2_BoN_code.jpg",
+      "sha256": "488e5077e7c1fef179b718d6d5238e757b2e728a54f53737407b33a1b5a536c6",
+      "size": 409806
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "dd589fba2e43761ab07ed923fe55184358aa660ced23477b800870e1cf80317a",
+      "size": 4974694184
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "64f5d554a0b7a5cad0343b1e0222710e1d79b428fbdadf50149b31b4138acdd0",
+      "size": 4991447696
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "a15a2ae2f71cfa2938e1b82950e876f49c6d27ffe5b15d2cec1953256c4d9683",
+      "size": 4970459920
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "933907dca41f6dc7d5ad02ec3f71bab5f277a3d9abb9d043914193940c31e847",
+      "size": 1405169224
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "060762e9569362998875b3f5ea963c1313054b7c606be2ab36826912167a4b13",
+      "size": 29872
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "3a3dd63a680f42d8396878bb7d4e5c0af8c6f170c4c2dac6986c68b090aa80d9",
+      "size": 796
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+      "size": 3476578
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "368532da7edb8d2aae3b53ee1c4ddcb4f6232cd1a3c89b16b1a2bf193325e264",
+      "size": 5258
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-3.3-8b-math-prm-v2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4e388e6c424db0c6dbe68b0cf8b4ae604ea89a27a63346bb1c6403b430e25170",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:29:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-3.3-8b-math-prm-v2/resolve/301abdda78cbea2bac9a04653eedf7ab9b3a3959/"
+    }
+  ],
+  "upstream": {
+    "commit": "301abdda78cbea2bac9a04653eedf7ab9b3a3959",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-3.3-8b-math-prm-v2",
+    "url": "https://huggingface.co/ibm-granite/granite-3.3-8b-math-prm-v2/tree/301abdda78cbea2bac9a04653eedf7ab9b3a3959"
+  }
+}

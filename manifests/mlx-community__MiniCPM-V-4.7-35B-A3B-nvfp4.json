@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:18:10Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "58c42c4baff80dece31ffd6959ef4d414b4e439d34d1dcf8b9dfb6a694aa0ea9",
+      "size": 2620
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "c4531cacbf2a0ab65170433d7a4f371d11b7599cf96c04b192e6372432636c70",
+      "size": 7250
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7c8c3edd4a7bbedf8614e5560966fdf5d32c23758432eca577ff73e546e51dd7",
+      "size": 23931
+    },
+    {
+      "lfs": false,
+      "path": "conversion.json",
+      "sha256": "9e4d9bc118b400cebee593e2f4790364e9d7b31488e97fc9bf5f7d1e27e3b298",
+      "size": 9546
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7fa47217744f0e0918f6cf846e7541e4f322e6bc66917044cf2ad580699216c8",
+      "size": 186
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "4d82a9818a68401130492b4e0ca1716da5a6f0ffe0f90cde804760564a40e293",
+      "size": 5306506255
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "2e1fd4659cd006419475ce951e1aff654e51c5b3cbdfd004b046ad44201076aa",
+      "size": 5292096346
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "8f5a1fdb01cdae9a3469d645bc8f2a427e06dee1c5af3d4873024f581d4dccbe",
+      "size": 5356537503
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "d61ec821c80fb27dd8cc4b52cb571ab0ab2779159a751fafd4b20b4196353ee9",
+      "size": 5360974228
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "4bddb7340ab9fe918a04735492e5fac75e8716d84878a37e137aebd1573b7d77",
+      "size": 2212212650
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "6f933b2fbb1175e501d1b09065327b381a494d94d13a568401e143832ae7bbd8",
+      "size": 168405
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "c64289d04f36e48d9d059e3a0069f54062b2ef6044a807adb448b98449cb54de",
+      "size": 148
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "8540e97ca17871b46aca8639b05f26db4eb4ac39d271b705c9cdbc3e32abbe07",
+      "size": 764
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "e4608c5d7b3f4f30ba83be16a82cdac856b2e7191d40f0a08cbacc76c2a926ee",
+      "size": 20001935
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "be74f538ac586f2daac1ede56d421e915d196fba24171bc8fcd05256e42108bc",
+      "size": 1157
+    },
+    {
+      "lfs": false,
+      "path": "validation.json",
+      "sha256": "4e0363b6ce981b3e211aa2e61023699f38db719e29420522514397c82f0a5e4a",
+      "size": 1568
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/MiniCPM-V-4.7-35B-A3B-nvfp4",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "58c42c4baff80dece31ffd6959ef4d414b4e439d34d1dcf8b9dfb6a694aa0ea9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:18:10Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/MiniCPM-V-4.7-35B-A3B-nvfp4/resolve/4ad5bcabefe5433dcda04c8cd83ae4cbf34f0ee0/"
+    }
+  ],
+  "upstream": {
+    "commit": "4ad5bcabefe5433dcda04c8cd83ae4cbf34f0ee0",
+    "host": "huggingface.co",
+    "repo": "mlx-community/MiniCPM-V-4.7-35B-A3B-nvfp4",
+    "url": "https://huggingface.co/mlx-community/MiniCPM-V-4.7-35B-A3B-nvfp4/tree/4ad5bcabefe5433dcda04c8cd83ae4cbf34f0ee0"
+  }
+}

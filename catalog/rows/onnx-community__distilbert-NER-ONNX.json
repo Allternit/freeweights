@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "dslim/distilbert-NER",
+  "display_name": "distilbert-NER-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/distilbert-NER-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/distilbert-NER-ONNX.json",
+  "note": "The license of the base model dslim/distilbert-NER applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "dslim/distilbert-NER",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 6041,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "variant",
+  "total_size": 891642200,
+  "upstream_url": "https://huggingface.co/onnx-community/distilbert-NER-ONNX",
+  "what_changed": null
+}

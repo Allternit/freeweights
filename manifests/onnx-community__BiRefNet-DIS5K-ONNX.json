@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T05:27:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "27cc58b4fddc56a3de2d779061d6aac551887558683f25841b0438562b10cd8c",
+      "size": 4293
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "88b20240c9078cf9cc3843dc7d69a42d274b8c242de56a3b2a41ef9995cb93bf",
+      "size": 30
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "6470117bac6f8d82a3f62921056f52d0f5c4d36d1d832096331d5ea38a03acb5",
+      "size": 972666916
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "4ea1e7d64b79841f1e8474370c9d4b23a5bed54f6a442eeaf20932a70922255d",
+      "size": 489666272
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "447d9ccb2c4129ab0ca045fc293e7d79dbc45e293ac1e94818d865db77f65a54",
+      "size": 391
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/BiRefNet-DIS5K-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "27cc58b4fddc56a3de2d779061d6aac551887558683f25841b0438562b10cd8c",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:27:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/BiRefNet-DIS5K-ONNX/resolve/c99ba6fba16fd69458572c284bf2dadc0bb67ed8/"
+    }
+  ],
+  "upstream": {
+    "commit": "c99ba6fba16fd69458572c284bf2dadc0bb67ed8",
+    "host": "huggingface.co",
+    "repo": "onnx-community/BiRefNet-DIS5K-ONNX",
+    "url": "https://huggingface.co/onnx-community/BiRefNet-DIS5K-ONNX/tree/c99ba6fba16fd69458572c284bf2dadc0bb67ed8"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "moonshotai/Moonlight-16B-A3B",
+  "display_name": "Kimi-VL-A3B-Instruct",
+  "family": "kimi",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "moonshotai/Kimi-VL-A3B-Instruct",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/moonshotai/Kimi-VL-A3B-Instruct.json",
+  "params": 16407657776,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "moonshotai/Moonlight-16B-A3B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.kimi",
+  "signals": {
+    "downloads_30d": 44921,
+    "likes": 286,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 32823063084,
+  "upstream_url": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Instruct",
+  "what_changed": null
+}

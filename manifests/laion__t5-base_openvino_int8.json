@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T04:21:37Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+      "size": 31
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6d193d3188b039952a02aae31d18b4a6ddda407ae6ad44918863b1778ec3f7ea",
+      "size": 1526
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "835db3d02fbeaea8b250731a5d8e26f4e365af959d18e0869e37e90f370c4a18",
+      "size": 142
+    },
+    {
+      "lfs": true,
+      "path": "openvino_decoder_model.bin",
+      "sha256": "f268634537756b9759cb5f7c59d4b1291c1cddde048046ab9c24edc40b770736",
+      "size": 138338744
+    },
+    {
+      "lfs": false,
+      "path": "openvino_decoder_model.xml",
+      "sha256": "d398a9d3d7c72ea3dcc34e3c7b2b4a8b8ca23377366548c62b890a7bb52a894e",
+      "size": 930475
+    },
+    {
+      "lfs": true,
+      "path": "openvino_decoder_with_past_model.bin",
+      "sha256": "1bbd54524925ebcf179ed80498010925af625f885ede8b4b50729b947ddddf5f",
+      "size": 124146096
+    },
+    {
+      "lfs": false,
+      "path": "openvino_decoder_with_past_model.xml",
+      "sha256": "d20840d73925fb0bf188f3a50db41a5d129a5d1769cd024766d8fa9de8c36743",
+      "size": 848732
+    },
+    {
+      "lfs": true,
+      "path": "openvino_detokenizer.bin",
+      "sha256": "8a789adeeeec6c8cf9c1b0fb7f4cde7bc01653ddfc6dbc041f1f0ac6ce49a81d",
+      "size": 794049
+    },
+    {
+      "lfs": false,
+      "path": "openvino_detokenizer.xml",
+      "sha256": "14a1a606612f73e12831a19ca5f68090394947da07a42d665c43ead8505d3613",
+      "size": 4313
+    },
+    {
+      "lfs": true,
+      "path": "openvino_encoder_model.bin",
+      "sha256": "7aaa6d687a1eed9ed204cbf61802369a072a7d0653e269c9698a770ecef73174",
+      "size": 109916568
+    },
+    {
+      "lfs": false,
+      "path": "openvino_encoder_model.xml",
+      "sha256": "414f70e5b7e00ce5b43a2376bde1dda71055590731d7b7023d6170fdb7060ddd",
+      "size": 528694
+    },
+    {
+      "lfs": true,
+      "path": "openvino_tokenizer.bin",
+      "sha256": "3b199d21ae1300c5f894c5d090e78243c7d10b4c960efb6829fad59c3a5978bc",
+      "size": 794057
+    },
+    {
+      "lfs": false,
+      "path": "openvino_tokenizer.xml",
+      "sha256": "193b3fb8b5e0efd1343a9e0db1110e6acc8fa127710320fad5b5f1b8632a624d",
+      "size": 7372
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5c87151ef0f72a99d1f766a4c418bd2a1f90aaa30a8e22fe5eca9641daebb64f",
+      "size": 2201
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+      "size": 791656
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "71c33c3bf57bf2e19b4f8ac686ad8d182a79f7cd1a4921889437c453420223f1",
+      "size": 2422169
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "019e7a3f662ad37a7e52e7cd14ce5ae814d519bbb76db95dbc542cb35946733d",
+      "size": 20775
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/t5-base_openvino_int8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:21:37Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/t5-base_openvino_int8/resolve/964dc45ae41dc86250d0bb539f8e05505b2c5c65/"
+    }
+  ],
+  "upstream": {
+    "commit": "964dc45ae41dc86250d0bb539f8e05505b2c5c65",
+    "host": "huggingface.co",
+    "repo": "laion/t5-base_openvino_int8",
+    "url": "https://huggingface.co/laion/t5-base_openvino_int8/tree/964dc45ae41dc86250d0bb539f8e05505b2c5c65"
+  }
+}

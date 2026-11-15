@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "microsoft/Phi-3.5-mini-instruct",
+  "display_name": "MediPhi",
+  "family": "phi",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "microsoft/MediPhi",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/microsoft/MediPhi.json",
+  "params": 3821079552,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "microsoft/Phi-3.5-mini-instruct",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.phi",
+  "signals": {
+    "downloads_30d": 2174,
+    "likes": 30,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 7644666595,
+  "upstream_url": "https://huggingface.co/microsoft/MediPhi",
+  "what_changed": null
+}

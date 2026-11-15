@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "microsoft/deberta-v3-base",
+  "display_name": "Medical-NER",
+  "family": "blaze999",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "blaze999/Medical-NER",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/blaze999/Medical-NER.json",
+  "params": 183895379,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "microsoft/deberta-v3-base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 10182,
+    "likes": 231,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "T1",
+  "total_size": 746742665,
+  "upstream_url": "https://huggingface.co/blaze999/Medical-NER",
+  "what_changed": null
+}

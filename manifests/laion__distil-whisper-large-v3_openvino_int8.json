@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-11-15T04:20:33Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+      "size": 31
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+      "size": 34648
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "717c1a25de52357e8af396612afd049eca41409653585019a31563df291d763a",
+      "size": 1266
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "bf619a90d8b379138751fd615b281935d399f4a4f274adad0f648c1eadac1f54",
+      "size": 4242
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "size": 493869
+    },
+    {
+      "lfs": false,
+      "path": "normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "size": 52666
+    },
+    {
+      "lfs": true,
+      "path": "openvino_decoder_model.bin",
+      "sha256": "386c085c01242662a7e290bb5a36c9cccb8f25f409c77b02c6afd6e9d487001e",
+      "size": 119746420
+    },
+    {
+      "lfs": false,
+      "path": "openvino_decoder_model.xml",
+      "sha256": "37732db5b0151a587c921af6b971a9dec483147305ca8dc0edcf78e9ae8ed7c7",
+      "size": 173772
+    },
+    {
+      "lfs": true,
+      "path": "openvino_detokenizer.bin",
+      "sha256": "3c858e20098f2cac99a002aac0cca7cedd906c690cb9446576c7f031e3a91b81",
+      "size": 528310
+    },
+    {
+      "lfs": false,
+      "path": "openvino_detokenizer.xml",
+      "sha256": "ea2776fce5d044c69df45104aa35c1d42526fcc74eb128a4b948b6c0caed08ec",
+      "size": 8275
+    },
+    {
+      "lfs": true,
+      "path": "openvino_encoder_model.bin",
+      "sha256": "b3605e6e04fa96e471990ccaa1e8d95ffbcb130a19bef58c7c18cb9605f79aae",
+      "size": 644961380
+    },
+    {
+      "lfs": false,
+      "path": "openvino_encoder_model.xml",
+      "sha256": "6939fd88b6cbc923827de39b9cd37c32aaa34c33c51acf747961b93b2cbd5118",
+      "size": 1236415
+    },
+    {
+      "lfs": true,
+      "path": "openvino_tokenizer.bin",
+      "sha256": "fbf72e07d6505915459aae6060bc1e7caba6e8e3be2bae0b2aeb5fd94a00edd1",
+      "size": 1288293
+    },
+    {
+      "lfs": false,
+      "path": "openvino_tokenizer.xml",
+      "sha256": "5b6bf3a2538d33ace0f8be6af71eeec4ba8d29133e802e9b90a30b5f65bcd3f3",
+      "size": 25069
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+      "size": 340
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+      "size": 2186
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "5c1bf30c9e716e1477bedef846b01be0013daecb89e9e3ef7ab89b23c178df1b",
+      "size": 3930645
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "844b642c73a91359722f47b35705f7174686df33d252695d8572cf9ac03a6389",
+      "size": 282843
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "e2aa043ef015641d363d8288e7c241c85e36a5c761fb303598e0710233344387",
+      "size": 1036558
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/distil-whisper-large-v3_openvino_int8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:20:33Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/distil-whisper-large-v3_openvino_int8/resolve/2ac6de1d6750489adfa8277f11aaf55fcc50bdd0/"
+    }
+  ],
+  "upstream": {
+    "commit": "2ac6de1d6750489adfa8277f11aaf55fcc50bdd0",
+    "host": "huggingface.co",
+    "repo": "laion/distil-whisper-large-v3_openvino_int8",
+    "url": "https://huggingface.co/laion/distil-whisper-large-v3_openvino_int8/tree/2ac6de1d6750489adfa8277f11aaf55fcc50bdd0"
+  }
+}

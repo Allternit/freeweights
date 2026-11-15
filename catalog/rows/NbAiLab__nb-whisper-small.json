@@ -1,0 +1,45 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-small",
+  "display_name": "nb-whisper-small",
+  "family": "NbAiLab",
+  "formats": [
+    "ctranslate2",
+    "ggml",
+    "onnx",
+    "safetensors"
+  ],
+  "id": "NbAiLab/nb-whisper-small",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/NbAiLab/nb-whisper-small.json",
+  "params": 241734912,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-small",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 3250,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "variant",
+  "total_size": 7439436491,
+  "upstream_url": "https://huggingface.co/NbAiLab/nb-whisper-small",
+  "what_changed": null
+}

@@ -1,0 +1,45 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "distilbert/distilbert-base-multilingual-cased",
+  "display_name": "distilbert-multilingual-toxicity-classifier",
+  "family": "gravitee-io",
+  "formats": [
+    "onnx",
+    "safetensors"
+  ],
+  "id": "gravitee-io/distilbert-multilingual-toxicity-classifier",
+  "kind": "model",
+  "license_class": "custom",
+  "license_id": "LicenseRef-OpenRAIL++-M",
+  "license_terms": "OpenRAIL++-M: the use restrictions in Attachment A pass on to you and to anyone you share the model with. Keep a copy of the license with the files.",
+  "license_url": "https://huggingface.co/gravitee-io/distilbert-multilingual-toxicity-classifier",
+  "manifest_url": "https://freeweights.allternit.com/manifests/gravitee-io/distilbert-multilingual-toxicity-classifier.json",
+  "params": 135326210,
+  "redistribution": "click-through",
+  "relation": {
+    "parent": "distilbert/distilbert-base-multilingual-cased",
+    "type": "quant"
+  },
+  "requires_terms": true,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 3026,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "variant",
+  "total_size": 1222256819,
+  "upstream_url": "https://huggingface.co/gravitee-io/distilbert-multilingual-toxicity-classifier",
+  "what_changed": null
+}

@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T03:38:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a7aeb6024125fcbd09fa4ab12b955e632c8154c9d99f739ca444d4c127601f22",
+      "size": 4452
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9228b142e38b33eaa680e7ecee5be08a9f014d5477b10904702b3408f5d567bd",
+      "size": 667
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "be17d43a474277ae1deb776993047bc84f1ff1784445a1e9dd22465789326196",
+      "size": 669525440
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/gemma4_vit_167m_enc.gemma4_e4b_it",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a7aeb6024125fcbd09fa4ab12b955e632c8154c9d99f739ca444d4c127601f22",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:38:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/gemma4_vit_167m_enc.gemma4_e4b_it/resolve/fdf8f81e084f0dffb850345e9a9a9fbb1ee5cd27/"
+    }
+  ],
+  "upstream": {
+    "commit": "fdf8f81e084f0dffb850345e9a9a9fbb1ee5cd27",
+    "host": "huggingface.co",
+    "repo": "timm/gemma4_vit_167m_enc.gemma4_e4b_it",
+    "url": "https://huggingface.co/timm/gemma4_vit_167m_enc.gemma4_e4b_it/tree/fdf8f81e084f0dffb850345e9a9a9fbb1ee5cd27"
+  }
+}

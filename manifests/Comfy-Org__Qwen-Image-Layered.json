@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:29:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9a41196061649d30308f28c3f1a1e981833f028cf36281070980248e3ff49f6c",
+      "size": 1501
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/qwen_image_layered_bf16.safetensors",
+      "sha256": "736a424a7abe52613b1fb4445cad3cd4603dc00055ad5ec790e3b8b1550290fd",
+      "size": 40861043888
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/qwen_image_layered_fp8mixed.safetensors",
+      "sha256": "e68c406b1bc08c97382a46dce6ed46699bc18a0f50422d97952ee4e8b63ad50a",
+      "size": 20533591821
+    },
+    {
+      "lfs": true,
+      "path": "split_files/vae/qwen_image_layered_vae.safetensors",
+      "sha256": "c5320595fc61859ccdd0282184208f7b781c983b8ce4c6bc3e7723a807d3d28d",
+      "size": 253816616
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Qwen-Image-Layered",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9a41196061649d30308f28c3f1a1e981833f028cf36281070980248e3ff49f6c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:29:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Qwen-Image-Layered/resolve/02130716aaf54a36f84c9fcfa8a373ab06284e2b/"
+    }
+  ],
+  "upstream": {
+    "commit": "02130716aaf54a36f84c9fcfa8a373ab06284e2b",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Qwen-Image-Layered",
+    "url": "https://huggingface.co/Comfy-Org/Qwen-Image-Layered/tree/02130716aaf54a36f84c9fcfa8a373ab06284e2b"
+  }
+}

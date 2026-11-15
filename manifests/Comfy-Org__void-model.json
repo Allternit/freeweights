@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:33:36Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "04998a832e75a19d92d595d5f10c96c0cc80b11e7fd2baa7fdf2a3a2b3bb9eef",
+      "size": 2203
+    },
+    {
+      "lfs": false,
+      "path": "diffusion_models/.keep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/void_pass1.safetensors",
+      "sha256": "f3fff936d57008c39054e37ae0db6a3fd3f48ccaf1291a186e28d8760d68e6f3",
+      "size": 11143025952
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/void_pass2.safetensors",
+      "sha256": "884d96ae3be9e2c899f15446aee69260f56e21496c1005400fc6676701e67704",
+      "size": 11143025952
+    },
+    {
+      "lfs": true,
+      "path": "optical_flow/raft_large_C_T_SKHT_V2-ff5fadd5.safetensors",
+      "sha256": "aac3561dbbb49a30853bc7d9bb1bf39ce59cc260f670911d43c900ba27a4a8bb",
+      "size": 21060840
+    },
+    {
+      "lfs": true,
+      "path": "text_encoders/t5xxl_fp16.safetensors",
+      "sha256": "6e480b09fae049a72d2a8c5fbccb8d3e92febeb233bbe9dfe7256958a9167635",
+      "size": 9787841024
+    },
+    {
+      "lfs": true,
+      "path": "vae/cogvideox_vae.safetensors",
+      "sha256": "bd47d57ad948ff80da0af0cb2e4dcdef65073aba59bccfd383ada9a7d1c02024",
+      "size": 431221142
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/void-model",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "04998a832e75a19d92d595d5f10c96c0cc80b11e7fd2baa7fdf2a3a2b3bb9eef",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:33:36Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/void-model/resolve/f9c9e565920002478ab9477f4c99c29c52d16db3/"
+    }
+  ],
+  "upstream": {
+    "commit": "f9c9e565920002478ab9477f4c99c29c52d16db3",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/void-model",
+    "url": "https://huggingface.co/Comfy-Org/void-model/tree/f9c9e565920002478ab9477f4c99c29c52d16db3"
+  }
+}

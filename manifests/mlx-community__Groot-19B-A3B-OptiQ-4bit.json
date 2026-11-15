@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:16:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7c8a0ee13c532cfbaeafded8a5723ab0616be96aeca6e5ac23cc7a973b005721",
+      "size": 2903
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "182e77dd83bd8e9ca818b240b82e28f243762cd5dda32e6eef327df7b1cd107e",
+      "size": 7536
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ca4be95cf644cb2388287aefdf08d3f08373eb80a25202710dcec82391e84c7c",
+      "size": 115815
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "size": 202
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "c91b198188237b8de5588f4cc607391618fc6159a17f6035b880ec18fee7e6c9",
+      "size": 660
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "40c372fbe9b9bae420ee7c794334e56a9ed76dafa55ecf23e1fb3a78ac3b706c",
+      "size": 5360814621
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "23a61db778ab073062aa4230eb8b70648632143ee81ef8b93c2ff52c0572da6f",
+      "size": 5362524114
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "e035bf9cca1718f3aebfff105cfdaeb17facededbe6e1816c222e088ba271a7f",
+      "size": 1603201538
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "525612baf0c244398070d44afb28e13c34623e60dc871c2b7647cab6e10d54df",
+      "size": 204756
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "48f08af45b86898612d95561dd7725409ed2e93aec16d2c256ec29b882d0937e",
+      "size": 56490
+    },
+    {
+      "lfs": true,
+      "path": "optiq/mtp.safetensors",
+      "sha256": "6b374d11878a1d92ec92cc4f0828aab2f068229afe20edc067352d5fda656981",
+      "size": 260682683
+    },
+    {
+      "lfs": true,
+      "path": "optiq_vision.safetensors",
+      "sha256": "c00206ea4ea3e9cfff7d224dd88244324c25d128615da025877248473ff66da3",
+      "size": 893179571
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "size": 390
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+      "size": 1191
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "95c557768e6b88a7128befc7bfd3c7de50e5d51af9b8b33a9f4dee0e04f99679",
+      "size": 1161
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "size": 385
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Groot-19B-A3B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7c8a0ee13c532cfbaeafded8a5723ab0616be96aeca6e5ac23cc7a973b005721",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:16:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Groot-19B-A3B-OptiQ-4bit/resolve/6ac49c665acc9e1303cd988c6b6ea95b2b3166c5/"
+    }
+  ],
+  "upstream": {
+    "commit": "6ac49c665acc9e1303cd988c6b6ea95b2b3166c5",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Groot-19B-A3B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Groot-19B-A3B-OptiQ-4bit/tree/6ac49c665acc9e1303cd988c6b6ea95b2b3166c5"
+  }
+}

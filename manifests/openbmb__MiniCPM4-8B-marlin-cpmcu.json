@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:34:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "12f3afe0a2333fa95a58c665edd3d2d92d1d985e0283cef74849a074b7f5bb3e",
+      "size": 11343
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b1e7a51529228540d1b1f5892e76f6adf8a5409ae2b37aabaab8e8bd7aa9740c",
+      "size": 4212
+    },
+    {
+      "lfs": false,
+      "path": "configuration_minicpm.py",
+      "sha256": "34f014251e54c9f5cee5ba48556482bcd34acf80c4eeabc183a24c10ecbdab17",
+      "size": 9458
+    },
+    {
+      "lfs": true,
+      "path": "model_gptq.safetensors",
+      "sha256": "99e81c94b2ed709dfee2f3776cb93605f894ac8f04c89bed4bcc3403a49a9eee",
+      "size": 5114081688
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "335fdcc361469cdbb4a36f9f7cc9df91087eccc6e122b2f725c824cc81ca6093",
+      "size": 287
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "9ec9d6f07cb0e436598bf29b4d97c6355434c08fdbe9c264e6926907f3751c7e",
+      "size": 630
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "adf7208af154a5ca065d2eda4e5419e02aac58c2c00627874748b75ec6769094",
+      "size": 6701371
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "bb74d51116831c3bf65db812c553f94ab0c88dcf97a5bbb37e3504f6d359c530",
+      "size": 1181204
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "8bef75d59004eb0e62db89e97090d4736b14fd6c4a0282370c28833be1e83051",
+      "size": 2835
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM4-8B-marlin-cpmcu",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "12f3afe0a2333fa95a58c665edd3d2d92d1d985e0283cef74849a074b7f5bb3e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:34:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM4-8B-marlin-cpmcu/resolve/e7e7fcc28d2fcc80a14a35bfd61e1b3039380f08/"
+    }
+  ],
+  "upstream": {
+    "commit": "e7e7fcc28d2fcc80a14a35bfd61e1b3039380f08",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM4-8B-marlin-cpmcu",
+    "url": "https://huggingface.co/openbmb/MiniCPM4-8B-marlin-cpmcu/tree/e7e7fcc28d2fcc80a14a35bfd61e1b3039380f08"
+  }
+}

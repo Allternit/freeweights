@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:09:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fa54639a8f5b46dc70380b1f2697612d6efad240b2baf56c7935f07d7c35f064",
+      "size": 882
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f5186d42d99c8a0445d37fd8a6c7ccf07fe3e24a29ce622d8bd245da9507b12b",
+      "size": 2613
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "92408f393c6c724d087c8a1ef913a507d1c4aff689e2019fc7577fcacecfdd64",
+      "size": 2035
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "91d2394a56f6158bf157e37249ea20342c7a86e971ac9a43d007f406aeaddec0",
+      "size": 117
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+      "size": 916646
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a97f02f033af038a222c4ae3cd22a3df580160d559dc985c6a6a2d512b5210cd",
+      "size": 4105983200
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "a4285a52cc9cc75d18d16ad8912d65db9d212ec20f722cc44bc020232f0589f7",
+      "size": 57361
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2",
+      "size": 581
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "7738a25c46a6043a0e2e605138851baa450269ce9d800af6ca9bf6192e45510c",
+      "size": 7137175
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f7a2753a4ff30657e452c8fef02b9a99a3b900ceb4c65a1e3fbea6a3bfab07a6",
+      "size": 4318
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "d8eb44d0d51f5e39c9b14825ca8bd10a2500f99c438ca81d4462f0263acd3b53",
+      "size": 1611055
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Olmo-3-7B-Instruct-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fa54639a8f5b46dc70380b1f2697612d6efad240b2baf56c7935f07d7c35f064",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Olmo-3-7B-Instruct-4bit/resolve/d732c91ae02e90cd5d86e810fbeb9741794b4dd9/"
+    }
+  ],
+  "upstream": {
+    "commit": "d732c91ae02e90cd5d86e810fbeb9741794b4dd9",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Olmo-3-7B-Instruct-4bit",
+    "url": "https://huggingface.co/mlx-community/Olmo-3-7B-Instruct-4bit/tree/d732c91ae02e90cd5d86e810fbeb9741794b4dd9"
+  }
+}

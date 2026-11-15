@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/vit-base-patch16-224-in21k",
+  "display_name": "Deep-Fake-Detector-v2-Model",
+  "family": "prithivMLmods",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "prithivMLmods/Deep-Fake-Detector-v2-Model",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/prithivMLmods/Deep-Fake-Detector-v2-Model.json",
+  "params": 85800194,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/vit-base-patch16-224-in21k",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 4340,
+    "likes": 41,
+    "trending": null
+  },
+  "tasks": [
+    "image-classification"
+  ],
+  "tier": "T2",
+  "total_size": 1373490966,
+  "upstream_url": "https://huggingface.co/prithivMLmods/Deep-Fake-Detector-v2-Model",
+  "what_changed": null
+}

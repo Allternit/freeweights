@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:19:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d592d1e94334463c9616f38d93b9d39540c99b0527a7c758009575209fb804ac",
+      "size": 4543
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "67c82269dca6fba7da101a82afe95a9699b773dc7c02f16e4b6b6e65df4725e1",
+      "size": 578
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "53644c4ac2ee1e9659fdea43cc21df35dc352e386a8d99e95f7dae369682513a",
+      "size": 17879240
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "dbd53ec856daba4c16d3b161dc45cb2e217c917f92dd50c8dd97c54a3a50cb60",
+      "size": 17969789
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/spnasnet_100.rmsp_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d592d1e94334463c9616f38d93b9d39540c99b0527a7c758009575209fb804ac",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:19:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/spnasnet_100.rmsp_in1k/resolve/090f084f490afaed0296b2a37af668b1e2f2b72b/"
+    }
+  ],
+  "upstream": {
+    "commit": "090f084f490afaed0296b2a37af668b1e2f2b72b",
+    "host": "huggingface.co",
+    "repo": "timm/spnasnet_100.rmsp_in1k",
+    "url": "https://huggingface.co/timm/spnasnet_100.rmsp_in1k/tree/090f084f490afaed0296b2a37af668b1e2f2b72b"
+  }
+}

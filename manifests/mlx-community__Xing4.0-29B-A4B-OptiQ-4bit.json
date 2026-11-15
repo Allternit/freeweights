@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:17:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ab7e79008fe484fc7a56059247c9a05c5c18a3c59653dd59f071c51d32784feb",
+      "size": 3890
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "9dfe2d6edfcf86d379d5763582b52e7d618f6035c2d197b29384274653fe2a22",
+      "size": 3753
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0f5f2aeee64aabb17db279a3bde6c5d1c7b648c06482b6aeb41a745f5ead642d",
+      "size": 111365
+    },
+    {
+      "lfs": false,
+      "path": "configuration_xing4_0.py",
+      "sha256": "6542bbf57128e6709fa30d9cc165be4337bba7d1efc04ec707c3899d938ded4d",
+      "size": 5305
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "0c5eb5129e80ecf2eec82930b3c47a8001c8973cb4eaa24ea111319075a9d839",
+      "size": 201
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "2b855090ebd701eafb4bab1a8bba97000c47334665c9f67d9db1dbad43b9a592",
+      "size": 5205273735
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "e66a29aba807d088b797609d070f2e232ba4650eff43c2ce678a72a0c656950f",
+      "size": 5310899293
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "890e21d1d3ee7b8cef08c587021dfc03b66dc23e1517f63d9b80e081ed5a7bae",
+      "size": 5281240742
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "cb6f36fd4a6449c34e4df1182b41da666ff5b09b8d2efd6c1395b076bb68a468",
+      "size": 4782191552
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "f38d6ca567c855c686d1ab33416c7442da9b89263d1292c299a74e1e3e66dbee",
+      "size": 173022
+    },
+    {
+      "lfs": false,
+      "path": "modeling_xing4_0.py",
+      "sha256": "51341dbd177ebd0181d338924356f2de72848c409580c0e3080d87ee70935cef",
+      "size": 31961
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "4a736393c87707c868eec6453679c5bb293c6696d7217f04638aeec495104257",
+      "size": 38041
+    },
+    {
+      "lfs": false,
+      "path": "optiq/sensitivity.json",
+      "sha256": "7b5a7f86e004903d5fe332c0f2f82cd5046a64b2e84d2b854795e7bd4783ee3c",
+      "size": 84450
+    },
+    {
+      "lfs": false,
+      "path": "tokenization_xing4_0.py",
+      "sha256": "4c18df574fad90ee3cadb25586d47b8b32c62c7239e76f246a1bfaedf177799f",
+      "size": 8453
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "fdcbbfdf8655a2e8b8a9fe478de0e9347e857c9b043f9752d04ed660286c3ac5",
+      "size": 2199270
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ac3756050321398238c9490d2365e2f23ac2c6727581d30e609a6ee5cf04b2e5",
+      "size": 2785
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Xing4.0-29B-A4B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ab7e79008fe484fc7a56059247c9a05c5c18a3c59653dd59f071c51d32784feb",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:17:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Xing4.0-29B-A4B-OptiQ-4bit/resolve/dfa7e26282151aa7805e08fb2d4cf52bb1dc9312/"
+    }
+  ],
+  "upstream": {
+    "commit": "dfa7e26282151aa7805e08fb2d4cf52bb1dc9312",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Xing4.0-29B-A4B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Xing4.0-29B-A4B-OptiQ-4bit/tree/dfa7e26282151aa7805e08fb2d4cf52bb1dc9312"
+  }
+}

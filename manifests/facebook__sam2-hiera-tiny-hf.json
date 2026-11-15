@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:16:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "463ff4c5e9cdc3f37b4063a354603ce80469ab7b56981e18dfe48f0f59299afb",
+      "size": 1212
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ced0a852744a6fc5d554d8c53a1b35c4d2ec5fbb4acb41e86d2564f6f828fbea",
+      "size": 1736
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6c7b5d0cf117a0b68bdf5941ed702f47c140c07b2224b8f382d47fa07d80a209",
+      "size": 155840552
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/sam2-hiera-tiny-hf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "463ff4c5e9cdc3f37b4063a354603ce80469ab7b56981e18dfe48f0f59299afb",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:16:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/sam2-hiera-tiny-hf/resolve/e6ccaf46dd72dacb98108826ddef8b81b36d3b1e/"
+    }
+  ],
+  "upstream": {
+    "commit": "e6ccaf46dd72dacb98108826ddef8b81b36d3b1e",
+    "host": "huggingface.co",
+    "repo": "facebook/sam2-hiera-tiny-hf",
+    "url": "https://huggingface.co/facebook/sam2-hiera-tiny-hf/tree/e6ccaf46dd72dacb98108826ddef8b81b36d3b1e"
+  }
+}

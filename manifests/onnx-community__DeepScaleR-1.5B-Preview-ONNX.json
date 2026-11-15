@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:17:24Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11766e5171641f6c68b9f14099fdb4e7b3d610f0a69451893e356c8334812257",
+      "size": 1638
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "88bdd2bfde4448f0446e3c16e1502f51755b4109046a99109b7385b0a87d2520",
+      "size": 565
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8d88012647ffd90e4912e4eea0b39aae368cc67deb0da861d6f0e9a0ef015db7",
+      "size": 1020
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "8dd737d110cceb8396782d1b0c9196655a4a78fee4de35f056b22d1f9e96bf96",
+      "size": 181
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "73038f92d9bddbcbefce1fc8695386ba5a473ed330f07abb4def44dd015e732b",
+      "size": 225896
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "647daefd2699f4cd3fdbd1486fd6661642717912e592bd9a31b06f1fd6490f7d",
+      "size": 7175460864
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "1367d5f043c5c5a09010b5ee2763a4053ad26ee177786c5209c2a5af0e27a241",
+      "size": 1869685610
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "537ca11fb4105b964ae5274ea786b757e0b2f385bf06c8f82744e6777f611d75",
+      "size": 252536
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "ab21a338e56b83c33ee7f9ffeca9a2615cec5e16e635dcd44543e70941c028a7",
+      "size": 3587701760
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "4ed960bb06b3c58a88f3de95bcf3458b7ba7800392085d44379f819bd4012975",
+      "size": 1845062398
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "e031db6b3de3cd6117651510377d3c0596fe06cf3537f2ee0827c05384736085",
+      "size": 1966157066
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "d29577c4914eb279e62dfcfb465c192b9a06be9b8d13f42fe724224fec345b56",
+      "size": 1369092407
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "232a29697ef8bf4a80678e66988c0337719a567c82ca6425b03a4a3a0d61a769",
+      "size": 1845062495
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "232a29697ef8bf4a80678e66988c0337719a567c82ca6425b03a4a3a0d61a769",
+      "size": 1845062495
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "59cda48bbe8bab9d61ffb410e6e3c07b6d98bff73cee7c88ff8b51f95f21ab1c",
+      "size": 485
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "0d7259f8a225ceaa421baf5ae0687e0e4a4239b86a6d1838aba50e2470d99341",
+      "size": 9117072
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "3ecae67eb1a557fa58b81fd6d4d6eee17a636eeb36a9b6a46512d38f975dc0bd",
+      "size": 7186
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/DeepScaleR-1.5B-Preview-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "88bdd2bfde4448f0446e3c16e1502f51755b4109046a99109b7385b0a87d2520",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:17:24Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/DeepScaleR-1.5B-Preview-ONNX/resolve/e3633cc50ce0c5a02add5a898867b49d6b9354aa/"
+    }
+  ],
+  "upstream": {
+    "commit": "e3633cc50ce0c5a02add5a898867b49d6b9354aa",
+    "host": "huggingface.co",
+    "repo": "onnx-community/DeepScaleR-1.5B-Preview-ONNX",
+    "url": "https://huggingface.co/onnx-community/DeepScaleR-1.5B-Preview-ONNX/tree/e3633cc50ce0c5a02add5a898867b49d6b9354aa"
+  }
+}

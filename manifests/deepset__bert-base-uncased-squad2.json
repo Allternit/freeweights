@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:37:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "22c7c29f3371a5856aba528637d32b1fbc9134034a4f77cb57b1eff16cc1633e",
+      "size": 5708
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "27e42090e64e7161f2c4142f5c62de0a266e2ae1ab11e3343086e9ad0aafabef",
+      "size": 693
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e5c51ef6e3fd67dbe1b18e309a43a34c939ee9f3fa104a785ba859fb50f1f451",
+      "size": 435600272
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "b145e4c095df00c76a143eda3ff20c1751194b3e0471af604154fda08b5b135d",
+      "size": 435656113
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "5fd1c882abbd30517dced455a2c9768945ec726b96727927e4959348d9de550b",
+      "size": 466081
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f261c3131dbb7caa39ae2b01a200734cbdcbab4a2e73c2bff7aa2e3b653d0622",
+      "size": 302
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "deepset/bert-base-uncased-squad2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "22c7c29f3371a5856aba528637d32b1fbc9134034a4f77cb57b1eff16cc1633e",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:37:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/deepset/bert-base-uncased-squad2/resolve/de4f1b1d909d2017cb1496327a0668aedbd848e3/"
+    }
+  ],
+  "upstream": {
+    "commit": "de4f1b1d909d2017cb1496327a0668aedbd848e3",
+    "host": "huggingface.co",
+    "repo": "deepset/bert-base-uncased-squad2",
+    "url": "https://huggingface.co/deepset/bert-base-uncased-squad2/tree/de4f1b1d909d2017cb1496327a0668aedbd848e3"
+  }
+}

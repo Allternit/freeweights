@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:22:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "072a3cb399275fb1cece60d4ed3be896cc44be58b957848d93b173c81ef2a069",
+      "size": 1983
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "84a7efa6729fe444c3adc734dcb4c4e681bb799b727bf8a339e15a83039b426a",
+      "size": 4768
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "1391e25be2ec036d70536dbb78513ff95aa2b626880f42fb8f54b612db98ce09",
+      "size": 165
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "c3d93334d71f50b3b3ca5f54f4bdbeef6cfb7497c8ff8b3b3413e41f8aa7d49f",
+      "size": 989981536
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "e5d10fb098168614cb65a17760e133b110c0b25844508da5ceb73981e5fc7e94",
+      "size": 479
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "5e9e8ec3b189a102efdebbbf09017d19ff9724d54bca3a83c92b38491ea27cb1",
+      "size": 990082973
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "9046da57c270c8e74d0f38832b4adce269c9d914ef21d2a0925e7772152dd793",
+      "size": 96
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "5206bef946bfe9981af5d61bf993b52950a4ebc29f1c0256cc113a1698448536",
+      "size": 2140013
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6db75f8174b27dd3649a79cf0603fd1c87a040f8431dc15f0f408ccbf22c74a6",
+      "size": 4485
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/nougat-small",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "072a3cb399275fb1cece60d4ed3be896cc44be58b957848d93b173c81ef2a069",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:22:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/nougat-small/resolve/dced72ae7bcdfcb82a9ef55543a90a7a5e4d32e6/"
+    }
+  ],
+  "upstream": {
+    "commit": "dced72ae7bcdfcb82a9ef55543a90a7a5e4d32e6",
+    "host": "huggingface.co",
+    "repo": "facebook/nougat-small",
+    "url": "https://huggingface.co/facebook/nougat-small/tree/dced72ae7bcdfcb82a9ef55543a90a7a5e4d32e6"
+  }
+}

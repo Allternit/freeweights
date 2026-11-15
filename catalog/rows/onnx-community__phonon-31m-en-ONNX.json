@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "gradium/phonon-31m-en",
+  "display_name": "phonon-31m-en-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/phonon-31m-en-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/phonon-31m-en-ONNX.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "gradium/phonon-31m-en",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 2701,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "text-to-speech"
+  ],
+  "tier": "variant",
+  "total_size": 669329445,
+  "upstream_url": "https://huggingface.co/onnx-community/phonon-31m-en-ONNX",
+  "what_changed": null
+}

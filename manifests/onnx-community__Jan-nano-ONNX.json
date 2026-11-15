@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:17:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "242cf4f168be4ac839e2d58886666b5fbf7714a320909dd527732665332226ab",
+      "size": 1901
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d86a4827b14ad45938d0712c6f8ed59456d9f2206013de53955b0c5e456a66a3",
+      "size": 2297
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7",
+      "size": 4063
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6512e71e9da5bff69dad4abb6be504787366f91f5e1fd621f1fb1bca685b36a5",
+      "size": 1781
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "681b713cca094a27c6103e46c823426c2d204e29d66a89a524a7c828cfcce473",
+      "size": 722152
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "51695e0c7b8a1e4328968e109fa739f8d4cceeec0acafb4bde24aed046cbda11",
+      "size": 2051932160
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data_1",
+      "sha256": "50d2b4f40774179e6af17d8af87d01b2b7db8192fe708a9197893b71a2fdf63e",
+      "size": 2068316160
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data_2",
+      "sha256": "6c7a2f06c6bd553f178ffb9b7ce425d081d5a3c822b48e79bbd94aaae44177d0",
+      "size": 2068316160
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data_3",
+      "sha256": "3c596db757245ecc0b5fa5d468c5f0a473f70e78f6d1cc3e70bca8e86583a501",
+      "size": 1866465280
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "f88ecaae6f8e8a31d41dc82600cd842a8d6762f6d94d7014db657bdb86cd15d1",
+      "size": 59762833
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "cd64d21ec96ce913f80c8b36268f3ea16c299423de173c561f1536be9bf51413",
+      "size": 2096005120
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_1",
+      "sha256": "ba90ea12f8edc075e9c1bdc2b4d13b09d9f1a197ac1ef072299e8752cfbf2f68",
+      "size": 677150720
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "90afd49ff5867e4a0ef970991c042000a775d76a7ac9814ae82ad6971e961427",
+      "size": 9117179
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "66b488677096d0881d7e71cf575db801cedd57c98a8f84450de2665ab829b1c9",
+      "size": 10420
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Jan-nano-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d86a4827b14ad45938d0712c6f8ed59456d9f2206013de53955b0c5e456a66a3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:17:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Jan-nano-ONNX/resolve/0051840569cc71da06dddb469d880e66ce7cd226/"
+    }
+  ],
+  "upstream": {
+    "commit": "0051840569cc71da06dddb469d880e66ce7cd226",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Jan-nano-ONNX",
+    "url": "https://huggingface.co/onnx-community/Jan-nano-ONNX/tree/0051840569cc71da06dddb469d880e66ce7cd226"
+  }
+}

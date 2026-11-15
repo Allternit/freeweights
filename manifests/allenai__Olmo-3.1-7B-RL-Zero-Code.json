@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T03:32:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8a8755d3d82105b86d9c350941b5552e2db464aa0d409d148f803f36ba125a36",
+      "size": 9093
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "29c337cb0a3ee765fff8ec6fe8abee8b4906729bdb33a5cd969b01248e3650b3",
+      "size": 417
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1e2dff71c999ddad6ec7dc4afdd4544874e9cc0662ae8c1a94aac5753ed78973",
+      "size": 1621
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "49b7b376c9a77281e37b1544e00f6b83ffe1d46bd47ff1c5ee04a7d642ecbe2b",
+      "size": 69
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+      "size": 916646
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "fc13a76e9d80f37703aaedcfe5757000b328b8a10a2a55bd80d52ac1700302c6",
+      "size": 4969984976
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "0d4b69599323c84bffe342f2d6f224dbf01e3be706ad12f8b355669c57fa3eef",
+      "size": 4981161496
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "231768a3c0271b186f1e5ce6ebe7c2f4ff5b14d79f227e8e4e6f2963700b1aa9",
+      "size": 4644917240
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "47a8266860f2a5f95c021fb4d7d3a469a95ee8b445742becbb6b19632cfc6e95",
+      "size": 29630
+    },
+    {
+      "lfs": false,
+      "path": "olmo-rl-zero.png",
+      "sha256": "1b5b5e1c85b4c7c672fb4775f41dfef10d16de2f0a62225fcb54ee23d4cb926e",
+      "size": 88578
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2",
+      "size": 581
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "a8c8767b8e1e295680be0cd1f6b758c6329df18aaa985fd5ccd730a52d43ac9b",
+      "size": 7137105
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5b602e67ef60c878dc2c1bc626532171b4e17034a95b97fdb7c95931943921cc",
+      "size": 4282
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "1ff0268113f38035e61859dad673eee8a485073d62986a30e43b2c78d918a545",
+      "size": 1611020
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/Olmo-3.1-7B-RL-Zero-Code",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8a8755d3d82105b86d9c350941b5552e2db464aa0d409d148f803f36ba125a36",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:32:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/Olmo-3.1-7B-RL-Zero-Code/resolve/1ca3bb30f0e51b7ef05f7d0fefcf0e6b14eefc90/"
+    }
+  ],
+  "upstream": {
+    "commit": "1ca3bb30f0e51b7ef05f7d0fefcf0e6b14eefc90",
+    "host": "huggingface.co",
+    "repo": "allenai/Olmo-3.1-7B-RL-Zero-Code",
+    "url": "https://huggingface.co/allenai/Olmo-3.1-7B-RL-Zero-Code/tree/1ca3bb30f0e51b7ef05f7d0fefcf0e6b14eefc90"
+  }
+}

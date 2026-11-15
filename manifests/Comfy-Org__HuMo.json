@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T02:40:19Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1bed15a0f488470d3f086f12a1486ea64d81aac1a5053c9e401058a1cd94ea62",
+      "size": 1477
+    },
+    {
+      "lfs": true,
+      "path": "split_files/audio_encoders/whisper_large_v3_fp16.safetensors",
+      "sha256": "a8e94b85976e5864ba3e9525c7e6c83b2a1eca42d4b797a0c7c24d778e40fd95",
+      "size": 3087130976
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/humo_1.7B_fp16.safetensors",
+      "sha256": "3f8c08e7db17e807397b9a9ed9d9b28a6e42c8083029395674e95544191b1b15",
+      "size": 3483511088
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/humo_17B_fp16.safetensors",
+      "sha256": "0c0fcb0d4de0b1cbaae4e2808eeb0308cd14e6c85c330a9f80b297c5fdaefe1e",
+      "size": 34113566032
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/humo_17B_fp8_e4m3fn.safetensors",
+      "sha256": "222ddeac4dea6b78363cb5be78c47660c92963a69386026cd6dc0de4d3094f66",
+      "size": 17058372152
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/HuMo",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1bed15a0f488470d3f086f12a1486ea64d81aac1a5053c9e401058a1cd94ea62",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.video",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:40:19Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/HuMo/resolve/41dae8144803b33957fa2a675a69f571ef5c952c/"
+    }
+  ],
+  "upstream": {
+    "commit": "41dae8144803b33957fa2a675a69f571ef5c952c",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/HuMo",
+    "url": "https://huggingface.co/Comfy-Org/HuMo/tree/41dae8144803b33957fa2a675a69f571ef5c952c"
+  }
+}

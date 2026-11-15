@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openbmb/VoxCPM2",
+  "display_name": "VoxCPM2-bf16",
+  "family": "mlx-community",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "mlx-community/VoxCPM2-bf16",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/mlx-community/VoxCPM2-bf16.json",
+  "params": 2383791940,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openbmb/VoxCPM2",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 3557,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "text-to-speech"
+  ],
+  "tier": "T2",
+  "total_size": 4960140841,
+  "upstream_url": "https://huggingface.co/mlx-community/VoxCPM2-bf16",
+  "what_changed": null
+}

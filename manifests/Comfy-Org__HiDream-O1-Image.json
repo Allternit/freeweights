@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:31:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "29bda3e55816e4b7b4e8bec1a25b85c103939b7717dd89914496336deee82cfe",
+      "size": 2740
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/hidream_o1_image_bf16.safetensors",
+      "sha256": "0520134a47e5b2bacea25804b2a6021413eb95945344b5a953aa14170edff1aa",
+      "size": 16365209824
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/hidream_o1_image_dev_bf16.safetensors",
+      "sha256": "cede93912730dd046fd39a20af008344a7dce75dafabd16e419a222c3e504051",
+      "size": 16365209824
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/hidream_o1_image_dev_fp8_scaled.safetensors",
+      "sha256": "7cbf53a475e0a13f92f2ec08bcffdb9b9de4305ef3b6f35cdd784d09dcd8d0cc",
+      "size": 8067535296
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/hidream_o1_image_dev_mxfp8.safetensors",
+      "sha256": "efa55a996f34853df8456e06b54fb6cba802df9d1a07eac5b979db76b58b91e2",
+      "size": 8923300207
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/hidream_o1_image_fp8_scaled.safetensors",
+      "sha256": "05ad98bc4a94557697f31b839f6dbf6dba293a353d9e3c52eef7818b5802d206",
+      "size": 8067535296
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/hidream_o1_image_mxfp8.safetensors",
+      "sha256": "74a17c86aa41407f6931e894cdcf06db38837694f33a2aac9e4034c8f9603ead",
+      "size": 8923300207
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/HiDream-O1-Image",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "29bda3e55816e4b7b4e8bec1a25b85c103939b7717dd89914496336deee82cfe",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:31:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/7b75f4cd7e757d55d9bd1d30fb40375fb446f38c/"
+    }
+  ],
+  "upstream": {
+    "commit": "7b75f4cd7e757d55d9bd1d30fb40375fb446f38c",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/HiDream-O1-Image",
+    "url": "https://huggingface.co/Comfy-Org/HiDream-O1-Image/tree/7b75f4cd7e757d55d9bd1d30fb40375fb446f38c"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:36:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5ce850d29d0e104784cf1141ef3521d9fbdf1f49ad2e0446fd70d7f555596085",
+      "size": 7003
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8d32a84eb9d6ddcb8e92f1129bf14110f730757d56f74de437d221b53fc1fe75",
+      "size": 631
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0ce7074f30e779852ab62a42074168f20fb994d6dbae5ca1b6d3199e43de13d7",
+      "size": 29234560
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "b4412e1e34cb637232571b81e3ae7b60f13ca2ed9eb5c53bd3bc9b29fc8ee38a",
+      "size": 29279034
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/mambaout_femto.in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5ce850d29d0e104784cf1141ef3521d9fbdf1f49ad2e0446fd70d7f555596085",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:36:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/mambaout_femto.in1k/resolve/087b23df0cb215bddb6bf6115a1c587c88c22d1b/"
+    }
+  ],
+  "upstream": {
+    "commit": "087b23df0cb215bddb6bf6115a1c587c88c22d1b",
+    "host": "huggingface.co",
+    "repo": "timm/mambaout_femto.in1k",
+    "url": "https://huggingface.co/timm/mambaout_femto.in1k/tree/087b23df0cb215bddb6bf6115a1c587c88c22d1b"
+  }
+}

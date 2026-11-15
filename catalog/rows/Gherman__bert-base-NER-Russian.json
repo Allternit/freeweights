@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google-bert/bert-base-multilingual-cased",
+  "display_name": "bert-base-NER-Russian",
+  "family": "Gherman",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "Gherman/bert-base-NER-Russian",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/Gherman/bert-base-NER-Russian.json",
+  "params": 177288994,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google-bert/bert-base-multilingual-cased",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 1899,
+    "likes": 25,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "T2",
+  "total_size": 713102557,
+  "upstream_url": "https://huggingface.co/Gherman/bert-base-NER-Russian",
+  "what_changed": null
+}

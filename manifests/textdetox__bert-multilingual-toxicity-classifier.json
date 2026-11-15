@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T02:33:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6bbc9b3aaad9e6e2b7780504aca56a997e2a69d7b7f2598908b8d8cef21511e4",
+      "size": 3066
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ee45aa7f0cd43a49401daea513a34be821fc6b998d2f2b75ae014a207ef22bb8",
+      "size": 946
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f83ff133690ade7432a57c34d49b3bd2d0c35e6475d38029c047f3dc9fd9de77",
+      "size": 711443456
+    },
+    {
+      "lfs": true,
+      "path": "optimizer.pt",
+      "sha256": "8345d1b8f7fd9043ba83adf40cd2f08556d3b3296fa92114aea96f29a779c45e",
+      "size": 1423002362
+    },
+    {
+      "lfs": true,
+      "path": "rng_state.pth",
+      "sha256": "06e55bfc8723f269a626afca0be6f7def5753f3bb265436b94c5580b703cfcc7",
+      "size": 13990
+    },
+    {
+      "lfs": true,
+      "path": "scheduler.pt",
+      "sha256": "87b7588a7082272dcd9d16bc96af228034e76f91c693dad009c970adcc75ef43",
+      "size": 1064
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "size": 125
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "4e8d2533b6e39afe137ac1ff84390ef303f71f9c257aab2df09f4c6a62d08bf3",
+      "size": 2919627
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "1c441dfe412d9d7e47c960029a48a0159c23a38a9ab41b465d90fb1f520d4ced",
+      "size": 1222
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "a172a30ce8ad05d1a1eef17203c5cb229cfdf2773cb41ff0b3c169682c653dcc",
+      "size": 4010
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "13f45e1631cd3dd1a5f0e53516e815f1d3465687f77c62254f0f52a2dd71c017",
+      "size": 5368
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "fe0fda7c425b48c516fc8f160d594c8022a0808447475c1a7c6d6479763f310c",
+      "size": 995526
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "textdetox/bert-multilingual-toxicity-classifier",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6bbc9b3aaad9e6e2b7780504aca56a997e2a69d7b7f2598908b8d8cef21511e4",
+    "id": "LicenseRef-OpenRAIL++-M",
+    "name": "CreativeML Open RAIL++-M",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:33:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/textdetox/bert-multilingual-toxicity-classifier/resolve/8fe5526e9c6b69cf1a615104a2ad037fb266c670/"
+    }
+  ],
+  "upstream": {
+    "commit": "8fe5526e9c6b69cf1a615104a2ad037fb266c670",
+    "host": "huggingface.co",
+    "repo": "textdetox/bert-multilingual-toxicity-classifier",
+    "url": "https://huggingface.co/textdetox/bert-multilingual-toxicity-classifier/tree/8fe5526e9c6b69cf1a615104a2ad037fb266c670"
+  }
+}

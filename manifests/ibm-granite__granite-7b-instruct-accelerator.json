@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T04:14:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a2d00abaad66c3ca441b20de34767dc0a51647ad84fb984df09561c987fad9c2",
+      "size": 5984
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "88bc90d34dff48e276e48ec300f5bb2804f16e6191e0818bf74d5e89142b6133",
+      "size": 119
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3a472c1633d54e5281c9414fa14a15d36fa82c3f122682e5fe7667f4ab9005d8",
+      "size": 396
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "23f0815eb53a3cee5448c4a46edf38e23f09f42d939420eabbc7ac27384c93ca",
+      "size": 2789951944
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "da5c4bd66dca19aee2563836dd63a00af552e735ed93ad6575644328a84e222f",
+      "size": 655
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "9461e230c5dc48bae8277e63f98412d92a2f03e32453f41cfb2f504f712ca5c2",
+      "size": 1843266
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "size": 499723
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6c507cde1b53bbc7c7e8cba239213854aca079b9a2f6d2aa0e4452118b43a567",
+      "size": 2268
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-7b-instruct-accelerator",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a2d00abaad66c3ca441b20de34767dc0a51647ad84fb984df09561c987fad9c2",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:14:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-7b-instruct-accelerator/resolve/75ea497f70453b0a00686225b3c4ddf5416785ed/"
+    }
+  ],
+  "upstream": {
+    "commit": "75ea497f70453b0a00686225b3c4ddf5416785ed",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-7b-instruct-accelerator",
+    "url": "https://huggingface.co/ibm-granite/granite-7b-instruct-accelerator/tree/75ea497f70453b0a00686225b3c4ddf5416785ed"
+  }
+}

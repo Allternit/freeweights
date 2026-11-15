@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T05:25:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a139c2456722f12803960aeffd16dcdc5048d45cdda19c8581b038c9e29f484b",
+      "size": 2250
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "08ab98258652553a53455b164c258488ce840322f0949877676d962a1d958cad",
+      "size": 25153
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "471fb571976770318fe6f27749e37940be8d29c0a7770558140f141f5906f2a2",
+      "size": 754
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d56831ef421c8d9448a2a40948995d6c4483847441ab9dc7bab9c7c5fc26ecd4",
+      "size": 956
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7ad1494c9fb6d26f0fdf1be2a542fe6e1f776597037661fd360daded217308c1",
+      "size": 226
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "3daf8216c9dc3d79102e541fbd8c4a61f3c82f815b7b499e64af9bab2cd83e3a",
+      "size": 383376660
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "34523cc5f62edc533d65d5c0e71ea1e399285f1d7f56fcb6b19376fabfd2bd81",
+      "size": 29458
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "9555ebfd6201518803e3857a141c25291d2a892d3c5951bb6fa2548c92e059e7",
+      "size": 19335
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "34ef7db83df785924fb83d7b887b6e822a031c56e15cff40aaf9b982988180df",
+      "size": 1614363
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b1d594b1e885d60c63a5b362f65461b7ec04c7c0cb0d9ddd64946cf5e2168751",
+      "size": 201206
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/ERNIE-4.5-0.3B-MLX-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a139c2456722f12803960aeffd16dcdc5048d45cdda19c8581b038c9e29f484b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:25:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/ERNIE-4.5-0.3B-MLX-8bit/resolve/140253753fd00891a38fffd7f3652ee18beb975e/"
+    }
+  ],
+  "upstream": {
+    "commit": "140253753fd00891a38fffd7f3652ee18beb975e",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/ERNIE-4.5-0.3B-MLX-8bit",
+    "url": "https://huggingface.co/lmstudio-community/ERNIE-4.5-0.3B-MLX-8bit/tree/140253753fd00891a38fffd7f3652ee18beb975e"
+  }
+}

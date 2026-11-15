@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "ibm-granite/granite-3.0-2b-instruct",
+  "display_name": "granite-3.0-2b-instruct",
+  "family": "granite",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/granite-3.0-2b-instruct",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/granite-3.0-2b-instruct.json",
+  "note": "The license of the base model ibm-granite/granite-3.0-2b-instruct applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "ibm-granite/granite-3.0-2b-instruct",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.granite",
+  "signals": {
+    "downloads_30d": 118,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 28099205989,
+  "upstream_url": "https://huggingface.co/onnx-community/granite-3.0-2b-instruct",
+  "what_changed": null
+}

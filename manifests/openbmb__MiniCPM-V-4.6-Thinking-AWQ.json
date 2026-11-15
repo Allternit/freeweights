@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T04:43:58Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "da77bbf5258b41a94dc2bd55ab3b0b8d858bab6379ffc36d6c13014351903274",
+      "size": 20200
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "8a2210dffde6b0ccce5b16990da83c159f24d3667b4565da682c456c16a4fd6e",
+      "size": 7300
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "318bff17cf5894aab555f4a54b7ca972ac8520d7371432ef5a957020784351e7",
+      "size": 3007
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7cf2e3ed8955ab9b8b1f62e9e0a7950aeeec4088875570c5ced74a2e74b103de",
+      "size": 214
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "5c91351207a0a2c68a30faf4cf60b96f2261b5fcf32424b1e91d8c03d6d6ff60",
+      "size": 1865164920
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "21582ba07ca4af215b9c7ec1738274ba62ce4b34d140051f313144dea7df6817",
+      "size": 1198
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "33861e37bb955af1e3f3061182b820f347eba2b9c2c1011c82794bf0d6e77b54",
+      "size": 19992481
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ba362a361938ce932439ce2c74e0fe282427cc7096b67e77c7505ee0da1e12d7",
+      "size": 8996
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/MiniCPM-V-4.6-Thinking-AWQ",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "da77bbf5258b41a94dc2bd55ab3b0b8d858bab6379ffc36d6c13014351903274",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:43:58Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.6-Thinking-AWQ/resolve/7226fddcbdc2ffd1851679cd1befe29ba463af97/"
+    }
+  ],
+  "upstream": {
+    "commit": "7226fddcbdc2ffd1851679cd1befe29ba463af97",
+    "host": "huggingface.co",
+    "repo": "openbmb/MiniCPM-V-4.6-Thinking-AWQ",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-4.6-Thinking-AWQ/tree/7226fddcbdc2ffd1851679cd1befe29ba463af97"
+  }
+}

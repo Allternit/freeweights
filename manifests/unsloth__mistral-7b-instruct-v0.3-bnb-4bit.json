@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T04:40:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "151eb6bb78e2680a655d43745f0297c47f8c777400ed2d018f6d17b63283b390",
+      "size": 3713
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "07823be7d5dc12f7ca56230104529e135b2b5762e295b81dd9095c95c1cd5f54",
+      "size": 1205
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "1be59aba03aa1e31bef5bc190a3a2591ad1a754f96afcecc42bd342722447220",
+      "size": 157
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ad7ed4499584918602964dbfbc13cfb505d9079db10a100e5d72b969959b4d0f",
+      "size": 4138270819
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "63b489faa6ae280faead386b49f5b0de0fb72d7401dea2e3ce169f26a0b8bc2d",
+      "size": 446
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "60b945759e27a63c3c5c0ca675881f5a73b4aa38b5d1d6818570308d4f1a3c59",
+      "size": 1961548
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+      "size": 587404
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.model.v3",
+      "sha256": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+      "size": 587404
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b0c776216a54c6d031866d1dff0b31715bd73f5ba87f8a30eb35e8c603dff95d",
+      "size": 140911
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "151eb6bb78e2680a655d43745f0297c47f8c777400ed2d018f6d17b63283b390",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:40:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/mistral-7b-instruct-v0.3-bnb-4bit/resolve/d5f623888f1415cf89b5c208d09cb620694618ee/"
+    }
+  ],
+  "upstream": {
+    "commit": "d5f623888f1415cf89b5c208d09cb620694618ee",
+    "host": "huggingface.co",
+    "repo": "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/mistral-7b-instruct-v0.3-bnb-4bit/tree/d5f623888f1415cf89b5c208d09cb620694618ee"
+  }
+}

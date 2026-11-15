@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T04:12:57Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "8f3e4a30d91e38dcac1f363b568fc32d85b79f7292a318af742b61e6a4b54cd2",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b80502f6f601abcfb26b760e857c6afbf9986df5864c1be40353a9fb4bf5d65d",
+      "size": 3134
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "5c34ba1c1418760ba91e66839e9b26edddb750e9fb45086614cdcacd033e75f5",
+      "size": 619
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "2d1284419bd2a331515eb0a17e99d781cabe2198407f8a6c98e66fdc105ab303",
+      "size": 377539280
+    },
+    {
+      "lfs": true,
+      "path": "comparison.png",
+      "sha256": "21e9aecaf96b617919dd8bd78784bd0861ef15847eba2f0cf75c7ef97a29def4",
+      "size": 1532921
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7630c1f8b8618fd275a29bad6876cf3bc8a16c070a3e7d041dc29517127175ba",
+      "size": 1225
+    },
+    {
+      "lfs": false,
+      "path": "icon.png",
+      "sha256": "3e291453e6d163cd244bbffa176aa07a13ee38a260d0a004d5e153b119cd18bb",
+      "size": 812480
+    },
+    {
+      "lfs": true,
+      "path": "non_lora_trainables.bin",
+      "sha256": "04ab1782b83594fb2404402b5b42ab2bbb382e451389c930a5961b26b36a29af",
+      "size": 19017904
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "ac1ddae4821cfd0fe4aea8922a49eb7c36449a2286be6c22d5917c617fe19cdd",
+      "size": 657749
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/bunny-phi-2-siglip-lora",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b80502f6f601abcfb26b760e857c6afbf9986df5864c1be40353a9fb4bf5d65d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.phi",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:12:57Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/bunny-phi-2-siglip-lora/resolve/e6ae9e77f479fb70e8931a41579552a31ef24fc3/"
+    }
+  ],
+  "upstream": {
+    "commit": "e6ae9e77f479fb70e8931a41579552a31ef24fc3",
+    "host": "huggingface.co",
+    "repo": "BAAI/bunny-phi-2-siglip-lora",
+    "url": "https://huggingface.co/BAAI/bunny-phi-2-siglip-lora/tree/e6ae9e77f479fb70e8931a41579552a31ef24fc3"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T02:25:52Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "63e367f7468466447415f35c52584a3c3f397fe638e2f985b25ec29ac25bde14",
+      "size": 790
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fc52a0adfa64e446800f9944c6cf9b90da3127aba548860ea5714516ec8c18c7",
+      "size": 4431
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3",
+      "size": 1596
+    },
+    {
+      "lfs": false,
+      "path": "feature_extractor_config.json",
+      "sha256": "d3de0c797bf9b65f90bc65c30cb7b303ebeda341f6fc80af33628c4b26b95632",
+      "size": 158
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8aa76ab2243c81747a1f832954586bc566090c83a0ac167df6f31f0fa917d74a",
+      "size": 377607901
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a",
+      "size": 159
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "c34f9827b034a1b9141dbf6f652f8a60eda61cdf5771c9e05bfa99033c92cd96",
+      "size": 377667514
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+      "size": 85
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "412742825972a6e2e877255ccd8b3416e618df15a7f1e5e4f736aa3632ce33b5",
+      "size": 377840624
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "dc790594f5bc351a4311c6624f40acd95850d4aaf2a5cb3c656c9b610720b608",
+      "size": 163
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64",
+      "size": 291
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/wav2vec2-base-960h",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fc52a0adfa64e446800f9944c6cf9b90da3127aba548860ea5714516ec8c18c7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:25:52Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/wav2vec2-base-960h/resolve/22aad52d435eb6dbaf354bdad9b0da84ce7d6156/"
+    }
+  ],
+  "upstream": {
+    "commit": "22aad52d435eb6dbaf354bdad9b0da84ce7d6156",
+    "host": "huggingface.co",
+    "repo": "facebook/wav2vec2-base-960h",
+    "url": "https://huggingface.co/facebook/wav2vec2-base-960h/tree/22aad52d435eb6dbaf354bdad9b0da84ce7d6156"
+  }
+}

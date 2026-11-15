@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T02:32:04Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9ac1b630c0fb51aa4a7db7654379dfa636162dd87c511ea4d5af3598b8b63a7c",
+      "size": 7168
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "size": 7756
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7d7fc026d8bcb9f1fc505af1004779330fe59bb3256fe0271ec2568e8dc89db1",
+      "size": 2903
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e92258e3c39afbaa73fd53a98640c56f6d42fb091e1664697bd5396a1dcbb761",
+      "size": 163
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f5062a1fba3e63afe5c88349a311903fec06c959b362f1247127e63d5c860ed4",
+      "size": 18819722392
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "3a159dfec9978a186a72ba085e0ad6a050f3968d8b364218d7bd13f5c89381f2",
+      "size": 443
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+      "size": 1191
+    },
+    {
+      "lfs": false,
+      "path": "system_prompts.json",
+      "sha256": "b5da3ed8bc04ab59dbdb747930f7dbff847e868903fed8028f85ee1a4ac82fb4",
+      "size": 12602
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7488550a894dcf741616126e322ea31d66cf9457b59ec5825f4c7efdced421f8",
+      "size": 1164
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "bd96830cce1312679aa1f2ea43ed17da20e8ebbcea2398cfa64e2d275a96fdd7",
+      "size": 550
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "black-forest-labs/flux-3-image-klein-pup",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9ac1b630c0fb51aa4a7db7654379dfa636162dd87c511ea4d5af3598b8b63a7c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:32:04Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-pup/resolve/a57899549f8f6f64c6c4d88db30827d496ff76d0/"
+    }
+  ],
+  "upstream": {
+    "commit": "a57899549f8f6f64c6c4d88db30827d496ff76d0",
+    "host": "huggingface.co",
+    "repo": "black-forest-labs/flux-3-image-klein-pup",
+    "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-pup/tree/a57899549f8f6f64c6c4d88db30827d496ff76d0"
+  }
+}

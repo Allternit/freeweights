@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:49:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e83544907354e21485b69752fbdbfc3181aacf00ac106e3f3e8a39a90bf87b1f",
+      "size": 4063
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6baddb1214e5657a66698cea8f483031c86464aa0fce8b43f89ad09733b4db70",
+      "size": 570
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "cd12f8bd194e17d9e7faa4d34a7634a185b2f2d20f8cdf543a2b83831a43ed84",
+      "size": 351859600
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "064f0449df34109ec5f8ff31dddf9d9c31a3fe4b03129e0a5b229aea2b0659fe",
+      "size": 351971805
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/davit_base.msft_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e83544907354e21485b69752fbdbfc3181aacf00ac106e3f3e8a39a90bf87b1f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:49:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/davit_base.msft_in1k/resolve/67a8d7bc5f9c24978590dffab45c4bec6bcacef9/"
+    }
+  ],
+  "upstream": {
+    "commit": "67a8d7bc5f9c24978590dffab45c4bec6bcacef9",
+    "host": "huggingface.co",
+    "repo": "timm/davit_base.msft_in1k",
+    "url": "https://huggingface.co/timm/davit_base.msft_in1k/tree/67a8d7bc5f9c24978590dffab45c4bec6bcacef9"
+  }
+}

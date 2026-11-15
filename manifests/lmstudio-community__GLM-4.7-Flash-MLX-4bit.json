@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T04:56:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a6f42f1674f9c1b0a6e970dd6d099d86473505d8da73cd3f9f68232c1226b98d",
+      "size": 2223
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "d63ad536c3c81880043e22ec7fd08db42b4d8fb7c89c7138bc562bfa25281375",
+      "size": 3120
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e105c6e474c01bbb07a8b307cdb1b1c32ab66bb18eaad28104326186731da1cf",
+      "size": 1368
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e19f4eb8be12cdb62a3737b52a332c7c142cbf5ee24a5de7d806f6132b782425",
+      "size": 181
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "4fc85fbd15dbac1c6f3be2e6815a85acd7a9ef392c947f4fc2670c635d8905af",
+      "size": 5357452925
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "140bb222fddd01b1520dd8b1b2c087506ac31f5b648a7cb1c7406fd79fe4908a",
+      "size": 5363462507
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "b64f2078fbabed93fc4429a7e696b4088ff3fc98841d27f13b4a69fdbbf06974",
+      "size": 5363462423
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "fec4dec0a24ccc075a009f2065e9254e48721162d3f104de004a38357f872245",
+      "size": 768064086
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "f32b02d7114cf3c83a3d5b2094144f4d5f8a22501fb83981e2eb303e0f2209f5",
+      "size": 182847
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+      "size": 20217442
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "1615d3f4757afb20da7c657c446030006178f3b2ae8c4f7e96ee8358d2abb8e0",
+      "size": 4023
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/GLM-4.7-Flash-MLX-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a6f42f1674f9c1b0a6e970dd6d099d86473505d8da73cd3f9f68232c1226b98d",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.glm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:56:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/GLM-4.7-Flash-MLX-4bit/resolve/a122231a36d90f7325a0f692e26197dadcd5ab9f/"
+    }
+  ],
+  "upstream": {
+    "commit": "a122231a36d90f7325a0f692e26197dadcd5ab9f",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/GLM-4.7-Flash-MLX-4bit",
+    "url": "https://huggingface.co/lmstudio-community/GLM-4.7-Flash-MLX-4bit/tree/a122231a36d90f7325a0f692e26197dadcd5ab9f"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T03:22:47Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6ae154d65bfc2755703440be02acf63a37b741a1101b7c42b666da93a4ed2310",
+      "size": 7820
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "lfs": false,
+      "path": "handler.py",
+      "sha256": "3a7f3dc39de8041193fb4d9d875277cbf6eba58502d02b30cd3efab2c9d1f10f",
+      "size": 21672
+    },
+    {
+      "lfs": false,
+      "path": "icon_caption/LICENSE",
+      "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "size": 1140
+    },
+    {
+      "lfs": false,
+      "path": "icon_caption/config.json",
+      "sha256": "1c3c63bb16910b8fa7f3b74fb7ae4c8ffefbe7b008847e2e0b21be6aa807593b",
+      "size": 5748
+    },
+    {
+      "lfs": false,
+      "path": "icon_caption/generation_config.json",
+      "sha256": "a2ef03e814a7ecbf6fcfe7479afd3e7385c6800202fcede1dc1bc01849375464",
+      "size": 292
+    },
+    {
+      "lfs": true,
+      "path": "icon_caption/model.safetensors",
+      "sha256": "01b934b0fe2d07b181e2d07752f16ae27c9d0ea88ddffe13a9a003aa9680f233",
+      "size": 1083916964
+    },
+    {
+      "lfs": false,
+      "path": "icon_detect/LICENSE",
+      "sha256": "4df3c306dddaaf4baffdff5ca820cc679ac8cd6dc263c6a74517783e42fa7a3b",
+      "size": 34522
+    },
+    {
+      "lfs": true,
+      "path": "icon_detect/model.pt",
+      "sha256": "dab3d4351ad00b035db829909a4db98354d5a90f6990e4ac00222a9a95d4bf57",
+      "size": 40623819
+    },
+    {
+      "lfs": false,
+      "path": "icon_detect/model.yaml",
+      "sha256": "0edced8dfb9c619ca187cf0f84139d63b4cff9011890a9bc1e9bd6bb08f43b8a",
+      "size": 1144
+    },
+    {
+      "lfs": false,
+      "path": "icon_detect/train_args.yaml",
+      "sha256": "6acc8dcdc8a38ccfafc47ccfdb0087b8545eab6f9d9a373c0504bbb5a45a0277",
+      "size": 1694
+    },
+    {
+      "lfs": false,
+      "path": "icon_detect_v3/LICENSE",
+      "sha256": "646f8936b8ddcd14e13e578ff6857e368780b0d1a4f6066bee89211923a373e2",
+      "size": 1073
+    },
+    {
+      "lfs": true,
+      "path": "icon_detect_v3/model.pt",
+      "sha256": "11c6cbb77f22569fab22d86c76407a83ec81ab89dbfe28279854822d6e3fb00c",
+      "size": 281182680
+    },
+    {
+      "lfs": false,
+      "path": "requirements.txt",
+      "sha256": "f4600c588dbf69d6de3f70e715ad8dd0b1de5c63271cbd993b7ce95e9903cded",
+      "size": 104
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/OmniParser-v2.0",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6ae154d65bfc2755703440be02acf63a37b741a1101b7c42b666da93a4ed2310",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:22:47Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/OmniParser-v2.0/resolve/f55d0750e5b94db2125ef0b45b0fa4a85ddc59b4/"
+    }
+  ],
+  "upstream": {
+    "commit": "f55d0750e5b94db2125ef0b45b0fa4a85ddc59b4",
+    "host": "huggingface.co",
+    "repo": "microsoft/OmniParser-v2.0",
+    "url": "https://huggingface.co/microsoft/OmniParser-v2.0/tree/f55d0750e5b94db2125ef0b45b0fa4a85ddc59b4"
+  }
+}

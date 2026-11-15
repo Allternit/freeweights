@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T03:39:17Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f3265bf44604b8e79a79e3dff88f4332c2acc23961dcfffa5dea023b4af387e5",
+      "size": 9847
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f947eb159bd7a2dfd3b8bad73cc0d2e33de6064b2610f6591d8be1aab540e869",
+      "size": 5238
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0f095f69dc16b42ddfe4d56d925b454b0acd77df63fec274edceaade69154817",
+      "size": 284973717
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "358c249e2fb29060c6b73157d428853b0c48710deffc8ee670ab1013880946c9",
+      "size": 552
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "c353ee1479b536bf414c1b247f5542b6607fb8ae91320e5af1781fee200fddff",
+      "size": 470897
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2e00db82fd2ba8020e7263a25f31bb8ec6c5cefbfe0b5e0bbd4723ae874d1be1",
+      "size": 1140
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/MOSS-TTS-Nano-100M",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f3265bf44604b8e79a79e3dff88f4332c2acc23961dcfffa5dea023b4af387e5",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:39:17Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/MOSS-TTS-Nano-100M/resolve/229a9c51bb0ffff6fd0dbe53b5bf0c441e438a79/"
+    }
+  ],
+  "upstream": {
+    "commit": "229a9c51bb0ffff6fd0dbe53b5bf0c441e438a79",
+    "host": "huggingface.co",
+    "repo": "mlx-community/MOSS-TTS-Nano-100M",
+    "url": "https://huggingface.co/mlx-community/MOSS-TTS-Nano-100M/tree/229a9c51bb0ffff6fd0dbe53b5bf0c441e438a79"
+  }
+}

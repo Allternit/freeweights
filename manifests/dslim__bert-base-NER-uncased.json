@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:32:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98c91dabef4df27b2fc7c8454d220aba47476f73593cbd034d961fe4927304c1",
+      "size": 445
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5c1b3fd193f37b9dcdd947a12e566189f1c9d2664f4e5e95548e6a4b9fc7adab",
+      "size": 20
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7da49adfc23ce601b4abbf9051ce0dd119de10953c5889146595ad4398d1187a",
+      "size": 1257
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "16354f635ac87a7523fb1979c8ad2f790a1729b2b96bbb9dde91164b02c2fcd8",
+      "size": 435601418
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "cb4581a5ae49cdb280c0cc111dd4f5ecb282526a3fe20fa2572827fc223a6e93",
+      "size": 437980176
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "a553622c3b8cdd413cf4872ace1880ec6bbab3308a1847dd26cee7692a757dd6",
+      "size": 438006919
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "12f963310495938bd771b18ff580965f86c4a559a2bb31239bdf0016ae34e0bd",
+      "size": 438228148
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "bc33e3cc4de965153393572f1a5cd5d2bf18872f8c0a0096ae547beac01cec9c",
+      "size": 39
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "dslim/bert-base-NER-uncased",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5c1b3fd193f37b9dcdd947a12e566189f1c9d2664f4e5e95548e6a4b9fc7adab",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:32:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/dslim/bert-base-NER-uncased/resolve/301540b48433e31000058882c971ddd7bc726547/"
+    }
+  ],
+  "upstream": {
+    "commit": "301540b48433e31000058882c971ddd7bc726547",
+    "host": "huggingface.co",
+    "repo": "dslim/bert-base-NER-uncased",
+    "url": "https://huggingface.co/dslim/bert-base-NER-uncased/tree/301540b48433e31000058882c971ddd7bc726547"
+  }
+}

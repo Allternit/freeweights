@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:31:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7130dedf9dd6f9d7fcee295a5367ba56094221d15a2f9081763109e12df59bcf",
+      "size": 3549
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cb888a5796fef188c1f58d7c3626cb4b06229b19dab29c7a4a3552a863b76816",
+      "size": 569
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ef70ff18ff4f615c53009fde2ffe2f00e47376858d6da329fca2017baaffa946",
+      "size": 110661010
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "993946c190e86d1325ed7f702aa8fcc12ef67eaa2751b9a73ce527b0c47722c1",
+      "size": 110778509
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/sequencer2d_s.in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7130dedf9dd6f9d7fcee295a5367ba56094221d15a2f9081763109e12df59bcf",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:31:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/sequencer2d_s.in1k/resolve/2daa6ecf486800c6181817571323289414b54820/"
+    }
+  ],
+  "upstream": {
+    "commit": "2daa6ecf486800c6181817571323289414b54820",
+    "host": "huggingface.co",
+    "repo": "timm/sequencer2d_s.in1k",
+    "url": "https://huggingface.co/timm/sequencer2d_s.in1k/tree/2daa6ecf486800c6181817571323289414b54820"
+  }
+}

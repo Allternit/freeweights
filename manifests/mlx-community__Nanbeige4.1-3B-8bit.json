@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:04:57Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d9730bb8db566f224a41e93a666471133a84f5ffbcb54e0c3905ae05da06db2a",
+      "size": 899
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "757f108242fb797d23b79f72c088cb5b4bc37fb3744e29dc8771c1dc2b1cb335",
+      "size": 5527
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5b3ae9cd2a94463ac0bf76d654b4f8d03e758c3cbb67068c1eb6250152c72dc2",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "762de61aa816a028146e845d59b435e11295fbf18e9a7696c0c87df5c85be359",
+      "size": 142
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "c02389ae17426b03d1336efb993bfe75868a1aec86411e8bd0eb82f1fa2ff93d",
+      "size": 4179730124
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "aa6b7008f3226254cc86891c1685246080579a5c796a4c29c6870c50751b15dc",
+      "size": 52421
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "1d8f0326910136aca20831249220b38ce5299527647bc8c6b65404485c479740",
+      "size": 18451122
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0e9b61b839c76099029e5426a5ba72dd702116a42a780636393106afdb1a3751",
+      "size": 575
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Nanbeige4.1-3B-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d9730bb8db566f224a41e93a666471133a84f5ffbcb54e0c3905ae05da06db2a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:04:57Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Nanbeige4.1-3B-8bit/resolve/699b0e755a2841c4c2762f846d4eaf93542ac97c/"
+    }
+  ],
+  "upstream": {
+    "commit": "699b0e755a2841c4c2762f846d4eaf93542ac97c",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Nanbeige4.1-3B-8bit",
+    "url": "https://huggingface.co/mlx-community/Nanbeige4.1-3B-8bit/tree/699b0e755a2841c4c2762f846d4eaf93542ac97c"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:49:52Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "840744a6a8d0ca22f8f6228a6f19c750a47db069873a32eefba939e64c742b35",
+      "size": 1271
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6ecd51bcc02aae828328e2ffa69e3ba706ff60a2cfbfca23a0ae4c98a59c5e02",
+      "size": 1674
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "06fa33d90a96b5b22e95f3ab54a9ed6ed1725c13ec546d4ae0bbca3fd15a115f",
+      "size": 70332
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "71576c56ac8aaabc1db4e74d86d0316ba1fe7ecff397bbe81b33cf874df8eee2",
+      "size": 80166694
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "fd575b890da5a949493e1d1e7a70bfcb9e4b99fe444004d2dbfa253add254741",
+      "size": 266
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "77c0a16fa66a3c762159966806b8b22e13c4f0e6c879544e83621e6053f5a8e2",
+      "size": 80260523
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "d782bacd92bd57ab1b7e59e5cbff7f1a102e094cc338ac72186af080ebd5abc1",
+      "size": 80698472
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/cvt-13",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6ecd51bcc02aae828328e2ffa69e3ba706ff60a2cfbfca23a0ae4c98a59c5e02",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:49:52Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/cvt-13/resolve/84e365a5f6a5ca987486abb25f3d8e5265cdc44d/"
+    }
+  ],
+  "upstream": {
+    "commit": "84e365a5f6a5ca987486abb25f3d8e5265cdc44d",
+    "host": "huggingface.co",
+    "repo": "microsoft/cvt-13",
+    "url": "https://huggingface.co/microsoft/cvt-13/tree/84e365a5f6a5ca987486abb25f3d8e5265cdc44d"
+  }
+}

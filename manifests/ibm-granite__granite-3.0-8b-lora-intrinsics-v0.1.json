@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T04:15:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "82d732225d26c20c572f4634a681708251b383a52bae3503bc295ffcf541a6f5",
+      "size": 26889
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "081bdeaf76fc5463cc2e20fbadf17ad9eb569bb5343b120cc64b98840754f96c",
+      "size": 87
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2171d2be3ce6ecac69e69cf2ab63882814eb24aea82782157fa9d2156d4eb14e",
+      "size": 840
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "f029b23777db16a6a237fcf5b191d6cfe425409dfa6cc4e7a3e2b1c5d37617dd",
+      "size": 132
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00007.safetensors",
+      "sha256": "c5915cf3ec867293a21aea6182cd4286074098e13a497ae77c8e50f038605b11",
+      "size": 4957886080
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00007.safetensors",
+      "sha256": "f675bdde52918d072d7409bcfc4dffd14d73bffd3aee8be47b2c498c2c1218aa",
+      "size": 4991424704
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00007.safetensors",
+      "sha256": "1ac82144d92c532549c257272f24c94e5930a9a3de4f70f26e000e85d2f36035",
+      "size": 4991424744
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00007.safetensors",
+      "sha256": "0cad3a09de5d50f85e09b5d30e0d3f79effe90465a98338d8693868e3eb0ab1f",
+      "size": 4991457736
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00007.safetensors",
+      "sha256": "763acb30351fca84da1f79b3e4792363b83883f1b2d175516f55298a94a8c0c9",
+      "size": 4949482056
+    },
+    {
+      "lfs": true,
+      "path": "model-00006-of-00007.safetensors",
+      "sha256": "5d4b29a905285a08af9227e03a78c877284a8a3500df57f23b768f4b6efb85ee",
+      "size": 4991424744
+    },
+    {
+      "lfs": true,
+      "path": "model-00007-of-00007.safetensors",
+      "sha256": "2511fa0c517aa7a8abb915083a921041b114169f155508051556134cf0bfaae4",
+      "size": 2810334824
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "b928a94c38c98c5cf116a3b7d7e6110307bb42308444c9c901074265e070dee2",
+      "size": 29836
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "596d752bf46f5cace1f6826b52ed7d913347a4eea0ecce8ab2f869471ca40369",
+      "size": 701
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ed944c0b3d71e2d651a5ba0f8e7b350faff30031c8e3353de70b12b9c1bf5654",
+      "size": 3475806
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9aab47148a9468bacde5b86b69af3cc2e0d7e1fe55c23c0d07d3179f37e2b69b",
+      "size": 5643
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-3.0-8b-lora-intrinsics-v0.1",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "82d732225d26c20c572f4634a681708251b383a52bae3503bc295ffcf541a6f5",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:15:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-3.0-8b-lora-intrinsics-v0.1/resolve/94452d6d16de7ca836bed3ae76979ce92126f3dd/"
+    }
+  ],
+  "upstream": {
+    "commit": "94452d6d16de7ca836bed3ae76979ce92126f3dd",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-3.0-8b-lora-intrinsics-v0.1",
+    "url": "https://huggingface.co/ibm-granite/granite-3.0-8b-lora-intrinsics-v0.1/tree/94452d6d16de7ca836bed3ae76979ce92126f3dd"
+  }
+}

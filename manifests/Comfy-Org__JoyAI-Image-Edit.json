@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T04:30:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0ec512b153a4396a4509ea71815831279c2f846a8190274f5b54d21802a87697",
+      "size": 2158
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/joyai_image_edit_bf16.safetensors",
+      "sha256": "e936f0c19960f878a88e212c4ab1434df0a1640ea60dcc98e63a2c3fe316b2f4",
+      "size": 32527457160
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_models/joyai_image_edit_int8_convrot.safetensors",
+      "sha256": "da8301c271764c63e018826f12c41c36d24c840c95c5385782bbf6a96268eeae",
+      "size": 16433221208
+    },
+    {
+      "lfs": true,
+      "path": "text_encoders/qwen3vl_8b_joyimage_edit_bf16.safetensors",
+      "sha256": "9ff84e20afaaf607c713a4f6ca2083ad96314026b402d288b2583a30ca0cc804",
+      "size": 17534340560
+    },
+    {
+      "lfs": true,
+      "path": "text_encoders/qwen3vl_8b_joyimage_edit_int8_convrot.safetensors",
+      "sha256": "683de3ab15337afb9dcf19caaabb683a5ce53eb311eb302ff8eeaf4f553ad1a8",
+      "size": 10064089100
+    },
+    {
+      "lfs": true,
+      "path": "vae/wan_2.1_vae.safetensors",
+      "sha256": "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b",
+      "size": 253815318
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/JoyAI-Image-Edit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0ec512b153a4396a4509ea71815831279c2f846a8190274f5b54d21802a87697",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:30:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/JoyAI-Image-Edit/resolve/8010e7b4c2ac3f762d33775ac5d6a011eea4166c/"
+    }
+  ],
+  "upstream": {
+    "commit": "8010e7b4c2ac3f762d33775ac5d6a011eea4166c",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/JoyAI-Image-Edit",
+    "url": "https://huggingface.co/Comfy-Org/JoyAI-Image-Edit/tree/8010e7b4c2ac3f762d33775ac5d6a011eea4166c"
+  }
+}

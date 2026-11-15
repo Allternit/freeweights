@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T04:39:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "13884fbcec0cce8018fa10c16e10f93506f1cbe0a9b6f4889f562eec6ce4135e",
+      "size": 1772
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6adf6a1d5291233eafc78ff387a933e9c183915baa7d220f32775e68a5064992",
+      "size": 2128
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-31B-it-Q4_K_M.gguf",
+      "sha256": "8f3479643461601703f717931e399cc440dbd5ada598c025d6296c8165d94be9",
+      "size": 18687063904
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-31B-it-Q6_K.gguf",
+      "sha256": "3baf863a64af732e1fc597baf1c6ea147d4b1c30f5d1203e0f8018ad258bb1ac",
+      "size": 25201483424
+    },
+    {
+      "lfs": true,
+      "path": "gemma-4-31B-it-Q8_0.gguf",
+      "sha256": "b2c838c7128f7b61858986333d4d8283104102b0cca13acdc2e6422e93292f67",
+      "size": 32635674272
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-gemma-4-31B-it-BF16.gguf",
+      "sha256": "5e32614a9cdeaf6e30c2f316f0ded1b8edfad1aed1150611fd0b7e0ce36d56af",
+      "size": 1200725984
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/gemma-4-31B-it-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6adf6a1d5291233eafc78ff387a933e9c183915baa7d220f32775e68a5064992",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:39:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/gemma-4-31B-it-GGUF/resolve/67a72ce462184ca84e9531dfe657ee73b4ecc89d/"
+    }
+  ],
+  "upstream": {
+    "commit": "67a72ce462184ca84e9531dfe657ee73b4ecc89d",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/gemma-4-31B-it-GGUF",
+    "url": "https://huggingface.co/lmstudio-community/gemma-4-31B-it-GGUF/tree/67a72ce462184ca84e9531dfe657ee73b4ecc89d"
+  }
+}

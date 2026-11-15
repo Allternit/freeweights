@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T02:33:09Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "284353c80e0d52c06e97af62fd40e4dd1d253fa28f5d1e756121ea1d5d441509",
+      "size": 1070
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f46f811dc6b3475df68f0b64be8f787b49802dee519a03f616e64c8cd6141bf0",
+      "size": 16302
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "baea06561ecc07e30f44701d1c9a9241ad8fa6cc936afe2100b44ba2b1479c0c",
+      "size": 1280
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "96e31693fe9bc8b2900e47ddbf7a389e940bb20b165b44e182a490ff71fb17d3",
+      "size": 1261235896
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "30bf8256f9a1eb3287af2a9b7940465e29a38aad4a459a3e773bb3a14bd34c0f",
+      "size": 968
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "0a94ac9a0a02c067bdef25b72ae9f4ee33f48f552e55988d444f6d25eeb1d062",
+      "size": 6724873
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "008293028e1a9d9a1038d9b63d989a2319797dfeaa03f171093a57b33a3a8277",
+      "size": 1831879
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fbab9c962596d0c493da0a6c10e3183d71e3705ea63c2d8e57a2678a65543246",
+      "size": 3806
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "sbintuitions/modernbert-ja-310m",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "284353c80e0d52c06e97af62fd40e4dd1d253fa28f5d1e756121ea1d5d441509",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:33:09Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/sbintuitions/modernbert-ja-310m/resolve/77675fc96a7e445e982e2ba90246b816efc74ec6/"
+    }
+  ],
+  "upstream": {
+    "commit": "77675fc96a7e445e982e2ba90246b816efc74ec6",
+    "host": "huggingface.co",
+    "repo": "sbintuitions/modernbert-ja-310m",
+    "url": "https://huggingface.co/sbintuitions/modernbert-ja-310m/tree/77675fc96a7e445e982e2ba90246b816efc74ec6"
+  }
+}

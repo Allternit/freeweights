@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T02:31:02Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "840744a6a8d0ca22f8f6228a6f19c750a47db069873a32eefba939e64c742b35",
+      "size": 1271
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fada6f86405869365f64ab48ab470ddeb56e440246bffa3a61fc4cbfde216279",
+      "size": 3748
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7a63cb5706c9a37483f1973a3c226d54eb504ce15cf62cb52637019540c8a75d",
+      "size": 2239
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "97bb9761fb71ec1225100bc81ccf7d002e0d0ba3d0604c1fd2dbda7d7d491f1d",
+      "size": 2373821388
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "f724fdad65341e79bd9741888fe4e8ce1bb2e7b44fc8216c28c591afb1e202f4",
+      "size": 254
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "665a23a077e25751f27d2580b7d3d222d00de5954b752b8661974f33dc005053",
+      "size": 2373994447
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+      "size": 85
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4db5b134af1cd571f4c0ddf1dd81d546853f24549fce87b98655510d0df394f6",
+      "size": 257
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "e8678127b05ad862b6e2f4fb63159b15761059a678b27a0754163fe02d43fa5f",
+      "size": 291
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/wav2vec2-conformer-rope-large-960h-ft",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fada6f86405869365f64ab48ab470ddeb56e440246bffa3a61fc4cbfde216279",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:31:02Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/wav2vec2-conformer-rope-large-960h-ft/resolve/6b36ef01c6443c67ae7ed0822876d091ab50e4aa/"
+    }
+  ],
+  "upstream": {
+    "commit": "6b36ef01c6443c67ae7ed0822876d091ab50e4aa",
+    "host": "huggingface.co",
+    "repo": "facebook/wav2vec2-conformer-rope-large-960h-ft",
+    "url": "https://huggingface.co/facebook/wav2vec2-conformer-rope-large-960h-ft/tree/6b36ef01c6443c67ae7ed0822876d091ab50e4aa"
+  }
+}

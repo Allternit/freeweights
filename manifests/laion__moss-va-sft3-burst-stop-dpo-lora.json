@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:30:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0e8b304c07a07a28bbed818b7aa1a44d44db65822db2e43860cee2b7c3a45158",
+      "size": 11320
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "acb4f5f5b40ab798fa679bd2835353a398b5f8ade408325ebd9a113745643abb",
+      "size": 1663
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "f03bf9d652575da9a38470485fb15469a2b21a85e5dc70bda7ac20b90f192c05",
+      "size": 137503280
+    },
+    {
+      "lfs": false,
+      "path": "checkpoints/step112/adapter_config.json",
+      "sha256": "acb4f5f5b40ab798fa679bd2835353a398b5f8ade408325ebd9a113745643abb",
+      "size": 1663
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/step112/adapter_model.safetensors",
+      "sha256": "54028800e47162669569d8324e6159cac98e24364fd9b48d63a32047ec8a3d51",
+      "size": 137503280
+    },
+    {
+      "lfs": false,
+      "path": "checkpoints/step336/adapter_config.json",
+      "sha256": "acb4f5f5b40ab798fa679bd2835353a398b5f8ade408325ebd9a113745643abb",
+      "size": 1663
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/step336/adapter_model.safetensors",
+      "sha256": "92e1db512b0ed2d8e9c39c7d80249d4a82b2a8d020ec5325082d7cafd9aa6445",
+      "size": 137503280
+    },
+    {
+      "lfs": false,
+      "path": "checkpoints/step616/adapter_config.json",
+      "sha256": "acb4f5f5b40ab798fa679bd2835353a398b5f8ade408325ebd9a113745643abb",
+      "size": 1663
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/step616/adapter_model.safetensors",
+      "sha256": "593e24fe5cdab61ca296915774702566451fe8d9f49ce15604abe469a7b15678",
+      "size": 137503280
+    },
+    {
+      "lfs": false,
+      "path": "checkpoints/step896/adapter_config.json",
+      "sha256": "acb4f5f5b40ab798fa679bd2835353a398b5f8ade408325ebd9a113745643abb",
+      "size": 1663
+    },
+    {
+      "lfs": true,
+      "path": "checkpoints/step896/adapter_model.safetensors",
+      "sha256": "f03bf9d652575da9a38470485fb15469a2b21a85e5dc70bda7ac20b90f192c05",
+      "size": 137503280
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/moss-va-sft3-burst-stop-dpo-lora",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0e8b304c07a07a28bbed818b7aa1a44d44db65822db2e43860cee2b7c3a45158",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:30:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/moss-va-sft3-burst-stop-dpo-lora/resolve/ac6dccd183f81012c3aaf8ec22a22601e49c3863/"
+    }
+  ],
+  "upstream": {
+    "commit": "ac6dccd183f81012c3aaf8ec22a22601e49c3863",
+    "host": "huggingface.co",
+    "repo": "laion/moss-va-sft3-burst-stop-dpo-lora",
+    "url": "https://huggingface.co/laion/moss-va-sft3-burst-stop-dpo-lora/tree/ac6dccd183f81012c3aaf8ec22a22601e49c3863"
+  }
+}

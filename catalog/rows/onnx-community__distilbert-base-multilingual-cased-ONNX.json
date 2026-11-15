@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "distilbert/distilbert-base-multilingual-cased",
+  "display_name": "distilbert-base-multilingual-cased-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/distilbert-base-multilingual-cased-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/distilbert-base-multilingual-cased-ONNX.json",
+  "note": "The license of the base model distilbert/distilbert-base-multilingual-cased applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "distilbert/distilbert-base-multilingual-cased",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 43,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "fill-mask"
+  ],
+  "tier": "variant",
+  "total_size": 2225713502,
+  "upstream_url": "https://huggingface.co/onnx-community/distilbert-base-multilingual-cased-ONNX",
+  "what_changed": null
+}

@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:11:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1e4b066023492f2625a1406da2a9f01fe453f27255b7883d8afedf1fc0295cd3",
+      "size": 369
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9528ed05d1c71e62a85c0897dad4b78be11c32814232a1f66b18035b351b5496",
+      "size": 789
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "314f0ed543962bb557ac011738bf5dca90a890ad0f7169a14e99c187e9782110",
+      "size": 156
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "size": 466391
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "6d64a0422e73269ee0d212d78263b498f2b2346eb31b6efe182fc435d1b35cef",
+      "size": 538868107
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "b2e53851258b47e82ef7759043dbbc2ae11a3f1b839875ec85e3803333d424a2",
+      "size": 173947195
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "41ed77a9728376e1f0f17bf94f0dd5db2f0766b28240d6ca23539962ab2dd29b",
+      "size": 269851815
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "bec65cbd7d2aed51d35659629f9f20169367de1ed4de87bbb5d66de9eff214e7",
+      "size": 135658353
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "c1b8b0986272feb946d8afabdfcfe07ca27da00137c7ca55555d3c14a32a5af8",
+      "size": 180581125
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "8409a756fcfa2a6f11b935e93db1831980cb1ed5caaafbc208c08855070ddd7c",
+      "size": 117266133
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "bec65cbd7d2aed51d35659629f9f20169367de1ed4de87bbb5d66de9eff214e7",
+      "size": 135658353
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "0184da94172df0174e10a39690d25d885edadff9f143d6d1b533439f047140bd",
+      "size": 135658460
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "70f61db8708568fa3ee6e66ecbcfdb8a89b9069feadff679dea00b097e521c98",
+      "size": 312
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2b7379f3ae813529281a5c602bc5a11c1d4e0a99107aaa597fe936c1e813ca52",
+      "size": 655
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "7d27c493c729a66ecefc837280b05d948b1ed50d130eebdbf911b1b36cf38ed7",
+      "size": 3522656
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b6fa33508375abb95ff67512923e75f8017ffaf2055ce8378a804b1cb687a11f",
+      "size": 3620
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79",
+      "size": 800662
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/SmolLM-135M-Instruct-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1e4b066023492f2625a1406da2a9f01fe453f27255b7883d8afedf1fc0295cd3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:11:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/SmolLM-135M-Instruct-ONNX/resolve/7e78273381b84cc2dae12daceb53552c8b115eef/"
+    }
+  ],
+  "upstream": {
+    "commit": "7e78273381b84cc2dae12daceb53552c8b115eef",
+    "host": "huggingface.co",
+    "repo": "onnx-community/SmolLM-135M-Instruct-ONNX",
+    "url": "https://huggingface.co/onnx-community/SmolLM-135M-Instruct-ONNX/tree/7e78273381b84cc2dae12daceb53552c8b115eef"
+  }
+}

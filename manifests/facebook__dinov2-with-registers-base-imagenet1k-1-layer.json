@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:47:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "117342f1e5ee76a57bc162f6ae38bc4bb944363c1cd26c09d5539fa5a3f7427c",
+      "size": 3817
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7725a94475f24c15e0dee3c1e8115f8670106c27b5ae6810313ff0406f1f084e",
+      "size": 58404
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2db1289d6ced91816b732a5eae3e55f4891867bf1ffd7fb11addc97774d183f8",
+      "size": 352511424
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+      "size": 436
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/dinov2-with-registers-base-imagenet1k-1-layer",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "117342f1e5ee76a57bc162f6ae38bc4bb944363c1cd26c09d5539fa5a3f7427c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:47:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/dinov2-with-registers-base-imagenet1k-1-layer/resolve/c5c80e675e746402446e418f1e1718e6ac78addc/"
+    }
+  ],
+  "upstream": {
+    "commit": "c5c80e675e746402446e418f1e1718e6ac78addc",
+    "host": "huggingface.co",
+    "repo": "facebook/dinov2-with-registers-base-imagenet1k-1-layer",
+    "url": "https://huggingface.co/facebook/dinov2-with-registers-base-imagenet1k-1-layer/tree/c5c80e675e746402446e418f1e1718e6ac78addc"
+  }
+}

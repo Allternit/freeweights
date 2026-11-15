@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T04:54:28Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f046d5c4661aa9a11079dbc18e64262e37c9b0110126ae34bfa9fc385ceec3d1",
+      "size": 1629
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "fe83e858400768e4f0a4e475c8ed46104af854e1bc5357fbb05a248784670405",
+      "size": 49
+    },
+    {
+      "lfs": true,
+      "path": "Kev-0.8B-BF16.gguf",
+      "sha256": "5bb957b9369e71b44dd6b80546992033f5fbdd128061727f122c7869e2d90de9",
+      "size": 1517798944
+    },
+    {
+      "lfs": true,
+      "path": "Kev-0.8B-Q8_0.gguf",
+      "sha256": "27278f34eb3273bceea4c053dc50dd61a5161da21a718c4aacdf8fd5830771d0",
+      "size": 812406304
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "82697e54f371800881dce871458fda31c3e7722be0bf79bc3e78def46546b91c",
+      "size": 597
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "cff5430304cfef3ca578a945a0a9b65fbca75b88f21ad34250bbf6dfe6c56c31",
+      "size": 102721
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/Kev-0.8B-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "82697e54f371800881dce871458fda31c3e7722be0bf79bc3e78def46546b91c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:54:28Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/Kev-0.8B-GGUF/resolve/9231cb757e3320120077e42e52371971968f008d/"
+    }
+  ],
+  "upstream": {
+    "commit": "9231cb757e3320120077e42e52371971968f008d",
+    "host": "huggingface.co",
+    "repo": "ggml-org/Kev-0.8B-GGUF",
+    "url": "https://huggingface.co/ggml-org/Kev-0.8B-GGUF/tree/9231cb757e3320120077e42e52371971968f008d"
+  }
+}

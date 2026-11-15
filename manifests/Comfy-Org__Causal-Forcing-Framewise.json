@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:45:58Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3a16feeb5f3488675f9808e9ddf10ea0f3e9e7e612d732398156d03573004a5e",
+      "size": 458
+    },
+    {
+      "lfs": false,
+      "path": "convert_original_to_comfy.py",
+      "sha256": "9302877d08e98a4566504ba9f2e93c21a18da9b8142075f9ce63e752bbb9ff6a",
+      "size": 4394
+    },
+    {
+      "lfs": false,
+      "path": "download_original.sh",
+      "sha256": "7670d43f000cbde0dbd94a4edfdf93ef020d7f5b06a56088d5ac645afde46deb",
+      "size": 136
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/causal_forcing-framewise.safetensors",
+      "sha256": "408c67a8c6725756f5be2c5cf2d5c584c15dd147f5a0c458be62dcb3efb78477",
+      "size": 5676070464
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Causal-Forcing-Framewise",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3a16feeb5f3488675f9808e9ddf10ea0f3e9e7e612d732398156d03573004a5e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.video",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:45:58Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Causal-Forcing-Framewise/resolve/d9f57daa65cad35be555081349adb3a517e55d19/"
+    }
+  ],
+  "upstream": {
+    "commit": "d9f57daa65cad35be555081349adb3a517e55d19",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Causal-Forcing-Framewise",
+    "url": "https://huggingface.co/Comfy-Org/Causal-Forcing-Framewise/tree/d9f57daa65cad35be555081349adb3a517e55d19"
+  }
+}

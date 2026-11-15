@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T05:17:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d062099688e4430bfce89a2a3fba8b841048b26b9c8e79c3925ec9f1c2833f15",
+      "size": 3320
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "size": 7756
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1a59cfc387b6112be57bc7afda9d66039da0b0ce99104bf45991a625fc0b78d0",
+      "size": 116089
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "eb374193e61cb1c356fcdce4fa21b186241631aac99aa88c985ba559ae00e247",
+      "size": 289
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "0d92648a24a56b4fbc6248bd188c4b98a040c8ff21853ea7e6b94dafd321ddad",
+      "size": 660
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "6a3fa2a4dd0ee3159374c95c78c2e18f83c1e63601c1680e19011757f419d038",
+      "size": 4292916337
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "3db5e4a6ba180e1358489d24c573ef3f4fffd1d803ba41700608c69482f50f75",
+      "size": 4231572471
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "59fe0ef1198f1b77ff0337b2ae21a7d5baa800a739bd50af331ce9ae5356493d",
+      "size": 3831413574
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "429a911286b51aaa2c792e79dc4ea3eb61b49b97ce49f666f49edf38629fd74d",
+      "size": 206717
+    },
+    {
+      "lfs": true,
+      "path": "optiq/optiq_vision.safetensors",
+      "sha256": "7d2a9cc2dfe470aef2e0ecd287d29c0900497fe999c4a05f6a688319230ec1ce",
+      "size": 893179584
+    },
+    {
+      "lfs": false,
+      "path": "optiq_metadata.json",
+      "sha256": "4e2672278e7063b799e946eb709b879bafc6514cc7d4cba0be9feca233bb179c",
+      "size": 122243
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b2bed5e033438f09f22b0ce9522115b4807d9bbcc3b82bf23372cb74d93ed081",
+      "size": 1135
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwen3.5-35B-A3B-OptiQ-4bit-REAP-19B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d062099688e4430bfce89a2a3fba8b841048b26b9c8e79c3925ec9f1c2833f15",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:17:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwen3.5-35B-A3B-OptiQ-4bit-REAP-19B/resolve/d4c69e02dd7fb4b53d3dfdea7e2f14683be27cd2/"
+    }
+  ],
+  "upstream": {
+    "commit": "d4c69e02dd7fb4b53d3dfdea7e2f14683be27cd2",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwen3.5-35B-A3B-OptiQ-4bit-REAP-19B",
+    "url": "https://huggingface.co/mlx-community/Qwen3.5-35B-A3B-OptiQ-4bit-REAP-19B/tree/d4c69e02dd7fb4b53d3dfdea7e2f14683be27cd2"
+  }
+}

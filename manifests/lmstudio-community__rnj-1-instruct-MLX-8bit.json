@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T05:24:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8960046321865aef864dff8b4556e4108c8a9c2640cf90aac7c00cc0bd2eebbd",
+      "size": 2178
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "4065869b8ec00130819269c3bef69cbb8052fbb9ea522ec00257b912f7dc4402",
+      "size": 5341
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9960093752161471b9db856d67066d80c0bc7183daeb549e17bbf6713a8b13e5",
+      "size": 2265
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "65f479740c4038bc832ae2af82e094cf27955763bfbaa98ac3ff5c3b2bba70f5",
+      "size": 226
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "fe5fd70fd03d3a3d6bb58ff08ef75a9c19e22b29c4f5e697bafe1c1327cdbfb1",
+      "size": 5367405764
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "6e50a79ec167361e96a9383d7cd01157d81786a3ec0c93a8fd49c984882bf83a",
+      "size": 3983549859
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "debeae5a895c06b5609239e2806da038116e3a162552ca5a5f596aea69dfcfe9",
+      "size": 75084
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535",
+      "size": 301
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "96a2db531b75969ce3aeaaf126eb7957f7e07a28c7e770705787ef035f19d9da",
+      "size": 17209795
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fec45036cd2634bd53fe24873c42eff332caa3cb13c21acd37208bfe71519158",
+      "size": 55969
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/rnj-1-instruct-MLX-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8960046321865aef864dff8b4556e4108c8a9c2640cf90aac7c00cc0bd2eebbd",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:24:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/rnj-1-instruct-MLX-8bit/resolve/f1bd99686a21ab711d13b691083f43ac9805436a/"
+    }
+  ],
+  "upstream": {
+    "commit": "f1bd99686a21ab711d13b691083f43ac9805436a",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/rnj-1-instruct-MLX-8bit",
+    "url": "https://huggingface.co/lmstudio-community/rnj-1-instruct-MLX-8bit/tree/f1bd99686a21ab711d13b691083f43ac9805436a"
+  }
+}

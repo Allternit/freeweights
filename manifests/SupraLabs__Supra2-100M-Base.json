@@ -1,0 +1,1956 @@
+{
+  "created_at": "2026-11-15T03:29:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "517310ed124503646bc8b42b7b0890e7a2770543bfa190ac10220cb738f81460",
+      "size": 7696
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "9a6ac2cf411f21cf1fa155617d146256deee33e64c43eace6c36fd9eb3dd5a2a",
+      "size": 155
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-102000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-102000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-102000/model.safetensors",
+      "sha256": "666939d838e019555de4b93d40d83d92f53ea1a1a05e181299da911d951e7370",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-102000/optimizer.pt",
+      "sha256": "cb5da146a575ed84aaa9da2d1fd7b2ec16b54a0721b7aae3612554f4bced6753",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-102000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-102000/scheduler.pt",
+      "sha256": "dcf805774b0aca59023e26be3dc9930fa1826ad1af6787de79d1def3b62786ca",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-102000/trainer_state.json",
+      "sha256": "b51540d6a7164dfb7294ab8f7599cb3f07755495a7ca3cfc7664bb004160381b",
+      "size": 360946
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-102000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-105000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-105000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-105000/model.safetensors",
+      "sha256": "b0ae6fc52f37239f69ae4557242bb1283eedc03cab29edd60194f6e8af07957b",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-105000/optimizer.pt",
+      "sha256": "66e4fd60492031e93dc1c18572839199b447b5f3977b45aa7cd75f5cb55ae8fa",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-105000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-105000/scheduler.pt",
+      "sha256": "1d8b13e24d7330f786fe6cfbe0273dcff98e71aca7d66e1d700ebba7d8fa3f19",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-105000/trainer_state.json",
+      "sha256": "e6ca8f38f47c7dbbc8eb3d04054efe62f533ed4d3eb04fefe68140ad4c58a2d2",
+      "size": 372478
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-105000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-108000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-108000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-108000/model.safetensors",
+      "sha256": "f6eb11a48287fbe6a9f1404f39f78737cf4a81fa7adec0be1cfcefba3a2eef1e",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-108000/optimizer.pt",
+      "sha256": "c70f8892e1839c2267b184becdb777f90697abd41804d52550852b136df369d9",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-108000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-108000/scheduler.pt",
+      "sha256": "eff82055a59c8f94dfaec820b5085944d1d32fad103c697d226375267eb7c667",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-108000/trainer_state.json",
+      "sha256": "df13f3298f5ca84de4eadd9099ba31dfe46eadc08bc33c98e70a7b4238f7da30",
+      "size": 383985
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-108000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-111000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-111000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-111000/model.safetensors",
+      "sha256": "002611cd815adbe9081ff0e83b44833fceb2133990954032c860d0d602832eb6",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-111000/optimizer.pt",
+      "sha256": "00981afec201e8533fb4213fd6bfbb96070ecbec5be1feb64307f140368b4605",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-111000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-111000/scheduler.pt",
+      "sha256": "4c8cc4871e5d275372fd65e7538de15452c10f77e18ea536b46678cd5e873cd3",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-111000/trainer_state.json",
+      "sha256": "6ed405d32cc5158f0d0f54aa028f19722f7837bf1ad35c967cb3ab8501b0317a",
+      "size": 395489
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-111000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-114000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-114000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114000/model.safetensors",
+      "sha256": "cadcd53b732a8aa93e9dcc6141282796b73d6b150c7b9925758865fa497d8c7d",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114000/optimizer.pt",
+      "sha256": "95f38cae973b14f8f51e2c8d542cce4096b0429bb550f3c48c1549271e4981fb",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114000/scheduler.pt",
+      "sha256": "14fd58fd6bd7eabfa665a970a5b9aabba1b0be892267a1463cef0c917fcbde9b",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-114000/trainer_state.json",
+      "sha256": "81a2b88ce53cb98841b44c9524eb6a697f5f414b32315c22849b3f821e8c7c21",
+      "size": 406983
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-114440/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-114440/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114440/model.safetensors",
+      "sha256": "51a54c1527a2055a31c9b763b92b84ec4bdb0e2ba72ccb9fa019488d6b1ccb1b",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114440/optimizer.pt",
+      "sha256": "cc4f2f06a5cabf385ea1cb9007efa9c59e48e140055ad1328ea2a48e9d3b3662",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114440/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114440/scheduler.pt",
+      "sha256": "a7aa229bff4b10e69c49b1f383c70ee498554f2fefee8d94c9f67fd49f616a19",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-114440/trainer_state.json",
+      "sha256": "1a99aaa48982c7438796e0ad14b4421a2d6e129eae1dfab50613ee995ef1d794",
+      "size": 408699
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-114440/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-12000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-12000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-12000/model.safetensors",
+      "sha256": "a65b93a790a91861230004b9a198254dcdbc5596d7f1202f2f3ef130fb91f7fe",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-12000/optimizer.pt",
+      "sha256": "1f1a34999cb4d1d7ced187d658f6e68d8f3d782ac2672f280fcbe8039b70c5fb",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-12000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-12000/scheduler.pt",
+      "sha256": "28f48b2cfb7582445448e1858bc0f56e835de96c151da0223c804526c0b7c524",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-12000/trainer_state.json",
+      "sha256": "a16a0183a25c4dffcb628bbf876a16f184669da2cfb9967284ac5c636fe1f16a",
+      "size": 43050
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-12000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-15000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-15000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-15000/model.safetensors",
+      "sha256": "b85b48f21fad2b14cb14dff098b5cfc0719acb00da5eae134d264325ce0a64d3",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-15000/optimizer.pt",
+      "sha256": "0c4700676939534f5a64999d0f1cd9c9429f5d1761aa7fa0b5e82aa5c6139d9a",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-15000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-15000/scheduler.pt",
+      "sha256": "880bf101481f4a589440fc23a56b5d99aba291c4c4d983d47dc6b34e5b1dbecf",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-15000/trainer_state.json",
+      "sha256": "b09f8e40062b9bb218d7e9dbe6998433f2ab5a7c7ede13e3d364274a2661c882",
+      "size": 53576
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-15000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-18000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-18000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-18000/model.safetensors",
+      "sha256": "bfd681a39364e6440a0397c35fe1cd1cafd2b1e6a6fb116d5d4d1e7d60fa761a",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-18000/optimizer.pt",
+      "sha256": "ab385357da73c3d26459b9a4ceeec7cc5da99697ff88ad036c857efc5780ab5a",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-18000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-18000/scheduler.pt",
+      "sha256": "033a150db651b20df4d58c899bfbbf307e0775cebeee0e9f35999aedf205f306",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-18000/trainer_state.json",
+      "sha256": "11e56770e6d84b138aef7a335c0fc34e9b8dbe771d1c319343d43446631458f1",
+      "size": 64098
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-18000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-21000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-21000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-21000/model.safetensors",
+      "sha256": "41b5d9e65952fca744caf7aa920dfda6a6832115d3aac738949c8874f94cee3a",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-21000/optimizer.pt",
+      "sha256": "06954d185bd1bf4ef313078f302c64fb05bf7ae8430367e27d584bdbdc50fab3",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-21000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-21000/scheduler.pt",
+      "sha256": "18a477e99a34445442195217e3dc83e6965bc2d98c245fc68871e8ad4f67f595",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-21000/trainer_state.json",
+      "sha256": "a0f75da02289d8adb8bbc2ac7bf380694b6ebf8960a9093996b52fc8bcfbb165",
+      "size": 74608
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-21000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-24000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-24000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-24000/model.safetensors",
+      "sha256": "7dd5553879b7b26f08deebee40468f8b878b55e31640ec6b12839ac4cd2ad174",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-24000/optimizer.pt",
+      "sha256": "5dc316a2a6dda525d3ae772818e211f47c87d1cba0e28e0705e1442087830379",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-24000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-24000/scheduler.pt",
+      "sha256": "0e2a476c50bb885e7c01075d7fe999513dfdd1af39a4231d10965d936ce48cf5",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-24000/trainer_state.json",
+      "sha256": "06bedc4f4ea0f655872562399899c24ec228f6da7c3ec702850b75a095d7541e",
+      "size": 85132
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-24000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-27000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-27000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-27000/model.safetensors",
+      "sha256": "751f8524aee5c2724a5dad80dffd92ff1c4a1b0bf92cd4ccef171538bf49e4cf",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-27000/optimizer.pt",
+      "sha256": "722f4aca78a9de7e3cb7b769ec3f55e4a3326aa66fef13e017043190b1f86c48",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-27000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-27000/scheduler.pt",
+      "sha256": "ebebb0ce905b806baa502dd056e76cd609f22e5ebcaa298fad407ac03212d05d",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-27000/trainer_state.json",
+      "sha256": "146f1bbdcce4e702b68f3a2aa453f21bea75b982bebe938302633b93d47c3317",
+      "size": 95640
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-27000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-3000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-3000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-3000/model.safetensors",
+      "sha256": "864d77d0bf42c1ae4a9240b51ec1f36f67213f46d284d955641840801de88584",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-3000/optimizer.pt",
+      "sha256": "0341a268490231afbed89dd7211842fede3e849f3766f0a273e84d8860fc029e",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-3000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-3000/scheduler.pt",
+      "sha256": "e57a1575568428ec18360ecc95e054ed4691dffa86343f7cfd5491befb07e30a",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-3000/trainer_state.json",
+      "sha256": "3007765df77cb149be950d85a53c37ea3b89ebe4d92cec5ef8acc291ed76522a",
+      "size": 11594
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-3000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-30000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-30000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-30000/model.safetensors",
+      "sha256": "d9e73b5d41b76afbddd90c57702244c47bb7d3c725722ed6dbabba7e45c6f1a2",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-30000/optimizer.pt",
+      "sha256": "e2f0efbc087abe1404c52a15dc22cec4e3bf2a9b3b0d2008ce40becfbe745d48",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-30000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-30000/scheduler.pt",
+      "sha256": "74e1ee4c54d7cf3074f52277becc29feb3f9641901e4bbf0fb5511ae2e8d8f23",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-30000/trainer_state.json",
+      "sha256": "7657ae05e70581e6635a13f32d8409f702017abb118f1fc195a2e81e1a137418",
+      "size": 106163
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-30000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-33000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-33000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-33000/model.safetensors",
+      "sha256": "b90761a6115c557ab9a5f38d09688d0b593ed7f3be72073122431fd2aad338a4",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-33000/optimizer.pt",
+      "sha256": "d9bc9c7d498da89349e48d1c987fd9a31cf5dba1f94a6a9c7513ff9f91219179",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-33000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-33000/scheduler.pt",
+      "sha256": "6a2f50fc944af10e0bfeb483e093822f0d2691abcb2e5f942685a8f32faf35c3",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-33000/trainer_state.json",
+      "sha256": "15d7a9f4b434d80631a3f897b40d1a6ee55231608afea1bf228a3fcd06005a9c",
+      "size": 116660
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-33000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-36000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-36000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-36000/model.safetensors",
+      "sha256": "f67cdc457aba99704cf0ed76ea044c86218b641b99382f93a752d6cf24197c23",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-36000/optimizer.pt",
+      "sha256": "ec78579277154e8c9c45db8a0381c499cfaf61632654e36137dbf2b226cdd925",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-36000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-36000/scheduler.pt",
+      "sha256": "4790b81475e444851efb23bbe9c6eccd80bdf325c88e0cd36c06838383fdc313",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-36000/trainer_state.json",
+      "sha256": "a8671c1875931060e1bfc79dc34e72cd6731ca84827aeffefa63afc66220a989",
+      "size": 127157
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-36000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-39000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-39000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-39000/model.safetensors",
+      "sha256": "77a47010217148d3f182488d7cd824de2a8c5e88dde92fb70258e9929a907882",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-39000/optimizer.pt",
+      "sha256": "6804e0050a0c8ba13965623db604c74ee14398b6da31ee2c583b39f27d199a58",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-39000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-39000/scheduler.pt",
+      "sha256": "68f06e7ffe8ad7fe045e6597cd45b1c4f28bf6af1b385a8644dddbbb6358a90b",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-39000/trainer_state.json",
+      "sha256": "f1c9e75230acc9f0f2864f21d8fca1ad08f5801c2f76cd975d4e300dda133b8e",
+      "size": 137665
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-39000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-42000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-42000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-42000/model.safetensors",
+      "sha256": "efcbca996209ba4f530610810295b2da841788b33c66881ab4cd966d739e61b5",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-42000/optimizer.pt",
+      "sha256": "79cf8ff8d8c79163ec97a4ceb98a73cdef8c6c9306f343c6ebdd6490a707ac91",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-42000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-42000/scheduler.pt",
+      "sha256": "a7560a84c28d618f745ca07279bbda6b523bd2fa5f7535c7358ef46155f42d78",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-42000/trainer_state.json",
+      "sha256": "ad9fe9421e06051d0d49c232ca94fef3ce284fbd7a80a6289deac516ff0da3f4",
+      "size": 148153
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-42000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-45000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-45000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-45000/model.safetensors",
+      "sha256": "8cc539d837e99d558bec112e71ed41b52730b861b629a7f133175e52e6afc48e",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-45000/optimizer.pt",
+      "sha256": "95e63b7b2f73fbb57945eeaff9ce7342d21fa38c10a37e937111efe5e825848f",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-45000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-45000/scheduler.pt",
+      "sha256": "16f38154dba5f0be10c86914d78ea47db04a7cd42fe522bc52b88ad948d5ecdb",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-45000/trainer_state.json",
+      "sha256": "cb22cb6f182b1eb8ea5d247191a5a8d52e2d3451ae59f054de34aeb980a9f02a",
+      "size": 158650
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-45000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-48000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-48000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-48000/model.safetensors",
+      "sha256": "278921e6c4087ca2332a750fd52a2d19a8867b37dac91642e5ad51f6d9c7a8b1",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-48000/optimizer.pt",
+      "sha256": "a4bbcc592bfd03f2f989095e359224da529520803da7fdafca3101dff2c0aa82",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-48000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-48000/scheduler.pt",
+      "sha256": "0c6ef4bb8468bfd6c85df00dee99008082f1097e6a789144a6a20c333d772400",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-48000/trainer_state.json",
+      "sha256": "5292f5a5793592b8ade4520f45cb9d8476a1c07a8001b101675e9eeeba57678e",
+      "size": 169128
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-48000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-51000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-51000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-51000/model.safetensors",
+      "sha256": "860a3eea93e9f5f25f1c1e88ea8e034a071f218608a271dba2763abe47d579f1",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-51000/optimizer.pt",
+      "sha256": "95c8664849e5d02790fb8237157b8789c7ed6e8b30308ed52f2c69b0ce223609",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-51000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-51000/scheduler.pt",
+      "sha256": "59d44fccadb58e7548297d2c393b66c9239d982356635e6e6bd96b73e1042d79",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-51000/trainer_state.json",
+      "sha256": "eb780263bd50ea59ed3d475a117da62fdbe692f7b1528b18ef971efa22d1df01",
+      "size": 179637
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-51000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-54000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-54000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-54000/model.safetensors",
+      "sha256": "22356fb082532f0a09fdcdc2b8d45a9e4b81c95ebf6fc67efc935180030c1d06",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-54000/optimizer.pt",
+      "sha256": "3dbd94d31759e747ffc032c96767f3586cabe48ca5fb5f81fe763cc4f48a6344",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-54000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-54000/scheduler.pt",
+      "sha256": "6a613f94577579f338fa0587b80af2981399ea63735ea72debda875157b8b5a1",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-54000/trainer_state.json",
+      "sha256": "93a602ccd9a772cebb676c5ef98a832c5895ce4b5006f45cd6168553a941d2d6",
+      "size": 190130
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-54000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-57000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-57000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-57000/model.safetensors",
+      "sha256": "724a996624688fb763fa90988677f539af7ee00f9e69f44f2d52ffabfdf772e0",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-57000/optimizer.pt",
+      "sha256": "7ba2a5061c29a6292e1c8f2c22eaba5d8fdfcdd74c9aebfc5d952cd0aef662ee",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-57000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-57000/scheduler.pt",
+      "sha256": "6e34de39dbdaad007d4e87a5d7f0f894b07b230c5f7c138bb8adcbbd00c0576d",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-57000/trainer_state.json",
+      "sha256": "ae5f0dc6bbe00f3823c2881b0209af4bbe335336da481400ae0f42f148e56eae",
+      "size": 200641
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-57000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-6000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-6000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-6000/model.safetensors",
+      "sha256": "55bece4cc9901c2e9b0ad84f92c8f7bf0030e25b7f97299cd4ee044a40781067",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-6000/optimizer.pt",
+      "sha256": "811e9a7faaf4d9ecbc1bb5d52a4cc2934c4de8b311d66611b820988e48292656",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-6000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-6000/scheduler.pt",
+      "sha256": "16654f369df2cbedc75c822565d79ed045c0683027f19b82b57fe6b856571ed6",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-6000/trainer_state.json",
+      "sha256": "1dc7018b021d491826f40e66d4f707bc6ac2594ea8cb56d34e812eb57f215ef9",
+      "size": 22065
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-6000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-60000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-60000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-60000/model.safetensors",
+      "sha256": "9a61c50e7778d90a2ca5c1173f438b5766f013ee82ca2e062eca2a14f907a1b6",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-60000/optimizer.pt",
+      "sha256": "7845bc29ecac0e38c791dd8b69972d9b01ef93e5bc85f9ee64ba24bcf81ad157",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-60000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-60000/scheduler.pt",
+      "sha256": "ff034a3a64f323fafb26d947a5bce4094d50738cc2bcf43cb0eaebd72974fe74",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-60000/trainer_state.json",
+      "sha256": "cb4a2c7b69ff61131ca4f4253f4a94f85a844964f85dfccc7c0c934297801c71",
+      "size": 211106
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-60000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-63000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-63000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-63000/model.safetensors",
+      "sha256": "8bc62a3e4750a393f72db4840fca03dc1811d7e0eb6597fa1551220d1d25418f",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-63000/optimizer.pt",
+      "sha256": "e3fc03d8eebf47d8152234ad026c09ced1dda40568a7ef54dd5ecaca0b168257",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-63000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-63000/scheduler.pt",
+      "sha256": "b1c1e602b095a2ad0bfb53e88eab7aa3a1f7c9a0153a4f21f11a7197d246caee",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-63000/trainer_state.json",
+      "sha256": "63910a8055a1f5233893d3d779e63b391bb390f9e8bc5a08728fef17c05eb4ef",
+      "size": 221580
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-63000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-66000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-66000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-66000/model.safetensors",
+      "sha256": "b04fa10dbbfe22c4c80c4f737b82d5853f7752300fed82e172fd30abda95102f",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-66000/optimizer.pt",
+      "sha256": "e58f9af8971f0a751af4e7f4f8767903895ce8c3f8f14bfedf13f9e962a3bf5f",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-66000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-66000/scheduler.pt",
+      "sha256": "e496526dddd703dd5220def75f5a6f481e54606ce64916b922feeeefcfb759c2",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-66000/trainer_state.json",
+      "sha256": "eab5509af1fe4cc9433b629f5b23a9b083413e2f11855658ce3ff0e9e41ed052",
+      "size": 232054
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-66000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-69000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-69000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-69000/model.safetensors",
+      "sha256": "518534da574385dca9a250a8ff889c9b52cda93c4f2462b584fb0a7cd31f7b27",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-69000/optimizer.pt",
+      "sha256": "08fe87586a22b1f97e1f5a2bd0578ae30f13fb2e905a0d86fece913593daacdc",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-69000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-69000/scheduler.pt",
+      "sha256": "5177837db9b0b99afba401199fbf590fa59f4872627a7ae1bf090ad8960efd80",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-69000/trainer_state.json",
+      "sha256": "8d5b65a7e9b3fab313a1c965e6a67d8077f2532d4eb89be9219f3d83f2fac91c",
+      "size": 242520
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-69000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-72000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-72000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-72000/model.safetensors",
+      "sha256": "7068242db4819c3870432152a47b8a2db72e3d62406ebe8401d9aee9cd41d1bf",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-72000/optimizer.pt",
+      "sha256": "696f1b9bd55d5284cd9cf6908b294ddaa767dc965e845034b7f1895d027f011b",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-72000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-72000/scheduler.pt",
+      "sha256": "317b688b2410273139101cc0967e8a3ef8b15ebb6d685130182cccd1512087ad",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-72000/trainer_state.json",
+      "sha256": "85d02c331817acc26955fd5cc95539dad4585af64fa1720bd9830bafca8c5a96",
+      "size": 252993
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-72000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-75000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-75000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-75000/model.safetensors",
+      "sha256": "4ff011269b5ff68f835fde19916056b2daf0927806cadcdc3921148068d47b3b",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-75000/optimizer.pt",
+      "sha256": "a34664af22b73a9f9de2ea211ec0b5c755fb6b88e4f3f92f0d03b483f468bda4",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-75000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-75000/scheduler.pt",
+      "sha256": "540c9fb915b7b2289fe766f3c933215d50f76f4e19f3b5a36946297f04e77f9f",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-75000/trainer_state.json",
+      "sha256": "fea1a5e6d2c2af7b2425494a5dcb1649e5e72eea4e3407b228bfc78b9cf19681",
+      "size": 263460
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-75000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-78000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-78000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-78000/model.safetensors",
+      "sha256": "dd8527e907e9ff270dabea084c3e35b9576d35d75f1997c256c2ec1fb4411565",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-78000/optimizer.pt",
+      "sha256": "16daa48cb3108645f33b860505947985b6e1bf83f83c3a07f6209843530f38d3",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-78000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-78000/scheduler.pt",
+      "sha256": "a912622df872da509870368d9cf8a7a4d8199e1197ed91532a3dc44290de1839",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-78000/trainer_state.json",
+      "sha256": "0dcd9a6bd377c587d1a320000a57b3a0ad5d8e6a1243b0eff03339e55fb5e2d1",
+      "size": 273931
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-78000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-81000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-81000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-81000/model.safetensors",
+      "sha256": "a137a4286e29d863fa5116f5ec9432663ea22b8884c8f78577047f4375050286",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-81000/optimizer.pt",
+      "sha256": "715bbd54eba0251a5ed3ab1866b8d63dbcd2975eb0e6db89453591f18c9911f7",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-81000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-81000/scheduler.pt",
+      "sha256": "227ba4403f7aa5d2d1626d9c746badce9e936710b9f534f2326409bc576adf55",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-81000/trainer_state.json",
+      "sha256": "482ba3e9f19cb0426ceb8f3082463c64c32eb101e69b0e5cdada710faad9e3a0",
+      "size": 284419
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-81000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-84000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-84000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-84000/model.safetensors",
+      "sha256": "50be036e812c832c772ba3310da5b081b4e4b7b26d5a56afa489d080ab408e78",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-84000/optimizer.pt",
+      "sha256": "c9a915345929bcdfe7057707b3f486e92b28383868d702b23d34caa4ae3fcaad",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-84000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-84000/scheduler.pt",
+      "sha256": "e92df83a6d09c09b0843bfe68979f5f7f5266ce4f409f1d32386f3ed78265164",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-84000/trainer_state.json",
+      "sha256": "67d75a74d7a8cf5d58d56e6138737564b5b14cdd6ac1b970bebcfb316a5d51d1",
+      "size": 294891
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-84000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-87000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-87000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-87000/model.safetensors",
+      "sha256": "a3b57758f99151f93faca5f0cee77393bac7782d06993690bd5dd7747142dec1",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-87000/optimizer.pt",
+      "sha256": "f2992476f1b2cd7cbd1f8adb4733ed90ea10957d92b69a38e263b3b17cd56017",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-87000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-87000/scheduler.pt",
+      "sha256": "0f54129d752dd7b4d2864b754c29592b18f7bd10008db4d730b2831742ea089c",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-87000/trainer_state.json",
+      "sha256": "633bbde72584cf0a41f6fbe99ab73701e0580aec8cbfe6bf24b8a78a489271eb",
+      "size": 305374
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-87000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-9000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-9000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-9000/model.safetensors",
+      "sha256": "728db2fe63ca76a2cc0c5c27bb1faded934c18d4452c4bbc9a3dd93def247de7",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-9000/optimizer.pt",
+      "sha256": "15b5cdb6498bcf5bb819af6cd07abd1e61781cae176f5d73f5b65a0cde8d50f4",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-9000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-9000/scheduler.pt",
+      "sha256": "23fe559606a9c6f58dc26eea137ddb96cb105888b6b620ea0421914866496fcc",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-9000/trainer_state.json",
+      "sha256": "e6e3fdf2611eab512e65f735fe76cbf1063c284b86a2d1c42c4f0f23c4d5ff62",
+      "size": 32553
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-9000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-90000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-90000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-90000/model.safetensors",
+      "sha256": "53c258bbc9431f8a3dbfc4d9a5ffe0bb7f10b8fab7823bb361262a0656bdf487",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-90000/optimizer.pt",
+      "sha256": "3cb0e21c2b5641ac3532cc4f97563207fa4f1af50c3db86143d6cb8f7f26cb18",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-90000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-90000/scheduler.pt",
+      "sha256": "bc22e5194bf2ca0ff5ad403e8babf88b155e0d7dd548ea8e712eab16185cc341",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-90000/trainer_state.json",
+      "sha256": "b49934a31fdf6688ac1c44176ba7e8895473243879fe96ba7e404d2c95aac979",
+      "size": 315829
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-90000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-93000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-93000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-93000/model.safetensors",
+      "sha256": "2231a191c3fd47fb0b5cb55e0ce33ce69299f64dee660b8c7247416d009e9975",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-93000/optimizer.pt",
+      "sha256": "f3b4b81cbb2bfe7bf3d90e0ecec81d558c33e7f2ded060cef6510802b83c5ed4",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-93000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-93000/scheduler.pt",
+      "sha256": "6832f6f076e68414b0047e3f8e110b0680741a51a9b608ffcc47c3e98ed9c35d",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-93000/trainer_state.json",
+      "sha256": "2c0ce7c220c6ed0a041e1add2a09ccea2c90d65000e1cd6dd6e1be904fae0dcb",
+      "size": 326619
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-93000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-96000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-96000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-96000/model.safetensors",
+      "sha256": "6891169240a71e47d9c0893cdd3daa916e6457af6c042abfb7b3219d960dc647",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-96000/optimizer.pt",
+      "sha256": "8c425c5ab8e7760f3ab6427cb64d051db98c07450a48edee52153bf07713b1ff",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-96000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-96000/scheduler.pt",
+      "sha256": "6dab0891ac7eabdde49d659ef74fe8f13f90eaba2f6b0a8339138b7b6b8b37cb",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-96000/trainer_state.json",
+      "sha256": "bdff4987059a552671b9330129d752b2bfa7c58e5921cc872890e9d5aff8949a",
+      "size": 338040
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-96000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-99000/config.json",
+      "sha256": "c3fe45ecd6d7b3bc2c8e068f8ca19855aa2f3141f446c284d50d2ad934726ae6",
+      "size": 1046
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-99000/generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-99000/model.safetensors",
+      "sha256": "5a1f8cd3631b7c70f5b1fa76e261dfc3a5f572724f0079191b0383faac04a3f0",
+      "size": 402750928
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-99000/optimizer.pt",
+      "sha256": "e5481ac4fcf01dc2d51a8b3f97ce78579176892ebfe3872388c108a2e323ba2e",
+      "size": 805587275
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-99000/rng_state.pth",
+      "sha256": "7ffffd41cb5466a23271a8c6303a885c8e75cf7a03496c0a7cb7f448827155d8",
+      "size": 14645
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-99000/scheduler.pt",
+      "sha256": "e23dd0fb64be38105a8c3a4742c4b9f161ea75055548df60dad8f4d31a0e4c51",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "checkpoint-99000/trainer_state.json",
+      "sha256": "8d3ca5bcc2f7bae1cc77dfe4627a3ca6df3a7c2a8c5a55f3f3475e9079fa69bc",
+      "size": 349460
+    },
+    {
+      "lfs": true,
+      "path": "checkpoint-99000/training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "35c3cfd80f747fdec4d2e150fa810df6923797b4f854d698a5768dc224319228",
+      "size": 1045
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "ed1add2dd70171436ddb70f706d62842eafffccbd7aa283f9950093750ad72ce",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "51a54c1527a2055a31c9b763b92b84ec4bdb0e2ba72ccb9fa019488d6b1ccb1b",
+      "size": 402750928
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "2136750ea890e546750346edf09f2d295dde19796631852f4b596c3597ec7573",
+      "size": 2327627
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ba53e7823d929c638b54e4a02f56782c5e939f587f8372f2d91c4033d03ad8ee",
+      "size": 791
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "b89574d4fb532cbff16922a1304201180637df9c21820d655203050012091374",
+      "size": 5329
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "SupraLabs/Supra2-100M-Base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "517310ed124503646bc8b42b7b0890e7a2770543bfa190ac10220cb738f81460",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:29:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/SupraLabs/Supra2-100M-Base/resolve/8a3b26d1ac58201bd016f571864aa95a28d02002/"
+    }
+  ],
+  "upstream": {
+    "commit": "8a3b26d1ac58201bd016f571864aa95a28d02002",
+    "host": "huggingface.co",
+    "repo": "SupraLabs/Supra2-100M-Base",
+    "url": "https://huggingface.co/SupraLabs/Supra2-100M-Base/tree/8a3b26d1ac58201bd016f571864aa95a28d02002"
+  }
+}

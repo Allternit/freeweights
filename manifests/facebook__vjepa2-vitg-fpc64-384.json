@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:21:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8531bdab10066a8590e6caae30f3bf950733782946d8fc6fb9f105910c2b8224",
+      "size": 3210
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f61323b6d7d671e8d591c54cc1d7a518cfcde1281c4d9543069e04abd18d63c4",
+      "size": 780
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "861d9fafec3cf764f01f00ed26bf53bda531116cc6b67d7dbadd80e8be814e9b",
+      "size": 4138311608
+    },
+    {
+      "lfs": false,
+      "path": "notebook.ipynb",
+      "sha256": "c9ed83bc9e9cef93147d2d125be8665300c39cd3d1fc6bc1f19e3ae5681d6210",
+      "size": 4302
+    },
+    {
+      "lfs": false,
+      "path": "notebook_finetuning.ipynb",
+      "sha256": "98ccdc0d774fd3a55897455b50744196918da5f0028fdac8dfb9c1152f324dc1",
+      "size": 544786
+    },
+    {
+      "lfs": true,
+      "path": "original/model.pth",
+      "sha256": "45841f4da668bf950671e7632bc2b7b54f0b36fc40da812a411d78fe93b3e7e7",
+      "size": 16464301382
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "9e09b7b3b6413f54f80510ccb356d2f47a598dfece8dc6bfb405d3af946eca36",
+      "size": 1298
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/vjepa2-vitg-fpc64-384",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8531bdab10066a8590e6caae30f3bf950733782946d8fc6fb9f105910c2b8224",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:21:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-384/resolve/12ca91694b230e0d4b5b0078af6f4ae1d51e933d/"
+    }
+  ],
+  "upstream": {
+    "commit": "12ca91694b230e0d4b5b0078af6f4ae1d51e933d",
+    "host": "huggingface.co",
+    "repo": "facebook/vjepa2-vitg-fpc64-384",
+    "url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-384/tree/12ca91694b230e0d4b5b0078af6f4ae1d51e933d"
+  }
+}

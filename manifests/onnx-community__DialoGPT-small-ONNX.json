@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:28:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "441ff8309dd6e772e18c01d00fc0595c41d4495cf335123c7fe9fa7360141cc1",
+      "size": 3635
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f2379021ccf94dba751ac84d2e292c2dd18c91fa5f4120a1f2904140f79b7d92",
+      "size": 944
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e7f6144153c0e1c0ccd6c327134b1bcc8f4e36e164d903935b08753947126636",
+      "size": 119
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "7bc27adb77e9aaad290ad272812f2d2d5a839a726d5ea883b375d19243046e73",
+      "size": 498083705
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "8a5941cd5946173192f84c1d761a72e0ef92af568a20b250aba1e9edd78e5b67",
+      "size": 498083724
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "1f3c8792ff0af32015984a14abf3b3b4e2933cee552d0db507524220c2083a4d",
+      "size": 249204715
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "4857246858f0a6f898af175eb804213d8d3eace04eb59441d40fc488f23fc2ff",
+      "size": 279590876
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "8a5941cd5946173192f84c1d761a72e0ef92af568a20b250aba1e9edd78e5b67",
+      "size": 498083724
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "d36d90a59d8da779949f9d6f0dde63ecc06f0f6892db42d2c109fb09a201921a",
+      "size": 249204734
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "4857246858f0a6f898af175eb804213d8d3eace04eb59441d40fc488f23fc2ff",
+      "size": 279590876
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "01d5c91b0a9b9024aa17df3c9f38a674ac4229ba768ab651b0d470369cbfdfc1",
+      "size": 279590897
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "70f61db8708568fa3ee6e66ecbcfdb8a89b9069feadff679dea00b097e521c98",
+      "size": 312
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "98412137ae43c77f8af52eb51b19c3536d3242cb55339167d841005fa94a23b7",
+      "size": 438
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "1fe93b6152957cf9cfd6d89002467f789ce8b3f3e000b3a2edf27c808ddd0b9e",
+      "size": 3557680
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "de6a9741a07f61f2e10ca7cdc12c05f4c770b0f5e652258c8732daa5878278ee",
+      "size": 644
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7",
+      "size": 798156
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/DialoGPT-small-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "441ff8309dd6e772e18c01d00fc0595c41d4495cf335123c7fe9fa7360141cc1",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:28:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/DialoGPT-small-ONNX/resolve/c41b5709fd98c873d9455ce88e6a02644a7ecade/"
+    }
+  ],
+  "upstream": {
+    "commit": "c41b5709fd98c873d9455ce88e6a02644a7ecade",
+    "host": "huggingface.co",
+    "repo": "onnx-community/DialoGPT-small-ONNX",
+    "url": "https://huggingface.co/onnx-community/DialoGPT-small-ONNX/tree/c41b5709fd98c873d9455ce88e6a02644a7ecade"
+  }
+}

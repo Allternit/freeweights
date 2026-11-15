@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:48:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4189827c767cc509cfda1e95d61d762dde80273be4afdc2c1fcb2dcce19d47c4",
+      "size": 3837
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "275912ed8f61b96e6c88b4543432c012f1f73d226965f61092b1b318e25fedbc",
+      "size": 823
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "59a79718c3c1f64bb70e6cce16ef610327cfb602c3dc85554518704932f1bf7c",
+      "size": 24442760
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "bd1dd0e77c16089b75683f6eeeab6a39b0bd178d11c90de74c3a90f270336f84",
+      "size": 24532714
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/swiftformer_s.dist_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4189827c767cc509cfda1e95d61d762dde80273be4afdc2c1fcb2dcce19d47c4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:48:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/swiftformer_s.dist_in1k/resolve/3f3e8d43dc4f09f2d957efec741bcde0a2f1ae15/"
+    }
+  ],
+  "upstream": {
+    "commit": "3f3e8d43dc4f09f2d957efec741bcde0a2f1ae15",
+    "host": "huggingface.co",
+    "repo": "timm/swiftformer_s.dist_in1k",
+    "url": "https://huggingface.co/timm/swiftformer_s.dist_in1k/tree/3f3e8d43dc4f09f2d957efec741bcde0a2f1ae15"
+  }
+}

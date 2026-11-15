@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:47:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3feb6e539b0cae6024a316b5b3465e4b16f2f7d06f55999d880f8b42aa0d851b",
+      "size": 5739
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0d6ed7378bdfd9b2845ad01090c760c10b209757a5e9392c6bf6bfed0014807f",
+      "size": 843
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "300dda56674fb874772f8531a51345557691d30ee014ab9f3b2e0e51bee49e76",
+      "size": 143
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "57ef34a05def7d83a9fa33f11a44c842b99c4ab3fc72eab03403a15c0b6de445",
+      "size": 4965245872
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "fcf0b354a1975416200837ff9401064fa72462bc57044741d36854658f5bc25e",
+      "size": 4273167472
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "71b482d5a4aef93f8aef428f9e0b75e421c3e2b5a1d20276e16032869b76c83d",
+      "size": 24087
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "a27d5e476c626fafa424e654213ae7f68f917ff846fa992c0ceda2c84d7b15f6",
+      "size": 454
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "d48708c6021027e8fc6d5342e1498111d8e87aae8903319d3ead1fbdfc4a9125",
+      "size": 17158115
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b7b5f2bdabea93742271394baaf133e5d246cd5f1d8b27e3d862ab4e7e92850f",
+      "size": 2675
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "arcee-ai/AFM-4.5B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3feb6e539b0cae6024a316b5b3465e4b16f2f7d06f55999d880f8b42aa0d851b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:47:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/arcee-ai/AFM-4.5B/resolve/e84d19711eca5817c1608cb344d931bf05c966dd/"
+    }
+  ],
+  "upstream": {
+    "commit": "e84d19711eca5817c1608cb344d931bf05c966dd",
+    "host": "huggingface.co",
+    "repo": "arcee-ai/AFM-4.5B",
+    "url": "https://huggingface.co/arcee-ai/AFM-4.5B/tree/e84d19711eca5817c1608cb344d931bf05c966dd"
+  }
+}

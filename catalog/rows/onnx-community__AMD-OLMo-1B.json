@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "amd/AMD-OLMo-1B",
+  "display_name": "AMD-OLMo-1B",
+  "family": "olmo",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/AMD-OLMo-1B",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/AMD-OLMo-1B.json",
+  "note": "The license of the base model amd/AMD-OLMo-1B applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "amd/AMD-OLMo-1B",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 14,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 13506806798,
+  "upstream_url": "https://huggingface.co/onnx-community/AMD-OLMo-1B",
+  "what_changed": null
+}

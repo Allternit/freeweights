@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T05:04:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b76cc8a02fa564045090e7bc72cf3a4363f7dc0c25786bac5109a32edd6ae13d",
+      "size": 6074
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2d658bd91c0f0cae9317cfd26184e0dd2acbaefa1bd27f2a7fae5e76f02f6463",
+      "size": 3134
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "400b96e14b636df9ee6305e37e7986095e40d0e1840f3c1a907584986fa66c0c",
+      "size": 598556680
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "952d52e981d1e2acaff9dc80e746b1aa3a865812ce137f5e8fb0ebd2ad22ebfc",
+      "size": 598926139
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "d73413bef7b80f065df542e346894c09d1fff56ff16290b159d2379a0510528a",
+      "size": 217660790
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "0b2199d8f7fb5d905c107fc00a4ada71bd4a546e1e6a765d8bce9afd4a49b5a8",
+      "size": 299655326
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "8e8af012cee32e14820f13bdc855868f6984e507dff84d92abbe2eeaf713e43f",
+      "size": 150904485
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "4dec10b22b468f3ba71b43a0996939815a214d9836eb63b366645be66d515567",
+      "size": 224592467
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "494a25b9acac44f27b03b315e5c79a3401e7bc4b1c46778857bd2a12dccc74aa",
+      "size": 140224656
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "8e8af012cee32e14820f13bdc855868f6984e507dff84d92abbe2eeaf713e43f",
+      "size": 150904485
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "4caf5dec49bfffef3ab643fd51d2c361e614cd7dd6f6b6794f3ce5a5c1dc71c0",
+      "size": 150904485
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049",
+      "size": 694
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "size": 3583228
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4eb3cf041fb316c7c6ef5be980449e21becd9ab45e0a9790419bac1e04f835d1",
+      "size": 20840
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ai4privacy/llama-ai4privacy-multilingual-categorical-anonymiser-openpii",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b76cc8a02fa564045090e7bc72cf3a4363f7dc0c25786bac5109a32edd6ae13d",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:04:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ai4privacy/llama-ai4privacy-multilingual-categorical-anonymiser-openpii/resolve/83ef30d5e7c9d113ad80ce745b564cdd2320c5d5/"
+    }
+  ],
+  "upstream": {
+    "commit": "83ef30d5e7c9d113ad80ce745b564cdd2320c5d5",
+    "host": "huggingface.co",
+    "repo": "ai4privacy/llama-ai4privacy-multilingual-categorical-anonymiser-openpii",
+    "url": "https://huggingface.co/ai4privacy/llama-ai4privacy-multilingual-categorical-anonymiser-openpii/tree/83ef30d5e7c9d113ad80ce745b564cdd2320c5d5"
+  }
+}

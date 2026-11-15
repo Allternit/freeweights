@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-11-15T04:19:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1f9ab4c4b25cd871d0bdce8f4a616daaa69c856a5d12e8775ee3aacdccc4b26e",
+      "size": 1576
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "98b45ea81164d1e1a1dd82255207053b15cd6c69d922a1c5cf3387ce604d4b74",
+      "size": 28
+    },
+    {
+      "lfs": true,
+      "path": "ggml-model-q4_0.gguf",
+      "sha256": "e18f9e293ec24325d0b57d16472f8230e894a637b44f07014652e40202f6ecc9",
+      "size": 1768246912
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/minicpm-dpo-bf16-ggml-model-q4_0",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "98b45ea81164d1e1a1dd82255207053b15cd6c69d922a1c5cf3387ce604d4b74",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:19:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/minicpm-dpo-bf16-ggml-model-q4_0/resolve/d0ad325eeef5b49172f8c30c1329ff5deaf63729/"
+    }
+  ],
+  "upstream": {
+    "commit": "d0ad325eeef5b49172f8c30c1329ff5deaf63729",
+    "host": "huggingface.co",
+    "repo": "openbmb/minicpm-dpo-bf16-ggml-model-q4_0",
+    "url": "https://huggingface.co/openbmb/minicpm-dpo-bf16-ggml-model-q4_0/tree/d0ad325eeef5b49172f8c30c1329ff5deaf63729"
+  }
+}

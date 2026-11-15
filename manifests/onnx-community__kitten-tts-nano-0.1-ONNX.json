@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T05:21:33Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "17fd45e44305beed149eb7d64b67e7b6e508afac88c165674ca6901518eec5fc",
+      "size": 144
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "87f42506cb9c37a5d21ead1fbe4836920ac6e1d2b531a8ba3570398578bd061d",
+      "size": 97
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "9f2824641956d6640b351b13fe8099293bc00c1a041e852157760ff5292fc28e",
+      "size": 23792492
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3c6b9859e4dd845cbc5ff4bc6de4b6fd9a03fdb28bc2d657219db4a4f1f9907b",
+      "size": 4468
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "be1cb066d6ef6b074b3f15e6a6dd21ac88ff3cdaedf325f0aaed686c70f75d20",
+      "size": 113
+    },
+    {
+      "lfs": true,
+      "path": "voices/expr-voice-2-f.bin",
+      "sha256": "908f82110142048fd6bf66cc494ca07c1c459b3eb9324fd55a70e5f8d02ecc0a",
+      "size": 1024
+    },
+    {
+      "lfs": true,
+      "path": "voices/expr-voice-2-m.bin",
+      "sha256": "92c290fdef55b96fa2521376bbdaf6fa4e4018e95c7479d674e0c18109a0866a",
+      "size": 1024
+    },
+    {
+      "lfs": true,
+      "path": "voices/expr-voice-3-f.bin",
+      "sha256": "fa058a4f77a385dbafa15bfde52c3b0d223463a60d852787df3305a5b7409583",
+      "size": 1024
+    },
+    {
+      "lfs": true,
+      "path": "voices/expr-voice-3-m.bin",
+      "sha256": "75cafcedb1d513df0e79369b18533cc02d07d5b1f0bad00628aa35d8200575a5",
+      "size": 1024
+    },
+    {
+      "lfs": true,
+      "path": "voices/expr-voice-4-f.bin",
+      "sha256": "986600f5065e7b1927c68494f0b3760e96b979ae5dd97f2e947432ed42ede20e",
+      "size": 1024
+    },
+    {
+      "lfs": true,
+      "path": "voices/expr-voice-4-m.bin",
+      "sha256": "05de675b434edda9b692529e53c42ca749123358fc8e21a26e945bf629153d91",
+      "size": 1024
+    },
+    {
+      "lfs": true,
+      "path": "voices/expr-voice-5-f.bin",
+      "sha256": "a849c8115b266d415390d419673a0a0bdbc77f5142403ebed9f4ab07fbe7ad05",
+      "size": 1024
+    },
+    {
+      "lfs": true,
+      "path": "voices/expr-voice-5-m.bin",
+      "sha256": "4133158853e381c66fabd37eca8e1650ed934b7b3e68c32d9db8ea745dfa00a6",
+      "size": 1024
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/kitten-tts-nano-0.1-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "17fd45e44305beed149eb7d64b67e7b6e508afac88c165674ca6901518eec5fc",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:21:33Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/kitten-tts-nano-0.1-ONNX/resolve/2aa48850b3c619a1214a1013ebce9e181548c358/"
+    }
+  ],
+  "upstream": {
+    "commit": "2aa48850b3c619a1214a1013ebce9e181548c358",
+    "host": "huggingface.co",
+    "repo": "onnx-community/kitten-tts-nano-0.1-ONNX",
+    "url": "https://huggingface.co/onnx-community/kitten-tts-nano-0.1-ONNX/tree/2aa48850b3c619a1214a1013ebce9e181548c358"
+  }
+}

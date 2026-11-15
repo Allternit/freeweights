@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T04:59:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6ecfd4923e2018e4c8afe4b413b9db10697d4489c00e00de68fbc1e3f353f12f",
+      "size": 15642
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d3b3b82744d749c67874448271e5d2b886dabb13af9a4010a34dcb02c12f42f7",
+      "size": 1399
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c1b9bb1dbea876332866f26c3fd9b2cf160eaac372b9455f5107ba9de6cba4b3",
+      "size": 236
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "cf5d94e62cbd299078c19d5bc994a85d7628594a07a9c10d0c31883901a5bc21",
+      "size": 1610075989
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "95a5d6595f85acbe1f83854a962b6cc5891219e7b8e87d6bfd3c27fa8f2e1237",
+      "size": 472
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "e20ddafc659ba90242154b55275402edeca0715e5dbb30f56815a4ce081f4893",
+      "size": 11422778
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a8dade878894b7aa48d52c03a71c282d728560b4546e19430df742622f048f46",
+      "size": 6782
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/DeepSeek-R1-Distill-Qwen-1.5B-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6ecfd4923e2018e4c8afe4b413b9db10697d4489c00e00de68fbc1e3f353f12f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.deepseek",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:59:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-bnb-4bit/resolve/c6198f4cd0922d6d850bac1ae8719935d621a5c4/"
+    }
+  ],
+  "upstream": {
+    "commit": "c6198f4cd0922d6d850bac1ae8719935d621a5c4",
+    "host": "huggingface.co",
+    "repo": "unsloth/DeepSeek-R1-Distill-Qwen-1.5B-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-bnb-4bit/tree/c6198f4cd0922d6d850bac1ae8719935d621a5c4"
+  }
+}

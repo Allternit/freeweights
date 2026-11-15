@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T05:14:28Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "b8fe304d6eb1a60aa2af1e3463ddc8d6b3415630bce4d0cadf54716ebc8119ab",
+      "size": 1947
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6d89ffffbe8807803471caee117a367ecd0d1eafd656ac397ed793d74679e3be",
+      "size": 10839
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "4afab8361a4bd0c2994404e0b0851dbaad461a06e56bdfdb635aae3977473c19",
+      "size": 5250
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "432f3f29e28a85ec7ef0d51372b526f8e3c4c905a45395bf24f74f2972d539b3",
+      "size": 1454
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c37b388bb889d8d7caeacfad108e11aac8b6cc02c0c4d854ab43b4c68d97320e",
+      "size": 143
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "40a6cf0b4aeada2abf9a837a96dc3c5b4f94bd08b4951f1ebb2d81953d585fd1",
+      "size": 609951
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "d714a098d207a37829da6d2b7e892a346dc3d8d42cd1b7afff34fbaedde92b05",
+      "size": 1610612736
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data_1",
+      "sha256": "ca5e0a87dce74c7ac43816b63f563914a529fef12c701e11ed594c682ed75f1f",
+      "size": 1070149632
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data_2",
+      "sha256": "eabd8115f4f31fadc6697277761ef7dc34028b21f4a443a38c8b1f5eab33f101",
+      "size": 1069547520
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "53c49a8777779cf19a0ef717af08f5f21fbdc9ceb9f2d6327a49ed7c33bcdc6b",
+      "size": 1287897
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "cc658afc41406219be11da978710138338a038f05f7492a1fd24212f0942c4d1",
+      "size": 1062770688
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_1",
+      "sha256": "91ce2c6b004da1827301854e9ce102e48cc64c51d3b54c4b53d06391d38f460f",
+      "size": 1070530560
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_2",
+      "sha256": "8b4dc3975f81d6ac21ed4a4004534a517f0d35a43fa8dbd36d1fbf2bcae37a6a",
+      "size": 611647488
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be12f4375d655cc740864e3a9041bcddd8477942f209d9e7f27f6c8767162638",
+      "size": 17078368
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "03671df6e13fe176166f43661f4316e0cc97defe31c1267111a8fde69b975b8f",
+      "size": 5740
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Apertus-v1.1-4B-Instruct-QAD-INT4-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6d89ffffbe8807803471caee117a367ecd0d1eafd656ac397ed793d74679e3be",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:14:28Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Apertus-v1.1-4B-Instruct-QAD-INT4-ONNX/resolve/87924ac829e8a9f1fe9a8e29de6277868e7fe2dc/"
+    }
+  ],
+  "upstream": {
+    "commit": "87924ac829e8a9f1fe9a8e29de6277868e7fe2dc",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Apertus-v1.1-4B-Instruct-QAD-INT4-ONNX",
+    "url": "https://huggingface.co/onnx-community/Apertus-v1.1-4B-Instruct-QAD-INT4-ONNX/tree/87924ac829e8a9f1fe9a8e29de6277868e7fe2dc"
+  }
+}

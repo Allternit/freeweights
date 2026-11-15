@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:32:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "72e48905f12919a54baceefe0aac7fb7a217f6d0565057e3c9492979a09a0c86",
+      "size": 3039
+    },
+    {
+      "lfs": false,
+      "path": "open_clip_config.json",
+      "sha256": "641fd7487d1a6155d9ca895922e164a6383095e73150beb95ecfb40760166500",
+      "size": 984
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_model.safetensors",
+      "sha256": "8ceec00df3c462d155d172933339cd9178a86bfab72f4458dbe84bd54f5ad026",
+      "size": 4544235176
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_pytorch_model.bin",
+      "sha256": "a70741c61fe681e48c79f31ca25f1430f3153dec80f695a0ba18967a70a8f7a4",
+      "size": 4544432802
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "d4671afd8f9b1ccd170443bd5478c0cc40fdbddc9343034caf6984ffd388b2c4",
+      "size": 327
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "220c63d496e0c14e63eb656c91e0215e926202e4c74b1f089e09f1920d779b04",
+      "size": 34362885
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "513e778583a9ac0b74ae47784216f9d654d5132eee62d777597f5e842701323c",
+      "size": 46382
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/ViT-SO400M-16-SigLIP2-384",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "72e48905f12919a54baceefe0aac7fb7a217f6d0565057e3c9492979a09a0c86",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:32:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/ViT-SO400M-16-SigLIP2-384/resolve/fec784dabb3081a5f101fc74eefaf9d1ed08237b/"
+    }
+  ],
+  "upstream": {
+    "commit": "fec784dabb3081a5f101fc74eefaf9d1ed08237b",
+    "host": "huggingface.co",
+    "repo": "timm/ViT-SO400M-16-SigLIP2-384",
+    "url": "https://huggingface.co/timm/ViT-SO400M-16-SigLIP2-384/tree/fec784dabb3081a5f101fc74eefaf9d1ed08237b"
+  }
+}

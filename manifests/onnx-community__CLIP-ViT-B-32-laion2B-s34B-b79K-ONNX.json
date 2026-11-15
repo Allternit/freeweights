@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:20:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7522aab1e4bfc0699d7e876f95100b3ec3f44cc0cb3ae79107609d8de4065139",
+      "size": 8077
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c1d049824575fc7e2a68e7a75f556da00c8e240b08ef2f11f40fe901de637838",
+      "size": 1134
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "2cf072dd3df318189ec5d0c0e93b7a277279c10cd7838ff5593c6d93485a790e",
+      "size": 605554901
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "aa0ec6a63ca0b5074cc7f31cc75927e58e16cafbbd5f765efb1aa549b8e2a361",
+      "size": 189308486
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "c8557d25bd2f0c8b69760ff210c29e3507bafc6f445f59b9c13a8a6f242b266d",
+      "size": 303174552
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "2ac8410fe198fbd003cd97460bdd68653d99c33f53311881cd306190067aee9b",
+      "size": 152708043
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "aa0ec6a63ca0b5074cc7f31cc75927e58e16cafbbd5f765efb1aa549b8e2a361",
+      "size": 189308486
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "70e8ac00b4e0b64931bb23f6e63bab6e53ffcbb6c316176d795fd00084ee4854",
+      "size": 125873471
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "2ac8410fe198fbd003cd97460bdd68653d99c33f53311881cd306190067aee9b",
+      "size": 152708043
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "05d070c85ec6b30cf06313b4928940494561ce3bd2c02859b0b1faf30dbd6995",
+      "size": 152708122
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "205d45875859846dc1ca211b9a19f5db72f47e953b396954ee34d48d8e95c3c6",
+      "size": 466
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2cdb3b8331a60c92fc1e55a13e9fd61fd2293c5a51275fdcccd62b780052530e",
+      "size": 588
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6d9109cc838977f3ca94a379eec36aecc7c807e1785cd729660ca2fc0171fb35",
+      "size": 3642073
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "c3d2a67c48a59ffa8fd92de060608524b12cae93acb4fe83e5eb03147a001f5a",
+      "size": 774
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363",
+      "size": 862328
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/CLIP-ViT-B-32-laion2B-s34B-b79K-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7522aab1e4bfc0699d7e876f95100b3ec3f44cc0cb3ae79107609d8de4065139",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/CLIP-ViT-B-32-laion2B-s34B-b79K-ONNX/resolve/de693d0c5a5b263ae94ece9bf751e0cda14305d8/"
+    }
+  ],
+  "upstream": {
+    "commit": "de693d0c5a5b263ae94ece9bf751e0cda14305d8",
+    "host": "huggingface.co",
+    "repo": "onnx-community/CLIP-ViT-B-32-laion2B-s34B-b79K-ONNX",
+    "url": "https://huggingface.co/onnx-community/CLIP-ViT-B-32-laion2B-s34B-b79K-ONNX/tree/de693d0c5a5b263ae94ece9bf751e0cda14305d8"
+  }
+}

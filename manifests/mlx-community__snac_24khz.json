@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T02:49:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d8d7a46d41a1a37fe4f0a5f637bf55c649310185329127d8a2204632e480be17",
+      "size": 24
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e119b9366d4f5e73c6ca5f31137c4ff361578bbb132953a5203afe037c4012be",
+      "size": 300
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e61ae2f638f56ee07a37592cd5a6a9e7d642560ddc78a76ee4a7f96d6922f1be",
+      "size": 79404951
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/snac_24khz",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d8d7a46d41a1a37fe4f0a5f637bf55c649310185329127d8a2204632e480be17",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:49:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/snac_24khz/resolve/556af1cd3b1c5f2d294f6aa9bb886245d7b716ac/"
+    }
+  ],
+  "upstream": {
+    "commit": "556af1cd3b1c5f2d294f6aa9bb886245d7b716ac",
+    "host": "huggingface.co",
+    "repo": "mlx-community/snac_24khz",
+    "url": "https://huggingface.co/mlx-community/snac_24khz/tree/556af1cd3b1c5f2d294f6aa9bb886245d7b716ac"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "fastino/gliner2-large-v1",
+  "display_name": "GLiNER2.5-Decide",
+  "family": "fastino",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "fastino/GLiNER2.5-Decide",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/fastino/GLiNER2.5-Decide.json",
+  "params": 486444053,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "fastino/gliner2-large-v1",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 83553,
+    "likes": 457,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "T1",
+  "total_size": 1954846857,
+  "upstream_url": "https://huggingface.co/fastino/GLiNER2.5-Decide",
+  "what_changed": null
+}

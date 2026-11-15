@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:19:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3c47452977c74868f38a35b3fa3b9313018816871525d061a767b0318ec560a4",
+      "size": 10206
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "104352dc474ae69766464e9f0167bba4fdd2a38f7a1bc3e3f82a2041d8ccfc8e",
+      "size": 820
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "3d89ae57c333a82ccb1b363702f53a911f83fe663e68f2e4ffb4a129d8b2ef57",
+      "size": 511129530
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "e81993b915f1d97c849e5360197b64facdd1988db467d45d9e8ed4fa29b3ac6c",
+      "size": 216508527
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "2d8d6fdca4f271068887834da31a03a0c042b8ad72a0f9100e6dec520c7ce6a7",
+      "size": 333171578
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "a1be5f76423efc3405e7bc0627d107ee339dfe37335bb580773e75d2dc75b663",
+      "size": 247651856
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "e81993b915f1d97c849e5360197b64facdd1988db467d45d9e8ed4fa29b3ac6c",
+      "size": 216508527
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "3b65f736835983c3f58d7338caebb5c0f31f034162456bebe80acf4a031012b6",
+      "size": 207677988
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "a1be5f76423efc3405e7bc0627d107ee339dfe37335bb580773e75d2dc75b663",
+      "size": 247651856
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "0450056af8e834da3674c7f5df729eb4e2cc52692ef6f57afa23a89dd74cb073",
+      "size": 247651893
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "2723351e75bfcfb9a47656a8b46e259e3649ae7b2545c9deb2ce8a0f3a840d18",
+      "size": 441
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/yolos-base-signature-detection-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3c47452977c74868f38a35b3fa3b9313018816871525d061a767b0318ec560a4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:19:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/yolos-base-signature-detection-ONNX/resolve/0cfe1efc3388fd0063109739c8403b5802324431/"
+    }
+  ],
+  "upstream": {
+    "commit": "0cfe1efc3388fd0063109739c8403b5802324431",
+    "host": "huggingface.co",
+    "repo": "onnx-community/yolos-base-signature-detection-ONNX",
+    "url": "https://huggingface.co/onnx-community/yolos-base-signature-detection-ONNX/tree/0cfe1efc3388fd0063109739c8403b5802324431"
+  }
+}

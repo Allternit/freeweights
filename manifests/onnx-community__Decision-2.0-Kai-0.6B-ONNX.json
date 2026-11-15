@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:20:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "9c896fa7185b550d0a0a3c1e87569428c643155ce7ee6d232273c6f06e9fa88e",
+      "size": 1637
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e8233a3c7012cd2a6b910bd6bc3dfca631841adb7952a454b5886ce15675f2b8",
+      "size": 3511
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7fdd02f449566a4f726ddbc8e3b4623322f948a172d9867f0353ad1dbcdae8c0",
+      "size": 885
+    },
+    {
+      "lfs": false,
+      "path": "conversion/bench_check.py",
+      "sha256": "f2bd4976c8aabb833334de88cdacb1191d8c136c3150805a343e6893105478ed",
+      "size": 2600
+    },
+    {
+      "lfs": false,
+      "path": "conversion/build.py",
+      "sha256": "b22a884567cd7d037fbd9375919ceea3bccfa00ffbbc353229232bb3398cb0ce",
+      "size": 12356
+    },
+    {
+      "lfs": false,
+      "path": "conversion/export_qwen3.py",
+      "sha256": "7336b9708f44fa235487bb9d3d814ad943b356676053c7f6d44abb91dd2cc9c6",
+      "size": 3605
+    },
+    {
+      "lfs": false,
+      "path": "conversion/fixtures/reference-Kai-0.6B.json",
+      "sha256": "9000ab86103ed4b045fa2a93190ae361c1c1973acad16a229cf28800bc60ce8a",
+      "size": 20523
+    },
+    {
+      "lfs": false,
+      "path": "conversion/fixtures/requests.json",
+      "sha256": "b337132b79990533d1e7d6f02a64d117f90eb0e51a5d9e3653d3bcf8cf535dd8",
+      "size": 2306
+    },
+    {
+      "lfs": false,
+      "path": "conversion/make_repo.py",
+      "sha256": "e1babb3ac57e16f566b4b2e46825ab2436568c1a38fb9900889eec8564289baf",
+      "size": 2592
+    },
+    {
+      "lfs": false,
+      "path": "conversion/parity.py",
+      "sha256": "2777e07df9c4c8a71cfcd1a86b7d777e1bd8d33eecf23830374da52753988172",
+      "size": 1988
+    },
+    {
+      "lfs": false,
+      "path": "conversion/quantize_qwen3.py",
+      "sha256": "ce9791562b58fc49fe7380f781559032965aa0a5b74557951d008c75b079d4bc",
+      "size": 1307
+    },
+    {
+      "lfs": false,
+      "path": "conversion/qwen3_5_opt_mapping.json",
+      "sha256": "67fae39e0923e3e097c43b5871f8127986581d1f13d8454ff788a21a44ef86a3",
+      "size": 78931
+    },
+    {
+      "lfs": false,
+      "path": "conversion/reference.py",
+      "sha256": "6938846e8ea2cf852d8191d739833f8b73b499096cd6dedcbf314aa875df983d",
+      "size": 2153
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "a509e10307478ca829e2aa90142066a8ed9a5a0dd867add9ed9a2039e4770fde",
+      "size": 1519503
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx_data",
+      "sha256": "5e4cae16253eb2ad94bdb5e82296c9dd55c3dd961d42d5b18542ff765b67e4df",
+      "size": 610348032
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "cbea7bca9904d56693d2226b00fd564e3be053609d1e50f8f1885510f0f6e790",
+      "size": 695
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Decision-2.0-Kai-0.6B-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e8233a3c7012cd2a6b910bd6bc3dfca631841adb7952a454b5886ce15675f2b8",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Decision-2.0-Kai-0.6B-ONNX/resolve/13ab55013ab1828d5dea3b716ee4d6229faf3fde/"
+    }
+  ],
+  "upstream": {
+    "commit": "13ab55013ab1828d5dea3b716ee4d6229faf3fde",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Decision-2.0-Kai-0.6B-ONNX",
+    "url": "https://huggingface.co/onnx-community/Decision-2.0-Kai-0.6B-ONNX/tree/13ab55013ab1828d5dea3b716ee4d6229faf3fde"
+  }
+}

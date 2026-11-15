@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen3-8B",
+  "display_name": "GDN-primed-HQwen3-8B-Reasoner",
+  "family": "qwen",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "amazon/GDN-primed-HQwen3-8B-Reasoner",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/amazon/GDN-primed-HQwen3-8B-Reasoner.json",
+  "params": 8497885056,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen3-8B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.qwen",
+  "signals": {
+    "downloads_30d": 135,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 17007315777,
+  "upstream_url": "https://huggingface.co/amazon/GDN-primed-HQwen3-8B-Reasoner",
+  "what_changed": null
+}

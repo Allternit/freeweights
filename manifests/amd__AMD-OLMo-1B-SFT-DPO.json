@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T04:13:24Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2357d920cd33ee59faae782e47a53c03553f3f5dd31d6a8a6ce5691027c2063a",
+      "size": 17201
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "95153241d18c58f712a0e12d41014a82d30c694c0472cfa7d6e72d8a8acc4d55",
+      "size": 609
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e9a6fc6755330e6da09ba04b1137c4db0744faafc0fa609ff378fd6989518295",
+      "size": 115
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "597aaf327ecaeab8d7e242cc0d3e02776678dc674467748bdc4ee7c4bea94f02",
+      "size": 4707070632
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8d658498bfbc6ec6ff3438c1c896dfd210c519d0c21c69f8f69af8cbb20ef128",
+      "size": 445
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "a069589bfda823e26d238c46841134aecf9a88f9b9c3f04763edc488fa836c5c",
+      "size": 2114623
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "551af65ff350a454f0d4232ad9553cbd49365517af628411b1374ce936913832",
+      "size": 5773
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amd/AMD-OLMo-1B-SFT-DPO",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2357d920cd33ee59faae782e47a53c03553f3f5dd31d6a8a6ce5691027c2063a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:13:24Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amd/AMD-OLMo-1B-SFT-DPO/resolve/cdb72aeda3190a10d0bb73645fb138d0e99bfbef/"
+    }
+  ],
+  "upstream": {
+    "commit": "cdb72aeda3190a10d0bb73645fb138d0e99bfbef",
+    "host": "huggingface.co",
+    "repo": "amd/AMD-OLMo-1B-SFT-DPO",
+    "url": "https://huggingface.co/amd/AMD-OLMo-1B-SFT-DPO/tree/cdb72aeda3190a10d0bb73645fb138d0e99bfbef"
+  }
+}

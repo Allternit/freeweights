@@ -1,0 +1,360 @@
+{
+  "created_at": "2026-11-15T02:35:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5fa862361990f0c426213dce47db4ed9f2b0609a882b70955ff011137fe0cff5",
+      "size": 1749
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE.txt",
+      "sha256": "fccbe004b9870859aa97ba932e647cb1ac39f54716ef008ddf666d86a34ffd98",
+      "size": 11625
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d39a0b20199e45f867f33d5249b9cba708a0214e947eb91d215968d384a1a665",
+      "size": 15470
+    },
+    {
+      "lfs": false,
+      "path": "README_CN.md",
+      "sha256": "a9c12e104fd2095652a8f7e842431aee8f453a83e44583cf3d3c54f90cf65aa6",
+      "size": 14474
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "788ac16c5d7bfefc28655928ad524c8f378a44cb24d24fb125d6a5859b167677",
+      "size": 662
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "42ed02c39f281192535511c94be1a86a93cedca5a995ab4ad886cd36955602c0",
+      "size": 1349
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "56cd0974cae79f49ecaec4a02936bcabed2a4c8d8b6a780bf4a94ccbf344a78b",
+      "size": 217
+    },
+    {
+      "lfs": false,
+      "path": "imgs/logo-en.png",
+      "sha256": "0cd56e2438d4c91a5d529b3102f800de5f17c768f73caaf4848a864e7b741080",
+      "size": 65860
+    },
+    {
+      "lfs": false,
+      "path": "imgs/logo-zh.png",
+      "sha256": "1e9a9aea04658439e1af23db01c4cd2c6c6765fd1efd1a594c7ffdd312f31bb6",
+      "size": 69906
+    },
+    {
+      "lfs": true,
+      "path": "imgs/main_result.png",
+      "sha256": "b87606817fec4fbdaca939de433e4d2a8e92d65493f44222aaaefb381f5a8c6e",
+      "size": 3840604
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "eb51c57590920e9fe28116d26fdf4dd7945951849faabb3788dfafeef0bcfdc0",
+      "size": 4949503392
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "ecdbc6cab7125d31f19ad540afc235b856bd6691679853b594b33d79e5eb3285",
+      "size": 4967588264
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "1286f0a1d50f61e397211153d4d188ad67ef77733cf24557cd097d28f3119d97",
+      "size": 4925662096
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "596bcdd619fddb7e5ef3ad8764b083f214556638c70fd81105cca96700b9fbb6",
+      "size": 1216368504
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "f2b678f7a99a0b9471252cebed0a60dfb570bf71a6f4d6c478b7553471ac29c8",
+      "size": 29790
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c6571f2ee67c36fa93d7f688ee6fd43f5b84784e895f3e6a4eb8c2657379758e",
+      "size": 431
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "4185389a69284fdd3ebf737c6120bbeee36cbed9763151fa5bac5986a39e05d4",
+      "size": 16388221
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "1fffdb809549222938f4a732645dd984c7c0b2973d592c2d01e05425274317da",
+      "size": 37763
+    },
+    {
+      "lfs": false,
+      "path": "train/README.md",
+      "sha256": "52a6e022b7952456beb8bc687421c9ceb7907b20f5e43aa4b4e151f0366e64bb",
+      "size": 15424
+    },
+    {
+      "lfs": false,
+      "path": "train/README_CN.md",
+      "sha256": "9e63999ed926d666ee7ee70e960ee95727efbe3ca4c2e8c127262a5c6dc923dd",
+      "size": 14167
+    },
+    {
+      "lfs": false,
+      "path": "train/data/example_data.jsonl",
+      "sha256": "93eb14aa231440026efab2a62d01625ab726f5fc5b05a2a650201c62a6d91919",
+      "size": 27750
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/ds_zero2_no_offload.json",
+      "sha256": "2da79dccadac076531b7721ef91705ddac34b4122994a11bd0916187e572049f",
+      "size": 528
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/ds_zero2_offload.json",
+      "sha256": "d9ddffe293c091891c9ac72557830d4fb4c3d9fc941da8497a7f5cf42d0313c6",
+      "size": 676
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/ds_zero3_no_offload.json",
+      "sha256": "0056413515c3eae7ff997fec33cdff0c942956ddecd153185dc752cd7af417aa",
+      "size": 1100
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/ds_zero3_offload.json",
+      "sha256": "08db577e6e9cc723da661b93a4211ce8f4bb0677f010e8b46a8709d023cc185f",
+      "size": 1099
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/ds_zero3_offload_no_auto.json",
+      "sha256": "a2eec2f9714a58126c44444fdc54c7e5deac6d27b495cd3fbd54f3ab25727a43",
+      "size": 944
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/merge_lora_weight.py",
+      "sha256": "1cccdbfe8986fe033c6ad4a65308bb1127d4aeb1ff09bb8b8f9757f97e998f49",
+      "size": 2512
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/merge_lora_weight.sh",
+      "sha256": "309b21db84a2cd041a602809de56fbb3ec94ec74333b9f9d73439f1dc200b595",
+      "size": 269
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/train.py",
+      "sha256": "0ce02825dec02811aa0ec38464ce5bcd9e13788033a3a42ef663b515ae4e7c5a",
+      "size": 25662
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/train.sh",
+      "sha256": "a907329b71f776bcdd74bc6df0f86bb8561860f0599262ae63d62d4feaac1a8b",
+      "size": 3471
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/train_dense.py",
+      "sha256": "48a8e797ae3787797763b5c8fd7bc711cc131157019184ec91e0712133d42935",
+      "size": 14905
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/train_dense.sh",
+      "sha256": "04255c3287f6facd01a4106d500563abcab281e606f74d2307803f15e698d185",
+      "size": 4853
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/train_dense_lora.sh",
+      "sha256": "de8e8d1f003d10ea434b5ed68d23a257750d06944a606b4956256012debb1ffb",
+      "size": 5081
+    },
+    {
+      "lfs": false,
+      "path": "train/deepspeed_support/train_lora.sh",
+      "sha256": "e5c97d9f0ac93fc5f5570bb71767c372f004b6b34778209ca1d111bcc52aedf7",
+      "size": 3603
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/convert_zero_to_hf.sh",
+      "sha256": "5777d2f94d2459490355f4a3344f3e98f289641450036d721f0689862f839c2b",
+      "size": 5925
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/dataset_info.json",
+      "sha256": "c239efced4c24c867065061b97e52526a400bc1cb947bb563707777bf5062f96",
+      "size": 974
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/ds_zero2_offload.json",
+      "sha256": "903b1d23add89ad81946d7eb4ca37f641a1746abdf5df119197008075ed04ef8",
+      "size": 892
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/ds_zero2_offload_lora.json",
+      "sha256": "f43dd911018ff918b858a9a7fd3a5f8b7cb38d402968d4dc4ad288fea396b892",
+      "size": 795
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/ds_zero3_offload.json",
+      "sha256": "c779017544f9ad21e6d44942267e9b68a7a820bc9cf03b04267e63a30a48ac23",
+      "size": 954
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_dense_1_8b_full_sft.yaml",
+      "sha256": "266c7eaff7e1c79de70b342684333d8999a71ba5ad1936b8fde9ba2ea7f5ff7b",
+      "size": 1077
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_dense_1_8b_lora_sft.yaml",
+      "sha256": "907b2015f600ed1601de2b9a79b60bc8b52bdddf4fc3b28dc334f483533f3618",
+      "size": 1193
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_dense_7b_full_sft.yaml",
+      "sha256": "db1df982fd808e1dccfdd9df09d274b69ce98827f03f0aa3f9cce4092f9956c8",
+      "size": 1071
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_dense_7b_lora_sft.yaml",
+      "sha256": "2ddd87a6347535945c8494dce69479a345d640088307864a1c0547c4b40afa4d",
+      "size": 1187
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_dense_template.py",
+      "sha256": "270b75167d6918c662aef5eb15d0e17293b1410540df9f9787ba7d06ee646587",
+      "size": 3616
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_v3_full_sft.yaml",
+      "sha256": "7baf1dbb3b71542c354e9e097252500c7499a55272dad87fbb1612c0f897c180",
+      "size": 1076
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_v3_lora_sft.yaml",
+      "sha256": "a4cd7172bfc1aa777f15fcb926b24f1aa6e677569f83bde45cfc3d2ebc21b535",
+      "size": 1231
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_v3_patches.py",
+      "sha256": "7fc1da6e408dc92919097370c52e13794191379dd5c17fa9ef3e0d2766dbcd68",
+      "size": 8783
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/hy_v3_template.py",
+      "sha256": "b69ba86486d51519ee740dc8cec0d594242a253e0208d8461abd82382516d09a",
+      "size": 1933
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/train_hy_dense.py",
+      "sha256": "a76bdd3d8f5b64afa57cdffda18c0af50fc521ea953e56c11ec34856b778af33",
+      "size": 2982
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/train_hy_v3.py",
+      "sha256": "d9a25398a6c8a1cd1f84825214ad1c2bfa6909499b5154fb32807845f3d7ccc2",
+      "size": 2475
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/train_lf.sh",
+      "sha256": "b3fa0a34984979c7bb9022ff9c260e0ea0207d7388515c46db601a97237165d6",
+      "size": 3904
+    },
+    {
+      "lfs": false,
+      "path": "train/llama_factory_support/train_lf_dense.sh",
+      "sha256": "69cee8af67568cb94396ec9221aa1af215a999a8f50d7d15f970ea24fe333ca3",
+      "size": 4197
+    },
+    {
+      "lfs": false,
+      "path": "train/requirements.txt",
+      "sha256": "9b2a03f384590d189cc798b71baa53c5aebfcf70c7c47123f8019a453aafa885",
+      "size": 159
+    },
+    {
+      "lfs": false,
+      "path": "train/tools/check_converted.py",
+      "sha256": "459fe1262a20a63a17a0eeb5b5778703776405c38b17958240c440c2e997cafa",
+      "size": 15567
+    },
+    {
+      "lfs": false,
+      "path": "train/tools/convert_ckpt_to_outer.py",
+      "sha256": "59dc37a2f5dc93c04ccc64e6550edc2d10ccb5b2e25b4789e657cc2b5a4084fa",
+      "size": 23540
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "tencent/Hy-MT2-7B",
+  "license": {
+    "file_path": "LICENSE.txt",
+    "file_sha256": "fccbe004b9870859aa97ba932e647cb1ac39f54716ef008ddf666d86a34ffd98",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:35:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/tencent/Hy-MT2-7B/resolve/9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223/"
+    }
+  ],
+  "upstream": {
+    "commit": "9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223",
+    "host": "huggingface.co",
+    "repo": "tencent/Hy-MT2-7B",
+    "url": "https://huggingface.co/tencent/Hy-MT2-7B/tree/9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223"
+  }
+}

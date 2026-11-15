@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T03:38:37Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "70f4e97f7e7f689bb89f2acaf673c4d70b27ca595fcbe826f8e89eeb16b2feee",
+      "size": 14471
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "0a4df7f7953a90443fa51b6ca723242f6cb29e7fc34b1f27fc320c8e60de45b7",
+      "size": 86
+    },
+    {
+      "lfs": false,
+      "path": "gliner_config.json",
+      "sha256": "f7ffe0e786d3df82a08aa62b5d0fa1649a787f2b33f8173d41a3627fe6bd6b7f",
+      "size": 3756
+    },
+    {
+      "lfs": false,
+      "path": "gliner_multitask_performance.png",
+      "sha256": "fc9bb107617a2b30f627975b530836af5a213b757f9e1ef0c14ebeef69c38ff2",
+      "size": 76792
+    },
+    {
+      "lfs": true,
+      "path": "model.bf16.safetensors",
+      "sha256": "df0402c51312a55ec6199f4d674357b353f75e3fbe21167d00ab2f7e6d9a5d03",
+      "size": 880500534
+    },
+    {
+      "lfs": true,
+      "path": "model.fp16.safetensors",
+      "sha256": "df1f05739d7c34dfdc886e72a153c2373553fcaa70a0b825ae05bbc0dc67a6e7",
+      "size": 880500126
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "c525ec47bac7dd49a0fef14a7d79c55247fe468e1e13ac0050d3b7136507a1f4",
+      "size": 1761073550
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "9463f61e1b109a8eb4688b829260d7c6b1e6dff04c98ff7269bb89e2b92369b9",
+      "size": 286
+    },
+    {
+      "lfs": true,
+      "path": "spm.model",
+      "sha256": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "size": 2464616
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "44ce8be1f3118c673c7408bf903766c38bf1ea507e9b8f1e3d85b253a9a12ad1",
+      "size": 8657176
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "884542579ae0063aaf25a0a19f66838428f3070b1740dc30c8dea20d79b51365",
+      "size": 1837
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "knowledgator/gliner-multitask-large-v0.5",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "70f4e97f7e7f689bb89f2acaf673c4d70b27ca595fcbe826f8e89eeb16b2feee",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:38:37Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/knowledgator/gliner-multitask-large-v0.5/resolve/7a95e168036db9ec6f914c0cc6b218edbd87f310/"
+    }
+  ],
+  "upstream": {
+    "commit": "7a95e168036db9ec6f914c0cc6b218edbd87f310",
+    "host": "huggingface.co",
+    "repo": "knowledgator/gliner-multitask-large-v0.5",
+    "url": "https://huggingface.co/knowledgator/gliner-multitask-large-v0.5/tree/7a95e168036db9ec6f914c0cc6b218edbd87f310"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:41:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f8213b2c1f227a41199ab8f065220a4ab4100d090fc2c1e2c1ebe5cb442c4492",
+      "size": 3035
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "size": 4116
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4a4f25aad72c8c7d777fc947a26820c6800f346f95c2e04821bdab5c88de68b4",
+      "size": 1593
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "b535f5758b2fc8aa45b6df3ef0176abe1e0d3be7a517c0ef6e5157e341ee7bc9",
+      "size": 139
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "14cc3b8c3be56a4abf6ace31f3805cad2d97b5014ac9ba7bf5ccd404b6bbdbfb",
+      "size": 4990818672
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "3f39f921c5bf1d3bdb9dec7235977ae83812ca29d8d32d9f33f1188bb4e231bb",
+      "size": 3054163328
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "291af274b91a17c5b85cac516720831aa4858e46cf01f8a768f023a2fe97988e",
+      "size": 32855
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ddb9f850ca6559a928bb25d511f72e3c6eff81395334a4e0eeec670448333d09",
+      "size": 697
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "xysera/zen-4b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f8213b2c1f227a41199ab8f065220a4ab4100d090fc2c1e2c1ebe5cb442c4492",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:41:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/xysera/zen-4b/resolve/daca9496a69dd54332882b2b85033569d95ccb09/"
+    }
+  ],
+  "upstream": {
+    "commit": "daca9496a69dd54332882b2b85033569d95ccb09",
+    "host": "huggingface.co",
+    "repo": "xysera/zen-4b",
+    "url": "https://huggingface.co/xysera/zen-4b/tree/daca9496a69dd54332882b2b85033569d95ccb09"
+  }
+}

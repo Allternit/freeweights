@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "ibm-granite/granite-guardian-3.2-5b",
+  "display_name": "granite-guardian-3.2-5b-lora-harm-categories",
+  "family": "granite",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "ibm-granite/granite-guardian-3.2-5b-lora-harm-categories",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/ibm-granite/granite-guardian-3.2-5b-lora-harm-categories.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "ibm-granite/granite-guardian-3.2-5b",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.granite",
+  "signals": {
+    "downloads_30d": 0,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 66541422,
+  "upstream_url": "https://huggingface.co/ibm-granite/granite-guardian-3.2-5b-lora-harm-categories",
+  "what_changed": null
+}

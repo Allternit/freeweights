@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T04:31:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "20de533eb8d71b1f8e31da1c346d34eab8f6ce78418bc305115f128be747ba13",
+      "size": 1812
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0edb184d6fa30a3e72008f947641b821ddd0dd547020eadef835b0c9b98dd00d",
+      "size": 13288
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "d29b588e6e4ca282de33b17a86b2137be3b7d1e888c0daa37376432168eba5b1",
+      "size": 865
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "01f931c4a8bc84c2a04ab3a0463337147f74086a2c71cd479914b4627d1e8800",
+      "size": 49554176
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": true,
+      "path": "images/Benchmark_PRM_perf.png",
+      "sha256": "fe3a4dfb3f8a28b76b16ab110154b4af55facdcb7db9a226ae088692a372edfc",
+      "size": 485168
+    },
+    {
+      "lfs": true,
+      "path": "images/PRM_BON.png",
+      "sha256": "509931e746d99d24338cd9802be510b83d8edc2102e6ac9b13064fa503bc0ea9",
+      "size": 581525
+    },
+    {
+      "lfs": true,
+      "path": "images/PRM_BoN_rows.png",
+      "sha256": "05d407b6a171b8329cf1843684e6aa560541ac879e7040234c061a7bfa1f9d4e",
+      "size": 556507
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+      "size": 3476578
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "779e67b59a86d0b8d2aeb98eaa6867b054b0270a0ea58db228162333c13610ea",
+      "size": 9931
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-3.3-8b-lora-math-prm",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0edb184d6fa30a3e72008f947641b821ddd0dd547020eadef835b0c9b98dd00d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-3.3-8b-lora-math-prm/resolve/11bd6b87de1fa9b29af38f42b7f515a43477b93a/"
+    }
+  ],
+  "upstream": {
+    "commit": "11bd6b87de1fa9b29af38f42b7f515a43477b93a",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-3.3-8b-lora-math-prm",
+    "url": "https://huggingface.co/ibm-granite/granite-3.3-8b-lora-math-prm/tree/11bd6b87de1fa9b29af38f42b7f515a43477b93a"
+  }
+}

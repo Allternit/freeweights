@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T04:53:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f9a288145aca3aeec288eb836b6c81b49bc283afde660cd4794c579e1abaf189",
+      "size": 2232
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2a265ae05a51baf0aff0f1de008a2cfafd989ae569db47603df25449a5159667",
+      "size": 821
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "1af231a93dbec951f0b4977c551a21e14c102bc9c2d82607d72765896a4f6288",
+      "size": 5285171961
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "2cc25981f68dbde567ead2d7d8ed2d8d2998e2b65d58cd7c55678a5e8fb6afa4",
+      "size": 5314707233
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "03c2f3a37668f2e058066240ec3dacafad47c8fe4b286efb44d0ee6b78f6acc0",
+      "size": 2660299632
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "42180bd2e96e647bf8528c861f5c25adfbf8dfa87e12fe6e7662df4beeafe5f0",
+      "size": 79327
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5bc5d1c106bf86895473568ef5211f3fde8415e6fdee039223d6db8ca52cbe01",
+      "size": 21311
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "b76085f9923309d873994d444989f7eb6ec074b06f25b58f1e8d7b7741070949",
+      "size": 17078037
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "04e3269106e221546f5199fc81c97ff816c252986cc039d3e441d121fd0d3be6",
+      "size": 200656
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/Magistral-Small-2506-MLX-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f9a288145aca3aeec288eb836b6c81b49bc283afde660cd4794c579e1abaf189",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:53:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/Magistral-Small-2506-MLX-4bit/resolve/a687c32833447c00e782d3dab037ef7c00bad86a/"
+    }
+  ],
+  "upstream": {
+    "commit": "a687c32833447c00e782d3dab037ef7c00bad86a",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/Magistral-Small-2506-MLX-4bit",
+    "url": "https://huggingface.co/lmstudio-community/Magistral-Small-2506-MLX-4bit/tree/a687c32833447c00e782d3dab037ef7c00bad86a"
+  }
+}

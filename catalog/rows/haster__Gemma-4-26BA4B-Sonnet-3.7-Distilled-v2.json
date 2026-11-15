@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/gemma-4-26B-A4B-it",
+  "display_name": "Gemma-4-26BA4B-Sonnet-3.7-Distilled-v2",
+  "family": "gemma",
+  "formats": [
+    "gguf"
+  ],
+  "id": "haster/Gemma-4-26BA4B-Sonnet-3.7-Distilled-v2",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/haster/Gemma-4-26BA4B-Sonnet-3.7-Distilled-v2.json",
+  "note": "The license of the base model google/gemma-4-26B-A4B-it applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/gemma-4-26B-A4B-it",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.gemma",
+  "signals": {
+    "downloads_30d": 4591,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 43655874856,
+  "upstream_url": "https://huggingface.co/haster/Gemma-4-26BA4B-Sonnet-3.7-Distilled-v2",
+  "what_changed": null
+}

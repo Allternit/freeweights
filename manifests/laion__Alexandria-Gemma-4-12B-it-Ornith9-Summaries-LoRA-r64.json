@@ -1,0 +1,408 @@
+{
+  "created_at": "2026-11-15T05:27:09Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "CITATION.cff",
+      "sha256": "77c83f3864628d1f7e25b4ac5cd9ec5f69b00177de80e3395c58dda8a244f306",
+      "size": 1083
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744",
+      "size": 17023
+    },
+    {
+      "lfs": false,
+      "path": "LICENSES/Apache-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size": 11357
+    },
+    {
+      "lfs": false,
+      "path": "NOTICE",
+      "sha256": "3d2124c44a42c5be62604a6856618459993784c156b73e1ae0b802cd1efd75f8",
+      "size": 877
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "548950c1487e9902fa1d8aaf17be2e370c34da7a2d740394b34b055c39baa9ef",
+      "size": 16923
+    },
+    {
+      "lfs": false,
+      "path": "SHA256SUMS.json",
+      "sha256": "98ef8d5dee5b885df7f86292b63ec654a68975838dacd319b8d1d2fedc255468",
+      "size": 8645
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "bdbb43a6b6533422d6e56adcbe2bda559939f48175027c87a753bfbd6d846c37",
+      "size": 1350
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "ddf8acabdd0fa377c95f0cda57a967083763165af328d5520e8c0fc8176e3607",
+      "size": 1049198920
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+      "size": 18683
+    },
+    {
+      "lfs": false,
+      "path": "code/common.py",
+      "sha256": "db63bc81f7fd35bea06ed9aadf481e839b1596bc79f21a188e0c8f7e4a2d39d2",
+      "size": 1359
+    },
+    {
+      "lfs": false,
+      "path": "code/infer.py",
+      "sha256": "071ddd98a2ba75010215980bc97a5e52174bfd78787e5e2c86a65681e78fd9d9",
+      "size": 8732
+    },
+    {
+      "lfs": false,
+      "path": "code/merge_adapter.py",
+      "sha256": "a55a1883fdeea61ad529c958ce6fb77229b3607bacce42a09cd09105d4bee5ee",
+      "size": 977
+    },
+    {
+      "lfs": false,
+      "path": "code/prepare_training.py",
+      "sha256": "84518608e050000697f22a83c77ac8def8d987c4b1022eb9f515ae51c40e2fce",
+      "size": 3489
+    },
+    {
+      "lfs": false,
+      "path": "code/train.py",
+      "sha256": "845ee13c79139d6841022261bf5f95c0b9289776478183a940f45c966f6a0e51",
+      "size": 7574
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/artifact_links.json",
+      "sha256": "159a6d503d853debb9baf3cc7ee200f8b69ab1bb22f06fada13fb06061070fa4",
+      "size": 3451
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/copy_overlap.json",
+      "sha256": "df1d0369069feddb62c4850e73cb26c2fb1adacb7cc8a286c830d34baa62dcd6",
+      "size": 5873
+    },
+    {
+      "lfs": false,
+      "path": "evaluation/metrics.json",
+      "sha256": "c0aa2983dfb706992ce8dfaa4974b7d4c0f44124dd4558b00928cacc64ffba08",
+      "size": 141075
+    },
+    {
+      "lfs": false,
+      "path": "inference_config.json",
+      "sha256": "cb9962cf5b6a311e395fbd0ddc9a540fbf5d806f1bb5ad835979fd8c7b23139e",
+      "size": 50
+    },
+    {
+      "lfs": false,
+      "path": "prompts/summary_system_prompt.txt",
+      "sha256": "9626c10e1c348be59aa443ba7977664acda72b6ba2a157be56a4d34fe5164ad9",
+      "size": 8922
+    },
+    {
+      "lfs": false,
+      "path": "prompts/summary_user_prompt.txt",
+      "sha256": "876af231a32f627e07aaeee07ae3a594b239a10531f19ec1a64fdd10fafda45c",
+      "size": 342
+    },
+    {
+      "lfs": false,
+      "path": "provenance.json",
+      "sha256": "8b91ecda6635b96eacf635368538cc50c8a06ab3048aebec28d0bb540a6a5e08",
+      "size": 102901
+    },
+    {
+      "lfs": false,
+      "path": "release_validation.json",
+      "sha256": "f5631e08c0db4bdba8b52d4b52b4d393e0bbe1fc79459d1d245247a2d6532f09",
+      "size": 3521
+    },
+    {
+      "lfs": false,
+      "path": "repair/RECOMMENDATIONS.md",
+      "sha256": "b116216b366c9ed2ebdec8631bf9797c02d2634a207e8d8d0429ee893ea7e3a2",
+      "size": 6897
+    },
+    {
+      "lfs": false,
+      "path": "repair/RESULTS.md",
+      "sha256": "2a4705acbccfbbfbb785358eca0a5e887bc82c27211353bd728a05380b7d4569",
+      "size": 11427
+    },
+    {
+      "lfs": false,
+      "path": "repair/SCALING.md",
+      "sha256": "c19f3dced6f4c6b72188297c08316c19de464ab5a126dc1b69968a9439e322c9",
+      "size": 4198
+    },
+    {
+      "lfs": false,
+      "path": "repair/copy_overlap.csv",
+      "sha256": "c8f150766ed1086cec2ede125699b5858c22285787d68a47bccc7f5983d5b773",
+      "size": 212851
+    },
+    {
+      "lfs": false,
+      "path": "repair/copy_overlap.json",
+      "sha256": "ae26170eefc5001b8e84671e33bd7739dc9f1745dc73188d8f0eb690886a480d",
+      "size": 514570
+    },
+    {
+      "lfs": false,
+      "path": "repair/critical_checks.json",
+      "sha256": "bbc56f3f18e0c6df6f388d4e252a9f02eb59b469f5d7408453162bdd273909a2",
+      "size": 159
+    },
+    {
+      "lfs": false,
+      "path": "repair/metrics.json",
+      "sha256": "3b285bc45e96805491dfb4f10f12648f9729f2d7cade8a768ccc3d7f8060699f",
+      "size": 42108
+    },
+    {
+      "lfs": false,
+      "path": "repair/model_pins.json",
+      "sha256": "df8bc569ed85a3fd123b1869530e54899bd8368622ede904c726ebf6701851bc",
+      "size": 820
+    },
+    {
+      "lfs": false,
+      "path": "repair/protocol.json",
+      "sha256": "8a3ed8ba49f6410c218ac5313c602e86168ae50e052944ee9d0771f6dbe039fe",
+      "size": 5447
+    },
+    {
+      "lfs": true,
+      "path": "repair/qa_predictions.jsonl.gz",
+      "sha256": "3b93ba9411bf74ecc855843f831115cca4c658c591e71d342242a5df918f494c",
+      "size": 50245
+    },
+    {
+      "lfs": false,
+      "path": "repair/scaling.json",
+      "sha256": "f3904993e5403fcbd00d181de82173dc2065899a50db016c7e92fc6bd115e64f",
+      "size": 5118
+    },
+    {
+      "lfs": false,
+      "path": "requirements-inference.txt",
+      "sha256": "97ee4b65a5109ed147c788a032f6ef120b444d44578e4bf4feb562bd968de2e0",
+      "size": 34
+    },
+    {
+      "lfs": false,
+      "path": "requirements-training.txt",
+      "sha256": "f53edafba1ae60fcdc60c505eda3808dcb2c10639a5fdf98a2de97726d183b88",
+      "size": 125
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9669970d5b0bcfcb47a09256f9e66837c313926ff15e9ba4c60e8bbe3c6bdf84",
+      "size": 3734
+    },
+    {
+      "lfs": false,
+      "path": "training/manifest.json",
+      "sha256": "ffef00ac8f9715ec3876e318df502c34a9f7f899ed5b0a982dc47e1ec26744db",
+      "size": 91971
+    },
+    {
+      "lfs": false,
+      "path": "training/original_run.json",
+      "sha256": "1e5b4522707e6818b2acc76e1479f0e4554ebfd5e2dafed90059e197cb8ea23c",
+      "size": 1586
+    },
+    {
+      "lfs": true,
+      "path": "training/tokenized_training.jsonl.gz",
+      "sha256": "e240b6b5945cd29c6ab56f3adadc3bb837a5f21c52ed52a0fd0e96d41b75a56e",
+      "size": 42845343
+    },
+    {
+      "lfs": false,
+      "path": "training_config.json",
+      "sha256": "d547d11573d5eaabcfc3af3e241458a2b387ac685ab7ef1b8cef8c6f449ec238",
+      "size": 526
+    },
+    {
+      "lfs": false,
+      "path": "vendor/copy_overlap_eval.py",
+      "sha256": "ebed83735ebb3ab957d0f66bbbf77ad87a68cf47858e91bc8c1fc6385a1db906",
+      "size": 7599
+    },
+    {
+      "lfs": false,
+      "path": "vendor/ngram_overlap.py",
+      "sha256": "01320a9e1c423dc4cc17215ce6927db907278a900e44a5b7c153ef6795eeab38",
+      "size": 11074
+    },
+    {
+      "lfs": false,
+      "path": "vendor/reference_validator.py",
+      "sha256": "ecba6b12d5f8fe253d74956989884ff94e2243f8748e83267df59f3a0a116c48",
+      "size": 9573
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/__init__.py",
+      "sha256": "f2b8977dcfa2d4b90a5f02c1b6d9bdb32fa89388d6aeb172c6534969a458a4b5",
+      "size": 218
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/backends.py",
+      "sha256": "73ccdf2b1e79c29bd1dd9479801c683080c893c563b151eace5f2e86d8a156c7",
+      "size": 6158
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/canonicalize.py",
+      "sha256": "6095849bf56c990d45448a11720a4c05fe4ec6ad480aedd9ac27949c48247f01",
+      "size": 9236
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/chunking.py",
+      "sha256": "4119f213d397f8f10633b4a4cb10fe8240c09868953164c7b8e94b961ea63905",
+      "size": 3228
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/cli.py",
+      "sha256": "49676bf75b6d33a97318175e27c79bc9f48ab0ba5a5dbc5df4b727c5cfdea7be",
+      "size": 11011
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/experiments/__init__.py",
+      "sha256": "8f0e2e8a2971d639ecfa08d8ca98de56b1c6af7856369666462deedf456fc642",
+      "size": 64
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/experiments/datasets.py",
+      "sha256": "57efdd1c1a1e598f72b123d7883a58de926fde26d50b64865832960f760c7d9c",
+      "size": 3693
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/experiments/mcq.py",
+      "sha256": "6f8f06dda7c8018b71f336de9758304ceedb6203dddffbda560b6ce7936107e9",
+      "size": 3672
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/experiments/overlap.py",
+      "sha256": "0d211e1f433a9f55c828b2b7358974eb9dd620d9f26f4bf20ac77b144055148b",
+      "size": 915
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/experiments/quality.py",
+      "sha256": "9cf5f50aba7a9b78b58ddbe5358608e8a2b979e1a6e7abd77ce2a2bb48acec19",
+      "size": 967
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/experiments/reproduce.py",
+      "sha256": "9760198eb1ba1040a48b567ddada4a0025779833926da8b5199c4f843e6f33ca",
+      "size": 15098
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/experiments/similarity.py",
+      "sha256": "c70920f4e124453090044f0cb500b41a9ddd5b0fc74c88ce63ffdbdaa2718ecb",
+      "size": 1165
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/fingerprints.py",
+      "sha256": "be20f839909206d2a12daac5e8e43dff347790cef53ec68c7e9915f7d4a10a29",
+      "size": 935
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/io.py",
+      "sha256": "da97499ec97a48357da249d82ef2de7b129a27c3864f27147b210ffbd26e9b7d",
+      "size": 2721
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/parsing.py",
+      "sha256": "7f81fc44c5c98c449f344c9ac602c1d616e69c276301abe2710accfaa0d66fd4",
+      "size": 4331
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/pipeline.py",
+      "sha256": "2813c7e10ec6871ca800ee6a46da4ffeff5e9e11cfcbfbba72cc4d6fed06570b",
+      "size": 10649
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/prompts.py",
+      "sha256": "743800e51c268e492c97492f8d18dfac5f273be2a63682438001494c9bf205ca",
+      "size": 9767
+    },
+    {
+      "lfs": false,
+      "path": "vendor/src/project_alexandria/schema.py",
+      "sha256": "19e5aed694e0d2049e9ef105a6971c016e3846546a06f7be9c2b0da446095cbb",
+      "size": 4635
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/Alexandria-Gemma-4-12B-it-Ornith9-Summaries-LoRA-r64",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:27:09Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/Alexandria-Gemma-4-12B-it-Ornith9-Summaries-LoRA-r64/resolve/e8c0fdbc1d0db6fe610871f5940d531b4f6b89ae/"
+    }
+  ],
+  "upstream": {
+    "commit": "e8c0fdbc1d0db6fe610871f5940d531b4f6b89ae",
+    "host": "huggingface.co",
+    "repo": "laion/Alexandria-Gemma-4-12B-it-Ornith9-Summaries-LoRA-r64",
+    "url": "https://huggingface.co/laion/Alexandria-Gemma-4-12B-it-Ornith9-Summaries-LoRA-r64/tree/e8c0fdbc1d0db6fe610871f5940d531b4f6b89ae"
+  }
+}

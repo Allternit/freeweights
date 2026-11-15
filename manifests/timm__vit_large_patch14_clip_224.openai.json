@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T02:33:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1765298ba035280ac5e6e4595ab9fadd10e66fb301213dea96014ea7ac0b25a0",
+      "size": 1434
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9f8ff885fcfce593f31288f7fbd549336745bcffb9532e9c734a7d69e57efe06",
+      "size": 6356
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8a5bb1350acbf8b9157d977ac705f48e4bc9d86d36d0f8fd4e36d11e5ef9cf33",
+      "size": 619
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": false,
+      "path": "open_clip_config.json",
+      "sha256": "226d0493cefd57fb28eec2b9c5c19e0e9a1899cebab80998646b5c3076ecabf5",
+      "size": 558
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_model.safetensors",
+      "sha256": "9ce2e8a8ebfff3793d7d375ad6d3c35cb9aebf3de7ace0fc7308accab7cd207e",
+      "size": 1710517724
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_pytorch_model.bin",
+      "sha256": "c4e2d8e8f1a5bc97c76b9c9385d2fc2a1acd38846db5468f579fda12306a218b",
+      "size": 1710639510
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "eb70c15b117effa76315db43fcbd9f32a655292fc861798343939a02f561c6ae",
+      "size": 1710633285
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2cdb3b8331a60c92fc1e55a13e9fd61fd2293c5a51275fdcccd62b780052530e",
+      "size": 588
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "43d4281659ce30b6aca2c7485944b3d73925bb7f87c7234daf3b6b094a6d618c",
+      "size": 3642035
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "c8758738997537b9e24885a081a043e1c9f5beff1355f0ec68ca19349e8699aa",
+      "size": 706
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363",
+      "size": 862328
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_large_patch14_clip_224.openai",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9f8ff885fcfce593f31288f7fbd549336745bcffb9532e9c734a7d69e57efe06",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:33:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_large_patch14_clip_224.openai/resolve/18d0535469bb561bf468d76c1d73aa35156c922b/"
+    }
+  ],
+  "upstream": {
+    "commit": "18d0535469bb561bf468d76c1d73aa35156c922b",
+    "host": "huggingface.co",
+    "repo": "timm/vit_large_patch14_clip_224.openai",
+    "url": "https://huggingface.co/timm/vit_large_patch14_clip_224.openai/tree/18d0535469bb561bf468d76c1d73aa35156c922b"
+  }
+}

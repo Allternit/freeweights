@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T04:45:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1e11e8e6b9eb852a71eadd8fe191d4b9e329eb81308602dec19ab16da7e172b2",
+      "size": 1618
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2857626b14fdea365cc5a88a6293e62c54216d20ed8908c135b83daee18cccaf",
+      "size": 2637
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "b0f58f04a0b9b6d57252425680efcd90c82898e11727204886f0b96b94bfa593",
+      "size": 2888
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4c204e9419c47cf1be985f5729e82063d042f598caaa8b1d42c67d508aa16717",
+      "size": 95281
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "ac52ac4e326beae33b9dd33f5fca0301fc563e34becfe98ee210ee2b853d93bb",
+      "size": 135
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "385fd30eb00af8b97e7b60aef44b92f55ce58c16562c69f3c61d431c7d67c834",
+      "size": 5296657635
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "792b9016b778f8c52c66c00635c56d21923ffd670b283935186e2f4f5ffc3773",
+      "size": 5314525323
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "faa6f866c45177851b15476e49455ad8e210d5ca515ce4d8cced35543e3e85fc",
+      "size": 5314525462
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "edc3be22aa9e9540b16633bc76608baaef0b57431a1fc7079a276374e4d16e55",
+      "size": 5314525446
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "978125c65966a4e8b1b41704f3df2d97384e279676990344861aa4186a4737f8",
+      "size": 4650479670
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "664a049408e8694e5867312145b74b1971ad5472061a1f176e0806dec9b3d21c",
+      "size": 57907
+    },
+    {
+      "lfs": false,
+      "path": "params.json",
+      "sha256": "925d9c90e80dea268272b3af30cf6127b6ced8e165f8ba20ba09a2009adcddfb",
+      "size": 768
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "c4497eba07fc4cdecf1ddcd7ac3e31301579a98bb1daa359399b0b23e8c692e7",
+      "size": 667
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "4ceef0d0cbf062ffd522d85fcbf5248c2db8659c589afcc47b2f26810e7d9a58",
+      "size": 189
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5bc5d1c106bf86895473568ef5211f3fde8415e6fdee039223d6db8ca52cbe01",
+      "size": 21311
+    },
+    {
+      "lfs": true,
+      "path": "tekken.json",
+      "sha256": "6e2501687ccd0e1f30f36319eaf2b46958b897811e246cd8eb5d385b9e3de7d1",
+      "size": 19399895
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "b76085f9923309d873994d444989f7eb6ec074b06f25b58f1e8d7b7741070949",
+      "size": 17078037
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "bf55306985c4e304196b5b5a30d45321db76ed5728d55a3d0c7a70af8e4f7b90",
+      "size": 201057
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/Mistral-Small-3.2-24B-Instruct-2506-MLX-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2857626b14fdea365cc5a88a6293e62c54216d20ed8908c135b83daee18cccaf",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:45:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/Mistral-Small-3.2-24B-Instruct-2506-MLX-8bit/resolve/692a38109525df4fe5a35b17af6eee5672415e17/"
+    }
+  ],
+  "upstream": {
+    "commit": "692a38109525df4fe5a35b17af6eee5672415e17",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/Mistral-Small-3.2-24B-Instruct-2506-MLX-8bit",
+    "url": "https://huggingface.co/lmstudio-community/Mistral-Small-3.2-24B-Instruct-2506-MLX-8bit/tree/692a38109525df4fe5a35b17af6eee5672415e17"
+  }
+}

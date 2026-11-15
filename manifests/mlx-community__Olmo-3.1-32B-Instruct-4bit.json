@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:15:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b502367e6dd395135a2cad5dc497cb83fab2e32fb62dc7f60ad617bfc90047e0",
+      "size": 961
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "49a944c9814e130bd3cc80a2420c55ff22e24a4e4ba97009aa60000909b5eac3",
+      "size": 2748
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7129731c165012539c6e2455961914dc5dc4d9437762ccbc887188b0139c7e97",
+      "size": 2938
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9ca20766a58daf4a6e1bf5f6552d27dbe57733dba2c3af507dd9f4b12aacc0b0",
+      "size": 207
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "07b56c203b0a49a53c0fb31e29384b85468fcf88ca859834d2808dcc3635dee1",
+      "size": 5341298988
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "8c31e0f84437684900f3bf97f0861c5f5ff4b6095bdab37ecf8bf1d0dcdb58b3",
+      "size": 5366601614
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "efc7df7a631a57158bace0fbf93cac27d4371b3334fccbf8b73ad4a020a0d187",
+      "size": 5331246640
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "8cd2f513b8ada56d4103a48e699012f6e14f16d13bfdf0a1031135a2632fdab7",
+      "size": 2093907822
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "80882116189386ac51ec074f6e00e3068d75fc33d9b8d6d2feb9131eb525ba9f",
+      "size": 138588
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "75f0d78a15d3bd663a07d3313056cf91b0d64ab45605501cb6dedbbe54817a3e",
+      "size": 7137556
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "749bd7083f47e63ddc131fdbc447abee264c070d9d8b66eb669215413775d7a3",
+      "size": 434
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Olmo-3.1-32B-Instruct-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b502367e6dd395135a2cad5dc497cb83fab2e32fb62dc7f60ad617bfc90047e0",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:15:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Olmo-3.1-32B-Instruct-4bit/resolve/35263d2b442f19233866beb8fc04712c050da419/"
+    }
+  ],
+  "upstream": {
+    "commit": "35263d2b442f19233866beb8fc04712c050da419",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Olmo-3.1-32B-Instruct-4bit",
+    "url": "https://huggingface.co/mlx-community/Olmo-3.1-32B-Instruct-4bit/tree/35263d2b442f19233866beb8fc04712c050da419"
+  }
+}

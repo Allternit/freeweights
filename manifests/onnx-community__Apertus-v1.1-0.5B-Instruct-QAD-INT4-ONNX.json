@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T05:14:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "17b167ef87a5524610c8a212a6e496b0636fecb06e1dc7ad12ad7b35cec54013",
+      "size": 1693
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1a13d022918c182e5f15500926af8e01e3f23e8f74f8441ac4ddf02deeef5af8",
+      "size": 10992
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "4afab8361a4bd0c2994404e0b0851dbaad461a06e56bdfdb635aae3977473c19",
+      "size": 5250
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0efd019afefd3b64a5cb74d33e7f8035aeb3782fefdb3a3e1424fbf63d4b9598",
+      "size": 1342
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c37b388bb889d8d7caeacfad108e11aac8b6cc02c0c4d854ab43b4c68d97320e",
+      "size": 143
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "7a74546cdeb1076fceb9e524f938c57b90655ab27928c225b8bac9f63af1a010",
+      "size": 497580
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "2abe41dfe172dc5d0df492c10e379ccf77a71b53a3a274045f9084fe8fc6a153",
+      "size": 810979328
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "1f012c6ee534e50aff4cda9830ba5f6c4a19ec8396b2e0f345e7f23739d2b5ee",
+      "size": 968860
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "44c1aca389014c675d4e7e6f322d2669d50f2a868f4c86be1e607d2091d0b290",
+      "size": 516376576
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be12f4375d655cc740864e3a9041bcddd8477942f209d9e7f27f6c8767162638",
+      "size": 17078368
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "03671df6e13fe176166f43661f4316e0cc97defe31c1267111a8fde69b975b8f",
+      "size": 5740
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Apertus-v1.1-0.5B-Instruct-QAD-INT4-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1a13d022918c182e5f15500926af8e01e3f23e8f74f8441ac4ddf02deeef5af8",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:14:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Apertus-v1.1-0.5B-Instruct-QAD-INT4-ONNX/resolve/defefbcf863cad09633955d5e82c8a1978f1c214/"
+    }
+  ],
+  "upstream": {
+    "commit": "defefbcf863cad09633955d5e82c8a1978f1c214",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Apertus-v1.1-0.5B-Instruct-QAD-INT4-ONNX",
+    "url": "https://huggingface.co/onnx-community/Apertus-v1.1-0.5B-Instruct-QAD-INT4-ONNX/tree/defefbcf863cad09633955d5e82c8a1978f1c214"
+  }
+}

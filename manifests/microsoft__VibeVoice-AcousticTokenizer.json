@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:30:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "434fd85f71564185d28a900334da5e3570aaef83bbcfd57d82708d1be67bb0d7",
+      "size": 6656
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "18cdee8d97b92e9a9f0955c4a88a6f3a6a7dcd4f604f8b5940d8c7e3240efc78",
+      "size": 581
+    },
+    {
+      "lfs": false,
+      "path": "figs/tokenizer_comparison.png",
+      "sha256": "c4f723b6ff72e874fecc9d70f4f105af23fbe8390bc99d5dee79e37b76b1a10c",
+      "size": 96780
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "3acc2dcc75c6b18dffdc74e9ec7a79ea3849ccf69323499fd9bf54209e531a6a",
+      "size": 1374847314
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "6a7735f9981a3b62039efb76f2decccacb58e535bad028b0ef55d932270a8aa5",
+      "size": 274
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/VibeVoice-AcousticTokenizer",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "434fd85f71564185d28a900334da5e3570aaef83bbcfd57d82708d1be67bb0d7",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:30:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/VibeVoice-AcousticTokenizer/resolve/f0643be7cab5b9c91c6f0038e3b8dde13e3e107e/"
+    }
+  ],
+  "upstream": {
+    "commit": "f0643be7cab5b9c91c6f0038e3b8dde13e3e107e",
+    "host": "huggingface.co",
+    "repo": "microsoft/VibeVoice-AcousticTokenizer",
+    "url": "https://huggingface.co/microsoft/VibeVoice-AcousticTokenizer/tree/f0643be7cab5b9c91c6f0038e3b8dde13e3e107e"
+  }
+}

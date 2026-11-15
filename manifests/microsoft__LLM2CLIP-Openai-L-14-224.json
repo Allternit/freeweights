@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T04:14:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "72202216d5d2650259b8ef1ba1603b20e6df311cded7d3ec3bf2dfd0b91c9a23",
+      "size": 1573
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0619b69449afc08266f70f05bb3a8c5844bbb392b8d211bc0474e56c3644577d",
+      "size": 5514
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a8c7ef382d3f011c4e7b08f557fd19be51fb17fee168a5b90fcb2337aed8dbc4",
+      "size": 700
+    },
+    {
+      "lfs": false,
+      "path": "configuration_clip.py",
+      "sha256": "ca17926fe7eeaea13db0c56eeae245e89d7121c51c04e1fdd73e3b1e23ba5c23",
+      "size": 21089
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e8ddf30692072a370307cca0c89b0c53c84a7d7f3dd6eddf5b163bcb184fb0d9",
+      "size": 2313092508
+    },
+    {
+      "lfs": false,
+      "path": "modeling_clip.py",
+      "sha256": "9e18f25b8d294d8585fbf66dafb3cc6f6459aeb27474f3abcb42dd8e03c9878b",
+      "size": 72176
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/LLM2CLIP-Openai-L-14-224",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0619b69449afc08266f70f05bb3a8c5844bbb392b8d211bc0474e56c3644577d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:14:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/LLM2CLIP-Openai-L-14-224/resolve/6b8a11a94ff380fa220dfefe73ac9293d2677575/"
+    }
+  ],
+  "upstream": {
+    "commit": "6b8a11a94ff380fa220dfefe73ac9293d2677575",
+    "host": "huggingface.co",
+    "repo": "microsoft/LLM2CLIP-Openai-L-14-224",
+    "url": "https://huggingface.co/microsoft/LLM2CLIP-Openai-L-14-224/tree/6b8a11a94ff380fa220dfefe73ac9293d2677575"
+  }
+}

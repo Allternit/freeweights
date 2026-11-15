@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "JetBrains/Mellum2-12B-A2.5B-Base",
+  "display_name": "Mellum2.1-12B-A2.5B-Thinking-MTP",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "JetBrains/Mellum2.1-12B-A2.5B-Thinking-MTP",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/JetBrains/Mellum2.1-12B-A2.5B-Thinking-MTP.json",
+  "params": 12149923072,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "JetBrains/Mellum2-12B-A2.5B-Base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 1449,
+    "likes": 17,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T2",
+  "total_size": 25165148781,
+  "upstream_url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-MTP",
+  "what_changed": null
+}

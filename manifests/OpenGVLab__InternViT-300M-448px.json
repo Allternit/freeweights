@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:43:44Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f9a6e8b99afb7d4ff865854267032e21092039d4318258f762cd868478cf479d",
+      "size": 4805
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5d42d1342d4d95ffb4c1bc0cd217c8ccd4240c4e1b8b21dac4ece5368aa35462",
+      "size": 748
+    },
+    {
+      "lfs": false,
+      "path": "configuration_intern_vit.py",
+      "sha256": "5bf42e1fdd013b93e90ad355cb8f3abf9bfd35712f120d38d4a2fa26ac635675",
+      "size": 5547
+    },
+    {
+      "lfs": false,
+      "path": "flash_attention.py",
+      "sha256": "81c4f08c9dc75668b385b410b67c898973b3d8ddb7d248704d4565959e241cbf",
+      "size": 3459
+    },
+    {
+      "lfs": true,
+      "path": "mlp_projector/internlm2_chat_1_8b.pth",
+      "sha256": "987c72b7cfc632d2cfcb28087743162de87abb40979534c80daa3e48c6694d47",
+      "size": 25192647
+    },
+    {
+      "lfs": true,
+      "path": "mlp_projector/phi_3_mini_128k_instruct.pth",
+      "sha256": "aa10b9445df664dbba8feab0c25f3706d2229b466b390a4e1bb4c603a9a6da8a",
+      "size": 44071111
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "22f87624b94d869df9a619445357660b4c290970ba977f14e0a1ea2b46da4fda",
+      "size": 608059320
+    },
+    {
+      "lfs": false,
+      "path": "modeling_intern_vit.py",
+      "sha256": "eb20457de0a1748d8fa7f45af99c35372ca25abf3429584daa1d95fd42ddab28",
+      "size": 14871
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "0658115064c561026539aeeead9ed3b1a8e0cc90967df8c142849199f955d2b4",
+      "size": 287
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "OpenGVLab/InternViT-300M-448px",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f9a6e8b99afb7d4ff865854267032e21092039d4318258f762cd868478cf479d",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:43:44Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/OpenGVLab/InternViT-300M-448px/resolve/fe158954b3b9bbc92a37fd24a78912173910558a/"
+    }
+  ],
+  "upstream": {
+    "commit": "fe158954b3b9bbc92a37fd24a78912173910558a",
+    "host": "huggingface.co",
+    "repo": "OpenGVLab/InternViT-300M-448px",
+    "url": "https://huggingface.co/OpenGVLab/InternViT-300M-448px/tree/fe158954b3b9bbc92a37fd24a78912173910558a"
+  }
+}

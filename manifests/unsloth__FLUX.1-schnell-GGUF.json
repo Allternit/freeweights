@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T04:36:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "04a1da4366cbac78c57946b83be2894ba594b3c52e150711d08407c45fb5f255",
+      "size": 2430
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5d6f9790e06365f383e25ca62aae0525f0fbbffcd205a189cdb3a48a26b8a77c",
+      "size": 3671
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-BF16.gguf",
+      "sha256": "42e01e2dabe15cfada100d37e13357a53a6def39afda4ff744b82215b5cf2547",
+      "size": 23788569632
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-F16.gguf",
+      "sha256": "db6f98546348bee237e790e5e98675bce66c36f92ddc7b73cd6c9d64ffd967d1",
+      "size": 23788569632
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q2_K.gguf",
+      "sha256": "de734f0eb5bb3e2033b3ba3aef5b6f160dab5ffa4b634f5fcb578d0dabb6fe7a",
+      "size": 4003218464
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q3_K_M.gguf",
+      "sha256": "67f8945316fb6643e2e5d01e54de1c2a498b282dbd02059ca24f754736a3a92a",
+      "size": 5213242400
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q3_K_S.gguf",
+      "sha256": "27c79f46e162d5fa69a804addba05ad875683a0518851904c6c7b1a70904f72d",
+      "size": 5205132320
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q4_0.gguf",
+      "sha256": "f14dd60ae7d11b4702224c607cfd662256105d5e8618e8fae73622555ccee7c3",
+      "size": 6776865824
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q4_1.gguf",
+      "sha256": "b4041483c92f112c87015eaadba419f90398b03e56c344fdb56a03c14017150f",
+      "size": 7516505120
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q4_K_M.gguf",
+      "sha256": "d467bf8de2486dba276d0962363983424ca860a5161491e229ee42e897aeab1e",
+      "size": 7441597472
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q4_K_S.gguf",
+      "sha256": "aee05e356ef83c0488b968aebcf934ce220ac203568e6e8546de3f378e5ffca1",
+      "size": 6775833632
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q5_0.gguf",
+      "sha256": "bfe19081ad4ebb0cb847fb5437e409a48f3d8edfd7206b2a7f96ed22b6ed3e9d",
+      "size": 8256144416
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q5_1.gguf",
+      "sha256": "5c653545a5d3d852223db70128a0d3ce8d5184b95377a5795ae97a5120647889",
+      "size": 8995783712
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q5_K_M.gguf",
+      "sha256": "3fdb768eeb7bc98f9e5e5f44d6eab53042c142c1cd9b61e2fb10750df44a95e5",
+      "size": 8928248864
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q5_K_S.gguf",
+      "sha256": "6df51a38e7a9c391e406c4782305db1648bdd1ad02c6152f194356675e9e83d1",
+      "size": 8255702048
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q6_K.gguf",
+      "sha256": "39ac6bf536ba467870b25174120824ab677d110d6ea775f86e3610d0fa6f46f9",
+      "size": 10412983328
+    },
+    {
+      "lfs": true,
+      "path": "flux1-schnell-Q8_0.gguf",
+      "sha256": "d397213d520384e2839342d6d057c367f49d197af65d742d502206e5c8f03921",
+      "size": 12693980192
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/FLUX.1-schnell-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5d6f9790e06365f383e25ca62aae0525f0fbbffcd205a189cdb3a48a26b8a77c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:36:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/FLUX.1-schnell-GGUF/resolve/8c90c328734d443a0d7bbc2978611f4a2f90d37f/"
+    }
+  ],
+  "upstream": {
+    "commit": "8c90c328734d443a0d7bbc2978611f4a2f90d37f",
+    "host": "huggingface.co",
+    "repo": "unsloth/FLUX.1-schnell-GGUF",
+    "url": "https://huggingface.co/unsloth/FLUX.1-schnell-GGUF/tree/8c90c328734d443a0d7bbc2978611f4a2f90d37f"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T02:37:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f6ad46535b152f42e1957ea0593fb68afbff70dc55d523e9117bb6bcf49b1263",
+      "size": 3399
+    },
+    {
+      "lfs": true,
+      "path": "split_files/loras/qwen_image_union_diffsynth_lora.safetensors",
+      "sha256": "8683edcfe741277155989d505995314e0191c21b77c67a0dbc2980103bddbdd5",
+      "size": 943906720
+    },
+    {
+      "lfs": true,
+      "path": "split_files/model_patches/qwen_image_canny_diffsynth_controlnet.safetensors",
+      "sha256": "16f54f5c3c84cb213eba98d304e7486816a39b2891715c662024f40192093429",
+      "size": 2266838080
+    },
+    {
+      "lfs": true,
+      "path": "split_files/model_patches/qwen_image_depth_diffsynth_controlnet.safetensors",
+      "sha256": "b3c6eb06c135887cc9083bdf3fad9ea190482a1b811b257a935625dc4b88ab31",
+      "size": 2266838080
+    },
+    {
+      "lfs": true,
+      "path": "split_files/model_patches/qwen_image_inpaint_diffsynth_controlnet.safetensors",
+      "sha256": "ca78c68ef4c2ae332197e9642ea71838b4ae5d587f199813b9c9cc44bfd10bce",
+      "size": 2266862656
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Qwen-Image-DiffSynth-ControlNets",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f6ad46535b152f42e1957ea0593fb68afbff70dc55d523e9117bb6bcf49b1263",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:37:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/resolve/5ad28a1b22cd0d947b59226c4b569d293eb695ef/"
+    }
+  ],
+  "upstream": {
+    "commit": "5ad28a1b22cd0d947b59226c4b569d293eb695ef",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Qwen-Image-DiffSynth-ControlNets",
+    "url": "https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/tree/5ad28a1b22cd0d947b59226c4b569d293eb695ef"
+  }
+}

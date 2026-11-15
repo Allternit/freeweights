@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T04:13:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "692dafc2e614c6d7f2fe657e943471ddd255f81cf861545f635dcb17c32dc6c9",
+      "size": 327
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a655e150236d74e5f06221d834ec40435482c6ff8f505031ca767b3fb2815947",
+      "size": 17256
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a78bd121442d6a30e147a65b52114431ca07eb2a97069fa5fc7fb3fb345f9a38",
+      "size": 4574
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "26c11da3b0fce830f75c9d5ba7e304dd86a5b8e975a167e606261ad329263564",
+      "size": 1821
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "a52b5c482438cc48a8bd0ded9b282f6bb5990be8071e944e9cd57e60921b8550",
+      "size": 121
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "210c959a9288e52671d0cff6f905d7c44fd7f2cd39fe8855f322847c77362fd2",
+      "size": 4924069920
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "38c5dcc6e882539c0438f31824d5a34561da4805c68a46c7bf4043b7320982cc",
+      "size": 4918436784
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "7e59476cbb28ebd240ec4fc9ee6dd22370aed2cf5554fa28159c5ad36e008a93",
+      "size": 4996475736
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "e3ce0a1a4716c42d8b3165c1d26cd5d7cfaa562205fbe1bece82b9d910276a65",
+      "size": 2161573264
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "43b50eb3e6e6678d7b5a8e9b4559710f695e5226c60e23815b9715b6ade80d77",
+      "size": 45947
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "47fb9a938aadb92d2023e81b4b4eca16772853d8a4da9654f1444e0e2c89373a",
+      "size": 375
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/GKA-primed-HQwen3-8B-Reasoner",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a655e150236d74e5f06221d834ec40435482c6ff8f505031ca767b3fb2815947",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:13:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/GKA-primed-HQwen3-8B-Reasoner/resolve/6750825361457f606802643b75ba575d142c9a0a/"
+    }
+  ],
+  "upstream": {
+    "commit": "6750825361457f606802643b75ba575d142c9a0a",
+    "host": "huggingface.co",
+    "repo": "amazon/GKA-primed-HQwen3-8B-Reasoner",
+    "url": "https://huggingface.co/amazon/GKA-primed-HQwen3-8B-Reasoner/tree/6750825361457f606802643b75ba575d142c9a0a"
+  }
+}

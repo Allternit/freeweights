@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:12:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "26b2558707275b14a9e048e67fb4624bc7f465991fff28eb86b4fa297d026704",
+      "size": 938
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326",
+      "size": 2630
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "be2605ecfd403a0c1dac46f9a25bf55629ec5e79d72c545a19cf43be20dc7f16",
+      "size": 1979
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "4d9818c3d27895c0058828a5f68bc7a4de80c3ae1bcdac90936ce24178063f59",
+      "size": 213
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2f0c5584d52cde5ba7b9049cfc44fff40ef33d8a87a9b45dcdaebcbc304b2f34",
+      "size": 2263022417
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "388d811b8b7c2608dd04cce1bcb04a8bf715d19b42790894e6d3427ff429a777",
+      "size": 63964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a93181447d1e8002d6c7697e3904607df4a30101bf678079471e2e28dc9fe00f",
+      "size": 740
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Jan-v3-4B-base-instruct-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "26b2558707275b14a9e048e67fb4624bc7f465991fff28eb86b4fa297d026704",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:12:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Jan-v3-4B-base-instruct-4bit/resolve/3f01bd893923ebaf455efe08942e57adc0c97296/"
+    }
+  ],
+  "upstream": {
+    "commit": "3f01bd893923ebaf455efe08942e57adc0c97296",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Jan-v3-4B-base-instruct-4bit",
+    "url": "https://huggingface.co/mlx-community/Jan-v3-4B-base-instruct-4bit/tree/3f01bd893923ebaf455efe08942e57adc0c97296"
+  }
+}

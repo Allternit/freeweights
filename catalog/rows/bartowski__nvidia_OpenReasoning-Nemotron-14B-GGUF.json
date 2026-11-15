@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "nvidia/OpenReasoning-Nemotron-14B",
+  "display_name": "nvidia_OpenReasoning-Nemotron-14B-GGUF",
+  "family": "nemotron",
+  "formats": [
+    "gguf"
+  ],
+  "id": "bartowski/nvidia_OpenReasoning-Nemotron-14B-GGUF",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "CC-BY-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/bartowski/nvidia_OpenReasoning-Nemotron-14B-GGUF.json",
+  "note": "The license of the base model nvidia/OpenReasoning-Nemotron-14B applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "nvidia/OpenReasoning-Nemotron-14B",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.nemotron",
+  "signals": {
+    "downloads_30d": 1686,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 235819473268,
+  "upstream_url": "https://huggingface.co/bartowski/nvidia_OpenReasoning-Nemotron-14B-GGUF",
+  "what_changed": null
+}

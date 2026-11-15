@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T03:49:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b25328431f23f8899d2088c0b8dc5185ad8efdda8b34f161c26ed1d0e86405fb",
+      "size": 4075
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9feda6cb3eec72be07d895cf641ed112eec3779cc42578508a1e5121a9f787e6",
+      "size": 778
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "39f23b813301143eecb0df23d45d30d48b4d7e565b6124dc80898ece20d732d8",
+      "size": 26867216
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/efficientvim_m1.e300_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b25328431f23f8899d2088c0b8dc5185ad8efdda8b34f161c26ed1d0e86405fb",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:49:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/efficientvim_m1.e300_in1k/resolve/9d42b5ae3acc4f70ade05971819f4ec0c8505501/"
+    }
+  ],
+  "upstream": {
+    "commit": "9d42b5ae3acc4f70ade05971819f4ec0c8505501",
+    "host": "huggingface.co",
+    "repo": "timm/efficientvim_m1.e300_in1k",
+    "url": "https://huggingface.co/timm/efficientvim_m1.e300_in1k/tree/9d42b5ae3acc4f70ade05971819f4ec0c8505501"
+  }
+}

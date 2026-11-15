@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T04:46:34Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f23fb7d228ed8c576245326a1468cd7b66719231c1f05132716410cfa960f19a",
+      "size": 1148
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a1955f3bbdd628a0ea0339ec14bc98ba7b09e1a35d267e4ab01e902d2489dfa5",
+      "size": 80
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "dfdc25f421f32a0d1268e0f2ff2153d340e8f1d52d3dd16f5dc33c1ce85cedf1",
+      "size": 219121675
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "447d9ccb2c4129ab0ca045fc293e7d79dbc45e293ac1e94818d865db77f65a54",
+      "size": 391
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/BEN2-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f23fb7d228ed8c576245326a1468cd7b66719231c1f05132716410cfa960f19a",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:46:34Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/BEN2-ONNX/resolve/c552aa82688edce09f0ac9d2e31ad53d9d629010/"
+    }
+  ],
+  "upstream": {
+    "commit": "c552aa82688edce09f0ac9d2e31ad53d9d629010",
+    "host": "huggingface.co",
+    "repo": "onnx-community/BEN2-ONNX",
+    "url": "https://huggingface.co/onnx-community/BEN2-ONNX/tree/c552aa82688edce09f0ac9d2e31ad53d9d629010"
+  }
+}

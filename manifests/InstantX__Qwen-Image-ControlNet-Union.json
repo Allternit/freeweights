@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T02:39:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "e0c776590d67bb126182fdfff547a40e95248f366db94a483e77aa02ded9c275",
+      "size": 2057
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8ded521e30430cdce4a352fdedb5fc4c820018fba3f80371d8c8f7bf0053adc0",
+      "size": 5786
+    },
+    {
+      "lfs": true,
+      "path": "conds/canny.png",
+      "sha256": "c8f0168865a916ef424d8e789c793a937b7151dc50507849ce2070be7d76af31",
+      "size": 448365
+    },
+    {
+      "lfs": true,
+      "path": "conds/canny1.png",
+      "sha256": "800790ae2e890e99b75dc1fc0a05142d22dbcdd9a961d2bc15222a4356683723",
+      "size": 278157
+    },
+    {
+      "lfs": true,
+      "path": "conds/depth.png",
+      "sha256": "6e2ba1022bb71d026c764b12e7d6c67a233cfa4c6836616f618a878764fe7a7c",
+      "size": 105657
+    },
+    {
+      "lfs": true,
+      "path": "conds/pose.png",
+      "sha256": "585655c8125080884533706e673eb461847b496e63281bb42cf7cadc981efd9a",
+      "size": 114547
+    },
+    {
+      "lfs": true,
+      "path": "conds/soft_edge.png",
+      "sha256": "7284a174a077cffe621c8f7f7f6804c42970a93104362f00825be83759b106b2",
+      "size": 930559
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6d80a5e2ab3abeb773b06f917b54a72f60c35ce91091f59f79243fb0f5d3d4bd",
+      "size": 491
+    },
+    {
+      "lfs": false,
+      "path": "controlnet_qwenimage.py",
+      "sha256": "fe2ed4625656a44099bf40a3eaf713315193aa1f0a6855b49b22de269430fa57",
+      "size": 15790
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_pytorch_model.safetensors",
+      "sha256": "d51dca0073366a675108d5b83c3b7ef941cf2214c9a1c95c23f1e9a228ddbdb0",
+      "size": 3536027816
+    },
+    {
+      "lfs": false,
+      "path": "infer_qwenimage_cn_union.py",
+      "sha256": "006a69e041214df6aad6d7324c25ee488acfc0b49e176a81479e356b59ba70de",
+      "size": 3214
+    },
+    {
+      "lfs": true,
+      "path": "outputs/canny.png",
+      "sha256": "2fba6c4c8e46e71522131143bcafde63051a42227911cdaa07f11dbbbbb0909e",
+      "size": 1482438
+    },
+    {
+      "lfs": true,
+      "path": "outputs/canny1.png",
+      "sha256": "c539416d81cd56cf1dc89379b1b5df9ac429bd7caef64a9b108fc7ff985c1bcf",
+      "size": 1475396
+    },
+    {
+      "lfs": true,
+      "path": "outputs/depth.png",
+      "sha256": "7c005debe099d0ca8eefbb68722d63adde6fb0e59389c3690aadcbcc907bcc47",
+      "size": 1152512
+    },
+    {
+      "lfs": true,
+      "path": "outputs/pose.png",
+      "sha256": "cee32df5af18e0b9f42b51ae6f4fd430895b74519dc705c4dcac7fbfc1316c60",
+      "size": 1471965
+    },
+    {
+      "lfs": true,
+      "path": "outputs/soft_edge.png",
+      "sha256": "91ea097cbc03684655caf131b40252455370a597433591db62b9076c725d4990",
+      "size": 1147515
+    },
+    {
+      "lfs": false,
+      "path": "pipeline_qwenimage_controlnet.py",
+      "sha256": "5efcae251cdf5e33628d98137bd9d8eff80cc7827880b93a4a452ef5182ec09a",
+      "size": 40760
+    },
+    {
+      "lfs": false,
+      "path": "transformer_qwenimage.py",
+      "sha256": "8e46ce8ae6d79b34c1bdf1444ba96b1f5429bf7e637c5e74c16b8162f5ef7575",
+      "size": 27421
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "InstantX/Qwen-Image-ControlNet-Union",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8ded521e30430cdce4a352fdedb5fc4c820018fba3f80371d8c8f7bf0053adc0",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:39:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/InstantX/Qwen-Image-ControlNet-Union/resolve/b13036f066d6dee7c20513e263d3d673055e9de8/"
+    }
+  ],
+  "upstream": {
+    "commit": "b13036f066d6dee7c20513e263d3d673055e9de8",
+    "host": "huggingface.co",
+    "repo": "InstantX/Qwen-Image-ControlNet-Union",
+    "url": "https://huggingface.co/InstantX/Qwen-Image-ControlNet-Union/tree/b13036f066d6dee7c20513e263d3d673055e9de8"
+  }
+}

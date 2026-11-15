@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:16:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b1762e812bbd2cef556b8042eea1d79b87dbfbce5e6b2d573a20efa02fcde0fa",
+      "size": 3593
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e5de5786788dd8ec0e5130f882ec8fd44286b38abe51049910056c1460ef2f5f",
+      "size": 908
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0d921d0103a4ccca7879adeba3c9c141a68ba266bcd7bb6333822e00d9a977ca",
+      "size": 1946533768
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/Qwen3-Coder-30B-A3B-Instruct-P-EAGLE",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b1762e812bbd2cef556b8042eea1d79b87dbfbce5e6b2d573a20efa02fcde0fa",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:16:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/Qwen3-Coder-30B-A3B-Instruct-P-EAGLE/resolve/ba20cd830569ef1f54e7d8f67ab4d17e2082bde3/"
+    }
+  ],
+  "upstream": {
+    "commit": "ba20cd830569ef1f54e7d8f67ab4d17e2082bde3",
+    "host": "huggingface.co",
+    "repo": "amazon/Qwen3-Coder-30B-A3B-Instruct-P-EAGLE",
+    "url": "https://huggingface.co/amazon/Qwen3-Coder-30B-A3B-Instruct-P-EAGLE/tree/ba20cd830569ef1f54e7d8f67ab4d17e2082bde3"
+  }
+}

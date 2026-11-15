@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:02:19Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5fa1196bb5607957ec6d214e333ce06c86b7cd597affd925005d70847f557643",
+      "size": 1887
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a0f942c14c676015916e74e1826346c9876c42b49979335f94f0bba0c85cb751",
+      "size": 6026
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "size": 4116
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c55e075ac57223f7442ef1755051e9bd212e0d4ff2ed68694037f5a21dba7eeb",
+      "size": 1530
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "46e6d18455f25b2ebe9bccdc0fe3bf2a36442796ecc0991141c12c1f098f27b9",
+      "size": 299981
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "1f936ece1604ac0117e808f9db9959e3e8b6b860d44d1a6ecf55a5353ee2d55c",
+      "size": 2094723072
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data_1",
+      "sha256": "5b2a43d2df8ba4706d44769c023f2627309a8e48ec0fea70e92afc1a974e169f",
+      "size": 306225152
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "460cf6e8d8da587e60976b1e36bb5e433c79e5af9681dbab48abad9353d4957c",
+      "size": 286948
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "b6e76ada3c256d01a39f5896d3cb96d78fcdf566927da0d9445cc9c999e96069",
+      "size": 1200474112
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "4a41218d088c2e31fd6a3953d838d08536a27e98cf987796104a9511f9d9a671",
+      "size": 389110
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "5dee6d2aecd2657464eb80e833ce79593a94430c3abca3d0c1f5424f0713e59e",
+      "size": 398813184
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "164230246e40d0249dfefe2901cafd071e1d116e96aa0f9b7fa2da1284fbdbb1",
+      "size": 376930
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "4c431be6a2456467e96bee8e9080464e2d0a4352c8de77639deee87bac69dd1d",
+      "size": 353058816
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "3c7c03247bf681338ea079ca3875fa48d6b339bacd3abb6b7ce81afa5a357861",
+      "size": 393942
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx_data",
+      "sha256": "95e9e447398ba3ef59d54888c820ee8c1b80e4373c56cc5d09b2358ee25d893c",
+      "size": 706117632
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "2320ebaed2032c36f5c539cb8531d0642a10024e164f1d81ebbe163b259e3ba5",
+      "size": 9117473
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e1c8a5341a350885510d652a3a303beabf3a76ef745af6c6b4c3f0d815ccfb5c",
+      "size": 4650
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/harrier-oss-v1-0.6b-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a0f942c14c676015916e74e1826346c9876c42b49979335f94f0bba0c85cb751",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:02:19Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/harrier-oss-v1-0.6b-ONNX/resolve/e4daffa011e666dcd2ff2a3c6c05084090ac314d/"
+    }
+  ],
+  "upstream": {
+    "commit": "e4daffa011e666dcd2ff2a3c6c05084090ac314d",
+    "host": "huggingface.co",
+    "repo": "onnx-community/harrier-oss-v1-0.6b-ONNX",
+    "url": "https://huggingface.co/onnx-community/harrier-oss-v1-0.6b-ONNX/tree/e4daffa011e666dcd2ff2a3c6c05084090ac314d"
+  }
+}

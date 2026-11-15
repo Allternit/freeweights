@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:24:28Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "840744a6a8d0ca22f8f6228a6f19c750a47db069873a32eefba939e64c742b35",
+      "size": 1271
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2cc9a662351d095f125e3cf67f1fccb829b00f4efd67a92c9ea56db300d064ba",
+      "size": 2371
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9a919649afe6e317ecc27f78af739f5883ccafdf6cb9342f9168de94b02f8b4f",
+      "size": 811
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "3f51b0064270aca663a746a4585c24804726e30407d475b2e1be7660ea796081",
+      "size": 990323675
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "f5a1c7e2be8092018d8835128987edf0111637dd98e90599cc80310fef75d95a",
+      "size": 147
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6485a41cdce3eda1b0ee8970f41328fd02ac804bb9f1ba205fd2acc59b15a411",
+      "size": 891648000
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "f05a759d366d0994af34f8c9be6d1023a917a9290fcc4a42e3d155e0f92ceca8",
+      "size": 891705423
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+      "size": 791656
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d2acde0d8d71dd30a711834b07781b9c89feaac33fd332f60507699282740066",
+      "size": 1389353
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/long-t5-local-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2cc9a662351d095f125e3cf67f1fccb829b00f4efd67a92c9ea56db300d064ba",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:24:28Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/long-t5-local-base/resolve/495147576566a61d910384ed880fcefa6ec40b49/"
+    }
+  ],
+  "upstream": {
+    "commit": "495147576566a61d910384ed880fcefa6ec40b49",
+    "host": "huggingface.co",
+    "repo": "google/long-t5-local-base",
+    "url": "https://huggingface.co/google/long-t5-local-base/tree/495147576566a61d910384ed880fcefa6ec40b49"
+  }
+}

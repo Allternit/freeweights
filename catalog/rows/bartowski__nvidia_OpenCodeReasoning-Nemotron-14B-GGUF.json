@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "nvidia/OpenCodeReasoning-Nemotron-14B",
+  "display_name": "nvidia_OpenCodeReasoning-Nemotron-14B-GGUF",
+  "family": "nemotron",
+  "formats": [
+    "gguf"
+  ],
+  "id": "bartowski/nvidia_OpenCodeReasoning-Nemotron-14B-GGUF",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/bartowski/nvidia_OpenCodeReasoning-Nemotron-14B-GGUF.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "nvidia/OpenCodeReasoning-Nemotron-14B",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.nemotron",
+  "signals": {
+    "downloads_30d": 1375,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 235819529798,
+  "upstream_url": "https://huggingface.co/bartowski/nvidia_OpenCodeReasoning-Nemotron-14B-GGUF",
+  "what_changed": null
+}

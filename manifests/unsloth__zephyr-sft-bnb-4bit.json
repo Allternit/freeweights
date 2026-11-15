@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:29:36Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0c3a4f0869bcac8362447980aea9bf875fbfe74fe9dc36eaf3577eb698b19973",
+      "size": 3081
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "334800600c4d0bca10cdeac1d50f85693c931a1a5095a7c43cefc6b8302a8de4",
+      "size": 1187
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "8d21133b5e3ddcb37596359878871a836bca27437d95ed66d3ef85b308e3728b",
+      "size": 155
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1f80f0985000e65ed171d716ca44f0f0cb489e0dac33d086197d4ddc372c5e70",
+      "size": 4125687906
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "118c1e072780eb6630f0b3453f4872b7c2ff6fbb3f85557663c12a53568d903c",
+      "size": 511
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "bdc45dc7f18a5c55e0dcb36f4f187a7c429d6aaa1693a17d20422b85081642d9",
+      "size": 1795331
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "dadfd56d766715c61d2ef780a525ab43b8e6da4de6865bda3d95fdef5e134055",
+      "size": 493443
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "51b08a1cb8de5b6d59dae971332c8e8249b61dfea7258a41e588f7664e612e2a",
+      "size": 1537
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/zephyr-sft-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0c3a4f0869bcac8362447980aea9bf875fbfe74fe9dc36eaf3577eb698b19973",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:29:36Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/zephyr-sft-bnb-4bit/resolve/467eff1ac1c3395c130929bbe1f34a8194715e7c/"
+    }
+  ],
+  "upstream": {
+    "commit": "467eff1ac1c3395c130929bbe1f34a8194715e7c",
+    "host": "huggingface.co",
+    "repo": "unsloth/zephyr-sft-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/zephyr-sft-bnb-4bit/tree/467eff1ac1c3395c130929bbe1f34a8194715e7c"
+  }
+}

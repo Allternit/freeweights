@@ -1,0 +1,44 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "distilbert/distilroberta-base",
+  "display_name": "quora-distilroberta-base",
+  "family": "cross-encoder",
+  "formats": [
+    "onnx",
+    "openvino",
+    "safetensors"
+  ],
+  "id": "cross-encoder/quora-distilroberta-base",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/cross-encoder/quora-distilroberta-base.json",
+  "params": 82119683,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "distilbert/distilroberta-base",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 5589,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "text-ranking"
+  ],
+  "tier": "variant",
+  "total_size": 3212068400,
+  "upstream_url": "https://huggingface.co/cross-encoder/quora-distilroberta-base",
+  "what_changed": null
+}

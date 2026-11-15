@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T04:37:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1e11e8e6b9eb852a71eadd8fe191d4b9e329eb81308602dec19ab16da7e172b2",
+      "size": 1618
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2f37208c16b180cfcc12f94c1a61dd720c5d8106ec3802d7e20c6818dcde5044",
+      "size": 20311
+    },
+    {
+      "lfs": false,
+      "path": "SYSTEM_PROMPT.txt",
+      "sha256": "0a735af35f974ddfc9fc87c6cb64ee096e833a22deeba131b84463d7efc23544",
+      "size": 2361
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "74eeb55fd3341286ec3fd44e902b7120721acc81cd394e96b431f85e93a1ea56",
+      "size": 11912
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "196c38570bb4bc8168a59cc0189c9a9b9974be8dcca6b46dfc109dbd250c01aa",
+      "size": 1903
+    },
+    {
+      "lfs": true,
+      "path": "consolidated.safetensors",
+      "sha256": "ab5e41c341ac8331e653f572218e6bf29082b2360c0207c1f84d9a3c963b27fe",
+      "size": 10420633176
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e0923390059f84a9180b00e5501778acc45ea9856cd7f2fd68208b360927c677",
+      "size": 131
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "5a4d6e02534a2a10ce9b54ee1d91020617429d348f09de4cf912bcae362a9fc9",
+      "size": 4983094790
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "ca3b3df6c15e1f1e19977b1bb3e1bb8ec77798c2687f0dd87337b0737002f619",
+      "size": 4992892530
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "ee2a5e33fe9dfdc8c013aa856fbafcb1bb9b4168f96ddef9484baa23adcb5d35",
+      "size": 444667504
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "91360719f4ce9383f46bb5750cd0b8cb4aec070dd8804c11ed94585a9924409b",
+      "size": 103195
+    },
+    {
+      "lfs": false,
+      "path": "params.json",
+      "sha256": "3d7e9a056d06e624e5b2fa81c74c4c58640cd8449f4f864c5da8133118a0b96d",
+      "size": 1185
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "ece2373c2ae391bce18785a1810543bc6173a1f28b6767cffab2c35dbea5f002",
+      "size": 976
+    },
+    {
+      "lfs": true,
+      "path": "tekken.json",
+      "sha256": "600bb27946565481ecf51ba8aee252e49b9a68507866080ac9c30185bb312843",
+      "size": 16753784
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "99cf274236c60277fcfad861a5a1007518687ad06ba8938760f50b55ffa0b1ef",
+      "size": 17077420
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4a05af595aa11c3436d3b68a616219ae99b303426f708a12b31bc9ce32530728",
+      "size": 21177
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mistralai/Ministral-3-8B-Instruct-2512",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2f37208c16b180cfcc12f94c1a61dd720c5d8106ec3802d7e20c6818dcde5044",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:37:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512/resolve/5b26027e7b19eeb4b7352e1fed3926375dd2cb4d/"
+    }
+  ],
+  "upstream": {
+    "commit": "5b26027e7b19eeb4b7352e1fed3926375dd2cb4d",
+    "host": "huggingface.co",
+    "repo": "mistralai/Ministral-3-8B-Instruct-2512",
+    "url": "https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512/tree/5b26027e7b19eeb4b7352e1fed3926375dd2cb4d"
+  }
+}

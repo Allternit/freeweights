@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T02:37:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f0edc261ebfcf55ab4408dc897b0ab873161871b341ed1e3a27761a69c268240",
+      "size": 491
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4aa9163feabd0d2c7f2970023b694de32e8ea9ca555246deef48a9930e5d9775",
+      "size": 6240
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "dc3953cfef2b3cc3f44f2005937b7344a43b64cd2fca4ba5e7a1c51b46ce7daf",
+      "size": 443
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "4e648af22dfb44d9a9379f9173d6067e9cd549da85c96a6fe29fed588b76c2d1",
+      "size": 1336391324
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "169bdc9bce1f1d4557f47775c5c38db7d3282ca3c9a387ee5fbbc126adfe4fb6",
+      "size": 1340622760
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "f69d7b9496c8497c5da7f7a3829eab2367c5ba5ca468ec61e20987ee5f7a2053",
+      "size": 1340675298
+    },
+    {
+      "lfs": true,
+      "path": "saved_model.tar.gz",
+      "sha256": "0cba24a67cf5a9f55e62876ab052fb2a66cb301678d626f59f5adeab829add0e",
+      "size": 1245395854
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "0b9c1eef03c0480057fcc6f2fccf4790b240a035b086bb5af57280412e0b315f",
+      "size": 1341090760
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ce64fce797c24f68df90b40a3f74f579b336a493db14bd583fd520ea0d8c9a98",
+      "size": 466062
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a025160ef0431f1a392f6f050c1310f4c5d9fb6f275932dbccba73c4d214bf10",
+      "size": 48
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google-bert/bert-large-uncased-whole-word-masking-finetuned-squad",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4aa9163feabd0d2c7f2970023b694de32e8ea9ca555246deef48a9930e5d9775",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:37:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad/resolve/979de3ccf2f366b17c326254262eff51aec29d62/"
+    }
+  ],
+  "upstream": {
+    "commit": "979de3ccf2f366b17c326254262eff51aec29d62",
+    "host": "huggingface.co",
+    "repo": "google-bert/bert-large-uncased-whole-word-masking-finetuned-squad",
+    "url": "https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad/tree/979de3ccf2f366b17c326254262eff51aec29d62"
+  }
+}

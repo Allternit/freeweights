@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T03:39:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5eb36800eda9ff04df9cbe7632dfb2a1430c0e855261fcb792e3dcd202320a46",
+      "size": 1959
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7f4e48d415ad7b32c3af539b6955d3daf8b4aae542ba61d3cae7b46054720732",
+      "size": 6291
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "f885c37483b0070cab54c03fa43f5520cc6bdf81a213e9d98746ec010d9a7094",
+      "size": 182
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c609f874d250f84c251ce5de4f9679256c6d4eef8d546f1c6f8773817aa00780",
+      "size": 526
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "33fafcea869e4005def57c9bfed90a0429d7094c6564a656f233e99a85ca0de8",
+      "size": 200197496
+    },
+    {
+      "lfs": true,
+      "path": "tinybrainbot-100m-v5.1-base-F16.gguf",
+      "sha256": "be8a0c53dca9df636e39e4ca48a7a3178492b3d83bf46d3caaa554f2358815b6",
+      "size": 200989728
+    },
+    {
+      "lfs": true,
+      "path": "tinybrainbot-100m-v5.1-base-Q4_K_M.gguf",
+      "sha256": "feb5d887231d10027fde03ed9b98f9c7d1f206c8878ee954bed0f3f90f2feb80",
+      "size": 66207264
+    },
+    {
+      "lfs": true,
+      "path": "tinybrainbot-100m-v5.1-base-Q8_0.gguf",
+      "sha256": "9a37a028a50d2a1800c8e0fd7859d842ea1bb17f7d83883d36999a3e46c63745",
+      "size": 107170848
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ca34282192509e9814db74d5f8352aed0b1468264f6286cced6e190db27a34ce",
+      "size": 3458516
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "fa18b4f4dfa6e52d24b70ae1e001319b0392049798b956fbdd4c54e04df5a5d1",
+      "size": 774527
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "02c03f0a53f05b88c862a2ddbdf0a5a981bd4c62a8995ab1c5ca1658956f03c4",
+      "size": 521
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nkthebass/tinybrainbot-100m-v5-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7f4e48d415ad7b32c3af539b6955d3daf8b4aae542ba61d3cae7b46054720732",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:39:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nkthebass/tinybrainbot-100m-v5-base/resolve/18b1fe07e20e39da1091be448b44a227b397fe57/"
+    }
+  ],
+  "upstream": {
+    "commit": "18b1fe07e20e39da1091be448b44a227b397fe57",
+    "host": "huggingface.co",
+    "repo": "nkthebass/tinybrainbot-100m-v5-base",
+    "url": "https://huggingface.co/nkthebass/tinybrainbot-100m-v5-base/tree/18b1fe07e20e39da1091be448b44a227b397fe57"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T04:03:34Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2d6265075d8392f623ce8c78ebd273e6f4b5f28da82404a8fd00059d67f00c20",
+      "size": 34546
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2f5a3be989932fc9069c55868cec60d9fc243ad43456c3e74bc873b7ace86945",
+      "size": 1278
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "577d92aebd967ad8edcb7ca9a9e951cbab9b8fff7ff2e9dc8593d895d86ac8b9",
+      "size": 115
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "df7efc262edd4cd98002222330f9226aebf940b0ba72096549a4e4ff9505b142",
+      "size": 3034269032
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "a6188c1e366f8ed715e60ff39c46a8c500fc33508e2affeb23e8c547c5853193",
+      "size": 293
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "30d71356c5ba154006df5bbb4a0583fc434525ceeb2f27a7d8a237ce5db26dc6",
+      "size": 3565402
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a178447e5b7165a9e1ad9c133cad418e948bf53467d03ef41753e179e57c18f6",
+      "size": 5324
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/DataDecide-dclm-baseline-qc-fw-3p-750M",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2d6265075d8392f623ce8c78ebd273e6f4b5f28da82404a8fd00059d67f00c20",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:03:34Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/DataDecide-dclm-baseline-qc-fw-3p-750M/resolve/eaba805138121abaacebf9df5ae60a5bded8c01d/"
+    }
+  ],
+  "upstream": {
+    "commit": "eaba805138121abaacebf9df5ae60a5bded8c01d",
+    "host": "huggingface.co",
+    "repo": "allenai/DataDecide-dclm-baseline-qc-fw-3p-750M",
+    "url": "https://huggingface.co/allenai/DataDecide-dclm-baseline-qc-fw-3p-750M/tree/eaba805138121abaacebf9df5ae60a5bded8c01d"
+  }
+}

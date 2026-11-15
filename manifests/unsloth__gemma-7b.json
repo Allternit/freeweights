@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T03:41:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c754c926f8c5c3809f1efb8682a73a45f8172edf315123398a582041942348a3",
+      "size": 2922
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ea3580074b04fc9e5cd3555316faab4fdb7d070224521f7371180463d01935bc",
+      "size": 709
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9f8c77dd886e6e1f39fc9d241cbb1ac69c0d15b55137efd2fb6334dffbf79183",
+      "size": 154
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "632edaf7993dd73b33287cc34e0de0ed48c04a54834198fac5f2f78ff47e62c9",
+      "size": 4995496656
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "b9b0278bd4e203c50d4a1b2a29bd6061b19c48abc77f338a4de2f0dd4fba0fac",
+      "size": 4982953168
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "69dcacd38561f42064c81a0d8ebfd97d8a393d22e40fea327fc6c9a14205768c",
+      "size": 4982953200
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "1ddee49e12c7ec4ffb8ff6359a727a798ded9d6176da4bad30833f24426cb92f",
+      "size": 2113988336
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "5a380de9182b50384f31d115991a3976352fb129e4016e29715b5b25439f3684",
+      "size": 20920
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "size": 636
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "f559f2189f392b4555613965f089e7c4d300b41fbe080bf79da0d676e33ee7f0",
+      "size": 34356041
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "size": 4241003
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "885bfdeda5b7a75bcb4aff07a655531138db218b3ca3f3c57b2f08d5910d9724",
+      "size": 41504
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/gemma-7b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c754c926f8c5c3809f1efb8682a73a45f8172edf315123398a582041942348a3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:41:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/gemma-7b/resolve/a0aa8221f534401bd60aa694dd8dd3022dbaf47a/"
+    }
+  ],
+  "upstream": {
+    "commit": "a0aa8221f534401bd60aa694dd8dd3022dbaf47a",
+    "host": "huggingface.co",
+    "repo": "unsloth/gemma-7b",
+    "url": "https://huggingface.co/unsloth/gemma-7b/tree/a0aa8221f534401bd60aa694dd8dd3022dbaf47a"
+  }
+}

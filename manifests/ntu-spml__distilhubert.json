@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T02:36:36Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "66d58120d6c4456a3bc9aa82f96187174d5a49e9ad79b4702477059a44c94901",
+      "size": 2053
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0427043d1c4c8d58298d2050420a0c2ce85c8b92ec3865eaecc62c3fc5a97006",
+      "size": 1302
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "77ad8f985c97750d8d27d6950c917800d80732a141370bf316058bded71a6cbe",
+      "size": 93973272
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7a8f0fc8ee1272ed28a8b468e183c56a19329a92babd3ca8d4d21ae02ba511cd",
+      "size": 214
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "6d7fb982c1365c60aae4e1a7af329ec0bbe50aec47ffafa9647e17e375009de6",
+      "size": 93985618
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ntu-spml/distilhubert",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "66d58120d6c4456a3bc9aa82f96187174d5a49e9ad79b4702477059a44c94901",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:36:36Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ntu-spml/distilhubert/resolve/fa87d96265d6b7af66e112faff6ff44df419cec9/"
+    }
+  ],
+  "upstream": {
+    "commit": "fa87d96265d6b7af66e112faff6ff44df419cec9",
+    "host": "huggingface.co",
+    "repo": "ntu-spml/distilhubert",
+    "url": "https://huggingface.co/ntu-spml/distilhubert/tree/fa87d96265d6b7af66e112faff6ff44df419cec9"
+  }
+}

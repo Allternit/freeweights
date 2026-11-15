@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T04:24:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e4ad1ef2f2e13c834c49fa57be3452efc7a192b2c3ffe6775e469a335170d65f",
+      "size": 1847
+    },
+    {
+      "lfs": false,
+      "path": "all_results.json",
+      "sha256": "507d7f41529d480153a78aedd26a6ba5a627722da1c0685eb56eac2cf8bce87d",
+      "size": 219
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "6e0fc64b0c2088c5aea7239f4fa840df5ab5b9eb566abd4af33eb497bfedbb91",
+      "size": 570
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "81e666b808a1cc23eecc4bbc6d540fe9c8a4baf4774ae23dafc9d1a199ee3b78",
+      "size": 1069
+    },
+    {
+      "lfs": false,
+      "path": "configuration_opensci.py",
+      "sha256": "d3d0e71d723af0bfb561cea4bcc30b6e72ad761d5828bc5910137c8fb05686e8",
+      "size": 11212
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3f03aed0670b1938941f527885a2dbaab20f6e359535212d840b2f8f56ef2708",
+      "size": 172
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9ddc35995916b46627c343386eaa414aa142af8a85454f6787e309a64e70c556",
+      "size": 3428804400
+    },
+    {
+      "lfs": false,
+      "path": "modeling_opensci.py",
+      "sha256": "89719b11f7156a48d236c3ab3287a86c8eaf4efd420313b00356e39b467f0e6e",
+      "size": 45872
+    },
+    {
+      "lfs": false,
+      "path": "slurm/1210342.err",
+      "sha256": "ab0257aca36ad0865554d1936b2135505b4e3adfd03581f2a0dca715e3973db9",
+      "size": 258009
+    },
+    {
+      "lfs": false,
+      "path": "slurm/1210342.out",
+      "sha256": "2fecb052407f5427d03d22bfd93bb289309e6f5900c979b69c8c267b6b1dbf8c",
+      "size": 134601
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "bfee335a17507040c3af7d03002bcb15f7c42c704be9ce2ec0f26effdfc527a7",
+      "size": 679
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "19bbc221b90a381873680c625cc8a83811461c4175f12955bfd3623aa094cadb",
+      "size": 3565051
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2c8e77aaa451512767bcaa6a0d5e377949789dae61da70beee5a53687ca1a9ec",
+      "size": 5736
+    },
+    {
+      "lfs": false,
+      "path": "train_results.json",
+      "sha256": "507d7f41529d480153a78aedd26a6ba5a627722da1c0685eb56eac2cf8bce87d",
+      "size": 219
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "40b7cb664081e99d2139262e661d24e9eb7427eaa8ea33ddd580441e51e3fa5b",
+      "size": 110394
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/open-sci-ref-1.7b-mixturevitae-wo_ot3-300B-4096-longsft_16k-DPO-Tulu3-decontaminated",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e4ad1ef2f2e13c834c49fa57be3452efc7a192b2c3ffe6775e469a335170d65f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:24:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/open-sci-ref-1.7b-mixturevitae-wo_ot3-300B-4096-longsft_16k-DPO-Tulu3-decontaminated/resolve/32b6718e1f045aa546288838efd69f592b3df566/"
+    }
+  ],
+  "upstream": {
+    "commit": "32b6718e1f045aa546288838efd69f592b3df566",
+    "host": "huggingface.co",
+    "repo": "laion/open-sci-ref-1.7b-mixturevitae-wo_ot3-300B-4096-longsft_16k-DPO-Tulu3-decontaminated",
+    "url": "https://huggingface.co/laion/open-sci-ref-1.7b-mixturevitae-wo_ot3-300B-4096-longsft_16k-DPO-Tulu3-decontaminated/tree/32b6718e1f045aa546288838efd69f592b3df566"
+  }
+}

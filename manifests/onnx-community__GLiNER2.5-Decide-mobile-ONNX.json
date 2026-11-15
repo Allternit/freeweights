@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:22:15Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "4df65b2e51734bfbe9c0e5192c50748dad7cac8b405b437ec2e732ffb3287ca1",
+      "size": 1582
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "69017e5ec2b35caca710a6c6b3c5ac5553d6603602a641bf7607e162c8314900",
+      "size": 1414
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "fe7207771be1163b9837be6dab8799ceaa9cfd8bd39357f435c6ad813c757fcb",
+      "size": 1617
+    },
+    {
+      "lfs": false,
+      "path": "conversion/make_mobile.py",
+      "sha256": "cf48bb5c9e02fe736393269a9f8b77d06a667f0bc3a22f57e70dfc09f2adbb98",
+      "size": 1994
+    },
+    {
+      "lfs": false,
+      "path": "conversion/probe.mjs",
+      "sha256": "1e0c76edb25d271a95a411ae8c4faa509c1233f9503236eedff7935c31e7841c",
+      "size": 2001
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "99a4e4c57fb15095a7e0aada14303d3d4f4ae0c3ce09c7b456a444bc2aff0dc2",
+      "size": 342105
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "602b28f32ad602d84355de99deb3dcd549386a7ef3b8ab9c3bc4e9911e918974",
+      "size": 344936496
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "84ea70143f533d7e99b393d87f20010887a9ac2cba955828ef313886e4e83f4f",
+      "size": 2414
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3ad87d9ffe669147063e70850927dd2da90249e2acc5c8527f1eb65df467bcc8",
+      "size": 8333952
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ae050dc100bd157db8995b9604e4d5a9bef535f3170fdba43f167dd3126d2bf1",
+      "size": 3360
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/GLiNER2.5-Decide-mobile-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "69017e5ec2b35caca710a6c6b3c5ac5553d6603602a641bf7607e162c8314900",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:22:15Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/GLiNER2.5-Decide-mobile-ONNX/resolve/880d1921d315b44648c9f6c6fb6ea0b87dea2b62/"
+    }
+  ],
+  "upstream": {
+    "commit": "880d1921d315b44648c9f6c6fb6ea0b87dea2b62",
+    "host": "huggingface.co",
+    "repo": "onnx-community/GLiNER2.5-Decide-mobile-ONNX",
+    "url": "https://huggingface.co/onnx-community/GLiNER2.5-Decide-mobile-ONNX/tree/880d1921d315b44648c9f6c6fb6ea0b87dea2b62"
+  }
+}

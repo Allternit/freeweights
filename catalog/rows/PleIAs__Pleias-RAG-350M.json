@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "PleIAs/Pleias-350m-Preview",
+  "display_name": "Pleias-RAG-350M",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "PleIAs/Pleias-RAG-350M",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/PleIAs/Pleias-RAG-350M.json",
+  "params": 353424384,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "PleIAs/Pleias-350m-Preview",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 1248,
+    "likes": 33,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T2",
+  "total_size": 713213042,
+  "upstream_url": "https://huggingface.co/PleIAs/Pleias-RAG-350M",
+  "what_changed": null
+}

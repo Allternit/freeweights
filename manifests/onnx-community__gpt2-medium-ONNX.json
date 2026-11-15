@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:27:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "bb9b240284925b33b11f16b473172fff6d2050b73c21c2589e35df373d30d3e4",
+      "size": 342
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "bb071bf15b6f8876eb6fbe696ad04b505689057802eefab7d512155987dd5c5e",
+      "size": 1024
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e7f6144153c0e1c0ccd6c327134b1bcc8f4e36e164d903935b08753947126636",
+      "size": 119
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "226a0fe55991adadfebd62795b1746590448fa786526b515eb2327ce03300afe",
+      "size": 1419958537
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "a243384454c75080580d81ff647886f6bb79a5bc5383a2207d17a5e6cde1bf17",
+      "size": 1419958556
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "32f61b0a6fea2abe4715dd00359191918dcf190db005d11d06a04506fe4dead1",
+      "size": 710323420
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "830a713213255c8bb38645fce709ce0d2db6f08d2d9886e2af6d5076e30a66d1",
+      "size": 562452716
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "a243384454c75080580d81ff647886f6bb79a5bc5383a2207d17a5e6cde1bf17",
+      "size": 1419958556
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "bb157d82168095423baf5959df5f24c5204f9c077ff973358738c12564790ad9",
+      "size": 710323439
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "830a713213255c8bb38645fce709ce0d2db6f08d2d9886e2af6d5076e30a66d1",
+      "size": 562452716
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "1c876da419695bcc6e481d39accdf7a0d3f09aef322afb0dac239696279c0a14",
+      "size": 562452771
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "70f61db8708568fa3ee6e66ecbcfdb8a89b9069feadff679dea00b097e521c98",
+      "size": 312
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+      "size": 99
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "1fe93b6152957cf9cfd6d89002467f789ce8b3f3e000b3a2edf27c808ddd0b9e",
+      "size": 3557680
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f1cb5e31899749cf30935ccea01180ab3cfd484bd2bcf3bfdc1aeb9fdf935f6f",
+      "size": 475
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7",
+      "size": 798156
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/gpt2-medium-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "bb9b240284925b33b11f16b473172fff6d2050b73c21c2589e35df373d30d3e4",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:27:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/gpt2-medium-ONNX/resolve/1caa11be3ed5c45d6fbc0e569e41402c7469d5b0/"
+    }
+  ],
+  "upstream": {
+    "commit": "1caa11be3ed5c45d6fbc0e569e41402c7469d5b0",
+    "host": "huggingface.co",
+    "repo": "onnx-community/gpt2-medium-ONNX",
+    "url": "https://huggingface.co/onnx-community/gpt2-medium-ONNX/tree/1caa11be3ed5c45d6fbc0e569e41402c7469d5b0"
+  }
+}

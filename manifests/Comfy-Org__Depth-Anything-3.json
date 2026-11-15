@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:31:44Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "bf663a4a93452bb85b0732c7b4b0926bea98adc7c9dcd2e5b990f956a6d02642",
+      "size": 3583
+    },
+    {
+      "lfs": false,
+      "path": "convert_da3.py",
+      "sha256": "85ba427323eb72f8de1636733e0c1462d12babf112d1c8171ec503e209bdbbd5",
+      "size": 7583
+    },
+    {
+      "lfs": true,
+      "path": "geometry_estimation/depth_anything_3_base.safetensors",
+      "sha256": "418c0d2ea857e2d1215fa51baa46833f499a62eb2400ec63d337aa20d326414f",
+      "size": 541524124
+    },
+    {
+      "lfs": true,
+      "path": "geometry_estimation/depth_anything_3_metric_large.safetensors",
+      "sha256": "b6eac00c060931fb15a97c1ba77d2e49d866b83ff7da631289279b3c1c0c99c8",
+      "size": 1336748056
+    },
+    {
+      "lfs": true,
+      "path": "geometry_estimation/depth_anything_3_mono_large.safetensors",
+      "sha256": "9b44eda5bedba5b4e125686fdb79d1db309c1b9785277576eb930f885b008f96",
+      "size": 1336748056
+    },
+    {
+      "lfs": true,
+      "path": "geometry_estimation/depth_anything_3_small.safetensors",
+      "sha256": "9c0a53d157c5b315d4c82908a43d93eeaa3a9ac3de9d15c2b4242ef46b5508ad",
+      "size": 137254980
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Depth-Anything-3",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "bf663a4a93452bb85b0732c7b4b0926bea98adc7c9dcd2e5b990f956a6d02642",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:31:44Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Depth-Anything-3/resolve/8265be070134dc7459217308cdc03109bde199b0/"
+    }
+  ],
+  "upstream": {
+    "commit": "8265be070134dc7459217308cdc03109bde199b0",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Depth-Anything-3",
+    "url": "https://huggingface.co/Comfy-Org/Depth-Anything-3/tree/8265be070134dc7459217308cdc03109bde199b0"
+  }
+}

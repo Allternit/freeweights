@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T04:28:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "78d30ffbfb41fb78c312e5373b20ac196265ab5eee03f3f88bc98874a4678adb",
+      "size": 837
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "69cd9e7a91d67fc7fd860f141f8990c0388aecb1b6f8cc5b121ebeb3225e0a3c",
+      "size": 1595
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3beed7c9c3f300aab3bd6f88e64bfe7fa37b25b284d7ca618d1f1a905d5decfc",
+      "size": 187
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e75edc38a7831f8a5a19197570ac34e7bb318f909a333434a8d45edd746bd2d9",
+      "size": 16381517176
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "size": 9732
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "ae2176a917399be0ef7a8aac909b86170479fd485b0c11c6fc3113482ee308ba",
+      "size": 8849
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/sera-subset-mixed-10000-axolotl__Qwen3-8B-v8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "78d30ffbfb41fb78c312e5373b20ac196265ab5eee03f3f88bc98874a4678adb",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:28:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/sera-subset-mixed-10000-axolotl__Qwen3-8B-v8/resolve/1e71d6b7158c299cd2d205ab169fa63375e3db4c/"
+    }
+  ],
+  "upstream": {
+    "commit": "1e71d6b7158c299cd2d205ab169fa63375e3db4c",
+    "host": "huggingface.co",
+    "repo": "laion/sera-subset-mixed-10000-axolotl__Qwen3-8B-v8",
+    "url": "https://huggingface.co/laion/sera-subset-mixed-10000-axolotl__Qwen3-8B-v8/tree/1e71d6b7158c299cd2d205ab169fa63375e3db4c"
+  }
+}

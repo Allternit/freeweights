@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "allenai/Molmo2-8B",
+  "display_name": "SAGE-MM-Molmo2-8B-SFT",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/SAGE-MM-Molmo2-8B-SFT",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/SAGE-MM-Molmo2-8B-SFT.json",
+  "params": 8661703120,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "allenai/Molmo2-8B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 1302,
+    "likes": 5,
+    "trending": null
+  },
+  "tasks": [
+    "video-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 17339703134,
+  "upstream_url": "https://huggingface.co/allenai/SAGE-MM-Molmo2-8B-SFT",
+  "what_changed": null
+}

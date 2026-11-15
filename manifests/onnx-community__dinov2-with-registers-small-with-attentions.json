@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:21:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f97dadc22d6db4184d64616396b89d5767afbcb35360c9f26ea2b2769e403ab2",
+      "size": 603
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a30decf36ca3905f141b139e1bb5718c4703e93dfd9f72d5844aee3a9418bb70",
+      "size": 58550
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "57c91dd8f905620442bc0dafec44e26de4b9129a83e57988d795afccf8dd0778",
+      "size": 91699646
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "60e1b17fbbd60875c75b792e032992e128200cfcaa0369e5193a81ae655bef12",
+      "size": 18720105
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "0a9a14fbfc39e6825b64f7c76def9ddaeba1533771a3805cfe0aced80df404b4",
+      "size": 46048092
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "2f8cb05b12964713cdf6cc390fa7db7b8e8557643126fdfbcc6fa3eb5bfc0c0d",
+      "size": 25125686
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "86c3a1524cdf23525aad5dc2fbaea5bdaa46566b1302ab4ef12ce2501d1fb7e0",
+      "size": 20046753
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "452284e1221d9e57323d7441167524e8ed1bf662dd660f4c3532b3a31bf16dd3",
+      "size": 15535375
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "1a2c415ca84ff7870886f97c8d4912958674e4af035293d37fe0c505f75d4f21",
+      "size": 25125727
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "1a2c415ca84ff7870886f97c8d4912958674e4af035293d37fe0c505f75d4f21",
+      "size": 25125727
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "913210eac40c0b203a394390c9829618c616955878d1a0272deb5ebecd99433b",
+      "size": 438
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/dinov2-with-registers-small-with-attentions",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f97dadc22d6db4184d64616396b89d5767afbcb35360c9f26ea2b2769e403ab2",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:21:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/dinov2-with-registers-small-with-attentions/resolve/72bc38ccc3da7d7353cf3f9880d62697faad4c4d/"
+    }
+  ],
+  "upstream": {
+    "commit": "72bc38ccc3da7d7353cf3f9880d62697faad4c4d",
+    "host": "huggingface.co",
+    "repo": "onnx-community/dinov2-with-registers-small-with-attentions",
+    "url": "https://huggingface.co/onnx-community/dinov2-with-registers-small-with-attentions/tree/72bc38ccc3da7d7353cf3f9880d62697faad4c4d"
+  }
+}

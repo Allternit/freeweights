@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T04:31:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6edb58d1a24bca1cc2e386a1098600c28d6909c562ddc9f2268305fc59b29d5d",
+      "size": 14346
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "4e3702901705fc9b325a38e30bab1d0a4227c0d1fe3c331fc30390e98cdac9cd",
+      "size": 859
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "d148e05fe43ae6abbd84081c7ce5e6b31a858efd40f7f92c3afb6644767a8d71",
+      "size": 66082888
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-guardian-3.2-5b-lora-harm-categories",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6edb58d1a24bca1cc2e386a1098600c28d6909c562ddc9f2268305fc59b29d5d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-guardian-3.2-5b-lora-harm-categories/resolve/92f0284f73584891b6cf9c13c48297aa4769421c/"
+    }
+  ],
+  "upstream": {
+    "commit": "92f0284f73584891b6cf9c13c48297aa4769421c",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-guardian-3.2-5b-lora-harm-categories",
+    "url": "https://huggingface.co/ibm-granite/granite-guardian-3.2-5b-lora-harm-categories/tree/92f0284f73584891b6cf9c13c48297aa4769421c"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:46:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "81aea23f068f669694ded0a03bd1c078d915f732166e2017c8e311affbc46bad",
+      "size": 3640
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9104e7a5d062981a99477fb480030e2160ca8168b32f8f27a92beb051831b0b9",
+      "size": 617
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "dab9ad0e328fe94a9c155497dc3f46cb456ae0223e19184d377e03adc3e3e08e",
+      "size": 49335032
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "33fac87c4f7e0255d08b4ce9471ab10a87bb5651695e1efdaf0b00b1ca923a68",
+      "size": 49405489
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/efficientformer_l1.snap_dist_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "81aea23f068f669694ded0a03bd1c078d915f732166e2017c8e311affbc46bad",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:46:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/efficientformer_l1.snap_dist_in1k/resolve/8738a58190800aaf5995f453b05f643df453a565/"
+    }
+  ],
+  "upstream": {
+    "commit": "8738a58190800aaf5995f453b05f643df453a565",
+    "host": "huggingface.co",
+    "repo": "timm/efficientformer_l1.snap_dist_in1k",
+    "url": "https://huggingface.co/timm/efficientformer_l1.snap_dist_in1k/tree/8738a58190800aaf5995f453b05f643df453a565"
+  }
+}

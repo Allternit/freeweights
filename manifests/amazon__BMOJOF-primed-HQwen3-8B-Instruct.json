@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T04:14:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9bc6eb532ef1659a7fa2095b634a7fa04f224d14bb14fdfce568c1cfe8bc2d9c",
+      "size": 17759
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "3238fb7abc74405749888d6bf679a62d8a4c5b4aef71eafbbe9d92c20d5ea37f",
+      "size": 4082
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8026eff50ae02570d5e772ed3fcf5b222cdf72134655083acc4d12a1c9b4a578",
+      "size": 2048
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "a52b5c482438cc48a8bd0ded9b282f6bb5990be8071e944e9cd57e60921b8550",
+      "size": 121
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "2b65c0bca14b2d71d0deed5f90969c31d4c624d522f28220df40b2483c18387c",
+      "size": 4940804224
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "1958fdb3d9ba7f608921d31d4c661c3f5ed2191d5c5320f7f04f4ba70efafe89",
+      "size": 4985565248
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "15f5aac1ad482862007067808a9f922611271559200c1893a7c7e595a0fd7138",
+      "size": 4919309864
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "428c29e2539ab3a66862f73218e87303bc97917976f3a8cae9f2935c46ac6330",
+      "size": 3664851680
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "aeb48e5fa8d96bdf90eb0cc02e5dae9d7a423209ad5b127cb9aec1b4cd47000b",
+      "size": 58145
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "47fb9a938aadb92d2023e81b4b4eca16772853d8a4da9654f1444e0e2c89373a",
+      "size": 375
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/BMOJOF-primed-HQwen3-8B-Instruct",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9bc6eb532ef1659a7fa2095b634a7fa04f224d14bb14fdfce568c1cfe8bc2d9c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:14:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/BMOJOF-primed-HQwen3-8B-Instruct/resolve/ce03c9afd23aa88e991662054048f6d5cf64c4d6/"
+    }
+  ],
+  "upstream": {
+    "commit": "ce03c9afd23aa88e991662054048f6d5cf64c4d6",
+    "host": "huggingface.co",
+    "repo": "amazon/BMOJOF-primed-HQwen3-8B-Instruct",
+    "url": "https://huggingface.co/amazon/BMOJOF-primed-HQwen3-8B-Instruct/tree/ce03c9afd23aa88e991662054048f6d5cf64c4d6"
+  }
+}

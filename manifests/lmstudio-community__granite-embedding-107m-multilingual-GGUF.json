@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T05:21:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "984db99a1fdb80527b74c1187c2ee02b4edd39008af6bd2be43a33542052e6d5",
+      "size": 1851
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a883e8183211bdded040cfd7fde13202f3c8380428d04ba8d8a1bb3501354728",
+      "size": 16744
+    },
+    {
+      "lfs": true,
+      "path": "granite-embedding-107m-multilingual-Q3_K_L.gguf",
+      "sha256": "619e8bddbfb2d74bf1d7b5e268ade65013b93c13c6fef875f6fc458001e75720",
+      "size": 116485824
+    },
+    {
+      "lfs": true,
+      "path": "granite-embedding-107m-multilingual-Q4_K_M.gguf",
+      "sha256": "4a0115de29aeeedc73175f14c6e2eee9da1d4b586cbe4c1e95b68b7e36aff36a",
+      "size": 117011136
+    },
+    {
+      "lfs": true,
+      "path": "granite-embedding-107m-multilingual-Q6_K.gguf",
+      "sha256": "2b5307c4a5159d1c4544f18d313a819cdcead55fa7a5639f5f5e449afdda1b63",
+      "size": 120163008
+    },
+    {
+      "lfs": true,
+      "path": "granite-embedding-107m-multilingual-Q8_0.gguf",
+      "sha256": "15691dfe830257f569a1e3521977351d16eac18e48e414908dc98ed9b8455e07",
+      "size": 121020096
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/granite-embedding-107m-multilingual-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a883e8183211bdded040cfd7fde13202f3c8380428d04ba8d8a1bb3501354728",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:21:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/granite-embedding-107m-multilingual-GGUF/resolve/fe02f2818f3aefb661ec656cab3be19024e40acd/"
+    }
+  ],
+  "upstream": {
+    "commit": "fe02f2818f3aefb661ec656cab3be19024e40acd",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/granite-embedding-107m-multilingual-GGUF",
+    "url": "https://huggingface.co/lmstudio-community/granite-embedding-107m-multilingual-GGUF/tree/fe02f2818f3aefb661ec656cab3be19024e40acd"
+  }
+}

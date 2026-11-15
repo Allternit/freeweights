@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:05:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "083b9eb3865e9e0858e69021177f968fb4b31031192a4be5fb91675495c662e4",
+      "size": 991
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c72fad60113754da8f5049d0ae1864e5986b8c52b040c5d28f842e325603820b",
+      "size": 886
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "7c8cf269e7739a9fb0c55b9963a17f67b8995a22664e0c2b3386f196d426d4b1",
+      "size": 498912894
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "55035a90c539a200b9aadb7a6cc65e7998e82eb1dacf73420d058c2c2e0d7d42",
+      "size": 206961216
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "3aaaecba2dbdc5029cd2b0aed61dc166869b95b44f5b2453881fc09d78c05962",
+      "size": 249618877
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "d9c0412c0e1976fbee55b9a254b652b9293e79033c9737b22d85ecf1114697cf",
+      "size": 125855421
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "baf3d11acdad35aee73b1912cfa6fcf04ce498f631f445e9bcb706eca408c020",
+      "size": 212269104
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "f472298f9ced892f8d7de427d94463b42ab1e753a319ccca27f3d2326023a9fe",
+      "size": 127536080
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "d9c0412c0e1976fbee55b9a254b652b9293e79033c9737b22d85ecf1114697cf",
+      "size": 125855421
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "6d81342db97bdc07d6d96c3ff5091e907cdb209d64ee415448c72d7d1a5d321e",
+      "size": 125855421
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+      "size": 280
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "727009a8214ddfa5af1deedf1006d4d06e8e51e54aa5f03566263d4e19bfcdce",
+      "size": 3558643
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4ea8648e4067230942ac6b32dd61328675bc99ae0a9f4cc665c30a95f0f68712",
+      "size": 1246
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e",
+      "size": 798293
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/roberta-base-openai-detector-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "083b9eb3865e9e0858e69021177f968fb4b31031192a4be5fb91675495c662e4",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:05:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/roberta-base-openai-detector-ONNX/resolve/54895bd11f34b47a01369d25b2255224717409b8/"
+    }
+  ],
+  "upstream": {
+    "commit": "54895bd11f34b47a01369d25b2255224717409b8",
+    "host": "huggingface.co",
+    "repo": "onnx-community/roberta-base-openai-detector-ONNX",
+    "url": "https://huggingface.co/onnx-community/roberta-base-openai-detector-ONNX/tree/54895bd11f34b47a01369d25b2255224717409b8"
+  }
+}

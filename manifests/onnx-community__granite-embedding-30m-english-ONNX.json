@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:12:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ba44193cf00eb237e2824cbfa212775d626f48f7c4caa3e630deda0908552db2",
+      "size": 1828
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6403a2a9c81b6dea7cffc0f84104da8baa880005b09f0c9ad685f610d961c892",
+      "size": 10739
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f04e3bf6a4f91d79b30a51a7e4bff9e81fe6e6cf2821ebc9d15ead96f7a08733",
+      "size": 837
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "5115a521ab3d1fd0b1e824a6dffa7177911e5558107648800978482e56d11c42",
+      "size": 58437
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "3f4d9c7eb9954f20123399efeb31ce6801104a717612bd114afa3cdf25115baa",
+      "size": 120589824
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "4ca129841ccadc740e9a1508293a391c39c98cb593bb9e493cef4eec5691b15f",
+      "size": 98438
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "333edd3ea491f7aa33afe9585670260b074df5ec27f9e0a7b187892141706769",
+      "size": 60251904
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "d601d607049209e8f21f117efc616134ac83324d65906ebf48f19f8abb82a7cd",
+      "size": 71255
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "764f0a3476adad3b527de53fa8605cd6abb63f325ee65f655dddbd9752f5843e",
+      "size": 84758016
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "15cb1e7f48f9013fc772c02d1d2b07de8bbbe46ae693c132fcb95fdaa441a4d7",
+      "size": 111144
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "870d15f56269abfc775ae2123d274a821a3fbc282c70fd4cfda9ce5db7f6ffea",
+      "size": 44990208
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "6f479f3970cfec8d7bea633057a29730f4c6c33c02751e2bb89e40ed1fd34677",
+      "size": 213016
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx_data",
+      "sha256": "bbd61688b25370a6accfe12fb023bc16ebb643150316e3a90ee5b5de2369d589",
+      "size": 30238848
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8293ae960b0a0852d4d3813118030a1149a3ed9fe37bc2e1e7b3c2e62eb2d4b7",
+      "size": 957
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d50aea3cfe363bd71210fe0b52bf967d3a50de5aed625da3278f42cadf3b1062",
+      "size": 2043228
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "50ceb70e75fb89dae019a2688582ef54f3a7b79db33ba5cfafe3098b884d5227",
+      "size": 1278
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e",
+      "size": 798293
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/granite-embedding-30m-english-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6403a2a9c81b6dea7cffc0f84104da8baa880005b09f0c9ad685f610d961c892",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:12:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/granite-embedding-30m-english-ONNX/resolve/a141ffafe5810d8ee499de14086b5259527ed6ff/"
+    }
+  ],
+  "upstream": {
+    "commit": "a141ffafe5810d8ee499de14086b5259527ed6ff",
+    "host": "huggingface.co",
+    "repo": "onnx-community/granite-embedding-30m-english-ONNX",
+    "url": "https://huggingface.co/onnx-community/granite-embedding-30m-english-ONNX/tree/a141ffafe5810d8ee499de14086b5259527ed6ff"
+  }
+}

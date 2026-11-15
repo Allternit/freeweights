@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T02:44:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "5d7deeaff0d6f92ef5c74658a46e4750ccbcd0602efcdfd24cd7ec6ae7c822f9",
+      "size": 11366
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "802c44b7e57d9a8322644b561aa0cc40965f129d84bea17c1b9421eb7f493121",
+      "size": 6860
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "08ab98258652553a53455b164c258488ce840322f0949877676d962a1d958cad",
+      "size": 25153
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "471fb571976770318fe6f27749e37940be8d29c0a7770558140f141f5906f2a2",
+      "size": 754
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5918624eab9c56ba3552672a97481bd2743abf2567611caca758df1939935a56",
+      "size": 633
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7ad1494c9fb6d26f0fdf1be2a542fe6e1f776597037661fd360daded217308c1",
+      "size": 226
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2fa450d7550b5600b030f09b9a954ffad3ef31476e44fb87e2154e9ac23b51d3",
+      "size": 721514672
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "d96a4630d4a8bbddabc3e1ad272a0e6a42f37a515239c8d25626d09154d7603b",
+      "size": 20197
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "4e5b4d49475d27c7ef7a61eea2d675f9cc013e91e3ddb5e06d964f5027c1814a",
+      "size": 11185815
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "34ef7db83df785924fb83d7b887b6e822a031c56e15cff40aaf9b982988180df",
+      "size": 1614363
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e9bc80502f0e997cc36b4d1f2bd025a3ca549a108736f7a1cef014229db0a82d",
+      "size": 202692
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "baidu/ERNIE-4.5-0.3B-PT",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "5d7deeaff0d6f92ef5c74658a46e4750ccbcd0602efcdfd24cd7ec6ae7c822f9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:44:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/baidu/ERNIE-4.5-0.3B-PT/resolve/b565cf6caebdb7a1eadf00100857b1ed5e044f12/"
+    }
+  ],
+  "upstream": {
+    "commit": "b565cf6caebdb7a1eadf00100857b1ed5e044f12",
+    "host": "huggingface.co",
+    "repo": "baidu/ERNIE-4.5-0.3B-PT",
+    "url": "https://huggingface.co/baidu/ERNIE-4.5-0.3B-PT/tree/b565cf6caebdb7a1eadf00100857b1ed5e044f12"
+  }
+}

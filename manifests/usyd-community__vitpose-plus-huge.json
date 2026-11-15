@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:33:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "41945184178d2b741d2a12b3a28c0be7423fbbad38d631cb5dea5bc4ccb3e374",
+      "size": 11654
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4484df364ec92bd4f8d7e32ca779e1c2d41227cb3f6010b2eb6afd72086deba9",
+      "size": 2484
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0ecb49f1ab0b18cc2f18446b8100442cec88bd99dd53779ad5a7f8c71aa08506",
+      "size": 3597730876
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "9b11cadc98c30b968a70cc1658ce1fbd74b721b0f21402a2ff8bc1dc9d1474a0",
+      "size": 363
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "usyd-community/vitpose-plus-huge",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "41945184178d2b741d2a12b3a28c0be7423fbbad38d631cb5dea5bc4ccb3e374",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:33:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/usyd-community/vitpose-plus-huge/resolve/9f36d7aec1800d23e97f10c2e74393aee92aa53f/"
+    }
+  ],
+  "upstream": {
+    "commit": "9f36d7aec1800d23e97f10c2e74393aee92aa53f",
+    "host": "huggingface.co",
+    "repo": "usyd-community/vitpose-plus-huge",
+    "url": "https://huggingface.co/usyd-community/vitpose-plus-huge/tree/9f36d7aec1800d23e97f10c2e74393aee92aa53f"
+  }
+}

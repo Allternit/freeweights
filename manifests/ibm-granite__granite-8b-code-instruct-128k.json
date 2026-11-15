@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T03:32:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ef9b7265bf393c2fbfee800c3b376f4638b75329acc3b0afa6c864e76d76c338",
+      "size": 7787
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "01c0b30272f2e9f5bee19e909f52ca73cb2c153e3170bf9b7c8214c2bba25559",
+      "size": 679
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "363aabb70f766d10df868a0c690834db0085c6a6ae74897a2c1b8682d8eb3744",
+      "size": 132
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "bb8b26ca6920a0cb729c7ad144944a87fc68d9f600ca7213f5d7349f24ff9332",
+      "size": 4967148360
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "3b441f58aa862ae4d77bd3cdf9f9fa12728cd8581a78068baf4dd58ef8cd00db",
+      "size": 4916899552
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "79626d34612f9e3f9b96f28faa19495922fb0179fd15b0454ef1f8cc003be3ff",
+      "size": 4967240296
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "9063fa814c2fff9020e7a660d1bde795e12ffef8ce1f70f9f91e70f2842b7830",
+      "size": 1258599120
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "94ff9338861bb99c97330ea981241c8b9f081d4d9b19d3b1452200ddc92003f4",
+      "size": 46810
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2f2bba45146f073a7b8a097cb6133a6b4b66d5751e73f2a2aca81083288813e9",
+      "size": 1020
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d3b4df07a0ce3940b15c77e2ea17ab5627ca0c4bf982d2eb37966aea0a81c918",
+      "size": 2057451
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f533a8dbb8526be9e8f5b218e6d7be21cb4ce6fd2068286ab7e78d98ecc9a053",
+      "size": 4540
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-8b-code-instruct-128k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ef9b7265bf393c2fbfee800c3b376f4638b75329acc3b0afa6c864e76d76c338",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:32:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-8b-code-instruct-128k/resolve/bed93d8de15bb9bb55cb1da10ae860e2883f4254/"
+    }
+  ],
+  "upstream": {
+    "commit": "bed93d8de15bb9bb55cb1da10ae860e2883f4254",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-8b-code-instruct-128k",
+    "url": "https://huggingface.co/ibm-granite/granite-8b-code-instruct-128k/tree/bed93d8de15bb9bb55cb1da10ae860e2883f4254"
+  }
+}

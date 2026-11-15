@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "elastic/distilbert-base-cased-finetuned-conll03-english",
+  "display_name": "distilbert-base-cased-finetuned-conll03-english-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/distilbert-base-cased-finetuned-conll03-english-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/distilbert-base-cased-finetuned-conll03-english-ONNX.json",
+  "note": "The license of the base model elastic/distilbert-base-cased-finetuned-conll03-english applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "elastic/distilbert-base-cased-finetuned-conll03-english",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 20,
+    "likes": 0,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "variant",
+  "total_size": 891641710,
+  "upstream_url": "https://huggingface.co/onnx-community/distilbert-base-cased-finetuned-conll03-english-ONNX",
+  "what_changed": null
+}

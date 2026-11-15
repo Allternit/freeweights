@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T05:03:44Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6170eb29a75b17260e38b6cab844d2a5a18d982ae006c145af68845712349af7",
+      "size": 4692
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "cfc67e5f349f37690dfd31ed1f18bc4442a9dd32fe39a648f993cb4eb3cae678",
+      "size": 9992
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0573d852160cc5ff499738611267d5de604f333b2977e3aa8b6624fd20497b03",
+      "size": 78932
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "1fa51889b1f8d3659802dedaa27e005b81e5c58483f13ecf13f2d97306bc6e35",
+      "size": 202
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "3d4d714fb03d8bbdd0c40fe2286986b1e1bc17e09d46debf1f6e985715c2bc7e",
+      "size": 3424
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "16c397141823508b9cdfb556a733f3b803d79e82f3e9e6a8d4bcfb1c9cddc582",
+      "size": 5282689134
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "f7980764cbb4aef1a8e573c5c2c7934f75210f16d79aafc5e0eedc8a72dc17e3",
+      "size": 5344502334
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "e722949880b7246e266e167134d6e306ba5d2294edde97f67f7af8e8f1d92ce5",
+      "size": 5350894204
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "b6bda2e706a88ad681dd362f2a46ab82ac847b4a3030967ec7edb42b75c9efe2",
+      "size": 4025932919
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "7f6e7b7ba4f0064e703ee46a7b8128049077a24fa49b9630d35621134b88345a",
+      "size": 185129
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "275e46542056eb37c812a782605b39865a5f2797e8b2bd23b28bb576d5b372e4",
+      "size": 36852
+    },
+    {
+      "lfs": true,
+      "path": "optiq/optiq_vision.safetensors",
+      "sha256": "8620dd37625f32d9ba82fc134c91d3da95cd3af92e7ae3866bdd3bdec7e08649",
+      "size": 3843782528
+    },
+    {
+      "lfs": false,
+      "path": "optiq/sensitivity.json",
+      "sha256": "394dce7b7f6c5ef7828400022934b4ae11916cbf02af828785e1432351b1e4f8",
+      "size": 86393
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "c9dbee66967b58f31a7c27f723c3760da3526ccd0427578e8905b0abb0031c4d",
+      "size": 28129897
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b2c352bba1d2ee25295aa84e7bdaa15a2b0305b79009926bcea72516ca200d42",
+      "size": 79985
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Muse-Glimmer-30B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6170eb29a75b17260e38b6cab844d2a5a18d982ae006c145af68845712349af7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:03:44Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Muse-Glimmer-30B-OptiQ-4bit/resolve/865ee8de65799cc4ee406587e4b607063708f358/"
+    }
+  ],
+  "upstream": {
+    "commit": "865ee8de65799cc4ee406587e4b607063708f358",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Muse-Glimmer-30B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Muse-Glimmer-30B-OptiQ-4bit/tree/865ee8de65799cc4ee406587e4b607063708f358"
+  }
+}

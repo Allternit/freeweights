@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T03:41:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56",
+      "size": 190
+    },
+    {
+      "lfs": false,
+      "path": "2_Dense/config.json",
+      "sha256": "d8dfe28f975c278029485521b90a9b2ad7f11f551a862fb772e38973050a22a9",
+      "size": 116
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/model.safetensors",
+      "sha256": "e53b7fcbca02a1e966ed3eeb433b765d30af989b6b6aec44bc6809156456cee3",
+      "size": 3145848
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/pytorch_model.bin",
+      "sha256": "fb330464adabfc4f532e691fe95c62752fb6237748b4617b83fb426b0d427c04",
+      "size": 3146680
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "740cf6a242b02c7cad94df1a987d7d5752e4ba77ab29846e9367342aadc2c239",
+      "size": 1772
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cf79aa6cfd0a023dfd27751408eae35a608efb22916cf1fe0caf947db34c4af1",
+      "size": 1389
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "f631e4bd49910419948c5e9134ab07e0d63b22b8cebbe6875f99a0712bcadd4d",
+      "size": 122
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "87dba079720f799b443b54508c7288a1e9b3d02d42cbee4f35df401914499294",
+      "size": 9729607168
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "41251094dfd3e7ff81a85ba97b3f4788df47e4039f1bc5037575b43c028beb40",
+      "size": 461
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "fc73ed70fbb704fa901846c34169c2e31d8cc4d9dbcfaa29f668df164a5d0e0a",
+      "size": 9729676422
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+      "size": 53
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "4720c0fddbe4c5991334f85ad7073d9bd0a294a8ba4641a2f8dab614ca825949",
+      "size": 1786
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+      "size": 791656
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3dd4249b57e28dda22219397c091a4a11655c537e0d8a9b5e2efcf43f39c8773",
+      "size": 1387554
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7d844a860dbbdf45ef1f10d360e425a77a0c45cb69168ebc79d82ebd1820c4a9",
+      "size": 1922
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "sentence-transformers/sentence-t5-xxl",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "740cf6a242b02c7cad94df1a987d7d5752e4ba77ab29846e9367342aadc2c239",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:41:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/sentence-transformers/sentence-t5-xxl/resolve/97f38f2f69860f732f602829da6df76ee5c4c0f9/"
+    }
+  ],
+  "upstream": {
+    "commit": "97f38f2f69860f732f602829da6df76ee5c4c0f9",
+    "host": "huggingface.co",
+    "repo": "sentence-transformers/sentence-t5-xxl",
+    "url": "https://huggingface.co/sentence-transformers/sentence-t5-xxl/tree/97f38f2f69860f732f602829da6df76ee5c4c0f9"
+  }
+}

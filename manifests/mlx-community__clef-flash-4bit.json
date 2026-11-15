@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T04:56:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".eval_results/typed-decisions.yaml",
+      "sha256": "54479463696b2c6a49bb5bb4d163443f16450410aac35f582cf303006ad45f8d",
+      "size": 2043
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "size": 11544
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "98c3712a002afd107eaad221499d9c086bd106445757fbfcd96d17bbf03daa1e",
+      "size": 8408
+    },
+    {
+      "lfs": false,
+      "path": "__pycache__/clef_mlx.cpython-312.pyc",
+      "sha256": "3ee6eb0a9a50e9d04f6c1ae5d6914823e50b1a02795505be3578962b124f1c1f",
+      "size": 38467
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "size": 7756
+    },
+    {
+      "lfs": false,
+      "path": "clef_mlx.py",
+      "sha256": "852223c944819a32fad5cf798d9d1dff30419820eaf5ad1f10cb9698afec97d5",
+      "size": 33670
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1",
+      "size": 3722
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "45707f8467bf4e54e112c6095a1b2d1f2d63651cf86816344cfff21f02dda0d4",
+      "size": 116
+    },
+    {
+      "lfs": true,
+      "path": "joint_head.safetensors",
+      "sha256": "19cdcec8c81dc9212be320fff47462ab342fbc1278be4368fb3da71241cf5ba0",
+      "size": 243538016
+    },
+    {
+      "lfs": false,
+      "path": "joint_head_config.json",
+      "sha256": "77efe959a38b5b17b241543e129e695f3c77465ece55a25985279bd8176279a0",
+      "size": 119
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "39894f085d844004c8e5c2394e45b5ab66bce4637ecdf23d92bf7c85cb66238f",
+      "size": 5349769710
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "40258d3d4f7225a0acbb45f4d34693465b98c8e2c0a4b0a512e536750379fcf3",
+      "size": 600449850
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "4518e4d98baed265cb25c5adb45839d5b69e0b9700f4bd573533392097bbb874",
+      "size": 123592
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+      "size": 1191
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f",
+      "size": 19989339
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7d884d6eaf8142a3343a933ca5ab6ccc2fa93d52591cdbbe2ea33559bb2b503a",
+      "size": 1190
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/clef-flash-4bit",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:56:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/clef-flash-4bit/resolve/b5adbe2c3a95200d4bf04a0727c8ec457157d5e1/"
+    }
+  ],
+  "upstream": {
+    "commit": "b5adbe2c3a95200d4bf04a0727c8ec457157d5e1",
+    "host": "huggingface.co",
+    "repo": "mlx-community/clef-flash-4bit",
+    "url": "https://huggingface.co/mlx-community/clef-flash-4bit/tree/b5adbe2c3a95200d4bf04a0727c8ec457157d5e1"
+  }
+}

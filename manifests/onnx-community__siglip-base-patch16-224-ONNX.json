@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:21:33Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "80e5a7e25c7133fa4d95a02b09dcc8ddd73c877091002475819b4eed264fff73",
+      "size": 4751
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e97dd7d219a4689bbbe90ef767ce757cee99b99879d9d62010bdb1fa6620592a",
+      "size": 918
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "b2717b471063b59d088d8059a1be7d2c9d7af684cb1cfa6c0623d900e5541aad",
+      "size": 813080024
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "23524997f929fe8d628f5f36a685a6d59491e61ae88bff7a8bb7559dfe0697c9",
+      "size": 212956802
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "6f4f2d66dac783d6a72204961df627789fc559c98ab76f8ea36c4f6b1ba89058",
+      "size": 210058412
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "ee19786aa55c1ed8fc762d0e1d539c48fd379b9d2a53871b2a202d470788d0a5",
+      "size": 223867620
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "6f4f2d66dac783d6a72204961df627789fc559c98ab76f8ea36c4f6b1ba89058",
+      "size": 210058412
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "4e38adb1ce6c90ea08efe238c08c7ce37cae03ace0ac8814838fcf8af1799837",
+      "size": 210058502
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "bec6ca696ddd6c2050ce0ea9fcb7581b052d267059a3341b6c1456cab54b1d07",
+      "size": 394
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/siglip-base-patch16-224-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "80e5a7e25c7133fa4d95a02b09dcc8ddd73c877091002475819b4eed264fff73",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:21:33Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/siglip-base-patch16-224-ONNX/resolve/9f0328bdd0eb4f62d0f6c10625f43d882b32102b/"
+    }
+  ],
+  "upstream": {
+    "commit": "9f0328bdd0eb4f62d0f6c10625f43d882b32102b",
+    "host": "huggingface.co",
+    "repo": "onnx-community/siglip-base-patch16-224-ONNX",
+    "url": "https://huggingface.co/onnx-community/siglip-base-patch16-224-ONNX/tree/9f0328bdd0eb4f62d0f6c10625f43d882b32102b"
+  }
+}

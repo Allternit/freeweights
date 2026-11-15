@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "FacebookAI/xlm-roberta-base",
+  "display_name": "xlm-roberta-base-language-detection",
+  "family": "papluca",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "papluca/xlm-roberta-base-language-detection",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/papluca/xlm-roberta-base-language-detection.json",
+  "params": 278059542,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "FacebookAI/xlm-roberta-base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 105768,
+    "likes": 377,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "T1",
+  "total_size": 3351269954,
+  "upstream_url": "https://huggingface.co/papluca/xlm-roberta-base-language-detection",
+  "what_changed": null
+}

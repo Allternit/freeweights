@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:30:40Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4852a6944834d5c6a33dd23e49efce4d04a8e99636f09b8ecb9d7850adec27ed",
+      "size": 10520
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "dc046d04c9b0ada7ae6f1dc89c465801799acdf0c9a6aab8c15a1b2d5ca4e91f",
+      "size": 23
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "708314bd039034a16c42e998eddf9ec63c8bf9c16b8e849760c7ddf2375c8b6f",
+      "size": 19091
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "71cace06873870322ffa93e4005999961cef6d6b08263b01aad832ded23d94ae",
+      "size": 737722356
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "9463f61e1b109a8eb4688b829260d7c6b1e6dff04c98ff7269bb89e2b92369b9",
+      "size": 286
+    },
+    {
+      "lfs": true,
+      "path": "spm.model",
+      "sha256": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "size": 2464616
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "497cf2afb9f305365529f3fb22b3993c97c929c85ba3b64118dc51eb4cab0e1d",
+      "size": 8656891
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "557b3d33d3f41b81ad769244e506549e98a1857d41dd58160aacd4d98d710b5a",
+      "size": 1284
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "tasksource/deberta-base-long-nli",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4852a6944834d5c6a33dd23e49efce4d04a8e99636f09b8ecb9d7850adec27ed",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:30:40Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/tasksource/deberta-base-long-nli/resolve/04dcf11f844b07bc57015169fca2b7d6df8299d5/"
+    }
+  ],
+  "upstream": {
+    "commit": "04dcf11f844b07bc57015169fca2b7d6df8299d5",
+    "host": "huggingface.co",
+    "repo": "tasksource/deberta-base-long-nli",
+    "url": "https://huggingface.co/tasksource/deberta-base-long-nli/tree/04dcf11f844b07bc57015169fca2b7d6df8299d5"
+  }
+}

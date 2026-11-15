@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:29:47Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "132cc311250e0efd4b1fba8fa398a317b4bb7cce8c45fefa0dc89f326e8c1ba7",
+      "size": 1008
+    },
+    {
+      "lfs": true,
+      "path": "all_in_one/mochi_preview_fp8_scaled.safetensors",
+      "sha256": "c1eb0ba4ded8df12ebbeb938c7b88a910fc380214923abcacbaab6984fa81e92",
+      "size": 15841792490
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/mochi_preview_bf16.safetensors",
+      "sha256": "e445b9b393c70c431543b062cc16ee29b5dc4dc187487fa3e1f5a4b6162c8be1",
+      "size": 20055467768
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/mochi_preview_fp8_scaled.safetensors",
+      "sha256": "8a6475b5380c90461a40d5c08ad574a5ad5ac4e6047e5f5f3f294df363f50705",
+      "size": 10028084160
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/t5xxl_fp16.safetensors",
+      "sha256": "6e480b09fae049a72d2a8c5fbccb8d3e92febeb233bbe9dfe7256958a9167635",
+      "size": 9787841024
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "sha256": "a498f0485dc9536735258018417c3fd7758dc3bccc0a645feaa472b34955557a",
+      "size": 5157348688
+    },
+    {
+      "lfs": true,
+      "path": "split_files/vae/mochi_vae.safetensors",
+      "sha256": "1be451cec94b911980406169286babc5269e7cf6a94bbbbdf45e8d3f2c961083",
+      "size": 919544702
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Mochi-Preview",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "132cc311250e0efd4b1fba8fa398a317b4bb7cce8c45fefa0dc89f326e8c1ba7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.video",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:29:47Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Mochi-Preview/resolve/ed4b8585dc4d3204397291c35e100884686178d6/"
+    }
+  ],
+  "upstream": {
+    "commit": "ed4b8585dc4d3204397291c35e100884686178d6",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Mochi-Preview",
+    "url": "https://huggingface.co/Comfy-Org/Mochi-Preview/tree/ed4b8585dc4d3204397291c35e100884686178d6"
+  }
+}

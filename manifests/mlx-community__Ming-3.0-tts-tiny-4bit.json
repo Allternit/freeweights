@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:17:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1d4387316c3534499f0edb873d4610359bd88e9e6e150ea099a137e086624aa5",
+      "size": 997
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e09aa078bed51073b54103ff6476f47f3b68783e593aaf6e36a61bf0d1f5b90a",
+      "size": 5984
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7d94bd795917d02f3e9af0fdc5788ee6298dda9687fe407b098bd49eebed9281",
+      "size": 7191
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "fdede64f07be6d6b1c5d2547fa3101cc8bdc033291efcd38c13784fb0e0611e1",
+      "size": 133
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "b79418b052ca2418d35e24561fa5dee25c0fc4a5c3c26a457df286d45e4c81d7",
+      "size": 5366814967
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "4de049344bcdf1f785238a7de6904f0a05b5db5a4173d4291f7c73c5cb686533",
+      "size": 1256018586
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "2f35cc1f26aca6428b41086c3f05d2ef229fbfd5da2ea29bddabc6ff5f16d4db",
+      "size": 206225
+    },
+    {
+      "lfs": true,
+      "path": "speaker_encoder/campplus.safetensors",
+      "sha256": "373f95ba31457cb1c54a94ce350b000c977d24aa9273c4b535e8a2dcadeaf31e",
+      "size": 27697145
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "97cb54787ce5ed537fe2b0211768bfce371defabe8241d39459493de9f23b1fc",
+      "size": 722
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "7e831c9b79b2cc4af0d3c7c7878a073371a5cbbaf1f4cb33f6fbce20417722f2",
+      "size": 12210216
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "23b25d6e0fa85152cb3f3136a29e3d7787ecff7d3e6b224beabda9a4d10e4b31",
+      "size": 60134
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Ming-3.0-tts-tiny-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1d4387316c3534499f0edb873d4610359bd88e9e6e150ea099a137e086624aa5",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:17:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Ming-3.0-tts-tiny-4bit/resolve/6010a1204b1a07da4a310b923975b673117eeae9/"
+    }
+  ],
+  "upstream": {
+    "commit": "6010a1204b1a07da4a310b923975b673117eeae9",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Ming-3.0-tts-tiny-4bit",
+    "url": "https://huggingface.co/mlx-community/Ming-3.0-tts-tiny-4bit/tree/6010a1204b1a07da4a310b923975b673117eeae9"
+  }
+}

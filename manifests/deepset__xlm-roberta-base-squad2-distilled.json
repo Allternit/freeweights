@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:32:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6b3042b628e40ec49bb990fe30cde4d8a58a7bd64cde095ab676359cec635ced",
+      "size": 5129
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "757c1cbde49074d71e2039c8ecbf87fb6fbbe48aec2f8e6b9f2b5838c8d0529c",
+      "size": 767
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "167806fd25d372590fb5247e27205182a270ddd7be2499b8894beb4fe916b8e8",
+      "size": 1109846632
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "a570d4f09042f78f8f7839062cdcd3bab6973906056b62d233ae338b034822c7",
+      "size": 1109903025
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+      "size": 239
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "2a0d7366dd7780ea36cc42431dd74cd79289b783ab01acd33013fcc96865a8e9",
+      "size": 9081351
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4707c7bf531aa1c48c47d10961806d20abf7f6b5718dc6921321f05d3c09dd58",
+      "size": 363
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "deepset/xlm-roberta-base-squad2-distilled",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6b3042b628e40ec49bb990fe30cde4d8a58a7bd64cde095ab676359cec635ced",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:32:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/deepset/xlm-roberta-base-squad2-distilled/resolve/c1bbfe57bc3335c37960a48c5628ba26d7e9e3b7/"
+    }
+  ],
+  "upstream": {
+    "commit": "c1bbfe57bc3335c37960a48c5628ba26d7e9e3b7",
+    "host": "huggingface.co",
+    "repo": "deepset/xlm-roberta-base-squad2-distilled",
+    "url": "https://huggingface.co/deepset/xlm-roberta-base-squad2-distilled/tree/c1bbfe57bc3335c37960a48c5628ba26d7e9e3b7"
+  }
+}

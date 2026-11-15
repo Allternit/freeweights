@@ -1,0 +1,44 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "FacebookAI/roberta-base",
+  "display_name": "nli-roberta-base",
+  "family": "cross-encoder",
+  "formats": [
+    "onnx",
+    "openvino",
+    "safetensors"
+  ],
+  "id": "cross-encoder/nli-roberta-base",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/cross-encoder/nli-roberta-base.json",
+  "params": 124648453,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "FacebookAI/roberta-base",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 4080,
+    "likes": 15,
+    "trending": null
+  },
+  "tasks": [
+    "zero-shot-classification"
+  ],
+  "tier": "variant",
+  "total_size": 4874777126,
+  "upstream_url": "https://huggingface.co/cross-encoder/nli-roberta-base",
+  "what_changed": null
+}

@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T03:47:15Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "185a1ac12e1f3b82d5e2c1e99a271a52c0e41ac2d8aec61401c71f54f0ed38fb",
+      "size": 435261
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b52d559c28bf14a7f64001342fc4a3bf700400ac217e1387a6ba6c2423b2f510",
+      "size": 1263
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6805f4b97bea9b4e9c31e38c7eb167b57df15cedee8dd64019b585ea2ac5320d",
+      "size": 596070136
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049",
+      "size": 694
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "size": 3583228
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9654072f7c873161814043cf08cb5ed72f71d0b935abcd4e267935cb34352c21",
+      "size": 20867
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nomic-ai/modernbert-embed-base-unsupervised",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "185a1ac12e1f3b82d5e2c1e99a271a52c0e41ac2d8aec61401c71f54f0ed38fb",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:47:15Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nomic-ai/modernbert-embed-base-unsupervised/resolve/69db3179cdf0b6107bcf0996bca1fde565409636/"
+    }
+  ],
+  "upstream": {
+    "commit": "69db3179cdf0b6107bcf0996bca1fde565409636",
+    "host": "huggingface.co",
+    "repo": "nomic-ai/modernbert-embed-base-unsupervised",
+    "url": "https://huggingface.co/nomic-ai/modernbert-embed-base-unsupervised/tree/69db3179cdf0b6107bcf0996bca1fde565409636"
+  }
+}

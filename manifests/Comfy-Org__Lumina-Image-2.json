@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:29:28Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a7752a3b027ae969eb4261416c13ca963528e5a0b6a4a9adfd9f6558961e54c6",
+      "size": 1608
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ba15a2f2624ab81a11d960abafba65d6c3b1296bf44c0a3a2ff178272bfd9a02",
+      "size": 864
+    },
+    {
+      "lfs": true,
+      "path": "all_in_one/lumina_2.safetensors",
+      "sha256": "b703b020a8ff07994e06b3dfa1b28625192bdbfa39aa086a33ea6d6fd206b186",
+      "size": 10620240765
+    },
+    {
+      "lfs": false,
+      "path": "example workflow/lumina2_basic_example.json",
+      "sha256": "c132883f68304a53b5e3a84fdc07b3dfb987ba5683d2a7bbe331a87709ad2f61",
+      "size": 9117
+    },
+    {
+      "lfs": true,
+      "path": "example workflow/lumina2_basic_example.png",
+      "sha256": "125c6c9050e4059f0e4983b17cc10dd852a06c1a7c4ab021d9ffa3fa033d04ea",
+      "size": 2001270
+    },
+    {
+      "lfs": true,
+      "path": "split_files/diffusion_models/lumina_2_model_bf16.safetensors",
+      "sha256": "736e7a524186c943568dfe688d87ce3556cfbd97f7026125065b0aa44c351f6a",
+      "size": 5219585680
+    },
+    {
+      "lfs": true,
+      "path": "split_files/text_encoders/gemma_2_2b_fp16.safetensors",
+      "sha256": "29761442862f8d064d3f854bb6fabf4379dcff511a7f6ba9405a00bd0f7e2dbd",
+      "size": 5232958283
+    },
+    {
+      "lfs": true,
+      "path": "split_files/vae/ae.safetensors",
+      "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+      "size": 335304388
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/Lumina-Image-2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ba15a2f2624ab81a11d960abafba65d6c3b1296bf44c0a3a2ff178272bfd9a02",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:29:28Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/Lumina-Image-2/resolve/5b072540ef86570fecb8249c505f23d5bdeb88cd/"
+    }
+  ],
+  "upstream": {
+    "commit": "5b072540ef86570fecb8249c505f23d5bdeb88cd",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/Lumina-Image-2",
+    "url": "https://huggingface.co/Comfy-Org/Lumina-Image-2/tree/5b072540ef86570fecb8249c505f23d5bdeb88cd"
+  }
+}

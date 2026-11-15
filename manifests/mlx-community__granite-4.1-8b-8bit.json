@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:15:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5f5577890a3be9ff17d8001bb78c039e9a9d823fd84475f59ce4e07afce37b77",
+      "size": 896
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "fed2756d2d24e127b951dcf139d0b03ab7db8ef23a456128ebc9c2db4901d476",
+      "size": 6099
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b28ecddaa321671ee100f7d40a6ffba99aaf5791fee1ae7ca9f59cc973c59ba4",
+      "size": 1069
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9117fb03fed79dbb459373edeef9a3eec966bce52a1842e03a6716e83117f0d1",
+      "size": 147
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "dac8fb36a5a64d2777f0bf9916b4e279f2e110cfa4214450535c49ab1258c7ca",
+      "size": 5334770257
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "c77369b7c3a6237aec0097d6e26ed1efd76d3edbb93cb5b57c6890fb71f70dce",
+      "size": 4093746437
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "a5c0d5e91c45e4915b23ca818a1168f8aa39da4c6895f22080e75cbbb4c47b8c",
+      "size": 79180
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "24665f2815ee47aba521e4710bfc52f8ca045a552ec3f60925cce5e0edecb657",
+      "size": 7153434
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fb2f8b5d9980cc7c2e4aa3361b34d3f43c6ff94f675276ac2e32fb2e9b751594",
+      "size": 418
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/granite-4.1-8b-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5f5577890a3be9ff17d8001bb78c039e9a9d823fd84475f59ce4e07afce37b77",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:15:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/granite-4.1-8b-8bit/resolve/d1969afe7eafafefb9e50b259d20a07ba4e8d7d4/"
+    }
+  ],
+  "upstream": {
+    "commit": "d1969afe7eafafefb9e50b259d20a07ba4e8d7d4",
+    "host": "huggingface.co",
+    "repo": "mlx-community/granite-4.1-8b-8bit",
+    "url": "https://huggingface.co/mlx-community/granite-4.1-8b-8bit/tree/d1969afe7eafafefb9e50b259d20a07ba4e8d7d4"
+  }
+}

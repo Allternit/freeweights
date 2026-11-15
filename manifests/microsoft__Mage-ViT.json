@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:50:31Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cefe2cedb3ffc7f22be10a761a05c5b1f4f69443faac3aa8a3f3fc57da1a4433",
+      "size": 6890
+    },
+    {
+      "lfs": false,
+      "path": "__init__.py",
+      "sha256": "47736b0d518ef48e763c44c18ddf9e8ae768dda82167ea9e23070a9e0ad4021e",
+      "size": 94
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "11afdaa18c370c074a7725c8106e4269438a0cafb42fe3544b77dbe688515811",
+      "size": 649
+    },
+    {
+      "lfs": false,
+      "path": "configuration_mage_vit.py",
+      "sha256": "328929a97426169140b499a1762f907d8c40df965fa38bd2ae910bd84920e5a9",
+      "size": 4797
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7848ad33832ef5a49c58c0d67a83d9269ace91349585e9a797364f8a0c535799",
+      "size": 631420552
+    },
+    {
+      "lfs": false,
+      "path": "modeling_mage_vit.py",
+      "sha256": "6469add145732bb3ca931d822552f498b54a8dee169b868d4b82104ada104f3f",
+      "size": 23449
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "c72258f294ccec4686ac58a7eb53fcb58f3ba5285e4caa122cbde5743edb8366",
+      "size": 466
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/Mage-ViT",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cefe2cedb3ffc7f22be10a761a05c5b1f4f69443faac3aa8a3f3fc57da1a4433",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:50:31Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/Mage-ViT/resolve/de3bd807f06fc9e8045540041dad3bf429a1eae7/"
+    }
+  ],
+  "upstream": {
+    "commit": "de3bd807f06fc9e8045540041dad3bf429a1eae7",
+    "host": "huggingface.co",
+    "repo": "microsoft/Mage-ViT",
+    "url": "https://huggingface.co/microsoft/Mage-ViT/tree/de3bd807f06fc9e8045540041dad3bf429a1eae7"
+  }
+}

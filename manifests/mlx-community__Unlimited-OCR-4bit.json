@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T05:17:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b77e74f5131b549262d99edac69517ff36b92b4a2cf1b4dec14c906332643a8a",
+      "size": 3376
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "b4e4771e69892ebc712ed6986bcce490c65041d1545e85599cd4a531cfab98a5",
+      "size": 191
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0ecf8c737191ba53797d99359ed1cf4fb56e13ff6b80872896101cf21aa6be93",
+      "size": 3507
+    },
+    {
+      "lfs": false,
+      "path": "configuration_deepseek_v2.py",
+      "sha256": "b8470dd616ba8745fce6e27b093aef73a098863cc891b2477dcf9326a36000f7",
+      "size": 10720
+    },
+    {
+      "lfs": false,
+      "path": "conversation.py",
+      "sha256": "ec7b6ce89bcda643de1f43269ffa66a7b2e65dc3ed30e427958f776546b4ba03",
+      "size": 9253
+    },
+    {
+      "lfs": false,
+      "path": "deepencoder.py",
+      "sha256": "0ae2fb6d1e5ae8cf100fc32f854830acd08c821a0a1f23a94a76588c222ddcf2",
+      "size": 38008
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "3797dc317a14b09c4e0ae0c324df8641c92992d60b8dab8e6318273d57c9f203",
+      "size": 2451215084
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "e408a502fa4df68cd92c201ca83e62522bf6545c5ba080de3c54357ea6e1680a",
+      "size": 72573
+    },
+    {
+      "lfs": false,
+      "path": "modeling_deepseekv2.py",
+      "sha256": "74e36e6bd0ba7bc565ef76464a99baa8e6bccb710ae9c1007b54ac30b855fa4c",
+      "size": 90162
+    },
+    {
+      "lfs": false,
+      "path": "modeling_unlimitedocr.py",
+      "sha256": "268bdcbe12cf37bf5a2debb53faf542e56570958a5d9f3314aab3cab2cf6cb48",
+      "size": 53431
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d8972048a2a80b1921c79ef99b1e8832b013c149214b15db31bac995c9d4e935",
+      "size": 464
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ab4bd57ce17d62e39e0a39e739de1e407484f090f0b2c7e391312bca7a5b061a",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "a02f8fd5228c90256bb4f6554c34a579d48f909e5beb232dc4afad870b55a8b4",
+      "size": 9979544
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6835b63b4534bac1094a9f4e6b136b4569772b38b81d78cc773f3aa6e6b7aa47",
+      "size": 567
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Unlimited-OCR-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b77e74f5131b549262d99edac69517ff36b92b4a2cf1b4dec14c906332643a8a",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:17:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Unlimited-OCR-4bit/resolve/945968c0fd6883390c2ef71f26a3e9955ad379c0/"
+    }
+  ],
+  "upstream": {
+    "commit": "945968c0fd6883390c2ef71f26a3e9955ad379c0",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Unlimited-OCR-4bit",
+    "url": "https://huggingface.co/mlx-community/Unlimited-OCR-4bit/tree/945968c0fd6883390c2ef71f26a3e9955ad379c0"
+  }
+}

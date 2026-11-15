@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-large-v3-turbo",
+  "display_name": "whisper-large-fa-v1",
+  "family": "vhdm",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "vhdm/whisper-large-fa-v1",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/vhdm/whisper-large-fa-v1.json",
+  "params": 808878080,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-large-v3-turbo",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 1010,
+    "likes": 60,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T2",
+  "total_size": 3237550585,
+  "upstream_url": "https://huggingface.co/vhdm/whisper-large-fa-v1",
+  "what_changed": null
+}

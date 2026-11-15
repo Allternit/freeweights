@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:36:57Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8b26edc6a50300f94f2b1d25aa547f0c138488e2be77ca7f32d0e75556885eef",
+      "size": 11115
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "de9d9567030e39d87149e8532ff1ee4aeb3976738a2eda7c2bdd3e705fe28d92",
+      "size": 834
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "cd22f08997eb2353c809a1d9b523c42c924247eb8619aa3e408bba3448f6e270",
+      "size": 111
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f093ee1688f8e0a5163fa9dd96a9da70e983d5285b6dd457062b914dffd1001f",
+      "size": 3020063528
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+      "size": 414
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be12f4375d655cc740864e3a9041bcddd8477942f209d9e7f27f6c8767162638",
+      "size": 17078368
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2f88dc9c9d3cf8178b5d8c1636614c174c14328715c00509361097434b2937b6",
+      "size": 177216
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "swiss-ai/Apertus-v1.1-1.5B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8b26edc6a50300f94f2b1d25aa547f0c138488e2be77ca7f32d0e75556885eef",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:36:57Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/swiss-ai/Apertus-v1.1-1.5B/resolve/dbe8919b2f0389888bada6b3a19e81e0ef4286c1/"
+    }
+  ],
+  "upstream": {
+    "commit": "dbe8919b2f0389888bada6b3a19e81e0ef4286c1",
+    "host": "huggingface.co",
+    "repo": "swiss-ai/Apertus-v1.1-1.5B",
+    "url": "https://huggingface.co/swiss-ai/Apertus-v1.1-1.5B/tree/dbe8919b2f0389888bada6b3a19e81e0ef4286c1"
+  }
+}

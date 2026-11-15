@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:42:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b92af4ad18a7d27a7b19332303ec1e220625de2cd573330e49e8ec7dbb073ae3",
+      "size": 26425
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "33fdb643d6779e1a0f1d8238d128217cadd33e326d69ec89c8b5ff82d67973fb",
+      "size": 1837
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "47d98fff2eb6555e3f6cdc652d7f71fc514482bdfe2e455deaa001590ad23e82",
+      "size": 38143452
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "size": 711396
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e711904cac23112776b678356ccf702cf934babaa01125f698ac43bf9ad38e73",
+      "size": 1300
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "boltuix/NeuroBERT-NER",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b92af4ad18a7d27a7b19332303ec1e220625de2cd573330e49e8ec7dbb073ae3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:42:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/boltuix/NeuroBERT-NER/resolve/fdc13cd31d4abc10b1b54df348caf10727a1ad93/"
+    }
+  ],
+  "upstream": {
+    "commit": "fdc13cd31d4abc10b1b54df348caf10727a1ad93",
+    "host": "huggingface.co",
+    "repo": "boltuix/NeuroBERT-NER",
+    "url": "https://huggingface.co/boltuix/NeuroBERT-NER/tree/fdc13cd31d4abc10b1b54df348caf10727a1ad93"
+  }
+}

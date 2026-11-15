@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T04:56:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "5f44a64473fdb1019fc616d999d351f60bf061a4d77272b4b7309f799dba3676",
+      "size": 14107
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3673b2900c4af7d11c2b084209b14e4dfc746809e72e9adc0036174ac6be60d4",
+      "size": 6635
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7e96ac0dba63fb0bfe1f65fa533e7e0720b609fe88ed658050f01a9a13e4bccf",
+      "size": 711
+    },
+    {
+      "lfs": true,
+      "path": "model.onnx",
+      "sha256": "bee01a9d2d474a589c5db631d99c382d5502bb81a0fe318d247f46c16b25f060",
+      "size": 541416974
+    },
+    {
+      "lfs": true,
+      "path": "model.quant.onnx",
+      "sha256": "c8169782758fe097c6cf036ddc48f6ff7b3c861764d6124c20d8b31bc0ba93d7",
+      "size": 135582999
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b78c8a01991037caecadaa5055092e64923b52286612e87ba32e9d36f8209630",
+      "size": 541317368
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "size": 125
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "c2c0e4d392f08c2c2eb950156eb26e4e5ddd15b557faa45ed6a0decaf45b5f98",
+      "size": 2919627
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "91955163d30880d1ef0928cfdd729baaf413401dc4456f3ab1a48b3eec2ec624",
+      "size": 1228
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "fe0fda7c425b48c516fc8f160d594c8022a0808447475c1a7c6d6479763f310c",
+      "size": 995526
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "gravitee-io/distilbert-multilingual-toxicity-classifier",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "5f44a64473fdb1019fc616d999d351f60bf061a4d77272b4b7309f799dba3676",
+    "id": "LicenseRef-OpenRAIL++-M",
+    "name": "CreativeML Open RAIL++-M",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:56:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/gravitee-io/distilbert-multilingual-toxicity-classifier/resolve/865ad1b453a49e4a7f2471fc40b727ececd28314/"
+    }
+  ],
+  "upstream": {
+    "commit": "865ad1b453a49e4a7f2471fc40b727ececd28314",
+    "host": "huggingface.co",
+    "repo": "gravitee-io/distilbert-multilingual-toxicity-classifier",
+    "url": "https://huggingface.co/gravitee-io/distilbert-multilingual-toxicity-classifier/tree/865ad1b453a49e4a7f2471fc40b727ececd28314"
+  }
+}

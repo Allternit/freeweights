@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/gemma-4-31B-it",
+  "display_name": "basal-omni-1.0-ultra",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "Remek/basal-omni-1.0-ultra",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/Remek/basal-omni-1.0-ultra.json",
+  "params": 31273086512,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/gemma-4-31B-it",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 3955,
+    "likes": 43,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T2",
+  "total_size": 62578712461,
+  "upstream_url": "https://huggingface.co/Remek/basal-omni-1.0-ultra",
+  "what_changed": null
+}

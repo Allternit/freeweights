@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:15:09Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "78060ff9daee33671cf29cddc03a3f02e933d6b7fbae3870ef05c368c519ef96",
+      "size": 8468
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "949f918f62563e2d7cf4a141a2b6484c8915a6e505b37dbc7dfd41ae8ca6e71d",
+      "size": 17854
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7a98d87cdc868a490e863dd60a03d9f860fff88c17c97788a835062944953499",
+      "size": 2104
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "5e83efe637d4451f0b076802521df58bb5b8dc480598edece3e2dfcc773f2a18",
+      "size": 177
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00009.safetensors",
+      "sha256": "a4a3c327aefba36ec6e7e22410120535a8ff66e839ac4f6a66a6bb79d3b422a9",
+      "size": 4386174152
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00009.safetensors",
+      "sha256": "16bb10d8bdb8e7b52b6745db906fbbc3dca863ef4944da0ae15f414417e7845a",
+      "size": 4821008665
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00009.safetensors",
+      "sha256": "a1dc0f607c8afd3887bd61bc30412c88e241a247357ff709a711ecc7706f3b11",
+      "size": 4821008667
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00009.safetensors",
+      "sha256": "207aada8f2b464e4dfacf47ba36ef0d7f57720c5138dfd85fb822d031758e292",
+      "size": 4821008730
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00009.safetensors",
+      "sha256": "19f80924359b0719fdc8cfc2973a7c936df599a3d8dc2bc4b5ffebaf3f9e77d4",
+      "size": 4821008772
+    },
+    {
+      "lfs": true,
+      "path": "model-00006-of-00009.safetensors",
+      "sha256": "38b2c63b7bbb4f7ac0d65e70ffca664aeb497628b32228ce56759ed63328556f",
+      "size": 4821008771
+    },
+    {
+      "lfs": true,
+      "path": "model-00007-of-00009.safetensors",
+      "sha256": "9bcb7e82f4c27ecf2aa5696353a024b4ce2bcceb084f960fa0ef2b23e624676b",
+      "size": 4821008768
+    },
+    {
+      "lfs": true,
+      "path": "model-00008-of-00009.safetensors",
+      "sha256": "ee7b22d6f350b79f68c2933e0f488a8306b700744c7aeb64e2b2da963ea1b50c",
+      "size": 4821008765
+    },
+    {
+      "lfs": true,
+      "path": "model-00009-of-00009.safetensors",
+      "sha256": "553c0c6694a970661d23edc3c6d4bf1a5856dc0312ddbcdfcb853637e8eea182",
+      "size": 2751380104
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "d3b95ef32375d216afd6ce5254687a9d07b3483018ccbb81e2c7860031683535",
+      "size": 80763
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c661c7dc897a8d9851446db24876bbc243e6ad2f58542e9147190e6654f92855",
+      "size": 446
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3",
+      "size": 27868174
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "3662657e318af8fbc4b06045c1e625ecdf43a019db5ec1aa11f9bc5fcc8277ca",
+      "size": 4228
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/gpt-oss-20b-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "78060ff9daee33671cf29cddc03a3f02e933d6b7fbae3870ef05c368c519ef96",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gpt-oss",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:15:09Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/gpt-oss-20b-bnb-4bit/resolve/be237a84b32e407d54531dd6c8cb9c0f7d78bfcb/"
+    }
+  ],
+  "upstream": {
+    "commit": "be237a84b32e407d54531dd6c8cb9c0f7d78bfcb",
+    "host": "huggingface.co",
+    "repo": "unsloth/gpt-oss-20b-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/gpt-oss-20b-bnb-4bit/tree/be237a84b32e407d54531dd6c8cb9c0f7d78bfcb"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:03:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8df822882d055d504a2b6a9777bb2eea6aaeb7a54b2285ba732b650c00c14cda",
+      "size": 7933
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "f59f889088e0fe21c523e7cf121bb6dca3b0bb148cb7159fbb4572c74dfc5644",
+      "size": 25381
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "2f27812dab7f333e471884e0c803d807f11953d5453140dfb1aaba234f872bc8",
+      "size": 1474
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f3201c9d3ffb55873a844d10ca2c616c3e1dc4939ee0631c697905a9d245f504",
+      "size": 2676
+    },
+    {
+      "lfs": false,
+      "path": "configuration_paddleocr_vl.py",
+      "sha256": "753dd93654c3a9c8c85a3eaee1e3092dd12591b0f2dce0305e1abfb7a41ff160",
+      "size": 8104
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "a6701d78ab3b4d972307cdec3b69d4c13f46e0d5140514f50ab7d84259324b94",
+      "size": 133
+    },
+    {
+      "lfs": false,
+      "path": "image_processing_paddleocr_vl.py",
+      "sha256": "a4fa521b9cb16e207f94b7f2d16427771776dfc634420d319fc4916ee58049ec",
+      "size": 25032
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "5d1ce8b52bf14c528a4b860ef8ed74a8136aecf21d98ed514c09522a19cdf559",
+      "size": 703562705
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "7922fd298904bb4271d80f51bc7bb5d4cc7d3a038921cdbf5080bfb6c0556271",
+      "size": 69879
+    },
+    {
+      "lfs": false,
+      "path": "modeling_paddleocr_vl.py",
+      "sha256": "c5013dff57ca8b87dc1de64d0fd839a44313de09d230a4fb2d08289d2cad5111",
+      "size": 103889
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "111872ab1e8bb7fd040ac5087bfced7ab8f011f02139b088cba294964c3b1d0e",
+      "size": 641
+    },
+    {
+      "lfs": false,
+      "path": "processing_paddleocr_vl.py",
+      "sha256": "e29cb1e5f275f2bd3ce051bd5c9983a33894e693b2823a0e13d4c07c8c4f9e13",
+      "size": 12253
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "37e0b148483ccbd862ec95e5a4ccd9d5a6a8e79e8b49db95eeefcb94fcb436e2",
+      "size": 609
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "d3a125c03103deb2acaf7730791bdbbf196f620e5a2213b664511ff9b4b25bab",
+      "size": 1151
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "f64dee5b500fd0737498420a95cfa25927990ecbe37c0c112a6c8fcea22bc7f9",
+      "size": 11188983
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ec27a60e0ac749b3820964af0511115d8e5a9b63ce22ff933ef6a09c36aa50fe",
+      "size": 782
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/PaddleOCR-VL-1.6-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8df822882d055d504a2b6a9777bb2eea6aaeb7a54b2285ba732b650c00c14cda",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:03:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/PaddleOCR-VL-1.6-4bit/resolve/c8987b277bdd8aaec8bd265d154f391bd03ad165/"
+    }
+  ],
+  "upstream": {
+    "commit": "c8987b277bdd8aaec8bd265d154f391bd03ad165",
+    "host": "huggingface.co",
+    "repo": "mlx-community/PaddleOCR-VL-1.6-4bit",
+    "url": "https://huggingface.co/mlx-community/PaddleOCR-VL-1.6-4bit/tree/c8987b277bdd8aaec8bd265d154f391bd03ad165"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:20:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "63662798367e4c9e910b5d3f301e96df5efe3c977eb9b01817602bd89db8b99d",
+      "size": 2023
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1eff3b16d227da945cf942b5d1f3a2cd9c32a8752377127db830d9d2f8ad261f",
+      "size": 2504
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f1c729996bbc0a5fce29a58b5f55d122ead5af96d3f56e4431f4a895cde556fc",
+      "size": 16545
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "dc54cf872c059cb8f510f38770176b29211d1d83a9bebb7de0d759fe77d80948",
+      "size": 2096
+    },
+    {
+      "lfs": false,
+      "path": "genai_config.json",
+      "sha256": "063db3c8fe0866ef7dbce5966de6e6cc8f0df38ba5b911764f9d8ddaca9bc3c5",
+      "size": 1720
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "912bb474f36eb600f91a5a32f70f5dd2534313423adfc3d6726cb123e3b1de9d",
+      "size": 175
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "5834cda2698332a02b1451a2935d10e7484b871bfa30c3a8b62cb72cc74e6a83",
+      "size": 55192622
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "2fb5a8564a09f6521e51b06f29384439b1285ccf9166533fceb4ed6af206aa7a",
+      "size": 2070839296
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_1",
+      "sha256": "0d3370b50d98413348135365c925b6af46346171693041c115d96f79c3f4fe21",
+      "size": 2057011200
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_2",
+      "sha256": "ff26e086a3887371ac51a89aeac752cbe2dce20cec514a2190d54287d302b4d4",
+      "size": 1974067200
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_3",
+      "sha256": "d4c49f1cb2f941bc5d457546c0b35707b518e0401d4dd9716238f45b7d6ef235",
+      "size": 2057011200
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_4",
+      "sha256": "3619260fcfd26b367cd886f1d21a24332f111ded159ca388b7e0d8f1026b414e",
+      "size": 1974067200
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_5",
+      "sha256": "4848013f1019367d427e5802c58b0adeb4f5cae31e1ff639fa39f9e70ef6660c",
+      "size": 2096824320
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data_6",
+      "sha256": "74f352935e9af66748ad0afe803aee88f94735865ac3a6ff3f3380885fb1c18c",
+      "size": 339033600
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "9ee667e324910c037718c9251f2ec97cec5530b6789a52a4d95328e61f110512",
+      "size": 463
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3",
+      "size": 27868174
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "340123c6e8ddb2261890ce879fe351d9cde7c9e458c7baee221454fa232dd2cb",
+      "size": 21912
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/gpt-oss-20b-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1eff3b16d227da945cf942b5d1f3a2cd9c32a8752377127db830d9d2f8ad261f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gpt-oss",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/gpt-oss-20b-ONNX/resolve/0cb2c910963421423a6011d51dd0fef9d6e99f36/"
+    }
+  ],
+  "upstream": {
+    "commit": "0cb2c910963421423a6011d51dd0fef9d6e99f36",
+    "host": "huggingface.co",
+    "repo": "onnx-community/gpt-oss-20b-ONNX",
+    "url": "https://huggingface.co/onnx-community/gpt-oss-20b-ONNX/tree/0cb2c910963421423a6011d51dd0fef9d6e99f36"
+  }
+}

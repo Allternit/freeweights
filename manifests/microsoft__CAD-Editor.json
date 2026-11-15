@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T04:31:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9b0ca9272ae50cd7835a0872fb4cd915000d03db9184337d8018e444316d317b",
+      "size": 10070
+    },
+    {
+      "lfs": false,
+      "path": "infill_stage/adapter_config.json",
+      "sha256": "414975352460c514da865c1db9fe72be9024bc68466abe43b3e847fabbe88b42",
+      "size": 654
+    },
+    {
+      "lfs": true,
+      "path": "infill_stage/adapter_model.safetensors",
+      "sha256": "4ab5f82b977d79f400b87047136bc2db602830e0e736859e81d29161997c8ad6",
+      "size": 27280280
+    },
+    {
+      "lfs": false,
+      "path": "infill_stage/trainer_state.json",
+      "sha256": "190ae9745acd1533b6a466a88784760e410200336bf9c97ef35dabcb94383f57",
+      "size": 312825
+    },
+    {
+      "lfs": true,
+      "path": "infill_stage/training_args.bin",
+      "sha256": "203160aa4d7cb44f9a8a62906d8c916ebc3aa5049563674b888ec6843747858e",
+      "size": 5368
+    },
+    {
+      "lfs": false,
+      "path": "locate_stage/adapter_config.json",
+      "sha256": "414975352460c514da865c1db9fe72be9024bc68466abe43b3e847fabbe88b42",
+      "size": 654
+    },
+    {
+      "lfs": true,
+      "path": "locate_stage/adapter_model.safetensors",
+      "sha256": "7dec746534540fa8aeab03551deb946b819c3baec74bdb6175ea8daffd807d1a",
+      "size": 27280152
+    },
+    {
+      "lfs": false,
+      "path": "locate_stage/trainer_state.json",
+      "sha256": "dd2c1cc3d523f8b87e601b2d5ed0d6833437e8b95052d96842291eaf8eb59372",
+      "size": 5169755
+    },
+    {
+      "lfs": true,
+      "path": "locate_stage/training_args.bin",
+      "sha256": "9edaa9e7f9d9b19bc17ed9b622f0c00a491c59cf203f3814c3e1112775a966ed",
+      "size": 6392
+    },
+    {
+      "lfs": false,
+      "path": "locate_stage/zero_to_fp32.py",
+      "sha256": "92dcd9cc03d6010b4d060b73c8826d71ff9e29a030154e9f192e34ad80457f3a",
+      "size": 29219
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/CAD-Editor",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9b0ca9272ae50cd7835a0872fb4cd915000d03db9184337d8018e444316d317b",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/CAD-Editor/resolve/05dc1de7b9285512cdb1ffd38ac8c298f50b2b0b/"
+    }
+  ],
+  "upstream": {
+    "commit": "05dc1de7b9285512cdb1ffd38ac8c298f50b2b0b",
+    "host": "huggingface.co",
+    "repo": "microsoft/CAD-Editor",
+    "url": "https://huggingface.co/microsoft/CAD-Editor/tree/05dc1de7b9285512cdb1ffd38ac8c298f50b2b0b"
+  }
+}

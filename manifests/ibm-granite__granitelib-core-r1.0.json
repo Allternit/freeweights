@@ -1,0 +1,594 @@
+{
+  "created_at": "2026-11-15T04:50:34Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "97186a9a4877d9bfc8547895a0cff92a726bb867c76480bb547e041f7848d2ae",
+      "size": 6442
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/README.md",
+      "sha256": "864c1f99f29de9edc09cf2e3527c2f56823e4843b4b330d021d68fc50798a4fd",
+      "size": 41373
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.0-micro/lora/adapter_config.json",
+      "sha256": "fc45c81f259d14a99d934e26c2aa5f5a1d2fbfdbae6d518034f28a2c1033e6e0",
+      "size": 878
+    },
+    {
+      "lfs": true,
+      "path": "context-attribution/granite-4.0-micro/lora/adapter_model.safetensors",
+      "sha256": "bb21bb1638a30278b8bca7dceab30d18841f4517c5636bd4c51982fa8022db5c",
+      "size": 28867960
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.0-micro/lora/io.yaml",
+      "sha256": "753aa976bae453cb62e642fc1c4fb120273092038dddd0bc61514669e8b6fa38",
+      "size": 3521
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.0-micro/lora/model.sig",
+      "sha256": "faa2b54415e1739bbb1831366037d0dbc0a1dd6a48b07862137920351f69a453",
+      "size": 8588
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-30b/lora/adapter_config.json",
+      "sha256": "713f214fe9e9284f479ab335e0a4128564349530a38ce8a6a1e16fccdd4c48fc",
+      "size": 1206
+    },
+    {
+      "lfs": true,
+      "path": "context-attribution/granite-4.1-30b/lora/adapter_model.safetensors",
+      "sha256": "32fbbec6c6ec566d82eda82bf0374a6f4b9c3b626a2b85adcae23eee2b991309",
+      "size": 562158688
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-30b/lora/io.yaml",
+      "sha256": "753aa976bae453cb62e642fc1c4fb120273092038dddd0bc61514669e8b6fa38",
+      "size": 3521
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-30b/lora/model.sig",
+      "sha256": "aa5b4eeaf9a6548b15d775cd557372bef383dfc99c5f073d6573a6bc0fd1494a",
+      "size": 8659
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-3b/lora/adapter_config.json",
+      "sha256": "f1eb0b35e3994299f1a3331d5cfdc9669079bf53b7b70a765b3183b332ec089d",
+      "size": 1074
+    },
+    {
+      "lfs": true,
+      "path": "context-attribution/granite-4.1-3b/lora/adapter_model.safetensors",
+      "sha256": "9ecaf0217a4fd7dd9e4ba3f9db031220b786e50af443e2bd0abc584004b033ed",
+      "size": 14450056
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-3b/lora/io.yaml",
+      "sha256": "753aa976bae453cb62e642fc1c4fb120273092038dddd0bc61514669e8b6fa38",
+      "size": 3521
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-3b/lora/model.sig",
+      "sha256": "7ec23e03fec7ce934a10311c41ad1fe3701467483a4b7c722febbee0d8f357e0",
+      "size": 8651
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-8b/lora/adapter_config.json",
+      "sha256": "01f3d18f4a99b4b0685ae90e0c63a9dcf9155a80ac8cc53935b66b5fda032677",
+      "size": 1074
+    },
+    {
+      "lfs": true,
+      "path": "context-attribution/granite-4.1-8b/lora/adapter_model.safetensors",
+      "sha256": "ae9b049eb6be14830f17003812d3641b17d5b052bec7172acd4bde4163612e73",
+      "size": 23625328
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-8b/lora/io.yaml",
+      "sha256": "753aa976bae453cb62e642fc1c4fb120273092038dddd0bc61514669e8b6fa38",
+      "size": 3521
+    },
+    {
+      "lfs": false,
+      "path": "context-attribution/granite-4.1-8b/lora/model.sig",
+      "sha256": "305020b2c090358d992c9aed5b4d8062fb1d23af323c7e9a4bffc05381654a84",
+      "size": 8510
+    },
+    {
+      "lfs": false,
+      "path": "decision/README.md",
+      "sha256": "ad290ba03282e1d6f6bd63b375d235037baf5daa38bbecab338391047a238750",
+      "size": 11457
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-30b/alora/adapter_config.json",
+      "sha256": "714f8401272370637d854c4a9c0a99deabf4dec572cc6d605a0a0913ca944cec",
+      "size": 1128
+    },
+    {
+      "lfs": true,
+      "path": "decision/granite-4.1-30b/alora/adapter_model.safetensors",
+      "sha256": "51da393cfa8000a229e21e9382639fcd388a781e9f0cf03a0a8c4cc2f5b34c03",
+      "size": 1124195840
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-30b/alora/io.yaml",
+      "sha256": "224250820a1268dcd9551c636ab0efd8cf614ae673b23fb309c0f511993eb8fe",
+      "size": 750
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-30b/alora/model.sig",
+      "sha256": "1fcde1948d99d357d1744c9e8060ac909576165fc20587cb8ad83732ddbe0643",
+      "size": 6161
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-30b/lora/adapter_config.json",
+      "sha256": "ca761330179788c5b15078adcac6129269c925d99d3830d2d1156056e4c8ee7b",
+      "size": 1095
+    },
+    {
+      "lfs": true,
+      "path": "decision/granite-4.1-30b/lora/adapter_model.safetensors",
+      "sha256": "35c4704ac72a9c88f285115a0131a40d5b9b24a5c3959487918d8de44438364e",
+      "size": 1124195840
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-30b/lora/io.yaml",
+      "sha256": "12c910514e6562f417a070f1e8c330e20e6c93b18b6df538613686ac7c4d8668",
+      "size": 622
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-30b/lora/model.sig",
+      "sha256": "54dedcad8163baf6dcdb7e4ac76b4f2a73fb95c361db783c48c007033752dfee",
+      "size": 6161
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-8b/alora/adapter_config.json",
+      "sha256": "d7ca3cc87450983a6c67eb745eb9449332b063c40bb4ca7e24b089f8fc35a321",
+      "size": 1127
+    },
+    {
+      "lfs": true,
+      "path": "decision/granite-4.1-8b/alora/adapter_model.safetensors",
+      "sha256": "c51d0cbb24adec3a6e74143c33e99709ecb48304b4784c9314e7c7e243996398",
+      "size": 395913544
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-8b/alora/io.yaml",
+      "sha256": "c8171bcd81b60d58ddb8e32e44ac1c26a6727f097be599ef881a402e45a03e4e",
+      "size": 749
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-8b/alora/model.sig",
+      "sha256": "3092c32b84f20945a006ea8974cf0ff3ae58be52f88658549744093a45472244",
+      "size": 6161
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-8b/lora/adapter_config.json",
+      "sha256": "0ef9310de0097489d1a4d469162cf82397b956a22f86f293fcb5704d1decbef8",
+      "size": 1094
+    },
+    {
+      "lfs": true,
+      "path": "decision/granite-4.1-8b/lora/adapter_model.safetensors",
+      "sha256": "f85b7b221746d788843a07f1f1d11491725641aca2dd270a805c02cfc91dc42f",
+      "size": 395913544
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-8b/lora/io.yaml",
+      "sha256": "b6dffc3b543bab02c61d268e7854e19ccc64b149a9001f043ebd93489cf8bb87",
+      "size": 621
+    },
+    {
+      "lfs": false,
+      "path": "decision/granite-4.1-8b/lora/model.sig",
+      "sha256": "dc8ca1168a75b7aee5431f9d34fbc6b91032d896a0176f046dc6150a9a15250c",
+      "size": 6157
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/README.md",
+      "sha256": "936c576ac24784f424d3a954848a0eee5f6edb8814c24032eee993827eb6ef59",
+      "size": 11548
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.0-micro/lora/adapter_config.json",
+      "sha256": "558783a25543e5f8bb707cb17da9a0a902e5892b5d5754f6fa8ec2fa8cd1d860",
+      "size": 1143
+    },
+    {
+      "lfs": true,
+      "path": "requirement-check/granite-4.0-micro/lora/adapter_model.safetensors",
+      "sha256": "d7f0d224fd893876d2b27cdf354e9a8804de93a9d2b38fb30ffba0c314be5252",
+      "size": 235996432
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.0-micro/lora/io.yaml",
+      "sha256": "696cbcfc5803138f7d898bcddbff79c6addbeecc71db5aa62fd317486d45ad8a",
+      "size": 1086
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.0-micro/lora/model.sig",
+      "sha256": "d99539a38859786f6a53278deced99dd9a39440abdea06e5a80fd7780239eec8",
+      "size": 8514
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-30b/alora/adapter_config.json",
+      "sha256": "7a7ce8fcd8df346248f317724ae6f73d797e2dc51c3d1fcb6d6166777a287cb1",
+      "size": 1084
+    },
+    {
+      "lfs": true,
+      "path": "requirement-check/granite-4.1-30b/alora/adapter_model.safetensors",
+      "sha256": "db8112f456cc90b5f81c6b41d0f499f7a15cb59c70ef5452b576ee752c18464e",
+      "size": 109120968
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-30b/alora/io.yaml",
+      "sha256": "8b1d9c818773c29e678b4c0b279d9682c18b0d450be5cfed2ca0c327ef8a1f0b",
+      "size": 1085
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-30b/alora/model.sig",
+      "sha256": "9c9bae4174d1175599300d1740d4ae9276ca0753f4fb74d718d26fa5862f405a",
+      "size": 8614
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-30b/lora/adapter_config.json",
+      "sha256": "cf002ae2d139ed957a6bf89ba0896ab3ba8729f5591284be833b0a14b9605cfd",
+      "size": 1092
+    },
+    {
+      "lfs": true,
+      "path": "requirement-check/granite-4.1-30b/lora/adapter_model.safetensors",
+      "sha256": "b10db2c66c07bf7d6be291d934027e5dc0a2a30dbcc1b393881eb5cae9a1210a",
+      "size": 218173872
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-30b/lora/io.yaml",
+      "sha256": "696cbcfc5803138f7d898bcddbff79c6addbeecc71db5aa62fd317486d45ad8a",
+      "size": 1086
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-30b/lora/model.sig",
+      "sha256": "1b8cfc180df9fa7189845c9f7b4a2eb3dc99a4850ad0c73f7160c597f6f1316b",
+      "size": 8369
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-3b/alora/adapter_config.json",
+      "sha256": "230653206a02e303f1d860e929777d45b8aadfe376af73ea4fde1a8fb9dd7b68",
+      "size": 1083
+    },
+    {
+      "lfs": true,
+      "path": "requirement-check/granite-4.1-3b/alora/adapter_model.safetensors",
+      "sha256": "d436e7c4a6a27bee5166d48d6dc4674623016b902dfbdf06c2b3fb6bd9b20fb6",
+      "size": 41985952
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-3b/alora/io.yaml",
+      "sha256": "8b1d9c818773c29e678b4c0b279d9682c18b0d450be5cfed2ca0c327ef8a1f0b",
+      "size": 1085
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-3b/alora/model.sig",
+      "sha256": "8be5589cc3a3cac0cf478e46cc687f9ae1718c4c315cbd5189b518d344fcac20",
+      "size": 8755
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-3b/lora/adapter_config.json",
+      "sha256": "a98502df608464ec61fa7d3a2d416c63066d177f6d1014d2792986eb1e6d6c17",
+      "size": 1091
+    },
+    {
+      "lfs": true,
+      "path": "requirement-check/granite-4.1-3b/lora/adapter_model.safetensors",
+      "sha256": "10b87f10058af1423b06b83b4dd2358b45dc3d41ca3eeeae8649815e0c31acbb",
+      "size": 83929368
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-3b/lora/io.yaml",
+      "sha256": "696cbcfc5803138f7d898bcddbff79c6addbeecc71db5aa62fd317486d45ad8a",
+      "size": 1086
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-3b/lora/model.sig",
+      "sha256": "f2ad51ef910606a54d30b30551be9ee11fe7a157fb23057d8c04aacdbb01801d",
+      "size": 8510
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-8b/alora/adapter_config.json",
+      "sha256": "8ae641e10c7d8490bd44749b9e1f30ef5d3c871d15ba6305f001ade561391a13",
+      "size": 1083
+    },
+    {
+      "lfs": true,
+      "path": "requirement-check/granite-4.1-8b/alora/adapter_model.safetensors",
+      "sha256": "2410d6665b6aa2845e58477065552c995c92ce6048e4e19763e6277310143776",
+      "size": 68200496
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-8b/alora/io.yaml",
+      "sha256": "8b1d9c818773c29e678b4c0b279d9682c18b0d450be5cfed2ca0c327ef8a1f0b",
+      "size": 1085
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-8b/alora/model.sig",
+      "sha256": "133af21f2a0de04e10f851e48db6479ece538f09aeff7ab20f850ae0a7bbd9e4",
+      "size": 8802
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-8b/lora/adapter_config.json",
+      "sha256": "e9f12a28042968cb1c86ea92400d3014dabad34f3b6f9d417dd75c1c76e5a9fa",
+      "size": 1091
+    },
+    {
+      "lfs": true,
+      "path": "requirement-check/granite-4.1-8b/lora/adapter_model.safetensors",
+      "sha256": "c5be1fcb5c1e0d79b534d52319487c4e0d5a85821aa22845cd8e85e046882e5f",
+      "size": 136358448
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-8b/lora/io.yaml",
+      "sha256": "696cbcfc5803138f7d898bcddbff79c6addbeecc71db5aa62fd317486d45ad8a",
+      "size": 1086
+    },
+    {
+      "lfs": false,
+      "path": "requirement-check/granite-4.1-8b/lora/model.sig",
+      "sha256": "157083abcfa00fa3d1cce0cf54156d243ba52083c1fcb2cf368269b93fd93f90",
+      "size": 8416
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/README.md",
+      "sha256": "0a2e56d0c0d3995c85c6caee60e8f2b646fbec85b715de406eb2e86ea1cea677",
+      "size": 11197
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.0-micro/lora/adapter_config.json",
+      "sha256": "f71128f2eb8a78bc075faf20b0da85077eabdafd13afc7f7a7f62930dcd0adf7",
+      "size": 1143
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/granite-4.0-micro/lora/adapter_model.safetensors",
+      "sha256": "423a8e90a311311e530dc4e40e5c06a310d0b352e7b70390b4b7f45bc0d6ccd5",
+      "size": 118031176
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.0-micro/lora/io.yaml",
+      "sha256": "0e3767273c7bc9b860282ca5b97529c33d797136548a7eef39167fcad9bae42e",
+      "size": 1018
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.0-micro/lora/model.sig",
+      "sha256": "330c3aa5aa910878ce30879a2ae5acbcdfa557fa704229de5a061f6ae89905b9",
+      "size": 8557
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-30b/alora/adapter_config.json",
+      "sha256": "82ea8adb84b63ebca2011df83a894449d99eb94ad3c7c0b7c5ace54cbc4dc0fe",
+      "size": 1046
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/granite-4.1-30b/alora/adapter_model.safetensors",
+      "sha256": "0b8d2afc13ab088692d66dd8459f01847960dd1eba931ca932488fa542feffd3",
+      "size": 218173392
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-30b/alora/io.yaml",
+      "sha256": "0e3767273c7bc9b860282ca5b97529c33d797136548a7eef39167fcad9bae42e",
+      "size": 1018
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-30b/alora/model.sig",
+      "sha256": "b829abe5cd0d2cbf78c291f2cc3942ecf57761f91d2c6ddb51abaccb1247e996",
+      "size": 8561
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-30b/lora/adapter_config.json",
+      "sha256": "5b0293f3b40b92708703a8e3bdbeb53e1f91ebd87dc4c902d525909dd1aa77fa",
+      "size": 1008
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/granite-4.1-30b/lora/adapter_model.safetensors",
+      "sha256": "1b83425673a1f713691c838b545a8d4264e1f4229da9380233920b1fc7d021c7",
+      "size": 218173392
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-30b/lora/io.yaml",
+      "sha256": "0e3767273c7bc9b860282ca5b97529c33d797136548a7eef39167fcad9bae42e",
+      "size": 1018
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-30b/lora/model.sig",
+      "sha256": "769251fe7ff654a1eac0ad73734d3e98a8e4239028830778961b8d8121e6395b",
+      "size": 8557
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-3b/alora/adapter_config.json",
+      "sha256": "574cfe332bb539b25c7c7893aeba6a68e2509db4634e88b676fa39c4ca79172f",
+      "size": 1045
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/granite-4.1-3b/alora/adapter_model.safetensors",
+      "sha256": "36f0309fcaba4c28e9deb0c5d49680dee1c9cbbec407abbb74e5760f64786a6c",
+      "size": 83929080
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-3b/alora/io.yaml",
+      "sha256": "0e3767273c7bc9b860282ca5b97529c33d797136548a7eef39167fcad9bae42e",
+      "size": 1018
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-3b/alora/model.sig",
+      "sha256": "08fa0f0cb02f7b23a88bdd7ed4473209aad6cf9d0aec5df315031e459911a67c",
+      "size": 8463
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-3b/lora/adapter_config.json",
+      "sha256": "645fb2f43459c078ee4ae1f63710f0cedbc09979c84c8210487ee586724eeac4",
+      "size": 1007
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/granite-4.1-3b/lora/adapter_model.safetensors",
+      "sha256": "e60d8b28441d8ac203baea8235716b0386501b127702d3855d12e13ed7ad148b",
+      "size": 83929080
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-3b/lora/io.yaml",
+      "sha256": "0e3767273c7bc9b860282ca5b97529c33d797136548a7eef39167fcad9bae42e",
+      "size": 1018
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-3b/lora/model.sig",
+      "sha256": "9e720b9b6b35df843ff2b6bd1ac5332d223acd8ab0d2b16b227d575a0b8b117a",
+      "size": 8416
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-8b/alora/adapter_config.json",
+      "sha256": "cc9abc5b558981df542fb268a6524499e8ebd1b6454b961b48992c93c8d710e1",
+      "size": 1094
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/granite-4.1-8b/alora/adapter_model.safetensors",
+      "sha256": "30f16008f172e1b7291e24a2e08a6eab936a00cacfb67325ab0c4f187c3fd28b",
+      "size": 395912984
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-8b/alora/io.yaml",
+      "sha256": "0e3767273c7bc9b860282ca5b97529c33d797136548a7eef39167fcad9bae42e",
+      "size": 1018
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-8b/alora/model.sig",
+      "sha256": "6227f1c5509d94c36c206a3214a4aadd26b71dac45579f04c6422d1b212adff3",
+      "size": 8467
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-8b/lora/adapter_config.json",
+      "sha256": "f1df489d525a36d848cf6caaaa5929974e76fd27c35bd7baeadf14a853dbe3c6",
+      "size": 1007
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/granite-4.1-8b/lora/adapter_model.safetensors",
+      "sha256": "d0987a21c0b8d4c84505cf3ffd5d8f630feb3cb08da8d3152778a4e61e9b4ca5",
+      "size": 136358160
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-8b/lora/io.yaml",
+      "sha256": "0e3767273c7bc9b860282ca5b97529c33d797136548a7eef39167fcad9bae42e",
+      "size": 1018
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/granite-4.1-8b/lora/model.sig",
+      "sha256": "3c29360bba3298be612cca63374e87259cfdcd3b7432c5976d165cc76fa85500",
+      "size": 8479
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granitelib-core-r1.0",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "97186a9a4877d9bfc8547895a0cff92a726bb867c76480bb547e041f7848d2ae",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:50:34Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granitelib-core-r1.0/resolve/b881a4371db7284beac66a658b0cadcd32b12977/"
+    }
+  ],
+  "upstream": {
+    "commit": "b881a4371db7284beac66a658b0cadcd32b12977",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granitelib-core-r1.0",
+    "url": "https://huggingface.co/ibm-granite/granitelib-core-r1.0/tree/b881a4371db7284beac66a658b0cadcd32b12977"
+  }
+}

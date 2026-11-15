@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:42:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "491470a85de2fee7a55ff5e4bdf52d85c46c6a113835fe631200a480d2d9fc94",
+      "size": 2125
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3511d7cc76ea87d9451b45a56fda468cac08427b4c3409edde52a8664463a986",
+      "size": 1007
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "05602ffc9fa53ce240015d4b735f6c7f0701e675641f635445977c04b216c835",
+      "size": 242
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1505104f5b4332174455b0ec835176cadb96a0dae376406101a55deced4c0282",
+      "size": 1625426996
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "67d1d5900b9b743144aeb01ef42d86b98b45b0ac2863b7eef721de8eb7b1e8f7",
+      "size": 1625474169
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fde31d52e1a8f218b284e826d51f7c74fd39ea9cf49e83d8992e858f65e6736e",
+      "size": 1171
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "06b4d46c8e752d410213d9548eb27a54db70fda0319b6271fb8d59dead5e1cab",
+      "size": 898822
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/tapex-large",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "491470a85de2fee7a55ff5e4bdf52d85c46c6a113835fe631200a480d2d9fc94",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:42:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/tapex-large/resolve/f78f084f2f6a8d98d2c09d12eff2de6f5d7f801b/"
+    }
+  ],
+  "upstream": {
+    "commit": "f78f084f2f6a8d98d2c09d12eff2de6f5d7f801b",
+    "host": "huggingface.co",
+    "repo": "microsoft/tapex-large",
+    "url": "https://huggingface.co/microsoft/tapex-large/tree/f78f084f2f6a8d98d2c09d12eff2de6f5d7f801b"
+  }
+}

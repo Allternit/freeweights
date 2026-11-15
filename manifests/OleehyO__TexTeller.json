@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T02:47:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ac635a57419f02053817d7aa6922db9afffa563af8f7bcf1bd92775d99207ba4",
+      "size": 1457
+    },
+    {
+      "lfs": false,
+      "path": "README_zh.md",
+      "sha256": "d2b154743817afda5968344498a811e2a7415cf522b8b44f2d448ff8d175e39f",
+      "size": 1065
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "7e88a0bc018da0461d442e43efdb9c36d0c9ccee4ee77040435a6393c4dc0f0e",
+      "size": 56003
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ae1df4b712a25df6cbf0441d0e5602cee139f3f371c1b3555274db7aed2c0135",
+      "size": 4504
+    },
+    {
+      "lfs": true,
+      "path": "decoder_model.onnx",
+      "sha256": "288cb8e37cdda66f725f2739efd2e7846636666a815e27533891c68389ec3659",
+      "size": 908716081
+    },
+    {
+      "lfs": true,
+      "path": "decoder_model_merged.onnx",
+      "sha256": "8b78f10f67da98528fb507977f6d041fe0a8fb486a56b2132156f93b2d5de575",
+      "size": 909186959
+    },
+    {
+      "lfs": true,
+      "path": "decoder_with_past_model.onnx",
+      "sha256": "ce6b93ffcabf1689d91cc17f217d9065a92af14bcce47f8aa4ae8c798c7882fd",
+      "size": 833037201
+    },
+    {
+      "lfs": true,
+      "path": "encoder_model.onnx",
+      "sha256": "071afc0a0c92b2ee3847612127eb9e82b1c39413725e692f4405e5ea9e265bf0",
+      "size": 343553824
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "dce3cbe591ed7fc9d9ea9c588697e9e3a05248446343cf1682df309c013d5ab7",
+      "size": 154
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "eb70ce440ef4f767138b2022ea31a6143d782f52757ae926c1d1f2182300fd0e",
+      "size": 70943
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6d535b29f94de294f6d82cb777285379480672cbe396bbd645840eda56b2c407",
+      "size": 1192464688
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "a70aea8f7460825af5b917ba6ab6f0e40bdff7a6ca0a10d130b81d59ddf11602",
+      "size": 1192565770
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f23c8e6099631c233c16d9bf8dab198f610826cdd1b358f270f6d55c1863e857",
+      "size": 958
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3fd70ac72edab8213b7dd13271b3c69b6c2252ab3e04f8045939dad0847309be",
+      "size": 1044328
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e29bfc0a816ca61b2752c1ce9bfcaea633324ea418fa7ead6feba0d1e8f8efe0",
+      "size": 592739
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "6c5fdc7c688b7da8ca9f6abca73ff2c12c08e14386461daf9af1f0716b31e359",
+      "size": 146663
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "OleehyO/TexTeller",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ac635a57419f02053817d7aa6922db9afffa563af8f7bcf1bd92775d99207ba4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:47:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/OleehyO/TexTeller/resolve/7b96df06b9d81cdb129c3bef68b7250bc3e2b0ea/"
+    }
+  ],
+  "upstream": {
+    "commit": "7b96df06b9d81cdb129c3bef68b7250bc3e2b0ea",
+    "host": "huggingface.co",
+    "repo": "OleehyO/TexTeller",
+    "url": "https://huggingface.co/OleehyO/TexTeller/tree/7b96df06b9d81cdb129c3bef68b7250bc3e2b0ea"
+  }
+}

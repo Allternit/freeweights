@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:32:13Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "30de8315ece609b239c719539336b99188a2a92aef89a1fdcd60b11e40abd063",
+      "size": 9419
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "59b5ae119bda7c00089bba5f49af775791ea67c7aeb7d2b828cddda9463121bf",
+      "size": 551
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "82ac390b36a8f80c5a0c4e202367debd149e5d8c30abe4cf5eed439101b1c5ce",
+      "size": 248029
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "00568245ceca5af1991d28562a75fe1ddc9bfeb041c27fda66947ea05c47fb86",
+      "size": 1835545960
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "bc0b230081b44e629dd5b9045b78495615c1831b4b9f4cffe97bd37e82a6156a",
+      "size": 487
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cadfb9cbd9ff8f4e309075ec6a71b063295ff796afb4b5dbc0fd2873fbb301f2",
+      "size": 11429842
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "945e980986de2ca7768f3326bfdbb4fbea3406f972b8ae0be233089f2b253c11",
+      "size": 998
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Qwen/Qwen3-ForcedAligner-0.6B-hf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "30de8315ece609b239c719539336b99188a2a92aef89a1fdcd60b11e40abd063",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:32:13Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Qwen/Qwen3-ForcedAligner-0.6B-hf/resolve/c07281df297b9905d24a508279258cccf987a064/"
+    }
+  ],
+  "upstream": {
+    "commit": "c07281df297b9905d24a508279258cccf987a064",
+    "host": "huggingface.co",
+    "repo": "Qwen/Qwen3-ForcedAligner-0.6B-hf",
+    "url": "https://huggingface.co/Qwen/Qwen3-ForcedAligner-0.6B-hf/tree/c07281df297b9905d24a508279258cccf987a064"
+  }
+}

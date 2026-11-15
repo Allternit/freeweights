@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T03:47:42Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1403a1a07764f40b81196144fc294c8daff49cbc0f1d0a79fcfbf5e35a027311",
+      "size": 1567
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "c6186c688d3a12fdad30e4fe4962de3af2897bd47944702962f8cac94a646f94",
+      "size": 12500
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7ed04044adbd8f2b41b8fb3b636658ce881644dc31f13aa9054f539b7d64208c",
+      "size": 4505
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a4891a2693084c920487521061b75979e5e23b71699d18c3fa5e3b60c7e683a1",
+      "size": 3191
+    },
+    {
+      "lfs": false,
+      "path": "configuration_phi3.py",
+      "sha256": "18b06d379f5199bfb8b7da26da14c580f3852e792895d2bf6158b2ef33c92d52",
+      "size": 10411
+    },
+    {
+      "lfs": false,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/added_tokens.json",
+      "sha256": "5f5c94d30901fe9c961d776d51eadbda4454991a77b53d36e0be0571a8e72a7d",
+      "size": 293
+    },
+    {
+      "lfs": false,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/config.json",
+      "sha256": "a4891a2693084c920487521061b75979e5e23b71699d18c3fa5e3b60c7e683a1",
+      "size": 3191
+    },
+    {
+      "lfs": false,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/configuration_phi3.py",
+      "sha256": "18b06d379f5199bfb8b7da26da14c580f3852e792895d2bf6158b2ef33c92d52",
+      "size": 10411
+    },
+    {
+      "lfs": false,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/genai_config.json",
+      "sha256": "7470207cacad25ec320b01dac6f1be5f7fa06df552a7dbb295153fd4767bae91",
+      "size": 1585
+    },
+    {
+      "lfs": true,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/phi3-medium-128k-instruct-cpu-int4-rtn-block-32-acc-level-4.onnx",
+      "sha256": "19cb27ede9da507d1e5d09e6fa6ab512d6ef33045cc3084fa3aec4e0fe030310",
+      "size": 69498471
+    },
+    {
+      "lfs": true,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/phi3-medium-128k-instruct-cpu-int4-rtn-block-32-acc-level-4.onnx.data",
+      "sha256": "7d6e56e9192de5d5f16134e230cee72142570aa3b4e778a2c1b71811bef2a09f",
+      "size": 9280614400
+    },
+    {
+      "lfs": false,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/special_tokens_map.json",
+      "sha256": "474d699677e264edd3851559548cbbb61801ad8da6b249c81455007602313c34",
+      "size": 569
+    },
+    {
+      "lfs": false,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/tokenizer.json",
+      "sha256": "9e2ae3d66819f163cdcfedba5078f3a3af8118c2712491ed60912f77886bda6f",
+      "size": 1844408
+    },
+    {
+      "lfs": true,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/tokenizer.model",
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "size": 499723
+    },
+    {
+      "lfs": false,
+      "path": "cpu-int4-rtn-block-32-acc-level-4/tokenizer_config.json",
+      "sha256": "c7aad94765fa33f2927557e2f9fb410ce307c98661b4115cc0c36d55a7f8639f",
+      "size": 3157
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/Phi-3-medium-128k-instruct-onnx-cpu",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "c6186c688d3a12fdad30e4fe4962de3af2897bd47944702962f8cac94a646f94",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.phi",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:47:42Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/Phi-3-medium-128k-instruct-onnx-cpu/resolve/7996d8594bf78d43363e124b1c4330189b986564/"
+    }
+  ],
+  "upstream": {
+    "commit": "7996d8594bf78d43363e124b1c4330189b986564",
+    "host": "huggingface.co",
+    "repo": "microsoft/Phi-3-medium-128k-instruct-onnx-cpu",
+    "url": "https://huggingface.co/microsoft/Phi-3-medium-128k-instruct-onnx-cpu/tree/7996d8594bf78d43363e124b1c4330189b986564"
+  }
+}

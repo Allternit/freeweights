@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:20:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "bb108f01216c8bafb4e9c92ae0e8dffbc15f20bf29690ef55e39bcd9f2d0265f",
+      "size": 304
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d80c08dff412a5fd1d893e6e9c90750d020390685d1ceaf1447cb32213d1e75f",
+      "size": 852
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "b44f752fa9c97c26906518470bdb2dea7b91bf1d1b8309a399119aabecebaa5f",
+      "size": 144
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "04688247e45602c8f6107c16d0c2aa83691e5a6a08f49889fa4814acf231d58b",
+      "size": 154538807
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "650d6da38050b79468b1a54349d0168557116a029f7a7c770b81085cc5aa92e5",
+      "size": 154538826
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "8d16c263603ed75c4e8a973171bf8c5c5358328ef10a395213be57457b1ea9fe",
+      "size": 77332642
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "118256ecd3b23ec535676c46ac2addcabbd9c3d0f7f5fa416d78e43afcf20a56",
+      "size": 141759988
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "650d6da38050b79468b1a54349d0168557116a029f7a7c770b81085cc5aa92e5",
+      "size": 154538826
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "1fcc1616c4ca025a23ea391b412a804a795eb6bc6ca137e6461c46584261c3b3",
+      "size": 77332661
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "118256ecd3b23ec535676c46ac2addcabbd9c3d0f7f5fa416d78e43afcf20a56",
+      "size": 141759988
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "8b939ce313af5383bc2a7431589770ac1abfdc8046cdebacf031b93c68f4990d",
+      "size": 141759996
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "70f61db8708568fa3ee6e66ecbcfdb8a89b9069feadff679dea00b097e521c98",
+      "size": 312
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "98412137ae43c77f8af52eb51b19c3536d3242cb55339167d841005fa94a23b7",
+      "size": 438
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "1fe93b6152957cf9cfd6d89002467f789ce8b3f3e000b3a2edf27c808ddd0b9e",
+      "size": 3557680
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "3350e33392e80ecfd12015d6c58d72aabb266e88022bf2f84517a972e971624c",
+      "size": 544
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7",
+      "size": 798156
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/gpt2-mini-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "bb108f01216c8bafb4e9c92ae0e8dffbc15f20bf29690ef55e39bcd9f2d0265f",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/gpt2-mini-ONNX/resolve/db228f02d37cf27bf51a84dd1031a9c030f10fb4/"
+    }
+  ],
+  "upstream": {
+    "commit": "db228f02d37cf27bf51a84dd1031a9c030f10fb4",
+    "host": "huggingface.co",
+    "repo": "onnx-community/gpt2-mini-ONNX",
+    "url": "https://huggingface.co/onnx-community/gpt2-mini-ONNX/tree/db228f02d37cf27bf51a84dd1031a9c030f10fb4"
+  }
+}

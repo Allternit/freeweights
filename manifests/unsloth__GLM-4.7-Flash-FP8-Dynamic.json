@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T05:07:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7cdbb40239a61ebb62f9e621ae5dae7c9304aa2f69b71cf80e7cbe0a674f12e1",
+      "size": 8231
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "d63ad536c3c81880043e22ec7fd08db42b4d8fb7c89c7138bc562bfa25281375",
+      "size": 3120
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1e537445a646875050f3c84e4f7a6b33e6961288a5efefec0ebdf379b76632ff",
+      "size": 32609
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "8acf9220035931088c72584d1d6115aa9040d4d237b029b5347d978a53b9bcdc",
+      "size": 217
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b727e25aba0604c8d59222950edad4b4a386dbf90bfc41b370d02ffe3a95312c",
+      "size": 32522127544
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+      "size": 20217442
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d37efac6395f602a7c9ba8dd6809d4dd16760fd1bd1a4bc91204c2daef7dc515",
+      "size": 796
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/GLM-4.7-Flash-FP8-Dynamic",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7cdbb40239a61ebb62f9e621ae5dae7c9304aa2f69b71cf80e7cbe0a674f12e1",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.glm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:07:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/GLM-4.7-Flash-FP8-Dynamic/resolve/1174de1393d38e3d30c2882b98eb54fd8c1e9d1f/"
+    }
+  ],
+  "upstream": {
+    "commit": "1174de1393d38e3d30c2882b98eb54fd8c1e9d1f",
+    "host": "huggingface.co",
+    "repo": "unsloth/GLM-4.7-Flash-FP8-Dynamic",
+    "url": "https://huggingface.co/unsloth/GLM-4.7-Flash-FP8-Dynamic/tree/1174de1393d38e3d30c2882b98eb54fd8c1e9d1f"
+  }
+}

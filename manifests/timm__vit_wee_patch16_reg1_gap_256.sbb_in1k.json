@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:50:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e39b8b20cfef39a52e776c3f37bf7dbd934a0355e42fd47b7116c1784ef9d852",
+      "size": 10227
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a0590685c620d3d93590c915fd519136404a6f22893d05764e87db53765548a9",
+      "size": 611
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0fc0cf37cde9414e3f2e270d994e5e989b5e975f9d9a197bac45ec8421fa5187",
+      "size": 53708688
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "4efa774484f8423a5a68bf8c62caf36c2af1cbb48f48e64407d9477f17cf3378",
+      "size": 53764157
+    },
+    {
+      "lfs": false,
+      "path": "train_hparams.yaml",
+      "sha256": "23ca05dd5cfd9c2c0ed127cf2bb30bb0c1761f8ea70fe7b45ffd0718f69356ad",
+      "size": 2541
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_wee_patch16_reg1_gap_256.sbb_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e39b8b20cfef39a52e776c3f37bf7dbd934a0355e42fd47b7116c1784ef9d852",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:50:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_wee_patch16_reg1_gap_256.sbb_in1k/resolve/f4f063738d9ff32f9428f1ef12b5de22f57b572d/"
+    }
+  ],
+  "upstream": {
+    "commit": "f4f063738d9ff32f9428f1ef12b5de22f57b572d",
+    "host": "huggingface.co",
+    "repo": "timm/vit_wee_patch16_reg1_gap_256.sbb_in1k",
+    "url": "https://huggingface.co/timm/vit_wee_patch16_reg1_gap_256.sbb_in1k/tree/f4f063738d9ff32f9428f1ef12b5de22f57b572d"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-11-15T02:44:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4e8bfb43c484766e3d0750d6f5dcd32fe26dbdab2415b43f947c960c1b6043a6",
+      "size": 1291
+    },
+    {
+      "lfs": true,
+      "path": "detection/mediapipe_face_fp32.safetensors",
+      "sha256": "a98c4806081d40eba35102a0f6dc0000c2e1388b72cf24e691703d0605bd888a",
+      "size": 5423900
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Comfy-Org/mediapipe",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4e8bfb43c484766e3d0750d6f5dcd32fe26dbdab2415b43f947c960c1b6043a6",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:44:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Comfy-Org/mediapipe/resolve/f787efc1ad99492ec7d5b6564c0dd6c48d84ee49/"
+    }
+  ],
+  "upstream": {
+    "commit": "f787efc1ad99492ec7d5b6564c0dd6c48d84ee49",
+    "host": "huggingface.co",
+    "repo": "Comfy-Org/mediapipe",
+    "url": "https://huggingface.co/Comfy-Org/mediapipe/tree/f787efc1ad99492ec7d5b6564c0dd6c48d84ee49"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "blaze999/Medical-NER",
+  "display_name": "Medical-NER-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/Medical-NER-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/Medical-NER-ONNX.json",
+  "note": "The license of the base model blaze999/Medical-NER applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "blaze999/Medical-NER",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 25,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "variant",
+  "total_size": 3066305592,
+  "upstream_url": "https://huggingface.co/onnx-community/Medical-NER-ONNX",
+  "what_changed": null
+}

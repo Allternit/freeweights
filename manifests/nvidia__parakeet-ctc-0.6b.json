@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T02:37:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "bd2851b14c02105d75e96328e9bda193e17fc4386c80e2e7790562ba24857b69",
+      "size": 1578
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d60eece6df19bd71cebdb36ff0f02f3df07983e08452e90208856717f5c8ce6f",
+      "size": 12370
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5949e3fa6c27692c60a73ffd374fbaa076dd5cd96128c03830757b97b14d097d",
+      "size": 962
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a1f5b1d2bc66d4a812a1c8ea48a9aa8678f863e1bd3ecbec3c75abd720897fda",
+      "size": 2435506188
+    },
+    {
+      "lfs": true,
+      "path": "parakeet-ctc-0.6b.nemo",
+      "sha256": "bc01f3f8f0098b72b6f461d36b01f45a4bc00a2973ab840bd31edab96e605fc9",
+      "size": 2436147200
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7f26808482a58d8dd187c4b87364810292b91ed7721e099bdbb05ca50da37a98",
+      "size": 314
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "af8c98917af6cb493513e5f1f8a35efdc28fa82cac15b2bb5f065d64f8bc904d",
+      "size": 279
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f3f1dd45c3889ed2b5bf67180caf05f51d7d7e4948c20e5f24d8c24df9cc47aa",
+      "size": 412363
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "47bf2c494c913e35cad22b0fc1474721219b643a45a5f61c1456646f94699037",
+      "size": 634
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nvidia/parakeet-ctc-0.6b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d60eece6df19bd71cebdb36ff0f02f3df07983e08452e90208856717f5c8ce6f",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:37:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nvidia/parakeet-ctc-0.6b/resolve/ad09ba1cc62743fbc9814de5d2016fca9096485a/"
+    }
+  ],
+  "upstream": {
+    "commit": "ad09ba1cc62743fbc9814de5d2016fca9096485a",
+    "host": "huggingface.co",
+    "repo": "nvidia/parakeet-ctc-0.6b",
+    "url": "https://huggingface.co/nvidia/parakeet-ctc-0.6b/tree/ad09ba1cc62743fbc9814de5d2016fca9096485a"
+  }
+}

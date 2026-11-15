@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:20:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0b30986f6d51c4142c49f7e02e895b968a8230206ef1fbf68aa9edc5819a5d63",
+      "size": 414
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3dbcf9357680164a897fa5ac6ec1dd99688bb242be5171b38319380350d802c9",
+      "size": 718
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "893cc6ae59654fb23d22747d3af35442bab5ed995a493834f65a58fc4af4cf84",
+      "size": 337222823
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "42463cba16b3d77f6f4fae6b62a880da3548a4e77545f76ea7534c7c26649cd7",
+      "size": 140795916
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "4da56f1b4ebf78abe4543b51997c61a8748c44d7097c708792e63edb96d528dc",
+      "size": 168812305
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "0843578fa3e1c386a3be5250ccb13cc8836d062876a34756f380a2e371e86a75",
+      "size": 85618595
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "58463ff13e6402e53f477e73377ac02017fadd8455876e6f37c85369192d92be",
+      "size": 144366748
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "1429bf85b449a8353ac716e07b693513597525b54e3b8f0abe5ab1d243b8d4ee",
+      "size": 86679303
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "5e9390262b0eb80caec3eb878acc8b77e116570a2d3b8ea4a59d13029d6f3329",
+      "size": 85618595
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "5e9390262b0eb80caec3eb878acc8b77e116570a2d3b8ea4a59d13029d6f3329",
+      "size": 85618595
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "5df7e578c37e907a431daf47fd592fc49fa50d23ed4c41285a0a34a58a9d2e06",
+      "size": 468
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "92e1e31d71a7f63cd75b4dfa1469377bd2cd6b8292cf70b3ff5b7082b0edc1c9",
+      "size": 133
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6d9109cc838977f3ca94a379eec36aecc7c807e1785cd729660ca2fc0171fb35",
+      "size": 3642073
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f97b07bf147d9e4dbdb5f98941d35fc0b9412263a183483f73893adf756ede3e",
+      "size": 726
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363",
+      "size": 862328
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/TinyCLIP-ViT-40M-32-Text-19M-LAION400M-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0b30986f6d51c4142c49f7e02e895b968a8230206ef1fbf68aa9edc5819a5d63",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/TinyCLIP-ViT-40M-32-Text-19M-LAION400M-ONNX/resolve/737108a175dc6c043d9e64cf738baa91a272f7cb/"
+    }
+  ],
+  "upstream": {
+    "commit": "737108a175dc6c043d9e64cf738baa91a272f7cb",
+    "host": "huggingface.co",
+    "repo": "onnx-community/TinyCLIP-ViT-40M-32-Text-19M-LAION400M-ONNX",
+    "url": "https://huggingface.co/onnx-community/TinyCLIP-ViT-40M-32-Text-19M-LAION400M-ONNX/tree/737108a175dc6c043d9e64cf738baa91a272f7cb"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:49:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "5d7deeaff0d6f92ef5c74658a46e4750ccbcd0602efcdfd24cd7ec6ae7c822f9",
+      "size": 11366
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b85d35ed9957d4fc8d3e2c98dda001192ed434ffecc763c3c698d1ba63a89386",
+      "size": 6676
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "da47e5aa0159063c5dc4ec67879a88e8a5b3f37fcab3055ca47461bb2675d205",
+      "size": 23133
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "773e612740ccee12356ef6954795a73645661b4b9e63c02655bab68ec48dd1e4",
+      "size": 556
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "30314d99c360ebaa84ea4edb18f39aff2f29da5f14443673a152910f7d251565",
+      "size": 125
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "773a67ae337580ec456573ea07e2334c463437c32e6a81838170b8a9c6696385",
+      "size": 721508576
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "cc13d82950d679a01b61764c0995fbecc730b260dd190870bb2e0c8eec81cedc",
+      "size": 15404
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "34ef7db83df785924fb83d7b887b6e822a031c56e15cff40aaf9b982988180df",
+      "size": 1614363
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f998408df687700a353ee00af0b40a897e65777a45c888ff30d3b215d2be5755",
+      "size": 1248
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "baidu/ERNIE-4.5-0.3B-Paddle",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "5d7deeaff0d6f92ef5c74658a46e4750ccbcd0602efcdfd24cd7ec6ae7c822f9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:49:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/baidu/ERNIE-4.5-0.3B-Paddle/resolve/af54dcb5fdab12be3de8b9bdc1613e197c1e1977/"
+    }
+  ],
+  "upstream": {
+    "commit": "af54dcb5fdab12be3de8b9bdc1613e197c1e1977",
+    "host": "huggingface.co",
+    "repo": "baidu/ERNIE-4.5-0.3B-Paddle",
+    "url": "https://huggingface.co/baidu/ERNIE-4.5-0.3B-Paddle/tree/af54dcb5fdab12be3de8b9bdc1613e197c1e1977"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen2.5-32B",
+  "display_name": "OpenReasoning-Nemotron-32B",
+  "family": "nemotron",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "nvidia/OpenReasoning-Nemotron-32B",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "CC-BY-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/nvidia/OpenReasoning-Nemotron-32B.json",
+  "params": 32763876352,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen2.5-32B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.nemotron",
+  "signals": {
+    "downloads_30d": 1086,
+    "likes": 128,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 65543814831,
+  "upstream_url": "https://huggingface.co/nvidia/OpenReasoning-Nemotron-32B",
+  "what_changed": null
+}

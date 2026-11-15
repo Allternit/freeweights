@@ -1,0 +1,306 @@
+{
+  "created_at": "2026-11-15T05:01:58Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "78010516a7b5c497fa33a3c641e2577f53187e3f7dc7031a0d8ce85a7da742e1",
+      "size": 1584
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "75182a93f27c328b9e4d67f3cc8a3c468424fd44a57f15608fe550e1b0c0f616",
+      "size": 359
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+      "size": 34648
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "af41a659d994da23719b8ea42f975dcdc13bd24bedaa09afdd766f68704e3211",
+      "size": 1572
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "cb1e64fc9a65c01cffd13090dd168fb079bb49ee24e4ecff7ec5ec3862a79f26",
+      "size": 3927
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "size": 493869
+    },
+    {
+      "lfs": false,
+      "path": "normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "size": 52666
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model.onnx",
+      "sha256": "e6cd6e8d1d7aa49a8cc3018059d10f3a84322c6218827473d477451cdc2e15ce",
+      "size": 477824722
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_bnb4.onnx",
+      "sha256": "af797b3c15f61fd1b6bc3ccf0aa8feb67665644104ab17759b82c343701976eb",
+      "size": 297603873
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_fp16.onnx",
+      "sha256": "4abf7e9b922e4709707215a5105f68b79f2bba5ed779bace6c172aa06ae6614f",
+      "size": 238951790
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_int8.onnx",
+      "sha256": "f1e3695e0ddb70afd07b1480f1f3a88431fc63775f4d5a699e7380caaea71967",
+      "size": 385231755
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged.onnx",
+      "sha256": "833f4e0b62966d92050a0bb4b05217b9968363dddde19f81bdedef3c5ec15235",
+      "size": 477906544
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_bnb4.onnx",
+      "sha256": "4cd3b75ac0e44090ba123d9e7d3572e2f597b53af52248bfb8f4b8c7829f06af",
+      "size": 297688039
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_fp16.onnx",
+      "sha256": "c9776ad3338d0ad22943fb07ee5bb34dfee2e6cb39f52fcdacb8aa1ca242266c",
+      "size": 239036326
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_int8.onnx",
+      "sha256": "998374a90792b8c1e35bf2d50961ed0d575a34d3c24ed11dd6b209ddac5b7987",
+      "size": 385334539
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4.onnx",
+      "sha256": "23af8c4b1254a24cffee7cbc873ca82e49fc1c4b564b2dd2cda14ca9d81dd760",
+      "size": 300964533
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4f16.onnx",
+      "sha256": "3798ccd8db35fe37cd8d13b9f834ba6c9d8d90fd1d31f51cdb34ec67e333c92d",
+      "size": 163675115
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx",
+      "sha256": "998374a90792b8c1e35bf2d50961ed0d575a34d3c24ed11dd6b209ddac5b7987",
+      "size": 385334539
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_uint8.onnx",
+      "sha256": "f811a1d50a35f1351674934194363acaf30bde84b287c67128b57c6234686d90",
+      "size": 385334549
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_q4.onnx",
+      "sha256": "5eb54de23171bc1ca760cd06ef7cdbdab1c5323a3d71189605c73e488424d8b9",
+      "size": 300880511
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_q4f16.onnx",
+      "sha256": "58ac4fdd41800f1926e93b14bccc2836157ee8f9a8b7c3bbeb6d3d2a25e02f08",
+      "size": 163588379
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_quantized.onnx",
+      "sha256": "f1e3695e0ddb70afd07b1480f1f3a88431fc63775f4d5a699e7380caaea71967",
+      "size": 385231755
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_uint8.onnx",
+      "sha256": "1246c3d502503ad8460f1636e2065c1ef56299cd9777074f3e450ceb316b22b6",
+      "size": 385231765
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_with_past_model.onnx",
+      "sha256": "6572e8b2a59442f95c28bd4498c2daf79f193272d806c60710efc3d6c00cab78",
+      "size": 451583098
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_with_past_model_bnb4.onnx",
+      "sha256": "2f9dd0d7674df1d12e12c0c8dad26e2b04165f476de90bf6f760f69fe212fe58",
+      "size": 293889623
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_with_past_model_fp16.onnx",
+      "sha256": "7bfde766323890b3faa03e535b8c4c2e874e42393a0566c1a77e103446869ad6",
+      "size": 225823974
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_with_past_model_int8.onnx",
+      "sha256": "a07eaa7fd1ef3f861032830567dedecbddebe3b9c63789f73b8d3aa61394e262",
+      "size": 378646852
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_with_past_model_q4.onnx",
+      "sha256": "a83963cd1b8209d8234a2bf7ecabf2a4a30002d5521832354f938177177c9d0b",
+      "size": 296756693
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_with_past_model_q4f16.onnx",
+      "sha256": "88f4800252aeecf33556d93ebc953c7932da996234b0eca5a6e7f3319036d5ca",
+      "size": 159880769
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_with_past_model_quantized.onnx",
+      "sha256": "a07eaa7fd1ef3f861032830567dedecbddebe3b9c63789f73b8d3aa61394e262",
+      "size": 378646852
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_with_past_model_uint8.onnx",
+      "sha256": "a76e954dadc13ec148568dce3c24cdee12fc4c045ed4f65f9307ce5d0a8976e5",
+      "size": 378646860
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model.onnx",
+      "sha256": "484baaed2f03c4e521650eba3f5228bd59728cbc18edb5aa1c5223a6b94ca491",
+      "size": 412412
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model.onnx_data",
+      "sha256": "bdf53fc3c71f438cd9ae06fdb63ef9e383c86d3e402a35fa12134a1e5c7c453e",
+      "size": 2547875840
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model_bnb4.onnx",
+      "sha256": "73f7faa5eece5183176c837e4d51f9f0b625b27ca71592707b092851e4c561f1",
+      "size": 385595901
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model_fp16.onnx",
+      "sha256": "d295934df43c1e6fb574699d4944bb224021985b59f2df5daba0b764a73f7a01",
+      "size": 1274316249
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model_int8.onnx",
+      "sha256": "832c42fba56f6d5a14b01504e016fbaf95a70908f129e6da1d3de804d9174141",
+      "size": 644795252
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model_q4.onnx",
+      "sha256": "d244c855280027f253f3f4df0e49c3dac1f54027c8eb53e49f8e1ef564f27baa",
+      "size": 424915933
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model_q4f16.onnx",
+      "sha256": "d724bfd2d517d4bdfec17063d890d2ee3ed5a68da0ef6401e8ef7a998a1c98b0",
+      "size": 369947724
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model_quantized.onnx",
+      "sha256": "d4343734cb696ddd8d891d2e0c40cb6c363b87d0e3e287f2a6a8488e16d5fb80",
+      "size": 644795350
+    },
+    {
+      "lfs": true,
+      "path": "onnx/encoder_model_uint8.onnx",
+      "sha256": "d4343734cb696ddd8d891d2e0c40cb6c363b87d0e3e287f2a6a8488e16d5fb80",
+      "size": 644795350
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+      "size": 340
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "70f61db8708568fa3ee6e66ecbcfdb8a89b9069feadff679dea00b097e521c98",
+      "size": 312
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+      "size": 2186
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "615928f5a25409279b47b47d87a4ca2aaee3bd09f65e1a3df6c9d23c718cfdb0",
+      "size": 3931381
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d7ae8c06600c8a10f15d59262c517dd32933c4543992682c1b3f408a50690d41",
+      "size": 282893
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "e2aa043ef015641d363d8288e7c241c85e36a5c761fb303598e0710233344387",
+      "size": 1036558
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/kotoba-whisper-v2.2-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "75182a93f27c328b9e4d67f3cc8a3c468424fd44a57f15608fe550e1b0c0f616",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:01:58Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/kotoba-whisper-v2.2-ONNX/resolve/6da07195e83145e4fca2a8a1ba6f4c2e837b3798/"
+    }
+  ],
+  "upstream": {
+    "commit": "6da07195e83145e4fca2a8a1ba6f4c2e837b3798",
+    "host": "huggingface.co",
+    "repo": "onnx-community/kotoba-whisper-v2.2-ONNX",
+    "url": "https://huggingface.co/onnx-community/kotoba-whisper-v2.2-ONNX/tree/6da07195e83145e4fca2a8a1ba6f4c2e837b3798"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:04:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "690ae1bb0b7b193483b21bdf2930e2a60173126794f43b1d92a8c42a3fb54d4a",
+      "size": 1017
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "672e747c77e990320152343b0a4951222e40de5645297905d89afba05586d827",
+      "size": 6722
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "dcf93851f3287d6bb901dcdede3e361009aa15809d2496f1d53f785f5c1976a5",
+      "size": 1221
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c99723ab3ba28630d26ae23def77603b540a46924895af5cf234740d3b27b51d",
+      "size": 180
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "8414a36d2b23eb927c72b2da2464ee1c302eb24ca4a2969d81488a4bc5d79b12",
+      "size": 5331320600
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "16ac305a4a8cdf45b88eda2283f40b6ac4851a1e404c56ee696ba6977f2637a9",
+      "size": 5226518067
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "8511b9449cafee391e3c67fd7bd88e7d6ce461dfc6105a539d88140d826c6506",
+      "size": 5226518107
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "3cbcd7e5f2a68650f53e2b8fc29198bb2b0d5a4d422edeae4eadc15050996140",
+      "size": 5242077288
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "5c7ed49f583808d10da60faf29d1b492baa23b61d8ef1c297d25ee60accb9456",
+      "size": 3781324540
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "7c189ff26985e3db220c2819efdfbfa78946ba5d45966767be141342870eb90e",
+      "size": 119598
+    },
+    {
+      "lfs": false,
+      "path": "qwen3coder_tool_parser.py",
+      "sha256": "8265749a8e247732a9a0879278fe52efda2d1daa461ec8e3fb84d1e58b39531e",
+      "size": 28881
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "05a2d456eb807c8368fe6b60101b1d1160d6889071a751ed08576b96e77e01cd",
+      "size": 5405
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-6bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "690ae1bb0b7b193483b21bdf2930e2a60173126794f43b1d92a8c42a3fb54d4a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:04:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwen3-Coder-30B-A3B-Instruct-6bit/resolve/8730fb50f41e7f3ad7af9d10cb928274e479f071/"
+    }
+  ],
+  "upstream": {
+    "commit": "8730fb50f41e7f3ad7af9d10cb928274e479f071",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwen3-Coder-30B-A3B-Instruct-6bit",
+    "url": "https://huggingface.co/mlx-community/Qwen3-Coder-30B-A3B-Instruct-6bit/tree/8730fb50f41e7f3ad7af9d10cb928274e479f071"
+  }
+}

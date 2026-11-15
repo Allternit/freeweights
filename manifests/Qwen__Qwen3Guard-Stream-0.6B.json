@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T02:51:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "size": 11343
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2ca500382dcdbba770cfb4c98ff4ae09f7c671a561b572a83b68e54e26bde9ce",
+      "size": 14638
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b3bcfee86ed04c86e3c92000a2768d3c879564ac45e7e97909bce2e5767503cd",
+      "size": 1509
+    },
+    {
+      "lfs": false,
+      "path": "configuration_qwen3.py",
+      "sha256": "db0bc8f36ab1857247263250cd37d62a3be8dacb58c75f486ddfbc0510dbb83e",
+      "size": 11817
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "52a5a5dd9227794548c6de5e0a1c8bc795a662912bdae6a3a7e4226c542e835c",
+      "size": 161
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e0a2eac6cc79cca5bf35bf8fb356f94c333dd9715f4f0dd58883b01f2fe33419",
+      "size": 1194258680
+    },
+    {
+      "lfs": false,
+      "path": "modeling_qwen3_guard.py",
+      "sha256": "7bd84a5e3452ae798452f3aed75c6a2e2709f9d89afbfb3cda26b2b390300f43",
+      "size": 29009
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "size": 9732
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "87a257b04b17642a0688c98cd1df89c398bda4fee532d6f88b38a659ecb4ac8d",
+      "size": 3383407
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Qwen/Qwen3Guard-Stream-0.6B",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:51:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Qwen/Qwen3Guard-Stream-0.6B/resolve/74e1479150e9029d6778993f00491108323bb6f8/"
+    }
+  ],
+  "upstream": {
+    "commit": "74e1479150e9029d6778993f00491108323bb6f8",
+    "host": "huggingface.co",
+    "repo": "Qwen/Qwen3Guard-Stream-0.6B",
+    "url": "https://huggingface.co/Qwen/Qwen3Guard-Stream-0.6B/tree/74e1479150e9029d6778993f00491108323bb6f8"
+  }
+}

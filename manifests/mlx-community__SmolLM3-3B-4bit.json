@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T04:55:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d187c98aa68acb72167a95cb24fa75ac129f53bae235dddfbda60c7e065d1561",
+      "size": 879
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "0dab472abbdc499c8d82acae3ad6e8404f672d2d50d9df582181daf062f66eb7",
+      "size": 5499
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6d0046fc9fc07c74601b25107b8ff96077dc9c63941492f2856743eabc2a3d99",
+      "size": 2394
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3458d62b3f9654f4bbe285223b0f4e5a1e67cae61c92bb6aeaadf04468bf9e01",
+      "size": 182
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "d501e6193d7eb84e10d3c377007d1fc4b4b2fa08799dd10fa4f6a75033334a70",
+      "size": 1730051993
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "64148ac05ad909f2fc69ec126ef9efe38545512a41914bdba17d1dc29437c19d",
+      "size": 58800
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "12403efb970f069ba62ddf3b66166a27254be4a198166b61ad1ee604bd3a4515",
+      "size": 289
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "7b6a500b662a34eb3f0374db856ba4ad7de4c81040571d78dc0d357238930005",
+      "size": 17208819
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "59a64b39f05ee0acf7479bbccf99a44d9e481c1a4a494eb03838ae3c35eb29be",
+      "size": 50387
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/SmolLM3-3B-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d187c98aa68acb72167a95cb24fa75ac129f53bae235dddfbda60c7e065d1561",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:55:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/SmolLM3-3B-4bit/resolve/d3a7e0594d6642dbcfb7d149bed8b0bdf49f95ce/"
+    }
+  ],
+  "upstream": {
+    "commit": "d3a7e0594d6642dbcfb7d149bed8b0bdf49f95ce",
+    "host": "huggingface.co",
+    "repo": "mlx-community/SmolLM3-3B-4bit",
+    "url": "https://huggingface.co/mlx-community/SmolLM3-3B-4bit/tree/d3a7e0594d6642dbcfb7d149bed8b0bdf49f95ce"
+  }
+}

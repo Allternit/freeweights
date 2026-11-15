@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:23:49Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f9b0ba7d7022b6f23604f93750c38cbcb191efaf67da4aa53550ba60ff544e68",
+      "size": 11343
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a3d6a7ad3fde8e26fa9953d80ac30682f7d56ac1d03f3428910a4239a4e23bef",
+      "size": 2726
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a14d7d23675ad129225d132f7f0e3a3b2a485aa281a4c91ac643465de62f36a0",
+      "size": 1598
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+      "size": 916646
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "68c7ee48418b08335789f3488ac3150b4043cfe2356bf9c70c9cecd5358fa2a3",
+      "size": 14861802680
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "4cb2b52960bababa8ec27153831e405ef7811e3fad1226106e09c28e715cfb21",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "7738a25c46a6043a0e2e605138851baa450269ce9d800af6ca9bf6192e45510c",
+      "size": 7137175
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2650f83185864dd48845c226b06d35961af1b6c0bea883ee022e317b13fa9d7d",
+      "size": 4307
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "d8eb44d0d51f5e39c9b14825ca8bd10a2500f99c438ca81d4462f0263acd3b53",
+      "size": 1611055
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/Olmo-Hybrid-Instruct-SFT-7B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f9b0ba7d7022b6f23604f93750c38cbcb191efaf67da4aa53550ba60ff544e68",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:23:49Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/Olmo-Hybrid-Instruct-SFT-7B/resolve/15ec262d91de5a2729e445a1c190c17573239a8a/"
+    }
+  ],
+  "upstream": {
+    "commit": "15ec262d91de5a2729e445a1c190c17573239a8a",
+    "host": "huggingface.co",
+    "repo": "allenai/Olmo-Hybrid-Instruct-SFT-7B",
+    "url": "https://huggingface.co/allenai/Olmo-Hybrid-Instruct-SFT-7B/tree/15ec262d91de5a2729e445a1c190c17573239a8a"
+  }
+}

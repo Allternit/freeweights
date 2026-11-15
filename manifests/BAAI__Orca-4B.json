@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T04:00:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "0ce308fa2e22bc205013c6b2ddc077048fc97d7bf3b3f94c1822da61fbfa06a4",
+      "size": 1581
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d22189e6dbe76407c9ce26cf95fb7b7cf1dd09fe8b48949300b9f56d2778511b",
+      "size": 13066
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f87c161c67d888a38454d4d137e58f1936e27e72093fb2956da8312456e2f085",
+      "size": 657
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "15690bfbb894166dc684465cbbb2afdc482df07fafcaddf5f414472aee4eb57d",
+      "size": 11008267672
+    },
+    {
+      "lfs": false,
+      "path": "policy_postprocessor.json",
+      "sha256": "293eab3432740e854b1dba019bbee5bbcc417a2fe0536fca14b6cca9f50554ad",
+      "size": 1115
+    },
+    {
+      "lfs": false,
+      "path": "policy_preprocessor.json",
+      "sha256": "7f4071dcf899013cfecd35b079b61aaba41d4e3206aa230006379b6dcac263ff",
+      "size": 1445
+    },
+    {
+      "lfs": false,
+      "path": "vlm_config/chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "size": 7756
+    },
+    {
+      "lfs": false,
+      "path": "vlm_config/config.json",
+      "sha256": "a02d7f8d068db106a4fae05ff344aee0da79d7739ca793b974468e5a6ce7525a",
+      "size": 2875
+    },
+    {
+      "lfs": false,
+      "path": "vlm_config/processor_config.json",
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+      "size": 1191
+    },
+    {
+      "lfs": true,
+      "path": "vlm_config/tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "vlm_config/tokenizer_config.json",
+      "sha256": "792fa3f0cb88b111e54ef3134c873531008c4df471d108da17903426e308aa7b",
+      "size": 1165
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/Orca-4B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d22189e6dbe76407c9ce26cf95fb7b7cf1dd09fe8b48949300b9f56d2778511b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:00:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/Orca-4B/resolve/67caded71d3c438853a68a22257faf59b77a552f/"
+    }
+  ],
+  "upstream": {
+    "commit": "67caded71d3c438853a68a22257faf59b77a552f",
+    "host": "huggingface.co",
+    "repo": "BAAI/Orca-4B",
+    "url": "https://huggingface.co/BAAI/Orca-4B/tree/67caded71d3c438853a68a22257faf59b77a552f"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "mistralai/Mistral-7B-Instruct-v0.2",
+  "display_name": "Sentiment-Analysis-7B",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "microsoft/Sentiment-Analysis-7B",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/microsoft/Sentiment-Analysis-7B.json",
+  "params": 7241732096,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "mistralai/Mistral-7B-Instruct-v0.2",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 2973,
+    "likes": 33,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 14487035003,
+  "upstream_url": "https://huggingface.co/microsoft/Sentiment-Analysis-7B",
+  "what_changed": null
+}

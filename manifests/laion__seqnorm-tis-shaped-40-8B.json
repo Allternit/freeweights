@@ -1,0 +1,318 @@
+{
+  "created_at": "2026-11-15T04:24:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a4dbdf0e736d5e6357e81631e4552aa532efef4785dce0e13dcdd4aa58752a78",
+      "size": 2070
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7e04098c8f4499546dc8440387965e4f5d37e78008faeab69fa6c628ecb2e0d2",
+      "size": 1565
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "size": 4168
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ed36641e183b3d95dcefad8906aa22d183c445e4b582c8a0ca7d71a713c85f2d",
+      "size": 1539
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3b101cd89b140b757d0bca469e75570e75789a2423ada90a33ec17707dfacf08",
+      "size": 188
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "4f63e75a3995feae5f916993dd1fb533a7c9191f2e92e73e020a325fe5a34fc1",
+      "size": 4902257696
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "eeaa1109dbae21d1f45b5f45ddf28ba410f9855fd67305b1a581d40d96167f1d",
+      "size": 4915960368
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "61c8645c644b9badeb1c75eac15f2680c8826b6d6f761814a42caf4f77c63c1b",
+      "size": 4983068496
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "04bfbe35ac7c51ee7802ee8e44de570cc3a0739e068c09da2f201df95d2502bd",
+      "size": 1580230264
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "e7e4bdc58d3302c97357f27979b270987dd620cf0cd9b1c130e3a51c9d64df95",
+      "size": 32914
+    },
+    {
+      "lfs": false,
+      "path": "rl_config.yaml",
+      "sha256": "e9c90ec2d5542e2995cb94f033a2028980f9a2ea3f08de7695eab29fa9451219",
+      "size": 13466
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "3e27b302e9844c5b9648a8dbc1958fbbf3bda640e07302f53c17ac7a3192def5",
+      "size": 5429
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_metrics_seqnorm-tis-shaped_850358.csv",
+      "sha256": "878c3ac7ec5c358ea3b9c1b408a36f9e35863a8c9bcab7b29f703433c4abc254",
+      "size": 16833
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_metrics_seqnorm-tis-shaped_850359.csv",
+      "sha256": "ddf75bf8663af37f5c5a7b9ae987961c6f0e0349afff9ad4515d38e7698f076d",
+      "size": 17590
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_metrics_seqnorm-tis-shaped_850360.csv",
+      "sha256": "86233f23a54092b5a655cfe3c5cfd7b5e7da342d36c7b4163e2e61be6220571d",
+      "size": 15629
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_metrics_seqnorm-tis-shaped_850361.csv",
+      "sha256": "dfd7b70c2473e855869b0818ce25d186e2255423582cea87cffdbaa8a4816b2b",
+      "size": 5923
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_metrics_table.csv",
+      "sha256": "f9f9773074b4ddbaa619957e8d605613614bd7b1df2d73653a57598e1d45c37f",
+      "size": 50820
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_vllm_metrics_seqnorm-tis-shaped_850358.csv",
+      "sha256": "9ce7ea3b4fa0a07678a668615930a4633d026fa8f8e4b605fa3aa3cb6eb08e8c",
+      "size": 689206
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_vllm_metrics_seqnorm-tis-shaped_850359.csv",
+      "sha256": "081579abe0f71a8b32a1cbc0e1fc309a0a4a5db262daf39a1f85e277e2d24652",
+      "size": 693358
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_vllm_metrics_seqnorm-tis-shaped_850360.csv",
+      "sha256": "8deab2032f60d5dc38b0887db269afd232682dbb7ac57f95bc8ed92eda240467",
+      "size": 684429
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_vllm_metrics_seqnorm-tis-shaped_850361.csv",
+      "sha256": "901af2b95de6380682ce9e98753d8be9f8f2237a680a1b4d880a46c8ffcfa549",
+      "size": 236454
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_vllm_metrics_seqnorm-tis-shaped_850362.csv",
+      "sha256": "56781561076a397425866f8dbf88b1e774812caaf997869e19cf3a77edb28c07",
+      "size": 664
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_155933_vllm_metrics_table.csv",
+      "sha256": "8a0ef974776d07d8d13ed78c1e247d88f926f06a7f571c929c569c07138d4632",
+      "size": 3048206
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_metrics_report.md",
+      "sha256": "7f1638f97e712f614898c3b6a101f3ae09f10c8f5184c39225ee5587ac3a1921",
+      "size": 24076
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_metrics_seqnorm-tis-shaped_850358.csv",
+      "sha256": "878c3ac7ec5c358ea3b9c1b408a36f9e35863a8c9bcab7b29f703433c4abc254",
+      "size": 16833
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_metrics_seqnorm-tis-shaped_850359.csv",
+      "sha256": "ddf75bf8663af37f5c5a7b9ae987961c6f0e0349afff9ad4515d38e7698f076d",
+      "size": 17590
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_metrics_seqnorm-tis-shaped_850360.csv",
+      "sha256": "86233f23a54092b5a655cfe3c5cfd7b5e7da342d36c7b4163e2e61be6220571d",
+      "size": 15629
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_metrics_seqnorm-tis-shaped_850361.csv",
+      "sha256": "dfd7b70c2473e855869b0818ce25d186e2255423582cea87cffdbaa8a4816b2b",
+      "size": 5923
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_metrics_table.csv",
+      "sha256": "f9f9773074b4ddbaa619957e8d605613614bd7b1df2d73653a57598e1d45c37f",
+      "size": 50820
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/20260613_191904_reward_vs_steps.png",
+      "sha256": "394e62a4889d4f9fec70bc9da8f84af94d4ffb19492b48b4c20b379f61173db6",
+      "size": 292706
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_trial_results.csv",
+      "sha256": "048cf73008dcefa88c66d2f9c531e0b3552775015bccbe5fe75861297468d82f",
+      "size": 3953293
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/20260613_191904_turn_count_distribution.png",
+      "sha256": "6444f663522c57c804f0d8026c70715b8ff309bbed0db7d0642d563031f0409e",
+      "size": 118007
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_vllm_metrics_seqnorm-tis-shaped_850358.csv",
+      "sha256": "9ce7ea3b4fa0a07678a668615930a4633d026fa8f8e4b605fa3aa3cb6eb08e8c",
+      "size": 689206
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_vllm_metrics_seqnorm-tis-shaped_850359.csv",
+      "sha256": "081579abe0f71a8b32a1cbc0e1fc309a0a4a5db262daf39a1f85e277e2d24652",
+      "size": 693358
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_vllm_metrics_seqnorm-tis-shaped_850360.csv",
+      "sha256": "8deab2032f60d5dc38b0887db269afd232682dbb7ac57f95bc8ed92eda240467",
+      "size": 684429
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_vllm_metrics_seqnorm-tis-shaped_850361.csv",
+      "sha256": "901af2b95de6380682ce9e98753d8be9f8f2237a680a1b4d880a46c8ffcfa549",
+      "size": 236454
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_vllm_metrics_seqnorm-tis-shaped_850362.csv",
+      "sha256": "56781561076a397425866f8dbf88b1e774812caaf997869e19cf3a77edb28c07",
+      "size": 664
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/20260613_191904_vllm_metrics_table.csv",
+      "sha256": "8a0ef974776d07d8d13ed78c1e247d88f926f06a7f571c929c569c07138d4632",
+      "size": 3048206
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/seqnorm-tis-shaped_850358.out",
+      "sha256": "cbf921bc9c6fafd387eef2d5bf1fc3551d6a7f24fe795f74c3e539cc60576b3a",
+      "size": 57209390
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/seqnorm-tis-shaped_850359.out",
+      "sha256": "893f955ac0d970db549b627d767b11295f1193efc50928730dc3943408681885",
+      "size": 59202226
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/seqnorm-tis-shaped_850360.out",
+      "sha256": "d61a2ec3f3a9c2153af284c98a945798690a33a90347d276a1e56b489c151ad8",
+      "size": 54632967
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/seqnorm-tis-shaped_850361.out",
+      "sha256": "7b0d8f25626fb08e6421fcbabb6498493b26e7084c390aa10b9ef02cd5f841b3",
+      "size": 20394597
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/seqnorm-tis-shaped_850362.out",
+      "sha256": "f6596e43e50a001efbd6894e920f8ec504647bf2ee238ed881ef1ba2166cd364",
+      "size": 830543
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/seqnorm-tis-shaped-40-8B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7e04098c8f4499546dc8440387965e4f5d37e78008faeab69fa6c628ecb2e0d2",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:24:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/seqnorm-tis-shaped-40-8B/resolve/64661facfd1c42f0c076c8b26bd0b8e8ff403a01/"
+    }
+  ],
+  "upstream": {
+    "commit": "64661facfd1c42f0c076c8b26bd0b8e8ff403a01",
+    "host": "huggingface.co",
+    "repo": "laion/seqnorm-tis-shaped-40-8B",
+    "url": "https://huggingface.co/laion/seqnorm-tis-shaped-40-8B/tree/64661facfd1c42f0c076c8b26bd0b8e8ff403a01"
+  }
+}

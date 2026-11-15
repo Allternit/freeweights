@@ -1,0 +1,1464 @@
+{
+  "created_at": "2026-11-15T04:35:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ea73e37641a43ae5004bd7e06a0e2af74cf2c8718d15df8343e686dbba7a61f1",
+      "size": 1693
+    },
+    {
+      "lfs": false,
+      "path": ".gitignore",
+      "sha256": "674f86f39f25b5d0c89592761003a6383c02d29fbcd8f985377ddafab6c729a2",
+      "size": 91
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+      "size": 31
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "2895679d72e2f09b43bd41082efdf26d699ace6fb3636c58b37fadd4fefa2fcd",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answer_relevance_classifier/alora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "507170e5fd7809bf67c095ffd68735689067922db413d092d481f1644a976cac",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-2b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-2b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-2b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-2b-instruct/tokenizer.json",
+      "sha256": "67e7bc35109aad620a3fe39172ec1f9bff22dfe75afa67efb460198faf65cabc",
+      "size": 3476677
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-2b-instruct/tokenizer_config.json",
+      "sha256": "779e67b59a86d0b8d2aeb98eaa6867b054b0270a0ea58db228162333c13610ea",
+      "size": 9931
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-2b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "c424d8bfc61862fed7b9b935e6c9660c0c6e1efc47d2d67ed31bfdc52cb32862",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answer_relevance_classifier/alora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "7847e2deca119b7dc535f7d260b3000fa4fc6ea3aabc6b7e033de8eb417a054a",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-8b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-8b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-8b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-8b-instruct/tokenizer.json",
+      "sha256": "67e7bc35109aad620a3fe39172ec1f9bff22dfe75afa67efb460198faf65cabc",
+      "size": 3476677
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-8b-instruct/tokenizer_config.json",
+      "sha256": "779e67b59a86d0b8d2aeb98eaa6867b054b0270a0ea58db228162333c13610ea",
+      "size": 9931
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/alora/granite-3.3-8b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "a8b658d4b97f34af49d2685e36637767a1ea541cd9eb4350a29b2fa6b9e651c4",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "2f46cd57fa37c35fb3d7d164132c32adc7d1d14b30c99b1a7c32fc75cebe769f",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "9205c7e3898ee4969746f2a4156efe2ec782e5ba16becb0512a9b6f57f3a5348",
+      "size": 1846
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/tokenizer.json",
+      "sha256": "67e7bc35109aad620a3fe39172ec1f9bff22dfe75afa67efb460198faf65cabc",
+      "size": 3476677
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/tokenizer_config.json",
+      "sha256": "779e67b59a86d0b8d2aeb98eaa6867b054b0270a0ea58db228162333c13610ea",
+      "size": 9931
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-2b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "38c4950229170c70a64f4e858b962280162ac618989b9e5b6f0ac88216dc5764",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "27c8cf16a5ea98e110df54e433c43432ee8f18373f673293989e1deacee29cd7",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "9205c7e3898ee4969746f2a4156efe2ec782e5ba16becb0512a9b6f57f3a5348",
+      "size": 1846
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/tokenizer.json",
+      "sha256": "67e7bc35109aad620a3fe39172ec1f9bff22dfe75afa67efb460198faf65cabc",
+      "size": 3476677
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/tokenizer_config.json",
+      "sha256": "779e67b59a86d0b8d2aeb98eaa6867b054b0270a0ea58db228162333c13610ea",
+      "size": 9931
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_classifier/lora/granite-3.3-8b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/alora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "b369b9dd3b714ad0e60a94eb7ce610a6c202df8de1dabb3fb26446dca7637377",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answer_relevance_rewriter/alora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "dfcca79f4eeb62f5f4b3e13940b5f1221232ffda2fb8899755d91ad652978fc0",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/alora/granite-3.3-2b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/alora/granite-3.3-2b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/alora/granite-3.3-2b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/alora/granite-3.3-2b-instruct/tokenizer.json",
+      "sha256": "67e7bc35109aad620a3fe39172ec1f9bff22dfe75afa67efb460198faf65cabc",
+      "size": 3476677
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/alora/granite-3.3-2b-instruct/tokenizer_config.json",
+      "sha256": "779e67b59a86d0b8d2aeb98eaa6867b054b0270a0ea58db228162333c13610ea",
+      "size": 9931
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/alora/granite-3.3-2b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "2895679d72e2f09b43bd41082efdf26d699ace6fb3636c58b37fadd4fefa2fcd",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "c6c5a44a872380e8ceb5f7c9459fb25efe4556ad845400f5a0a9e0a0e414cbe3",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "80ebc863860b4df6f3464619488625370a26cda5d898eb8680092296ad7268ec",
+      "size": 1691
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/tokenizer.json",
+      "sha256": "67e7bc35109aad620a3fe39172ec1f9bff22dfe75afa67efb460198faf65cabc",
+      "size": 3476677
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/tokenizer_config.json",
+      "sha256": "779e67b59a86d0b8d2aeb98eaa6867b054b0270a0ea58db228162333c13610ea",
+      "size": 9931
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-2b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "5d66f0c037de38c22fe7b647085d4e222b3f8b429d8d456c6d1867467cce5163",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "74db6518798528a2cb2ecd620825a95db228c54a87393e88a5832218e77044ce",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "80ebc863860b4df6f3464619488625370a26cda5d898eb8680092296ad7268ec",
+      "size": 1691
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/tokenizer.json",
+      "sha256": "67e7bc35109aad620a3fe39172ec1f9bff22dfe75afa67efb460198faf65cabc",
+      "size": 3476677
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/tokenizer_config.json",
+      "sha256": "779e67b59a86d0b8d2aeb98eaa6867b054b0270a0ea58db228162333c13610ea",
+      "size": 9931
+    },
+    {
+      "lfs": false,
+      "path": "answer_relevance_rewriter/lora/granite-3.3-8b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "answerability/README.md",
+      "sha256": "aa422e5c758247d3150dbc9531a087c992bd91d2b1518000d286556681fb0372",
+      "size": 18573
+    },
+    {
+      "lfs": false,
+      "path": "answerability/alora/gpt-oss-20b/README.md",
+      "sha256": "ea1f86ca5c3fd815064061d19dc85ae288d9808cd099b67de8f2c6793b752e84",
+      "size": 5207
+    },
+    {
+      "lfs": false,
+      "path": "answerability/alora/gpt-oss-20b/adapter_config.json",
+      "sha256": "5e2d7cd565716e56af8105b86061575dfd726f8c2a171de64215d6212914fc25",
+      "size": 1157
+    },
+    {
+      "lfs": true,
+      "path": "answerability/alora/gpt-oss-20b/adapter_model.safetensors",
+      "sha256": "b615339557412ccb46c174d28d5ce1687b0c0ac08f5eff9b3bde210f4c028aa2",
+      "size": 219238968
+    },
+    {
+      "lfs": false,
+      "path": "answerability/alora/granite-3.3-2b-instruct/README.md",
+      "sha256": "dc2226c12966be51a07c37a7c0bbe80fe2f7d3d1b54bc3afd54a63f85703410b",
+      "size": 5109
+    },
+    {
+      "lfs": false,
+      "path": "answerability/alora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "1c2c84c5e8800a0952decf5f5284e158ded8d93eccc35e0187889c7c84856df5",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answerability/alora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "3996eb09d20257950625d06678e58f39581871505d9d5286743031a68ee01e80",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "answerability/alora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "96a36b021acfb4d50671ef755f69a5c0a5a13ec51e665d9a4e2b09c32826369e",
+      "size": 749
+    },
+    {
+      "lfs": false,
+      "path": "answerability/alora/granite-3.3-8b-instruct/README.md",
+      "sha256": "eb500870ca48a9d8c3b4d03d33ed2a0e90eb193497e3d7ed6ac2381908257d00",
+      "size": 5109
+    },
+    {
+      "lfs": false,
+      "path": "answerability/alora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "c424d8bfc61862fed7b9b935e6c9660c0c6e1efc47d2d67ed31bfdc52cb32862",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answerability/alora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "c0647946a9301e2df4b3d57e080895d9645f23b889a0b1658e74706885b0821a",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "answerability/alora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "96a36b021acfb4d50671ef755f69a5c0a5a13ec51e665d9a4e2b09c32826369e",
+      "size": 749
+    },
+    {
+      "lfs": false,
+      "path": "answerability/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "1c2c84c5e8800a0952decf5f5284e158ded8d93eccc35e0187889c7c84856df5",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answerability/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "522f6038e5ee6db9e611253d401a2fb80a6caac0263e1d88612e76297b229565",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "answerability/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "96a36b021acfb4d50671ef755f69a5c0a5a13ec51e665d9a4e2b09c32826369e",
+      "size": 749
+    },
+    {
+      "lfs": false,
+      "path": "answerability/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "c424d8bfc61862fed7b9b935e6c9660c0c6e1efc47d2d67ed31bfdc52cb32862",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "answerability/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "437300147993aa317a98cbba16ce800905f9f292fc0776d25d2d995f4c7f3f27",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "answerability/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "96a36b021acfb4d50671ef755f69a5c0a5a13ec51e665d9a4e2b09c32826369e",
+      "size": 749
+    },
+    {
+      "lfs": false,
+      "path": "citations/README.md",
+      "sha256": "8376595194618b9f36ac7b32390c801bcfb620f8033e921b9f31366a1d9ccd5e",
+      "size": 29040
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/README.md",
+      "sha256": "809742e297a701b44e32a71cbed7aa87b965ce6c3d51791a1c8966921dd63b43",
+      "size": 5241
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "5099143f9012998d60dfbc28e4dec8b9dcaa757a0627019bedd53c70fb856d6d",
+      "size": 976
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "72815b5c781c4daf1234cf243cec106c23ecd2937a8afbb1104d6315105c7cf4",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/chat_template.jinja",
+      "sha256": "0bea7711316005a1c37c9941a7ee2a26311d223c979abee416aab0a402fc5b56",
+      "size": 4566
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/optimizer.bin",
+      "sha256": "5089daa645e21aded496df8d5244a73154a625290ccf72ec0d8848784e8285b5",
+      "size": 94616139
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/pytorch_model_fsdp.bin",
+      "sha256": "66686ed2f39704975645d3ec9fd67022588a2ed7f4ce23c5c37beb0bb6d47e9b",
+      "size": 47276337
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/rng_state_0.pth",
+      "sha256": "251164e70605940984764054934fbffc6be0cdb7328c07c86e584dafff0ecef7",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/rng_state_1.pth",
+      "sha256": "03698b3dfb5c9cc35ac073253a2a7cab4e018980c02a5815058187bebef13c05",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/rng_state_2.pth",
+      "sha256": "d3b1fe02c3ff76d08015c9646c3b05a4d1b00f450e4fcf5cb45968b6f2b90efd",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/rng_state_3.pth",
+      "sha256": "9c1212696411c8bd9bff050b07875246660d9c59e51bca2d3be3944433f0c80d",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/rng_state_4.pth",
+      "sha256": "a64cf25defa651e89bc6d59749aaff7e26812b7b18ab8580a2f13c0c485186f9",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/rng_state_5.pth",
+      "sha256": "f79c88f797bdc0046af6b6da6931cfd8b6c4d3d41958bb03e7dd04ba6c26e612",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/rng_state_6.pth",
+      "sha256": "09c26149d2a81e5ba7c8af11d3a34cc3e4641d7e2b370df3e1c9290e99a3aef1",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/rng_state_7.pth",
+      "sha256": "8b17cc859ebf26be508097c4edfd72e29ebf9387f602f64d7cb5524b1576ba20",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-2b-instruct/scheduler.pt",
+      "sha256": "3b324e2db701e1bbd0098f704fa6a38710b04904fae34f2d9cb564f3e26fccb3",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/tokenizer.json",
+      "sha256": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+      "size": 3476578
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/tokenizer_config.json",
+      "sha256": "fcb3bdcbcf27ab09cbd7385c486319413ec3619192255a95969253b9746ff874",
+      "size": 5263
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-2b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/README.md",
+      "sha256": "bce77295691435f233ea6f405ef73c55655f558d7d12610269f874e83e2e595e",
+      "size": 5241
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "c90817c7a72087a3b30d867c0a9993a316f573d4db9ccdc7b72cea6b2afb1428",
+      "size": 976
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "2bbc508c5be778ee9cc445430752355d0351aa9a3531349ba0a2ad805e194ab2",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/chat_template.jinja",
+      "sha256": "0bea7711316005a1c37c9941a7ee2a26311d223c979abee416aab0a402fc5b56",
+      "size": 4566
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/optimizer.bin",
+      "sha256": "169129219c369cda29a44cda3ff6fa32f2fa06c98e25aecf60f0c80d4c404c5b",
+      "size": 188987979
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/pytorch_model_fsdp.bin",
+      "sha256": "9efba156f3c4a4f4edb9fa354a1d2b04a0be24a3d5a683a027b60ef71ca02088",
+      "size": 94462257
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/rng_state_0.pth",
+      "sha256": "86eac114276ab817d0ab3d1cc8dbe115ff1e543352eccb6ae0f8d74532668e7e",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/rng_state_1.pth",
+      "sha256": "b46ee8c189e446a4a44b37896d3a99e81e1e8fe7c81748648d866a96cf4ab322",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/rng_state_2.pth",
+      "sha256": "52e42545417b0ec5cf2cfd24b30e63793f1d5534a0cb222ac6eefa66acced067",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/rng_state_3.pth",
+      "sha256": "e6dd91a05e0105d03cdfda886be3801b604ae40e31f8225beda590675af5300f",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/rng_state_4.pth",
+      "sha256": "56102933f6ee5054a22bb84d0312383068eda1749c43455ff3af8d9bb6808df5",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/rng_state_5.pth",
+      "sha256": "efa8e1f974b542901e1d979ee4ba2bf5b6b7255fa45f9ce23e731ad0811cf4a0",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/rng_state_6.pth",
+      "sha256": "0b622d98fe270de326728fb75eade3d52ab87733046b45760bf2582bd63d1947",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/rng_state_7.pth",
+      "sha256": "ef566b4a18406046eabc4c73ac20d6dd4ea21ed35a5622daa8383ca50b95871a",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "citations/alora/granite-3.3-8b-instruct/scheduler.pt",
+      "sha256": "9b4ff13af3578be120d3ff0e7a4582700149173d3d089f02ba7f9fc52ab0f39f",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/tokenizer.json",
+      "sha256": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+      "size": 3476578
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/tokenizer_config.json",
+      "sha256": "fcb3bdcbcf27ab09cbd7385c486319413ec3619192255a95969253b9746ff874",
+      "size": 5263
+    },
+    {
+      "lfs": false,
+      "path": "citations/alora/granite-3.3-8b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "c8942a9023db38584a20b46a7d733cbb0ac3bea299e85ec1ae51d848125e66f9",
+      "size": 737
+    },
+    {
+      "lfs": true,
+      "path": "citations/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "be6dc64b4c7737c74a4c37efca2dc621cd8ac5f918be723aec23f59bf7873c2c",
+      "size": 56435848
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-2b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "57c613fbaf6976125fad6637e49635dd311f4a55f9a7c78b89225ac652b39be8",
+      "size": 2944
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-2b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-2b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-2b-instruct/tokenizer.json",
+      "sha256": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+      "size": 3476578
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-2b-instruct/tokenizer_config.json",
+      "sha256": "8ad336f84c7f911e1f250116e82a66902af30f38dec7321386b5263e5d3884bf",
+      "size": 9935
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-2b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "532da69571299981ed2e7c3e0be2824ec561b6c70fee1b17658698fadae7c5af",
+      "size": 737
+    },
+    {
+      "lfs": true,
+      "path": "citations/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "4024cd8b4d6e256ddf5541fa2463c091463443b43d6d0aeb74d97ebeef8dc0be",
+      "size": 99034536
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-8b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "57c613fbaf6976125fad6637e49635dd311f4a55f9a7c78b89225ac652b39be8",
+      "size": 2944
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-8b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-8b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-8b-instruct/tokenizer.json",
+      "sha256": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+      "size": 3476578
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-8b-instruct/tokenizer_config.json",
+      "sha256": "8ad336f84c7f911e1f250116e82a66902af30f38dec7321386b5263e5d3884bf",
+      "size": 9935
+    },
+    {
+      "lfs": false,
+      "path": "citations/lora/granite-3.3-8b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "context_relevance/alora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "0e5577b7abf98d2246c7b30ff0075e5c94af5526fca28977fc2024ece9830e8e",
+      "size": 745
+    },
+    {
+      "lfs": true,
+      "path": "context_relevance/alora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "7107b3169e2dfd30dac217eba53a3010401bf5b66ea23d6b27631943e31201cb",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "context_relevance/alora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "27308af6eff4338b07b59f8cbffb1acd67a1ac2fb2966a685e897c645cf275b7",
+      "size": 745
+    },
+    {
+      "lfs": true,
+      "path": "context_relevance/alora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "50d320ee825229e87de107ee5459bff58963d0903defb9c54e19ddb367be6ca1",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "context_relevance/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "a636e1f76d07b5b7f2a2279e373a03b3963148bd845d868bb6127abb66431ecb",
+      "size": 745
+    },
+    {
+      "lfs": true,
+      "path": "context_relevance/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "afa17732fea4ce20b591c2e391c2ddbd0e99638a2194ec5d1e29c7930dff69ec",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "context_relevance/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "0330716d64db2033769741b4cd5a3f66a9f70205248d94a924481f76ae14c599",
+      "size": 842
+    },
+    {
+      "lfs": false,
+      "path": "context_relevance/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "27308af6eff4338b07b59f8cbffb1acd67a1ac2fb2966a685e897c645cf275b7",
+      "size": 745
+    },
+    {
+      "lfs": true,
+      "path": "context_relevance/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "56311cd911b68a1972f238f50f4671dbbb35335da0a2ec29fecc2e843a17fa81",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "context_relevance/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "0330716d64db2033769741b4cd5a3f66a9f70205248d94a924481f76ae14c599",
+      "size": 842
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/README.md",
+      "sha256": "d859b0b778b6bbd0b8252e16b6953b2baf0d0dc17d577485e984622739b2796b",
+      "size": 22162
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/README.md",
+      "sha256": "a4b4bbfcc65fffc7228f42fa01940bae9e9c59e23cc625224b1b5fa43d20caee",
+      "size": 5109
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "aed7ad14fabaa0ae94797cc4909072bc1f61516335b41ad3a1247330032d8851",
+      "size": 868
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "f55c95cd9d7601d6c05fa039ad67c02b04706c28b6541f1da6b400000928ee19",
+      "size": 112796488
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "cdbb29164e9cb7f72a6a9faecb692d6b396bcd085be0e0334245d4cf2fda3c0d",
+      "size": 2400
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/optimizer.bin",
+      "sha256": "073ccfaa3db4d07a0786b134efcbee0edb7cc53b76873bcfb5cb6833a24f51ca",
+      "size": 226010850
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/pytorch_model_fsdp.bin",
+      "sha256": "5c887506150ce52ecaff8ebacd7785e2dafbf1ff05f12e01919413e157cc084a",
+      "size": 112930382
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/rng_state_0.pth",
+      "sha256": "1e69ecb0a6c6f67ea7bee6ad1393e57a30d1d9645372cc24114e3c4b42f540de",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/rng_state_1.pth",
+      "sha256": "9eac70c1aa5c4aec18ed031dd5e5d7b86b59e4d46384e6d90c595e0e3cabe3c6",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/rng_state_2.pth",
+      "sha256": "cd697eaa921bb4a57ffdc0c4cec2ea3c56f76143e828478195d42b277684d055",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/rng_state_3.pth",
+      "sha256": "248bded13ac83c62167e222fbd7f5395b84c63cfb8dab56f2ad6f9abdcb58647",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/rng_state_4.pth",
+      "sha256": "fb2ab31377ae55e76ca9c85c92977c5471b83baae233735e51f96d022c56401f",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/rng_state_5.pth",
+      "sha256": "667f1d70cf10d06e67a2308e61dfdd96953332b8a6b5ded6d40711e254000544",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/rng_state_6.pth",
+      "sha256": "196a7fa7c9e4c574119f095e67977d0e21047c107640bcb1b44ae73153be0277",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/rng_state_7.pth",
+      "sha256": "8f532d109bad249d59e6639d13af2ff95e1d9cf0dc60d8d70c40c0c044ddc376",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/scheduler.pt",
+      "sha256": "144450d52f4dd6083f936605318b36a6af37d10e8864513b81bade554fec7d2b",
+      "size": 1064
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/tokenizer.json",
+      "sha256": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+      "size": 3476578
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/tokenizer_config.json",
+      "sha256": "3bb83de1296ba0da1fd23f4e9b0451d1409a88c7c04c3bf9e18a10d17bb638ee",
+      "size": 9949
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/trainer_state.json",
+      "sha256": "b3f1cc51ab94c491b7e2fe52372fb31e48e2e3747e799b84f4a83cf5bc3214e5",
+      "size": 14749
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/training_args.bin",
+      "sha256": "a88e258fa84e6c58cbccfc0b4eeb2324beee8d238d5db727d8d561df1358ee5b",
+      "size": 5880
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-2b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/README.md",
+      "sha256": "9784dcf66c031c9cc7621465f95db764dfc5fae43a95ec63dce9b6e63c771ad3",
+      "size": 5109
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "3072da4da959f7f57e586a4a7067667bd52d45201ad68836239c27360375438e",
+      "size": 868
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "52ff4990eae716c984e77ca4d2593eeebf297f9e9508db932fe94a45eb1be52e",
+      "size": 197993952
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/added_tokens.json",
+      "sha256": "bb33d55934aa82d29cc62f3d19cdbc60f315763f6ccee21bdfd8b3bde2f33d3b",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "cdbb29164e9cb7f72a6a9faecb692d6b396bcd085be0e0334245d4cf2fda3c0d",
+      "size": 2400
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/optimizer.bin",
+      "sha256": "8ca4d5b36c6c43ab29167653182087e6e1c24531a6382ed4234958f4074974ec",
+      "size": 396405858
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/pytorch_model_fsdp.bin",
+      "sha256": "f6b1ea713215c2703c0a58b9d44e817cbb1bf3edb596076c99871a74c45a2275",
+      "size": 198127950
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/rng_state_0.pth",
+      "sha256": "3e448d7aacc32677bc6162d5b37880a95cfdb7cfcbd0786abff69a817877c131",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/rng_state_1.pth",
+      "sha256": "2bf636dce04a077a55898700254900c4c51da9c06197b0492de7382cbdcc12d6",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/rng_state_2.pth",
+      "sha256": "c0ba6db82f835f199db8369513919bf645211bd9c9389a1c6fedc53bbec79100",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/rng_state_3.pth",
+      "sha256": "ce72459fcf06d14407b3c78e32229969d0fa997d729da891379535fcea7f48eb",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/rng_state_4.pth",
+      "sha256": "ad69af7803f71e18d7a5a20550574029c976789e3a27eed2a78beeee3e8e88fd",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/rng_state_5.pth",
+      "sha256": "66a5a19c6a806ee78b735218c615b98782df70428dba2ec68c07854b75d92967",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/rng_state_6.pth",
+      "sha256": "1485b55b31db1dcf74225ee61c3b7caceab12313cf2f645e3fcc49e4e436771f",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/rng_state_7.pth",
+      "sha256": "5c6b2cef46bdae1acf0a022d87fdef52645a6b7785792af47300e3f2eaf95a4c",
+      "size": 15984
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/scheduler.pt",
+      "sha256": "63b1f21a55773412fb2a41171c1405d1d3e9d7c11816a070d59c40ddd3f59b58",
+      "size": 1064
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/special_tokens_map.json",
+      "sha256": "21ce694081bb9ae1bd4bc64549e72e0799ebb74705e6b650e3585d85b71ebdc1",
+      "size": 801
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/tokenizer.json",
+      "sha256": "91168e938f05796aa6dcca7e485e4b30ab52785320c7a6391ecef86e6c84681e",
+      "size": 3476578
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/tokenizer_config.json",
+      "sha256": "3bb83de1296ba0da1fd23f4e9b0451d1409a88c7c04c3bf9e18a10d17bb638ee",
+      "size": 9949
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/trainer_state.json",
+      "sha256": "492d19975c9748ffa8b8e528105cc885f185e807980fa3c68a9132f5144e070d",
+      "size": 9938
+    },
+    {
+      "lfs": true,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/training_args.bin",
+      "sha256": "11c2c41e5aea3743924b9e8808217a4f590625cf0473be870fa54645cad957fe",
+      "size": 5880
+    },
+    {
+      "lfs": false,
+      "path": "hallucination_detection/lora/granite-3.3-8b-instruct/vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    },
+    {
+      "lfs": false,
+      "path": "query_clarification/granite-4.0-micro/lora/adapter_config.json",
+      "sha256": "b7d040f52578cde41d7cb9a098de990e732817a2b8ca3944f5c85369d57870af",
+      "size": 1066
+    },
+    {
+      "lfs": true,
+      "path": "query_clarification/granite-4.0-micro/lora/adapter_model.safetensors",
+      "sha256": "8bf22d4fe51f403feac79cc081fa1297e365591b48e5cd48b782153a0d054cf5",
+      "size": 235995984
+    },
+    {
+      "lfs": false,
+      "path": "query_clarification/granite-4.0-micro/lora/io.yaml",
+      "sha256": "6864871e8eeb7b987ed945368c2f369bb7b7204cb6c6a5ea1cbd7f2d32b10aeb",
+      "size": 491
+    },
+    {
+      "lfs": false,
+      "path": "query_rewrite/README.md",
+      "sha256": "97bd8b53569348e4f0b88bcf044487c85d8f36d56c28927cbff80e7bf95b5c91",
+      "size": 114861
+    },
+    {
+      "lfs": false,
+      "path": "query_rewrite/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "f73637521bd3f23f811b12d6fa9453fc857f91a1745f7d7a4b9e8d0580d9969b",
+      "size": 745
+    },
+    {
+      "lfs": true,
+      "path": "query_rewrite/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "cd32d3a2e95d08873873de4910e22c0b5a89b1cd52a322c360c03dc18ad6ec10",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "query_rewrite/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "5a0ad5150fa86c23de32697e72d70b89fb1313ebe1617009074253bb8e96ed17",
+      "size": 500
+    },
+    {
+      "lfs": false,
+      "path": "query_rewrite/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "9e723aa9cf62c43a5445a5c2bc1a6ac8c69b953b11cc3e8e6ff59b7f06cd3555",
+      "size": 745
+    },
+    {
+      "lfs": true,
+      "path": "query_rewrite/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "dbbcb14a35a7e3121afee5f5f6a9a99f3df6b9b0c00a9e9722e6bf7b3d7a92e1",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "query_rewrite/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "5a0ad5150fa86c23de32697e72d70b89fb1313ebe1617009074253bb8e96ed17",
+      "size": 500
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/README.md",
+      "sha256": "cc6450e047d5519128777da0e052151c8cddfbace996238dd3491e66bb76b9e3",
+      "size": 2940
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/alora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "d835f68c32452c45b3838639afbcb8ca6a2ec90dd6470cdbf5d026f00c3bd186",
+      "size": 950
+    },
+    {
+      "lfs": true,
+      "path": "requirement_check/alora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "94cb8f34739345b790c97ffa861e08c5e30b18c312b9093be38a74e3c16c0091",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/alora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "26f1bf216a23683cc7edf3a53251fc0c892a2c63966555bbc162baddce1100db",
+      "size": 624
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/alora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "ff33d79f19c447c6a7fa522528aeeca44aed9fc57a266476615110b6f96565ca",
+      "size": 950
+    },
+    {
+      "lfs": true,
+      "path": "requirement_check/alora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "be009b8d718348f1861f42e5ff1826d56837d0bbce14663ec245415b211a3ba0",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/alora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "26f1bf216a23683cc7edf3a53251fc0c892a2c63966555bbc162baddce1100db",
+      "size": 624
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "25fe9f305a516cfc27e0cc7b07c7545bacb972d3957e91e4413acc90f0d902d4",
+      "size": 950
+    },
+    {
+      "lfs": true,
+      "path": "requirement_check/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "1ac45fd22b5a966003e51588e14feecdbb41705fcb8e14cebf60d2b836243299",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "26f1bf216a23683cc7edf3a53251fc0c892a2c63966555bbc162baddce1100db",
+      "size": 624
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "01e191f17df43c37ba6dfb6a72a26cdf47c80a284d87132e50999a227888ab90",
+      "size": 950
+    },
+    {
+      "lfs": true,
+      "path": "requirement_check/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "5a9d612514a86502b1c323394211dadd9842965a071a564511162bf801c4fade",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "requirement_check/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "26f1bf216a23683cc7edf3a53251fc0c892a2c63966555bbc162baddce1100db",
+      "size": 624
+    },
+    {
+      "lfs": false,
+      "path": "run_ollama.sh",
+      "sha256": "dfafa8b9c5d678bcc326e65337cae9a4151c3363ff21006d01277bd0741a5f95",
+      "size": 3881
+    },
+    {
+      "lfs": false,
+      "path": "run_vllm.sh",
+      "sha256": "98a105bf76750b16549c91d6fbd4582dfcca374dd3a40b7b8971a9ca5515472a",
+      "size": 1379
+    },
+    {
+      "lfs": false,
+      "path": "run_vllm_alora.sh",
+      "sha256": "ae3271bd3126a6ea0a96bca68a13ecdd5ee241c2bbc8e4a4b01f1e065e757213",
+      "size": 1712
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/README.md",
+      "sha256": "50dee5b648fd55f0c5c36f0f4832d039f7a9aef93d18c80ea8fdd3ea6f155d0b",
+      "size": 8301
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/alora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "2218ce86d3867023b61be8606808848a3bf19c47bdd59aca1710e7d121520fba",
+      "size": 952
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/alora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "cf8d4ab6d2d6e2030bbc215f1950ac8950cda9026ac0383cff4f07ae7741d7e2",
+      "size": 47218112
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/alora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "55a327f3547c54f0fc635c2a8b43b9286a3fbc9c525fcfa7cc405dc317e9abe9",
+      "size": 760
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/alora/granite-3.3-8b-instruct/README.md",
+      "sha256": "bce77295691435f233ea6f405ef73c55655f558d7d12610269f874e83e2e595e",
+      "size": 5241
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/alora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "deeed8c609174e610a66e18ff544860f85ca55f1beabf14a3c8593ee28357a1b",
+      "size": 952
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/alora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "98e25e6aa3ccf30af9d487d8a5a6c445b9cbe7526bc7048fd78cb471a3b22b57",
+      "size": 94404160
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/alora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "55a327f3547c54f0fc635c2a8b43b9286a3fbc9c525fcfa7cc405dc317e9abe9",
+      "size": 760
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/lora/granite-3.3-2b-instruct/adapter_config.json",
+      "sha256": "5c383057ec1e3d37d6c5f80c78555b82e01b350b5a103b641bd3bcfa93683c17",
+      "size": 918
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/lora/granite-3.3-2b-instruct/adapter_model.safetensors",
+      "sha256": "939d2cf2891da46761b77a91d01217c3fbcc549216d2dbcdc19e9d2521a3cb70",
+      "size": 11828088
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/lora/granite-3.3-2b-instruct/io.yaml",
+      "sha256": "55a327f3547c54f0fc635c2a8b43b9286a3fbc9c525fcfa7cc405dc317e9abe9",
+      "size": 760
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/lora/granite-3.3-8b-instruct/adapter_config.json",
+      "sha256": "b878bc474313a9772792d80c5eef817fa08f107a41ef9c890092332b31c89145",
+      "size": 918
+    },
+    {
+      "lfs": true,
+      "path": "uncertainty/lora/granite-3.3-8b-instruct/adapter_model.safetensors",
+      "sha256": "428b2e96017d7c0a7b5c4864b587dd2d7b602c6302bea16867533f960aa84d17",
+      "size": 23624880
+    },
+    {
+      "lfs": false,
+      "path": "uncertainty/lora/granite-3.3-8b-instruct/io.yaml",
+      "sha256": "55a327f3547c54f0fc635c2a8b43b9286a3fbc9c525fcfa7cc405dc317e9abe9",
+      "size": 760
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/rag-intrinsics-lib",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:35:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/rag-intrinsics-lib/resolve/10984a203b331a652d80bf47019c3ca8d20c5095/"
+    }
+  ],
+  "upstream": {
+    "commit": "10984a203b331a652d80bf47019c3ca8d20c5095",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/rag-intrinsics-lib",
+    "url": "https://huggingface.co/ibm-granite/rag-intrinsics-lib/tree/10984a203b331a652d80bf47019c3ca8d20c5095"
+  }
+}

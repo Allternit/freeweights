@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:30:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11766e5171641f6c68b9f14099fdb4e7b3d610f0a69451893e356c8334812257",
+      "size": 1638
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1fa0bf17375df2a2bec6e7e67e8662774d666c72dedae9170b3ec91f9bef31d4",
+      "size": 551
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+      "size": 605
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3887132ba3bb02235754443dc89f8f080da85525c7694cdeaaba615befe56630",
+      "size": 968
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3894374dad6ad89424e24c400eea704ac9cecccb0b5ebcaa73287424a2f9d53d",
+      "size": 121
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "73038f92d9bddbcbefce1fc8695386ba5a473ed330f07abb4def44dd015e732b",
+      "size": 225896
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "b5ea9a88032e7ac5478c479cf9e54c80074342f9129fff831efa7729395f0aae",
+      "size": 7175460864
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "2ef4f3511f3856ef796f18a8f7edf406c25a3093fc2fc52c2a54488147d49624",
+      "size": 1869685610
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "3b83a8532bae952b2a0682099d920f05d18510646f59a0380aeaa53eb5e5b0cc",
+      "size": 1513988760
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "f29e75165c975e5e7e5f9147ff989dbc7dbc4438384da70a11c2a63e6a51ebb5",
+      "size": 2073952256
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "bb48391dbf60b993da3c3a815301434661701a5eff0d156eff70dfade96a21dc",
+      "size": 1966157066
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "6597edc1a474341df04cd9177259fab916b9edcd61f603be1286cf3444b4d1a8",
+      "size": 1369092407
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "bb5953180a154511cf4d0fb1fc68a3433f1458aa6db3851ac2609cf41e7d9b5b",
+      "size": 9116490
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "449d183f7fbb60ab8bdb98ec7f2a771a375c4c44df918b372c65f6f5819a23b6",
+      "size": 5266
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/OpenMath-Nemotron-1.5B-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1fa0bf17375df2a2bec6e7e67e8662774d666c72dedae9170b3ec91f9bef31d4",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.nemotron",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:30:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/OpenMath-Nemotron-1.5B-ONNX/resolve/335a523e792d01ef4e94e38d0b77884b48745e66/"
+    }
+  ],
+  "upstream": {
+    "commit": "335a523e792d01ef4e94e38d0b77884b48745e66",
+    "host": "huggingface.co",
+    "repo": "onnx-community/OpenMath-Nemotron-1.5B-ONNX",
+    "url": "https://huggingface.co/onnx-community/OpenMath-Nemotron-1.5B-ONNX/tree/335a523e792d01ef4e94e38d0b77884b48745e66"
+  }
+}

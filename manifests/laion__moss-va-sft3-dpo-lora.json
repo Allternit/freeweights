@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T05:30:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "810f0d62e412463e602b0f608e3b7241da12c710787afeaab820f9fcd7ebff73",
+      "size": 16802
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "27ef1195987ae0156e9d55d5f709c253b9dc2da719de05a30ae0fc05e9e9c345",
+      "size": 1655
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "7090bb6b333a9496253be8370ea18d50969965602b642ffdb6b553963bb71c0f",
+      "size": 549790896
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/moss-va-sft3-dpo-lora",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "810f0d62e412463e602b0f608e3b7241da12c710787afeaab820f9fcd7ebff73",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:30:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/moss-va-sft3-dpo-lora/resolve/c86b970a6306857349d220686e4b04d847a73747/"
+    }
+  ],
+  "upstream": {
+    "commit": "c86b970a6306857349d220686e4b04d847a73747",
+    "host": "huggingface.co",
+    "repo": "laion/moss-va-sft3-dpo-lora",
+    "url": "https://huggingface.co/laion/moss-va-sft3-dpo-lora/tree/c86b970a6306857349d220686e4b04d847a73747"
+  }
+}

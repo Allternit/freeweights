@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:46:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a1533fad1fb49e1230aff61a60028ea63bc924b4cc4501447351b50b9c840683",
+      "size": 1567
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "320248f2d312481711c37c87ee8b90d0a7546e8a753b93e78d6b20624a15b5ba",
+      "size": 11767
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "de56319deee1deb2b88cf576cf20bdc57a8789723f7ff75f9c54acd740d15ecb",
+      "size": 15168
+    },
+    {
+      "lfs": true,
+      "path": "consolidated.safetensors",
+      "sha256": "fe26a882ffbafe23c72d7f043db436934696ed3a1a6ee4b1768cdd13261b3f7e",
+      "size": 391695220
+    },
+    {
+      "lfs": false,
+      "path": "params.json",
+      "sha256": "0d209156458dcede321bf14eda60107059d21cacbb9e66fc95453eaef7036d74",
+      "size": 725
+    },
+    {
+      "lfs": true,
+      "path": "tekken.json",
+      "sha256": "b1272b956bd6edd2d2c674c76896c7661308c9e723997b0afb55ecb429cb5dc7",
+      "size": 16275354
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mistralai/Mistral-Small-4-119B-2603-eagle",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "320248f2d312481711c37c87ee8b90d0a7546e8a753b93e78d6b20624a15b5ba",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:46:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603-eagle/resolve/9a8ea22dca0161ff7af7879f4a0000f65314797d/"
+    }
+  ],
+  "upstream": {
+    "commit": "9a8ea22dca0161ff7af7879f4a0000f65314797d",
+    "host": "huggingface.co",
+    "repo": "mistralai/Mistral-Small-4-119B-2603-eagle",
+    "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603-eagle/tree/9a8ea22dca0161ff7af7879f4a0000f65314797d"
+  }
+}

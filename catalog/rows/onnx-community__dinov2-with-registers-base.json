@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "facebook/dinov2-with-registers-base",
+  "display_name": "dinov2-with-registers-base",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/dinov2-with-registers-base",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/dinov2-with-registers-base.json",
+  "note": "The license of the base model facebook/dinov2-with-registers-base applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "facebook/dinov2-with-registers-base",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 201,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "image-feature-extraction"
+  ],
+  "tier": "variant",
+  "total_size": 958999708,
+  "upstream_url": "https://huggingface.co/onnx-community/dinov2-with-registers-base",
+  "what_changed": null
+}

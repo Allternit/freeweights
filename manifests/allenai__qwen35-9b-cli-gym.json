@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T04:12:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".checkpoint_complete",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "62fbaecf474fd70f4dbd0fcd357b8699810d4c28d5522be196a5f209280f94a2",
+      "size": 4078
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "d0eee281dec542894f3864ff2320c3f5998cdb8ab88e31366042ee4ebf4ca6b9",
+      "size": 7741
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05",
+      "size": 3126
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "716e09da441dea847d26ef2cb687ea2d661f1ec9751f7b74c2a58686463e456d",
+      "size": 115
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b39f2d619001e6c0739859edd1cf0f7460db2fbb74d26a411487bd6bf1e7792a",
+      "size": 17907663008
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "size": 16710
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/qwen35-9b-cli-gym",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "62fbaecf474fd70f4dbd0fcd357b8699810d4c28d5522be196a5f209280f94a2",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:12:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/qwen35-9b-cli-gym/resolve/df70f2276d70ace30c2ed3f62efdbf8630210818/"
+    }
+  ],
+  "upstream": {
+    "commit": "df70f2276d70ace30c2ed3f62efdbf8630210818",
+    "host": "huggingface.co",
+    "repo": "allenai/qwen35-9b-cli-gym",
+    "url": "https://huggingface.co/allenai/qwen35-9b-cli-gym/tree/df70f2276d70ace30c2ed3f62efdbf8630210818"
+  }
+}

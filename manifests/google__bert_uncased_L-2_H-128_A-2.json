@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:28:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98c91dabef4df27b2fc7c8454d220aba47476f73593cbd034d961fe4927304c1",
+      "size": 445
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d13a54d652a2a54fbbc50e063b465fb273295870867821e1b06baba1d49d68a9",
+      "size": 4617
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "508e1f01aae55d73355cbdd82609be2f43ba5a0d3428837adbe56cf8391f8b39",
+      "size": 382
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "d1f885a549870769ba8b61c96b051ed6a98b68573062f03fd806fcaa9712eeb4",
+      "size": 17545101
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7fb69ad9f6866d8983183c930e33828f326470bf6ad8bbb2ad4ed957a92e9414",
+      "size": 17739144
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "dd152f8450c0579bd271ac0ccb4a88fa4f6a67d8035b7799dbf3a0fb7156d9d0",
+      "size": 17743809
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "google/bert_uncased_L-2_H-128_A-2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d13a54d652a2a54fbbc50e063b465fb273295870867821e1b06baba1d49d68a9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:28:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/google/bert_uncased_L-2_H-128_A-2/resolve/30b0a37ccaaa32f332884b96992754e246e48c5f/"
+    }
+  ],
+  "upstream": {
+    "commit": "30b0a37ccaaa32f332884b96992754e246e48c5f",
+    "host": "huggingface.co",
+    "repo": "google/bert_uncased_L-2_H-128_A-2",
+    "url": "https://huggingface.co/google/bert_uncased_L-2_H-128_A-2/tree/30b0a37ccaaa32f332884b96992754e246e48c5f"
+  }
+}

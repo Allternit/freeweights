@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T02:52:49Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1d1299516e6b5f5b82112358f59ce663be86424d20f32de3c4d69886bf1c0fda",
+      "size": 2313
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size": 11357
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "953d49148811cde4c40211effaeecd7bcdb1620d4d0507a51cc27576d359371e",
+      "size": 19054
+    },
+    {
+      "lfs": false,
+      "path": "README_en.md",
+      "sha256": "9de9fece71bc8d2b5ddfa5c3a4b61ab635366e70d655aabd3024b68ee932137f",
+      "size": 19736
+    },
+    {
+      "lfs": true,
+      "path": "Wan2.1_VAE.pth",
+      "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+      "size": 507609880
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8da04224ca81f6900a092eccd943275dfc55feb3e2c015f91bd4e10da3b60302",
+      "size": 567
+    },
+    {
+      "lfs": false,
+      "path": "configuration.json",
+      "sha256": "5ed7a983ff7c45bf18631b2c4becfd62eccd47ff595f796e7f44ba2d266b83bb",
+      "size": 56
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_pytorch_model.safetensors",
+      "sha256": "4d51c942b0cfe92821c29b37fdb062756e026280084746ba1cc5d5dba39ee684",
+      "size": 3129305312
+    },
+    {
+      "lfs": false,
+      "path": "google/umt5-xxl/special_tokens_map.json",
+      "sha256": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d",
+      "size": 6623
+    },
+    {
+      "lfs": true,
+      "path": "google/umt5-xxl/spiece.model",
+      "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "size": 4548313
+    },
+    {
+      "lfs": true,
+      "path": "google/umt5-xxl/tokenizer.json",
+      "sha256": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+      "size": 16837417
+    },
+    {
+      "lfs": false,
+      "path": "google/umt5-xxl/tokenizer_config.json",
+      "sha256": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05",
+      "size": 61728
+    },
+    {
+      "lfs": true,
+      "path": "models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth",
+      "sha256": "628c9998b613391f193eb67ff68da9667d75f492911e4eb3decf23460a158c38",
+      "size": 4772359047
+    },
+    {
+      "lfs": true,
+      "path": "models_t5_umt5-xxl-enc-bf16.pth",
+      "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d",
+      "size": 11361920418
+    },
+    {
+      "lfs": true,
+      "path": "xlm-roberta-large/sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "xlm-roberta-large/special_tokens_map.json",
+      "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+      "size": 280
+    },
+    {
+      "lfs": true,
+      "path": "xlm-roberta-large/tokenizer.json",
+      "sha256": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626",
+      "size": 17082660
+    },
+    {
+      "lfs": false,
+      "path": "xlm-roberta-large/tokenizer_config.json",
+      "sha256": "efb5c0d09722e5fe59a462cd2a9976ee216d55b037597d997cd3fe833216da15",
+      "size": 418
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "alibaba-pai/Wan2.1-Fun-V1.1-1.3B-Control",
+  "license": {
+    "file_path": "LICENSE.txt",
+    "file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.video",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:52:49Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/alibaba-pai/Wan2.1-Fun-V1.1-1.3B-Control/resolve/a116c52b08182f7a5916eae7a47fcd61a9467a04/"
+    }
+  ],
+  "upstream": {
+    "commit": "a116c52b08182f7a5916eae7a47fcd61a9467a04",
+    "host": "huggingface.co",
+    "repo": "alibaba-pai/Wan2.1-Fun-V1.1-1.3B-Control",
+    "url": "https://huggingface.co/alibaba-pai/Wan2.1-Fun-V1.1-1.3B-Control/tree/a116c52b08182f7a5916eae7a47fcd61a9467a04"
+  }
+}

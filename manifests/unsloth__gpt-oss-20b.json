@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T04:40:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "size": 11357
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8441a39347c16fe3ecca33cde55cc7c8cf3eb514eed68da7b51449efa1444225",
+      "size": 6720
+    },
+    {
+      "lfs": false,
+      "path": "USAGE_POLICY",
+      "sha256": "fc48d386a7a7ff8b066f743cfe62df683ab16892450f5bb7357bb4de261cd037",
+      "size": 201
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "949f918f62563e2d7cf4a141a2b6484c8915a6e505b37dbc7dfd41ae8ca6e71d",
+      "size": 17854
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.json",
+      "sha256": "9a29302d0a30e37cf74097ebb230e19f189037dde90ce3bdecea36daf10b8f84",
+      "size": 18673
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "bfdd93307ed953c65ea93098a123220a6738f9a50057ab160050557c2739f5d4",
+      "size": 1826
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "f9970ada892d2d1f72e3ed0a6535ccebadd11897318794ca671d8c7014c957da",
+      "size": 177
+    },
+    {
+      "lfs": true,
+      "path": "metal/model.bin",
+      "sha256": "725b7f996b5a226d922f034a731aefc398652f670dcafc2efd78620509a0fef1",
+      "size": 13750886400
+    },
+    {
+      "lfs": true,
+      "path": "model-00000-of-00002.safetensors",
+      "sha256": "16d0f997dcfc4462089d536bffe51b4bcea2f872f5c430be09ef8ed392312427",
+      "size": 4792272488
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "4fbe328ab445455d6f58dc73852b85873bd626986310abd91cd4d2ce3245eaea",
+      "size": 4798702184
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "a18106b209e9ab35c3406db4f6f12a927364a058b21e9d1373d682e20674b303",
+      "size": 4170342232
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "0e085b977c4c9942f85938828e8c989ed7d5cdabf852e4da6a67c116cd502cd1",
+      "size": 36355
+    },
+    {
+      "lfs": false,
+      "path": "original/config.json",
+      "sha256": "317522155fc243327ee341857d0c752d0094a0817e0e9aee2890d5ad8e009e04",
+      "size": 376
+    },
+    {
+      "lfs": false,
+      "path": "original/dtypes.json",
+      "sha256": "566c9e6aded8957f41f1589cabaf73e39f2d1fcda3351d63efdfb7e9e78d376b",
+      "size": 13082
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c661c7dc897a8d9851446db24876bbc243e6ad2f58542e9147190e6654f92855",
+      "size": 446
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3",
+      "size": 27868174
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "86e6545404b5a15099593ebc6b91ada696983cb0380ce7fbdb5ae7d4ff6381b0",
+      "size": 22862
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/gpt-oss-20b",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gpt-oss",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:40:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/gpt-oss-20b/resolve/30061408d1b88e5da5a2ca4583adc4ee93028781/"
+    }
+  ],
+  "upstream": {
+    "commit": "30061408d1b88e5da5a2ca4583adc4ee93028781",
+    "host": "huggingface.co",
+    "repo": "unsloth/gpt-oss-20b",
+    "url": "https://huggingface.co/unsloth/gpt-oss-20b/tree/30061408d1b88e5da5a2ca4583adc4ee93028781"
+  }
+}

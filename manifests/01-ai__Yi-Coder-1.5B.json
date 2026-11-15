@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:52:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9a8ee77cf77175edfd8df3b0786fd6e67e3baac11f0e8a2ad44dc41d29f54548",
+      "size": 5096
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "eb89cf6432c7914e60887bca1b0797615d296d04b25957a9bac525246d6b5265",
+      "size": 682
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "fd13175799de9fb776d4dcd603f1344863da0f581dcbac71209fe9a126ecfca4",
+      "size": 132
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8739bb63ec22de1cad21ca59b6c16245d16cdbdeaa3a406d3c646ba77979970e",
+      "size": 2953016024
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "1f758131582e2df1391a2a0dc54a230bc54825aeff13498c1d2a48f1700e42eb",
+      "size": 573
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "18da9ff3421e5c878bd223ce42316058c0bdf688c114aa57e469ed5b91b4c3bc",
+      "size": 3560486
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "386c49cf943d71aa110361135338c50e38beeff0a66593480421f37b319e1a39",
+      "size": 1033105
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d17bc695273ea8fde443524a79a39caadb548b40912fcfc0ab2bfc58eb690d9b",
+      "size": 953
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "01-ai/Yi-Coder-1.5B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9a8ee77cf77175edfd8df3b0786fd6e67e3baac11f0e8a2ad44dc41d29f54548",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:52:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/01-ai/Yi-Coder-1.5B/resolve/00e59e64f47d3c78e4cfbdd345888479797e8109/"
+    }
+  ],
+  "upstream": {
+    "commit": "00e59e64f47d3c78e4cfbdd345888479797e8109",
+    "host": "huggingface.co",
+    "repo": "01-ai/Yi-Coder-1.5B",
+    "url": "https://huggingface.co/01-ai/Yi-Coder-1.5B/tree/00e59e64f47d3c78e4cfbdd345888479797e8109"
+  }
+}

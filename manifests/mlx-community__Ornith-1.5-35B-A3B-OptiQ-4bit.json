@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T04:54:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4ebbdf5001a2c572bb071af67e564a8558f5909b259a521556acd23f7fdc65a0",
+      "size": 3126
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "182e77dd83bd8e9ca818b240b82e28f243762cd5dda32e6eef327df7b1cd107e",
+      "size": 7536
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b1ca3ab285af1cbf81efead355ae185a39fe9d06730f81334190914b59464996",
+      "size": 115819
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "size": 202
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "a0b910fc2e45a5253299ff157e46ca4503cdbe9c43aea46a439e04b8de523348",
+      "size": 660
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00005.safetensors",
+      "sha256": "cec3359980d16cf02566a19a017ada520005b42d3d69f44daf1904a9b2b26491",
+      "size": 5237029614
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00005.safetensors",
+      "sha256": "7e96e6010402558da5848fb99871a3cbb5060ec3969f6e85871519d7adaef31b",
+      "size": 5255557236
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00005.safetensors",
+      "sha256": "799b15d9b56a9aa3291b6307b6df08ebc82110361695570fbabd0a1c8c2afbf6",
+      "size": 5363303738
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00005.safetensors",
+      "sha256": "50d2bc385b88245f8b7962a3d6ac8bd803e841fc9c903d94bcd14e6ec83b2e35",
+      "size": 5194924022
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00005.safetensors",
+      "sha256": "bd8095ace0ca73f9a253366f2f1342f477f6ecc0ac2e16225a6e15633eec55e8",
+      "size": 1114121185
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "074b8442878cf758eb0f5b244a82e348ff43af053c53898427d3b69e43e502d6",
+      "size": 206754
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "2ea683cb92c8e5733fe825ea5ee3d71880f4279396100380aed9602be10a3e22",
+      "size": 56478
+    },
+    {
+      "lfs": true,
+      "path": "optiq/mtp.safetensors",
+      "sha256": "c61f8407fd4d482739a677fc6b074284cff95527a7bbdbe2b1981a16604fca5d",
+      "size": 487458943
+    },
+    {
+      "lfs": true,
+      "path": "optiq/optiq_vision.safetensors",
+      "sha256": "6fa191c4f66e181861fe40d0930a7312ab95b4394cdf63ac0368dc536d84ee5f",
+      "size": 893179543
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "95c557768e6b88a7128befc7bfd3c7de50e5d51af9b8b33a9f4dee0e04f99679",
+      "size": 1161
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Ornith-1.5-35B-A3B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4ebbdf5001a2c572bb071af67e564a8558f5909b259a521556acd23f7fdc65a0",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:54:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Ornith-1.5-35B-A3B-OptiQ-4bit/resolve/fd32a7e29b14ba2094f05b16cbd68a79afb5c147/"
+    }
+  ],
+  "upstream": {
+    "commit": "fd32a7e29b14ba2094f05b16cbd68a79afb5c147",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Ornith-1.5-35B-A3B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Ornith-1.5-35B-A3B-OptiQ-4bit/tree/fd32a7e29b14ba2094f05b16cbd68a79afb5c147"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "OpenMOSS-Team/MOSS-Audio-8B-Instruct",
+  "display_name": "moss-audio-sfx-lora-v4",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "laion/moss-audio-sfx-lora-v4",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/laion/moss-audio-sfx-lora-v4.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "OpenMOSS-Team/MOSS-Audio-8B-Instruct",
+    "type": "adapter"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 18,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "audio-classification"
+  ],
+  "tier": "variant",
+  "total_size": 698511919,
+  "upstream_url": "https://huggingface.co/laion/moss-audio-sfx-lora-v4",
+  "what_changed": null
+}

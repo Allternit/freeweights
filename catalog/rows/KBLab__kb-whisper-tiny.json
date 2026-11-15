@@ -1,0 +1,45 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-tiny",
+  "display_name": "kb-whisper-tiny",
+  "family": "KBLab",
+  "formats": [
+    "ctranslate2",
+    "ggml",
+    "onnx",
+    "safetensors"
+  ],
+  "id": "KBLab/kb-whisper-tiny",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/KBLab/kb-whisper-tiny.json",
+  "params": 57676800,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-tiny",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 1286,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "variant",
+  "total_size": 2569565159,
+  "upstream_url": "https://huggingface.co/KBLab/kb-whisper-tiny",
+  "what_changed": null
+}

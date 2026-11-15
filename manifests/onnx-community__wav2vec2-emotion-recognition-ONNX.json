@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:21:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "920fb6fb0d024c1935327f1560c23271ddd9d32c9e9a88db7b5a9bc398921a94",
+      "size": 5445
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6e6f37a556c837587b07692a17bb9380339625f4eb82aa5b19b8d435e508bb92",
+      "size": 2368
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "ba8f6a68b834bdf8a9d63fee09fd72a26ae54c652d9f4fbebb214607292ea312",
+      "size": 378494794
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "363653a4bce950ddd17026efdabdf6c7a6843e00089bcbaf424c0cdf0b6ebff2",
+      "size": 89860722
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "5640d000f2bff649aeffd433613019e49020812249870b949b48a9ba0a23b414",
+      "size": 189436277
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "363653a4bce950ddd17026efdabdf6c7a6843e00089bcbaf424c0cdf0b6ebff2",
+      "size": 89860722
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "b62f332adb896ba29e49270a5a512f3d0ec5d7f425561d01f290d022f0526f59",
+      "size": 66492695
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "617bd0950f8cc9ac4062e8c73a7be60305ca5790a243df55fa6f44fb671b55b1",
+      "size": 257
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f9562779623742b0cf29dd06839dae511dabd438459dcfb1e6f6314e0972a895",
+      "size": 544
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6f2b1da40bb8a9838af8639cb672bfa4d9bc98fed7a7cea38452eb3afc30e430",
+      "size": 1178
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "4178db26b3c7570f6a47f14ac6a1c7b32950b8c2800fb097287e53776934f1c5",
+      "size": 358
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/wav2vec2-emotion-recognition-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "920fb6fb0d024c1935327f1560c23271ddd9d32c9e9a88db7b5a9bc398921a94",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:21:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/wav2vec2-emotion-recognition-ONNX/resolve/8e0e66145d3a67fb99291f7834d35f073581114b/"
+    }
+  ],
+  "upstream": {
+    "commit": "8e0e66145d3a67fb99291f7834d35f073581114b",
+    "host": "huggingface.co",
+    "repo": "onnx-community/wav2vec2-emotion-recognition-ONNX",
+    "url": "https://huggingface.co/onnx-community/wav2vec2-emotion-recognition-ONNX/tree/8e0e66145d3a67fb99291f7834d35f073581114b"
+  }
+}

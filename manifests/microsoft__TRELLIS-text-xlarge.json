@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:41:30Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "32b5cb8611066849a3c19ee0dff4ce985556d8cdc0a7cd65213c859ede66b8bf",
+      "size": 477
+    },
+    {
+      "lfs": false,
+      "path": "ckpts/slat_flow_txt_dit_XL_64l8p2_fp16.json",
+      "sha256": "73aec1b1d9f6a0cc04e3234786dadec4a85895c44559714eb2fca8e1df930541",
+      "size": 441
+    },
+    {
+      "lfs": true,
+      "path": "ckpts/slat_flow_txt_dit_XL_64l8p2_fp16.safetensors",
+      "sha256": "4819e388063d58f3a7f0939836ec435fed262cd8a0565226ce8e43da1bbfa55e",
+      "size": 2151142688
+    },
+    {
+      "lfs": false,
+      "path": "ckpts/ss_flow_txt_dit_XL_16l8_fp16.json",
+      "sha256": "ea7e5e823ea0dd3151c96fcbc75866ff302b0ec94a212048de9f62522ca0c0e8",
+      "size": 419
+    },
+    {
+      "lfs": true,
+      "path": "ckpts/ss_flow_txt_dit_XL_16l8_fp16.safetensors",
+      "sha256": "154317b61e89f97270a1d34cfee52c1ce1d07c831f533b5c878a3a0e991dfc05",
+      "size": 1976327512
+    },
+    {
+      "lfs": false,
+      "path": "pipeline.json",
+      "sha256": "49b38dedcf4c587b27db3f20a6d4d438f3bafa59289df5cccfe1658f4214828c",
+      "size": 2133
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/TRELLIS-text-xlarge",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "32b5cb8611066849a3c19ee0dff4ce985556d8cdc0a7cd65213c859ede66b8bf",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:41:30Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/TRELLIS-text-xlarge/resolve/e0b00432b8e3a8ecee0df806ab1df9f7281f2be4/"
+    }
+  ],
+  "upstream": {
+    "commit": "e0b00432b8e3a8ecee0df806ab1df9f7281f2be4",
+    "host": "huggingface.co",
+    "repo": "microsoft/TRELLIS-text-xlarge",
+    "url": "https://huggingface.co/microsoft/TRELLIS-text-xlarge/tree/e0b00432b8e3a8ecee0df806ab1df9f7281f2be4"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T05:12:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "940742fbae423eabf28b97858b95619fa3427258d9efc9b75acff5b117f674a5",
+      "size": 1696
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "336b488d4a3225d2c55820de6172baefb53ecc5f1e3f3e6ae7eddc495db03d47",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "67bf684b8dbc29facd52264faa612abe134738ba6c968b4cb13c8277832a377e",
+      "size": 909
+    },
+    {
+      "lfs": true,
+      "path": "chatterbox-BF16.gguf",
+      "sha256": "00d365cac0d9a052b4c2ee4612d5f04ba70ebd8ebbdedf7004d75fa528c8d810",
+      "size": 1050824000
+    },
+    {
+      "lfs": true,
+      "path": "chatterbox-Q8_0.gguf",
+      "sha256": "8fb23a4008577f4fab96083b04da83789934624b0675aafeb7ed72c2bfa5f8d5",
+      "size": 558520640
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "b4a962900fad912bcef5e8439fb0a994f95c4235174e218a3a537e382d14c352",
+      "size": 311675
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-chatterbox-F16.gguf",
+      "sha256": "e2bc7506753d8f4ad6f66afe8fb27fdea4256c9a88a37386303e97e0c4a9f492",
+      "size": 595185120
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/chatterbox-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "67bf684b8dbc29facd52264faa612abe134738ba6c968b4cb13c8277832a377e",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:12:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/chatterbox-GGUF/resolve/a5c19d4a1377a265a3488d13d9ef53314cc06e81/"
+    }
+  ],
+  "upstream": {
+    "commit": "a5c19d4a1377a265a3488d13d9ef53314cc06e81",
+    "host": "huggingface.co",
+    "repo": "ggml-org/chatterbox-GGUF",
+    "url": "https://huggingface.co/ggml-org/chatterbox-GGUF/tree/a5c19d4a1377a265a3488d13d9ef53314cc06e81"
+  }
+}

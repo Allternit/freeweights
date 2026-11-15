@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "ibm-granite/granite-4.1-3b",
+  "display_name": "granite-4.1-3b-4bit",
+  "family": "granite",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "mlx-community/granite-4.1-3b-4bit",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/mlx-community/granite-4.1-3b-4bit.json",
+  "params": 3402836480,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "ibm-granite/granite-4.1-3b",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.granite",
+  "signals": {
+    "downloads_30d": 1461,
+    "likes": 0,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 2134391329,
+  "upstream_url": "https://huggingface.co/mlx-community/granite-4.1-3b-4bit",
+  "what_changed": null
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/vit-base-patch16-224-in21k",
+  "display_name": "fairface_age_image_detection",
+  "family": "dima806",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "dima806/fairface_age_image_detection",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/dima806/fairface_age_image_detection.json",
+  "params": 85805577,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/vit-base-patch16-224-in21k",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 146671,
+    "likes": 84,
+    "trending": null
+  },
+  "tasks": [
+    "image-classification"
+  ],
+  "tier": "T1",
+  "total_size": 4462786325,
+  "upstream_url": "https://huggingface.co/dima806/fairface_age_image_detection",
+  "what_changed": null
+}

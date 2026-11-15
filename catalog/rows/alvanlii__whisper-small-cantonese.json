@@ -1,0 +1,44 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-small",
+  "display_name": "whisper-small-cantonese",
+  "family": "alvanlii",
+  "formats": [
+    "ctranslate2",
+    "ggml",
+    "safetensors"
+  ],
+  "id": "alvanlii/whisper-small-cantonese",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/alvanlii/whisper-small-cantonese.json",
+  "params": 241734912,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-small",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 1886,
+    "likes": 121,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T2",
+  "total_size": 5316631728,
+  "upstream_url": "https://huggingface.co/alvanlii/whisper-small-cantonese",
+  "what_changed": null
+}

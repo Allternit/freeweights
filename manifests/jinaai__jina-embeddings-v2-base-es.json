@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T02:46:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "6401a8eeaeca1f1fe2b1b46be987dcf2ee6085ec73f7d2263318ffc191dd91d3",
+      "size": 191
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8c79064ec968e34a706ccd21bedea26c2bab358922d4d1aafa7912d44e80a6ee",
+      "size": 83576
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1b01dc4ac97fcc8d2fa9ee5d7661a4a70394ac7b8f355f1f0871bbc0f23af009",
+      "size": 1503
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "5d26062fe622c96e8abb50c3ebc4f852afb23058f50fe553df096b0372634962",
+      "size": 90
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "fa3d726274ba9284f7248c0c17d8e8cdbe11a89ecc1b3a9db89ce131783702af",
+      "size": 592336
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "90bab6e4d22bb758695dc375f085ce53d1b4439e1691e515d8d55a9431d7aab5",
+      "size": 321727768
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "size": 349
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "91ee34079986442ab722cbbf362f4de59431185eef8b291a4f9eb13a935f2e06",
+      "size": 641419238
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "5af68309317d5a7a5b63bf1c4e336dc8bd9a9104e8d16eebeb12499f33cb463c",
+      "size": 161789773
+    },
+    {
+      "lfs": false,
+      "path": "onnx/quantize_config.json",
+      "sha256": "2c95a1416671e4d87c6f905b28826d4c885697820132e6b79ebb3a00391f5ade",
+      "size": 833
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "69dbd160e37c11a311051ff134686ea61fde4d340b957562d0b3fd0efa70fa09",
+      "size": 321746682
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "7a17ba8cf5532d66e5e102613b7ff22905c2722f6c8c853e6bc02d5ad280cf51",
+      "size": 99
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f23c8e6099631c233c16d9bf8dab198f610826cdd1b358f270f6d55c1863e857",
+      "size": 958
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "5cd8fa360a99a895a4afce83d98131bb74ec2e957ed238f6cdd6107358ca25dc",
+      "size": 2637974
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "99c5e1cf31def1533447759dca2f1c22853d499c0c73e13d9667ae2b5ff1fa0b",
+      "size": 1211
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "383055ba17b801d2000119157db143ab57dccfa08ea3575179657efa627ce9e8",
+      "size": 1009250
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "jinaai/jina-embeddings-v2-base-es",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8c79064ec968e34a706ccd21bedea26c2bab358922d4d1aafa7912d44e80a6ee",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:46:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/jinaai/jina-embeddings-v2-base-es/resolve/8e2d780d8fd38f81ca9123ee28e4c5a968aaf21e/"
+    }
+  ],
+  "upstream": {
+    "commit": "8e2d780d8fd38f81ca9123ee28e4c5a968aaf21e",
+    "host": "huggingface.co",
+    "repo": "jinaai/jina-embeddings-v2-base-es",
+    "url": "https://huggingface.co/jinaai/jina-embeddings-v2-base-es/tree/8e2d780d8fd38f81ca9123ee28e4c5a968aaf21e"
+  }
+}

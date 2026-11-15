@@ -1,0 +1,162 @@
+{
+  "created_at": "2026-11-15T04:20:07Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+      "size": 31
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "a94c56096001713e3eb9a34b1a545a8c1d5e8034ed2fb81f897c8cb54b420121",
+      "size": 41
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.json",
+      "sha256": "45322f23f68a640be65652ea24b7aa72f070da2f95f59ad062c0a9414bf68793",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "712fd9e0f410dfd43eb43fe7d9066d95c90f6fd10537b610c01cf0889e92fb75",
+      "size": 91119
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7be49f20354844a419c088af9d14248444773e3592ea4da77f231824ba1003c8",
+      "size": 111
+    },
+    {
+      "lfs": true,
+      "path": "openvino_detokenizer.bin",
+      "sha256": "d7eae2f7b077e01c735fac6f2d67526a1f19f7c3c6a00f9c8e01519048168e6e",
+      "size": 332705
+    },
+    {
+      "lfs": false,
+      "path": "openvino_detokenizer.xml",
+      "sha256": "c4e4aed93c6e19b6fcaa8e4f7a7d0ebef78f40a0b525e52a32d2527113997ed5",
+      "size": 9481
+    },
+    {
+      "lfs": true,
+      "path": "openvino_language_model.bin",
+      "sha256": "2620a6f107928218b38b1a6c9dbe6f3cef0d8fac6d9e4ca2ae11928c0029fee6",
+      "size": 7115946440
+    },
+    {
+      "lfs": false,
+      "path": "openvino_language_model.xml",
+      "sha256": "84494be4f1a6e20a4432a026ccd1bfa10eb8e9be7b5e78cb364ef80a154f6cf8",
+      "size": 2687715
+    },
+    {
+      "lfs": true,
+      "path": "openvino_text_embeddings_model.bin",
+      "sha256": "ae2faf655a26952353fa5cf006768acc2bf19e898b665fc2b4e62c59857e5a94",
+      "size": 525336580
+    },
+    {
+      "lfs": false,
+      "path": "openvino_text_embeddings_model.xml",
+      "sha256": "7f9e107eec82e2a148dbe81ea41eefcb7a8714262709b9ec2c51e1acc1567553",
+      "size": 2653
+    },
+    {
+      "lfs": true,
+      "path": "openvino_tokenizer.bin",
+      "sha256": "e4936113295a293ea9a99f38ade3625283f1f65448e7c5af40a643aefc6299ba",
+      "size": 1210165
+    },
+    {
+      "lfs": false,
+      "path": "openvino_tokenizer.xml",
+      "sha256": "4a94887193bd314367f461eecd98353f43e130295293966054b57a9a32714c25",
+      "size": 25166
+    },
+    {
+      "lfs": true,
+      "path": "openvino_vision_embeddings_model.bin",
+      "sha256": "671df3fad44671979f96b08d262e945d953ba4fa7fb48006d83c53b8cea2ac60",
+      "size": 1247555732
+    },
+    {
+      "lfs": false,
+      "path": "openvino_vision_embeddings_model.xml",
+      "sha256": "3cc2a996bafc25a40c8b87a75529450c8dfe2ed4c27318c19a185f681c88155d",
+      "size": 709907
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ecef425c1d3ee91f5e05144c4d107389f9fefd04a424d5cbfc3fb6e0525b8c55",
+      "size": 772
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "e1f9767a342dfe784a5aea2045f02d8b95a42e09d1b0881d07211db3a32ab281",
+      "size": 141
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "358c249e2fb29060c6b73157d428853b0c48710deffc8ee670ab1013880946c9",
+      "size": 552
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "a32c9b1fb22576a5150accd5c13f0f34acc2a3399e10e39db90e052976edeacb",
+      "size": 3506273
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "dadfd56d766715c61d2ef780a525ab43b8e6da4de6865bda3d95fdef5e134055",
+      "size": 493443
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "37729d3fee9c6d74290bd6a85524941cd06cc7e9c9acb013863c23e9c6275d2f",
+      "size": 2072
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/llava-v1.6-mistral-7b_openvino_int8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:20:07Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/llava-v1.6-mistral-7b_openvino_int8/resolve/6b7ea23888ef79fb4ab6f550d799ca110e3b7cce/"
+    }
+  ],
+  "upstream": {
+    "commit": "6b7ea23888ef79fb4ab6f550d799ca110e3b7cce",
+    "host": "huggingface.co",
+    "repo": "laion/llava-v1.6-mistral-7b_openvino_int8",
+    "url": "https://huggingface.co/laion/llava-v1.6-mistral-7b_openvino_int8/tree/6b7ea23888ef79fb4ab6f550d799ca110e3b7cce"
+  }
+}

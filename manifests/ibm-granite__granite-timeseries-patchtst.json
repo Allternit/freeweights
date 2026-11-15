@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T02:51:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0d738f21e4af2a95166283f96fb621de9cb6df14ef6617c0cb92b940e343b233",
+      "size": 6491
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ea352fe0f40d0b4581469702464533c2cee7c016819a68d1c2be01a7c350c55a",
+      "size": 1287
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e4bf63f073138eaba314f40645dea0c621c41bbf9e9dbd5ee134702fb2e7bd8c",
+      "size": 74
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "c7fca6ed95f1b0c2be80f421f100ad744b0334b598b1fbacd4f5a5e01afdcc4f",
+      "size": 2472368
+    },
+    {
+      "lfs": false,
+      "path": "patchtst_architecture.png",
+      "sha256": "264e37d52ec21dbb69580f2e940f782ee4a58d9b6a5a24169a43e0851c378d83",
+      "size": 338464
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-timeseries-patchtst",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0d738f21e4af2a95166283f96fb621de9cb6df14ef6617c0cb92b940e343b233",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:51:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-timeseries-patchtst/resolve/7fe295d8bc8fbac8041b60ab351882634165517f/"
+    }
+  ],
+  "upstream": {
+    "commit": "7fe295d8bc8fbac8041b60ab351882634165517f",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-timeseries-patchtst",
+    "url": "https://huggingface.co/ibm-granite/granite-timeseries-patchtst/tree/7fe295d8bc8fbac8041b60ab351882634165517f"
+  }
+}

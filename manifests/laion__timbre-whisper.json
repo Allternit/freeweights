@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T03:54:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "67aa4b06e5685db46b5ef51c7429372c867c4e6a8be05b8e34f84166b9f1e2f4",
+      "size": 2465
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "71c6a4996318496e1aa5f41136c7226c981296d9478e1ba370e7fd676c676835",
+      "size": 1230
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "515f6b58bfe4b9ac69425ce8491c49762de8e8d217f10cf4b055bc2b596da429",
+      "size": 2908
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7633d10378c0bb3b260e96e9e13a40b9997ee1f0d06e8f03230317c8ab551590",
+      "size": 966995080
+    },
+    {
+      "lfs": true,
+      "path": "optimizer.pt",
+      "sha256": "5700d8465568e9a852f66e50ecab06932c5923a8fcd4d1ee360a669a760fef48",
+      "size": 1925071165
+    },
+    {
+      "lfs": true,
+      "path": "rng_state_0.pth",
+      "sha256": "17ba97fcb3815f69659bb6ac07b1acc7968c5835f2fe1cea7363fb72e9850f80",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "rng_state_1.pth",
+      "sha256": "e3f6d045126360b891df469adca6305c29d26ed9e8b0aa72b74c5819b4a90109",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "rng_state_2.pth",
+      "sha256": "5ed1ca54fad1798c22213db1c237ebf199f7b6ab10af718f63a334dbcc5a90ed",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "rng_state_3.pth",
+      "sha256": "fd526fc14c7608fc5531881f0a78797a7732a1392a746a03c56a108a701cbb78",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "rng_state_4.pth",
+      "sha256": "7d663b0783ce7b507df12ac93fb741ed6f105addadaa88548f9d682a3335baa9",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "rng_state_5.pth",
+      "sha256": "f737a86fbf2c9b72164972f10446e17b6a8a6db781dee0ef3dd334eccb30ea11",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "rng_state_6.pth",
+      "sha256": "62aea81aaa941d4b7a9d99872d6374a02fd7581d6cd6c80f87aeda1f1c418d35",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "rng_state_7.pth",
+      "sha256": "ce91c892ee62881fb170078efed2d2eeb7b87f52f7b5f021501eab06af871063",
+      "size": 16389
+    },
+    {
+      "lfs": true,
+      "path": "scaler.pt",
+      "sha256": "113c7bbe370820f178f23081c27735f6e8c42e110e9f874743f16507b90f42a2",
+      "size": 1383
+    },
+    {
+      "lfs": true,
+      "path": "scheduler.pt",
+      "sha256": "bf52c3e4ac9ef314a3d0bacf7caffd5ef949ef87457b2f59aedf9b863b062a12",
+      "size": 1465
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "1466c6d71d133cc2d2d4905cafe3c9e8d35fe18ac29fb30746d3c05da0be32d5",
+      "size": 56558
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "6ae07a876f0fdc0807eb7395aa5856ebaebe84602a6e5cb3a427ef15a4dfe693",
+      "size": 5905
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/timbre-whisper",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "67aa4b06e5685db46b5ef51c7429372c867c4e6a8be05b8e34f84166b9f1e2f4",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:54:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/timbre-whisper/resolve/0eba2ef9f74ef8a37a31774dbf9fbbd40568e6fe/"
+    }
+  ],
+  "upstream": {
+    "commit": "0eba2ef9f74ef8a37a31774dbf9fbbd40568e6fe",
+    "host": "huggingface.co",
+    "repo": "laion/timbre-whisper",
+    "url": "https://huggingface.co/laion/timbre-whisper/tree/0eba2ef9f74ef8a37a31774dbf9fbbd40568e6fe"
+  }
+}

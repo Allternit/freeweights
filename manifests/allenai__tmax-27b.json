@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T03:35:52Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".checkpoint_complete",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "lfs": false,
+      "path": ".eval_results/terminal-bench-2.0.yaml",
+      "sha256": "17a0676f2d3ec191bc86cd96d46ce4446853eccd93d9ff077da84b794f242cc1",
+      "size": 177
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2619649727aeef7e3fc3483a0f9cf811c0cc5b8612e8ab132be8b059b5a24e4a",
+      "size": 5141
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "size": 7764
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c",
+      "size": 4308
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "d098ccfcc59f595f5622d6ceff31afc50de3ad229ba06d429098fa4c6dc58e5a",
+      "size": 213
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "ebfdd62efae72fdf4272cf374f78e574ef45259868df1a5005f8aa9be9344bc5",
+      "size": 49825162976
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "bb6ca8d000cd0a755df55f79b3c4e81fd4d7982e83a7374e328fb38ca15f1db8",
+      "size": 3966947216
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "ffdad44209cc26b00ec2cc343d5b2e44a33a0a7fed1bd72ab25af6eb98c0c7ee",
+      "size": 83905
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5186f0defcd7f232382c7f0aebcd2252d073bb921ab240e407b7ae8745d2b29b",
+      "size": 16718
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/tmax-27b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2619649727aeef7e3fc3483a0f9cf811c0cc5b8612e8ab132be8b059b5a24e4a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:35:52Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/tmax-27b/resolve/4acf9950f27dc231cb48b9cfe57cacc4e97875a9/"
+    }
+  ],
+  "upstream": {
+    "commit": "4acf9950f27dc231cb48b9cfe57cacc4e97875a9",
+    "host": "huggingface.co",
+    "repo": "allenai/tmax-27b",
+    "url": "https://huggingface.co/allenai/tmax-27b/tree/4acf9950f27dc231cb48b9cfe57cacc4e97875a9"
+  }
+}

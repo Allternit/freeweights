@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:49:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fd260f1882ce56fd08e0f96dc3e67842a0fb088b2a47272bde2938b674484227",
+      "size": 2613
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "10bb9222cda6626f61225c8922333e7ed1b2259cd779e0d584e40ebfe49e32a7",
+      "size": 614
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a432582dab6517beba7f420fb72837d03d0a8cc2db85a607097db79e418c0bb9",
+      "size": 106554196
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "f36984b67bd9035efdd81a734a9bee5ee240862e31110be4dd3f797abacff890",
+      "size": 106624605
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/volo_d1_224.sail_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fd260f1882ce56fd08e0f96dc3e67842a0fb088b2a47272bde2938b674484227",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:49:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/volo_d1_224.sail_in1k/resolve/0d1b31899ae4cb562932c62d1d8820c1d796a4f1/"
+    }
+  ],
+  "upstream": {
+    "commit": "0d1b31899ae4cb562932c62d1d8820c1d796a4f1",
+    "host": "huggingface.co",
+    "repo": "timm/volo_d1_224.sail_in1k",
+    "url": "https://huggingface.co/timm/volo_d1_224.sail_in1k/tree/0d1b31899ae4cb562932c62d1d8820c1d796a4f1"
+  }
+}

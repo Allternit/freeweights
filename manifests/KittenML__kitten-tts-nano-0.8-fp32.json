@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:28:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "287503cec684a9f1d737b7f7d6c2663ecc7268c3851b143ac2f0ceca58e8d2ba",
+      "size": 767
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b66006ccbeccd4de5fc3c9272059c47f5725df7215fd889785c03602652fab64",
+      "size": 688
+    },
+    {
+      "lfs": true,
+      "path": "kitten_tts_nano_v0_8.onnx",
+      "sha256": "320564d2615f235de972ca27a7f39551c94185cfa24ca85b07a29084135f1e5e",
+      "size": 56767095
+    },
+    {
+      "lfs": true,
+      "path": "voices.npz",
+      "sha256": "8aa7cee235abb0739cb51e6559685f65a4dacd95568833d05699b1633f519b3f",
+      "size": 3278902
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "KittenML/kitten-tts-nano-0.8-fp32",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "287503cec684a9f1d737b7f7d6c2663ecc7268c3851b143ac2f0ceca58e8d2ba",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:28:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/KittenML/kitten-tts-nano-0.8-fp32/resolve/e73cfb095bd949c786ccdcf3b8ab04eb36c47442/"
+    }
+  ],
+  "upstream": {
+    "commit": "e73cfb095bd949c786ccdcf3b8ab04eb36c47442",
+    "host": "huggingface.co",
+    "repo": "KittenML/kitten-tts-nano-0.8-fp32",
+    "url": "https://huggingface.co/KittenML/kitten-tts-nano-0.8-fp32/tree/e73cfb095bd949c786ccdcf3b8ab04eb36c47442"
+  }
+}

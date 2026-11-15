@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T04:17:15Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "72202216d5d2650259b8ef1ba1603b20e6df311cded7d3ec3bf2dfd0b91c9a23",
+      "size": 1573
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "84401b48009c3e9a5ae15b3f136999874fb711d95190b6d026fb9f3b406cc969",
+      "size": 8803
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2683974011766786d81355f6706cf596712d779dead282cdf646c38e638251ff",
+      "size": 817
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c54665edc9217dcd9798e1ffc835e89c018868b1e207750ef250a6cc796a2dc7",
+      "size": 132
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "95960bb0b19cd967e4ef0a1397ec885e6123bbd63b5934a992f253612e42dc1d",
+      "size": 4150929384
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "04877258c4198b2263c42d1fd3067b155e128af57b4469834d1d093ed3feac99",
+      "size": 664
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "68b5a0553901b2aadb40aebd0d4bd1e845a2b2040f24a4351d22090c0e33779c",
+      "size": 1795883
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "781e6aadfd37dd2ff0d6bef2221f2a6c6e6ebd14e31bd2102855010c36e6e545",
+      "size": 1570
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/MistralLite-AWQ",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "84401b48009c3e9a5ae15b3f136999874fb711d95190b6d026fb9f3b406cc969",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:17:15Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/MistralLite-AWQ/resolve/08108819a75dc06ec5a2582f9525e86996f139ec/"
+    }
+  ],
+  "upstream": {
+    "commit": "08108819a75dc06ec5a2582f9525e86996f139ec",
+    "host": "huggingface.co",
+    "repo": "amazon/MistralLite-AWQ",
+    "url": "https://huggingface.co/amazon/MistralLite-AWQ/tree/08108819a75dc06ec5a2582f9525e86996f139ec"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/gpt-oss-20b",
+  "display_name": "openai_gpt-oss-20b-GGUF",
+  "family": "gpt-oss",
+  "formats": [
+    "gguf"
+  ],
+  "id": "bartowski/openai_gpt-oss-20b-GGUF",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/bartowski/openai_gpt-oss-20b-GGUF.json",
+  "note": "The license of the base model openai/gpt-oss-20b applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/gpt-oss-20b",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.gpt-oss",
+  "signals": {
+    "downloads_30d": 13837,
+    "likes": 40,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 329524830020,
+  "upstream_url": "https://huggingface.co/bartowski/openai_gpt-oss-20b-GGUF",
+  "what_changed": null
+}

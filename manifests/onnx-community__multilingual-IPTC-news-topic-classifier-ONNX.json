@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T05:24:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "82b47f6d29291bc13ddd20afc1d9d78bae055c6314cb6a32146bf481910081fe",
+      "size": 1627
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "74af4114ca1546ff9ec0a4ad8932e53036c7585a99af2729e77bb585ae996438",
+      "size": 1021
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e537abdf0452bfaca78207fce14c66b3f466687992aff85d236f98236dedee1b",
+      "size": 1858
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "3071e74c6b74e210a19109c6d569367d8691a188a44b87c410deea111559936e",
+      "size": 656953
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "15d0f79766a4cdb39f8c10958e5be486717c2e1772e992640225433d63766499",
+      "size": 2239635472
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "639714d4ed9f6d7cf77c86bf7526f4556156c8afa683d2af23ec21db0cba41b1",
+      "size": 1202199837
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "c6e305c691bd025ccce18f4c4d211bc4641d786aa0e23d67e1ed5a8166df279e",
+      "size": 1120452396
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "c508e9388345346f9f781bebc7d87642d2b0eeec2a09893df3125f4d5d7e487e",
+      "size": 562817861
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "3c90841e8be733ef72583721364de72ee997bdaa7c0c25162f98e6cea8e7c386",
+      "size": 1221073029
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "31ff172fe1369791b1ecafad39ea5c1e544b03ac2e7e02f35f9ce791e73a943c",
+      "size": 686363095
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "c508e9388345346f9f781bebc7d87642d2b0eeec2a09893df3125f4d5d7e487e",
+      "size": 562817861
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "bbde9195724fe0fa8472873fa32cd599618f027452c0f92804b9782f3e9f0310",
+      "size": 562817861
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "3ffb37461c391f096759f4a9bbbc329da0f36952f88bab061fcf84940c022e98",
+      "size": 17082999
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f5913200813f3eb2658957ed0486268454fa2e37b3ddf6feade78352577e3d48",
+      "size": 1368
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/multilingual-IPTC-news-topic-classifier-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "74af4114ca1546ff9ec0a4ad8932e53036c7585a99af2729e77bb585ae996438",
+    "id": "CC-BY-SA-4.0",
+    "name": "Creative Commons Attribution-ShareAlike 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:24:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/multilingual-IPTC-news-topic-classifier-ONNX/resolve/3caaf3f1122ed863bd599878c73ab9e08b144a90/"
+    }
+  ],
+  "upstream": {
+    "commit": "3caaf3f1122ed863bd599878c73ab9e08b144a90",
+    "host": "huggingface.co",
+    "repo": "onnx-community/multilingual-IPTC-news-topic-classifier-ONNX",
+    "url": "https://huggingface.co/onnx-community/multilingual-IPTC-news-topic-classifier-ONNX/tree/3caaf3f1122ed863bd599878c73ab9e08b144a90"
+  }
+}

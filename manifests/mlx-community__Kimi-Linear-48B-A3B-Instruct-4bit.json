@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:12:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e715ebf82e761cbb4282904a75ec977baa647aa08ff552ebf58e5be77acd5fbb",
+      "size": 939
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "75e3cd76bd26b77c02507eb35073b66c8ffd0c88eab185ebc6f8c6e425161809",
+      "size": 1850
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "40ca901b329d5b5d10804c6ce6a68be20f751966ad92a7fb604e9a2b3b02951d",
+      "size": 7487
+    },
+    {
+      "lfs": false,
+      "path": "configuration_kimi.py",
+      "sha256": "79422aca3ee6c89d201e0c15c4c9a6db517ba83d87ecdc4e41fa0f71297238d9",
+      "size": 4948
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "5d7571b3479fd7263e52c4b2e829c2ae64143abcb0d8d9813258fc4b7994cffe",
+      "size": 147
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00006.safetensors",
+      "sha256": "c2e67b2c1b431e78a2331b837bb75b8c0e3cd80566379feb255a3663adb0f1e7",
+      "size": 5151587757
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00006.safetensors",
+      "sha256": "d4f05018a6aec2ea12eb3866e3d31ba8477faca1396e18246f9581fffc7649f3",
+      "size": 5224824506
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00006.safetensors",
+      "sha256": "f3724036209b2b49d4d9cbdd1d2f5e0702d8626441ac6c343144ee76deee9e2b",
+      "size": 5218888514
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00006.safetensors",
+      "sha256": "f5170b87ec6456eec97104487bef4f5129f3ba13157b7c0cdd5c3f06fd3f79bb",
+      "size": 5224824723
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00006.safetensors",
+      "sha256": "43428e7d22d9dde1377d0eee2544be9ed3a6a439cf27b2f3e5385b7baff450a1",
+      "size": 5224824701
+    },
+    {
+      "lfs": true,
+      "path": "model-00006-of-00006.safetensors",
+      "sha256": "e36748ad3261fc25b54c34e384785d183fe61bd9603197d4e5097af2dd3546ee",
+      "size": 1596289084
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "2e801d6ba423a83d117c2c6c59d24fd543ee3d2da548a22105f2b972a0a5a565",
+      "size": 125538
+    },
+    {
+      "lfs": false,
+      "path": "modeling_kimi.py",
+      "sha256": "de8607248bb5fdcf1bc46bd5a7afc810bdb4bdadd3fa0198dcbb8598a1c5f9f5",
+      "size": 40793
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "3e1dbdccb7f20d5f7062493dd7e206fd6306d35a62e3e0b33897a697197e34ae",
+      "size": 760
+    },
+    {
+      "lfs": true,
+      "path": "tiktoken.model",
+      "sha256": "b6c497a7469b33ced9c38afb1ad6e47f03f5e5dc05f15930799210ec050c5103",
+      "size": 2795286
+    },
+    {
+      "lfs": false,
+      "path": "tokenization_kimi.py",
+      "sha256": "b6b304f63d355f29f5f5aa27694337c824c90e1ac80559ca537909824729761f",
+      "size": 12534
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5ba77d5822137ac3cb9337d2b84561d10425562cf8b8f2c74c91a832516a778d",
+      "size": 3695
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Kimi-Linear-48B-A3B-Instruct-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e715ebf82e761cbb4282904a75ec977baa647aa08ff552ebf58e5be77acd5fbb",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.kimi",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:12:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Kimi-Linear-48B-A3B-Instruct-4bit/resolve/919175d75427f1c10cfc17e7254b53295edddf72/"
+    }
+  ],
+  "upstream": {
+    "commit": "919175d75427f1c10cfc17e7254b53295edddf72",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Kimi-Linear-48B-A3B-Instruct-4bit",
+    "url": "https://huggingface.co/mlx-community/Kimi-Linear-48B-A3B-Instruct-4bit/tree/919175d75427f1c10cfc17e7254b53295edddf72"
+  }
+}

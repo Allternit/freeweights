@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T03:32:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "bdf09cc3baa35afdd16c4838fc150e3380e156456d613643f0d62a8a4c172a0f",
+      "size": 1937
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "51ed5dcfae2c46f841d244272c945cd676f8202b43fe833bead5e8920ef19951",
+      "size": 19219
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "f857393a5af6f80864940e751fd640ba0b1e92c6a3f6c0d9860c2f661e0907ba",
+      "size": 34748
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "527f51b170e3888ddaaefa66b77b0eeea5530f0271da54d2fef765e5fa6e39cb",
+      "size": 1336
+    },
+    {
+      "lfs": false,
+      "path": "figures/language_distribution.png",
+      "sha256": "715e50348055ad4aa68be1e74f7b855c3eea26efdabbc0cd2fc7f2a98992a857",
+      "size": 89693
+    },
+    {
+      "lfs": true,
+      "path": "figures/overall_cer_grouped_sorted.png",
+      "sha256": "6798fb58832f6a01cbb234a230b57426861e9b38efe76e887093047331e73d42",
+      "size": 229642
+    },
+    {
+      "lfs": true,
+      "path": "figures/overall_wer_grouped_sorted.png",
+      "sha256": "389fcd5d4b6951e955a96d3d97be441f87ead09fe46219d00e3401a3dbf1b59f",
+      "size": 260747
+    },
+    {
+      "lfs": true,
+      "path": "figures/whisper_cer_comparison.png",
+      "sha256": "ccf8d63f30573481356e7ed65a9bf9f78288d79eb0b47f819f17c9a6750b6546",
+      "size": 185431
+    },
+    {
+      "lfs": true,
+      "path": "figures/whisper_wer_comparison.png",
+      "sha256": "6033f132484e70b65b75c804eb4f1d6f253b408a940ad2bac9aac1d1bd6fe1dc",
+      "size": 184116
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e1c51c7b9213420c65d9b7427026c365bf7f727e1e17a8d2984130502c6fdfa4",
+      "size": 2938
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "size": 493869
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ff577f03b2c568ff0c49ff0a6c69278d996e6a95e7fde439d1dad52a67fa171e",
+      "size": 3235607008
+    },
+    {
+      "lfs": false,
+      "path": "normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "size": 52666
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+      "size": 340
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "be3690f8132cbab1858c00875dbde4c7e2f91ef0c2ede853e6c854959bb5feaa",
+      "size": 3235763983
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+      "size": 2186
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b66c0af7f7fbade6b98c10d9d53bd2578b51870199f1f515b1980ba46ff178b5",
+      "size": 283738
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "e2aa043ef015641d363d8288e7c241c85e36a5c761fb303598e0710233344387",
+      "size": 1036558
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/paza-whisper-large-v3-turbo",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "51ed5dcfae2c46f841d244272c945cd676f8202b43fe833bead5e8920ef19951",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:32:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/paza-whisper-large-v3-turbo/resolve/8a0bd24795b298b2f3678fcd8129c0a1c2b4ee22/"
+    }
+  ],
+  "upstream": {
+    "commit": "8a0bd24795b298b2f3678fcd8129c0a1c2b4ee22",
+    "host": "huggingface.co",
+    "repo": "microsoft/paza-whisper-large-v3-turbo",
+    "url": "https://huggingface.co/microsoft/paza-whisper-large-v3-turbo/tree/8a0bd24795b298b2f3678fcd8129c0a1c2b4ee22"
+  }
+}

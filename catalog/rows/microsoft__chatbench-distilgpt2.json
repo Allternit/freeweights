@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "distilbert/distilgpt2",
+  "display_name": "chatbench-distilgpt2",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "microsoft/chatbench-distilgpt2",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/microsoft/chatbench-distilgpt2.json",
+  "params": 81912576,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "distilbert/distilgpt2",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 784,
+    "likes": 7,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 2308305055,
+  "upstream_url": "https://huggingface.co/microsoft/chatbench-distilgpt2",
+  "what_changed": null
+}

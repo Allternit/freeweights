@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T05:20:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11766e5171641f6c68b9f14099fdb4e7b3d610f0a69451893e356c8334812257",
+      "size": 1638
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "66140d590396e555bb614b107468fdea1d0419c89b674c5ef1df05f3fdeaf84c",
+      "size": 4126
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "17276af4594edd2528024d1a23de7905e789f8befe659a47e337aa4ce144a226",
+      "size": 3300
+    },
+    {
+      "lfs": false,
+      "path": "conversion/laya_export.py",
+      "sha256": "12f7cc885c06d6fb483497429a0017ed87903fbe9c0b28bc2e0dae4e423ad007",
+      "size": 6690
+    },
+    {
+      "lfs": false,
+      "path": "conversion/laya_fp16.py",
+      "sha256": "b0512c0b222a4b1cd8537245d37621ef877fc0e3a2198f426fa19a5bf4dc7355",
+      "size": 2731
+    },
+    {
+      "lfs": false,
+      "path": "conversion/laya_package.py",
+      "sha256": "f695e3d3c2f2022e5f9a5c70373b745cf90c731f000cd618aa36c54c5f140082",
+      "size": 2734
+    },
+    {
+      "lfs": false,
+      "path": "conversion/laya_readme.py",
+      "sha256": "6a020352c487a95608d889b5232b56bff4d41c8a8b84d8aef9575fe107d98416",
+      "size": 4434
+    },
+    {
+      "lfs": false,
+      "path": "conversion/laya_reference.py",
+      "sha256": "6b2ddc2c02a937814df2af33c5d2d2e037d9413d3d1a93bc28d1000874f44edb",
+      "size": 4050
+    },
+    {
+      "lfs": false,
+      "path": "conversion/laya_typed_bench.py",
+      "sha256": "be642d798eea5d50f0a935fddd663aee32a12ce6532ec7a6da1606fb4f722e56",
+      "size": 1655
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "08a09f491df9efe9d5cbc96d8c5f22a3369951b58c9c64b568db588ab66c21d4",
+      "size": 4442939
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "92778ebb6a278de5a7041b8a2f9449a05172264d99d8cf471a878ec50ae04741",
+      "size": 1685175296
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "94c25ed9a1ebe3f13b85bdbd54cd20ed407fb1993e3993f3deda1bc5662b8ae1",
+      "size": 4466054
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "2565dd3a00465c5c615502894176cdb96a528ad66256dd8d08eb0af3a0f73582",
+      "size": 842587136
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "size": 3583228
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1",
+      "size": 337
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/laya-typed-decisions-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "66140d590396e555bb614b107468fdea1d0419c89b674c5ef1df05f3fdeaf84c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/laya-typed-decisions-ONNX/resolve/79c441b22da79eb3727bb01e8452e29a32cfa548/"
+    }
+  ],
+  "upstream": {
+    "commit": "79c441b22da79eb3727bb01e8452e29a32cfa548",
+    "host": "huggingface.co",
+    "repo": "onnx-community/laya-typed-decisions-ONNX",
+    "url": "https://huggingface.co/onnx-community/laya-typed-decisions-ONNX/tree/79c441b22da79eb3727bb01e8452e29a32cfa548"
+  }
+}

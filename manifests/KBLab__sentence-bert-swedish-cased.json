@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T02:35:15Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "fa119ed53998330e9b1189095d3851f47bc3d6a113e36d2c04b681efcdfa22b3",
+      "size": 870
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56",
+      "size": 190
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f310620bb55dd31ac375fc6ec1bee59dfad9d5afd4ecfaa08607e9c989285c6c",
+      "size": 12821
+    },
+    {
+      "lfs": true,
+      "path": "Sentence-Bert-Swedish-Cased-124M-BF16.gguf",
+      "sha256": "625a8db7ea38ed81fa1866a80ac4f16454578ffe8c8cc2521b9ed856fdeac095",
+      "size": 250281056
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f52dc6d1445b08f2b02910b100592932cef5696c34784eb7bb6386dacb39b9e1",
+      "size": 710
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "de52a8b2f0ff4ea8ca73721ced9bf01306a0b8df47720554600f1123e1336e13",
+      "size": 118
+    },
+    {
+      "lfs": false,
+      "path": "eval/mse_evaluation_TED2020-en-sv-dev.tsv.gz_results.csv",
+      "sha256": "600a9adf1476f72110ef231123362e7b7b849ad4a2a2405d9f9b249af10a8c63",
+      "size": 3323
+    },
+    {
+      "lfs": false,
+      "path": "eval/mse_evaluation_Tatoeba-eng-swe-dev.tsv.gz_results.csv",
+      "sha256": "5d7e2fca2353c16909227e1ceba479b7234243b628442565c6c797ddec525fcc",
+      "size": 3357
+    },
+    {
+      "lfs": false,
+      "path": "eval/translation_evaluation_TED2020-en-sv-dev.tsv.gz_results.csv",
+      "sha256": "3cc64b1d88901792c62bd5e3dbf15e56e8bafd3b32459c8067ac6c7e33f1da29",
+      "size": 2385
+    },
+    {
+      "lfs": false,
+      "path": "eval/translation_evaluation_Tatoeba-eng-swe-dev.tsv.gz_results.csv",
+      "sha256": "9eab4485cafdce3199945761fcf67e7c1f42abaa8106ac220562ed036e25f93c",
+      "size": 2456
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1561e3731bd6e2bf8d6c9188ed26433f96ef53c6a51f169e4ddb8ad6dd81eba5",
+      "size": 498790336
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460",
+      "size": 229
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "6bea01d07d85dc7870dfd9907ca78bac21ee8b1ef81c838f25a88b6494c79b32",
+      "size": 498834989
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "cabfacded9272091a06ff595a46ef027a76ddf4ac9e77d0fcf11c605748f1667",
+      "size": 53
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "size": 125
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "0001cd9fd9ef17918f38ad084d7abd372ff0fa587d8b12298bf659154ad6f045",
+      "size": 1196141
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d20768bd91f926d6330ab7aebe3cc8e93f5569170e3bb690421e9d1a1452b69f",
+      "size": 614
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "cf103a3207ce9ce64c4d9e306c2cb433e5987b6050a9d869914e1a8e2c781ad6",
+      "size": 399162
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "KBLab/sentence-bert-swedish-cased",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f310620bb55dd31ac375fc6ec1bee59dfad9d5afd4ecfaa08607e9c989285c6c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:35:15Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/KBLab/sentence-bert-swedish-cased/resolve/6b5e83cd29c03729cfdc33d13b1423399b0efb5c/"
+    }
+  ],
+  "upstream": {
+    "commit": "6b5e83cd29c03729cfdc33d13b1423399b0efb5c",
+    "host": "huggingface.co",
+    "repo": "KBLab/sentence-bert-swedish-cased",
+    "url": "https://huggingface.co/KBLab/sentence-bert-swedish-cased/tree/6b5e83cd29c03729cfdc33d13b1423399b0efb5c"
+  }
+}

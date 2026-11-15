@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "SakanaAI/TinySwallow-1.5B-Instruct",
+  "display_name": "TinySwallow-1.5B-Instruct-ONNX",
+  "family": "text",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/TinySwallow-1.5B-Instruct-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/TinySwallow-1.5B-Instruct-ONNX.json",
+  "note": "The license of the base model SakanaAI/TinySwallow-1.5B-Instruct applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "SakanaAI/TinySwallow-1.5B-Instruct",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 80,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 18658750004,
+  "upstream_url": "https://huggingface.co/onnx-community/TinySwallow-1.5B-Instruct-ONNX",
+  "what_changed": null
+}

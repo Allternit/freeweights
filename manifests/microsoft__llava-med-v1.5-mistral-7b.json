@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T02:52:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "24716f1c3f8ec9a5079001d742fb7acf01b0a59e5e3d15410d9f873b7969aac7",
+      "size": 4612
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f6ae889c5488ef86895e78f641339062962dd6b434666019fa119ab09d2bd8b3",
+      "size": 1407
+    },
+    {
+      "lfs": false,
+      "path": "data_summary_card.md",
+      "sha256": "e3f3ce67a9baeee1559f1bd5033ceb388fae48aa5ad46d9d4245bf35d52ac899",
+      "size": 4163
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "741acba7f5e235dac0e6865ecc212bbadb1ab1d6d853de7d759268cb62aaf2b4",
+      "size": 111
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "ef2190dc6c2a940e60f03f5fdb4dddb2320eb87801aeca5c40b0a28ce8aa420e",
+      "size": 4943162336
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "2b229607fecd98b8111320178e5bf3e2c527b05a942c85d65b5b507c76c1ed00",
+      "size": 4999819336
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "12b18ecdf8924d5fe28ada797fe6697fa60e62cba630759fbeb52975b261c4e2",
+      "size": 4927408360
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "1d2063fcd429d3f0f0a8a091b0522f0e02f2d85fe0e5b0eeb4ae168183a603bc",
+      "size": 262144128
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "d5ecec60dba218c6621cfa524d739de942b4552bcbb25efe63848c18a731b2f6",
+      "size": 73152
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "719833ff26ac897a3ec8ed946028a135de2a351470af59b4008744ab1f0ee9b7",
+      "size": 438
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "dadfd56d766715c61d2ef780a525ab43b8e6da4de6865bda3d95fdef5e134055",
+      "size": 493443
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5b219f9212f7263269898c799cc9d9be2326e853bf1e497f1c412f3a274d0597",
+      "size": 1463
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/llava-med-v1.5-mistral-7b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "24716f1c3f8ec9a5079001d742fb7acf01b0a59e5e3d15410d9f873b7969aac7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:52:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/llava-med-v1.5-mistral-7b/resolve/91bb16c122001ddc9cf1fd36ce1dae09448943a2/"
+    }
+  ],
+  "upstream": {
+    "commit": "91bb16c122001ddc9cf1fd36ce1dae09448943a2",
+    "host": "huggingface.co",
+    "repo": "microsoft/llava-med-v1.5-mistral-7b",
+    "url": "https://huggingface.co/microsoft/llava-med-v1.5-mistral-7b/tree/91bb16c122001ddc9cf1fd36ce1dae09448943a2"
+  }
+}

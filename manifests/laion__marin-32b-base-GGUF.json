@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T05:24:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5c9679c490c8b13752d9d9797b7b44970f1cdb7979fc8a60b5db76d254e00283",
+      "size": 1767
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "aa1b5df8587898be9305b5f896cdd4b08f5967d53de06b49a8c6de2f91e3e9b6",
+      "size": 1228
+    },
+    {
+      "lfs": true,
+      "path": "marin-32b-base-Q4_K_M.gguf",
+      "sha256": "7c36374440a9f72ffc0ef4e3c75fbfe9fe3bc476cf06ed113526a55eacf7afbc",
+      "size": 19682890624
+    },
+    {
+      "lfs": true,
+      "path": "marin-32b-base-Q5_K_M.gguf",
+      "sha256": "5c19408bf4f77444d8332935296d6e8c06f937d5e763d5b4ad15efea94e046fa",
+      "size": 23078474624
+    },
+    {
+      "lfs": true,
+      "path": "marin-32b-base-Q6_K.gguf",
+      "sha256": "3d9798b2268cd234edcae2858db2c9280fa0c769580cb8a640208287dae47297",
+      "size": 26686282624
+    },
+    {
+      "lfs": true,
+      "path": "marin-32b-base-Q8_0.gguf",
+      "sha256": "10d39b5cf5f40808f0fdd0f806e248bb2c40ab46077b27172f7bacece5020e8f",
+      "size": 34561969024
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/marin-32b-base-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "aa1b5df8587898be9305b5f896cdd4b08f5967d53de06b49a8c6de2f91e3e9b6",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:24:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/marin-32b-base-GGUF/resolve/e425040b5063ba59e073f05d3c9e68bc2666b658/"
+    }
+  ],
+  "upstream": {
+    "commit": "e425040b5063ba59e073f05d3c9e68bc2666b658",
+    "host": "huggingface.co",
+    "repo": "laion/marin-32b-base-GGUF",
+    "url": "https://huggingface.co/laion/marin-32b-base-GGUF/tree/e425040b5063ba59e073f05d3c9e68bc2666b658"
+  }
+}

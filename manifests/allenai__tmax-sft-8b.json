@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:32:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fe01f5db5956b2bda6e8d239936da1f5f27ca32c754edfd681507a90521da840",
+      "size": 3464
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f82b958417b098e92d598d1aea16f9a26a2c1aa7f484d33ec86eb0b5c72117cd",
+      "size": 3957
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "862f48568bbf5d31761d98b4c63bb972f876fdda8fa048b6381895c6d17f857b",
+      "size": 1594
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e7ad6e81dc7f908a836c362d036b62d1142b53a40f938d6ad8851b54aa28df7e",
+      "size": 213
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9246c14f505fcad846895980a58fde39e0ad7d4aab3878f10babf4ad31292d9f",
+      "size": 16381517208
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "47bfa3e7727312946b29ac10d6dd0672d63cf7815b2a160b9523872040d2e536",
+      "size": 665
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/tmax-sft-8b",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fe01f5db5956b2bda6e8d239936da1f5f27ca32c754edfd681507a90521da840",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:32:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/tmax-sft-8b/resolve/ec16c2c4272c631b7ee8121c4c6ff7a1223e240d/"
+    }
+  ],
+  "upstream": {
+    "commit": "ec16c2c4272c631b7ee8121c4c6ff7a1223e240d",
+    "host": "huggingface.co",
+    "repo": "allenai/tmax-sft-8b",
+    "url": "https://huggingface.co/allenai/tmax-sft-8b/tree/ec16c2c4272c631b7ee8121c4c6ff7a1223e240d"
+  }
+}

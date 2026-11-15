@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:41:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "400b270bc8f5cb44fda65b1a4532ceca0fb452d0637425e861829560cf393ae2",
+      "size": 1227
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE.md",
+      "sha256": "8542b3a65414366ae3228e8f1658e538ec95f9b8855599c9c6e36751d592be66",
+      "size": 1072
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "76c9dc0046f73d1479b58357cc1334c3c164025907cc643daa9528345384fce4",
+      "size": 8185
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "bba14d01bebfd1089c2ad9c5566ba6672c5140227251cb0e60ca8164af66d324",
+      "size": 473
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "35308d9dfb22f6c477a84a0b53a7547edf43d19f53c1be7ea7c278e2ada62810",
+      "size": 440453988
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "56a37fd26964ad8e654a8552807a63ec4661f7ae25af345cb89010f03a4f05d3",
+      "size": 440514422
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "88c4397c92e3a1800d3912e1edb5f3f849a155d72380beae353ea9df53611b53",
+      "size": 228
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "e025f479c3a7ce6e248971bfe1b409708db0439e9488d30e254f81f27f75d678",
+      "size": 235402
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/BiomedVLP-CXR-BERT-general",
+  "license": {
+    "file_path": "LICENSE.md",
+    "file_sha256": "8542b3a65414366ae3228e8f1658e538ec95f9b8855599c9c6e36751d592be66",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:41:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/BiomedVLP-CXR-BERT-general/resolve/6172dbfa7c061d635a4b86761b80e324e1995496/"
+    }
+  ],
+  "upstream": {
+    "commit": "6172dbfa7c061d635a4b86761b80e324e1995496",
+    "host": "huggingface.co",
+    "repo": "microsoft/BiomedVLP-CXR-BERT-general",
+    "url": "https://huggingface.co/microsoft/BiomedVLP-CXR-BERT-general/tree/6172dbfa7c061d635a4b86761b80e324e1995496"
+  }
+}

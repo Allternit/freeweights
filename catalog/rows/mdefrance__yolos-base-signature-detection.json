@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "hustvl/yolos-base",
+  "display_name": "yolos-base-signature-detection",
+  "family": "mdefrance",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "mdefrance/yolos-base-signature-detection",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/mdefrance/yolos-base-signature-detection.json",
+  "params": 127729158,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "hustvl/yolos-base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 1443,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "object-detection"
+  ],
+  "tier": "T2",
+  "total_size": 510953579,
+  "upstream_url": "https://huggingface.co/mdefrance/yolos-base-signature-detection",
+  "what_changed": null
+}

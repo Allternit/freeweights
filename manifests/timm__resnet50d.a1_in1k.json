@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:31:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a63ee2d467cb74dcaee86e1b18fe6c8b1ca297a9f86b3dcf86e4348f9cdf8a7d",
+      "size": 38899
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cb721acf9e0504aad35fd981e81413d76f804ef646cc2dd426c6623481ff55e3",
+      "size": 759
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0b4f757b0732eb4c6584d2c3692923c3b92efe116b8a383fd4b5eb62fda660cb",
+      "size": 102548236
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "f49499edc1601cc3a54fb0679ab1e8297fa5f6e6aacbcef0df8599e414be84a1",
+      "size": 102626621
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/resnet50d.a1_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a63ee2d467cb74dcaee86e1b18fe6c8b1ca297a9f86b3dcf86e4348f9cdf8a7d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:31:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/resnet50d.a1_in1k/resolve/e5d6d66ed7d06ab0b5953943bf50e8cf86402c8a/"
+    }
+  ],
+  "upstream": {
+    "commit": "e5d6d66ed7d06ab0b5953943bf50e8cf86402c8a",
+    "host": "huggingface.co",
+    "repo": "timm/resnet50d.a1_in1k",
+    "url": "https://huggingface.co/timm/resnet50d.a1_in1k/tree/e5d6d66ed7d06ab0b5953943bf50e8cf86402c8a"
+  }
+}

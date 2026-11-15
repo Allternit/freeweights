@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:52:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "05a99cdcc6b46f1a912816172e3a70ccff4ca9af5771178c0f3885ee36ffce7d",
+      "size": 4591
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "478c1faa97283ebaf1c2d20ba254239cbffd479db84654a1c7d659e7a71a60c6",
+      "size": 2895
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "d36c6ca18491148f6d5cd7fe489caabd1372640955b36d2025f909be5d27e3d4",
+      "size": 146
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "b6c6fc68374a1bbc9565ad6f4f02b4a81f699f4afc28fb398d23c21babd534f4",
+      "size": 4972947968
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "52067e7c8d71218d0a6715418f0935af6d47a6841678908ccb5c15b39974a101",
+      "size": 4105672464
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "df59e0e8f68ce1841a11ec0ba05e468a1413a7c5df5d1fa1e8b29a911a1b29d1",
+      "size": 66236
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "bea20de99600980eaa9022d59bc460ae8ff16e00c9655ff279c56b5390533beb",
+      "size": 1301
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f2a32e46427ce5d30e7bab5381fe7d41f0b2416b48675df06f57624163e8f86f",
+      "size": 1169
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/Qwen3.5-4B-Base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "05a99cdcc6b46f1a912816172e3a70ccff4ca9af5771178c0f3885ee36ffce7d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:52:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-Base/resolve/61541fe4aed37b6a1e615edd5cbf5a3f660312b1/"
+    }
+  ],
+  "upstream": {
+    "commit": "61541fe4aed37b6a1e615edd5cbf5a3f660312b1",
+    "host": "huggingface.co",
+    "repo": "unsloth/Qwen3.5-4B-Base",
+    "url": "https://huggingface.co/unsloth/Qwen3.5-4B-Base/tree/61541fe4aed37b6a1e615edd5cbf5a3f660312b1"
+  }
+}

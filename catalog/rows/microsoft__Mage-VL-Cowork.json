@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "microsoft/Mage-VL",
+  "display_name": "Mage-VL-Cowork",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "microsoft/Mage-VL-Cowork",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/microsoft/Mage-VL-Cowork.json",
+  "params": 4741793792,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "microsoft/Mage-VL",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 4680,
+    "likes": 225,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 9500368318,
+  "upstream_url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
+  "what_changed": null
+}

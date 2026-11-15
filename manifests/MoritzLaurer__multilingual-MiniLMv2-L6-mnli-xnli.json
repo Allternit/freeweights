@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T02:41:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "312a78ec7da89bec73d75fa3dcc2f19f2c75abc18189812f18f49f9ac525a5f2",
+      "size": 1528
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f28aebb1babf603b5c5c107670645f2b00e09a2e9a39132293ad0a9a7ab6fa34",
+      "size": 6741
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "79862295be1538a947e0f56d495ef8d658c3eaebcfb42c7ad96229d195ca745d",
+      "size": 1032
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "91b323ccf247ec1e3b5925d566230bae7c52de8147e6062b42e250089a3fc80b",
+      "size": 427997022
+    },
+    {
+      "lfs": false,
+      "path": "onnx/config.json",
+      "sha256": "e08b628c4d46c8601dda34ddb40a7857e5961870b80482382d420db6dfb6e00e",
+      "size": 921
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "79f8cda2b1230585a95ea0514a6f1bd21c5c986ba0529bb3261213a3e195fa6e",
+      "size": 428127016
+    },
+    {
+      "lfs": true,
+      "path": "onnx/sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "onnx/special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "onnx/tokenizer.json",
+      "sha256": "b2116c05e7305eea30394284760789681c5b3440dd4cd9a8c77539da68f9e8a6",
+      "size": 17082854
+    },
+    {
+      "lfs": false,
+      "path": "onnx/tokenizer_config.json",
+      "sha256": "10dd51e1952b6725b3c65edd16411a4ffe97a6f61636f11a7505bcb0bdb6b360",
+      "size": 1255
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "46298086b62942b2ad929d36e0ab7c11f98f9c109aa9ec3b65fff78104853a6a",
+      "size": 428017837
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+      "size": 280
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "098c131bb4423163db239755e309facaa6850059f850f9f3d88a78344a4b631c",
+      "size": 17082758
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "86139ce1f39e814bcdb99a6fe30c0c4983911508aad07417e616d994fb74eb25",
+      "size": 565
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f28aebb1babf603b5c5c107670645f2b00e09a2e9a39132293ad0a9a7ab6fa34",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:41:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli/resolve/0a71e92a985b6e1ad1828cf67ce9c459639c1dca/"
+    }
+  ],
+  "upstream": {
+    "commit": "0a71e92a985b6e1ad1828cf67ce9c459639c1dca",
+    "host": "huggingface.co",
+    "repo": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+    "url": "https://huggingface.co/MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli/tree/0a71e92a985b6e1ad1828cf67ce9c459639c1dca"
+  }
+}

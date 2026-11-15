@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:40:37Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7b93dc60fe6cb3189939d441863e7ee6eb88423c28736a56204e4e0e93a84ec6",
+      "size": 5774
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5011a63b95a74e140c4627db4246815810d33ad7418d00ef1df857cb17f680dd",
+      "size": 634
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8235de7e67f30b1b23b3dca491e7e3a9374b1c2db09a0f78898c4c40ab572e7e",
+      "size": 352914170
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "ae1da0f32ef3d7aa0d2f7b292f017ad9e0a88140cc4159cbabedbd3f2182126e",
+      "size": 352920803
+    },
+    {
+      "lfs": false,
+      "path": "train_args.yaml",
+      "sha256": "e3a16142cf5ace82ee6951e56502c807d8b11608efc6fb05a1ac2ecc08d93d99",
+      "size": 1951
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7b93dc60fe6cb3189939d441863e7ee6eb88423c28736a56204e4e0e93a84ec6",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:40:37Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k/resolve/3a9ddfde356b448a0b1128976925668661566643/"
+    }
+  ],
+  "upstream": {
+    "commit": "3a9ddfde356b448a0b1128976925668661566643",
+    "host": "huggingface.co",
+    "repo": "timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k",
+    "url": "https://huggingface.co/timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k/tree/3a9ddfde356b448a0b1128976925668661566643"
+  }
+}

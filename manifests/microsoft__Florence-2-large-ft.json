@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T02:36:36Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "28aac17b0f70983ef58c18a7ee355503e454ce3178fce77a7b50503906df0635",
+      "size": 1560
+    },
+    {
+      "lfs": false,
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "9daeae709a0bd71bcfd1c96dc5822ecec5210327eff929da64b0ae7f8faf1444",
+      "size": 444
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "size": 1141
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a7ce927349dee88fbe0ca4c9944d38b88c7025b3731ae15f0a2f1b1c42aa49cc",
+      "size": 14828
+    },
+    {
+      "lfs": false,
+      "path": "SECURITY.md",
+      "sha256": "7b6976eec43edfa68b79a459dd089c56b7a395916dbf1a01bd11e6d86e12128f",
+      "size": 2656
+    },
+    {
+      "lfs": false,
+      "path": "SUPPORT.md",
+      "sha256": "149773411caf2c59cb1a6bfb2c6f070d1d054f1f018e7a80be319a8c384eeaf5",
+      "size": 1244
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "fa081841369aa9c6e42faf5c52368d673b561e2c5f8fa03d1256e7408cb4130e",
+      "size": 2445
+    },
+    {
+      "lfs": false,
+      "path": "configuration_florence2.py",
+      "sha256": "653bafddc9651eaff1583a16db4a2bb27d33ec7d541dfab7201aaa4ecaa1cfbf",
+      "size": 15125
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "30e9865458ecc8ee931eeeb43f44f1d169c5ab95be39e0072142a7a6b8f31990",
+      "size": 51
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8b4e610c952eef90a836c56cda0f398a672a3a6ca7b4d96b0e09a86dee42e2c3",
+      "size": 1540980506
+    },
+    {
+      "lfs": false,
+      "path": "modeling_florence2.py",
+      "sha256": "5bb7aa72c6ba62e96e1bbae6bc1aaf7b4e8e28cdfc62e670de3d5b67eeab1fdf",
+      "size": 127415
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "2f5921bbc53c7cc04251e1027b45b1cec726276be6db23d1bb40641bfbe2cf29",
+      "size": 806
+    },
+    {
+      "lfs": false,
+      "path": "processing_florence2.py",
+      "sha256": "4bd7158536cbf1c7891fc8efd94437d79fd09f07f539c7398fab8a885d7d8bca",
+      "size": 46372
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "4188ce5a9364c358c3e28eb3e4155985867ef70bb3ae628f1f289d6a3538310a",
+      "size": 1543106435
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e",
+      "size": 1355863
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "79ffcf43af8ebda99d165f61d243180da2e2639952e41e71e11611c18770489c",
+      "size": 34
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "394fdc63c71aabe0a9b97117f5d62fb5fcc4d59b2b3ea929a3929e6a53217b3c",
+      "size": 1099884
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/Florence-2-large-ft",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:36:36Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/Florence-2-large-ft/resolve/4a12a2b54b7016a48a22037fbd62da90cd566f2a/"
+    }
+  ],
+  "upstream": {
+    "commit": "4a12a2b54b7016a48a22037fbd62da90cd566f2a",
+    "host": "huggingface.co",
+    "repo": "microsoft/Florence-2-large-ft",
+    "url": "https://huggingface.co/microsoft/Florence-2-large-ft/tree/4a12a2b54b7016a48a22037fbd62da90cd566f2a"
+  }
+}

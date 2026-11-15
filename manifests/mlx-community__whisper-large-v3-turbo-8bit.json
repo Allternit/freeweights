@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:28:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "011c6fd21d6c446a911b27bb4f7195117f55de9bb2c6471fcad086b7797bff7b",
+      "size": 849
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f79a081378ac52606707abdfdae4a9cc41410f47ffc2ad2cd582dc8cc8e29e6f",
+      "size": 341
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1dffa280543756dcdd5324250c811c2a1ba8654c363d7d0b1a5da2b1563629df",
+      "size": 863659156
+    },
+    {
+      "lfs": false,
+      "path": "multilingual.tiktoken",
+      "sha256": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126",
+      "size": 816730
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/whisper-large-v3-turbo-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "011c6fd21d6c446a911b27bb4f7195117f55de9bb2c6471fcad086b7797bff7b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:28:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/whisper-large-v3-turbo-8bit/resolve/62103fc276a35fdc76e318f314d8ff47987fba89/"
+    }
+  ],
+  "upstream": {
+    "commit": "62103fc276a35fdc76e318f314d8ff47987fba89",
+    "host": "huggingface.co",
+    "repo": "mlx-community/whisper-large-v3-turbo-8bit",
+    "url": "https://huggingface.co/mlx-community/whisper-large-v3-turbo-8bit/tree/62103fc276a35fdc76e318f314d8ff47987fba89"
+  }
+}

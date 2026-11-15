@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T03:32:37Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE.MD",
+      "sha256": "93548a1b1c0a8d42e7409dfb6e344062aec9c82f6bfe1f3a0b91e4537a01bf31",
+      "size": 9124
+    },
+    {
+      "lfs": false,
+      "path": "NOTICE.MD",
+      "sha256": "38c76eb8701e52953f63154a77b407667a6ee34c3a2a8785c8f8b2cd5494d09d",
+      "size": 551
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "53e9d0d59eccdb7e67e04fa47a396210a1440742faab44222e0185cf4f2dbce6",
+      "size": 1746
+    },
+    {
+      "lfs": false,
+      "path": "__init__.py",
+      "sha256": "843249b7fd3b071d97881804ec1baee783212856033388a1f6de63e04ea72351",
+      "size": 304
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "95a532e5ec7721aa44d82c4594be6da92cec5bff7b5ae7a97f88812e07f7c7db",
+      "size": 1123
+    },
+    {
+      "lfs": false,
+      "path": "config.py",
+      "sha256": "4373cda9a80366e772ffa8f4a015658a2eabcc83259ed31b869477b34bf9c839",
+      "size": 8948
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "95d42da6dc3e83d78dd9b2970d247232b01583a18511dbbd666ce16adf7b8c46",
+      "size": 93
+    },
+    {
+      "lfs": false,
+      "path": "gpt.py",
+      "sha256": "b6044e396e59bee0c096347fa4aa02ffc6250993a183d685b094145bec197f03",
+      "size": 34543
+    },
+    {
+      "lfs": false,
+      "path": "hook_utils.py",
+      "sha256": "c8ece3efd054377c04cb9624de4a9822d54a58a7a75c2a9131d831f25a9b2d12",
+      "size": 5400
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "c7a63c67d78a1e8da5fc3ead1338fe0f18994d48deedeb4374a6b3ad1d350724",
+      "size": 1676511896
+    },
+    {
+      "lfs": false,
+      "path": "modeling_circuitgpt.py",
+      "sha256": "bd26452b51f0b21216aec70167b5427cfde7fe9ed81267d1f40c5578e8a09a20",
+      "size": 4800
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ab19446aff7a9128af42a8be7b82374be00ad3775b43656102ac342578674222",
+      "size": 34
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "fedfc07615c5a2e888f8b20189c5d4e1c29480d2c46fe627f9e28dedba565a1e",
+      "size": 185800
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "b42d53ab8a66da8fc53288442b1239e373697d630ad61fa66dc35350274617c7",
+      "size": 24366
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "bf39138c146fd24e7c9e2f2c634f80a3fbef2e72a3d4337d84dbdb92769b014b",
+      "size": 135
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openai/circuit-sparsity",
+  "license": {
+    "file_path": "LICENSE.MD",
+    "file_sha256": "93548a1b1c0a8d42e7409dfb6e344062aec9c82f6bfe1f3a0b91e4537a01bf31",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:32:37Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openai/circuit-sparsity/resolve/ebf2603cfe24e5c09e31169d9e34a9fd3d15230c/"
+    }
+  ],
+  "upstream": {
+    "commit": "ebf2603cfe24e5c09e31169d9e34a9fd3d15230c",
+    "host": "huggingface.co",
+    "repo": "openai/circuit-sparsity",
+    "url": "https://huggingface.co/openai/circuit-sparsity/tree/ebf2603cfe24e5c09e31169d9e34a9fd3d15230c"
+  }
+}

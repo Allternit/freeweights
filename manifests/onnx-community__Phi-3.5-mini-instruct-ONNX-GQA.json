@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:27:33Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5eb33170d4b83c5e7fd73cdeb7dcdb950fdb12d06d57352985243b7f18bff526",
+      "size": 1761
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2555ce2089566d57fe1c0e354630b2b4e1cdd412effaac71bce9baecbcf8a08a",
+      "size": 555
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "5f5c94d30901fe9c961d776d51eadbda4454991a77b53d36e0be0571a8e72a7d",
+      "size": 293
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "e193309f358edae859c9e4e31ae8adb708b02b2ef7e5ffe5fc0e945f9aa97ba9",
+      "size": 3503
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "739c6e65ea81aaec7110bdfd98757ac4f9c11a69d28f9b50e8e78ce0a1d35365",
+      "size": 172
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "1d5af8b5d3e6b4ef30dec85048b6b54167953da0b40bfaf5e1809090bbb638db",
+      "size": 52128062
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "a0ff718dcfaa99a47a0d41e9ed4b063b0e27a5c63b774c1c7bed44765fbdfbb3",
+      "size": 15284318208
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "108a22061d6bdc7ecef3c4dcc61f05033b3ba86a661e927545c96502977a5e6a",
+      "size": 225234
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "9f314463fe2927b571fd4cbb0182afd1e57783d62c93b64cce0e269c3bdc6f2d",
+      "size": 7668111360
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "2c25a708f6562d6d5fb0590b6a988aceb698ae01af74561ce63e69248a8e469e",
+      "size": 680702097
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "df539751cafa2ad095d6ee19be7baab817a1f6bb0d35db221f3554412eb07c6f",
+      "size": 2092695552
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "bca0280905c7eb177e221d487f35a886eec0dc0a704c0275a8b9b6e02faaa12a",
+      "size": 220447109
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "b6dfb3069b717b518266dd58cb8e794bc0712fbc46e1737aef99cd8875302cf0",
+      "size": 2097020928
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "474d699677e264edd3851559548cbbb61801ad8da6b249c81455007602313c34",
+      "size": 569
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3cb815b904d82b82b25dcd90edd00e71a5ee5443472ad611bcb84f1339300647",
+      "size": 3620657
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "size": 499723
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b529298e858d8779864fde16ed94b984c61d4307ca0721bd6782f56c1d7f375b",
+      "size": 3394
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Phi-3.5-mini-instruct-ONNX-GQA",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2555ce2089566d57fe1c0e354630b2b4e1cdd412effaac71bce9baecbcf8a08a",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.phi",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:27:33Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Phi-3.5-mini-instruct-ONNX-GQA/resolve/71d5a90ca1c54ffb7ca7a0a56c99dbc67ac5946e/"
+    }
+  ],
+  "upstream": {
+    "commit": "71d5a90ca1c54ffb7ca7a0a56c99dbc67ac5946e",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Phi-3.5-mini-instruct-ONNX-GQA",
+    "url": "https://huggingface.co/onnx-community/Phi-3.5-mini-instruct-ONNX-GQA/tree/71d5a90ca1c54ffb7ca7a0a56c99dbc67ac5946e"
+  }
+}

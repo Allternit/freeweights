@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T05:27:34Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3a48f7244ed5345f9806fafe4ac85abac1b3df62b47f43cf837d8e4606478594",
+      "size": 20500
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "8a14ad589f01169a749e0e5162195a4ff40dd8686aadec2e2cce90a2c6cf8caa",
+      "size": 735
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "1842c46dc0132b61314f156da38544c4dbb71c68f9c07d9e5be0456bee230ab5",
+      "size": 49554176
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "081bdeaf76fc5463cc2e20fbadf17ad9eb569bb5343b120cc64b98840754f96c",
+      "size": 87
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "303127a244b0078878156c17229f36d11b7a3a3f8e47b7cfdbb304ff46be5030",
+      "size": 441810
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "596d752bf46f5cace1f6826b52ed7d913347a4eea0ecce8ab2f869471ca40369",
+      "size": 701
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ed944c0b3d71e2d651a5ba0f8e7b350faff30031c8e3353de70b12b9c1bf5654",
+      "size": 3475806
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fdc617feda7907bddc63907c2e922b1cbd677925b2068403cecc29c349a4725c",
+      "size": 8875
+    },
+    {
+      "lfs": false,
+      "path": "training_config.json",
+      "sha256": "f324cc37c48ab7b9a260e3c015391ef684452e9ba2c7a2c2de343987c45c47d9",
+      "size": 2752
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "80ab859339a2525fdfbda14bc39df02dffb824aefdaf86426217bbb146d17e01",
+      "size": 776995
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-3.2-8b-lora-rag-citation-generation",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3a48f7244ed5345f9806fafe4ac85abac1b3df62b47f43cf837d8e4606478594",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:27:34Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-3.2-8b-lora-rag-citation-generation/resolve/673f50527d8d57e872fa0ec415257bcc840bb40c/"
+    }
+  ],
+  "upstream": {
+    "commit": "673f50527d8d57e872fa0ec415257bcc840bb40c",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-3.2-8b-lora-rag-citation-generation",
+    "url": "https://huggingface.co/ibm-granite/granite-3.2-8b-lora-rag-citation-generation/tree/673f50527d8d57e872fa0ec415257bcc840bb40c"
+  }
+}

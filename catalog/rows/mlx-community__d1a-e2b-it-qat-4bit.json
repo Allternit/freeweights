@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/gemma-4-E2B-it-qat-w4a16-ct",
+  "display_name": "d1a-e2b-it-qat-4bit",
+  "family": "gemma",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "mlx-community/d1a-e2b-it-qat-4bit",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/mlx-community/d1a-e2b-it-qat-4bit.json",
+  "params": 4628569379,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/gemma-4-E2B-it-qat-w4a16-ct",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.gemma",
+  "signals": {
+    "downloads_30d": 415,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "variant",
+  "total_size": 3837846881,
+  "upstream_url": "https://huggingface.co/mlx-community/d1a-e2b-it-qat-4bit",
+  "what_changed": null
+}

@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "display_name": "SmolVLM-Instruct",
+  "family": "smollm",
+  "formats": [
+    "onnx",
+    "safetensors"
+  ],
+  "id": "HuggingFaceTB/SmolVLM-Instruct",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/HuggingFaceTB/SmolVLM-Instruct.json",
+  "params": 2246272880,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.smollm",
+  "signals": {
+    "downloads_30d": 17226,
+    "likes": 602,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "variant",
+  "total_size": 29534636484,
+  "upstream_url": "https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct",
+  "what_changed": null
+}

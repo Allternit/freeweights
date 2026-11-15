@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T05:04:04Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c3fcecd647028315c8c40a27a733b206204de7e24d39aa79d89cd01ff21f0942",
+      "size": 4853
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "480576bd2ef80726a0dba6406d72ca37f4f4f9ca747c7f1c8d159dbdf40f6929",
+      "size": 5717
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f4fb6e0b5245fbc60f640b0145e831cd29840c77cfffd697d5fc5ca88d43a60e",
+      "size": 49297
+    },
+    {
+      "lfs": false,
+      "path": "configuration_spark.py",
+      "sha256": "02218597240490f490659b184052db940b08163ff9c3af7b7e59323f6f963722",
+      "size": 4329
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "804a5276a9d237600688267dd2bf6f9d4129ec21faf417f870d5d52b32ad9e6c",
+      "size": 281
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "ce6997f86a0c7f042e1c87ba54729d37f28a28364d410f805ed145f29e644030",
+      "size": 2368
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9481508a55a973e663c4dcd60927d45edd681c0bb2cef3fc1ea482cc62b2a5b1",
+      "size": 3040272206
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "e04380911a1ef18a4bead540889327ada79e998743b708e79922ee5d9f278293",
+      "size": 51693
+    },
+    {
+      "lfs": false,
+      "path": "modeling_spark.py",
+      "sha256": "9cf0d1ad2b54b9f7088792779ddd8b5cb4d4fe63bfea054da7f2dd16362bcaf4",
+      "size": 19418
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "6e690f9321beb57af1b08d5ca3c3fb0feb57846ec628696156a1615867230642",
+      "size": 19625
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f71f91ee1b2ac0b27e47bf49ee4859d322ab3d191217ec9964d0189b02454c49",
+      "size": 10115785
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "dc8640f34ad87fb04d17448183a7303d6fb10629fe8a8a2bc81937183617b77f",
+      "size": 420
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Spark-X2.6-4B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c3fcecd647028315c8c40a27a733b206204de7e24d39aa79d89cd01ff21f0942",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:04:04Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Spark-X2.6-4B-OptiQ-4bit/resolve/6d83e911abefcbbb9c7c595e6517264f36db03dd/"
+    }
+  ],
+  "upstream": {
+    "commit": "6d83e911abefcbbb9c7c595e6517264f36db03dd",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Spark-X2.6-4B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Spark-X2.6-4B-OptiQ-4bit/tree/6d83e911abefcbbb9c7c595e6517264f36db03dd"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:28:39Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a0d6cec989b7e15995be6b2c807054c8805b9a579ac095325816936a683a2c40",
+      "size": 4485
+    },
+    {
+      "lfs": false,
+      "path": "gliner_config.json",
+      "sha256": "8e88b694bcb0bfd4f93302951dd43d89261849c9817140681efc819a10472d9f",
+      "size": 474
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "32ce07a1c5a41185c97047c42960dae98f33428295098dae1bd51cf401681054",
+      "size": 1838042152
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "36bb03139034378b093de421ebc4a3052b7cfabbc089f4644d5be16d51aafc14",
+      "size": 1838173066
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "urchade/gliner_large-v2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a0d6cec989b7e15995be6b2c807054c8805b9a579ac095325816936a683a2c40",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:28:39Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/urchade/gliner_large-v2/resolve/9d0533ed97ade535f232b28dc673999c27c43159/"
+    }
+  ],
+  "upstream": {
+    "commit": "9d0533ed97ade535f232b28dc673999c27c43159",
+    "host": "huggingface.co",
+    "repo": "urchade/gliner_large-v2",
+    "url": "https://huggingface.co/urchade/gliner_large-v2/tree/9d0533ed97ade535f232b28dc673999c27c43159"
+  }
+}

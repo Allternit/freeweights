@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T02:29:40Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "61397a20a4ec8b598d53031367bea3a726768157b7dca31f786ecdf779be12dc",
+      "size": 447
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "153113f8175845034a8c630de567fed7144d7617eeb916eee00bef7121dea322",
+      "size": 1536
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1695f8096347352167c18ae138557af5b8ec61927850fe54fc0da25c5e51c89d",
+      "size": 606
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "12dc61379140da492da29b38b533cf1fd79e20adff5065a20651b4f7499cd922",
+      "size": 450536528
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "5124ee7a886d80fad60e357ce9f0686d088e157e07321c218252ac706b58f633",
+      "size": 453093832
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "e54f47c023b343229b82721fe095e4a2ef40a36aa03b3a48270a332086a7e754",
+      "size": 450781856
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ce64fce797c24f68df90b40a3f74f579b336a493db14bd583fd520ea0d8c9a98",
+      "size": 466062
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "08b41811e08f0a108b77cf917abaad7d8fd1237090d997c58dbf0c075e516138",
+      "size": 170
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "ca34845dbb6dfad761d6808888081e3fcef65f6ff80b4f31a4b4f517590cfdad",
+      "size": 1378
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/layoutlm-base-uncased",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "153113f8175845034a8c630de567fed7144d7617eeb916eee00bef7121dea322",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:29:40Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/layoutlm-base-uncased/resolve/30e3cdd39c11f09757b0fcf7598533d05052acef/"
+    }
+  ],
+  "upstream": {
+    "commit": "30e3cdd39c11f09757b0fcf7598533d05052acef",
+    "host": "huggingface.co",
+    "repo": "microsoft/layoutlm-base-uncased",
+    "url": "https://huggingface.co/microsoft/layoutlm-base-uncased/tree/30e3cdd39c11f09757b0fcf7598533d05052acef"
+  }
+}

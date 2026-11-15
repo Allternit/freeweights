@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T04:49:41Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ab474714b5bc0079e53366ff6e9eac8cdc429fe4443fbc83b93a0686b24ea330",
+      "size": 1609
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "014833badd32e9deb899380ddaa679e45a2d066d75aef7bd971d3c579135fdfb",
+      "size": 16225
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "880d77cb17f6f45925ba78ba94a04b92b5a88b6046e7b6e376d2ab794b02ba04",
+      "size": 2182
+    },
+    {
+      "lfs": false,
+      "path": "hf_quant_config.json",
+      "sha256": "ba3ff3838481e9ca9cf4a408f8368e510ac603660b3e26d2054043b8105896bc",
+      "size": 5559
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "eec5efdf1b838020c2842f52d560c187515e84889c51f99d70b75c773c286599",
+      "size": 1317952596
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "014833badd32e9deb899380ddaa679e45a2d066d75aef7bd971d3c579135fdfb",
+    "id": "OpenMDW-1.1",
+    "name": "OpenMDW-1.1",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.nemotron",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:49:41Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr/resolve/292bf1efc06ba39567da7351f2ad7a522afa3959/"
+    }
+  ],
+  "upstream": {
+    "commit": "292bf1efc06ba39567da7351f2ad7a522afa3959",
+    "host": "huggingface.co",
+    "repo": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr",
+    "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr/tree/292bf1efc06ba39567da7351f2ad7a522afa3959"
+  }
+}

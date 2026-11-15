@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:31:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a95f787a28d481f5229a3839b2271b09a05beab58b2493135f9f99b266e3a778",
+      "size": 13039
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "8b7f7ec511bcf5aab654abcb970c031c9a9211f7af9f8e6bd0bf7428f731291c",
+      "size": 1172
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "ecb2d17dee8147b310d3d8e1ac925d34aac3551b3a960540b7a7f57165cdaa2e",
+      "size": 94404160
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-3.2-8b-alora-rag-query-rewrite",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a95f787a28d481f5229a3839b2271b09a05beab58b2493135f9f99b266e3a778",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-3.2-8b-alora-rag-query-rewrite/resolve/4740af20cb05eb801cdef6f45f2fb24c44b8f2a2/"
+    }
+  ],
+  "upstream": {
+    "commit": "4740af20cb05eb801cdef6f45f2fb24c44b8f2a2",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-3.2-8b-alora-rag-query-rewrite",
+    "url": "https://huggingface.co/ibm-granite/granite-3.2-8b-alora-rag-query-rewrite/tree/4740af20cb05eb801cdef6f45f2fb24c44b8f2a2"
+  }
+}

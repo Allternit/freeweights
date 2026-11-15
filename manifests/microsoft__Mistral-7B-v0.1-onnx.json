@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T05:30:57Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5ee1b60e81bec3051dca601b77fbf794d59fb0f7709d33b68711df495fc4ca14",
+      "size": 1648
+    },
+    {
+      "lfs": true,
+      "path": "Mistral-7B-v0.1.onnx",
+      "sha256": "cf7000e873030a6ef75b556c5e7f04131c79de987449393ecad1e5ce175d4b9f",
+      "size": 220615
+    },
+    {
+      "lfs": true,
+      "path": "Mistral-7B-v0.1.onnx.data",
+      "sha256": "703dcd7f177b8e2151fb29343855f1f10b1f5b7d8721bad173efc6e2ea6daf76",
+      "size": 14491852800
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "35f74a498e9f9f3ff56b0ef40e6d2f84468854e27bb152ddb0b0085d7f20429f",
+      "size": 3411
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/Mistral-7B-v0.1-onnx",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "35f74a498e9f9f3ff56b0ef40e6d2f84468854e27bb152ddb0b0085d7f20429f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:30:57Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/Mistral-7B-v0.1-onnx/resolve/3d5ce13f65bd660957092e9e9d703f7f2d512f7e/"
+    }
+  ],
+  "upstream": {
+    "commit": "3d5ce13f65bd660957092e9e9d703f7f2d512f7e",
+    "host": "huggingface.co",
+    "repo": "microsoft/Mistral-7B-v0.1-onnx",
+    "url": "https://huggingface.co/microsoft/Mistral-7B-v0.1-onnx/tree/3d5ce13f65bd660957092e9e9d703f7f2d512f7e"
+  }
+}

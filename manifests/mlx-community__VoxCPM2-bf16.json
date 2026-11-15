@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T03:21:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "7eac21484d4fcba4c70abb89e50573c40a723a3f0fd1bd848ed30264b1cf40c3",
+      "size": 1615
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "90a2d38bceb446f74164eb83dc31b0c1281382f944437dc21b85dc2290eb30c1",
+      "size": 2170
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cf9f7d2b880e63720b6d886319b0d6ab14182bcf2939915fdf3aad12d60bc071",
+      "size": 5210
+    },
+    {
+      "lfs": true,
+      "path": "model-00001.safetensors",
+      "sha256": "676b05649d915e63f2291a0b091bd72250785b2448fe14ec81f3566cf5f47950",
+      "size": 4286190791
+    },
+    {
+      "lfs": true,
+      "path": "model-00002.safetensors",
+      "sha256": "adddb9b85026763751beb20ba050aa46ef19b6b55cf6cb6a8c44ac8b06ec5cff",
+      "size": 669068875
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "e5c9dbe10f771ec0bc6ee244531475615547c1129b3adf6b51fd00b1466ee75a",
+      "size": 67424
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76",
+      "size": 1632
+    },
+    {
+      "lfs": true,
+      "path": "test_en.wav",
+      "sha256": "2f58dd8e9331f67d4e2cfe0c3a082814850dc1eafcc3fa309512a1d4e1460ded",
+      "size": 506940
+    },
+    {
+      "lfs": true,
+      "path": "test_id.wav",
+      "sha256": "903fc8c88905cee3e731e669de99175a43e90f446db596b1907c9aedbbb818e0",
+      "size": 614460
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f8984687e4a92a3503d521396d454b7d68e9fdaab2a0288eb3536c7c1aa4bc20",
+      "size": 3676772
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "466575c55f0cf49530666c2e46ed14f26237dbd227ba7f4bb3bbec93df90edfc",
+      "size": 4952
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/VoxCPM2-bf16",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "90a2d38bceb446f74164eb83dc31b0c1281382f944437dc21b85dc2290eb30c1",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:21:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/VoxCPM2-bf16/resolve/a7fb80d9056983135a54ca3f71fcc5a637ccddf5/"
+    }
+  ],
+  "upstream": {
+    "commit": "a7fb80d9056983135a54ca3f71fcc5a637ccddf5",
+    "host": "huggingface.co",
+    "repo": "mlx-community/VoxCPM2-bf16",
+    "url": "https://huggingface.co/mlx-community/VoxCPM2-bf16/tree/a7fb80d9056983135a54ca3f71fcc5a637ccddf5"
+  }
+}

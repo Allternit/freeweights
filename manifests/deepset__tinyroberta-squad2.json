@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:29:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2cd55504a4280ed9492272f1a2b28c704e9e45289dcb2489cda8534e12fa5925",
+      "size": 9363
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7ce4cd7a367750fda5a31ac623632463a07f853fc65b1079c27ff4e8bb52ad67",
+      "size": 835
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862",
+      "size": 456356
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "39955cbf5f636762a2ef642b718c8c6e172d153c94a13de40b37efd00822cd80",
+      "size": 326133904
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "20d4e188516befd95769e0e85bd84fcae68bc6b8a1888d4d19268990f66e00ac",
+      "size": 326162801
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+      "size": 239
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "33465117406b9007673e8ba283f7f1383d9b5094df947481af60eec94ed7d7bd",
+      "size": 1355881
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "3b77521115e4231e4f4c7f7786ddc1e14710c90aae66ca2d8c92f5e1b0ca516c",
+      "size": 383
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e",
+      "size": 798293
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "deepset/tinyroberta-squad2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2cd55504a4280ed9492272f1a2b28c704e9e45289dcb2489cda8534e12fa5925",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:29:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/deepset/tinyroberta-squad2/resolve/12b287c9df677e28b07f0a023850dba68c997dbf/"
+    }
+  ],
+  "upstream": {
+    "commit": "12b287c9df677e28b07f0a023850dba68c997dbf",
+    "host": "huggingface.co",
+    "repo": "deepset/tinyroberta-squad2",
+    "url": "https://huggingface.co/deepset/tinyroberta-squad2/tree/12b287c9df677e28b07f0a023850dba68c997dbf"
+  }
+}

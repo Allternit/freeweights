@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T03:29:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "size": 1141
+    },
+    {
+      "lfs": false,
+      "path": "NOTICE.md",
+      "sha256": "6d368cac1565705f1f059162ea753bd9dd53f24ceb0ba67cbc72b7a6cadd699f",
+      "size": 780
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "29a9f9d016f9e87cec9f717225e284fb9199accdf09e7fdb000409ef98b2239d",
+      "size": 11721
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "54b770c9c608729207553a4daa0cb58500b453f26feac4b1d0dead7eb1ae23e5",
+      "size": 4260
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "50cb2c580ab445f4c4aa5bddef89321d70e22a054908a69288fb02d8ca967e52",
+      "size": 1633
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "822104c6c325c580624bf4410dc001323325e01aaaa757af3870a5efe31c4ffa",
+      "size": 214
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00006.safetensors",
+      "sha256": "0ae25735eca0d3f3c858cd8d78c67a5b7a180c2efd15dff213ad2dddaeebc0cc",
+      "size": 4984780784
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00006.safetensors",
+      "sha256": "da2cc39010f2f1d7815418f7e299f5bd71fa42cc889907b32ee67403002b450c",
+      "size": 4980892048
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00006.safetensors",
+      "sha256": "1d0d620abef3b3413d131bcb6a6fc3842fe8509bfe691c4d9839ab42686973af",
+      "size": 4928485104
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00006.safetensors",
+      "sha256": "a9ceee9f4a18d473af0803b3072bf6e1150272775824a298be6a84926dc2613d",
+      "size": 4980892112
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00006.safetensors",
+      "sha256": "464ea1c293e2448cb65cee4b2d96e701dfcb2e714968d97e0ac18a0df1a04877",
+      "size": 4928485104
+    },
+    {
+      "lfs": true,
+      "path": "model-00006-of-00006.safetensors",
+      "sha256": "38b0cb181310990dd785dafbb1e237c5b259f19bc59141ee04bb4b8184b95add",
+      "size": 4733130504
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "f5b7b9b7bbd44964fc01d006482c469b20a0bea4af6c4253a3f5564e76f46ae8",
+      "size": 36546
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f",
+      "size": 5431
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/FrogMini-14B-2510",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:29:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/FrogMini-14B-2510/resolve/bde8b2b59a5f8f98294b2cd096ecb727042c975f/"
+    }
+  ],
+  "upstream": {
+    "commit": "bde8b2b59a5f8f98294b2cd096ecb727042c975f",
+    "host": "huggingface.co",
+    "repo": "microsoft/FrogMini-14B-2510",
+    "url": "https://huggingface.co/microsoft/FrogMini-14B-2510/tree/bde8b2b59a5f8f98294b2cd096ecb727042c975f"
+  }
+}

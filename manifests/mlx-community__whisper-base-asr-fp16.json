@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T03:42:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "66306dd37237d4f797d17779b3a67a2e53a96167d156296722fa05ef3c8737f3",
+      "size": 2837
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "9715fd2243b6f06a5858b5e32950d2853f73dd5bc201aafcf76f5082a2d8acd1",
+      "size": 34604
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a399e8454551d7b55695893f34029f4f957016676656bcb4fd2f050f9ded86e1",
+      "size": 2440
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "444b3f636d2fff89dd9ecf549e2a085b61f7ff0fa0246d4628bac6a3b8cc9ba4",
+      "size": 3807
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "size": 493869
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "58bb36ff2c46cdba54676edf9625e0c5f374c13c231fdf1440be19432e3c8618",
+      "size": 143676708
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "fd03fe15b8cc7603648a08fbb368169f1118c63e1b4ddecece8161ee2165e833",
+      "size": 15847
+    },
+    {
+      "lfs": false,
+      "path": "normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "size": 52666
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "9b5cd03a36fbb8a627c64d98a5b5b126ead95a77720723944487311f0110b666",
+      "size": 184990
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691",
+      "size": 2194
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566",
+      "size": 2480466
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2a4c4281cf9f51ac6ccc406fdc711a087afe6530f671fa7b80953edc498275ce",
+      "size": 282683
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9",
+      "size": 835550
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/whisper-base-asr-fp16",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "66306dd37237d4f797d17779b3a67a2e53a96167d156296722fa05ef3c8737f3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:42:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/whisper-base-asr-fp16/resolve/52f819c9c5fa6874a2f14a97112951fc951aa253/"
+    }
+  ],
+  "upstream": {
+    "commit": "52f819c9c5fa6874a2f14a97112951fc951aa253",
+    "host": "huggingface.co",
+    "repo": "mlx-community/whisper-base-asr-fp16",
+    "url": "https://huggingface.co/mlx-community/whisper-base-asr-fp16/tree/52f819c9c5fa6874a2f14a97112951fc951aa253"
+  }
+}

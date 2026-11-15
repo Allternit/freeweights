@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T03:24:15Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "8f7973eda94f32a6f02066d9fc5f4ae8abafbd818b204664455e60f39d65aaee",
+      "size": 1634
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9f484124f421341d908de2146edf1ced147eca8ef6f1fd5603fbacc812f92955",
+      "size": 7771
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "5d5e57261aef30a188c6fe8ac74e02de777f7e16a846485780d758f21f3e4093",
+      "size": 17006
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6a6453f0ed6ce7553567c07e06b29158bb5eed89bbf6d98fe5c0c42282786502",
+      "size": 678
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9e28577f9e06c60184458fb81fef865cd061d85ab13ceb78b1161313734d7e30",
+      "size": 111
+    },
+    {
+      "lfs": false,
+      "path": "llmjp4_harmony.py",
+      "sha256": "1a4e09c66b17d3a8d19bed6b43978b951ba01b5a62feef1a2893d1e4e40f7d2a",
+      "size": 4177
+    },
+    {
+      "lfs": false,
+      "path": "llmjp4_tokenizer.py",
+      "sha256": "6bcbcf4e7088b4d2487cff4a47bda90e85d0440797a741667f016efbb13a34ed",
+      "size": 3876
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "130f3b4b3b29100abfa8ccdc174843003a2d397a4303ad9416c84ab0980e4fd5",
+      "size": 4982955968
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "807780b8ce247e829207d925fb686bde22a3b336de2fe618745b238569abe4ad",
+      "size": 4999819320
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "5d7131a52197fc00c8556cf17572fb9b808774d1193e76afee4ed562d14b745f",
+      "size": 4915916184
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "7115ce7f0c118fb35d705620ef4b952c917b6601089a2544c60267c3ea5b333b",
+      "size": 2281744072
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "421762e456b93c15a545ffbc34406ebc451e685cf0e00452dee4408d5f9254bf",
+      "size": 23950
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "1b031761a2ba4d98b731b79d9c432bc37fe3f7704857147bc2b4388bc8c5ad20",
+      "size": 1002
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "a35f390c6489427e4dcac7d957f34d9dacd7332972c990f4b4eb6b724c8873f4",
+      "size": 12879473
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "55aa3a433cbbde451a88b449dd46e5cacda76ed79a09347f105f6b08f438e5b2",
+      "size": 63800
+    },
+    {
+      "lfs": true,
+      "path": "v4_pretraining_overview.png",
+      "sha256": "24c21c60ca5a0b5c9a65841efd9ad98344dd66d4ac7f1fe80ea5100afefe40ef",
+      "size": 281924
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "llm-jp/llm-jp-4-8b-thinking",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9f484124f421341d908de2146edf1ced147eca8ef6f1fd5603fbacc812f92955",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:24:15Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/llm-jp/llm-jp-4-8b-thinking/resolve/fc7c15c262710016c19bcda4372a96ff68875846/"
+    }
+  ],
+  "upstream": {
+    "commit": "fc7c15c262710016c19bcda4372a96ff68875846",
+    "host": "huggingface.co",
+    "repo": "llm-jp/llm-jp-4-8b-thinking",
+    "url": "https://huggingface.co/llm-jp/llm-jp-4-8b-thinking/tree/fc7c15c262710016c19bcda4372a96ff68875846"
+  }
+}

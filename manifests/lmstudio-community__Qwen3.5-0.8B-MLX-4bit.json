@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T04:55:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5dcc7df0a8aed8c5d9a0a5c60e5ba22755723fc068707a52e704d7a9b4425fb4",
+      "size": 2265
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "size": 7755
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ba7770da23eae5ebd6827571f086e331956b33f4442a9e876fb4aa10969a6772",
+      "size": 3112
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "0ebd8360165ea52cd5ef064a71c4ab469c150125dda65704e94d701a2740c686",
+      "size": 625229523
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "6e48f2fa5d6f033a6d77bf833abfa9698ca24d1715ecea4c67447bcfaee44650",
+      "size": 71473
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "size": 390
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "45fc17c8dd2474af6b493b52483c26c0584b0082d368c480f9fa611e73070040",
+      "size": 991
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9f50d718d59f138165a491d1cd795d3e3074126a64d035f1229c98ac50c455a3",
+      "size": 9186
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "size": 385
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "size": 6722759
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/Qwen3.5-0.8B-MLX-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5dcc7df0a8aed8c5d9a0a5c60e5ba22755723fc068707a52e704d7a9b4425fb4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:55:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/Qwen3.5-0.8B-MLX-4bit/resolve/c9892b0295bceb223ffd3229aebd5a7ac73bb849/"
+    }
+  ],
+  "upstream": {
+    "commit": "c9892b0295bceb223ffd3229aebd5a7ac73bb849",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/Qwen3.5-0.8B-MLX-4bit",
+    "url": "https://huggingface.co/lmstudio-community/Qwen3.5-0.8B-MLX-4bit/tree/c9892b0295bceb223ffd3229aebd5a7ac73bb849"
+  }
+}

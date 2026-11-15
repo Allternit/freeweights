@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T03:21:44Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "878f3f3612bd98ade91207d1eae9d4fed2a61d1173ceeb004d55b10c9ccdc2aa",
+      "size": 953
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3e9a616ccc63fda490ca28b62ba5f480502a72a7812f0a46208f3c58785d3e27",
+      "size": 55801
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a2e0e3cdbc2e64ff166ef4be21566810a83dd7138903e0724c8c05e0dd4c26ee",
+      "size": 458634828
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "4b97fbc15390829e3b94069fdeccf0d053561d090e12d94789e4e71c531f93fc",
+      "size": 251875
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.vocab",
+      "sha256": "1bb9b52a1d2c3a6c6a4d6e9256a3152b78e0f1f4cdd32f235e9597436313e552",
+      "size": 10962
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "8c8f4d30b7f38860667339d4a30191ea5dad8a93a8576cb03013e42a4f658118",
+      "size": 5160
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/parakeet-tdt_ctc-110m",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "878f3f3612bd98ade91207d1eae9d4fed2a61d1173ceeb004d55b10c9ccdc2aa",
+    "id": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:21:44Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/parakeet-tdt_ctc-110m/resolve/d62547387c356a1ab6bb3d85d98b2103f655282e/"
+    }
+  ],
+  "upstream": {
+    "commit": "d62547387c356a1ab6bb3d85d98b2103f655282e",
+    "host": "huggingface.co",
+    "repo": "mlx-community/parakeet-tdt_ctc-110m",
+    "url": "https://huggingface.co/mlx-community/parakeet-tdt_ctc-110m/tree/d62547387c356a1ab6bb3d85d98b2103f655282e"
+  }
+}

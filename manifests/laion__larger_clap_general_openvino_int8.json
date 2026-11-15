@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:31:46Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+      "size": 31
+    },
+    {
+      "lfs": true,
+      "path": "laion--larger_clap_general.bin",
+      "sha256": "4c26d92c3c5100db9817f2ba1360be3e32e9bcc552c3257bbc3e089e5b5ddcce",
+      "size": 390020530
+    },
+    {
+      "lfs": false,
+      "path": "laion--larger_clap_general.xml",
+      "sha256": "95eb2973edfd762e9ad04a5d1afdccdfca245c5741ef6916660e1314808be738",
+      "size": 2644128
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/larger_clap_general_openvino_int8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:46Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/larger_clap_general_openvino_int8/resolve/1a3f2c34a29aae4c81169192b3b4d36cbfc4ecb8/"
+    }
+  ],
+  "upstream": {
+    "commit": "1a3f2c34a29aae4c81169192b3b4d36cbfc4ecb8",
+    "host": "huggingface.co",
+    "repo": "laion/larger_clap_general_openvino_int8",
+    "url": "https://huggingface.co/laion/larger_clap_general_openvino_int8/tree/1a3f2c34a29aae4c81169192b3b4d36cbfc4ecb8"
+  }
+}

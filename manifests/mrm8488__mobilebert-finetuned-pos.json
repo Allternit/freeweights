@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T02:49:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a368a21c472071feec9095f63d5f7d3433826c1c476a6995f072b6755ccc6f59",
+      "size": 399
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4ec778ca99eb1b6535a521c4a08ecbfab447c33948df8db3e3fd4513540823b3",
+      "size": 60
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f71282d7f8552a119f48f85b542e169a7d62e131a6e68716072b93412ad43391",
+      "size": 1843
+    },
+    {
+      "lfs": false,
+      "path": "eval_results.txt",
+      "sha256": "9b757dfe76a9d6ac97d2fa7e670fdbf08feba66f391adb7ddaabf2a2dac77128",
+      "size": 143
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "30b8aba6706bba177588e3163180bfa5cb90d4dfab8b686ae531cc30e15e45be",
+      "size": 98539982
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "7cc337dc38076d5a680b9ffb6579b6727d334b949fe242672609604dfcaf8271",
+      "size": 98684455
+    },
+    {
+      "lfs": true,
+      "path": "rust_model.ot",
+      "sha256": "30d7c326288068c3d252342a7572b3152638134a51d51e6a27b0e7c240f8d646",
+      "size": 98759735
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "359fdd360be3de14228b56e2ca9c6c940ff0b1a3dc88a5bf32bdeeb21ec7be9c",
+      "size": 62
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "5bc01b7a9373e92be2f363859b2dcc2a0f4b6d264603bb14ba1ed60ec4a7962d",
+      "size": 1201
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mrm8488/mobilebert-finetuned-pos",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4ec778ca99eb1b6535a521c4a08ecbfab447c33948df8db3e3fd4513540823b3",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:49:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mrm8488/mobilebert-finetuned-pos/resolve/9377cdbf755208f8781553fb74e7d68cbfc4763a/"
+    }
+  ],
+  "upstream": {
+    "commit": "9377cdbf755208f8781553fb74e7d68cbfc4763a",
+    "host": "huggingface.co",
+    "repo": "mrm8488/mobilebert-finetuned-pos",
+    "url": "https://huggingface.co/mrm8488/mobilebert-finetuned-pos/tree/9377cdbf755208f8781553fb74e7d68cbfc4763a"
+  }
+}

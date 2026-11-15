@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:43:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ede0f35c0edc457f9cd46f3ed5dab80114ff95a4bb43033c07336ccfe6ea7849",
+      "size": 837
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0738d36e0901d0a4d37150707e8710fe8fe8c58fee87fa7d38c0195bddbcf81b",
+      "size": 5569
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "59153a82d0e65fc00215f60f9ee54bbfa7d186d4e86ab084a40f15ca7c22441c",
+      "size": 69889
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "7773d31f101f1e5247d1f8bd1a7a2d3fa2f4f80e1bfe2ec6c65e529db7e3bb5c",
+      "size": 346132551
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "873a67558f17cdd9d9018eaf308288f6dc72d030af20391df9ccbb7e10be89cc",
+      "size": 349877750
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "8d9e0452826c2ff5376b1ba1520d83046a26b00c98d787521fe1e046ca0262c8",
+      "size": 276
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "5574866866a425d7fc2b21e400f064d67d3650529ef9b9ab6b1ff3f9b6c9cbb6",
+      "size": 349939883
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/beit-base-patch16-224",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0738d36e0901d0a4d37150707e8710fe8fe8c58fee87fa7d38c0195bddbcf81b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:43:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/beit-base-patch16-224/resolve/f02e8f77db4703e3fbd3766e3375a4619c5a4863/"
+    }
+  ],
+  "upstream": {
+    "commit": "f02e8f77db4703e3fbd3766e3375a4619c5a4863",
+    "host": "huggingface.co",
+    "repo": "microsoft/beit-base-patch16-224",
+    "url": "https://huggingface.co/microsoft/beit-base-patch16-224/tree/f02e8f77db4703e3fbd3766e3375a4619c5a4863"
+  }
+}

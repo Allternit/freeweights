@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T04:55:35Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "e071c5157a283eca499bd081dce577db8ed5ce12b359ea6d733dc94b41dcd787",
+      "size": 1848
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ba2ebe577ba159388640541408ce34242af648ec66e5187cb837f058855e89ef",
+      "size": 253
+    },
+    {
+      "lfs": true,
+      "path": "SmolVLM-Instruct-Q4_K_M.gguf",
+      "sha256": "dc80966bd84789de64115f07888939c03abb1714d431c477dfb405517a554af5",
+      "size": 1112242368
+    },
+    {
+      "lfs": true,
+      "path": "SmolVLM-Instruct-Q8_0.gguf",
+      "sha256": "9230bd316d2f56707f73bb29e852f1f10b597623ace85853d3f9617d5aac7763",
+      "size": 1927383680
+    },
+    {
+      "lfs": true,
+      "path": "SmolVLM-Instruct-f16.gguf",
+      "sha256": "1194899266ce8e57bf5495b6712870a0f14dddf01cfa72fe58cb55f748138dbc",
+      "size": 3626088320
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-SmolVLM-Instruct-Q8_0.gguf",
+      "sha256": "86b84aa7babf1ab51a6366d973b9d380354e92c105afaa4f172cc76d044da739",
+      "size": 592521344
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-SmolVLM-Instruct-f16.gguf",
+      "sha256": "670c0a23196cce1be845e704775c68a4f757e6aea6898314201b46529070bdb7",
+      "size": 872301824
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/SmolVLM-Instruct-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ba2ebe577ba159388640541408ce34242af648ec66e5187cb837f058855e89ef",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:55:35Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/SmolVLM-Instruct-GGUF/resolve/e75618fdae83145c487f1b4d8115bb02a5b58ecc/"
+    }
+  ],
+  "upstream": {
+    "commit": "e75618fdae83145c487f1b4d8115bb02a5b58ecc",
+    "host": "huggingface.co",
+    "repo": "ggml-org/SmolVLM-Instruct-GGUF",
+    "url": "https://huggingface.co/ggml-org/SmolVLM-Instruct-GGUF/tree/e75618fdae83145c487f1b4d8115bb02a5b58ecc"
+  }
+}

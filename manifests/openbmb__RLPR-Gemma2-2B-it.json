@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T03:35:41Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b6ddc16be6e69468e4ad5846fc022ef6bd25c707e18ed3d34148f3d4e8e40728",
+      "size": 2986
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "059c3c3ef28572e05bcfd2a79385a66ece44b642a67e32e162c37468cb514992",
+      "size": 821
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "98b8cb4fc64286d6ca2892d0ab5217c7744dde44972a2cd0aa4320080aa16f81",
+      "size": 170
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "998835c1fe4fc025af1cb1cc1d1fbf88afb938697b0f17b3d60ffac8c5bb5127",
+      "size": 4053649640
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "28fb255e37fc721d8eda58f1ccbd986f1a7f514a5332abff7c24a5632178a0b9",
+      "size": 2354716008
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "8449dd1f1b5963a3157304e4e55c3b87ae6c4fd5e43cec629bd968eeceab1248",
+      "size": 24281
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f65f1b09194276efdce220a63853039f7677e8f23d52a61e34e4089bf18eba2e",
+      "size": 644
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "5f7eee611703c5ce5d1eee32d9cdcfe465647b8aff0c1dfb3bed7ad7dbb05060",
+      "size": 34362873
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "size": 4241003
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "3486e75097485e46a935dbc70acb8481d5e7fe13171ef307aeb2761bc6a84dac",
+      "size": 47057
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/RLPR-Gemma2-2B-it",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b6ddc16be6e69468e4ad5846fc022ef6bd25c707e18ed3d34148f3d4e8e40728",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:35:41Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/RLPR-Gemma2-2B-it/resolve/0f9270b837cdf42377d2ad1ca0af503b9edd35c1/"
+    }
+  ],
+  "upstream": {
+    "commit": "0f9270b837cdf42377d2ad1ca0af503b9edd35c1",
+    "host": "huggingface.co",
+    "repo": "openbmb/RLPR-Gemma2-2B-it",
+    "url": "https://huggingface.co/openbmb/RLPR-Gemma2-2B-it/tree/0f9270b837cdf42377d2ad1ca0af503b9edd35c1"
+  }
+}

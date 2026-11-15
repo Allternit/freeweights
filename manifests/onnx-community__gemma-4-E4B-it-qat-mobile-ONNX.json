@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:22:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "3ea5f2eefe8a5334e1bc76ccdffcb2173b441287210806c61bacbea11032e170",
+      "size": 1940
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "08704f397f6c082f411e59b26b8f17eab3013decb9220419123ab86c40b83742",
+      "size": 28122
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "2f1b4d75d067bae3fe44e676721c7f077d243bc007156cb9c2f8b5836613d082",
+      "size": 17336
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c5e2488f0751eddd730b3e4f4ed8a82fdcf4240c54cccc33cd2119f5c9b85186",
+      "size": 6774
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "fb53f4c64e58896a63472e8eb304397db4a39453e1da0f5d57625ec5a8c1050e",
+      "size": 209
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q2f16.onnx",
+      "sha256": "6c59eb8373a1df298586cb75a45bb6038f1bed6494d67401a11eba9881e72206",
+      "size": 327391
+    },
+    {
+      "lfs": true,
+      "path": "onnx/audio_encoder_q2f16.onnx_data",
+      "sha256": "8a38307d61df5e6de0142b2b56f612827a27a23f00d076bd12491231cfda9104",
+      "size": 95076608
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q2f16.onnx",
+      "sha256": "3fc7e42aabdfd888a38abca2ec18724327e1d3da7a6f983b6a9d45c4fbe51a66",
+      "size": 1013800
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q2f16.onnx_data",
+      "sha256": "3858d5941c21ae80c55557d80be432634877c318bba164dd2fc7b84ba238139d",
+      "size": 2076424192
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q2f16.onnx_data_1",
+      "sha256": "b2a2e5bb409d8a55b0d723aa1d61c383ab95a8e4914041787e5c731aa68f557d",
+      "size": 352126976
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q2f16.onnx",
+      "sha256": "a456efb2ae6a1332972f07e26fc0b78f2a80076e2e308fd193267bd4ec92dade",
+      "size": 5486
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q2f16.onnx_data",
+      "sha256": "bc88d5e2bd20d8e543817c57e9f9c15c0a67881bcc95326cdf2310289b82a974",
+      "size": 899678208
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_fp16.onnx",
+      "sha256": "1631d0076a248b4c05a9288d922aa647c0b8c7e842d09352f0675472dfa1652f",
+      "size": 222153
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_fp16.onnx_data",
+      "sha256": "4bcd9437a87e4b887f037e896264e0df3afccc06533eff7dcb0db7f65918e86a",
+      "size": 188845760
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ea2ae257e901064abdd98dceb19f2b0da06af600bed15e0f99f5c85c37ee9d78",
+      "size": 511
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "7df7e062c54d160443fd723987cd885a55e869d3048e2c1b563a3a965c903f95",
+      "size": 1877
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/gemma-4-E4B-it-qat-mobile-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "08704f397f6c082f411e59b26b8f17eab3013decb9220419123ab86c40b83742",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:22:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/gemma-4-E4B-it-qat-mobile-ONNX/resolve/8bd93f348b091ba6976d502da00350b4ce133f36/"
+    }
+  ],
+  "upstream": {
+    "commit": "8bd93f348b091ba6976d502da00350b4ce133f36",
+    "host": "huggingface.co",
+    "repo": "onnx-community/gemma-4-E4B-it-qat-mobile-ONNX",
+    "url": "https://huggingface.co/onnx-community/gemma-4-E4B-it-qat-mobile-ONNX/tree/8bd93f348b091ba6976d502da00350b4ce133f36"
+  }
+}

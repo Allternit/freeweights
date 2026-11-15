@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T04:46:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f09cad4769d8dfbb485a80a9ced75eb214205cd13d3f09d2df82c34580c3e1d8",
+      "size": 28283
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "845f1ee48e39fc942fe190da9df6a1c5db229e17a96ea08966ad1c9274e73d1b",
+      "size": 18924
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9079d673f320e4a906586b1defe97eb2a65d944f8dca7f1eb9b17896e3cfddce",
+      "size": 20502
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e3527dfff6c0cdc69c9118b000165b0f2afc48665e23d6d9f61632ee44157b6f",
+      "size": 204
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6a34636fe9ab6eab87df7cd5afea2682a495b689d13be5778b7a5ed86ff85a28",
+      "size": 24765757504
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    {
+      "lfs": false,
+      "path": "recipe.yaml",
+      "sha256": "8d82612d1f85537ef60e70c97dc532aedc044f879e5c7bff3a6394192d69bbeb",
+      "size": 746
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "adbaa8175acf7609b4359724f40eff359ec4fac1a8647eeb99d4422be708e1cf",
+      "size": 32169726
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "04e06452d54505bd60fd2949cf3dcbe0e9f1dece1d025117796995494ad12ec6",
+      "size": 2718
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/gemma-4-31B-it-NVFP4",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f09cad4769d8dfbb485a80a9ced75eb214205cd13d3f09d2df82c34580c3e1d8",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:46:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/gemma-4-31B-it-NVFP4/resolve/373c00b5ecb0a8ee43942b5ca08b93805de8eee4/"
+    }
+  ],
+  "upstream": {
+    "commit": "373c00b5ecb0a8ee43942b5ca08b93805de8eee4",
+    "host": "huggingface.co",
+    "repo": "unsloth/gemma-4-31B-it-NVFP4",
+    "url": "https://huggingface.co/unsloth/gemma-4-31B-it-NVFP4/tree/373c00b5ecb0a8ee43942b5ca08b93805de8eee4"
+  }
+}

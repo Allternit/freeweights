@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:26:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d752aab5fb4dbdb246ed38e42c926961185b8fb6185c847a19c3d6ba2c80c5a8",
+      "size": 11328
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f5186d42d99c8a0445d37fd8a6c7ccf07fe3e24a29ce622d8bd245da9507b12b",
+      "size": 2613
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "da2f0354864454fe4a137fe07d5d6aaf25b973de0e7d241fa6ba29f81f3ee065",
+      "size": 1630
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c3db9366f689eea3c87ffb383b99186ce00157c24fcc59317f4f1a51f5d93d1a",
+      "size": 125
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "40db118a86509576789d22a89dc09db3a91a0963f602c44c76d6ca678f58a324",
+      "size": 14861802680
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "75f0d78a15d3bd663a07d3313056cf91b0d64ab45605501cb6dedbbe54817a3e",
+      "size": 7137556
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a3c5ce6b4d1ac9f798d6d15674c7ed984b0bfa5b5fa8d256d74fb71b4f583edb",
+      "size": 341
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/Olmo-Hybrid-Instruct-DPO-7B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d752aab5fb4dbdb246ed38e42c926961185b8fb6185c847a19c3d6ba2c80c5a8",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:26:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/Olmo-Hybrid-Instruct-DPO-7B/resolve/ec62da5af0106ab4e83a60e07c4796ff358fd204/"
+    }
+  ],
+  "upstream": {
+    "commit": "ec62da5af0106ab4e83a60e07c4796ff358fd204",
+    "host": "huggingface.co",
+    "repo": "allenai/Olmo-Hybrid-Instruct-DPO-7B",
+    "url": "https://huggingface.co/allenai/Olmo-Hybrid-Instruct-DPO-7B/tree/ec62da5af0106ab4e83a60e07c4796ff358fd204"
+  }
+}

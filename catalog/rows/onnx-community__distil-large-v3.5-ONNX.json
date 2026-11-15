@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "distil-whisper/distil-large-v3.5",
+  "display_name": "distil-large-v3.5-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/distil-large-v3.5-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/distil-large-v3.5-ONNX.json",
+  "note": "The license of the base model distil-whisper/distil-large-v3.5 applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "distil-whisper/distil-large-v3.5",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 120,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "variant",
+  "total_size": 14776932368,
+  "upstream_url": "https://huggingface.co/onnx-community/distil-large-v3.5-ONNX",
+  "what_changed": null
+}

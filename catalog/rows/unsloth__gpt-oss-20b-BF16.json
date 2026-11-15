@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/gpt-oss-20b",
+  "display_name": "gpt-oss-20b-BF16",
+  "family": "gpt-oss",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "unsloth/gpt-oss-20b-BF16",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/gpt-oss-20b-BF16.json",
+  "params": 20914757184,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/gpt-oss-20b",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.gpt-oss",
+  "signals": {
+    "downloads_30d": 21941,
+    "likes": 36,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T1",
+  "total_size": 41857495732,
+  "upstream_url": "https://huggingface.co/unsloth/gpt-oss-20b-BF16",
+  "what_changed": null
+}

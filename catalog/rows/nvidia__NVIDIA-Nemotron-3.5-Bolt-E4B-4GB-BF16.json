@@ -1,0 +1,44 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/gemma-4-E4B-it",
+  "display_name": "NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16",
+  "family": "nemotron",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16",
+  "kind": "model",
+  "license_class": "custom",
+  "license_id": "OpenMDW-1.1",
+  "license_terms": "OpenMDW 1.1: keep the agreement and the copyright notices with the files when you pass them on.",
+  "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16",
+  "manifest_url": "https://freeweights.allternit.com/manifests/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16.json",
+  "params": 7996156490,
+  "redistribution": "click-through",
+  "relation": {
+    "parent": "google/gemma-4-E4B-it",
+    "type": "finetune"
+  },
+  "requires_terms": true,
+  "section": "alt.freeweights.nemotron",
+  "signals": {
+    "downloads_30d": 29149,
+    "likes": 71,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 16055376406,
+  "upstream_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16",
+  "what_changed": null
+}

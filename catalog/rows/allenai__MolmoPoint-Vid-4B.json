@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/siglip-so400m-patch14-384",
+  "display_name": "MolmoPoint-Vid-4B",
+  "family": "olmo",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "allenai/MolmoPoint-Vid-4B",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/allenai/MolmoPoint-Vid-4B.json",
+  "params": 4862237657,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/siglip-so400m-patch14-384",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.olmo",
+  "signals": {
+    "downloads_30d": 262,
+    "likes": 13,
+    "trending": null
+  },
+  "tasks": [
+    "video-text-to-text"
+  ],
+  "tier": "T0",
+  "total_size": 19477828943,
+  "upstream_url": "https://huggingface.co/allenai/MolmoPoint-Vid-4B",
+  "what_changed": null
+}

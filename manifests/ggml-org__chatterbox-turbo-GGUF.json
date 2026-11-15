@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T05:12:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "43c0dddd4a591c6e4f907c15b471bc76ac68280eac702cfc33044f3f03bb32c3",
+      "size": 1714
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "f6958ca8ad47fc1fb586ab2f06772674891128fbd8ed0de19bddaca260342e68",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "50548991b17ea5d0f848857aab208bfce2e29f31264c16ef130e2c2ac466353d",
+      "size": 807
+    },
+    {
+      "lfs": true,
+      "path": "chatterbox-turbo-BF16.gguf",
+      "sha256": "cc9edbdeb112eacb14a62bf929eef8a7256eef02196e0765c0740d0215a10130",
+      "size": 874038112
+    },
+    {
+      "lfs": true,
+      "path": "chatterbox-turbo-Q8_0.gguf",
+      "sha256": "c3b93d3c65327ef5affbdf6c7975475782bb29bc70357c7e863e2d564cadf70f",
+      "size": 481791712
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "03c11d8019446eb36d5c65c41eaa5e42340e314314507bcef6ef058ac35a5035",
+      "size": 308467
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-chatterbox-turbo-F16.gguf",
+      "sha256": "de86b2ead959ba7ffc487ac2ba278e99aed0ef3b5bd04f083352b36c9b86738f",
+      "size": 555371392
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/chatterbox-turbo-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "50548991b17ea5d0f848857aab208bfce2e29f31264c16ef130e2c2ac466353d",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:12:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/chatterbox-turbo-GGUF/resolve/66f0393558d0ac1e0337e23a4d15f26e8eca0e12/"
+    }
+  ],
+  "upstream": {
+    "commit": "66f0393558d0ac1e0337e23a4d15f26e8eca0e12",
+    "host": "huggingface.co",
+    "repo": "ggml-org/chatterbox-turbo-GGUF",
+    "url": "https://huggingface.co/ggml-org/chatterbox-turbo-GGUF/tree/66f0393558d0ac1e0337e23a4d15f26e8eca0e12"
+  }
+}

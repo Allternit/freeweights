@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T05:13:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f766dee82456fa260bf9d053e8f279f88455779b85ef8668c4053f858594cecb",
+      "size": 1685
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "5d5e57261aef30a188c6fe8ac74e02de777f7e16a846485780d758f21f3e4093",
+      "size": 17006
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "959621f25fbe162f8b08e6db56062c9f5589274d125ce68f03d7a45f8de67db3",
+      "size": 938
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "9e28577f9e06c60184458fb81fef865cd061d85ab13ceb78b1161313734d7e30",
+      "size": 111
+    },
+    {
+      "lfs": false,
+      "path": "llmjp4_harmony.py",
+      "sha256": "1a4e09c66b17d3a8d19bed6b43978b951ba01b5a62feef1a2893d1e4e40f7d2a",
+      "size": 4177
+    },
+    {
+      "lfs": false,
+      "path": "llmjp4_tokenizer.py",
+      "sha256": "6bcbcf4e7088b4d2487cff4a47bda90e85d0440797a741667f016efbb13a34ed",
+      "size": 3876
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8ab22be3fa03721f4dcb23d460ef70dfc1278619bbfed582caaa5c2911aa07cc",
+      "size": 4832455570
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "7a2da3f0aca0c638db05e5821bd00d51ba81b4373888d34f595ea31db7f54499",
+      "size": 52421
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "15d5f21ae725fc96a5766271720bef30e132bfba89c11820a1e8612e5f643426",
+      "size": 12868031
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b09257b66f588a49b204072c962a28fdefba1f0033d053432083ba42e9c83f97",
+      "size": 660
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/llm-jp-4-8b-thinking-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f766dee82456fa260bf9d053e8f279f88455779b85ef8668c4053f858594cecb",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:13:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/llm-jp-4-8b-thinking-4bit/resolve/c0f9483ea14a6fb566f686882449d0ad4cf6d3e0/"
+    }
+  ],
+  "upstream": {
+    "commit": "c0f9483ea14a6fb566f686882449d0ad4cf6d3e0",
+    "host": "huggingface.co",
+    "repo": "mlx-community/llm-jp-4-8b-thinking-4bit",
+    "url": "https://huggingface.co/mlx-community/llm-jp-4-8b-thinking-4bit/tree/c0f9483ea14a6fb566f686882449d0ad4cf6d3e0"
+  }
+}

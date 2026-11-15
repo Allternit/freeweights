@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:23:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1eeb6881468cefcc8a7fdc0d5fa1de68ba6eb39dab9935272105827da6c1b460",
+      "size": 5543
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4fe1db27b5f72553fa0ee8e257e47ce27da78cae2b2c775e15bb1c3a9ffdbd99",
+      "size": 1714
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3a8dda640f9606cb82d3d2cfa8f6f97d271659b2e0031539109504a23472c406",
+      "size": 235
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b2a7c83d4ce0f22a218dd472c948e6e972f4c061d7751c8124df6facd4f3c719",
+      "size": 6040804520
+    },
+    {
+      "lfs": false,
+      "path": "model.sig",
+      "sha256": "874921362d190dbaf211d9203cc02338c3203b29f1a134cbd68c4dea16ba76d5",
+      "size": 9687
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c08676c49fd7969a3130f72be6d4bf34da66aa484a6e21dffe359893a1bd5f2e",
+      "size": 579
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d44f7e5085ab278d3fc497b2d4fda2da84074c62d2980817229919b007e45b1a",
+      "size": 7153467
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f7d756d106b80285c3f77c433e53a44bca3666111f14074a78ff0d80631b192e",
+      "size": 17710
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-swash-3b-a600m",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1eeb6881468cefcc8a7fdc0d5fa1de68ba6eb39dab9935272105827da6c1b460",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:23:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-swash-3b-a600m/resolve/568a94fcfeff42a8cab9ee2ffea89fde12071282/"
+    }
+  ],
+  "upstream": {
+    "commit": "568a94fcfeff42a8cab9ee2ffea89fde12071282",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-swash-3b-a600m",
+    "url": "https://huggingface.co/ibm-granite/granite-swash-3b-a600m/tree/568a94fcfeff42a8cab9ee2ffea89fde12071282"
+  }
+}

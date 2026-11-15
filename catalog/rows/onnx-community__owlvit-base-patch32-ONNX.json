@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/owlvit-base-patch32",
+  "display_name": "owlvit-base-patch32-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/owlvit-base-patch32-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/owlvit-base-patch32-ONNX.json",
+  "note": "The license of the base model google/owlvit-base-patch32 applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "google/owlvit-base-patch32",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 209,
+    "likes": 0,
+    "trending": null
+  },
+  "tasks": [
+    "zero-shot-object-detection"
+  ],
+  "tier": "variant",
+  "total_size": 1895217504,
+  "upstream_url": "https://huggingface.co/onnx-community/owlvit-base-patch32-ONNX",
+  "what_changed": null
+}

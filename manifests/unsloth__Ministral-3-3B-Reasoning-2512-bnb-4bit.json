@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:11:29Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4c3e8b7966b2c4ba51da6e96cdec96b24bea58798a825c14719bb3c00a6f870c",
+      "size": 17520
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "39f03c383413f531fd302c06c7e982ad98c83f0657a8339ae25478ccb81fdcda",
+      "size": 6206
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5e4883370995facb2669aac5f99c843d37ef163459ab705ef368eea4664abe2c",
+      "size": 2380
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e0923390059f84a9180b00e5501778acc45ea9856cd7f2fd68208b360927c677",
+      "size": 131
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "232eebb70e08d686db24aff506e4cb89bf760435bef397fb7155bcb34596e5a2",
+      "size": 3207330232
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "ece2373c2ae391bce18785a1810543bc6173a1f28b6767cffab2c35dbea5f002",
+      "size": 976
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "577575622324b2e099e2648be26bdeb5e5815ffe66d7004e9e3ddbf421db6bf1",
+      "size": 17078110
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "38d8dcc1aa2012176fdd357ebcc5d690e6f59bc372bb4f1de6d1a7a15dc525c4",
+      "size": 48580
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/Ministral-3-3B-Reasoning-2512-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4c3e8b7966b2c4ba51da6e96cdec96b24bea58798a825c14719bb3c00a6f870c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:11:29Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/Ministral-3-3B-Reasoning-2512-bnb-4bit/resolve/7d901678a864ef35f71c4b1a47b0953d6184d08b/"
+    }
+  ],
+  "upstream": {
+    "commit": "7d901678a864ef35f71c4b1a47b0953d6184d08b",
+    "host": "huggingface.co",
+    "repo": "unsloth/Ministral-3-3B-Reasoning-2512-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/Ministral-3-3B-Reasoning-2512-bnb-4bit/tree/7d901678a864ef35f71c4b1a47b0953d6184d08b"
+  }
+}

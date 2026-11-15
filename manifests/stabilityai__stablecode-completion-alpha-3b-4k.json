@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:41:36Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "102d6eb6e3ce82deefff42b2277a1f2444b6f95faf42c95c1d3cf0d3754110e3",
+      "size": 4773
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "8a98ebb2ab8f96d880de0f36028b275ec640f9dc35b56c25aa776d2b4cdc95e8",
+      "size": 600
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "110e38640986e8470cc61c3414874d45567f0f25db95dd3b717152f0e414b1b2",
+      "size": 111
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "735f6daa3494b922e0c890eef130f8efddc27480e70f80ba9593aa5a37b58c31",
+      "size": 6075549856
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "9d35a68e0076eb4e1b6d671ba5a329a83384cf97cdd04a269ffd9e9d370a0182",
+      "size": 6075650877
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size": 3
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "9af07a3123a1f4d75dcb85fbdc4c62f9b7873d23fa39c449d2240c3e33eb3ab5",
+      "size": 2057423
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0bd6e22165bbd9bccd0afd612874c01f07a20b1f8a8b9fa157c73e7e127dcac4",
+      "size": 146
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "stabilityai/stablecode-completion-alpha-3b-4k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "102d6eb6e3ce82deefff42b2277a1f2444b6f95faf42c95c1d3cf0d3754110e3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:41:36Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/stabilityai/stablecode-completion-alpha-3b-4k/resolve/7ccb1408b35c33832be9760138d621196e524866/"
+    }
+  ],
+  "upstream": {
+    "commit": "7ccb1408b35c33832be9760138d621196e524866",
+    "host": "huggingface.co",
+    "repo": "stabilityai/stablecode-completion-alpha-3b-4k",
+    "url": "https://huggingface.co/stabilityai/stablecode-completion-alpha-3b-4k/tree/7ccb1408b35c33832be9760138d621196e524866"
+  }
+}

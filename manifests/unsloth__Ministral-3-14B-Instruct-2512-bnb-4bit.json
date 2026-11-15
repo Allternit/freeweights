@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T04:54:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "77b609a70159a6040151f1ca8f914ffd91eab9e504ccace8007558b44cdf2093",
+      "size": 20855
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "60f2c46b196c943f09726ce8b0abd1de152888d8dc83b7fd16c5725c125b71dd",
+      "size": 7504
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "90848046d5693fffb4c2fde4a201fb36defaab54cef2735155182c625bff023b",
+      "size": 2351
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e0923390059f84a9180b00e5501778acc45ea9856cd7f2fd68208b360927c677",
+      "size": 131
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "c286fc176fae39badc86095e7de53fee1b1e0c67e9ca696fa17b05ec823d5396",
+      "size": 4967578210
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "0a6919d7b7998eb7c92947b1b19c88a0d11cd2162a74acf1a875ef70dc4b7d92",
+      "size": 4870906236
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "aa84df67228e823c338337f05af86dc77e7a78e2006ab8d0e05cdf31505b572d",
+      "size": 214433
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "ece2373c2ae391bce18785a1810543bc6173a1f28b6767cffab2c35dbea5f002",
+      "size": 976
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "577575622324b2e099e2648be26bdeb5e5815ffe66d7004e9e3ddbf421db6bf1",
+      "size": 17078110
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "61647fed09c0b5fbd94e931004896355c4396bc3d271d2f0264ef876afdf1343",
+      "size": 175910
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/Ministral-3-14B-Instruct-2512-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "77b609a70159a6040151f1ca8f914ffd91eab9e504ccace8007558b44cdf2093",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:54:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/Ministral-3-14B-Instruct-2512-bnb-4bit/resolve/16b0a2b68607ad9e0b4d6db75f5bd2384040683c/"
+    }
+  ],
+  "upstream": {
+    "commit": "16b0a2b68607ad9e0b4d6db75f5bd2384040683c",
+    "host": "huggingface.co",
+    "repo": "unsloth/Ministral-3-14B-Instruct-2512-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/Ministral-3-14B-Instruct-2512-bnb-4bit/tree/16b0a2b68607ad9e0b4d6db75f5bd2384040683c"
+  }
+}

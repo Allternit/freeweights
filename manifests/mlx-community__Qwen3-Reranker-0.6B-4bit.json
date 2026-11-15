@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:00:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e560db1813f60798fbbf0e38b34aaf581efcca70ef5b620f2eb31032304f4b7e",
+      "size": 1890
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "6f682162495ec5b39fd9005c01b6aa2a74669379fe967039f1e2cbbe8752369d",
+      "size": 741
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "09adff58b65e9305009c9caa4923b3365b18dd2f84135b44168aaf869278bea4",
+      "size": 1021
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "81051cd3f6e77013827148d0b8a6ead93f8ac390d5ab805f849199f0af6a08db",
+      "size": 214
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1d212560a5b1c36186787fdae19f11f20fecfc29bef91522e12a8e0d118f4545",
+      "size": 335296756
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "90d82744cdb6b7d093f0b812fc21a49b6ffa9d0084a45428f0cfd01eb4adbe12",
+      "size": 49770
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "1689852cc9c45010de040c8302a8acdc0d2c4c6c740dd7e9dd0a8c704e16eada",
+      "size": 377
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwen3-Reranker-0.6B-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e560db1813f60798fbbf0e38b34aaf581efcca70ef5b620f2eb31032304f4b7e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:00:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwen3-Reranker-0.6B-4bit/resolve/5f324548f1d20c2b5a450f126fc6ef2fb1126524/"
+    }
+  ],
+  "upstream": {
+    "commit": "5f324548f1d20c2b5a450f126fc6ef2fb1126524",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwen3-Reranker-0.6B-4bit",
+    "url": "https://huggingface.co/mlx-community/Qwen3-Reranker-0.6B-4bit/tree/5f324548f1d20c2b5a450f126fc6ef2fb1126524"
+  }
+}

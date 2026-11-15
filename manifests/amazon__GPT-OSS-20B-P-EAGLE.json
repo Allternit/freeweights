@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T03:46:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "70aae84b288058789c8dd428ff11c3e274a0906a8b357b8ec5d20324cff5f2d9",
+      "size": 4061
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a05c33df75298b3fcdeae2e94516380100106db4d726e8fefa2f9a09921f26e5",
+      "size": 931
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a55b7db678f469fd184fe4a399dc048030d139e888fe5736c50436bf14a3bcc2",
+      "size": 3600921648
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/GPT-OSS-20B-P-EAGLE",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "70aae84b288058789c8dd428ff11c3e274a0906a8b357b8ec5d20324cff5f2d9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gpt-oss",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:46:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/GPT-OSS-20B-P-EAGLE/resolve/05a61ee59c8ff1bb3ca544a7d8803410c89122f9/"
+    }
+  ],
+  "upstream": {
+    "commit": "05a61ee59c8ff1bb3ca544a7d8803410c89122f9",
+    "host": "huggingface.co",
+    "repo": "amazon/GPT-OSS-20B-P-EAGLE",
+    "url": "https://huggingface.co/amazon/GPT-OSS-20B-P-EAGLE/tree/05a61ee59c8ff1bb3ca544a7d8803410c89122f9"
+  }
+}

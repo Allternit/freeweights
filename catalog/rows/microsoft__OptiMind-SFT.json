@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "unsloth/gpt-oss-20b-BF16",
+  "display_name": "OptiMind-SFT",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "microsoft/OptiMind-SFT",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/microsoft/OptiMind-SFT.json",
+  "params": 20914757184,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "unsloth/gpt-oss-20b-BF16",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 639,
+    "likes": 112,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 41857492685,
+  "upstream_url": "https://huggingface.co/microsoft/OptiMind-SFT",
+  "what_changed": null
+}

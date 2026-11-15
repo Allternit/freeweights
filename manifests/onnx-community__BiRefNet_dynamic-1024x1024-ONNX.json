@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T05:26:05Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "24a277197a47f68176f3d01fbb7eb74094d1faf3aee1ce02f10abf6bf0202df8",
+      "size": 4307
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "88b20240c9078cf9cc3843dc7d69a42d274b8c242de56a3b2a41ef9995cb93bf",
+      "size": 30
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "aa3c17882a27f079fafa7655cf50e83b9e6e067d6c6fa4cbc3524ae441da0bd7",
+      "size": 972495971
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "ee32f829fbf050fd501e53ed330369a71a0cbc69b9ab574da13d18ecbfa93dca",
+      "size": 489811221
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "447d9ccb2c4129ab0ca045fc293e7d79dbc45e293ac1e94818d865db77f65a54",
+      "size": 391
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/BiRefNet_dynamic-1024x1024-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "24a277197a47f68176f3d01fbb7eb74094d1faf3aee1ce02f10abf6bf0202df8",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:26:05Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/BiRefNet_dynamic-1024x1024-ONNX/resolve/6defd3a19cec21042b178108815c9c4508d09867/"
+    }
+  ],
+  "upstream": {
+    "commit": "6defd3a19cec21042b178108815c9c4508d09867",
+    "host": "huggingface.co",
+    "repo": "onnx-community/BiRefNet_dynamic-1024x1024-ONNX",
+    "url": "https://huggingface.co/onnx-community/BiRefNet_dynamic-1024x1024-ONNX/tree/6defd3a19cec21042b178108815c9c4508d09867"
+  }
+}

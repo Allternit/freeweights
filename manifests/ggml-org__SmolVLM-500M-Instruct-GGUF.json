@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T04:38:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "2a66b6e2c3eb20c9728382850391a94f751046238c189e7fa614f88ff5df1371",
+      "size": 1803
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "39541291e1d9b4fb82db1c1709024f700c9cd8cd79eb1e07c5351f1c958cf106",
+      "size": 268
+    },
+    {
+      "lfs": true,
+      "path": "SmolVLM-500M-Instruct-Q8_0.gguf",
+      "sha256": "9d4612de6a42214499e301494a3ecc2be0abdd9de44e663bda63f1152fad1bf4",
+      "size": 436806912
+    },
+    {
+      "lfs": true,
+      "path": "SmolVLM-500M-Instruct-f16.gguf",
+      "sha256": "26c2ee46ef9f8472b3d305a71703153a55f4f2c3baaa12ff5feb566fddb65343",
+      "size": 820422912
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-SmolVLM-500M-Instruct-Q8_0.gguf",
+      "sha256": "d1eb8b6b23979205fdf63703ed10f788131a3f812c7b1f72e0119d5d81295150",
+      "size": 108783360
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-SmolVLM-500M-Instruct-f16.gguf",
+      "sha256": "4b2fca922e549e9b9608f4ba56f93565dd5220e935ba5570a2a864a0fcc988a6",
+      "size": 199468800
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/SmolVLM-500M-Instruct-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "39541291e1d9b4fb82db1c1709024f700c9cd8cd79eb1e07c5351f1c958cf106",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:38:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/SmolVLM-500M-Instruct-GGUF/resolve/72e986006ef53e37cdd3f6d4241c90b0f01df376/"
+    }
+  ],
+  "upstream": {
+    "commit": "72e986006ef53e37cdd3f6d4241c90b0f01df376",
+    "host": "huggingface.co",
+    "repo": "ggml-org/SmolVLM-500M-Instruct-GGUF",
+    "url": "https://huggingface.co/ggml-org/SmolVLM-500M-Instruct-GGUF/tree/72e986006ef53e37cdd3f6d4241c90b0f01df376"
+  }
+}

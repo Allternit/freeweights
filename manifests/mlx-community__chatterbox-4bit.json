@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:09:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "73b4221dd26d36797b93ed5bc49bb5435507ac340e39d4ad6325976d187fb73f",
+      "size": 1562
+    },
+    {
+      "lfs": false,
+      "path": "Cangjie5_TC.json",
+      "sha256": "7073fd9de919443ae88e0bd2449917a65fe54898a4413ed1edcc4b67f28bce8c",
+      "size": 1920163
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ad5ff84bd7b372adf8c5ba98c83e54b547f8360b4e71cf584a4af90983784352",
+      "size": 2486
+    },
+    {
+      "lfs": true,
+      "path": "conds.safetensors",
+      "sha256": "709e5a7fa80e010a011c8244f553853aed7a49c106fff54008fbd89a0f5a6148",
+      "size": 105316
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f263efaa538f4409a2f65661bef99fb435030ff0e2dc05481d7936f2019c7f9e",
+      "size": 336
+    },
+    {
+      "lfs": true,
+      "path": "ko.wav",
+      "sha256": "7f841587b1f264b8a3183ee7e1cf06e74d50c9ecb8711af282e9c9e8c34ca2f0",
+      "size": 326478
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "85fae2e4b09100e942c1c59481b8e8707916b49e58473fbe0a5cca281dbbadc4",
+      "size": 607246626
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "f013ba172336581d1637d4b66a91d2d78385f8dc0c376965a3dd1a301722916c",
+      "size": 355942
+    },
+    {
+      "lfs": false,
+      "path": "models--ResembleAI--chatterbox/snapshots/05e904af2b5c7f8e482687a9d7336c5c824467d9/Cangjie5_TC.json",
+      "sha256": "7073fd9de919443ae88e0bd2449917a65fe54898a4413ed1edcc4b67f28bce8c",
+      "size": 1920163
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "df81a7ca7c31796cbe97f7a7142d5a53b12e88e12417ebe98f66602cafaf0461",
+      "size": 70011
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/chatterbox-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ad5ff84bd7b372adf8c5ba98c83e54b547f8360b4e71cf584a4af90983784352",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/chatterbox-4bit/resolve/f1d7b9696e1b6242e64eb8c4a823b6d1a50425a8/"
+    }
+  ],
+  "upstream": {
+    "commit": "f1d7b9696e1b6242e64eb8c4a823b6d1a50425a8",
+    "host": "huggingface.co",
+    "repo": "mlx-community/chatterbox-4bit",
+    "url": "https://huggingface.co/mlx-community/chatterbox-4bit/tree/f1d7b9696e1b6242e64eb8c4a823b6d1a50425a8"
+  }
+}

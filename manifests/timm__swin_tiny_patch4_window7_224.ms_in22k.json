@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:22:17Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "829996e07ac06fc2eed2a35646fee8105ca516ebe0b9b8c8c21fd17f5588d778",
+      "size": 4427
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "3427e8edcdfe87ef212e2b0d4d66c1a53fad727498ea3b996b84ce92bb1626e0",
+      "size": 640
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7437aadea3a734351fae2d2a29cbc124d71d4aeec8f075358fb7edccdf6d5216",
+      "size": 178393870
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "672c2d49ed419832d81c537578ceaa8d6b9b277205987285f17bef47767dd6b2",
+      "size": 178443909
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/swin_tiny_patch4_window7_224.ms_in22k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "829996e07ac06fc2eed2a35646fee8105ca516ebe0b9b8c8c21fd17f5588d778",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:22:17Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/swin_tiny_patch4_window7_224.ms_in22k/resolve/dec7a5f0eb3872d02bf7aa22bf1af2025cc0d114/"
+    }
+  ],
+  "upstream": {
+    "commit": "dec7a5f0eb3872d02bf7aa22bf1af2025cc0d114",
+    "host": "huggingface.co",
+    "repo": "timm/swin_tiny_patch4_window7_224.ms_in22k",
+    "url": "https://huggingface.co/timm/swin_tiny_patch4_window7_224.ms_in22k/tree/dec7a5f0eb3872d02bf7aa22bf1af2025cc0d114"
+  }
+}

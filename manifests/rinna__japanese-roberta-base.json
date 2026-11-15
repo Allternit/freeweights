@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:45:02Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f888dc7c230287cd68af7034aa9fc2e2d6663fb7b3e70faa153caf93877914c3",
+      "size": 744
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "70867b0297b915d2b20eb66bccc0e02863d399ed65ee1d6088831a4c34bb0faf",
+      "size": 5493
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ecda315f625b181d3465e352f0c396a66514b8d2c8b90e9568da41ecf61b8579",
+      "size": 663
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "21c5ab7fd7b473eded40e4f1ed71a2505b4aa56339f633564ed68fefc419e5b2",
+      "size": 442638084
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "0f8b82568ffba99a6a4ecdbec6951a64b9dd51e07fbf7b9d8f09352a54f0a668",
+      "size": 442698397
+    },
+    {
+      "lfs": false,
+      "path": "rinna.png",
+      "sha256": "bf81b8c108850c6db015683c86b256063125f909fc796f7d42bc929ffba171ab",
+      "size": 60349
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "a4fdf54099a0e4b6d81bff96557662ef8ef3ccd9e5a5fbdb8117b33fe1c608b5",
+      "size": 153
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "b5cbdfa8aa7c54c8c5af85b78c309c54a5f2749a20468bf6f60eee007fe6fec1",
+      "size": 805634
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "7523f2517150b2193b087c09f30e16d8441dd11b74b3c61821d37ed5e4a0c994",
+      "size": 542782072
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e82544af5a25661897aa5d063ebad9a3bf8389ab643a25061889cd601cadde58",
+      "size": 259
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "rinna/japanese-roberta-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "70867b0297b915d2b20eb66bccc0e02863d399ed65ee1d6088831a4c34bb0faf",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:45:02Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/rinna/japanese-roberta-base/resolve/f93982a6f5a8bb9fd483b9deedae693091114b33/"
+    }
+  ],
+  "upstream": {
+    "commit": "f93982a6f5a8bb9fd483b9deedae693091114b33",
+    "host": "huggingface.co",
+    "repo": "rinna/japanese-roberta-base",
+    "url": "https://huggingface.co/rinna/japanese-roberta-base/tree/f93982a6f5a8bb9fd483b9deedae693091114b33"
+  }
+}

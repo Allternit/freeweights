@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:27:08Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ba44193cf00eb237e2824cbfa212775d626f48f7c4caa3e630deda0908552db2",
+      "size": 1828
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0cad023576495fad111933d4d33e75d44d48a18daccf0503533d54f00e8c022b",
+      "size": 5457
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b41ff529b98f18963243a8660c97cd228eafef991a52a34ec7c7123afadbfe95",
+      "size": 928
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "1daa4a1ed4dcd582a8f6af5e906890f42c51362fa8a8c18c27eff8b5853daae8",
+      "size": 107836
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "83545ec299add9c96ca31bb25810de37c261db4f43cab3841cf770ca7593e083",
+      "size": 995115612
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "d5ffacde559e1327cd127a7103c2b72997c16fadf56366f2c348b6ae5c6b079e",
+      "size": 108950
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "56b294b3dbf24bdcedf779f3015ab2a37096f07c173a47a18e00681f4a427c7a",
+      "size": 497557806
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "92572045e3f215ecfb0efbc4a1676a1f39e1c94c8d032eb53d87acf49051223b",
+      "size": 134836
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "c5fc25e101bbe4d627ad4ec3989fad7783e95055f2f29a272bf07b2dd29c2254",
+      "size": 432032124
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "980c92acd4696d42c49db80a9c6245da69e7fe7ee4921826c719ffe29c108cff",
+      "size": 135829
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "8ab83337fc83c3bf0cefedb3eea038674e54d9771826601ace0f7d25f58c650c",
+      "size": 257725950
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "30d3b60a93876e8fb58eb2bf1c93d119757e248466c128631338abd8a7e4fe4c",
+      "size": 1157217
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx_data",
+      "sha256": "388629011a6b90d28fea4f47c854e357e52208f0ca44856e34eacfd7453e127d",
+      "size": 249467484
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "size": 125
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "9eb451967eeffc80947f03298303c71cee926798fd64b371daf03d0ab5f6830b",
+      "size": 2485385
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5cd1c0eb7bf21b38e08a53716a2b5d335f41e0689256918bc65ef32fa52380a9",
+      "size": 358
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "87b44292b452f6c05afa49b2e488e7eedf79ea4f4c39db6f2f4b37764228ef3f",
+      "size": 871891
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/bert-base-multilingual-uncased-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0cad023576495fad111933d4d33e75d44d48a18daccf0503533d54f00e8c022b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:27:08Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/bert-base-multilingual-uncased-ONNX/resolve/4ae43fa55c3f4c552aed42a887caac0aa89c56b2/"
+    }
+  ],
+  "upstream": {
+    "commit": "4ae43fa55c3f4c552aed42a887caac0aa89c56b2",
+    "host": "huggingface.co",
+    "repo": "onnx-community/bert-base-multilingual-uncased-ONNX",
+    "url": "https://huggingface.co/onnx-community/bert-base-multilingual-uncased-ONNX/tree/4ae43fa55c3f4c552aed42a887caac0aa89c56b2"
+  }
+}

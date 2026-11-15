@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T05:06:49Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9bf5e1e542b169159e2cd1e5fa34ddb56ba4c6ecfb6053ccc1dd0fbac87de53b",
+      "size": 4381
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "a0c0ed8a45c2c75c85fd756316a10419b90eb4f3dbe64d00f5c0b8ad4de5209a",
+      "size": 11362
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "762085678e3636a0c0f75f7dc21070cacaefa7353b5ed3d62b7d429d9ebe0ce5",
+      "size": 59792
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "c5ee59a086c5504838db2a66cafdf04d10aac11cb021dd4e92a15946645c2dda",
+      "size": 175
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "1cf1a379b42378f9c8595613f0fbc5d3ef15175b2e3bce4d60358b1e531ebee1",
+      "size": 2632
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "46a7390bf187bcb8e43dfa72e5bb01ca83b0929241a701a607c95a6b5b8bd57d",
+      "size": 5366369410
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "33568bd65c5d91c986329b26f67498a2d245437d720e7ba6b987911e98a39278",
+      "size": 5320519894
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "14b78ec45bb74103f41bd53c72f5188fbbca031ecf8b9783b28b084a22b9bce0",
+      "size": 5089885786
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "9b2d16aaabf27e4192896d1501a78133414ab8a78f47164a0e19e08a65abdac7",
+      "size": 713032028
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "fc3d6f9daa79b5fd8f2baf696858f2a0df0adca279bbe7ef22eec670430457ab",
+      "size": 114507
+    },
+    {
+      "lfs": true,
+      "path": "optiq/optiq_vision.safetensors",
+      "sha256": "4fb2468dac47cac39a417e5c6c92986a83f7ef6f8c1e0368d360b405423f9cca",
+      "size": 877948622
+    },
+    {
+      "lfs": false,
+      "path": "optiq_metadata.json",
+      "sha256": "d48ff1ee334815b5c11ef3992791f4ea204a63a00a7ddb70482bd6ae38a29467",
+      "size": 28974
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "99cf274236c60277fcfad861a5a1007518687ad06ba8938760f50b55ffa0b1ef",
+      "size": 17077420
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "18eabce09b32ab85cd82f1f7c0d146fe9f52f887da47df12ebfff49a74f2c0fc",
+      "size": 21223
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Devstral-Small-2-24B-Instruct-2512-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9bf5e1e542b169159e2cd1e5fa34ddb56ba4c6ecfb6053ccc1dd0fbac87de53b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:06:49Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Devstral-Small-2-24B-Instruct-2512-OptiQ-4bit/resolve/94c7ea45233b0f671b66479a49709856e77bb2ef/"
+    }
+  ],
+  "upstream": {
+    "commit": "94c7ea45233b0f671b66479a49709856e77bb2ef",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Devstral-Small-2-24B-Instruct-2512-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Devstral-Small-2-24B-Instruct-2512-OptiQ-4bit/tree/94c7ea45233b0f671b66479a49709856e77bb2ef"
+  }
+}

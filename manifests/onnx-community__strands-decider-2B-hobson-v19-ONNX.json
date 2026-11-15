@@ -1,0 +1,156 @@
+{
+  "created_at": "2026-11-15T05:19:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "807ae7ac008f3483d66e09d3f4d1272d4f68ca1444c8a29dff1e673eccaa99f0",
+      "size": 1700
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e229bf9403a74cdcfec008f3a0c7318554ec59f79a8f7c12d1398d43dfa21d84",
+      "size": 4568
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "707931b0fef6a8581964f6dc5f6ae97ba8cab078cfb5c9cfff958272e8146343",
+      "size": 1806
+    },
+    {
+      "lfs": false,
+      "path": "conversion/bench_check.py",
+      "sha256": "9ca2454d5ea8564e5b430d2e0f35feb217d939ab7d6b35e6be8fa2cbb4f0b570",
+      "size": 1806
+    },
+    {
+      "lfs": false,
+      "path": "conversion/bench_onnx.py",
+      "sha256": "bdcee6036e1a893eb573d0c7cb66a1bc142d9b3d04bbd8037e278be42235d227",
+      "size": 3969
+    },
+    {
+      "lfs": false,
+      "path": "conversion/build_onnx.py",
+      "sha256": "359d546df97ebaa039ecb436178cca7eefa66354cc5e58fba09b04a4730d9a6b",
+      "size": 12040
+    },
+    {
+      "lfs": false,
+      "path": "conversion/download.py",
+      "sha256": "397acf9612c3795075fd6b8f252a0fb175fed8d796333837d02918ad7e515fb4",
+      "size": 803
+    },
+    {
+      "lfs": false,
+      "path": "conversion/fixtures/reference.json",
+      "sha256": "42a9c15678209763dcfadb969e839adea0937dd23b0abc72fe29622523684c23",
+      "size": 31108
+    },
+    {
+      "lfs": false,
+      "path": "conversion/fixtures/requests.json",
+      "sha256": "b337132b79990533d1e7d6f02a64d117f90eb0e51a5d9e3653d3bcf8cf535dd8",
+      "size": 2306
+    },
+    {
+      "lfs": false,
+      "path": "conversion/fuse.py",
+      "sha256": "aa70fe168ac5f6f5ec24695553c54041309164fa24dd90d92df3ec15e8024a6d",
+      "size": 7102
+    },
+    {
+      "lfs": false,
+      "path": "conversion/make_repo.py",
+      "sha256": "d4aa761696be254e2be2ce3daec6f5026a2a29fddb8b383ac475a4e2c859e97a",
+      "size": 2601
+    },
+    {
+      "lfs": false,
+      "path": "conversion/parity.py",
+      "sha256": "8afe19ab34c04da7388a8e3f2f1eb3cf5e786f318908b51362a1588f0462c82d",
+      "size": 3373
+    },
+    {
+      "lfs": false,
+      "path": "conversion/parity_fused.py",
+      "sha256": "8205e89dbae071a630eba8d64faaeff7b311b3a40e512754a1240f8ab18b02e6",
+      "size": 2099
+    },
+    {
+      "lfs": false,
+      "path": "conversion/qwen3_5_opt_mapping.json",
+      "sha256": "67fae39e0923e3e097c43b5871f8127986581d1f13d8454ff788a21a44ef86a3",
+      "size": 78931
+    },
+    {
+      "lfs": false,
+      "path": "conversion/reference.py",
+      "sha256": "8a506aee32a0ebf682b9ce53ec2b2dfb54348d1025dc836f27c2633cba782aab",
+      "size": 2524
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "8ee20666f274ebb3774bc98e0026f3bab9cffd3796440c73d7700169e756b68a",
+      "size": 527999
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "d442842f1c5db3dd5b84ac35f683b408a1330075dae6f8f51dcdc5154b64f920",
+      "size": 1093105664
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "d156ecf442aaceccd891864b709a7acbea558e382fb1253a7eb8e53c48f46b23",
+      "size": 515126
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx_data",
+      "sha256": "0b92e9b7ff19b21c478ae056af397addd0f674180637b4850967fbe8849b21cf",
+      "size": 1800931328
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "a2cdd2e108566b09079afa8d266e9e65e7c280f27b771218237a06de5ba9cd86",
+      "size": 19989592
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45",
+      "size": 1128
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/strands-decider-2B-hobson-v19-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e229bf9403a74cdcfec008f3a0c7318554ec59f79a8f7c12d1398d43dfa21d84",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:19:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/strands-decider-2B-hobson-v19-ONNX/resolve/31a83e0244b26d939ae33f87189d6c8204003e53/"
+    }
+  ],
+  "upstream": {
+    "commit": "31a83e0244b26d939ae33f87189d6c8204003e53",
+    "host": "huggingface.co",
+    "repo": "onnx-community/strands-decider-2B-hobson-v19-ONNX",
+    "url": "https://huggingface.co/onnx-community/strands-decider-2B-hobson-v19-ONNX/tree/31a83e0244b26d939ae33f87189d6c8204003e53"
+  }
+}

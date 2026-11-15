@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T02:51:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "764beaba9aaf73406c0c4e1976f1ad7d5b6f13289813be6f84bb6d63808f0cb0",
+      "size": 17125
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d40e08d04a0efefe634158b8585412cb333b8019966c3f788bdae49074ce634e",
+      "size": 609
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e9a6fc6755330e6da09ba04b1137c4db0744faafc0fa609ff378fd6989518295",
+      "size": 115
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "0c3e846f50db22b38cd06e3628b0bfe10f814e01217a5ac837dd2aa39ae18121",
+      "size": 4707070632
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "0b45bdac8c7291f3b566d201ba39560d7d1696bbe43a6a0b50666c052c5b42a1",
+      "size": 412090496
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "fef1fef6deb95bc610ad6feda0063c91e0a766ed1e4610e26d6d2c7a9f14de33",
+      "size": 9252
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b77491e270c6fcc5b2ecf22370f7318a6a18d3cabea09ba7bab92e9bf12656c2",
+      "size": 65
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "a094266ac6c4982efba277bc251349a5a6d6ad37efb39a2a90f53d8be2a40a40",
+      "size": 2115417
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "78a839c7851f14f9fb30e664c2b46166dc0628f2900679e5ec160656f702edff",
+      "size": 5372
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "allenai/OLMo-1B-0724-hf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "764beaba9aaf73406c0c4e1976f1ad7d5b6f13289813be6f84bb6d63808f0cb0",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:51:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/allenai/OLMo-1B-0724-hf/resolve/d7cbab742d80589e714b1a2d7f838dcd21cbe143/"
+    }
+  ],
+  "upstream": {
+    "commit": "d7cbab742d80589e714b1a2d7f838dcd21cbe143",
+    "host": "huggingface.co",
+    "repo": "allenai/OLMo-1B-0724-hf",
+    "url": "https://huggingface.co/allenai/OLMo-1B-0724-hf/tree/d7cbab742d80589e714b1a2d7f838dcd21cbe143"
+  }
+}

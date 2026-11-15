@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T04:44:57Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "e67e0c99ea4788fde2da57e850f38e773adfeb8b367f04d1f80853fcd448e4fe",
+      "size": 1769
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "c5610fbde988f5d26831a6606471a62b2d31e7c3c7112453bbdecad6754d968f",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "addbae9b023d58a0b01c8be3af9669bc32a3817c36dd1d8e1b7cdf072f57bbc9",
+      "size": 546
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "7dda46d37ff81daf4a50f5cd12d03aa4825c0bbffb4d0b2be050da8d3c9ac1a7",
+      "size": 153238
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-vllm-d3-nano-BF16.gguf",
+      "sha256": "1d06d8b0f828f3b895372bd2745480ed25bfb3920309a5597c460ce32d965ebf",
+      "size": 671372928
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-vllm-d3-nano-Q8_0.gguf",
+      "sha256": "b778993a051d604757dda94a554ba870bf6e685909c44e7399d71ffb73e0e58f",
+      "size": 364664448
+    },
+    {
+      "lfs": true,
+      "path": "vllm-d3-nano-BF16.gguf",
+      "sha256": "f76dcc0834b5ca79bf877e0443ab53cf4f029a18334fa0bff15c014234893329",
+      "size": 4792829536
+    },
+    {
+      "lfs": true,
+      "path": "vllm-d3-nano-Q8_0.gguf",
+      "sha256": "a4d7563d9622a4c34cc7276a3381c3e27a25bbf8d4c0f5ee2f1404fc89ce2ab9",
+      "size": 2552358496
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/vllm-d3-nano-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "addbae9b023d58a0b01c8be3af9669bc32a3817c36dd1d8e1b7cdf072f57bbc9",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:44:57Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/vllm-d3-nano-GGUF/resolve/f2256dfaff5b8337e8bf67ca064aeef18ee14a79/"
+    }
+  ],
+  "upstream": {
+    "commit": "f2256dfaff5b8337e8bf67ca064aeef18ee14a79",
+    "host": "huggingface.co",
+    "repo": "ggml-org/vllm-d3-nano-GGUF",
+    "url": "https://huggingface.co/ggml-org/vllm-d3-nano-GGUF/tree/f2256dfaff5b8337e8bf67ca064aeef18ee14a79"
+  }
+}

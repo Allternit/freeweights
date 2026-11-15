@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:31:49Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+      "size": 31
+    },
+    {
+      "lfs": true,
+      "path": "microsoft--xclip-base-patch16-zero-shot.bin",
+      "sha256": "4cf37558f66347774478ebc811c8122f7164b1e1c85259ba81f1231ac9e6c760",
+      "size": 389881050
+    },
+    {
+      "lfs": false,
+      "path": "microsoft--xclip-base-patch16-zero-shot.xml",
+      "sha256": "bbe461584e91d88230ce2a03da6ebfd6211574e2ea0c4bebac02a6e1d2bef2ea",
+      "size": 1850322
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/xclip-base-patch16-zero-shot_openvino_int8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:49Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/xclip-base-patch16-zero-shot_openvino_int8/resolve/be17e4fd33e340b93143e034dd078d6be2f1b595/"
+    }
+  ],
+  "upstream": {
+    "commit": "be17e4fd33e340b93143e034dd078d6be2f1b595",
+    "host": "huggingface.co",
+    "repo": "laion/xclip-base-patch16-zero-shot_openvino_int8",
+    "url": "https://huggingface.co/laion/xclip-base-patch16-zero-shot_openvino_int8/tree/be17e4fd33e340b93143e034dd078d6be2f1b595"
+  }
+}

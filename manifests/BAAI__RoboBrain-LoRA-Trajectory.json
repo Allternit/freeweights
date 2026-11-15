@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:30:52Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0201c085c8ad68bba62cbbdc2cf90fcd5db1d5227a5dde1852a4a78423f063f2",
+      "size": 6479
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "8bba344f07b1aff48280ee667f8b240559a3cd83d1ab5b5b9b43ac2fc99e5101",
+      "size": 800
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "1219adb7ca30b197258655263c62e32cbba455c28422a6fa95c19b5149984a04",
+      "size": 346048832
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "BAAI/RoboBrain-LoRA-Trajectory",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0201c085c8ad68bba62cbbdc2cf90fcd5db1d5227a5dde1852a4a78423f063f2",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:30:52Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/BAAI/RoboBrain-LoRA-Trajectory/resolve/3ff64ac6e7601c56ce027b2f204e82b790f3513c/"
+    }
+  ],
+  "upstream": {
+    "commit": "3ff64ac6e7601c56ce027b2f204e82b790f3513c",
+    "host": "huggingface.co",
+    "repo": "BAAI/RoboBrain-LoRA-Trajectory",
+    "url": "https://huggingface.co/BAAI/RoboBrain-LoRA-Trajectory/tree/3ff64ac6e7601c56ce027b2f204e82b790f3513c"
+  }
+}

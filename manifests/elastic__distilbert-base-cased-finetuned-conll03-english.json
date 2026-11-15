@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T03:37:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "f888dc7c230287cd68af7034aa9fc2e2d6663fb7b3e70faa153caf93877914c3",
+      "size": 744
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "413705e82621606449392b5bf9c95e3d5e1eab9de6f0f3c2c7c2717711c949bf",
+      "size": 3101
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1fc994fb40ed4cb75f4281f77c02499b9bb8da909d822372e87abfef04b0d08e",
+      "size": 954
+    },
+    {
+      "lfs": false,
+      "path": "eval_results_ner.txt",
+      "sha256": "3479ccd329594b68e4e0f4784d3b8d0988ea64cd2a89ac8128aaaae049017ab2",
+      "size": 798
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "859299d02da7c0ba2ff8869ed47f262b902e3afccce7f2dd4335102fdf6501c0",
+      "size": 260803668
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "448297be01602ee7542a5c2ae05b578415acd5770854170d5e53fb282ed54dcf",
+      "size": 260832555
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size": 112
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "98d9e853fd48a2ff06bf75d7824dcbbc3e68084b8377017a55943107ad36a958",
+      "size": 257
+    },
+    {
+      "lfs": false,
+      "path": "train_results.txt",
+      "sha256": "e7926ecf00cc5e850ca5f1917cb7581074c336869d8bebcd3f20d79308a06414",
+      "size": 71
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "0ab00ea1fdc4a989d0f4ab89d4863a4fbe03d7bb428a3f652f1c6fc697202fd3",
+      "size": 1721
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "c30c38f69e6dfc85b6437f712c9c9e6530957b27791423275f6d42b0e4bbbce1",
+      "size": 2159
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "eeaa9875b23b04b4c54ef759d03db9d1ba1554838f8fb26c5d96fa551df93d02",
+      "size": 213450
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "elastic/distilbert-base-cased-finetuned-conll03-english",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "413705e82621606449392b5bf9c95e3d5e1eab9de6f0f3c2c7c2717711c949bf",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:37:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/elastic/distilbert-base-cased-finetuned-conll03-english/resolve/ac68e05b23b29ba32563ab18b633bb1423d859f8/"
+    }
+  ],
+  "upstream": {
+    "commit": "ac68e05b23b29ba32563ab18b633bb1423d859f8",
+    "host": "huggingface.co",
+    "repo": "elastic/distilbert-base-cased-finetuned-conll03-english",
+    "url": "https://huggingface.co/elastic/distilbert-base-cased-finetuned-conll03-english/tree/ac68e05b23b29ba32563ab18b633bb1423d859f8"
+  }
+}

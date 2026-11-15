@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:30:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "5c99029cda01f53c3d29349ce177335e5a90be177edbf2c48826545b14fa12fb",
+      "size": 1563
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "619ac2794fc3092e1ee4a185552bc9c8227631840d21a77be5bee9adced930b6",
+      "size": 9696
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "bc740868474fe21e8d0efabc286190ff9543f19ab706041d5a6793cf31ec2b14",
+      "size": 2187
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "48b495cbb8e5add5c723c6cb34a812028f2f85f6a4196670bac207e55255336c",
+      "size": 138366344
+    },
+    {
+      "lfs": true,
+      "path": "rsg.jpg",
+      "sha256": "10cc22864cedb8a9cc2115930a5a8542ae99f1521287881dec3e46d30c6b0f12",
+      "size": 238318
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "2ea3c1eb27baf06d75115d453c067c1832d7101a97243b298a4af8d59c916d62",
+      "size": 837
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "c166ae391d765915521dce27bf940cc9c7bff5050260f652f9327a7df1b9cd56",
+      "size": 4753266
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "1449e1cc853d257335e3715a6068a53c15f321bdfb0f0d0ae6bdbd7d6b41c148",
+      "size": 20990
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "deepvk/RuModernBERT-small",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "619ac2794fc3092e1ee4a185552bc9c8227631840d21a77be5bee9adced930b6",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:30:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/deepvk/RuModernBERT-small/resolve/06d09cc59b2c4f61cb84e398e96e17aeead5b8b8/"
+    }
+  ],
+  "upstream": {
+    "commit": "06d09cc59b2c4f61cb84e398e96e17aeead5b8b8",
+    "host": "huggingface.co",
+    "repo": "deepvk/RuModernBERT-small",
+    "url": "https://huggingface.co/deepvk/RuModernBERT-small/tree/06d09cc59b2c4f61cb84e398e96e17aeead5b8b8"
+  }
+}

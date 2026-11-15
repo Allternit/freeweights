@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:37:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ccb0f220fe9940b5c83912973c90bfef1aff7d45cd44850a7d67b91ccba24ec4",
+      "size": 7000
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "763c0b80b9075179805f5f81b8bac98b22d0ee3f5347da70adc46ab366e57f26",
+      "size": 630
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "677475dcd94d2e28b6edc6b60c55ec5261173e915cb6326830e7c15fd0fd6714",
+      "size": 36585968
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "98cc7acdad3db849586576ff3db1e0c033b2819f9a577ed4125a876a19ee30bb",
+      "size": 36642810
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/mambaout_kobe.in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ccb0f220fe9940b5c83912973c90bfef1aff7d45cd44850a7d67b91ccba24ec4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:37:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/mambaout_kobe.in1k/resolve/c028fe272e7b65209987ba686a370dc87f45ef3c/"
+    }
+  ],
+  "upstream": {
+    "commit": "c028fe272e7b65209987ba686a370dc87f45ef3c",
+    "host": "huggingface.co",
+    "repo": "timm/mambaout_kobe.in1k",
+    "url": "https://huggingface.co/timm/mambaout_kobe.in1k/tree/c028fe272e7b65209987ba686a370dc87f45ef3c"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "laion/music-whisper",
+  "display_name": "music-popularity-full-ft",
+  "family": "laion",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "laion/music-popularity-full-ft",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "CC-BY-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/laion/music-popularity-full-ft.json",
+  "params": 281567232,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "laion/music-whisper",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 11,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "audio-classification"
+  ],
+  "tier": "T0",
+  "total_size": 1227675066,
+  "upstream_url": "https://huggingface.co/laion/music-popularity-full-ft",
+  "what_changed": null
+}

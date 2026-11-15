@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T05:15:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b05b44ea265a098f1fad0272477893a505bd9b7d4486379d1ae2b9d6a781795c",
+      "size": 4741
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "2dda373b9705a692af9a9b65cd402d597ff87b9e917d0e737510bc5f75d74529",
+      "size": 7950
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "47654a34f6240e4fb3b1a089033f3a8048d7d72b72d1107bc92ed540f707f85c",
+      "size": 55957
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "6a391fdcafb170d69b8c5f7f2b131f8210c2fd7f6fa241862f664166bdc32d92",
+      "size": 163
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "049474dc1d43800fbd9545de4af84d127b95ff6ba313f462acd10b426726f6ff",
+      "size": 528
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "c2497600b2d92b80e329ca67fddd2d864761e931afcd8d27fd75b34e4700a762",
+      "size": 5326312941
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "95566add2fd391f5ff919345f46b8382dcf09ffe5b8064c808ec7137e61f2641",
+      "size": 1776494297
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "8d0077548a7c50dacb58407099bc2063e1b375b50fa9b491f5fcc2d09b316fb8",
+      "size": 115912
+    },
+    {
+      "lfs": true,
+      "path": "optiq/mtp.safetensors",
+      "sha256": "9f2f4965ec9b8cc708c671cb3fd84a63b64753113d04dcc1c1ebbc37c3d47bee",
+      "size": 185118753
+    },
+    {
+      "lfs": false,
+      "path": "optiq_metadata.json",
+      "sha256": "de001cf0211523c2bf1ebd3e02f9b8e89c7c91e00add058d6eae599c4d4aac76",
+      "size": 26241
+    },
+    {
+      "lfs": true,
+      "path": "optiq_vision.safetensors",
+      "sha256": "0e73d7e0eb3c013088edf80e503b4cfac920bbb77e465d8d5ccc3230e4a4abe2",
+      "size": 912058009
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "size": 390
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "size": 19989343
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5329d02a1dac4ac77f2d182ede6d6aedd16b8b341cb3b2e10fe7038859141921",
+      "size": 1268
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "size": 385
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwythos-9B-v2-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b05b44ea265a098f1fad0272477893a505bd9b7d4486379d1ae2b9d6a781795c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:15:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwythos-9B-v2-OptiQ-4bit/resolve/270f3fdf2d4f97f0f13e3e867fe0a08348e4d106/"
+    }
+  ],
+  "upstream": {
+    "commit": "270f3fdf2d4f97f0f13e3e867fe0a08348e4d106",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwythos-9B-v2-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Qwythos-9B-v2-OptiQ-4bit/tree/270f3fdf2d4f97f0f13e3e867fe0a08348e4d106"
+  }
+}

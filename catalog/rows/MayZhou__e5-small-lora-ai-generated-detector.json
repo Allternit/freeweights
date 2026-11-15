@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "intfloat/e5-small",
+  "display_name": "e5-small-lora-ai-generated-detector",
+  "family": "MayZhou",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "MayZhou/e5-small-lora-ai-generated-detector",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/MayZhou/e5-small-lora-ai-generated-detector.json",
+  "params": 33360770,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "intfloat/e5-small",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 3121,
+    "likes": 9,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "T2",
+  "total_size": 134423909,
+  "upstream_url": "https://huggingface.co/MayZhou/e5-small-lora-ai-generated-detector",
+  "what_changed": null
+}

@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T05:30:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "b8e394ca3e39a01963ca24d0beb5185935e3941b1febfaf17eedf68949b0aad7",
+      "size": 1575
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7edf41b8f1d1fe89a40e86f1cd42cc9102bc66d9e0a9149e91db1883cc40c17d",
+      "size": 2987
+    },
+    {
+      "lfs": true,
+      "path": "falcon-7b.onnx",
+      "sha256": "b733079584bacfb36627e01e78c4245d43e7c7a52588ebc5042510247f02e85b",
+      "size": 1789344
+    },
+    {
+      "lfs": true,
+      "path": "falcon-7b.onnx.data",
+      "sha256": "ebe8789247bf6e8d4f3eb5e1184cd99982230349194c979e8b8dcab267e399c8",
+      "size": 14434379520
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/falcon-7B-onnx",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7edf41b8f1d1fe89a40e86f1cd42cc9102bc66d9e0a9149e91db1883cc40c17d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:30:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/falcon-7B-onnx/resolve/58177f7c04797e471fc1ee70f69943ab6f054de4/"
+    }
+  ],
+  "upstream": {
+    "commit": "58177f7c04797e471fc1ee70f69943ab6f054de4",
+    "host": "huggingface.co",
+    "repo": "microsoft/falcon-7B-onnx",
+    "url": "https://huggingface.co/microsoft/falcon-7B-onnx/tree/58177f7c04797e471fc1ee70f69943ab6f054de4"
+  }
+}

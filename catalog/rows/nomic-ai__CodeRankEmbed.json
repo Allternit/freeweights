@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Snowflake/snowflake-arctic-embed-m-long",
+  "display_name": "CodeRankEmbed",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "nomic-ai/CodeRankEmbed",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/nomic-ai/CodeRankEmbed.json",
+  "params": 136731648,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Snowflake/snowflake-arctic-embed-m-long",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 71689,
+    "likes": 84,
+    "trending": null
+  },
+  "tasks": [
+    "feature-extraction"
+  ],
+  "tier": "T0",
+  "total_size": 547945013,
+  "upstream_url": "https://huggingface.co/nomic-ai/CodeRankEmbed",
+  "what_changed": null
+}

@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T02:36:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "eedaa232843a5fee706aa818a601221bf17acb6c304888d1f69c04725e03ebb7",
+      "size": 791
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "22ba45cf247e237b62e29a148f726037a0e5ad09629184ded99dc05c92c4dd7a",
+      "size": 3964
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "cd925a7f47cc02b602814ec85b3f9122b2a1436e8d91e494f97fa8247ce4b28e",
+      "size": 1574
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "01da1b7f46934191dc10ec3891878c537a634d1daf591a4e3c41133ba8173f08",
+      "size": 1261938632
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "a2254a5b58f72cd4de3632f8eee64f3f098b7c1402128d2f419e7d00ae13e335",
+      "size": 212
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "bd3ed266edbe299cf5d91ee899400d30851cc26597eb03aba67d21f31d44cfc3",
+      "size": 1262059159
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+      "size": 85
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "981c86ec4dedea9836497381a1e58b2f8cfc2f49ab6a741eaeec23bba4629930",
+      "size": 181
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "6325f7b45b74c4836bd40250203396aac378a08e5eb64739a717f41169424b3d",
+      "size": 292
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/wav2vec2-large-robust-ft-libri-960h",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "22ba45cf247e237b62e29a148f726037a0e5ad09629184ded99dc05c92c4dd7a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:36:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/wav2vec2-large-robust-ft-libri-960h/resolve/5d28473cc25ef7b338c9f731fe55626c4b082f58/"
+    }
+  ],
+  "upstream": {
+    "commit": "5d28473cc25ef7b338c9f731fe55626c4b082f58",
+    "host": "huggingface.co",
+    "repo": "facebook/wav2vec2-large-robust-ft-libri-960h",
+    "url": "https://huggingface.co/facebook/wav2vec2-large-robust-ft-libri-960h/tree/5d28473cc25ef7b338c9f731fe55626c4b082f58"
+  }
+}

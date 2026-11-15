@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:35:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b7eaebce740ea643aed19ac2362845ed2ff0eca877d327f66c86e32b472ad25f",
+      "size": 906
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c6ae18e2e5f5ff54c153cb312972efb2d89aa087a396034380936f3d797a0420",
+      "size": 776
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "539f9bb95c121d0ac331d93ecd3a24fd33e7a0a93e4c1e937097990404f0391d",
+      "size": 130
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "5c01be607d4527a21eb1562b6f43d968303b03277c4cd6a829987247b455ba0d",
+      "size": 1185590816
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c98562eff7be177aafa0bf23cacb9c86549aef1c4c60e91931bded3d70fe6f8f",
+      "size": 21449
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "b76085f9923309d873994d444989f7eb6ec074b06f25b58f1e8d7b7741070949",
+      "size": 17078037
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a9248c701aab368edfec820684052315b959bd35a7f48cb290e93ec11843d3bc",
+      "size": 199719
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "alamios/Mistral-Small-3.1-DRAFT-0.5B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b7eaebce740ea643aed19ac2362845ed2ff0eca877d327f66c86e32b472ad25f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:35:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/alamios/Mistral-Small-3.1-DRAFT-0.5B/resolve/23f4efa1bc095ad2f857ffee733faa46f915065c/"
+    }
+  ],
+  "upstream": {
+    "commit": "23f4efa1bc095ad2f857ffee733faa46f915065c",
+    "host": "huggingface.co",
+    "repo": "alamios/Mistral-Small-3.1-DRAFT-0.5B",
+    "url": "https://huggingface.co/alamios/Mistral-Small-3.1-DRAFT-0.5B/tree/23f4efa1bc095ad2f857ffee733faa46f915065c"
+  }
+}

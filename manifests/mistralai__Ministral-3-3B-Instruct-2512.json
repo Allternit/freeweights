@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T04:37:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1e11e8e6b9eb852a71eadd8fe191d4b9e329eb81308602dec19ab16da7e172b2",
+      "size": 1618
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "57623b9703d4fe40fe752b4a63f920c65ffd30cd7c281c8bccab7ee784460b67",
+      "size": 20363
+    },
+    {
+      "lfs": false,
+      "path": "SYSTEM_PROMPT.txt",
+      "sha256": "c6a46ef1b8017c5aef362480636b8c0046a9951acf338d3d8931bc1a3620315e",
+      "size": 2361
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "0701cfbdc2b7d44fdbad104dff604faee4b0543e8247624568777fe465746f9b",
+      "size": 11912
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a9c3658d7bb45ab5be77e660d483a9d3f8a3d54bda2c69a1c576bdfefbc16be6",
+      "size": 1903
+    },
+    {
+      "lfs": true,
+      "path": "consolidated.safetensors",
+      "sha256": "a1b2aa6d22874ed04b7071a595581d48832ddeda8d6e69f54537b31aa3a775cf",
+      "size": 4672089108
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e0923390059f84a9180b00e5501778acc45ea9856cd7f2fd68208b360927c677",
+      "size": 131
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "728f1826cd0e38191ca7b1379e81f78cf0555c6ffd95882aabd2404632346f86",
+      "size": 4672099184
+    },
+    {
+      "lfs": false,
+      "path": "params.json",
+      "sha256": "184afbdca12f4075121650335d65ada27b471b8b2952c8f2b699c16516306459",
+      "size": 1183
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "ece2373c2ae391bce18785a1810543bc6173a1f28b6767cffab2c35dbea5f002",
+      "size": 976
+    },
+    {
+      "lfs": true,
+      "path": "tekken.json",
+      "sha256": "600bb27946565481ecf51ba8aee252e49b9a68507866080ac9c30185bb312843",
+      "size": 16753784
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "99cf274236c60277fcfad861a5a1007518687ad06ba8938760f50b55ffa0b1ef",
+      "size": 17077420
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4a05af595aa11c3436d3b68a616219ae99b303426f708a12b31bc9ce32530728",
+      "size": 21177
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mistralai/Ministral-3-3B-Instruct-2512",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "57623b9703d4fe40fe752b4a63f920c65ffd30cd7c281c8bccab7ee784460b67",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.mistral",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:37:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512/resolve/b35d4dfe56c142746f54dbd64f579faab2744308/"
+    }
+  ],
+  "upstream": {
+    "commit": "b35d4dfe56c142746f54dbd64f579faab2744308",
+    "host": "huggingface.co",
+    "repo": "mistralai/Ministral-3-3B-Instruct-2512",
+    "url": "https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512/tree/b35d4dfe56c142746f54dbd64f579faab2744308"
+  }
+}

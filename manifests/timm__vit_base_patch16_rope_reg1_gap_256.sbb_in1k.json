@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T03:42:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d1b334fbe64e7b6f264c2485400f8f3287a2ca97fd412a640260cf5e83773644",
+      "size": 8261
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0d8f0acd7e6c5bcc8d9c1e5bc02b0d6018d654f8d69749debaa704375dc46684",
+      "size": 610
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "80b312781474989302c9ed3e8d603acf91c26cb725ef0cb37252a5d05172c0f3",
+      "size": 345719400
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "ce61ef87592e5ad5dd9991bf24c3c7c3504b65645aa81302af76600a9138f4a1",
+      "size": 345768118
+    },
+    {
+      "lfs": false,
+      "path": "train_hparams.yaml",
+      "sha256": "26e134a0d8b322010640cc249d944154136dbdb4484758b280d1bc3563a8cd8c",
+      "size": 2235
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/vit_base_patch16_rope_reg1_gap_256.sbb_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d1b334fbe64e7b6f264c2485400f8f3287a2ca97fd412a640260cf5e83773644",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:42:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/vit_base_patch16_rope_reg1_gap_256.sbb_in1k/resolve/03acabbbf97c287ba7b0b3f29a04755f652eb5f0/"
+    }
+  ],
+  "upstream": {
+    "commit": "03acabbbf97c287ba7b0b3f29a04755f652eb5f0",
+    "host": "huggingface.co",
+    "repo": "timm/vit_base_patch16_rope_reg1_gap_256.sbb_in1k",
+    "url": "https://huggingface.co/timm/vit_base_patch16_rope_reg1_gap_256.sbb_in1k/tree/03acabbbf97c287ba7b0b3f29a04755f652eb5f0"
+  }
+}

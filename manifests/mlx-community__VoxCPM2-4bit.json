@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:32:18Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "7eac21484d4fcba4c70abb89e50573c40a723a3f0fd1bd848ed30264b1cf40c3",
+      "size": 1615
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "335e9c23fc33613d8266381b5518d208f2eb29d54f5cd4de15fe1cf91eed5bc0",
+      "size": 2206
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "91bff6db1be27bc0f4f2a287cca7a8fbb8b1d7a0b026a5dc4a71bc5f2f1ddcfb",
+      "size": 5332
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "25bddc99a7cc6d28214f12dd676ed0afa9b0a805d6477f85c275bb113cb8acee",
+      "size": 2297215329
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76",
+      "size": 1632
+    },
+    {
+      "lfs": true,
+      "path": "test_en.wav",
+      "sha256": "dbfbc319e27a91d62b63c977830e58a0b2f08ea0fda73cb62e0f4294d3500dc9",
+      "size": 522300
+    },
+    {
+      "lfs": true,
+      "path": "test_id.wav",
+      "sha256": "b024780af7cb90d22c651ec9c2594c07d9bb5dcc9c9891c55e4032ef7f59ce97",
+      "size": 614460
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f8984687e4a92a3503d521396d454b7d68e9fdaab2a0288eb3536c7c1aa4bc20",
+      "size": 3676772
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "466575c55f0cf49530666c2e46ed14f26237dbd227ba7f4bb3bbec93df90edfc",
+      "size": 4952
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/VoxCPM2-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "335e9c23fc33613d8266381b5518d208f2eb29d54f5cd4de15fe1cf91eed5bc0",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:32:18Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/VoxCPM2-4bit/resolve/dc9e5c187858da5f4a13dc4c247e297339216381/"
+    }
+  ],
+  "upstream": {
+    "commit": "dc9e5c187858da5f4a13dc4c247e297339216381",
+    "host": "huggingface.co",
+    "repo": "mlx-community/VoxCPM2-4bit",
+    "url": "https://huggingface.co/mlx-community/VoxCPM2-4bit/tree/dc9e5c187858da5f4a13dc4c247e297339216381"
+  }
+}

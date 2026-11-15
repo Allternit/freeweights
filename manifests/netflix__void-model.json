@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T04:32:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c2e78b9c267f4fce9cfbdd3ef6e6749be783d792ea0fd316b3d508570b94701c",
+      "size": 4255
+    },
+    {
+      "lfs": false,
+      "path": "gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": true,
+      "path": "void_pass1.safetensors",
+      "sha256": "78cec135c557afe063364602e1038170a49bd5bd3eb909f6b7e30a070173e935",
+      "size": 11143042384
+    },
+    {
+      "lfs": true,
+      "path": "void_pass2.safetensors",
+      "sha256": "4445d063c3044d0c827ca728387ecd2aecc5344274a4b73d7091e27ec290ec41",
+      "size": 11143042384
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "netflix/void-model",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c2e78b9c267f4fce9cfbdd3ef6e6749be783d792ea0fd316b3d508570b94701c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.video",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:32:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/netflix/void-model/resolve/1a0ed95d55ff6a85b7501ce82cde21d3be695943/"
+    }
+  ],
+  "upstream": {
+    "commit": "1a0ed95d55ff6a85b7501ce82cde21d3be695943",
+    "host": "huggingface.co",
+    "repo": "netflix/void-model",
+    "url": "https://huggingface.co/netflix/void-model/tree/1a0ed95d55ff6a85b7501ce82cde21d3be695943"
+  }
+}

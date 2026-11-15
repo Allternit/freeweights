@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:21:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c59772fd2d1a9c2b77c51a11243af0d2ad63e4e67888546c8bc856d96914e3a4",
+      "size": 6082
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0d1d50085400cfaac838634a07511832d6e7b854ccf1eb96c4343497e1f147ff",
+      "size": 666
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "3a83cc9115e75fefd527c6d1d8626552079964eec733e04716f98e1d27780e6f",
+      "size": 541137419
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "7e86c569e81854af17e5112917497571a065c5693f26fb82bcaa43afd2ac5359",
+      "size": 162678535
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "782268683d261805678d0b840d04ce327b0fce11922877705c385bf475fde494",
+      "size": 136107661
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "724097cb961cb12b449c1065dffda70955df9a3736ea33b63163045c8b699cfc",
+      "size": 169559349
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "782268683d261805678d0b840d04ce327b0fce11922877705c385bf475fde494",
+      "size": 136107661
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "b1a050e284eff03f093bc11f09677304e0a48610b7661f7dfdbbd0d55007ce5d",
+      "size": 136107695
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/japanese-roberta-base-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c59772fd2d1a9c2b77c51a11243af0d2ad63e4e67888546c8bc856d96914e3a4",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:21:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/japanese-roberta-base-ONNX/resolve/23c9beebefb1116ca4016fecc33421ce66cd832e/"
+    }
+  ],
+  "upstream": {
+    "commit": "23c9beebefb1116ca4016fecc33421ce66cd832e",
+    "host": "huggingface.co",
+    "repo": "onnx-community/japanese-roberta-base-ONNX",
+    "url": "https://huggingface.co/onnx-community/japanese-roberta-base-ONNX/tree/23c9beebefb1116ca4016fecc33421ce66cd832e"
+  }
+}

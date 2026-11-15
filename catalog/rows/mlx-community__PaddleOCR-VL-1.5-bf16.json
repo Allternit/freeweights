@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "baidu/ERNIE-4.5-0.3B-Paddle",
+  "display_name": "PaddleOCR-VL-1.5-bf16",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "mlx-community/PaddleOCR-VL-1.5-bf16",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/mlx-community/PaddleOCR-VL-1.5-bf16.json",
+  "params": 905601648,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "baidu/ERNIE-4.5-0.3B-Paddle",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 1085,
+    "likes": 6,
+    "trending": null
+  },
+  "tasks": [
+    "image-text-to-text"
+  ],
+  "tier": "T2",
+  "total_size": 1822678418,
+  "upstream_url": "https://huggingface.co/mlx-community/PaddleOCR-VL-1.5-bf16",
+  "what_changed": null
+}

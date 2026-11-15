@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T05:09:10Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "0ad638e4a4a4c4e8a7f3664f006a0fc87d98f22c140b010f7c9d5317074fc8d9",
+      "size": 1851
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7c013884701e707dde3cb3906033f44f1cb3ac9ebef5026d7dd0ba39847cf726",
+      "size": 585
+    },
+    {
+      "lfs": true,
+      "path": "granite-speech-4.1-2b-Q4_K_M.gguf",
+      "sha256": "d18e3e79826c4f0fa6734eb05d2db3f06baccbcd5791a83653f946b3178b35d8",
+      "size": 1139247200
+    },
+    {
+      "lfs": true,
+      "path": "granite-speech-4.1-2b-Q5_K_M.gguf",
+      "sha256": "7fe37d4496611726c77cee7d7fd308285f9c69686d8bd2ca8407bd1f1b6b61d0",
+      "size": 1319602528
+    },
+    {
+      "lfs": true,
+      "path": "granite-speech-4.1-2b-Q6_K.gguf",
+      "sha256": "7ed38534867fcecf4cd52d6734690fcfeb55652018cc29097958084b2524e9c0",
+      "size": 1511230080
+    },
+    {
+      "lfs": true,
+      "path": "granite-speech-4.1-2b-Q8_0.gguf",
+      "sha256": "87320ee80cc6e638837bd2e9b7920252a87148613930bcdc11fcafad0b00beea",
+      "size": 1956154944
+    },
+    {
+      "lfs": true,
+      "path": "granite-speech-4.1-2b-bf16.gguf",
+      "sha256": "adfe250889e45445fc5147be61477a365038db447f6d281c771c16677a8be565",
+      "size": 3678444864
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-model-f16.gguf",
+      "sha256": "0d3615076cbe1d35c3f60c43a60a4047b3e2eeee1b2c233580be60186faab5c5",
+      "size": 1159354752
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-speech-4.1-2b-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7c013884701e707dde3cb3906033f44f1cb3ac9ebef5026d7dd0ba39847cf726",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:10Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-speech-4.1-2b-GGUF/resolve/8267dad2adc84209b0efd2702ec68a98356125eb/"
+    }
+  ],
+  "upstream": {
+    "commit": "8267dad2adc84209b0efd2702ec68a98356125eb",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-speech-4.1-2b-GGUF",
+    "url": "https://huggingface.co/ibm-granite/granite-speech-4.1-2b-GGUF/tree/8267dad2adc84209b0efd2702ec68a98356125eb"
+  }
+}

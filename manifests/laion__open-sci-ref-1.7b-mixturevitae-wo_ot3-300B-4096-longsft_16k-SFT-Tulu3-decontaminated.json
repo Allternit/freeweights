@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-11-15T04:28:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ebdc5a1c9752d9f46085208b22d10890e35ad394b16d9471bad54f8ff61da976",
+      "size": 1794
+    },
+    {
+      "lfs": false,
+      "path": "all_results.json",
+      "sha256": "ee101f5bd4115fb2c1c85c58bd05fd8382af00dd8a6b6c8a3470ffc9b3b7b903",
+      "size": 223
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "6e0fc64b0c2088c5aea7239f4fa840df5ab5b9eb566abd4af33eb497bfedbb91",
+      "size": 570
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c061f3eea93ddae4062fb230a740f3c9863f1062171c69d2db78316dd77f0062",
+      "size": 1068
+    },
+    {
+      "lfs": false,
+      "path": "configuration_opensci.py",
+      "sha256": "d3d0e71d723af0bfb561cea4bcc30b6e72ad761d5828bc5910137c8fb05686e8",
+      "size": 11212
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "564005a57127974a7f8909107f2a40c5a98624c613f40c52cf3ebdcd57d1c5f6",
+      "size": 162
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "7eb5102b04eff72b0e7a96ad62d760a72d0f9995d1ffdd723346b59c8ad3266f",
+      "size": 3428804400
+    },
+    {
+      "lfs": false,
+      "path": "modeling_opensci.py",
+      "sha256": "89719b11f7156a48d236c3ab3287a86c8eaf4efd420313b00356e39b467f0e6e",
+      "size": 45872
+    },
+    {
+      "lfs": false,
+      "path": "slurm/1189966.err",
+      "sha256": "62f2d72704be96573aa594f1dd29763e064ff8f2d921324766da45a9cdcba1de",
+      "size": 726061
+    },
+    {
+      "lfs": false,
+      "path": "slurm/1189966.out",
+      "sha256": "450586ff5956eea73623bd56eed9c8b854b2bda7dc6a28a6461178c251508f4b",
+      "size": 198032
+    },
+    {
+      "lfs": false,
+      "path": "slurm/1201638.err",
+      "sha256": "4286257f564d2575c76f086dc1b5b4261a1308af3c6d3a9c2ca9979dad0e17df",
+      "size": 702948
+    },
+    {
+      "lfs": false,
+      "path": "slurm/1201638.out",
+      "sha256": "1e27a6a943d9bb53f3d4b22716a1bd2c7debc99692ef1da2316747c687cc36a3",
+      "size": 166018
+    },
+    {
+      "lfs": false,
+      "path": "slurm/1209980.err",
+      "sha256": "c48e5403d5d4937c7e4b9aaf9f2ea48c6fbd46a93fac12a77960773f8d4a0037",
+      "size": 69581
+    },
+    {
+      "lfs": false,
+      "path": "slurm/1209980.out",
+      "sha256": "a09e747517f319bfa70c5fad8bd2c5acf2bcb7dc749b39bf9cc567cc6afd96b5",
+      "size": 31646
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c00cdd413eee34865b9ade3d78b03b70626bb05686faa82f291c726f481dd5c8",
+      "size": 1057
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "19bbc221b90a381873680c625cc8a83811461c4175f12955bfd3623aa094cadb",
+      "size": 3565051
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "2c8e77aaa451512767bcaa6a0d5e377949789dae61da70beee5a53687ca1a9ec",
+      "size": 5736
+    },
+    {
+      "lfs": false,
+      "path": "train_results.json",
+      "sha256": "ee101f5bd4115fb2c1c85c58bd05fd8382af00dd8a6b6c8a3470ffc9b3b7b903",
+      "size": 223
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "bc8cdcd9374cf75789b1a2735cfc052e650292551a3556ed11701b2245226c56",
+      "size": 419621
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/open-sci-ref-1.7b-mixturevitae-wo_ot3-300B-4096-longsft_16k-SFT-Tulu3-decontaminated",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ebdc5a1c9752d9f46085208b22d10890e35ad394b16d9471bad54f8ff61da976",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:28:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/open-sci-ref-1.7b-mixturevitae-wo_ot3-300B-4096-longsft_16k-SFT-Tulu3-decontaminated/resolve/7d24d0d5d06a3b36ed6ccb119f247c242e16421b/"
+    }
+  ],
+  "upstream": {
+    "commit": "7d24d0d5d06a3b36ed6ccb119f247c242e16421b",
+    "host": "huggingface.co",
+    "repo": "laion/open-sci-ref-1.7b-mixturevitae-wo_ot3-300B-4096-longsft_16k-SFT-Tulu3-decontaminated",
+    "url": "https://huggingface.co/laion/open-sci-ref-1.7b-mixturevitae-wo_ot3-300B-4096-longsft_16k-SFT-Tulu3-decontaminated/tree/7d24d0d5d06a3b36ed6ccb119f247c242e16421b"
+  }
+}

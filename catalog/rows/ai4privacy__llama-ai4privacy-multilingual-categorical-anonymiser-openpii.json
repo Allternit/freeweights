@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "answerdotai/ModernBERT-base",
+  "display_name": "llama-ai4privacy-multilingual-categorical-anonymiser-openpii",
+  "family": "ai4privacy",
+  "formats": [
+    "onnx",
+    "safetensors"
+  ],
+  "id": "ai4privacy/llama-ai4privacy-multilingual-categorical-anonymiser-openpii",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/ai4privacy/llama-ai4privacy-multilingual-categorical-anonymiser-openpii.json",
+  "params": 149635624,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "answerdotai/ModernBERT-base",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 1480,
+    "likes": 24,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "variant",
+  "total_size": 2535945002,
+  "upstream_url": "https://huggingface.co/ai4privacy/llama-ai4privacy-multilingual-categorical-anonymiser-openpii",
+  "what_changed": null
+}

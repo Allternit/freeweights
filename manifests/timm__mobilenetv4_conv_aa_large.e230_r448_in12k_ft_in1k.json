@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T03:24:42Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "31b394d155dd12c0e7c10bfe127a45b4ebcedcc3c51e88ea2728a526294c7e6f",
+      "size": 12930
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1544a00181cdabb51786e6d472e106f27734b4c18202244c0e50159b6ba67b43",
+      "size": 692
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ee86b338fa38bacea7e2b91ab738232201b1a89a159cad70e90bfacfdd0b8163",
+      "size": 131022456
+    },
+    {
+      "lfs": false,
+      "path": "onnx/config.json",
+      "sha256": "31c0568c23c50e5892caa2f2e7b5d5f0588759d372bb7e4f15810fd381a7d7eb",
+      "size": 2387
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "41b62eb9ade49bf1fa8ed42a223600a2c27f3c5f64230b709622f78837629597",
+      "size": 130114599
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "62959722b90e7218dffed854363e4f019cf34c5d53ee56127531979848fb3080",
+      "size": 131182114
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/mobilenetv4_conv_aa_large.e230_r448_in12k_ft_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "31b394d155dd12c0e7c10bfe127a45b4ebcedcc3c51e88ea2728a526294c7e6f",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:24:42Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/mobilenetv4_conv_aa_large.e230_r448_in12k_ft_in1k/resolve/142e61504d50e26f973e0cdd96337b81e40b440a/"
+    }
+  ],
+  "upstream": {
+    "commit": "142e61504d50e26f973e0cdd96337b81e40b440a",
+    "host": "huggingface.co",
+    "repo": "timm/mobilenetv4_conv_aa_large.e230_r448_in12k_ft_in1k",
+    "url": "https://huggingface.co/timm/mobilenetv4_conv_aa_large.e230_r448_in12k_ft_in1k/tree/142e61504d50e26f973e0cdd96337b81e40b440a"
+  }
+}

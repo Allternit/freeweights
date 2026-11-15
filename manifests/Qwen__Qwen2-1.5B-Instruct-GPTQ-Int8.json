@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:20:09Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "c156170b718ec29139d3653d40ed1986fd92fb7e0959b5c71f3c48f62e6636f4",
+      "size": 11344
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f4ee1ca5b98715f8fee284f9b32a13d53a2268c1f6b8016a891a171a74c55bd8",
+      "size": 4000
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "29aab24a32d39c5dccb52b6f51ad71d8caf559d26b94f95f3c0a4dafc4f33376",
+      "size": 1260
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+      "size": 242
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "size": 1671839
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "32c9e4eca105193bda93b079ad8c7b427bf71a646d18d19907114c1c1c343e34",
+      "size": 3233447192
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f7c9b2dba4a296b1aa76c16a34b8225c0c118978400d4bb66bff0902d702f5b8",
+      "size": 7028015
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "482bd979881423375ca5414e4e0d94cd7c5349dbb17fffd46b4d36d71e62a1bc",
+      "size": 1287
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Qwen/Qwen2-1.5B-Instruct-GPTQ-Int8",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "c156170b718ec29139d3653d40ed1986fd92fb7e0959b5c71f3c48f62e6636f4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:20:09Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Qwen/Qwen2-1.5B-Instruct-GPTQ-Int8/resolve/23a901c4bc5df67ade5f1d77bb4c5b08440eed20/"
+    }
+  ],
+  "upstream": {
+    "commit": "23a901c4bc5df67ade5f1d77bb4c5b08440eed20",
+    "host": "huggingface.co",
+    "repo": "Qwen/Qwen2-1.5B-Instruct-GPTQ-Int8",
+    "url": "https://huggingface.co/Qwen/Qwen2-1.5B-Instruct-GPTQ-Int8/tree/23a901c4bc5df67ade5f1d77bb4c5b08440eed20"
+  }
+}

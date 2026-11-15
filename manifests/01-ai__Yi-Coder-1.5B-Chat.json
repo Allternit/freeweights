@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T03:41:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c6a1acaec62b54a13b69a36eab30bb81b9ee4a098739935ced8d5b85a6ffcbaa",
+      "size": 5153
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4d16f1187d5d1a43fdb1284b1749d674b62a8477583eb608df0e7fae934756ff",
+      "size": 683
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "ada25958d6fef607707816ae3a704b9d341fe07bc49e43ee5512494bb115ead7",
+      "size": 132
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "510afc33105d216c056e1f11d8ca6b2ae62c77dab5eed7d03f55ea5845e460da",
+      "size": 2953016024
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "60e13afe3f527b158f80280639bf11d3f7bf5ac660fb282be3dd5669042a6099",
+      "size": 570
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "386c49cf943d71aa110361135338c50e38beeff0a66593480421f37b319e1a39",
+      "size": 1033105
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "fb7822adde5bd31889027f620c663cbb5cb934ef0102c2a9b4b9e74476899c90",
+      "size": 1891
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "01-ai/Yi-Coder-1.5B-Chat",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c6a1acaec62b54a13b69a36eab30bb81b9ee4a098739935ced8d5b85a6ffcbaa",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:41:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/01-ai/Yi-Coder-1.5B-Chat/resolve/92fdd1b2f1539ac990e7f4a921db5601da2f0299/"
+    }
+  ],
+  "upstream": {
+    "commit": "92fdd1b2f1539ac990e7f4a921db5601da2f0299",
+    "host": "huggingface.co",
+    "repo": "01-ai/Yi-Coder-1.5B-Chat",
+    "url": "https://huggingface.co/01-ai/Yi-Coder-1.5B-Chat/tree/92fdd1b2f1539ac990e7f4a921db5601da2f0299"
+  }
+}

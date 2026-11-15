@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T04:36:41Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "45f75d417bcfc24d55a724802db17c12b7fd74ad81214cd1f9d61c0e1f9d000e",
+      "size": 12615
+    },
+    {
+      "lfs": true,
+      "path": "wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+      "sha256": "887c3bdeb74e83859c920438e16ca31f39ab18ce189abc5f0e36f8348c5bbb19",
+      "size": 634645944
+    },
+    {
+      "lfs": true,
+      "path": "wan2.2_i2v_A14b_low_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+      "sha256": "8833bd4fd7c8eabebf0bc8ee5cfaf47f4f310ce116928a02c1adf8941dd4b0f1",
+      "size": 739472104
+    },
+    {
+      "lfs": false,
+      "path": "wan2.2_i2v_scale_fp8_comfyui_with_lora.json",
+      "sha256": "aecf199c8451c2272fb53f6a96854c12cd596297326f426a6d7bf4533c7383b8",
+      "size": 37227
+    },
+    {
+      "lfs": true,
+      "path": "wan2.2_t2v_A14b_high_noise_lora_rank64_lightx2v_4step_1217.safetensors",
+      "sha256": "89003385f8a9d53ba58fd6ede647fdc90292e8568a54683fcfe6db5556a31769",
+      "size": 613518320
+    },
+    {
+      "lfs": true,
+      "path": "wan2.2_t2v_A14b_low_noise_lora_rank64_lightx2v_4step_1217.safetensors",
+      "sha256": "4df7c206f3189472da2f92c0a42dcf308f04433d9c14302d08d56e99a3f51322",
+      "size": 613518320
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lightx2v/Wan2.2-Distill-Loras",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "45f75d417bcfc24d55a724802db17c12b7fd74ad81214cd1f9d61c0e1f9d000e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.video",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:36:41Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/resolve/57adea585d1d21085e2dfc91ce3c7b646cdd9345/"
+    }
+  ],
+  "upstream": {
+    "commit": "57adea585d1d21085e2dfc91ce3c7b646cdd9345",
+    "host": "huggingface.co",
+    "repo": "lightx2v/Wan2.2-Distill-Loras",
+    "url": "https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/tree/57adea585d1d21085e2dfc91ce3c7b646cdd9345"
+  }
+}

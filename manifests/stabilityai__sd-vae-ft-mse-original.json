@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T02:25:11Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "713eb0800b91205feeb3d6ca2fb83487f7fb23c5e5b7ffac3fc37578a4841e28",
+      "size": 1531
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "370143cb387f18a88727d83f6dc5bd86218b58a0cb4d89b07c05b40a80970c83",
+      "size": 6362
+    },
+    {
+      "lfs": true,
+      "path": "vae-ft-mse-840000-ema-pruned.ckpt",
+      "sha256": "c6a580b13a5bc05a5e16e4dbb80608ff2ec251a162311590c1f34c013d7f3dab",
+      "size": 334695179
+    },
+    {
+      "lfs": true,
+      "path": "vae-ft-mse-840000-ema-pruned.safetensors",
+      "sha256": "735e4c3a447a3255760d7f86845f09f937809baa529c17370d83e4c3758f3c75",
+      "size": 334641190
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "stabilityai/sd-vae-ft-mse-original",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "370143cb387f18a88727d83f6dc5bd86218b58a0cb4d89b07c05b40a80970c83",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:25:11Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/629b3ad3030ce36e15e70c5db7d91df0d60c627f/"
+    }
+  ],
+  "upstream": {
+    "commit": "629b3ad3030ce36e15e70c5db7d91df0d60c627f",
+    "host": "huggingface.co",
+    "repo": "stabilityai/sd-vae-ft-mse-original",
+    "url": "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/tree/629b3ad3030ce36e15e70c5db7d91df0d60c627f"
+  }
+}

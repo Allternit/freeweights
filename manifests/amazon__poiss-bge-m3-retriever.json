@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T04:14:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "25362df2fe37613440d9450603bdd8955f41b0836e82361e8c08759c4fd2522d",
+      "size": 192
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "dbc500a4f6f5902e239924e25da4c12fa6d4bddbbe6e85224c48cda6615de0a1",
+      "size": 1733
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d1636a5244f0cbb2a1e33a118e29e26729ce91b61bdf4325d47cb531f5bca0bd",
+      "size": 9784
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "70dae5884ced999af00244f776ac9eaa71538d68497d3d6a6091e0318cd32905",
+      "size": 658
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ce5418d32e3a5faabf1ca828430836f0a0e79baa2601b908a998ea8fa9bf0acd",
+      "size": 2266865872
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "21ddb3037a55ebf4549eb5c1dc44c3f28f10b56ec7f1335c92fd90e5b30d88ac",
+      "size": 350
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "494f849f8d2e39e56b8abfdd2e82513c663ecfadb056f9b280e1dbf0a85c3dee",
+      "size": 54
+    },
+    {
+      "lfs": true,
+      "path": "sentencepiece.bpe.model",
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "size": 5069051
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "size": 964
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "249df0778f236f6ece390de0de746838ef25b9d6954b68c2ee71249e0a9d8fd4",
+      "size": 17082799
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b87c8703482b0300d3da30e201519aa641f6a450f5eb5bf1e624afbf70c74d80",
+      "size": 1203
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/poiss-bge-m3-retriever",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "dbc500a4f6f5902e239924e25da4c12fa6d4bddbbe6e85224c48cda6615de0a1",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:14:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/poiss-bge-m3-retriever/resolve/c04bb2381540c2e757a57f7ea15d618c6c790840/"
+    }
+  ],
+  "upstream": {
+    "commit": "c04bb2381540c2e757a57f7ea15d618c6c790840",
+    "host": "huggingface.co",
+    "repo": "amazon/poiss-bge-m3-retriever",
+    "url": "https://huggingface.co/amazon/poiss-bge-m3-retriever/tree/c04bb2381540c2e757a57f7ea15d618c6c790840"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-15T04:31:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7badad7cef01cd33fbe1b0ebbf35cefc6c4fe71826796a5de8b41100035876b8",
+      "size": 7871
+    },
+    {
+      "lfs": true,
+      "path": "ckpts/sqdiffuse.safetensors",
+      "sha256": "8627f59fd1feed724a0da11d4d04f23903d1d543569848b1b17267a8ce05b2e3",
+      "size": 3208196480
+    },
+    {
+      "lfs": false,
+      "path": "ckpts/sqdiffuse.yaml",
+      "sha256": "1f9bb48672089a28ddb932533fceaf2e80016ee73f65e71ed3387bd9c27adb21",
+      "size": 1970
+    },
+    {
+      "lfs": true,
+      "path": "ckpts/sqvae_geomae.safetensors",
+      "sha256": "794cf4cd61796104c6ea49ca83874540a353b1485350cbdc4df84996cac2eddc",
+      "size": 889438856
+    },
+    {
+      "lfs": false,
+      "path": "ckpts/sqvae_geomae.yaml",
+      "sha256": "20a106f3e58f93e713085329eb17af6664549edcf3e209599097de89e8e194c7",
+      "size": 853
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/SQuadGen",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7badad7cef01cd33fbe1b0ebbf35cefc6c4fe71826796a5de8b41100035876b8",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:31:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/SQuadGen/resolve/67f8b71358cc5817cd7e759bd0c7503168e89291/"
+    }
+  ],
+  "upstream": {
+    "commit": "67f8b71358cc5817cd7e759bd0c7503168e89291",
+    "host": "huggingface.co",
+    "repo": "microsoft/SQuadGen",
+    "url": "https://huggingface.co/microsoft/SQuadGen/tree/67f8b71358cc5817cd7e759bd0c7503168e89291"
+  }
+}

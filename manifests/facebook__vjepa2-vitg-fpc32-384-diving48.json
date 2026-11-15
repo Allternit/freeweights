@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T03:52:19Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "47d63cc234139111488518bd7de70839ab400b67384efb5279f831e81cf58869",
+      "size": 1573
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fec85288cd5f247b16afefa8a9a18010dedb70959c2097c6096bbd567a9cf58a",
+      "size": 3692
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a522aae1170c226cd1dce5bf27697bd3e92616780b8e71966c3b4889caaad7e6",
+      "size": 4242
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ec1831cda77a4765b47a0e10d8adc3a5f99e664d7125f8c6461c640cd9903ddf",
+      "size": 4511592056
+    },
+    {
+      "lfs": false,
+      "path": "notebook_finetuning.ipynb",
+      "sha256": "98ccdc0d774fd3a55897455b50744196918da5f0028fdac8dfb9c1152f324dc1",
+      "size": 544786
+    },
+    {
+      "lfs": true,
+      "path": "sample/diving.mp4",
+      "sha256": "7652d0c08ebe634ec200d758746926edbe3b4972d88b83093f3719d67fca8490",
+      "size": 324132
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "f0e7dd970a0a214f8c5f049dd94e900e3eef085c5ae5c354618ad1c5615a2cc8",
+      "size": 1464
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/vjepa2-vitg-fpc32-384-diving48",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fec85288cd5f247b16afefa8a9a18010dedb70959c2097c6096bbd567a9cf58a",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:52:19Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/vjepa2-vitg-fpc32-384-diving48/resolve/0b48243375319bd8e03e3cd5560d957095429189/"
+    }
+  ],
+  "upstream": {
+    "commit": "0b48243375319bd8e03e3cd5560d957095429189",
+    "host": "huggingface.co",
+    "repo": "facebook/vjepa2-vitg-fpc32-384-diving48",
+    "url": "https://huggingface.co/facebook/vjepa2-vitg-fpc32-384-diving48/tree/0b48243375319bd8e03e3cd5560d957095429189"
+  }
+}

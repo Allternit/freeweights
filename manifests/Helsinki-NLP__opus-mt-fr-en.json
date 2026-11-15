@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T02:27:57Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98c91dabef4df27b2fc7c8454d220aba47476f73593cbd034d961fe4927304c1",
+      "size": 445
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a923263e9691f40ce7c9afe5d59f6296051439ae7776a158d18d57258be48195",
+      "size": 1250
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7",
+      "size": 1416
+    },
+    {
+      "lfs": true,
+      "path": "flax_model.msgpack",
+      "sha256": "a791a29fc2ab8a0bc4103fa3ce432bc9911c809d824fea62cc065d3726fb1801",
+      "size": 298685650
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "4956fb9a7caaad7579cf8bb789c1e578b8a1cf48a0a8b779fda2f95dd10bbaa5",
+      "size": 293
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6e3837f34b903802c3d0d670362b997cee6e87584a1108eb3fa89e4625e4424a",
+      "size": 300803608
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "599b819e3488f0fb888fef09511370ce4c0388b6f0f6beeb49a1f4b19043bebc",
+      "size": 300827685
+    },
+    {
+      "lfs": false,
+      "path": "source.spm",
+      "sha256": "78d0e717c77053f1c4b856d8661d9cb87c64f083a35418c087b9146300e4f585",
+      "size": 802397
+    },
+    {
+      "lfs": false,
+      "path": "target.spm",
+      "sha256": "173e9f493a668fe396d599e28d414a201193094e6ffd7a4678e5aab0f6d3d838",
+      "size": 778395
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "9ddf429085e46b20566df93a1417474c7f28e62245a8468554edb5abc8da7f92",
+      "size": 301299328
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "47de9ce87378593016432f8dc657202c03913ab3ce0c15d7f78d51edfc3ff9a3",
+      "size": 42
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "945c604346ce15ce4aff9001001e7f925e336d942c4087017f191871162cbdc4",
+      "size": 1339166
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Helsinki-NLP/opus-mt-fr-en",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a923263e9691f40ce7c9afe5d59f6296051439ae7776a158d18d57258be48195",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:27:57Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Helsinki-NLP/opus-mt-fr-en/resolve/c4aed37b318c763fd177aa449b44e3b783cc6c02/"
+    }
+  ],
+  "upstream": {
+    "commit": "c4aed37b318c763fd177aa449b44e3b783cc6c02",
+    "host": "huggingface.co",
+    "repo": "Helsinki-NLP/opus-mt-fr-en",
+    "url": "https://huggingface.co/Helsinki-NLP/opus-mt-fr-en/tree/c4aed37b318c763fd177aa449b44e3b783cc6c02"
+  }
+}

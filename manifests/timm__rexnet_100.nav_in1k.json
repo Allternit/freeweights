@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:50:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "83e624294a537ce5e302c88f8f3c0f29337378c1eb64d75852d2ee9cd7faa70a",
+      "size": 4588
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4c4144866a83defe7f8e1abd9298e5d9b7b0f66ae23f52a5594fd0978d48c9cc",
+      "size": 593
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e26646a976ab46d57a72f528416576bad45b2f36ff72c5205fe35641b17feff4",
+      "size": 19393284
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "9d70d228dda1f666e2485e54f009b23d523fb2518234d9596bd14c8e19474b32",
+      "size": 19487937
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/rexnet_100.nav_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "83e624294a537ce5e302c88f8f3c0f29337378c1eb64d75852d2ee9cd7faa70a",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:50:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/rexnet_100.nav_in1k/resolve/36dd8f43d1589a7c6c138625f3fde6abde2a61dd/"
+    }
+  ],
+  "upstream": {
+    "commit": "36dd8f43d1589a7c6c138625f3fde6abde2a61dd",
+    "host": "huggingface.co",
+    "repo": "timm/rexnet_100.nav_in1k",
+    "url": "https://huggingface.co/timm/rexnet_100.nav_in1k/tree/36dd8f43d1589a7c6c138625f3fde6abde2a61dd"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:03:02Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3c24a1d43621d3ffe01918fbb8690215f5a44106657a9fee30911b70f75188cd",
+      "size": 4727
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "c4531cacbf2a0ab65170433d7a4f371d11b7599cf96c04b192e6372432636c70",
+      "size": 7250
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "93d825b5f01e7b9e82ec673b88aec936f6da790ef00301ae18fa0e0cf4a4c48d",
+      "size": 116129
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7fa47217744f0e0918f6cf846e7541e4f322e6bc66917044cf2ad580699216c8",
+      "size": 186
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "a0b910fc2e45a5253299ff157e46ca4503cdbe9c43aea46a439e04b8de523348",
+      "size": 660
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00004.safetensors",
+      "sha256": "29399f6bdc87b189810429323fb883f9b7813720bb66386c65cee886211d0f62",
+      "size": 4291741061
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00004.safetensors",
+      "sha256": "ab55ed03ba953fc6f63a200cb1c0c6819d9abe1b75ad55446da6bf8da337083e",
+      "size": 4249048831
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00004.safetensors",
+      "sha256": "8d851b848206760d9ad7943a4686335051779981364280c0201071bf0302c924",
+      "size": 4243103981
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00004.safetensors",
+      "sha256": "d860306a1fd2bf5ebd77421d7af6a65c6412e46a1e0dc2d21a51c2c76c68ca94",
+      "size": 678536683
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "ce44fa89c01f1a1f2e733ebb86f575e94df7e8cec4f59a60e580c8221f1271d3",
+      "size": 221841
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "6ac5a19ae959e7b1b27785ab941ffe0744a7a5fc5f2f450323c022ef31d9dbb8",
+      "size": 55992
+    },
+    {
+      "lfs": true,
+      "path": "optiq/optiq_vision.safetensors",
+      "sha256": "965acd0c3e96bdbf682987db9021ce496d3e2c1095f255ae57d2c11fed854a07",
+      "size": 1106028506
+    },
+    {
+      "lfs": false,
+      "path": "optiq/sensitivity.json",
+      "sha256": "e86a311e6fedbd672084e9567ae7202f028f29e6e2e7f3fbb3a6cb4fff1058ee",
+      "size": 115697
+    },
+    {
+      "lfs": false,
+      "path": "optiq_metadata.json",
+      "sha256": "f3137dd96bab0a2266dbf4fd9668b8377802675c2bca4ade5f50f8f768717972",
+      "size": 66271
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "e4608c5d7b3f4f30ba83be16a82cdac856b2e7191d40f0a08cbacc76c2a926ee",
+      "size": 20001935
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "cf1f4d619bdeb9dfb76b5416c6d8f2bfacb38baca451eafb7a25f1fd8bae3c4e",
+      "size": 1612
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/MiniCPM-V-4.7-35B-A3B-OptiQ-4bit-REAP-19B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3c24a1d43621d3ffe01918fbb8690215f5a44106657a9fee30911b70f75188cd",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:03:02Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/MiniCPM-V-4.7-35B-A3B-OptiQ-4bit-REAP-19B/resolve/7f075195069bae1ac1625d9fa2b8e8c9a02ce0c2/"
+    }
+  ],
+  "upstream": {
+    "commit": "7f075195069bae1ac1625d9fa2b8e8c9a02ce0c2",
+    "host": "huggingface.co",
+    "repo": "mlx-community/MiniCPM-V-4.7-35B-A3B-OptiQ-4bit-REAP-19B",
+    "url": "https://huggingface.co/mlx-community/MiniCPM-V-4.7-35B-A3B-OptiQ-4bit-REAP-19B/tree/7f075195069bae1ac1625d9fa2b8e8c9a02ce0c2"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T02:32:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a368a21c472071feec9095f63d5f7d3433826c1c476a6995f072b6755ccc6f59",
+      "size": 399
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+      "size": 11356
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d05f973a044b35c1c80fe124c8531e34ef9540310d58a9dbc3d8402976e869e0",
+      "size": 73
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2ef12c6c91a60bcc79c67fe119f94c1f24b96df01ece0c0d963c59e8cfc1717f",
+      "size": 464
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "764a3ad5aa5f599cd1a93619eba403fb1cce7ad61b5abefd0e2bc129bc34ded5",
+      "size": 269738848
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "17f4f5b2f7e83b0a6f6031af68d16164716743e8edb8c555ab3ba540ac6e818b",
+      "size": 269752043
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ed5190ee9f25c1125844d2b63cf0d7267663981fc395e42e64e022ebdd31482e",
+      "size": 479086
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "bf186f7fb9cb667d811c08b45ce64d1e8e262277bb053f05d1aef3e9f13039a3",
+      "size": 239836
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "distilbert/distilbert-base-german-cased",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:32:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/distilbert/distilbert-base-german-cased/resolve/6f96562de9886779ce7d48810dff8f5c4afb6d0b/"
+    }
+  ],
+  "upstream": {
+    "commit": "6f96562de9886779ce7d48810dff8f5c4afb6d0b",
+    "host": "huggingface.co",
+    "repo": "distilbert/distilbert-base-german-cased",
+    "url": "https://huggingface.co/distilbert/distilbert-base-german-cased/tree/6f96562de9886779ce7d48810dff8f5c4afb6d0b"
+  }
+}

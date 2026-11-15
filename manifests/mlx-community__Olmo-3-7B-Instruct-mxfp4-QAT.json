@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T05:15:47Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "12c08f221c5acf4e0f2cbcce2b459931f962f00948e748a5af90a3d0de70eb9a",
+      "size": 971
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f5186d42d99c8a0445d37fd8a6c7ccf07fe3e24a29ce622d8bd245da9507b12b",
+      "size": 2613
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "420cc0d7dd9e3344127c287429afe41119ba35e248c2ffe34cd337e13e421887",
+      "size": 1772
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8e164a5161cb0ffd871e5c5284076d06a44b95a610edf29cc788e9a345f0569f",
+      "size": 3877910781
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "73b3235a9fc83330b632acd56d5a1794cb3e8dd8af26dfc33e5142ebd0713459",
+      "size": 41550
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "66becb9a96db60fb124531b6b12d911ca9c69e4f35d453f6f283dbdfe9c013d4",
+      "size": 7137188
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "992c9ebe9f9ba5206ec1b71e220622028bead98ae6dbb645e192d2e642f959fd",
+      "size": 332
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Olmo-3-7B-Instruct-mxfp4-QAT",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "12c08f221c5acf4e0f2cbcce2b459931f962f00948e748a5af90a3d0de70eb9a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:15:47Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Olmo-3-7B-Instruct-mxfp4-QAT/resolve/ad7ea408b60ecb814dcc9a0f408f4e27ed1a4b75/"
+    }
+  ],
+  "upstream": {
+    "commit": "ad7ea408b60ecb814dcc9a0f408f4e27ed1a4b75",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Olmo-3-7B-Instruct-mxfp4-QAT",
+    "url": "https://huggingface.co/mlx-community/Olmo-3-7B-Instruct-mxfp4-QAT/tree/ad7ea408b60ecb814dcc9a0f408f4e27ed1a4b75"
+  }
+}

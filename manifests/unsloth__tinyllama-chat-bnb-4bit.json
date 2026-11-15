@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T03:25:13Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "3a4ae3d78036882f7ec0b0e93cfb023c003db6d4e29d0d22676c2a86211c70e7",
+      "size": 2928
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0b07d0e4ade1bc8467dac87e841a2f976edf9b00ab4453c2ba9b2d4780f2f97c",
+      "size": 1235
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "d677ece3c7c89ed17316eed20261ad0364097e2314d7636ebe7cb0d8b67ca453",
+      "size": 124
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1217df46e04327e655b77ec52d85d27d107a83b17bb69187b329da82c35dc7f3",
+      "size": 762453371
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "719833ff26ac897a3ec8ed946028a135de2a351470af59b4008744ab1f0ee9b7",
+      "size": 438
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "bf467c9e0f536bda271283c6ef85eb1a943e3196b621c8a912d64953b205df83",
+      "size": 1842795
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "size": 499723
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "120bdeef4ef95d5c173341250e5bba3e6533164299ba3e79395dcb255aa44629",
+      "size": 1368
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/tinyllama-chat-bnb-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "3a4ae3d78036882f7ec0b0e93cfb023c003db6d4e29d0d22676c2a86211c70e7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.llama",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:25:13Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/tinyllama-chat-bnb-4bit/resolve/effb5dc8248c9270b0db975639c17084417180a7/"
+    }
+  ],
+  "upstream": {
+    "commit": "effb5dc8248c9270b0db975639c17084417180a7",
+    "host": "huggingface.co",
+    "repo": "unsloth/tinyllama-chat-bnb-4bit",
+    "url": "https://huggingface.co/unsloth/tinyllama-chat-bnb-4bit/tree/effb5dc8248c9270b0db975639c17084417180a7"
+  }
+}

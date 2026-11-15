@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:15:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "df81c19cf2b53ea6861f3c54b07ee1fea154696d1763a5e4826910401dbffe0d",
+      "size": 3176
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9dedf6469a4ff175d0079aac7800b27cf6bd3ab0baeddf757152b1ce11bba366",
+      "size": 932
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2f136f3c6006cedcc4c8dcfec0bd299353d10c5fc343e2a20cc2f4d4b47dc243",
+      "size": 3404535472
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "amazon/gpt-oss-120b-p-eagle",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "df81c19cf2b53ea6861f3c54b07ee1fea154696d1763a5e4826910401dbffe0d",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gpt-oss",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:15:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/amazon/gpt-oss-120b-p-eagle/resolve/57a9dab82eeeab66b90052e929185d3191279931/"
+    }
+  ],
+  "upstream": {
+    "commit": "57a9dab82eeeab66b90052e929185d3191279931",
+    "host": "huggingface.co",
+    "repo": "amazon/gpt-oss-120b-p-eagle",
+    "url": "https://huggingface.co/amazon/gpt-oss-120b-p-eagle/tree/57a9dab82eeeab66b90052e929185d3191279931"
+  }
+}

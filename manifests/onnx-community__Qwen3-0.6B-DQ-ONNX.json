@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T05:12:11Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "4074f34c8cf0e44a3e52cacd8d6e49422630975a5492679e608f480ff9f02101",
+      "size": 1633
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "2fdbd06cabfe6c7d2b0ff66ef72f2c76e4df6bf4111aa58b4e536029efa04e9c",
+      "size": 1645
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9fa670961499f0fca753e34f1c0cea22d4392557e733103f9cfbb1e96a717b2e",
+      "size": 983
+    },
+    {
+      "lfs": false,
+      "path": "genai_config.json",
+      "sha256": "dc1a9b003f198a1b9ee4963fac3b94695cfdd76125f916fee89809cba1292ec8",
+      "size": 1718
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "e020dd2bd158459e12296648fe73b6ec92c15a2cd83da5487f1efdf42c3d1b52",
+      "size": 64238474
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "2705201c0bc9a7b11e31c3354644f99d274e266272870045d61e7410966a88e5",
+      "size": 291272704
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "238fe71c3d3cae91896aa39a613386de9b500459e3f61c1b60a8e0e619d810d0",
+      "size": 10425
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Qwen3-0.6B-DQ-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "2fdbd06cabfe6c7d2b0ff66ef72f2c76e4df6bf4111aa58b4e536029efa04e9c",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:12:11Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Qwen3-0.6B-DQ-ONNX/resolve/5be3319ebc6661c3324182fab915a95d6b40c183/"
+    }
+  ],
+  "upstream": {
+    "commit": "5be3319ebc6661c3324182fab915a95d6b40c183",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Qwen3-0.6B-DQ-ONNX",
+    "url": "https://huggingface.co/onnx-community/Qwen3-0.6B-DQ-ONNX/tree/5be3319ebc6661c3324182fab915a95d6b40c183"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-11-15T05:09:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "6184a18bf5a226c7e5cbc7dee47e5c457bbecade08d8e7ad828bc99150285e76",
+      "size": 5538
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "size": 8952
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "14b65a0ee06517060a6bbd979bb1a8ff54e7b304b1a1f01d54344b88b8285e85",
+      "size": 4932
+    },
+    {
+      "lfs": false,
+      "path": "eval/eval.log",
+      "sha256": "54bfd6b683fb16a9aa13596efe308f4823414a0a22a90406bd5e2ba8d026b3ba",
+      "size": 865
+    },
+    {
+      "lfs": false,
+      "path": "eval/quantize.log",
+      "sha256": "fefb58d6e64a28b3c8a0cd504e557d07a2d228729b58bc101bce102a4b9b4ac6",
+      "size": 1616
+    },
+    {
+      "lfs": false,
+      "path": "eval/results_27b.json",
+      "sha256": "a7c116c62b79cc95cb7f2bbab97a64526e8796ff5bb931d390f777bf83f268c4",
+      "size": 8349
+    },
+    {
+      "lfs": false,
+      "path": "eval/splash/compare_gptq_vs_mlx4.txt",
+      "sha256": "ef8bbcd88d49db95a7cc80a6ab1133a3bdccccfbbda6d0ad88617bd1a3fb6047",
+      "size": 528
+    },
+    {
+      "lfs": false,
+      "path": "eval/splash/kl_bf16.txt",
+      "sha256": "b0fbbb6dfa63269d866602d8925170d050a28ab443a1e0b86ac6491e79e634ec",
+      "size": 626
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "size": 202
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "9200c5f018dd7909b0b43ba978b145124a425704518f0a1e6ef1a62e31611dbc",
+      "size": 5343269040
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "de518266b4e356ab61df7044db0670bae38bbf626b0b2adf67c5311b904a0e7c",
+      "size": 5354185416
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "215d150e59ce6ad004937580a84318cca078ed58963d60c65ef8a8c794e4f057",
+      "size": 5357087840
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "13b840162b4cb35c66fef7df072f7dbb4717908204364f5e5d9f9655a2758fa8",
+      "size": 218281
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "size": 390
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "222e060084f093738ca7af4c89ef09d844e415876021325fdf7d5c6821b119d4",
+      "size": 991
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "size": 19989325
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "792fa3f0cb88b111e54ef3134c873531008c4df471d108da17903426e308aa7b",
+      "size": 1165
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "size": 385
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "size": 6722759
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwen3.8-27B-GPTQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "6184a18bf5a226c7e5cbc7dee47e5c457bbecade08d8e7ad828bc99150285e76",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwen3.8-27B-GPTQ-4bit/resolve/99606080438f3908991dfc2c21fe2cdac34f89be/"
+    }
+  ],
+  "upstream": {
+    "commit": "99606080438f3908991dfc2c21fe2cdac34f89be",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwen3.8-27B-GPTQ-4bit",
+    "url": "https://huggingface.co/mlx-community/Qwen3.8-27B-GPTQ-4bit/tree/99606080438f3908991dfc2c21fe2cdac34f89be"
+  }
+}

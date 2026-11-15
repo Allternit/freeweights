@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T05:07:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "d42ef346ae623422ecc043143b34931ffeadc536001b6aa92625c80d71838703",
+      "size": 8431
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "d63ad536c3c81880043e22ec7fd08db42b4d8fb7c89c7138bc562bfa25281375",
+      "size": 3120
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c9a94c0b43288570173f7ad359a5ca2428f1c1d95857817f4af74deaa409efc4",
+      "size": 6382
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "80b2a0d01dfb732996aedb98868fee474e9fc5f46553df3a3f5a97ad0fb2b68a",
+      "size": 215
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "321196f10d90e4bbf3c2401bb49a6a4062cbd99701673160fcdf78b56b8865f1",
+      "size": 18707900256
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "839906024a440f91db46ddc8898dde3cc5b5e148441bccfafd762d927624ce84",
+      "size": 3000068
+    },
+    {
+      "lfs": true,
+      "path": "model_mtp.safetensors",
+      "sha256": "6c5e76856a6f306161e17baefb92e226465aba0841d9638513dc056b8cfb39ff",
+      "size": 2556215696
+    },
+    {
+      "lfs": false,
+      "path": "recipe.yaml",
+      "sha256": "bbbf047be7500829b58dfde401c6d8ca926f45ea25a3dc8d115483491f99daef",
+      "size": 719
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "946f6f7ed989038aa262abffbc134995e9a5e5d2aba596ba57769414ac8a25e4",
+      "size": 710
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "fcce46e83a6ed162239b0a0b421d2ab3f148d3f1fd6839c0f82baf61b2284cdc",
+      "size": 20217542
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "278c313bea224323f05aa03b8855c3f2b8bb744de6f5f9cc758970159b3715c8",
+      "size": 785
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/GLM-4.7-Flash-NVFP4",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "d42ef346ae623422ecc043143b34931ffeadc536001b6aa92625c80d71838703",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.glm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:07:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/GLM-4.7-Flash-NVFP4/resolve/98b0362133bda9ee3b1b875636636c07861f5947/"
+    }
+  ],
+  "upstream": {
+    "commit": "98b0362133bda9ee3b1b875636636c07861f5947",
+    "host": "huggingface.co",
+    "repo": "unsloth/GLM-4.7-Flash-NVFP4",
+    "url": "https://huggingface.co/unsloth/GLM-4.7-Flash-NVFP4/tree/98b0362133bda9ee3b1b875636636c07861f5947"
+  }
+}

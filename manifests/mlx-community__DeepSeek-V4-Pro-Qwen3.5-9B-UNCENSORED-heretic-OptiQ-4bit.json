@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T05:11:41Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "48ae957c2a16cbe6098dcc202c19373de522705f5354644f2f2ce9c8ca6773c5",
+      "size": 3329
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f7e41c826a3eea86dbd6ed2e204f0fc03262fcf720144e1dbb9b6d3e44e333a1",
+      "size": 8736
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "375ab183111cd4b435e4bab9960b4a3ce13e7e4ebba3da358ace0fdee3947117",
+      "size": 56066
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e1a93f0711897bc19fae82c9a47b069669349061febf31fe4c444ea33071017b",
+      "size": 142
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "88b7f80fd9b3a202088f71889a7b43f818d63c4f836a60f26d5babe08093a10c",
+      "size": 528
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "47ce669086111d9f33ed1168898b1b2f0d37b6a572ce275724768c3ed8804a32",
+      "size": 5349381654
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "2591892f16d9100d0ddff3d6c8901bd8927782873c91397a843033a5f7b2a4ae",
+      "size": 1751328472
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "93cf2b02e9220f4237d566044c2157c19b431559db2a16dfd427ba1f001e70e3",
+      "size": 115912
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "84205ea08ea5d8ac906c98f72b9e3ecc42c2ac9086209c11616181e9b1818d90",
+      "size": 26755
+    },
+    {
+      "lfs": true,
+      "path": "optiq/mtp.safetensors",
+      "sha256": "1a9ad38b7c5a7a13befa7f2a77f1b63ac30f94a1861c4f0326f8ba69fc75d1b7",
+      "size": 185118739
+    },
+    {
+      "lfs": true,
+      "path": "optiq_vision.safetensors",
+      "sha256": "f79255e0b1d6b5942ddb937edc52d436e279b99187cf289b23a468cbacfae58e",
+      "size": 912058017
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "b99182e09450f26453502b3c3390cce36b33dc8c4a1f3ee21807762e168c74ab",
+      "size": 781
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "3814737f2d4bfdd153a82364b3850f1be5dbc6f074a55c8d5fbf4d40127c3e87",
+      "size": 1325
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f",
+      "size": 19989339
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b09954254df1bd3e782d3c3865cad53b9f177e2f751bb07d2fc09e0b8f42b1f1",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "59c5c9eb52182eb14c06ffb10ca9effd29adce5f238a95de23ca14a38dbd2cb1",
+      "size": 817
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "48ae957c2a16cbe6098dcc202c19373de522705f5354644f2f2ce9c8ca6773c5",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:11:41Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-OptiQ-4bit/resolve/7e60c1f95093252c7c0ca6d3c0e0160844c425c4/"
+    }
+  ],
+  "upstream": {
+    "commit": "7e60c1f95093252c7c0ca6d3c0e0160844c425c4",
+    "host": "huggingface.co",
+    "repo": "mlx-community/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-OptiQ-4bit/tree/7e60c1f95093252c7c0ca6d3c0e0160844c425c4"
+  }
+}

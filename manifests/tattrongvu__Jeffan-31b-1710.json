@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-11-15T03:40:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "9333c90f04b2c10a3f9a0ef41837261231b671970e13b4a886e37fe3b51ad2a1",
+      "size": 11340
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4a6b4107658a07af50e7970a8b62838e9805f306c38b12fb6158b18e271d2ddf",
+      "size": 10477
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+      "size": 18683
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "9abe9f1db81e9887fd4d31baa88440bbcef3edb180729fddd679af96a06ecba7",
+      "size": 5449
+    },
+    {
+      "lfs": false,
+      "path": "dm_config.json",
+      "sha256": "21f4008859777f672611cdac0c843ceb5ff9480d193b91a8199faae9500bb94f",
+      "size": 147
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "ab62926273a435bed81af368050f3a0ba5b7298d8b09f0e7615ccc41bc787103",
+      "size": 204
+    },
+    {
+      "lfs": false,
+      "path": "inference/LICENSE",
+      "sha256": "9333c90f04b2c10a3f9a0ef41837261231b671970e13b4a886e37fe3b51ad2a1",
+      "size": 11340
+    },
+    {
+      "lfs": false,
+      "path": "inference/README.md",
+      "sha256": "3050e14dfb1788befe1b3f0e3108239d4b63f8d0efcff9ac3ecc645991d6f537",
+      "size": 5605
+    },
+    {
+      "lfs": false,
+      "path": "inference/dm_decision_engine/__init__.py",
+      "sha256": "658c01c8a0ea86896f8cb4092c53086443cec993336d83c29a99f77b39c33eb0",
+      "size": 206
+    },
+    {
+      "lfs": false,
+      "path": "inference/dm_decision_engine/engine.py",
+      "sha256": "cff937e759bfade959c4fcbfc3c353d9ec6b01473d69428366b32b01aa63b3e8",
+      "size": 11914
+    },
+    {
+      "lfs": false,
+      "path": "inference/dm_decision_engine/render.py",
+      "sha256": "b43742af3070ba5da11ae0c679d4346fe413ff0ccaf036ab09a9f5a35c49e315",
+      "size": 8786
+    },
+    {
+      "lfs": false,
+      "path": "inference/pyproject.toml",
+      "sha256": "84ce4444ec6d0e66d0bd954eccce214e5b58ce627e72f709ee6384b7af8c18b9",
+      "size": 733
+    },
+    {
+      "lfs": false,
+      "path": "inference/tests/test_engine_cpu.py",
+      "sha256": "5c35f4219488fec05d1356a39149c54fda3f0f930a88f2065c8ddcc9690de06c",
+      "size": 6634
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "f5e2c09869281313b5ba908aae8190ba64bdae4c2d66ab9c256811572a843329",
+      "size": 49923154850
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "134086ed14cd9fbc7389066a2fa1dbc66465e75569f20c910b57db090046f17b",
+      "size": 12623183414
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "390b7f9a0a502e4526cf20862d22954c911cc318d8aba2cdb745c6fbd98264f6",
+      "size": 120246
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b8045a4576903e86903291d5cbdd4adfc8859e9ce3c98621bdbd957f73ed394b",
+      "size": 3728
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "tattrongvu/Jeffan-31b-1710",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "9333c90f04b2c10a3f9a0ef41837261231b671970e13b4a886e37fe3b51ad2a1",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:40:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/tattrongvu/Jeffan-31b-1710/resolve/cebfa86c2bed2b5c83b12e44de4374b20c87fd79/"
+    }
+  ],
+  "upstream": {
+    "commit": "cebfa86c2bed2b5c83b12e44de4374b20c87fd79",
+    "host": "huggingface.co",
+    "repo": "tattrongvu/Jeffan-31b-1710",
+    "url": "https://huggingface.co/tattrongvu/Jeffan-31b-1710/tree/cebfa86c2bed2b5c83b12e44de4374b20c87fd79"
+  }
+}

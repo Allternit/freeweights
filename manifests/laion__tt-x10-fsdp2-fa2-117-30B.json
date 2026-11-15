@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T04:15:49Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "de80bb6edf1a833ee29462d6cd72903a73880454d897febf28a9959c3c4c42a8",
+      "size": 1636
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c0ae9b3f81bf6ea7d9c19a223f0a65791d1bd24f88b327daa91b92e8270e3e09",
+      "size": 2225
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "5a38bfa05833266240066aedc497decc9b00cc0d3e3b8cceea98cf530196ab06",
+      "size": 6211
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "03936c406dc10581e12423b964e19333916011d0816a933332a43869efa10acf",
+      "size": 1021
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "f2a80a84a116bc7a296bbddfea4e48cf69a12f46e1925fe912b59c21a3651a90",
+      "size": 216
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "54cfe8e1d983dc4086d4c9854d10dc0a77fd20c95b45ab9ce7ac36b4de4d1948",
+      "size": 50001000776
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "2745395fe329676a7c4689752d3ebed850453ff16273dee4a32d5ce4fde5d1d5",
+      "size": 11065610128
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "8056f5e61a77bcc39322368320783ace12dfd0877cf642821620e33341d5d25e",
+      "size": 1699795
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+      "size": 11422650
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "f6f4c67578d26ccdf6535fa0bc88683b9a0e7acb6797aca1f4759ad3330c22e9",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/metrics.csv",
+      "sha256": "0c26436663d951cc7184c4250ea61fff30bc419df49d1f2f2d8e7e4fec52ddbb",
+      "size": 13600
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/report.md",
+      "sha256": "74c375c8472507ccd5683757fb6e6f0f5bc9d3f57989e4db2f2954bc0f3edc7b",
+      "size": 2419
+    },
+    {
+      "lfs": true,
+      "path": "training_logs/reward_plot.png",
+      "sha256": "2a5507af258c638fc5acb1c1f54f8beb6f423c7a7cb74ef68239061ba0c82b58",
+      "size": 116522
+    },
+    {
+      "lfs": false,
+      "path": "training_logs/rl_config.yaml",
+      "sha256": "66ed71d78b69a082a07d288e5c23d5711274ba77aa7a943b229d292edc047731",
+      "size": 7633
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/tt-x10-fsdp2-fa2-117-30B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c0ae9b3f81bf6ea7d9c19a223f0a65791d1bd24f88b327daa91b92e8270e3e09",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:15:49Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/tt-x10-fsdp2-fa2-117-30B/resolve/955c0f80c2ac0d7ca554c8bebbb7118aa9e279ff/"
+    }
+  ],
+  "upstream": {
+    "commit": "955c0f80c2ac0d7ca554c8bebbb7118aa9e279ff",
+    "host": "huggingface.co",
+    "repo": "laion/tt-x10-fsdp2-fa2-117-30B",
+    "url": "https://huggingface.co/laion/tt-x10-fsdp2-fa2-117-30B/tree/955c0f80c2ac0d7ca554c8bebbb7118aa9e279ff"
+  }
+}

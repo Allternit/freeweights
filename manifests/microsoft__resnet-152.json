@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T03:24:42Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "06e023b53ac2f409d015467dd1e58d2b46f50560367f3da6498fa95b438e0fc2",
+      "size": 2665
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d95a518d9f9df2d7812de347cb188648e40f3c2234f035fa99596411db75c7ca",
+      "size": 69557
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8daaaa74fcdeff48b2c2466c83802dc9b7a02aa3639f60ad251c3dc798517ae7",
+      "size": 241501822
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "fd575b890da5a949493e1d1e7a70bfcb9e4b99fe444004d2dbfa253add254741",
+      "size": 266
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "7ebcf680ad55ee87b94142d741d38d9a4355d7c2193b9532d201ef2a8b8dcd7e",
+      "size": 241750265
+    },
+    {
+      "lfs": true,
+      "path": "tf_model.h5",
+      "sha256": "d6f9bb33d7ed9ba5a7cb3c3d11be2962aed0523373faed4b35896b3fb487ec13",
+      "size": 242237176
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/resnet-152",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "06e023b53ac2f409d015467dd1e58d2b46f50560367f3da6498fa95b438e0fc2",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:24:42Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/resnet-152/resolve/189229b1590873cc46c03813abc7d0a7cb8f02b2/"
+    }
+  ],
+  "upstream": {
+    "commit": "189229b1590873cc46c03813abc7d0a7cb8f02b2",
+    "host": "huggingface.co",
+    "repo": "microsoft/resnet-152",
+    "url": "https://huggingface.co/microsoft/resnet-152/tree/189229b1590873cc46c03813abc7d0a7cb8f02b2"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T05:29:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9caee3a070ae790fc61912a5c6114d9517c08570abfebe00f57dca22b227c580",
+      "size": 6448
+    },
+    {
+      "lfs": false,
+      "path": "adapter_config.json",
+      "sha256": "08857e37e5b9ef72aac500e1f197497757b2b64de28998b29903008398081313",
+      "size": 1069
+    },
+    {
+      "lfs": true,
+      "path": "adapter_model.safetensors",
+      "sha256": "394bdb06d1713c4319807f6cc334e7e76ce363d6dcd0ac32fc9ade347bd0b01f",
+      "size": 698425272
+    },
+    {
+      "lfs": false,
+      "path": "inference.py",
+      "sha256": "d9f38b2ca4ebeb9e14b70f4c1b2b765a53fccbed976ff00589beaf853e4eb924",
+      "size": 6011
+    },
+    {
+      "lfs": false,
+      "path": "train.py",
+      "sha256": "b1bfbb9876cdeabf1abef0a3bf35f36ae426a0648db3f34d02ae831fafb44204",
+      "size": 15711
+    },
+    {
+      "lfs": false,
+      "path": "trainer_state.json",
+      "sha256": "61a2ad5fce3f11a91c849ea28cdfe0d08dc6f5eb1d257dede1c6d58d921164fd",
+      "size": 48793
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "04bb7fb923759bf39d49b883193c9f65b8bd3a56c0102d9777ae549349c22a5b",
+      "size": 7096
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/moss-audio-sfx-lora-v4",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9caee3a070ae790fc61912a5c6114d9517c08570abfebe00f57dca22b227c580",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:29:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/moss-audio-sfx-lora-v4/resolve/48a25cc833f611df694355c6dcf941f8607050fc/"
+    }
+  ],
+  "upstream": {
+    "commit": "48a25cc833f611df694355c6dcf941f8607050fc",
+    "host": "huggingface.co",
+    "repo": "laion/moss-audio-sfx-lora-v4",
+    "url": "https://huggingface.co/laion/moss-audio-sfx-lora-v4/tree/48a25cc833f611df694355c6dcf941f8607050fc"
+  }
+}

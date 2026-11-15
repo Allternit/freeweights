@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-15T03:51:07Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c98ea84958beb923bc4cc02efe3d385061d63ebbe95b51d47da842563767838c",
+      "size": 4323
+    },
+    {
+      "lfs": false,
+      "path": "chat.py",
+      "sha256": "8253032232344768568bbd8ede3d5da64f5146ee961c86eb957957828e414b81",
+      "size": 1581
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6c308b31eada6d62eeb2f4d3d7efb4dd094ebe8a89992a2fcd54a3cd8558ba1c",
+      "size": 4365
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "dc003f3291366156bb46b17ba24f6c212774412a646b2bfb83fa7bac0e296c77",
+      "size": 161
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "ea32f178375c21412ee2829b2389682544ecd6f990a6120b219e065b1500d085",
+      "size": 4995252144
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "5b642fe2ce0ad3ff30838a3daebb6d26252770c65d29306a809e05598fc0e393",
+      "size": 503408384
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "7a1efccef236dea0c422e37d1584fa27b28c3dea5a09a98e2d6ef53c83a4830c",
+      "size": 56481
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ef824d8f3f414c73cf63f2005deeaabee79fa91ad9b882b35d653fb296903116",
+      "size": 107
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "b4858d44e300e3ee192731fd9e2e4ad2a4a77b2fdebc5825ffb0dcd7005f8e04",
+      "size": 629
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "dc6c14e44d21900b521716c453225aa9bcb9bb4fa79fd7d0915da47fa8911469",
+      "size": 8859691
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4d8bb069d946acd2b843e50cf287c4059c327a8af3dcdfd3fd609e1717ca1f55",
+      "size": 1434622
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/kosmos-2.5-chat",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c98ea84958beb923bc4cc02efe3d385061d63ebbe95b51d47da842563767838c",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:51:07Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/kosmos-2.5-chat/resolve/edf7d312d213f1a4a4645b0a46cffea3575ea016/"
+    }
+  ],
+  "upstream": {
+    "commit": "edf7d312d213f1a4a4645b0a46cffea3575ea016",
+    "host": "huggingface.co",
+    "repo": "microsoft/kosmos-2.5-chat",
+    "url": "https://huggingface.co/microsoft/kosmos-2.5-chat/tree/edf7d312d213f1a4a4645b0a46cffea3575ea016"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:40:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "31ee8da4c0d39e40438dc709682073863ab9b68f61fdd52ab4c4e1ca1e912619",
+      "size": 15507
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f91d69001f72e41172aecd1eb38f994d5c38594798cab072db76ffc914500c49",
+      "size": 658
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f7f68bb275562d8e8b41891b0af5ca5dc2ab6ac1e511f7f86e00509d9bdca887",
+      "size": 25203376
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "ab233a7938040a0755b21b0460ba304afe7942bfe0a35fdb1249f5015d2c829f",
+      "size": 25289949
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/regnety_008.pycls_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "31ee8da4c0d39e40438dc709682073863ab9b68f61fdd52ab4c4e1ca1e912619",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:40:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/regnety_008.pycls_in1k/resolve/ad27a8e42099466890afc4dbcc24cce1340776b9/"
+    }
+  ],
+  "upstream": {
+    "commit": "ad27a8e42099466890afc4dbcc24cce1340776b9",
+    "host": "huggingface.co",
+    "repo": "timm/regnety_008.pycls_in1k",
+    "url": "https://huggingface.co/timm/regnety_008.pycls_in1k/tree/ad27a8e42099466890afc4dbcc24cce1340776b9"
+  }
+}

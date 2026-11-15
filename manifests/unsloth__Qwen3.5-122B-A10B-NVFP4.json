@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:09:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "fe81d528e7ee055bbcf6a310afe0f2808423a4a16d45225f29c285926abef08d",
+      "size": 1635
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7191dd82e9b892f51d469a9fd19849b40f2bdc397e3134ff3de66cb74c4029d0",
+      "size": 94025
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "e5f9bfb644ead13bd36dd6cfc41553a93b7c264c0a2e1ac67d033aa8250c8538",
+      "size": 904
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "8452ca85cb1e0ff04304c02f417a53305d5ba17f6eb9d5693343ad8355f985a8",
+      "size": 7992
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7412be6f2448a6bab7948ed331392b6b6dc8c221ddc938fff7a91a704892ac20",
+      "size": 25100
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7a62af64a07e5c0b76492811a53ead5c27b1e75e3489568217edd87626976b33",
+      "size": 214
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "8e80ac73d8e7f3093127ddc28ddb1e2f9a3cda32b632adf562e74fc4ff85f1d6",
+      "size": 50014137184
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "60492b95087b955316e5ef2f91a4abcacc8b316f17c8f6803699fe2986736b21",
+      "size": 23971999992
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors.index.json",
+      "sha256": "c58669788fb944ceac1dd47362e0290e15e92a89579a101067bd6ca4b1944662",
+      "size": 17031136
+    },
+    {
+      "lfs": true,
+      "path": "model_mtp.safetensors",
+      "sha256": "b4fc887d1af4d780a74f4e06298b660bd96b4e431d483f04de1cfeb4df9ecc2c",
+      "size": 5047454424
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "b99182e09450f26453502b3c3390cce36b33dc8c4a1f3ee21807762e168c74ab",
+      "size": 781
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "01562eddd6f9e9ec4bc31656a3b7055284cafbf889acc6c4348dca431ae31f68",
+      "size": 1296
+    },
+    {
+      "lfs": false,
+      "path": "recipe.yaml",
+      "sha256": "f20972a2ee6becc97740bc6bcb97cf60a7f1afef67ad63f08b172610b3612be6",
+      "size": 838
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ce5cbe737f4aacc7696180aac743091101b59e4dc5a338d9fc8a6f716aa513f7",
+      "size": 876
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "1a6329cee073f44581f13a111a96addf12a9d9a65b2ac6f81fa441ec1b63f5c9",
+      "size": 19989425
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "bfd46bda4ad4feb24dc16fd7a0780bcfdf6a93e8ebb9a712b9657ddc4aba6a46",
+      "size": 1192
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "59c5c9eb52182eb14c06ffb10ca9effd29adce5f238a95de23ca14a38dbd2cb1",
+      "size": 817
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "4ab0d5c096294054b66444a116a20baf6e29998fc1fae410ffe4b6fadbc56b5c",
+      "size": 5234494
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/Qwen3.5-122B-A10B-NVFP4",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7191dd82e9b892f51d469a9fd19849b40f2bdc397e3134ff3de66cb74c4029d0",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:09:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-122B-A10B-NVFP4/resolve/0a6419df6090328f1f08d863a4587f583241e13c/"
+    }
+  ],
+  "upstream": {
+    "commit": "0a6419df6090328f1f08d863a4587f583241e13c",
+    "host": "huggingface.co",
+    "repo": "unsloth/Qwen3.5-122B-A10B-NVFP4",
+    "url": "https://huggingface.co/unsloth/Qwen3.5-122B-A10B-NVFP4/tree/0a6419df6090328f1f08d863a4587f583241e13c"
+  }
+}

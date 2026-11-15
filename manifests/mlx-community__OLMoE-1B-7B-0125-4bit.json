@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T05:16:02Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9c0060fb58e5410daf68078975eedb9be66da2a6af70119c3aedf5762f60e7cf",
+      "size": 949
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "70a9e612d081921d4aea864150c73f544c195167513e95cf257c8dfd18ee724d",
+      "size": 992
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "48bcb84cd35c6ff273d0c2028319448d1ab9296a92710164276e8551059895a7",
+      "size": 3892272579
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "37b049b3dc5375d1446ccddd628834869743d863d5a56380d64789399ac766c2",
+      "size": 33211
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "a6188c1e366f8ed715e60ff39c46a8c500fc33508e2affeb23e8c547c5853193",
+      "size": 293
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "ff3f2a2fc3b88f6f8504650e2ebb8e018bc4206a90eb41f1a9ff351e02e44ff9",
+      "size": 3565678
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4054b570753cfb3a9fa6fe6f8fbcc0dd4e70d9b5976396ec9a28ebeeb682bf91",
+      "size": 5402
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/OLMoE-1B-7B-0125-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9c0060fb58e5410daf68078975eedb9be66da2a6af70119c3aedf5762f60e7cf",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.olmo",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:16:02Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/OLMoE-1B-7B-0125-4bit/resolve/23511b9407e0d69bebdcb091ef5353a59f464a99/"
+    }
+  ],
+  "upstream": {
+    "commit": "23511b9407e0d69bebdcb091ef5353a59f464a99",
+    "host": "huggingface.co",
+    "repo": "mlx-community/OLMoE-1B-7B-0125-4bit",
+    "url": "https://huggingface.co/mlx-community/OLMoE-1B-7B-0125-4bit/tree/23511b9407e0d69bebdcb091ef5353a59f464a99"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:40:12Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+      "size": 1477
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8be1d036fde8dd8d279b9d0d8d886da58ba5c76e7a59d6da662b89243a51a5e3",
+      "size": 15646
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a708a30b49ec66afa868cac1be90155872ae5f8e06f7aef96aacc8b70ec3f96b",
+      "size": 659
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b6a71d3e93892518be64acf2728f28ad978e8efe0a0d12b1120332046c9047e2",
+      "size": 20883504
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "a1d6c33f904a7d95b6ac80d4c7bf984ae57a03efb906215dc5a193d8006f8a7a",
+      "size": 20916225
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/convnext_femto.d1_in1k",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8be1d036fde8dd8d279b9d0d8d886da58ba5c76e7a59d6da662b89243a51a5e3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:40:12Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/convnext_femto.d1_in1k/resolve/1e0c02df687c47abf0819e1a4f858293e17e0c50/"
+    }
+  ],
+  "upstream": {
+    "commit": "1e0c02df687c47abf0819e1a4f858293e17e0c50",
+    "host": "huggingface.co",
+    "repo": "timm/convnext_femto.d1_in1k",
+    "url": "https://huggingface.co/timm/convnext_femto.d1_in1k/tree/1e0c02df687c47abf0819e1a4f858293e17e0c50"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T02:30:59Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8ec656d05ff08b76b212f216e85c56e8979e460de21aa2ffdf13824edf207ee4",
+      "size": 3025
+    },
+    {
+      "lfs": false,
+      "path": "open_clip_config.json",
+      "sha256": "03db576c5ee0a28cbd2d3aea53192026b3b60fee81c2447552f53c1c80f6eb8d",
+      "size": 948
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_model.safetensors",
+      "sha256": "97816a02002b8b0c41cb507e2cc250eb39ef4ea2a63d1b6e44490a2039cfcdda",
+      "size": 1500971152
+    },
+    {
+      "lfs": true,
+      "path": "open_clip_pytorch_model.bin",
+      "sha256": "b6f5f56592cb8194aef184c7a1f6568ef972fd03757407a225711cebfdaa0b9b",
+      "size": 1501063262
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "d4671afd8f9b1ccd170443bd5478c0cc40fdbddc9343034caf6984ffd388b2c4",
+      "size": 327
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "220c63d496e0c14e63eb656c91e0215e926202e4c74b1f089e09f1920d779b04",
+      "size": 34362885
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "513e778583a9ac0b74ae47784216f9d654d5132eee62d777597f5e842701323c",
+      "size": 46382
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "timm/ViT-B-16-SigLIP2-256",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8ec656d05ff08b76b212f216e85c56e8979e460de21aa2ffdf13824edf207ee4",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:30:59Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/timm/ViT-B-16-SigLIP2-256/resolve/fb14461786ff5cd7b18210817522546f28c7143a/"
+    }
+  ],
+  "upstream": {
+    "commit": "fb14461786ff5cd7b18210817522546f28c7143a",
+    "host": "huggingface.co",
+    "repo": "timm/ViT-B-16-SigLIP2-256",
+    "url": "https://huggingface.co/timm/ViT-B-16-SigLIP2-256/tree/fb14461786ff5cd7b18210817522546f28c7143a"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-large-v3-turbo",
+  "display_name": "paza-whisper-large-v3-turbo",
+  "family": "microsoft",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "microsoft/paza-whisper-large-v3-turbo",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/microsoft/paza-whisper-large-v3-turbo.json",
+  "params": 808884480,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-large-v3-turbo",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 1809,
+    "likes": 16,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T0",
+  "total_size": 6474250155,
+  "upstream_url": "https://huggingface.co/microsoft/paza-whisper-large-v3-turbo",
+  "what_changed": null
+}

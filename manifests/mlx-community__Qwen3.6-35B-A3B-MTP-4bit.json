@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T05:07:22Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c2eb3bd66a5fd68f6611f4a219d1c781f8d250ad1ce9c819309a79fd3b655810",
+      "size": 1923
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "7b38a336fa246a285ee23cc990351989bf2ee6c040506a2b793ee24e463f35a7",
+      "size": 3180
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "77fbc6594cdd830cae89e0b693f18278dd0a7a7c5749fd33d4bc5817dbb91bad",
+      "size": 475130833
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "00e220ddb21ceeb6290a3a1161f97339c553f3d27fc4319900a96edb5cfae74c",
+      "size": 3134
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "size": 12807982
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5186f0defcd7f232382c7f0aebcd2252d073bb921ab240e407b7ae8745d2b29b",
+      "size": 16718
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "size": 6722759
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwen3.6-35B-A3B-MTP-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c2eb3bd66a5fd68f6611f4a219d1c781f8d250ad1ce9c819309a79fd3b655810",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:07:22Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwen3.6-35B-A3B-MTP-4bit/resolve/0295b81421bf4d0fccca9a7c0fcfb1418dda3516/"
+    }
+  ],
+  "upstream": {
+    "commit": "0295b81421bf4d0fccca9a7c0fcfb1418dda3516",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwen3.6-35B-A3B-MTP-4bit",
+    "url": "https://huggingface.co/mlx-community/Qwen3.6-35B-A3B-MTP-4bit/tree/0295b81421bf4d0fccca9a7c0fcfb1418dda3516"
+  }
+}

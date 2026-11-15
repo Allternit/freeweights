@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T03:20:54Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fd93669daf190442e203d769300227e039d58da7d42c2bcd663282de76edda53",
+      "size": 2434
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "a8e816c540c0dfde9f3c545f4080e62b2b983c1c01b2d5d7ab290635b3e648b8",
+      "size": 29555
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d987de0cccfbee8818da660408f8d43a0c49b4a067b677c36524c6a2da54e966",
+      "size": 907
+    },
+    {
+      "lfs": false,
+      "path": "data_summary_card.md",
+      "sha256": "27e2cc9bfb9f49142c823ea7657fcd2f4f9a1b49f590f27747d80dc06edc6e10",
+      "size": 4453
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "b144333b5cbcbd8f1d6331187d0f2efdbf5016cbb06fa9ae0df6008052e9605c",
+      "size": 147
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "1e72ad5e778ca840eb4a92cba8b0c2f55700b3d54b120916cc5a9668e96d0636",
+      "size": 2966677176
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "b73ff9b2b79c8f3931ca5e2ebe160ede6119348a0e5cab57c81b0e6133eb5a92",
+      "size": 759
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "98488f5df9297d0f88a70800f933e1f4f777236a0b50fe974ab9b186710dd0be",
+      "size": 24137
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+      "size": 791656
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "e4aef5040cc70307fb321e2e78b3e875343d4afc7b010aed26dfc18571f9dc76",
+      "size": 237953
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "microsoft/udop-large",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fd93669daf190442e203d769300227e039d58da7d42c2bcd663282de76edda53",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:20:54Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/microsoft/udop-large/resolve/2d5f5b18aa2a3ad6b551933582ca49265f45afcf/"
+    }
+  ],
+  "upstream": {
+    "commit": "2d5f5b18aa2a3ad6b551933582ca49265f45afcf",
+    "host": "huggingface.co",
+    "repo": "microsoft/udop-large",
+    "url": "https://huggingface.co/microsoft/udop-large/tree/2d5f5b18aa2a3ad6b551933582ca49265f45afcf"
+  }
+}

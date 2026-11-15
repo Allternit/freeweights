@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:21:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "868962999509c5201ee1b94b83ce0f517323fee0d50ba35db2a1a2b28870e249",
+      "size": 2247
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "925f0abda99abd87857b2e49dc2fc0a453a958925c92c34c4fc57eb76c453d9a",
+      "size": 5446
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6d0046fc9fc07c74601b25107b8ff96077dc9c63941492f2856743eabc2a3d99",
+      "size": 2394
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "3458d62b3f9654f4bbe285223b0f4e5a1e67cae61c92bb6aeaadf04468bf9e01",
+      "size": 182
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "dd592ed26893f8f7fcc88386ff73c2e6f0ed338c9e73c1a63f972461350334ea",
+      "size": 1730052109
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "64148ac05ad909f2fc69ec126ef9efe38545512a41914bdba17d1dc29437c19d",
+      "size": 58800
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "12403efb970f069ba62ddf3b66166a27254be4a198166b61ad1ee604bd3a4515",
+      "size": 289
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "7b6a500b662a34eb3f0374db856ba4ad7de4c81040571d78dc0d357238930005",
+      "size": 17208819
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "16f30338b9776ade6f6f2b09422e650b052b7112f836bc005cd6eac89e6ec0dc",
+      "size": 50386
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/SmolLM3-3B-MLX-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "868962999509c5201ee1b94b83ce0f517323fee0d50ba35db2a1a2b28870e249",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.smollm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:21:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/SmolLM3-3B-MLX-4bit/resolve/2fd55434f0dcd0f22dada2a1fbf15b3fb8ef0842/"
+    }
+  ],
+  "upstream": {
+    "commit": "2fd55434f0dcd0f22dada2a1fbf15b3fb8ef0842",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/SmolLM3-3B-MLX-4bit",
+    "url": "https://huggingface.co/lmstudio-community/SmolLM3-3B-MLX-4bit/tree/2fd55434f0dcd0f22dada2a1fbf15b3fb8ef0842"
+  }
+}

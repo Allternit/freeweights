@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:11:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "178c7850fb1267fdc785972f1a7e1950da41d7500d2d4f068abbfa01d6a314ac",
+      "size": 10620
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f0ba43f79b3cabca5e5a7584c77aec92f49feae45cdf7779c87d9fc54cd90258",
+      "size": 9013
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5cbbdac5f0d9b50460bb89c96d85f88b84bc97118839ae4c4da2b2bedf2241a7",
+      "size": 1185
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "1b9baf0a7959d31d7fb58ff6b506c27d09a73d395cadccc7e6dd1d4b7e43fd9d",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "granite-4.2-3b-q8-metadata.properties",
+      "sha256": "9ea4a37c3321795eddb8e5b6dbab401b97ba5c85ce400cef006c053bfbe3832f",
+      "size": 1162
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a1cbe64a369165c0c1a0e0a928545483b3ae1aadfe770432d011de83989ce43c",
+      "size": 3888771048
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "883975314d58743726347caaf2c32ac89afd5ad57222cffbc4f052f2ab27b2d7",
+      "size": 7153414
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0b1cc678b9fbde8ce90c81e0f6483c4e1696dfa377330e42a88106416b96e659",
+      "size": 436
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-4.2-3b-q8-mlx",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "178c7850fb1267fdc785972f1a7e1950da41d7500d2d4f068abbfa01d6a314ac",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:11:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-4.2-3b-q8-mlx/resolve/8e19ac6574124635eb8fbd06a15d05ebbfff82dd/"
+    }
+  ],
+  "upstream": {
+    "commit": "8e19ac6574124635eb8fbd06a15d05ebbfff82dd",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-4.2-3b-q8-mlx",
+    "url": "https://huggingface.co/ibm-granite/granite-4.2-3b-q8-mlx/tree/8e19ac6574124635eb8fbd06a15d05ebbfff82dd"
+  }
+}

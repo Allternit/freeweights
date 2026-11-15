@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "cointegrated/rubert-tiny",
+  "display_name": "rubert-tiny-toxicity",
+  "family": "cointegrated",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "cointegrated/rubert-tiny-toxicity",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/cointegrated/rubert-tiny-toxicity.json",
+  "params": 11786245,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "cointegrated/rubert-tiny",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 130692,
+    "likes": 50,
+    "trending": null
+  },
+  "tasks": [
+    "text-classification"
+  ],
+  "tier": "T1",
+  "total_size": 95036556,
+  "upstream_url": "https://huggingface.co/cointegrated/rubert-tiny-toxicity",
+  "what_changed": null
+}

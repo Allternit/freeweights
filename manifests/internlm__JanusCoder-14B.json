@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T03:30:15Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1609b7b9cc37b813db23430abc6ee4664a01e46a1ce280da3e72ffd57d4b96b6",
+      "size": 4863
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "size": 707
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "size": 4116
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "aa0bcec2238e4e070468cc59d1e90b237303dac7db4bce83e18e6a84ff60f0cc",
+      "size": 1633
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "a858bb8e93b6ebdfaf3912ec5af4f4daca183812aeeb7147e26e0a9555ce6d48",
+      "size": 117
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00006.safetensors",
+      "sha256": "2c42abce92d0f7a88773cae312338607dd8b3bce105b258cb7f375ac6cdb5bd0",
+      "size": 4984780784
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00006.safetensors",
+      "sha256": "d22c6e5a3fa20ed26f254caf288b3bd6497da350680093beb51af9262c38507b",
+      "size": 4980892048
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00006.safetensors",
+      "sha256": "117d2eb5269f1e735af98d7adefa8b48b025bf525a7487ba8e48f99161eced59",
+      "size": 4928485104
+    },
+    {
+      "lfs": true,
+      "path": "model-00004-of-00006.safetensors",
+      "sha256": "c15dec9db0dc7b955da9c57fe7ae16af8ceeb9ec501759d16978492fffb6beab",
+      "size": 4980892112
+    },
+    {
+      "lfs": true,
+      "path": "model-00005-of-00006.safetensors",
+      "sha256": "9fb3073e903089b8e0e4b85e6e115b72225aa392a9b2561b852766d2fe578c73",
+      "size": 4928485104
+    },
+    {
+      "lfs": true,
+      "path": "model-00006-of-00006.safetensors",
+      "sha256": "e723e8f1cf5921c720efe2c029645cfc9a48406449ceb9ada8620f9599b09455",
+      "size": 4733130504
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "af9cd4e3bd21c994f831887e4e68f68ad2b1572e92db87e5aa4f8e5c3af83aa6",
+      "size": 36551
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "cd5c1909da4950a610a9e3a6cb6763cff0381d91c6f0838855db8d5ae83d6c9f",
+      "size": 5431
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "internlm/JanusCoder-14B",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1609b7b9cc37b813db23430abc6ee4664a01e46a1ce280da3e72ffd57d4b96b6",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:30:15Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/internlm/JanusCoder-14B/resolve/28487c478ac1b573157c593449ccfb3b2db48ae7/"
+    }
+  ],
+  "upstream": {
+    "commit": "28487c478ac1b573157c593449ccfb3b2db48ae7",
+    "host": "huggingface.co",
+    "repo": "internlm/JanusCoder-14B",
+    "url": "https://huggingface.co/internlm/JanusCoder-14B/tree/28487c478ac1b573157c593449ccfb3b2db48ae7"
+  }
+}

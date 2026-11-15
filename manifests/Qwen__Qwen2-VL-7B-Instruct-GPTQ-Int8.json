@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T05:10:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "size": 11343
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ec6abcee0c90d37862235d1d60a2b1746f0fde72468932fc6ba7ec59e829b0c6",
+      "size": 18787
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "7fa54985b58718a8fdb4f4d97484c4bd908db114847675e4bf3afe3e1d5d7bd4",
+      "size": 392
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.json",
+      "sha256": "94174d7176c52a7192f96fc34eb2cf23c7c2059d63cdbfadca1586ba89731fb7",
+      "size": 1049
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f7ea3e91e6d21c577cd6ae87888c0c13509f3a05b9cf1f1243d49cd5dbd9bd63",
+      "size": 1355
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "095745817a9d52e518c275687967564474a1f7719aa90982f268e47bfd70841f",
+      "size": 249
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "size": 1671853
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "ac66af0aee0c6ef3afa2938b11ffb9bbebba15714b5395b4021a52c88c0dd535",
+      "size": 3973415776
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "8794364e35bfeb363ab9f795d7713657830c06bddf671bda5c3f37f604961280",
+      "size": 3988287560
+    },
+    {
+      "lfs": true,
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "8a6d6ca956a3e128305b734c674832cb5b6eeae516d49826f86664af05d23aba",
+      "size": 2253370488
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "d87d917a93a46792b06b2abdbdbeb49bb98fa0bd691654a8396e8228fbc557d4",
+      "size": 104140
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "8885ee26f126992101959631b5bc8cd2767da5cdae05a89f2989426e5dab0069",
+      "size": 567
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "d2e753f20bcaf0cdf5c7a9997b3afcab4e4db8382a9c165d69a68cc591bf0de8",
+      "size": 207
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "size": 613
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "bfb053cacf2735b3a5bebbc40e4a853183efec30da0bc8f6304aef14ec0083bc",
+      "size": 7030315
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "eb3c5a310899d7d65feec0dee4dff9067d7bc4ad2a17e2005bc9163f1ace0531",
+      "size": 4297
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size": 2776833
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:10:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8/resolve/0768122e31eb1dfe970d3910cb5aa5911be9e309/"
+    }
+  ],
+  "upstream": {
+    "commit": "0768122e31eb1dfe970d3910cb5aa5911be9e309",
+    "host": "huggingface.co",
+    "repo": "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8",
+    "url": "https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8/tree/0768122e31eb1dfe970d3910cb5aa5911be9e309"
+  }
+}

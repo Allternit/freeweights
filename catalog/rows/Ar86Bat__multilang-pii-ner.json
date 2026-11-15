@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "FacebookAI/xlm-roberta-base",
+  "display_name": "multilang-pii-ner",
+  "family": "Ar86Bat",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "Ar86Bat/multilang-pii-ner",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/Ar86Bat/multilang-pii-ner.json",
+  "params": 277479971,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "FacebookAI/xlm-roberta-base",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 1407,
+    "likes": 9,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "T2",
+  "total_size": 1132113454,
+  "upstream_url": "https://huggingface.co/Ar86Bat/multilang-pii-ner",
+  "what_changed": null
+}

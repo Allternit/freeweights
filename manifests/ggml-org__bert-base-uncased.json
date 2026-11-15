@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-11-15T05:23:47Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "47b6a1fff781b43f451ae0db7dc8ef893e97f4ccb901b9defa410c4ae2e4105d",
+      "size": 1583
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "06e271ba634db9dcdc96fdbfd3e047bc3461c48749e4b4dd0257f83e4fee7525",
+      "size": 118
+    },
+    {
+      "lfs": true,
+      "path": "bert-base-uncased-Q8_0.gguf",
+      "sha256": "d03fa752e9930130ce03358a8e22ecd4f3f1dba4ec37149218ef1e310ce72460",
+      "size": 117852384
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/bert-base-uncased",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "06e271ba634db9dcdc96fdbfd3e047bc3461c48749e4b4dd0257f83e4fee7525",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:23:47Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/bert-base-uncased/resolve/49aa220b73c2fa72b16868b299b9ccdd10571a4d/"
+    }
+  ],
+  "upstream": {
+    "commit": "49aa220b73c2fa72b16868b299b9ccdd10571a4d",
+    "host": "huggingface.co",
+    "repo": "ggml-org/bert-base-uncased",
+    "url": "https://huggingface.co/ggml-org/bert-base-uncased/tree/49aa220b73c2fa72b16868b299b9ccdd10571a4d"
+  }
+}

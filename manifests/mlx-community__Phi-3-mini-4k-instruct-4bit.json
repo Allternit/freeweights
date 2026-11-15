@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T03:43:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "66fb0c6960f4b837135e8b18d9d307f5e565361a6a447081a7b1ffd495de1e1e",
+      "size": 770
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0e2e43bc4358b4cabbcc33c496f34e170fdfe04612a47428f1691d1e9ec5a568",
+      "size": 1030
+    },
+    {
+      "lfs": false,
+      "path": "configuration_phi3.py",
+      "sha256": "d25f57c0823fcb9753880a25e79ab562b039d6187102ac13e4ff26dd11e9a81c",
+      "size": 11153
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8d75680621a09474f6601e9176f2f61f92a5e4c079d68d583901f51699fda50a",
+      "size": 2149696167
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "4ef199a5c6c29fa54d84d3710bfad4b5424b75bbd68872f9e1e12234bd3fd9c3",
+      "size": 32695
+    },
+    {
+      "lfs": false,
+      "path": "modeling_phi3.py",
+      "sha256": "c9e75b93ed114a3918971224973a8e9dba3d100a50e6363f88c60efb93b18579",
+      "size": 73193
+    },
+    {
+      "lfs": false,
+      "path": "sample_finetune.py",
+      "sha256": "3cd7ec254aa5b2c7b2c1706081f94e3ee18b21e81e9fc2f39255d6545cf8894c",
+      "size": 6401
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "474d699677e264edd3851559548cbbb61801ad8da6b249c81455007602313c34",
+      "size": 569
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "d0f067e1e15cd0a36ebef3668024882cb67a80b86fb4b7b4b128481f0d474db7",
+      "size": 1844436
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d6e13c85fbde9cf71f663da027cf558ab2bb9df80bd60c718be10dbba8d2a2be",
+      "size": 3333
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Phi-3-mini-4k-instruct-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "66fb0c6960f4b837135e8b18d9d307f5e565361a6a447081a7b1ffd495de1e1e",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.phi",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:43:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Phi-3-mini-4k-instruct-4bit/resolve/5b3819ed6317784fb20eddeae9bed984f778d0d0/"
+    }
+  ],
+  "upstream": {
+    "commit": "5b3819ed6317784fb20eddeae9bed984f778d0d0",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Phi-3-mini-4k-instruct-4bit",
+    "url": "https://huggingface.co/mlx-community/Phi-3-mini-4k-instruct-4bit/tree/5b3819ed6317784fb20eddeae9bed984f778d0d0"
+  }
+}

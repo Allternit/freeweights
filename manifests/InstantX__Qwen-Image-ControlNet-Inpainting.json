@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T02:45:28Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "9637a394af54aac896c3f175d7aa4f8876fa2086de8c95a194a62f225f1a98b9",
+      "size": 1891
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "22783f32ad58c537a5a9ede75056b1e72f4b269c427d4d711bce3f1b4eebbccb",
+      "size": 3825
+    },
+    {
+      "lfs": false,
+      "path": "app_inpaint_hf.py",
+      "sha256": "5b0b63570afb5cb6033d27484280427bb92ae7c3885de3df3fec7812cad9fcc5",
+      "size": 11687
+    },
+    {
+      "lfs": true,
+      "path": "assets/images/image1.png",
+      "sha256": "1557bdf0882f4650878acec38727c1c37bfe39704a82abe216a3cb8c3752a8b2",
+      "size": 4289854
+    },
+    {
+      "lfs": true,
+      "path": "assets/images/image2.png",
+      "sha256": "3e07b721e268d285ae16a54bea09af804098a7c1cdcfd648d9deec95f8a6d262",
+      "size": 5454717
+    },
+    {
+      "lfs": true,
+      "path": "assets/images/image3.png",
+      "sha256": "c3164767e396c20e9173b961ea84a62f62b845eb806a7b7de26195f42c704f72",
+      "size": 3428250
+    },
+    {
+      "lfs": false,
+      "path": "assets/masks/mask1.png",
+      "sha256": "350578968afcc597b8a7572c6e145ace959227f69ea8e582a53bdee4aa50a67c",
+      "size": 19358
+    },
+    {
+      "lfs": false,
+      "path": "assets/masks/mask2.png",
+      "sha256": "f74083261cf1a9bb1abad990933d1637a19fc6dde2b76ee64db060291245a3d0",
+      "size": 22286
+    },
+    {
+      "lfs": false,
+      "path": "assets/masks/mask3.png",
+      "sha256": "03784f4947f65f240135852a65f032ec0f1b4bca5f542ca6a73ce94243a3551a",
+      "size": 18197
+    },
+    {
+      "lfs": true,
+      "path": "assets/results/output1.png",
+      "sha256": "ad1a9da6a4dcf076e05a5d3f91a57dbfc096e334e9afd35f29b58c92dc8583c6",
+      "size": 4202594
+    },
+    {
+      "lfs": true,
+      "path": "assets/results/output2.png",
+      "sha256": "177dc16327eb263ea79beeab0fb3c83f9dee552095253e6b757cdec5c70149cd",
+      "size": 5156767
+    },
+    {
+      "lfs": true,
+      "path": "assets/results/output3.png",
+      "sha256": "cc0ec3a614ba89b80491fe640d2c059edf04b504c3689d8c163af30d7b6bbacb",
+      "size": 3127896
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "4d804c94bc9dd9eb6e0ed08b973e6156634f0ebf1452d2ff3e75281a74c0be10",
+      "size": 482
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_pytorch_model.safetensors",
+      "sha256": "49c01aafe6545c1f6e7627a724c8fb13357fe74efee235622158f0a8f30e5458",
+      "size": 4234599432
+    },
+    {
+      "lfs": false,
+      "path": "pipeline_qwenimage_controlnet_inpaint.py",
+      "sha256": "6ab5a6befa8edfbb57e77517e65940bb6a610de585c8c1535569d1fa00eac650",
+      "size": 43841
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "InstantX/Qwen-Image-ControlNet-Inpainting",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "22783f32ad58c537a5a9ede75056b1e72f4b269c427d4d711bce3f1b4eebbccb",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:45:28Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/InstantX/Qwen-Image-ControlNet-Inpainting/resolve/5387c47add7b3a9b1d6341b75a251d235408c670/"
+    }
+  ],
+  "upstream": {
+    "commit": "5387c47add7b3a9b1d6341b75a251d235408c670",
+    "host": "huggingface.co",
+    "repo": "InstantX/Qwen-Image-ControlNet-Inpainting",
+    "url": "https://huggingface.co/InstantX/Qwen-Image-ControlNet-Inpainting/tree/5387c47add7b3a9b1d6341b75a251d235408c670"
+  }
+}

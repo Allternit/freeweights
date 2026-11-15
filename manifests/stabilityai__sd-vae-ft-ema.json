@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:25:11Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "15bff3ac97756db161d7bae5a5aa24899c4c01fc02effcc3f0499cb642a3618b",
+      "size": 1456
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "814a88d18bd11ff1d8fe5ee9848562b779226a32d96c3aabfc9f58aac2e57f24",
+      "size": 6845
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "92d3dfb746fca211a2c9e019e285f8597412211728dce3c5bcf4eda0f2d62e7e",
+      "size": 547
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_pytorch_model.bin",
+      "sha256": "7c98ebcd7ca5cb69d47b2ae287feba0695689fbf2c8fead2fab05fd3e0c28303",
+      "size": 334707217
+    },
+    {
+      "lfs": true,
+      "path": "diffusion_pytorch_model.safetensors",
+      "sha256": "32db726da04f06c1b6b14c0043ce115cc87a501482945c5add89a40d838fcb46",
+      "size": 334643276
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "stabilityai/sd-vae-ft-ema",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "814a88d18bd11ff1d8fe5ee9848562b779226a32d96c3aabfc9f58aac2e57f24",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:25:11Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/stabilityai/sd-vae-ft-ema/resolve/f04b2c4b98319346dad8c65879f680b1997b204a/"
+    }
+  ],
+  "upstream": {
+    "commit": "f04b2c4b98319346dad8c65879f680b1997b204a",
+    "host": "huggingface.co",
+    "repo": "stabilityai/sd-vae-ft-ema",
+    "url": "https://huggingface.co/stabilityai/sd-vae-ft-ema/tree/f04b2c4b98319346dad8c65879f680b1997b204a"
+  }
+}

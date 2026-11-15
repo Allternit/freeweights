@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T03:24:20Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a70c0b9886eade5f37d74f67e379191361a481c96227ff47591e727f07de1e9e",
+      "size": 577
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "149344a31d2c4e1a080ee7aac78540b65277d76abf354f7e5e6f3bb563989d1b",
+      "size": 67384
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "fe9dde645c89fa7c541a80f08679e38884c32f5921355e7921f61a93268f1193",
+      "size": 1711007798
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "f98c8c2b6dbcb795ad24da98f5ac367ff48a57ef42375b410ce7833b524cd97c",
+      "size": 37295
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/csm-1b-8bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a70c0b9886eade5f37d74f67e379191361a481c96227ff47591e727f07de1e9e",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:24:20Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/csm-1b-8bit/resolve/fcf0cc857eade3615a60f30722cf5197d4f88406/"
+    }
+  ],
+  "upstream": {
+    "commit": "fcf0cc857eade3615a60f30722cf5197d4f88406",
+    "host": "huggingface.co",
+    "repo": "mlx-community/csm-1b-8bit",
+    "url": "https://huggingface.co/mlx-community/csm-1b-8bit/tree/fcf0cc857eade3615a60f30722cf5197d4f88406"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T05:15:23Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "346d6816a7d58c2c30db3777a69dfa05332273476bd4c8c494abc48a4c63227b",
+      "size": 5807
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "caf441b7eef4032175e18e5a3fcc5d574d39db3d46a752f9fe60e05b3b0fd435",
+      "size": 50990
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5e523194f1e6a64b5a3abd9b60406d4512f16fdd218a69ff67017a8d1b98bbca",
+      "size": 71668
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "2da7d47641f4509da4ae47711e31d8b5f0f3f801ee08d87e7e9f07f814bdc4a3",
+      "size": 81
+    },
+    {
+      "lfs": false,
+      "path": "k2_horizon.py",
+      "sha256": "80b501f2ea7364842bd25659928d3af7692238e7c6c2a50bad2f35f61f5483bc",
+      "size": 26354
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "134605fa293e6f56bb8862c4cc452028f1a134ac2bb842dce9ff1f09cfda933b",
+      "size": 5366857275
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "19b37d96f4afb339e367f1d13f5a4543c0745c5756dd5102b155cf57585c2248",
+      "size": 1816975229
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "e954c6c1ba510f0da377837e96ca6b758c4ec614752b558ae21cc64cc757c4ea",
+      "size": 71466
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "838d767b7c9925ff257feb20eaa4299a8e3cc35bb3d805589c373f51d2cc3cb6",
+      "size": 20637260
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "068cfdcf2bcef44fd77f935a9fb41b4d45af547fd41b95079817bd40b24fe518",
+      "size": 293
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/K2-Horizon-7B-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "346d6816a7d58c2c30db3777a69dfa05332273476bd4c8c494abc48a4c63227b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:15:23Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/K2-Horizon-7B-4bit/resolve/c8698376a102bc5e7ad49089b21b62c096a2506c/"
+    }
+  ],
+  "upstream": {
+    "commit": "c8698376a102bc5e7ad49089b21b62c096a2506c",
+    "host": "huggingface.co",
+    "repo": "mlx-community/K2-Horizon-7B-4bit",
+    "url": "https://huggingface.co/mlx-community/K2-Horizon-7B-4bit/tree/c8698376a102bc5e7ad49089b21b62c096a2506c"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "openai/whisper-tiny",
+  "display_name": "whisper-tiny",
+  "family": "unsloth",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "unsloth/whisper-tiny",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/unsloth/whisper-tiny.json",
+  "params": 37760640,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "openai/whisper-tiny",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.speech",
+  "signals": {
+    "downloads_30d": 1207,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "automatic-speech-recognition"
+  ],
+  "tier": "T2",
+  "total_size": 155455680,
+  "upstream_url": "https://huggingface.co/unsloth/whisper-tiny",
+  "what_changed": null
+}

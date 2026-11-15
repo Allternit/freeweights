@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "dslim/bert-base-NER",
+  "display_name": "bert-base-NER-ONNX",
+  "family": "onnx-community",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/bert-base-NER-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "MIT",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/bert-base-NER-ONNX.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "dslim/bert-base-NER",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 1688,
+    "likes": 0,
+    "trending": null
+  },
+  "tasks": [
+    "token-classification"
+  ],
+  "tier": "variant",
+  "total_size": 1352048426,
+  "upstream_url": "https://huggingface.co/onnx-community/bert-base-NER-ONNX",
+  "what_changed": null
+}

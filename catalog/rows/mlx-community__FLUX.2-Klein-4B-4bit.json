@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "black-forest-labs/FLUX.2-klein-4B",
+  "display_name": "FLUX.2-Klein-4B-4bit",
+  "family": "mlx-community",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "mlx-community/FLUX.2-Klein-4B-4bit",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/mlx-community/FLUX.2-Klein-4B-4bit.json",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "black-forest-labs/FLUX.2-klein-4B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.image",
+  "signals": {
+    "downloads_30d": 17219,
+    "likes": 3,
+    "trending": null
+  },
+  "tasks": [
+    "image-to-image"
+  ],
+  "tier": "T1",
+  "total_size": 4619708418,
+  "upstream_url": "https://huggingface.co/mlx-community/FLUX.2-Klein-4B-4bit",
+  "what_changed": null
+}

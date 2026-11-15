@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-15T03:28:43Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e0786791023161d3f6dbc7e20a4efb278a1ef09a6a0abb9599bdba2e47a89378",
+      "size": 26418
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "089690e22b9eafadcdd385afa5b6f3ea2446674ff5398c71df23be059d7c795d",
+      "size": 1764
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "7c04cb9d2ba771f7528fba5a7104999cdaf7566d02b5fbd58472829f62716177",
+      "size": 147
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+      "size": 916646
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "a65363c0803a05c1c74e114c692c57f35b2641aeffce24d5a8ee8fad3b34dcf0",
+      "size": 704786224
+    },
+    {
+      "lfs": false,
+      "path": "model.sig",
+      "sha256": "70d0934e3827c2ddcb922a4e9c6eb4df38e2e80b6d921e83cea695b06a2bb0e9",
+      "size": 9666
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "c08676c49fd7969a3130f72be6d4bf34da66aa484a6e21dffe359893a1bd5f2e",
+      "size": 579
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253",
+      "size": 7153421
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a5ec5daab12ba090a90f3dd169c8f9c275557013a87b9c1258dc7cb497a35c86",
+      "size": 17659
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "8af71076de8b0b626eed0f4c984faf0a7c062479164b2a31308a948524d4f69c",
+      "size": 1612704
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ibm-granite/granite-4.0-350m-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "e0786791023161d3f6dbc7e20a4efb278a1ef09a6a0abb9599bdba2e47a89378",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.granite",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:28:43Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ibm-granite/granite-4.0-350m-base/resolve/a50b46cef21c8a86b15f0496cb794487a78a910b/"
+    }
+  ],
+  "upstream": {
+    "commit": "a50b46cef21c8a86b15f0496cb794487a78a910b",
+    "host": "huggingface.co",
+    "repo": "ibm-granite/granite-4.0-350m-base",
+    "url": "https://huggingface.co/ibm-granite/granite-4.0-350m-base/tree/a50b46cef21c8a86b15f0496cb794487a78a910b"
+  }
+}

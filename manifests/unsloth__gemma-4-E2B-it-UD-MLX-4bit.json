@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:03:48Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "bb84ad0106889ce74cd2a2bab4a25818bef9fcb701cf7d270043d97ee87e0ccd",
+      "size": 28155
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "241c50d86bdfe5e43307da87f559cd2416aacd67a8de46c15acc0105ef2200b7",
+      "size": 18810
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "d5f2828707ad6e964857b8b445f62cbe6975d954a5c5e2ceb19bdff3a3137e56",
+      "size": 84186
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de",
+      "size": 208
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "03c3732cb13a7b6b58d42e911d7d6945aa1a5b6a08aea11cbc478a0673c2bcaa",
+      "size": 4517847503
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "9183bc8df4497fa17b013e609530ff871511bcd8b0b9438a11e6f4f6e0964a78",
+      "size": 230039
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "5d02cd3fea3215a525f017b17ee6cb222014cb9de37005ffdee96e8ffec2c771",
+      "size": 903
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "a649af5e5f6c0b830dd2d65b25ef41e670ecb0431c711b0ab7bffa29756001b0",
+      "size": 2712
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/gemma-4-E2B-it-UD-MLX-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "bb84ad0106889ce74cd2a2bab4a25818bef9fcb701cf7d270043d97ee87e0ccd",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.gemma",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:03:48Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/gemma-4-E2B-it-UD-MLX-4bit/resolve/4d0996cddd2f1fd9a28a9c76643b5a2bdbb51feb/"
+    }
+  ],
+  "upstream": {
+    "commit": "4d0996cddd2f1fd9a28a9c76643b5a2bdbb51feb",
+    "host": "huggingface.co",
+    "repo": "unsloth/gemma-4-E2B-it-UD-MLX-4bit",
+    "url": "https://huggingface.co/unsloth/gemma-4-E2B-it-UD-MLX-4bit/tree/4d0996cddd2f1fd9a28a9c76643b5a2bdbb51feb"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T02:43:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8b2310b700196d853ca4e1fda89a667fe99a32bd21f850d9445482f563f475c3",
+      "size": 4952
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5efd3893506c5696b90dec74133583568d558a10ed4ab30febccdd5be3ef25af",
+      "size": 804
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "27fbfe65ce71c3fc50df7b71246c83fe9b6da329f9572d957a9355f7d290a1bc",
+      "size": 437955572
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "src/README.md",
+      "sha256": "c1222a57d9b03b0ebd54cd39d12cd19ce8799c6834361562c6f1eddd6b9ecec6",
+      "size": 558
+    },
+    {
+      "lfs": false,
+      "path": "src/run_edu_bert.py",
+      "sha256": "ca60cf9897c2c0ff3388a543a956308c732b837eeb73047000eeedacf88d291b",
+      "size": 2254
+    },
+    {
+      "lfs": false,
+      "path": "src/run_edu_bert.slurm",
+      "sha256": "48804b5f806cb10dd2de344f10c59c070fabf3a4507e302cbab528cd54a623ad",
+      "size": 793
+    },
+    {
+      "lfs": false,
+      "path": "src/train_edu_bert.py",
+      "sha256": "5d770f4f2a37fc5332cbe2dd8b4fd8299bb4a28c6fa9ad2a5726ace79d0c248d",
+      "size": 3984
+    },
+    {
+      "lfs": false,
+      "path": "src/train_edu_bert.slurm",
+      "sha256": "c520c7ee9d0382ae95a71b784247b549149e5ff6dd56d99ace7fde06a692a0e6",
+      "size": 632
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "size": 711649
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "0e83e9d7206b3ade43f8f2aeef523cf5d5b4a25b67af21b273de21972c0f58b7",
+      "size": 1381
+    },
+    {
+      "lfs": true,
+      "path": "training_args.bin",
+      "sha256": "efc02ff3cbe38771032be7435dde1ef98e3d99cdd38f1fb9a9c2f710ef949f0b",
+      "size": 5048
+    },
+    {
+      "lfs": false,
+      "path": "utils/prompt.txt",
+      "sha256": "cb09c2b9f1f85c6aa48fbc8b36fafc6711f250cd009d265e484de1b020925d2b",
+      "size": 2321
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size": 231508
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "HuggingFaceFW/fineweb-edu-classifier",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "8b2310b700196d853ca4e1fda89a667fe99a32bd21f850d9445482f563f475c3",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:43:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/HuggingFaceFW/fineweb-edu-classifier/resolve/284663cbb2dabf9bda30d8f8cc49601251ee1631/"
+    }
+  ],
+  "upstream": {
+    "commit": "284663cbb2dabf9bda30d8f8cc49601251ee1631",
+    "host": "huggingface.co",
+    "repo": "HuggingFaceFW/fineweb-edu-classifier",
+    "url": "https://huggingface.co/HuggingFaceFW/fineweb-edu-classifier/tree/284663cbb2dabf9bda30d8f8cc49601251ee1631"
+  }
+}

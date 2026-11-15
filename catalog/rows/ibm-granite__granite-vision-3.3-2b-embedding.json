@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "ibm-granite/granite-vision-3.3-2b",
+  "display_name": "granite-vision-3.3-2b-embedding",
+  "family": "granite",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "ibm-granite/granite-vision-3.3-2b-embedding",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/ibm-granite/granite-vision-3.3-2b-embedding.json",
+  "params": 2975659200,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "ibm-granite/granite-vision-3.3-2b",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.granite",
+  "signals": {
+    "downloads_30d": 541,
+    "likes": 29,
+    "trending": null
+  },
+  "tasks": [
+    "feature-extraction"
+  ],
+  "tier": "T0",
+  "total_size": 11909329665,
+  "upstream_url": "https://huggingface.co/ibm-granite/granite-vision-3.3-2b-embedding",
+  "what_changed": null
+}

@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-15T05:15:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".DS_Store",
+      "sha256": "f3d49f8cc5fa17200dc08ee440e699d808f919b788bccbb81ca11427b6099634",
+      "size": 6148
+    },
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "a0e948ca693c63e0b5139f66bd709003cbcf8bc764acb1ee687a552885c8fe2c",
+      "size": 101
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "2872f1918dfc04fdeb7f5d66d8d1b773594c9375e7c8f7bda39780bb97ad4fba",
+      "size": 1067
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e152590d5a1a095a4fee3935918d02436000c823588407ab9c44f9f1888e3861",
+      "size": 1969
+    },
+    {
+      "lfs": false,
+      "path": "SHA256SUMS",
+      "sha256": "1fbef98b3aa1e2c6fdf585a04adba2e47d8bfe0c2b5320caa1ff6e441026355c",
+      "size": 1558
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "e09aa078bed51073b54103ff6476f47f3b68783e593aaf6e36a61bf0d1f5b90a",
+      "size": 5984
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "17895443c2adf75988a6a3184cf4eb9080251e220a4a8fff7bf4d29d597233a2",
+      "size": 7048
+    },
+    {
+      "lfs": false,
+      "path": "conversion.json",
+      "sha256": "48d4f50aae852736e95fcf41e235b11ccf5ef17bc78db241e1421c1480ae86b6",
+      "size": 673
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "fdede64f07be6d6b1c5d2547fa3101cc8bdc033291efcd38c13784fb0e0611e1",
+      "size": 133
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "8a07bd164d289180b7ef6333b7dda2c5b929a8778263fe69954bc593e2e2bcaf",
+      "size": 5299050876
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "f12d1499fb8a43d49dbf7549adf811015b52c6da917c8741733bf4437597f48c",
+      "size": 5267936166
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "a739023785309466efb8209b2595c7360abcd19a33118ca28978f27c38005179",
+      "size": 206226
+    },
+    {
+      "lfs": false,
+      "path": "speaker_encoder/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size": 11357
+    },
+    {
+      "lfs": false,
+      "path": "speaker_encoder/NOTICE",
+      "sha256": "f52a710ac47f2ecf1e823ec2247738c2cffc3199a84425d86f1e3729797683aa",
+      "size": 236
+    },
+    {
+      "lfs": true,
+      "path": "speaker_encoder/campplus.safetensors",
+      "sha256": "373f95ba31457cb1c54a94ce350b000c977d24aa9273c4b535e8a2dcadeaf31e",
+      "size": 27697145
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "97cb54787ce5ed537fe2b0211768bfce371defabe8241d39459493de9f23b1fc",
+      "size": 722
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "7e831c9b79b2cc4af0d3c7c7878a073371a5cbbaf1f4cb33f6fbce20417722f2",
+      "size": 12210216
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "23b25d6e0fa85152cb3f3136a29e3d7787ecff7d3e6b224beabda9a4d10e4b31",
+      "size": 60134
+    },
+    {
+      "lfs": false,
+      "path": "validation.json",
+      "sha256": "373842f5bcc6bfb76c5fdceee8124cfeb702c5140ca309ea50c4b2a1b2755878",
+      "size": 1277
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Ming-3.0-tts-tiny-8bit",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "2872f1918dfc04fdeb7f5d66d8d1b773594c9375e7c8f7bda39780bb97ad4fba",
+    "id": "MIT",
+    "name": "MIT License",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:15:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Ming-3.0-tts-tiny-8bit/resolve/6756d449f6aaba26a29a025e46b26d1d5a025140/"
+    }
+  ],
+  "upstream": {
+    "commit": "6756d449f6aaba26a29a025e46b26d1d5a025140",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Ming-3.0-tts-tiny-8bit",
+    "url": "https://huggingface.co/mlx-community/Ming-3.0-tts-tiny-8bit/tree/6756d449f6aaba26a29a025e46b26d1d5a025140"
+  }
+}

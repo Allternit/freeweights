@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T02:36:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "3a1b159129d2e224a10d435c0f0bfa832e5b528f29e05036076e161248cca723",
+      "size": 1749
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "5b6689e7b829b0e79a78802b9581c6c01529a23f87b39925e0b57f3eaeacbfac",
+      "size": 65999
+    },
+    {
+      "lfs": false,
+      "path": "bias.md",
+      "sha256": "bbe310672de023a587ba92e5c1d5da2edc22955f8822b2f3ffe00afca2dd8de1",
+      "size": 3254
+    },
+    {
+      "lfs": true,
+      "path": "bolt-smart-and-fast.png",
+      "sha256": "244b8a0f465c13fbfa81c8046b0bd4471d2202c275ea950c4845374788852145",
+      "size": 444073
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "35b7d0641b6fb4ee41c3bc623e85bdb7d583c40f6ae9f24514ae58a9d57119f3",
+      "size": 20161
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6f7a13f1d5fc3295e682616f937a4a573756f59cb9a1700cd4801fef08ad6546",
+      "size": 5144
+    },
+    {
+      "lfs": false,
+      "path": "explainability.md",
+      "sha256": "7671d31882b60bb4eb385e324717688941fb6d1ed99359af7b1603c98018bac5",
+      "size": 2674
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de",
+      "size": 208
+    },
+    {
+      "lfs": false,
+      "path": "handler.py",
+      "sha256": "48adddae3baf5adfb2cca8412df3c312b9ddc4550146708a53ac77945d4d66be",
+      "size": 7165
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00001.safetensors",
+      "sha256": "15006dbbfc99dbde9cc3fb5742b08976837b6ddc9db05b1ceb8b223de8cfc520",
+      "size": 15882494698
+    },
+    {
+      "lfs": true,
+      "path": "model-frozen-shared-kv.safetensors",
+      "sha256": "32aaa38402af5a51c6d6b27aeb8a26d3e6964e5590330f0e7b2f546608da4023",
+      "size": 110118048
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "301d69227420fb020ff34bb3d096384ed9cc27a1ce0f6ae915dfa67b1e37c979",
+      "size": 217801
+    },
+    {
+      "lfs": false,
+      "path": "privacy.md",
+      "sha256": "c048eb257c10d128d35a8a90d8c98e7684e2019d9e110f7db1543cf88f1ce63a",
+      "size": 1671
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    {
+      "lfs": true,
+      "path": "reachy-bolt.gif",
+      "sha256": "446ab42f5a52e2d9d2bb09a76efa4439d96929090eaab0f3d2fce4f9e330cd75",
+      "size": 29796429
+    },
+    {
+      "lfs": false,
+      "path": "safety.md",
+      "sha256": "50df88aa4e1f25c3504522ed11738075f2d97150c15a89508a1eb6912aec22f0",
+      "size": 2292
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "b3da1b7227c5d35fd905ad13200a08be63cb346b2d1bd4f6d58878c9783d5de1",
+      "size": 23725
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "5b6689e7b829b0e79a78802b9581c6c01529a23f87b39925e0b57f3eaeacbfac",
+    "id": "OpenMDW-1.1",
+    "name": "OpenMDW-1.1",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.nemotron",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:36:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16/resolve/49843eed8db1f1c616c47af75cfd36e07aec0667/"
+    }
+  ],
+  "upstream": {
+    "commit": "49843eed8db1f1c616c47af75cfd36e07aec0667",
+    "host": "huggingface.co",
+    "repo": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16",
+    "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16/tree/49843eed8db1f1c616c47af75cfd36e07aec0667"
+  }
+}

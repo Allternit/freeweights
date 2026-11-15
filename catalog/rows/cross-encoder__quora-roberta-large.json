@@ -1,0 +1,44 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "FacebookAI/roberta-large",
+  "display_name": "quora-roberta-large",
+  "family": "cross-encoder",
+  "formats": [
+    "onnx",
+    "openvino",
+    "safetensors"
+  ],
+  "id": "cross-encoder/quora-roberta-large",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/cross-encoder/quora-roberta-large.json",
+  "params": 355361283,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "FacebookAI/roberta-large",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 794,
+    "likes": 4,
+    "trending": null
+  },
+  "tasks": [
+    "text-ranking"
+  ],
+  "tier": "variant",
+  "total_size": 13883508103,
+  "upstream_url": "https://huggingface.co/cross-encoder/quora-roberta-large",
+  "what_changed": null
+}

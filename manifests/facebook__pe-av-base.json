@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T03:45:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "b465568906d30738e305a5d2744f434c7c39baf374d908a65b37691f5a62484b",
+      "size": 8997
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "bc6b1d56102b48945ee0aa60f2c4f65a67393f2889c0c1ace33d975691adda3d",
+      "size": 31506
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "c87718fb93e00f3b2e5c886b3a6a589ee3bc3d29ea0c1a2e1f6b1e141c19170e",
+      "size": 4134930120
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "0ee55f8b2de0849b9fdebdc96486fcbb12eafe8e63d688f3a307a24048d80efa",
+      "size": 225
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "b2f4954bb8d595cf3ae7990a6aa42e494bcad17ba8124e11e1798eddd67f7deb",
+      "size": 1187
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049",
+      "size": 694
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "43e9ea931bb0f359d16d0e435c26abbebd9a42a7298270b8ab7e5c9fa1be1dcb",
+      "size": 3583119
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "adec72131bbba5a043594c1e3bf5930608546e46a51432b2502b392ec280551b",
+      "size": 434
+    },
+    {
+      "lfs": false,
+      "path": "video_preprocessor_config.json",
+      "sha256": "638eeb8a86c507ee4d048bacff7a21bb04b5780d920d8f66c6b291a4acec1e08",
+      "size": 406
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "facebook/pe-av-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "b465568906d30738e305a5d2744f434c7c39baf374d908a65b37691f5a62484b",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T03:45:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/facebook/pe-av-base/resolve/1c4c329b78d80a18d860ebfb05daebff4bc44518/"
+    }
+  ],
+  "upstream": {
+    "commit": "1c4c329b78d80a18d860ebfb05daebff4bc44518",
+    "host": "huggingface.co",
+    "repo": "facebook/pe-av-base",
+    "url": "https://huggingface.co/facebook/pe-av-base/tree/1c4c329b78d80a18d860ebfb05daebff4bc44518"
+  }
+}

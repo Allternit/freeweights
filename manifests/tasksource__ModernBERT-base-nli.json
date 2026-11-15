@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T02:34:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "c1d2045f515eb23e6edee371c86b000697ad3039521933d21ff5b53b8b631fbe",
+      "size": 10423
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "f0d479a376b7deb30d5a00c14114f40b937097d0791ec20ca95e57347ae76391",
+      "size": 5541
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+      "size": 598442860
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049",
+      "size": 694
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "05c5c40d6a7c23400de4486f6cb365b9a858de6da81bdcbfe1aff016d2a2cc23",
+      "size": 3583499
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "9654072f7c873161814043cf08cb5ed72f71d0b935abcd4e267935cb34352c21",
+      "size": 20867
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "tasksource/ModernBERT-base-nli",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "c1d2045f515eb23e6edee371c86b000697ad3039521933d21ff5b53b8b631fbe",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:34:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/tasksource/ModernBERT-base-nli/resolve/de4ab7e77845098b7fab7f6ab9d370ddff27b19c/"
+    }
+  ],
+  "upstream": {
+    "commit": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "host": "huggingface.co",
+    "repo": "tasksource/ModernBERT-base-nli",
+    "url": "https://huggingface.co/tasksource/ModernBERT-base-nli/tree/de4ab7e77845098b7fab7f6ab9d370ddff27b19c"
+  }
+}

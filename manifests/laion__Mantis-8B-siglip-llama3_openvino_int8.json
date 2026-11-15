@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T04:20:07Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+      "size": 31
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "5f0b1e5fa392cf884caf95debd3cd97b7d85b15ef019f4be17afa29861ee3121",
+      "size": 4823
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "2b0d61e82103310aa43ee9912ff2cb0bb4bab3421602f24e8551ccaefa8ce3ba",
+      "size": 147
+    },
+    {
+      "lfs": true,
+      "path": "openvino_detokenizer.bin",
+      "sha256": "7f97b6f470e4ef11279a8be61b614dd111fbef3b581940303ddd3286fb9e26a0",
+      "size": 1351921
+    },
+    {
+      "lfs": false,
+      "path": "openvino_detokenizer.xml",
+      "sha256": "5cda9994fd37701e5fa78e99c043c08a50023e8e2a62a1dc6fa581510ef57fc0",
+      "size": 9231
+    },
+    {
+      "lfs": true,
+      "path": "openvino_language_model.bin",
+      "sha256": "ea6fbe26542ac9dbbd450e9f66f17beeae7c4d8e511358d908fa21e34138b398",
+      "size": 7510245662
+    },
+    {
+      "lfs": false,
+      "path": "openvino_language_model.xml",
+      "sha256": "662fea0410c05631b569828da48f7ac70ba1b5bb39db8406fc6864bd5a1f1703",
+      "size": 2706791
+    },
+    {
+      "lfs": true,
+      "path": "openvino_text_embeddings_model.bin",
+      "sha256": "b2dba7e560debdd1a20197fcc38b3e26b39fb62d25c234d5313aea9beeaa0c7f",
+      "size": 1050689540
+    },
+    {
+      "lfs": false,
+      "path": "openvino_text_embeddings_model.xml",
+      "sha256": "658897b04f2d3fc98e5397932ed847b5aac772b8e7d90a647f7eb5be794aa244",
+      "size": 3168
+    },
+    {
+      "lfs": true,
+      "path": "openvino_tokenizer.bin",
+      "sha256": "8d96cc28d91641cecec11f5e1c2809626a6223c00f764120b689d61406910c53",
+      "size": 5642366
+    },
+    {
+      "lfs": false,
+      "path": "openvino_tokenizer.xml",
+      "sha256": "19ffdc2f8af2d9d017a1d82b468fa7c2e69ada84c4ea06c0dbeef16d3bd27860",
+      "size": 23490
+    },
+    {
+      "lfs": true,
+      "path": "openvino_vision_embeddings_model.bin",
+      "sha256": "e31b0f63667a45f9fb570d55f3694255fe006214d3ef9eb75197a970ed74926d",
+      "size": 840098600
+    },
+    {
+      "lfs": false,
+      "path": "openvino_vision_embeddings_model.xml",
+      "sha256": "c0e0a67391b5f30248d97ead2a4a448e39250496303edd661a64a8d1e19bba1d",
+      "size": 961114
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f8a68aabdaecbab881ffe9b48030a315fea513f28c32d18da80ba8130d8c6222",
+      "size": 506
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "2738e9d5aadafe6722db8e962cc8f23d7635e4352c08bf74d6963c11df68161f",
+      "size": 17210101
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4aac06bc5661595aebba85118078d73424a1684475cd179fb5ebf69e208c6cc1",
+      "size": 51759
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "laion/Mantis-8B-siglip-llama3_openvino_int8",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.llama",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:20:07Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/laion/Mantis-8B-siglip-llama3_openvino_int8/resolve/5dd60a811e06620411dee5e250673721384b0c12/"
+    }
+  ],
+  "upstream": {
+    "commit": "5dd60a811e06620411dee5e250673721384b0c12",
+    "host": "huggingface.co",
+    "repo": "laion/Mantis-8B-siglip-llama3_openvino_int8",
+    "url": "https://huggingface.co/laion/Mantis-8B-siglip-llama3_openvino_int8/tree/5dd60a811e06620411dee5e250673721384b0c12"
+  }
+}

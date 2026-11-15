@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-15T04:14:26Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ee6b4f1fa5bec84aa6704b577ed3c48372cbe75f5ed73f088de342e3c85c6bfa",
+      "size": 1634
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7f9e82ffe179c4f14821afea7fdcc17a2558050e5294388f991f5f6117811ff8",
+      "size": 9135
+    },
+    {
+      "lfs": true,
+      "path": "bitcpm4-1b-bf16.gguf",
+      "sha256": "6febc96950b6ff456ba76b508cf8b7fb64130a922f13ef61a52954aa810c4418",
+      "size": 3246256704
+    },
+    {
+      "lfs": true,
+      "path": "bitcpm4-1b-tq2_0.gguf",
+      "sha256": "2394c15cbea2181b72bfb4215d8417d8d1f2f6214069da2d01fde32ce3b13fce",
+      "size": 550787264
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "openbmb/BitCPM-CANN-1B-gguf",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7f9e82ffe179c4f14821afea7fdcc17a2558050e5294388f991f5f6117811ff8",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.minicpm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:14:26Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/openbmb/BitCPM-CANN-1B-gguf/resolve/831ad9004307347c08fb7becafdd717bdc4f6aa1/"
+    }
+  ],
+  "upstream": {
+    "commit": "831ad9004307347c08fb7becafdd717bdc4f6aa1",
+    "host": "huggingface.co",
+    "repo": "openbmb/BitCPM-CANN-1B-gguf",
+    "url": "https://huggingface.co/openbmb/BitCPM-CANN-1B-gguf/tree/831ad9004307347c08fb7becafdd717bdc4f6aa1"
+  }
+}

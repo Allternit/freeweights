@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-11-15T02:39:40Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "a0ae883aefde5a6910894b7a861b422bb99329cb3bcaa9f3a30580a44aadb4f5",
+      "size": 2964
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a3883dc9e74bbff55ab2443974883df0fe6110e5bc9aa61eff82efd74556cde9",
+      "size": 20202
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "74368f0df9f005f99c492ce7389cd2b4030c94314e2e63b4ac5d5c66b051ff7a",
+      "size": 253970328
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7e9e2245806aa3ef068a5321f5eebee3116fa4cec560173231954ffaca930eca",
+      "size": 470
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ustc-community/dfine-xlarge-obj365",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "a0ae883aefde5a6910894b7a861b422bb99329cb3bcaa9f3a30580a44aadb4f5",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:39:40Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ustc-community/dfine-xlarge-obj365/resolve/a99923ec2727499f769a82edba864299fceaca48/"
+    }
+  ],
+  "upstream": {
+    "commit": "a99923ec2727499f769a82edba864299fceaca48",
+    "host": "huggingface.co",
+    "repo": "ustc-community/dfine-xlarge-obj365",
+    "url": "https://huggingface.co/ustc-community/dfine-xlarge-obj365/tree/a99923ec2727499f769a82edba864299fceaca48"
+  }
+}

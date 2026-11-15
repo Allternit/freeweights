@@ -1,0 +1,43 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "HuggingFaceTB/SmolLM-135M",
+  "display_name": "SmolLM-135M-ONNX",
+  "family": "smollm",
+  "formats": [
+    "onnx"
+  ],
+  "id": "onnx-community/SmolLM-135M-ONNX",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "Apache-2.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/onnx-community/SmolLM-135M-ONNX.json",
+  "note": "The license of the base model HuggingFaceTB/SmolLM-135M applies: the strictest license along the lineage wins.",
+  "params": null,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "HuggingFaceTB/SmolLM-135M",
+    "type": "quant"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.smollm",
+  "signals": {
+    "downloads_30d": 117,
+    "likes": 2,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "variant",
+  "total_size": 1692286829,
+  "upstream_url": "https://huggingface.co/onnx-community/SmolLM-135M-ONNX",
+  "what_changed": null
+}

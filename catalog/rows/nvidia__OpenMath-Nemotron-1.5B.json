@@ -1,0 +1,42 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T05:34:43Z",
+  "audit": {
+    "at": "2026-11-15T05:34:43Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "Qwen/Qwen2.5-Math-1.5B",
+  "display_name": "OpenMath-Nemotron-1.5B",
+  "family": "nemotron",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "nvidia/OpenMath-Nemotron-1.5B",
+  "kind": "model",
+  "license_class": "permissive",
+  "license_id": "CC-BY-4.0",
+  "manifest_url": "https://freeweights.allternit.com/manifests/nvidia/OpenMath-Nemotron-1.5B.json",
+  "params": 1543714304,
+  "redistribution": "yes",
+  "relation": {
+    "parent": "Qwen/Qwen2.5-Math-1.5B",
+    "type": "finetune"
+  },
+  "requires_terms": false,
+  "section": "alt.freeweights.nemotron",
+  "signals": {
+    "downloads_30d": 1328,
+    "likes": 36,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 3103580348,
+  "upstream_url": "https://huggingface.co/nvidia/OpenMath-Nemotron-1.5B",
+  "what_changed": null
+}

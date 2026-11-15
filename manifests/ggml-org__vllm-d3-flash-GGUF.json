@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T04:42:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "9be0fc0ba8bc6f5be3c4e8650c538cc83b0d202910f1a77920653fbaa76d18b6",
+      "size": 1835
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "e8737ccae2155a9a2778720c02fe3aace83f0420cf3418c747c3204c3fee1339",
+      "size": 49
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "7ba338e9904a8669853e289ff15b85074b12222aa9c996155f38a48ccda7f133",
+      "size": 550
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "f01a1021db1a3df9415e4f863bde378ce34622d30907500d894b0574b82b1e48",
+      "size": 273167
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-vllm-d3-flash-BF16.gguf",
+      "sha256": "a01bb68a801a0d793fd4b510feb237d247eff60557f807fe84f1c3196c473947",
+      "size": 921704992
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-vllm-d3-flash-Q8_0.gguf",
+      "sha256": "0291125ad889adb09a0097cc7ba081ce2cfbd2eaf4f253160559da14de93e14c",
+      "size": 624229792
+    },
+    {
+      "lfs": true,
+      "path": "vllm-d3-flash-BF16.gguf",
+      "sha256": "21fc8dbd2cb3ed85115f461d8342ec11050bc2854a07345f9163b9edaec1e313",
+      "size": 17920698880
+    },
+    {
+      "lfs": true,
+      "path": "vllm-d3-flash-Q4_K_M.gguf",
+      "sha256": "b8753da41b5170a884528940e4403d1a6bdef78de674f11b22358aeceea7750f",
+      "size": 6603024896
+    },
+    {
+      "lfs": true,
+      "path": "vllm-d3-flash-Q8_0.gguf",
+      "sha256": "c973672171ed0eec5fdc5928e13004368331cca7b61cc2f0f7e8734bfbd10ba7",
+      "size": 9527503360
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/vllm-d3-flash-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "7ba338e9904a8669853e289ff15b85074b12222aa9c996155f38a48ccda7f133",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T04:42:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/vllm-d3-flash-GGUF/resolve/1307737011b75c2d1f389243484296d9d6c54a4f/"
+    }
+  ],
+  "upstream": {
+    "commit": "1307737011b75c2d1f389243484296d9d6c54a4f",
+    "host": "huggingface.co",
+    "repo": "ggml-org/vllm-d3-flash-GGUF",
+    "url": "https://huggingface.co/ggml-org/vllm-d3-flash-GGUF/tree/1307737011b75c2d1f389243484296d9d6c54a4f"
+  }
+}

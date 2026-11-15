@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-11-15T02:41:24Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+      "size": 1229
+    },
+    {
+      "lfs": false,
+      "path": "1_Pooling/config.json",
+      "sha256": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56",
+      "size": 190
+    },
+    {
+      "lfs": false,
+      "path": "2_Dense/config.json",
+      "sha256": "9c6560e6ff2744a7ec4dd710786d57660aeb3ddf936332e404269bd5bd24e952",
+      "size": 115
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/model.safetensors",
+      "sha256": "3d370013b5e62231ecbdf20827d3a69db443dd3542469eecea2c25c11f2a8024",
+      "size": 2359416
+    },
+    {
+      "lfs": true,
+      "path": "2_Dense/pytorch_model.bin",
+      "sha256": "e3d63af43145e78130784c98cc9dbaf52220a13afd77fcc86c1422182e7b3c0d",
+      "size": 2360171
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "29b6df8f2a62f32b69619d1c0c3f83f8d99c01383d70c6df125cf5ec79200deb",
+      "size": 1662
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "2c505a1fdbd38cf5f6d3ad747f9338345d41a0dc029b305f1525c2bef839d032",
+      "size": 1381
+    },
+    {
+      "lfs": false,
+      "path": "config_sentence_transformers.json",
+      "sha256": "f631e4bd49910419948c5e9134ab07e0d63b22b8cebbe6875f99a0712bcadd4d",
+      "size": 122
+    },
+    {
+      "lfs": false,
+      "path": "convert-gtr.ipynb",
+      "sha256": "665ac3935da4e9b2bc7ebd3355201ca4484b5777b44aa9351c9eb798dd4bb4bb",
+      "size": 90620
+    },
+    {
+      "lfs": false,
+      "path": "convert_to_fp16.py",
+      "sha256": "1dbd5bfc49c82ef29c7b91f00562069f11551b024782fc4260609329addedfd3",
+      "size": 198
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "09fb3d444f67e758ee202396e36971d94d6da970f0283fd21b9c1348f361bcb4",
+      "size": 219268776
+    },
+    {
+      "lfs": false,
+      "path": "modules.json",
+      "sha256": "41251094dfd3e7ff81a85ba97b3f4788df47e4039f1bc5037575b43c028beb40",
+      "size": 461
+    },
+    {
+      "lfs": true,
+      "path": "pytorch_model.bin",
+      "sha256": "fd78a39e92ec5e96213ad3284d95360ba13c020bbda0841479b369612b19964c",
+      "size": 219303530
+    },
+    {
+      "lfs": false,
+      "path": "sentence_bert_config.json",
+      "sha256": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+      "size": 53
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "4720c0fddbe4c5991334f85ad7073d9bd0a294a8ba4641a2f8dab614ca825949",
+      "size": 1786
+    },
+    {
+      "lfs": true,
+      "path": "spiece.model",
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+      "size": 791656
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "3dd4249b57e28dda22219397c091a4a11655c537e0d8a9b5e2efcf43f39c8773",
+      "size": 1387554
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "6973652f30c2c8359a70d8fe41f9af4f13b3225d9520dbecfe0b7f0c69f997f3",
+      "size": 1923
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "sentence-transformers/gtr-t5-base",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "29b6df8f2a62f32b69619d1c0c3f83f8d99c01383d70c6df125cf5ec79200deb",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.embed",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:41:24Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/sentence-transformers/gtr-t5-base/resolve/9801579ce813fb37541e6098dffd17959fffcd6e/"
+    }
+  ],
+  "upstream": {
+    "commit": "9801579ce813fb37541e6098dffd17959fffcd6e",
+    "host": "huggingface.co",
+    "repo": "sentence-transformers/gtr-t5-base",
+    "url": "https://huggingface.co/sentence-transformers/gtr-t5-base/tree/9801579ce813fb37541e6098dffd17959fffcd6e"
+  }
+}

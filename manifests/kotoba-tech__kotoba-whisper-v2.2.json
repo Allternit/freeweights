@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-11-15T02:40:25Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "e3b4b54b929ab16273e9783f2548455741c1265bd668734ca5e9c6f487dbea3d",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": ".gitignore",
+      "sha256": "7ce20e262042cc87acfe7d7a6b71c8f744709927e51519e88f3856e0537931e2",
+      "size": 109
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "cf659cd1ebe9c69b56c75baf39b7dd6072bea71d81a6d87df8620ff689cec00a",
+      "size": 8414
+    },
+    {
+      "lfs": false,
+      "path": "added_tokens.json",
+      "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+      "size": 34648
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "75e0166afbf44308af4908793fc5ade1707890ed15760f0529b468dcfc378aec",
+      "size": 1499
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "20d28b9169207ab6ca402ec9342393a88ec3f341d88c9da24e516e1da71c24de",
+      "size": 3898
+    },
+    {
+      "lfs": false,
+      "path": "kotoba_whisper.py",
+      "sha256": "c7ee086b48b833d6e3bccf11012d3aad6946221f24d949854d4653f4d13dcee7",
+      "size": 13632
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "size": 493869
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "e0ef3e7b379515f0c35d0e7885638ddef0fa9f5c8e3e3f88cbc6da9b39edd1e9",
+      "size": 3025686376
+    },
+    {
+      "lfs": false,
+      "path": "normalizer.json",
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "size": 52666
+    },
+    {
+      "lfs": false,
+      "path": "pipeline/kotoba_whisper.py",
+      "sha256": "c7ee086b48b833d6e3bccf11012d3aad6946221f24d949854d4653f4d13dcee7",
+      "size": 13632
+    },
+    {
+      "lfs": false,
+      "path": "pipeline/push_pipeline.py",
+      "sha256": "1684f404c47ad43d8d764bd850df3470b1cad33beb42a4d37eadb9effd4ece31",
+      "size": 952
+    },
+    {
+      "lfs": false,
+      "path": "pipeline/test_pipeline.py",
+      "sha256": "6b1733cdcbdd3e31fb139c90e949ea517fcd514248bb8f08cebf5ef093ba7b04",
+      "size": 523
+    },
+    {
+      "lfs": false,
+      "path": "pipeline/test_speaker_diarization.py",
+      "sha256": "1ed7f9557bd41ec6df923c17fe0e11efc70e18ec8f37fcbba6bc78d272f02172",
+      "size": 341
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+      "size": 340
+    },
+    {
+      "lfs": true,
+      "path": "sample_audio/sample_diarization_japanese.mp3",
+      "sha256": "75afe01062ebd4b4e3555e8ef41becd56274e2d9b4f8c26919f870636a1c55f6",
+      "size": 857719
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+      "size": 2186
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "615928f5a25409279b47b47d87a4ca2aaee3bd09f65e1a3df6c9d23c718cfdb0",
+      "size": 3931381
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "c86c7398ba7f81f784569ea0ae165e252c4a006acc56906f04e5ee3300cf043e",
+      "size": 282863
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971",
+      "size": 835528
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "kotoba-tech/kotoba-whisper-v2.2",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "cf659cd1ebe9c69b56c75baf39b7dd6072bea71d81a6d87df8620ff689cec00a",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:40:25Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/kotoba-tech/kotoba-whisper-v2.2/resolve/9d33482a0eb9b57f1ad80708e8ac5538246d8355/"
+    }
+  ],
+  "upstream": {
+    "commit": "9d33482a0eb9b57f1ad80708e8ac5538246d8355",
+    "host": "huggingface.co",
+    "repo": "kotoba-tech/kotoba-whisper-v2.2",
+    "url": "https://huggingface.co/kotoba-tech/kotoba-whisper-v2.2/tree/9d33482a0eb9b57f1ad80708e8ac5538246d8355"
+  }
+}

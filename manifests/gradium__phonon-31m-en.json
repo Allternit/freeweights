@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T02:28:14Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "2767e84a54730a23a90d343f21c271eb674089e0da714e62aa063e6cac2865b2",
+      "size": 1620
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "fc04467c0e5560e89cd5bbded052e9b7f6c23e2abcdd03a32a3a07a27a7ea3ed",
+      "size": 10478
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "7dbe65d426b02c082cdbb61e7db1d58a7a1f6152328dc929d971e3ce3ad932cc",
+      "size": 1513
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "b5d0f88353638370d94035b7d73d7d6577c0554d78f8d7ecfd40490aae39ae85",
+      "size": 4634
+    },
+    {
+      "lfs": true,
+      "path": "default-voice.safetensors",
+      "sha256": "dc537478eaadc1a5257fcda2e3501ab81e14c111a5d95a5838f350db2afd0f1a",
+      "size": 256136
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "ffb086e8f531b10a43bfd17a56069f90b649171a55aae98b5e9a28c8411cffc0",
+      "size": 220
+    },
+    {
+      "lfs": true,
+      "path": "model.q4k.gguf",
+      "sha256": "b89e867e995b45835cbe30564fe360178fb39f1fe457c13e1e559c2e4260e4f3",
+      "size": 55075168
+    },
+    {
+      "lfs": true,
+      "path": "model.q8.gguf",
+      "sha256": "a7d9aad2cd6dc66473f24a08bc6d2939030ef4d751ef82349361fbef3272dbae",
+      "size": 64512352
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "8a04cf833cfe69b67c2ec968b2d31244655b9accc84ade9c0ebcc176f2074607",
+      "size": 102823920
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "1ba08d75f0aba95fb494e8264e65e6b3e6b0b50981e1d49f183cb70eed58cfee",
+      "size": 747
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.5.0.0.json",
+      "sha256": "28161547feed30fa70e9ce6da0b791835db9c9720683d87f17e0327f01687cc5",
+      "size": 302879
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "691a00068fa7b989f2f3e5ae5daa2d1a5bb319f2d5360deafcfb19a8bb6e7936",
+      "size": 277967
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.model",
+      "sha256": "82e4572006d64d483317074c22c368e87779640b6f3a9dcd07b7caae32b030ce",
+      "size": 65045
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "17d12cf8dee2891506648bb1d5657e26fb165263686d0e2ef311513488d6446f",
+      "size": 575
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "gradium/phonon-31m-en",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "fc04467c0e5560e89cd5bbded052e9b7f6c23e2abcdd03a32a3a07a27a7ea3ed",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.speech",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T02:28:14Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/gradium/phonon-31m-en/resolve/92741c5b07d085ff840e26fea8ce43110b87852f/"
+    }
+  ],
+  "upstream": {
+    "commit": "92741c5b07d085ff840e26fea8ce43110b87852f",
+    "host": "huggingface.co",
+    "repo": "gradium/phonon-31m-en",
+    "url": "https://huggingface.co/gradium/phonon-31m-en/tree/92741c5b07d085ff840e26fea8ce43110b87852f"
+  }
+}

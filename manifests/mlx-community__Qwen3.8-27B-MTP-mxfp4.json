@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T05:18:50Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1c1646fdd8ae3397a8df2521109b4aa6608379cc094497ca6afa5fbdd6fc0eab",
+      "size": 1417
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "size": 8952
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "03e4d7ab6d5f0b0738195b3d36320c908e22f043564acf15027ab42d5967af23",
+      "size": 3802
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "9b1d99f402f98940e08891d04815271e3fa94d6bc762f042fd311d3aa0d8bd1d",
+      "size": 225662258
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "9b9784b19597cdbf3405f3c1544a66cdd934cf5bb236684594ed7447ff686837",
+      "size": 1487
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "size": 12809320
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "66e427c470fe580fe8c7b5725d857af23d8417e37fae62667ec698306a19987b",
+      "size": 1124
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "size": 6722759
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/Qwen3.8-27B-MTP-mxfp4",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1c1646fdd8ae3397a8df2521109b4aa6608379cc094497ca6afa5fbdd6fc0eab",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.qwen",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:18:50Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/Qwen3.8-27B-MTP-mxfp4/resolve/87e316aec15a6c42da81e0edce8467af8bd68865/"
+    }
+  ],
+  "upstream": {
+    "commit": "87e316aec15a6c42da81e0edce8467af8bd68865",
+    "host": "huggingface.co",
+    "repo": "mlx-community/Qwen3.8-27B-MTP-mxfp4",
+    "url": "https://huggingface.co/mlx-community/Qwen3.8-27B-MTP-mxfp4/tree/87e316aec15a6c42da81e0edce8467af8bd68865"
+  }
+}

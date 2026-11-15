@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-11-15T05:18:10Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "0a54462b39d14f47041afdd43d6ff6ca003e2a7646fa33de3eff2619bc4ada59",
+      "size": 5888
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c3e0932e0d555b829b7f1e74f224293157e699db1a78b836f1eb195802d8ef82",
+      "size": 1390
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "64e4f9d67c678c6dd6b1ac2f1b0d2562ae12cec463493ce2951daf1dba4e494f",
+      "size": 117
+    },
+    {
+      "lfs": false,
+      "path": "got_vision_b.py",
+      "sha256": "8931c2e1145afa6e99aa707fa73ab24afabe3ad69fe5341a5b7160e2688cf750",
+      "size": 16106
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "ba4d1151e3b4ba4bd1c6cf1c1d26b6b6d015ef005e362ed5526d813a47e9a5cf",
+      "size": 454463407
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "62dff65301bea48401b95627efe80f4c2bcf8e09d7c2184699c14fabad15ab54",
+      "size": 65900
+    },
+    {
+      "lfs": false,
+      "path": "modeling_GOT.py",
+      "sha256": "68375b6bf7683cca41bb987953f0e31fde802652ad01e1accc4b53127b841609",
+      "size": 33771
+    },
+    {
+      "lfs": false,
+      "path": "qwen.tiktoken",
+      "sha256": "b2b1b8dfb5cc5f024bafc373121c6aba3f66f9a5a0269e243470a1de16a33186",
+      "size": 2561218
+    },
+    {
+      "lfs": false,
+      "path": "render_tools.py",
+      "sha256": "11393028ac7095431cfaa9c8ee14b9c6e8ca1d618158dfe729b89e83e889fb99",
+      "size": 1992
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "337f1a03344485ec7ea2acd6f7021567feab077fd81f96b72423fcd3f8f5fc09",
+      "size": 149
+    },
+    {
+      "lfs": false,
+      "path": "tokenization_qwen.py",
+      "sha256": "eec08335cdcdcb538120e204f19b41bbd9e5ab989e14b1b1cf8f506ac584c601",
+      "size": 9470
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5058c180033d6cec3aa913c517235d5be2f99363496ced0c7a88a407dcfd7778",
+      "size": 372
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/GOT-OCR2_0-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "0a54462b39d14f47041afdd43d6ff6ca003e2a7646fa33de3eff2619bc4ada59",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:18:10Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/GOT-OCR2_0-4bit/resolve/0e28c87720de5d8af67389a0444cf8397524cb61/"
+    }
+  ],
+  "upstream": {
+    "commit": "0e28c87720de5d8af67389a0444cf8397524cb61",
+    "host": "huggingface.co",
+    "repo": "mlx-community/GOT-OCR2_0-4bit",
+    "url": "https://huggingface.co/mlx-community/GOT-OCR2_0-4bit/tree/0e28c87720de5d8af67389a0444cf8397524cb61"
+  }
+}

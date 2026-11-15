@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:14:56Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "ff289d4ad54fd02fdb087f56b530321e8d20ee1af2b8c392c1f65afb7b27afbf",
+      "size": 5841
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "caf441b7eef4032175e18e5a3fcc5d574d39db3d46a752f9fe60e05b3b0fd435",
+      "size": 50990
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "faeb33cbec7e47f505fd6689c118a062bb1d262c4989a47314dec1c109ee82c7",
+      "size": 71668
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "2da7d47641f4509da4ae47711e31d8b5f0f3f801ee08d87e7e9f07f814bdc4a3",
+      "size": 81
+    },
+    {
+      "lfs": false,
+      "path": "k2_horizon.py",
+      "sha256": "80b501f2ea7364842bd25659928d3af7692238e7c6c2a50bad2f35f61f5483bc",
+      "size": 26354
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "58caf5042d7139485b9dfd096bef890829ab478c38270ebdf3c6b760b386c8f5",
+      "size": 4136036684
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "c7221a4e67f91e09b6b31e9c591e7e990a3516c764894e260d6c8c3bf69fd92f",
+      "size": 58941
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "838d767b7c9925ff257feb20eaa4299a8e3cc35bb3d805589c373f51d2cc3cb6",
+      "size": 20637260
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "068cfdcf2bcef44fd77f935a9fb41b4d45af547fd41b95079817bd40b24fe518",
+      "size": 293
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/K2-Horizon-3.7B-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "ff289d4ad54fd02fdb087f56b530321e8d20ee1af2b8c392c1f65afb7b27afbf",
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "redistribution": "yes"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T05:14:56Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/K2-Horizon-3.7B-4bit/resolve/3b453d026bd4f433c0bc9a532706f87488269e4d/"
+    }
+  ],
+  "upstream": {
+    "commit": "3b453d026bd4f433c0bc9a532706f87488269e4d",
+    "host": "huggingface.co",
+    "repo": "mlx-community/K2-Horizon-3.7B-4bit",
+    "url": "https://huggingface.co/mlx-community/K2-Horizon-3.7B-4bit/tree/3b453d026bd4f433c0bc9a532706f87488269e4d"
+  }
+}
