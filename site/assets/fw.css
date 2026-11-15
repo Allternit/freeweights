@@ -828,9 +828,9 @@ a.tchip:hover{background:var(--fill)}
 
 /* Model page action bar */
 .act-wrap{margin-top:14px}
-.act-bar{display:flex;flex-wrap:wrap;gap:8px}
-.act-help{margin-top:8px}
-.act-cloud{margin-top:10px;max-width:820px}
-.act-cloud .code{margin-top:8px;overflow-x:auto}
+.fw-actions{display:flex;flex-wrap:wrap;gap:8px}
+.fw-actions-help{margin-top:8px}
+.fw-actions-cloud{margin-top:10px;max-width:820px}
+.fw-actions-cloud .code{margin-top:8px;overflow-x:auto}
 .act-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-@media (max-width:520px){.act-bar .btn{flex:1 1 calc(50% - 8px)}.act-cloud .code code{overflow-x:auto;white-space:pre}}
+@media (max-width:520px){.fw-actions .btn{flex:1 1 calc(50% - 8px)}.fw-actions-cloud .code code{overflow-x:auto;white-space:pre}}

@@ -5,6 +5,8 @@ import { codeBlock } from './layout.mjs';
 // Where each action goes. Plain links, no tracking parameters.
 export const API_BASE = 'https://api.allternit.com/v1';
 export const CONSOLE_URL = 'https://platform.allternit.com/';
+// The console's own Cloud page links here to create an inference key (CloudPage.tsx KEY_PATH).
+export const CONSOLE_KEY_URL = 'https://platform.allternit.com/api-keys?create=inference';
 export const AI_URL = 'https://ai.allternit.com/';
 export const COMPUTE_URL = 'https://compute.allternit.com/';
 export const SERVICES_URL = 'https://services.allternit.com/';
@@ -47,13 +49,15 @@ export const curlSnippet = (cloud) => `<span class="c">$ </span>curl ${API_BASE}
 
 export function actionBar(r) {
   const a = actionsFor(r);
-  const btns = [
-    a.cloud && `<a class="btn pri" href="${CONSOLE_URL}?model=${encodeURIComponent(a.cloud.model)}" rel="noopener">Run with Allternit Cloud</a>`,
-    a.chat && `<a class="btn" href="${esc(a.chat)}" rel="noopener">Chat with it</a>`,
-    a.studio && `<a class="btn" href="${esc(a.studio)}" rel="noopener">Fine-tune in Studio</a>`,
-    a.home && `<a class="btn" href="${a.home}" rel="noopener">Run at home</a>`,
-    `<a class="btn${a.cloud ? '' : ' pri'}" href="${a.help}" rel="noopener">Get help</a>`,
-  ].filter(Boolean).join('');
-  const cloud = a.cloud ? `<div class="act-cloud"><p class="sub small">This model is served on Allternit Cloud as <b class="mono">${esc(a.cloud.model)}</b>${a.cloud.via_parent ? ' (the original model it was made from)' : ''}. Get a key in the <a class="link" href="${CONSOLE_URL}" rel="noopener">console</a>, then call the OpenAI-compatible API.</p>${codeBlock('cloud-curl', curlSnippet(a.cloud))}</div>` : '';
-  return `<div class="act-bar" role="group" aria-label="Use this model">${btns}</div><p class="sub small act-help">Get help: custom fine-tune or private deploy. We review your setup before we quote.</p>${cloud}`;
+  // Exactly one primary button: the first action that applies (Run, else Chat, Fine-tune, Run at home, Get help).
+  const items = [
+    a.cloud && [CONSOLE_KEY_URL, 'Run with Allternit Cloud'],
+    a.chat && [a.chat, 'Chat with it'],
+    a.studio && [a.studio, 'Fine-tune in Studio'],
+    a.home && [a.home, 'Run at home'],
+    [a.help, 'Get help'],
+  ].filter(Boolean);
+  const btns = items.map(([href, label], i) => `<a class="btn${i === 0 ? ' pri' : ''}" href="${esc(href)}" rel="noopener">${label}</a>`).join('');
+  const cloud = a.cloud ? `<div class="fw-actions-cloud"><p class="sub small">This model is served on Allternit Cloud as <b class="mono">${esc(a.cloud.model)}</b>${a.cloud.via_parent ? ' (the original model it was made from)' : ''}. Get a key in the <a class="link" href="${CONSOLE_KEY_URL}" rel="noopener">console</a>, then call the OpenAI-compatible API.</p>${codeBlock('cloud-curl', curlSnippet(a.cloud))}</div>` : '';
+  return `<div class="fw-actions" role="group" aria-label="Use this model">${btns}</div><p class="sub small fw-actions-help">Get help: custom fine-tune or private deploy. We review your setup before we quote.</p>${cloud}`;
 }
