@@ -1,0 +1,63 @@
+{
+  "id": "simpletuner",
+  "name": "SimpleTuner",
+  "repo": "bghira/SimpleTuner",
+  "category": "training",
+  "license": "AGPL-3.0",
+  "install": [
+    "pip install simpletuner"
+  ],
+  "install_check": [
+    "pip install simpletuner"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Fine-tuning for image and video diffusion models, with LoRA and full-weight options.",
+  "github": {
+    "repo": "bghira/SimpleTuner",
+    "description": "A general fine-tuning kit geared toward image/video/audio diffusion models.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "diffusers",
+      "diffusion-models",
+      "fine-tuning",
+      "flux-dev",
+      "machine-learning",
+      "stable-diffusion"
+    ],
+    "default_branch": "main",
+    "license": "AGPL-3.0",
+    "stars": 2958,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "4076ec37ced99a88fa59736ca7e03eeacf32b21f",
+    "release": {
+      "tag": "v4.11.0",
+      "date": "2026-10-28",
+      "url": "https://github.com/bghira/SimpleTuner/releases/tag/v4.11.0",
+      "commit": "be6dff92461110cbc02c1b4310b7a2b9cc78513c"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v4.11.0",
+    "commit": "be6dff92461110cbc02c1b4310b7a2b9cc78513c",
+    "date": "2026-10-28"
+  }
+}

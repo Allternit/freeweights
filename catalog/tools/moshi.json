@@ -1,0 +1,57 @@
+{
+  "id": "moshi",
+  "name": "Moshi",
+  "repo": "kyutai-labs/moshi",
+  "category": "speech",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install -U moshi"
+  ],
+  "install_check": [
+    "pip install -U moshi"
+  ],
+  "platforms": [
+    "Linux (GPU)",
+    "macOS (Apple silicon)"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Real-time spoken dialogue model with PyTorch and MLX runtimes.",
+  "github": {
+    "repo": "kyutai-labs/moshi",
+    "description": "Moshi is a speech-text foundation model and full-duplex spoken dialogue framework. It uses Mimi, a state-of-the-art streaming neural audio codec.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 11522,
+    "pushed_at": "2026-09-09",
+    "archived": false,
+    "branch_commit": "e6a55d2722a65870ef52a6c9f6ecfc0e90f38362",
+    "release": {
+      "tag": "rustymimi-0.2.2",
+      "date": "2024-09-22",
+      "url": "https://github.com/kyutai-labs/moshi/releases/tag/rustymimi-0.2.2",
+      "commit": "c7439c13e4c68a376aea976227c9694354692ab8"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "rustymimi-0.2.2",
+    "commit": "c7439c13e4c68a376aea976227c9694354692ab8",
+    "date": "2024-09-22"
+  }
+}

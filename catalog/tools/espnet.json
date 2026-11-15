@@ -1,0 +1,75 @@
+{
+  "id": "espnet",
+  "name": "ESPnet",
+  "repo": "espnet/espnet",
+  "category": "speech",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install espnet"
+  ],
+  "install_check": [
+    "pip install espnet"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "End-to-end toolkit for speech recognition, synthesis, translation and enhancement.",
+  "github": {
+    "repo": "espnet/espnet",
+    "description": "End-to-End Speech Processing Toolkit",
+    "homepage": "https://espnet.github.io/espnet/",
+    "language": "Python",
+    "topics": [
+      "chainer",
+      "deep-learning",
+      "end-to-end",
+      "kaldi",
+      "machine-translation",
+      "pytorch",
+      "singing-voice-synthesis",
+      "speaker-diarization",
+      "speech-enhancement",
+      "speech-recognition",
+      "speech-separation",
+      "speech-synthesis",
+      "speech-translation",
+      "spoken-language-understanding",
+      "text-to-speech",
+      "voice-conversion"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 10017,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "5e4ee976f48e4c2a347fd20c7adb8613ef451e79",
+    "release": {
+      "tag": "v.202611",
+      "date": "2026-10-23",
+      "url": "https://github.com/espnet/espnet/releases/tag/v.202611",
+      "commit": "92d65c5a4866c06007c0f36216b592859407e5eb"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v.202611",
+    "commit": "92d65c5a4866c06007c0f36216b592859407e5eb",
+    "date": "2026-10-23"
+  }
+}

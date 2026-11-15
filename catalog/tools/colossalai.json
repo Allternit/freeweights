@@ -1,0 +1,72 @@
+{
+  "id": "colossalai",
+  "name": "Colossal-AI",
+  "repo": "hpcaitech/ColossalAI",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install colossalai"
+  ],
+  "install_check": [
+    "pip install colossalai"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Parallel training system for large models.",
+  "github": {
+    "repo": "hpcaitech/ColossalAI",
+    "description": "Making large AI models cheaper, faster and more accessible",
+    "homepage": "https://www.colossalai.org",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "big-model",
+      "data-parallelism",
+      "deep-learning",
+      "distributed-computing",
+      "foundation-models",
+      "heterogeneous-training",
+      "hpc",
+      "inference",
+      "large-scale",
+      "model-parallelism",
+      "pipeline-parallelism"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 41422,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "297c8cf6d91cb0bff795cba961d3aea1e66fa370",
+    "release": {
+      "tag": "v0.5.0",
+      "date": "2025-06-04",
+      "url": "https://github.com/hpcaitech/ColossalAI/releases/tag/v0.5.0",
+      "commit": "d322ff8cd9bf81d5d85bc7ef9c910184cd9e2057"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.5.0",
+    "commit": "d322ff8cd9bf81d5d85bc7ef9c910184cd9e2057",
+    "date": "2025-06-04"
+  }
+}

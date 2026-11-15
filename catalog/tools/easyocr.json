@@ -1,0 +1,73 @@
+{
+  "id": "easyocr",
+  "name": "EasyOCR",
+  "repo": "JaidedAI/EasyOCR",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install easyocr"
+  ],
+  "install_check": [
+    "pip install easyocr"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Text recognition in images for 80+ languages.",
+  "github": {
+    "repo": "JaidedAI/EasyOCR",
+    "description": "Ready-to-use OCR with 80+ supported languages and all popular writing scripts including Latin, Chinese, Arabic, Devanagari, Cyrillic and etc.",
+    "homepage": "https://www.jaided.ai",
+    "language": "Python",
+    "topics": [
+      "cnn",
+      "crnn",
+      "data-mining",
+      "deep-learning",
+      "easyocr",
+      "image-processing",
+      "information-retrieval",
+      "lstm",
+      "machine-learning",
+      "ocr",
+      "optical-character-recognition",
+      "python",
+      "pytorch",
+      "scene-text",
+      "scene-text-recognition"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 30141,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "2f77e2e8125d666af859a57d49014731ecbf40c6",
+    "release": {
+      "tag": "v1.7.2",
+      "date": "2024-09-24",
+      "url": "https://github.com/JaidedAI/EasyOCR/releases/tag/v1.7.2",
+      "commit": "c4f3cd7225efd4f85451bd8b4a7646ae9a092420"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.7.2",
+    "commit": "c4f3cd7225efd4f85451bd8b4a7646ae9a092420",
+    "date": "2024-09-24"
+  }
+}

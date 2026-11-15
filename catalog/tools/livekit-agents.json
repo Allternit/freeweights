@@ -1,0 +1,65 @@
+{
+  "id": "livekit-agents",
+  "name": "LiveKit Agents",
+  "repo": "livekit/agents",
+  "category": "speech",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install \"livekit-agents[openai,deepgram,cartesia]\""
+  ],
+  "install_check": [
+    "pip install \"livekit-agents[openai,deepgram,cartesia]\""
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition",
+      "text-to-speech"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Framework for real-time voice agents with speech, language and turn-taking models.",
+  "github": {
+    "repo": "livekit/agents",
+    "description": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+    "homepage": "https://docs.livekit.io/agents",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "ai",
+      "openai",
+      "real-time",
+      "video",
+      "voice"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 15232,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "cbb5770c716c70009969cd7fa88e3c3662222ce9",
+    "release": {
+      "tag": "livekit-agents@1.8.12",
+      "date": "2026-11-13",
+      "url": "https://github.com/livekit/agents/releases/tag/livekit-agents%401.8.12",
+      "commit": "3e5156882414f4f5919437c1834a4261bdd9ce2a"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "livekit-agents@1.8.12",
+    "commit": "3e5156882414f4f5919437c1834a4261bdd9ce2a",
+    "date": "2026-11-13"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "lightrag",
+  "name": "LightRAG",
+  "repo": "HKUDS/LightRAG",
+  "category": "retrieval",
+  "license": "MIT",
+  "install": [
+    "uv tool install \"lightrag-hku[api]\""
+  ],
+  "install_check": [
+    "uv tool install \"lightrag-hku[api]\""
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Retrieval-augmented generation over a knowledge graph, with a server and UI.",
+  "github": {
+    "repo": "HKUDS/LightRAG",
+    "description": "[EMNLP2025] LightRAG: Simple and Fast Retrieval-Augmented Generation",
+    "homepage": "https://arxiv.org/abs/2410.05779",
+    "language": "Python",
+    "topics": [
+      "docling",
+      "genai",
+      "gpt",
+      "graphrag",
+      "knowledge-graph",
+      "large-language-models",
+      "llm",
+      "mineru",
+      "rag",
+      "ragas",
+      "retrieval-augmented-generation"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 40700,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "77e055f7c4e1080f013b7616960adde4a0dc2de7",
+    "release": {
+      "tag": "v1.5.7",
+      "date": "2026-09-02",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.7",
+      "commit": "28ff1b05f2ac3f3e6fa14dd2cd33656579bd0c9c"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.5.7",
+    "commit": "28ff1b05f2ac3f3e6fa14dd2cd33656579bd0c9c",
+    "date": "2026-09-02"
+  }
+}

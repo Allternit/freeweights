@@ -1,0 +1,71 @@
+{
+  "id": "liger-kernel",
+  "name": "Liger Kernel",
+  "repo": "linkedin/Liger-Kernel",
+  "category": "training",
+  "license": "BSD-2-Clause",
+  "install": [
+    "pip install liger-kernel"
+  ],
+  "install_check": [
+    "pip install liger-kernel"
+  ],
+  "platforms": [
+    "Linux (GPU)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Triton kernels that cut memory use and speed up language model training.",
+  "github": {
+    "repo": "linkedin/Liger-Kernel",
+    "description": "Efficient Triton Kernels for LLM Training",
+    "homepage": "https://linkedin.github.io/Liger-Kernel/",
+    "language": "Python",
+    "topics": [
+      "finetuning",
+      "gemma2",
+      "hacktoberfest",
+      "llama",
+      "llama3",
+      "llm-training",
+      "llms",
+      "mistral",
+      "phi3",
+      "triton",
+      "triton-kernels"
+    ],
+    "default_branch": "main",
+    "license": "BSD-2-Clause",
+    "stars": 6698,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "83746f4007d18a8ecc16786e9848cc1e5fc4eae0",
+    "release": {
+      "tag": "v0.8.5",
+      "date": "2026-10-21",
+      "url": "https://github.com/linkedin/Liger-Kernel/releases/tag/v0.8.5",
+      "commit": "1ab779ff0990d205e6003fa34c7618f0e8c50337"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.8.5",
+    "commit": "1ab779ff0990d205e6003fa34c7618f0e8c50337",
+    "date": "2026-10-21"
+  }
+}

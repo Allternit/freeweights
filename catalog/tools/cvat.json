@@ -1,0 +1,78 @@
+{
+  "id": "cvat",
+  "name": "CVAT",
+  "repo": "cvat-ai/cvat",
+  "category": "data",
+  "license": "MIT",
+  "install": [
+    "git clone https://github.com/cvat-ai/cvat"
+  ],
+  "install_check": [
+    "git clone https://github.com/cvat-ai/cvat"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Annotation tool for images and video, with model-assisted labeling.",
+  "github": {
+    "repo": "cvat-ai/cvat",
+    "description": "CVAT is a leading data annotation platform for image, video, audio, and 3D datasets. It offers open-source, cloud, and enterprise products, as well as labeling services, with AI-assisted labeling, quality assurance, team collaboration, analytics, and developer APIs.",
+    "homepage": "https://www.cvat.ai",
+    "language": "Python",
+    "topics": [
+      "annotation",
+      "annotation-tool",
+      "annotations",
+      "audio-annotation",
+      "audio-annotation-tool",
+      "audio-transcription",
+      "boundingbox",
+      "computer-vision",
+      "computer-vision-annotation",
+      "dataset",
+      "image-annotation",
+      "image-classification",
+      "image-labeling",
+      "image-labelling-tool",
+      "labeling",
+      "labeling-tool",
+      "object-detection",
+      "semantic-segmentation",
+      "video-annotation",
+      "yolo"
+    ],
+    "default_branch": "develop",
+    "license": "MIT",
+    "stars": 17138,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "271806df2ec87462dbb9fcdb76323a83182c8ba0",
+    "release": {
+      "tag": "v2.83.0",
+      "date": "2026-11-12",
+      "url": "https://github.com/cvat-ai/cvat/releases/tag/v2.83.0",
+      "commit": "678221a53665cded90e20822ba50704fd21e44ca"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.83.0",
+    "commit": "678221a53665cded90e20822ba50704fd21e44ca",
+    "date": "2026-11-12"
+  }
+}

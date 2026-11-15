@@ -1,0 +1,76 @@
+{
+  "id": "nemo-curator",
+  "name": "NeMo Curator",
+  "repo": "NVIDIA-NeMo/Curator",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "uv pip install \"nemo-curator[text_cpu]\""
+  ],
+  "install_check": [
+    "uv pip install \"nemo-curator[text_cpu]\""
+  ],
+  "platforms": [
+    "Linux"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "parquet",
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "GPU-accelerated curation of text, image and video training data.",
+  "github": {
+    "repo": "NVIDIA-NeMo/Curator",
+    "description": "Scalable data pre processing and curation toolkit for LLMs",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "data",
+      "data-curation",
+      "data-prep",
+      "data-preparation",
+      "data-processing",
+      "data-processing-pipelines",
+      "data-quality",
+      "datacuration",
+      "datarecipes",
+      "deduplication",
+      "fast-data-processing",
+      "fine-tuning",
+      "large-language-models",
+      "large-scale-data-processing",
+      "llm",
+      "llm-data-quality",
+      "llmapps",
+      "python",
+      "semantic-deduplication"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 1859,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "47c85695e4ae3cebb4cf37261592880adf6bbbe7",
+    "release": {
+      "tag": "v1.4.0",
+      "date": "2026-10-09",
+      "url": "https://github.com/NVIDIA-NeMo/Curator/releases/tag/v1.4.0",
+      "commit": "10fba1ea785863872ae6983b580ec6813e72cc79"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.4.0",
+    "commit": "10fba1ea785863872ae6983b580ec6813e72cc79",
+    "date": "2026-10-09"
+  }
+}

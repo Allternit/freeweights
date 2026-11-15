@@ -1,0 +1,69 @@
+{
+  "id": "transformer-engine",
+  "name": "Transformer Engine",
+  "repo": "NVIDIA/TransformerEngine",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install --no-build-isolation \"transformer_engine[pytorch]\""
+  ],
+  "install_check": [
+    "pip install --no-build-isolation \"transformer_engine[pytorch]\""
+  ],
+  "platforms": [
+    "Linux (NVIDIA)"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ],
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "FP8 and mixed-precision building blocks for transformer training on NVIDIA GPUs.",
+  "github": {
+    "repo": "NVIDIA/TransformerEngine",
+    "description": "A library for accelerating Transformer models on NVIDIA GPUs, including using 8-bit and 4-bit floating point (FP8 and FP4) precision on Hopper, Ada and Blackwell GPUs, to provide better performance with lower memory utilization in both training and inference.",
+    "homepage": "https://docs.nvidia.com/deeplearning/transformer-engine/",
+    "language": "Python",
+    "topics": [
+      "cuda",
+      "deep-learning",
+      "fp4",
+      "fp8",
+      "gpu",
+      "jax",
+      "machine-learning",
+      "python",
+      "pytorch"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3604,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "4f5c08e48b3e190d27c731c1f9515f021dec255a",
+    "release": {
+      "tag": "v2.21.0",
+      "date": "2026-11-10",
+      "url": "https://github.com/NVIDIA/TransformerEngine/releases/tag/v2.21.0",
+      "commit": "7457e47d26d9d02dfb783007335dfbe75e1b90a8"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v2.21.0",
+    "commit": "7457e47d26d9d02dfb783007335dfbe75e1b90a8",
+    "date": "2026-11-10"
+  }
+}

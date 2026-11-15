@@ -1,0 +1,79 @@
+{
+  "id": "typesense",
+  "name": "Typesense",
+  "repo": "typesense/typesense",
+  "category": "retrieval",
+  "license": "GPL-3.0",
+  "install": [
+    "pip install typesense"
+  ],
+  "install_check": [
+    "pip install typesense"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Search engine with typo tolerance, vector search and built-in embeddings.",
+  "github": {
+    "repo": "typesense/typesense",
+    "description": "Open Source alternative to Algolia + Pinecone and an Easier-to-Use alternative to ElasticSearch ⚡ 🔍 ✨ Fast, typo tolerant, in-memory fuzzy Search Engine for building delightful search experiences",
+    "homepage": "https://typesense.org",
+    "language": "C++",
+    "topics": [
+      "algolia",
+      "datastore",
+      "elasticsearch",
+      "enterprise-search",
+      "faceting",
+      "full-text-search",
+      "fuzzy-search",
+      "geosearch",
+      "in-memory",
+      "instantsearch",
+      "merchandising",
+      "pinecone",
+      "search",
+      "search-engine",
+      "semantic-search",
+      "similarity-search",
+      "site-search",
+      "synonyms",
+      "typo-tolerance",
+      "vector-search"
+    ],
+    "default_branch": "v31",
+    "license": "GPL-3.0",
+    "stars": 27132,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "208890d3127683873ca8476dedf01a7ec3589241",
+    "release": {
+      "tag": "v30.2",
+      "date": "2026-04-19",
+      "url": "https://github.com/typesense/typesense/releases/tag/v30.2",
+      "commit": "d45d46baf3996d1de8bf96a87f375cfb43691560"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v30.2",
+    "commit": "d45d46baf3996d1de8bf96a87f375cfb43691560",
+    "date": "2026-04-19"
+  }
+}

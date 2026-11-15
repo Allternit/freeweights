@@ -1,0 +1,68 @@
+{
+  "id": "infinity-emb",
+  "name": "Infinity",
+  "repo": "michaelfeil/infinity",
+  "category": "retrieval",
+  "license": "MIT",
+  "install": [
+    "docker run --rm --gpus all -p 8000:8000 -v infinity-cache:/data \\",
+    "  ghcr.io/michaelfeil/infinity_v3:nvidia-3.0.0 \\",
+    "  --model-id sentence-transformers/all-MiniLM-L6-v2 \\",
+    "  --torch-device cuda --dtype bfloat16 \\",
+    "  --hostname 0.0.0.0 --port 8000"
+  ],
+  "install_check": [
+    "docker run --rm --gpus all -p 8000:8000 -v infinity-cache:/data",
+    "ghcr.io/michaelfeil/infinity_v3:nvidia-3.0.0"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Serves embedding and reranker models behind an OpenAI-compatible API.",
+  "github": {
+    "repo": "michaelfeil/infinity",
+    "description": "Infinity is a high-throughput, low-latency serving engine for text-embeddings, reranking models, clip, clap and colpali",
+    "homepage": "https://michaelfeil.github.io/infinity/",
+    "language": "C++",
+    "topics": [
+      "bert-embeddings",
+      "llm",
+      "text-embeddings"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 2986,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "f25b80850a7fc9736310496b64faf9903c01ac97",
+    "release": {
+      "tag": "v3.0.0",
+      "date": "2026-10-26",
+      "url": "https://github.com/michaelfeil/infinity/releases/tag/v3.0.0",
+      "commit": "09acbe5cc421b2981d4385f0dbacc868bccd3ae7"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v3.0.0",
+    "commit": "09acbe5cc421b2981d4385f0dbacc868bccd3ae7",
+    "date": "2026-10-26"
+  }
+}

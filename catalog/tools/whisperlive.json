@@ -1,0 +1,73 @@
+{
+  "id": "whisperlive",
+  "name": "WhisperLive",
+  "repo": "collabora/WhisperLive",
+  "category": "speech",
+  "license": "MIT",
+  "install": [
+    "pip install whisper-live"
+  ],
+  "install_check": [
+    "pip install whisper-live"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "faster-whisper"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Near-live Whisper transcription server for microphone and stream input.",
+  "github": {
+    "repo": "collabora/WhisperLive",
+    "description": "A nearly-live implementation of OpenAI's Whisper.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "dictation",
+      "obs",
+      "openai",
+      "openvino",
+      "openvino-intel",
+      "rocm",
+      "tensorrt",
+      "tensorrt-llm",
+      "text-to-speech",
+      "translation",
+      "voice-recognition",
+      "whisper",
+      "whisper-tensorrt"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 4359,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "447e97940d06be076c2098504dea7312c2f402f4",
+    "release": {
+      "tag": "v0.10.0",
+      "date": "2026-09-07",
+      "url": "https://github.com/collabora/WhisperLive/releases/tag/v0.10.0",
+      "commit": "000e97576ffb4b5edaf6f4b7e330ecedc455979e"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.10.0",
+    "commit": "000e97576ffb4b5edaf6f4b7e330ecedc455979e",
+    "date": "2026-09-07"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "keras",
+  "name": "Keras",
+  "repo": "keras-team/keras",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install keras --upgrade"
+  ],
+  "install_check": [
+    "pip install keras --upgrade"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "High-level deep learning API for JAX, PyTorch and TensorFlow.",
+  "github": {
+    "repo": "keras-team/keras",
+    "description": "Deep Learning for humans",
+    "homepage": "http://keras.io/",
+    "language": "Python",
+    "topics": [
+      "data-science",
+      "deep-learning",
+      "jax",
+      "machine-learning",
+      "neural-networks",
+      "python",
+      "pytorch",
+      "tensorflow"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 64426,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "50be564d7d833537b789b0359ec709f5a7267c33",
+    "release": {
+      "tag": "v3.12.4",
+      "date": "2026-07-29",
+      "url": "https://github.com/keras-team/keras/releases/tag/v3.12.4",
+      "commit": "6c0caa7aa2a0693ffc568646e823c5c92d278726"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v3.12.4",
+    "commit": "6c0caa7aa2a0693ffc568646e823c5c92d278726",
+    "date": "2026-07-29"
+  }
+}

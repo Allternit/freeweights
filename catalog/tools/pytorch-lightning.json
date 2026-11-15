@@ -1,0 +1,65 @@
+{
+  "id": "pytorch-lightning",
+  "name": "PyTorch Lightning",
+  "repo": "Lightning-AI/pytorch-lightning",
+  "category": "training",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install lightning"
+  ],
+  "install_check": [
+    "pip install lightning"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "trains",
+    "formats": [
+      "safetensors"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Structures PyTorch training code and scales it across GPUs and nodes.",
+  "github": {
+    "repo": "Lightning-AI/pytorch-lightning",
+    "description": "Pretrain, finetune ANY AI model of ANY size on 1 or 10,000+ GPUs with zero code changes.",
+    "homepage": "https://lightning.ai/pytorch-lightning/?utm_source=ptl_readme&utm_medium=referral&utm_campaign=ptl_readme",
+    "language": "Python",
+    "topics": [
+      "ai",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning",
+      "machine-learning",
+      "python",
+      "pytorch"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 31447,
+    "pushed_at": "2026-10-30",
+    "archived": false,
+    "branch_commit": "84df182f50ab34301aabb3c0eb4031815bfb413d",
+    "release": {
+      "tag": "2.6.6",
+      "date": "2026-09-10",
+      "url": "https://github.com/Lightning-AI/pytorch-lightning/releases/tag/2.6.6",
+      "commit": "771017e4f39b314b49abd4a1d65905c74268d248"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "2.6.6",
+    "commit": "771017e4f39b314b49abd4a1d65905c74268d248",
+    "date": "2026-09-10"
+  }
+}

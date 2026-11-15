@@ -1,0 +1,66 @@
+{
+  "id": "kotaemon",
+  "name": "kotaemon",
+  "repo": "Cinnamon/kotaemon",
+  "category": "retrieval",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone https://github.com/Cinnamon/kotaemon"
+  ],
+  "install_check": [
+    "git clone https://github.com/Cinnamon/kotaemon"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "feature-extraction",
+      "sentence-similarity",
+      "text-ranking"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Document chat UI and framework for question answering over your files.",
+  "github": {
+    "repo": "Cinnamon/kotaemon",
+    "description": "An open-source RAG-based tool for chatting with your documents.",
+    "homepage": "https://cinnamon.github.io/kotaemon/",
+    "language": "Python",
+    "topics": [
+      "chatbot",
+      "llms",
+      "open-source",
+      "rag"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 25910,
+    "pushed_at": "2026-07-14",
+    "archived": false,
+    "branch_commit": "9ad3e4e49aa35b8acddd235918a5d9753c1cfdf9",
+    "release": {
+      "tag": "v0.12.0",
+      "date": "2026-05-31",
+      "url": "https://github.com/Cinnamon/kotaemon/releases/tag/v0.12.0",
+      "commit": "9ad3e4e49aa35b8acddd235918a5d9753c1cfdf9"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.12.0",
+    "commit": "9ad3e4e49aa35b8acddd235918a5d9753c1cfdf9",
+    "date": "2026-05-31"
+  }
+}

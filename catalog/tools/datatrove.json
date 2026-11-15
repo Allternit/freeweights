@@ -1,0 +1,58 @@
+{
+  "id": "datatrove",
+  "name": "datatrove",
+  "repo": "huggingface/datatrove",
+  "category": "data",
+  "license": "Apache-2.0",
+  "install": [
+    "git clone git@github.com:huggingface/datatrove.git && cd datatrove"
+  ],
+  "install_check": [
+    "git clone git@github.com:huggingface/datatrove.git && cd datatrove"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "formats": [
+      "parquet",
+      "jsonl"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Filters, deduplicates and processes very large text datasets in pipelines.",
+  "github": {
+    "repo": "huggingface/datatrove",
+    "description": "Freeing data processing from scripting madness by providing a set of platform-agnostic customizable pipeline processing blocks.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3421,
+    "pushed_at": "2026-11-10",
+    "archived": false,
+    "branch_commit": "5484e67ab81daf66c689106054d5133910d731c2",
+    "release": {
+      "tag": "v0.10.1",
+      "date": "2026-09-30",
+      "url": "https://github.com/huggingface/datatrove/releases/tag/v0.10.1",
+      "commit": "1977fbb0f3c163d43cace334b073dda17fa3ef26"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.10.1",
+    "commit": "1977fbb0f3c163d43cace334b073dda17fa3ef26",
+    "date": "2026-09-30"
+  }
+}

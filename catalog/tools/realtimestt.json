@@ -1,0 +1,63 @@
+{
+  "id": "realtimestt",
+  "name": "RealtimeSTT",
+  "repo": "KoljaB/RealtimeSTT",
+  "category": "speech",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install \"RealtimeSTT[faster-whisper]\""
+  ],
+  "install_check": [
+    "pip install \"RealtimeSTT[faster-whisper]\""
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "faster-whisper"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Low-latency speech-to-text with wake words and voice activity detection.",
+  "github": {
+    "repo": "KoljaB/RealtimeSTT",
+    "description": "A robust, efficient, low-latency speech-to-text library with advanced voice activity detection, wake word activation and instant transcription.",
+    "homepage": "",
+    "language": "Python",
+    "topics": [
+      "python",
+      "realtime",
+      "speech-to-text"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 10245,
+    "pushed_at": "2026-11-11",
+    "archived": false,
+    "branch_commit": "3574c247c531b8f6ff1f595b319eb400ba499f82",
+    "release": {
+      "tag": "v1.2.0",
+      "date": "2026-11-11",
+      "url": "https://github.com/KoljaB/RealtimeSTT/releases/tag/v1.2.0",
+      "commit": "3574c247c531b8f6ff1f595b319eb400ba499f82"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.2.0",
+    "commit": "3574c247c531b8f6ff1f595b319eb400ba499f82",
+    "date": "2026-11-11"
+  }
+}

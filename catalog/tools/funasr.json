@@ -1,0 +1,78 @@
+{
+  "id": "funasr",
+  "name": "FunASR",
+  "repo": "modelscope/FunASR",
+  "category": "speech",
+  "license": "MIT",
+  "install": [
+    "pip install funasr"
+  ],
+  "install_check": [
+    "pip install funasr"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "runs",
+    "tasks": [
+      "automatic-speech-recognition"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Speech recognition toolkit with voice activity detection and punctuation.",
+  "github": {
+    "repo": "modelscope/FunASR",
+    "description": "Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/MCP serving.",
+    "homepage": "www.funasr.com",
+    "language": "Python",
+    "topics": [
+      "asr",
+      "audio",
+      "chinese",
+      "emotion-recognition",
+      "funasr",
+      "mcp-server",
+      "multilingual-asr",
+      "openai-compatible-api",
+      "paraformer",
+      "punctuation",
+      "pytorch",
+      "real-time-asr",
+      "speaker-diarization",
+      "speech-recognition",
+      "speech-to-text",
+      "streaming-asr",
+      "transcription",
+      "vllm",
+      "voice-activity-detection",
+      "whisper-alternative"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 21026,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "c2107cdd3d025c449020c05b0eadd746345f4f03",
+    "release": {
+      "tag": "v1.4.26",
+      "date": "2026-11-12",
+      "url": "https://github.com/modelscope/FunASR/releases/tag/v1.4.26",
+      "commit": "cdd82b5cbfd05015f8fb2b167d61f25142c3a9e8"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.4.26",
+    "commit": "cdd82b5cbfd05015f8fb2b167d61f25142c3a9e8",
+    "date": "2026-11-12"
+  }
+}
