@@ -1,0 +1,80 @@
+{
+  "id": "cognee",
+  "name": "Cognee",
+  "repo": "topoteretes/cognee",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "uv pip install \"cognee[gliner]\""
+  ],
+  "install_check": [
+    "uv pip install \"cognee[gliner]\""
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Memory for agents built from knowledge graphs and vectors.",
+  "github": {
+    "repo": "topoteretes/cognee",
+    "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory with small models for free",
+    "homepage": "https://www.cognee.ai",
+    "language": "Python",
+    "topics": [
+      "agent-memory",
+      "agent-skills",
+      "ai",
+      "ai-agents",
+      "ai-memory",
+      "cognitive-architecture",
+      "cognitive-memory",
+      "context-engineering",
+      "contributions-welcome",
+      "good-first-issue",
+      "good-first-pr",
+      "graph-database",
+      "graph-rag",
+      "help-wanted",
+      "knowledge",
+      "knowledge-graph",
+      "memory-management",
+      "open-source",
+      "vector-database"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 33321,
+    "pushed_at": "2026-11-14",
+    "archived": false,
+    "branch_commit": "4053f6cc5536757f26a3665eed95c50088e6dc0b",
+    "release": {
+      "tag": "v1.6.8",
+      "date": "2026-11-12",
+      "url": "https://github.com/topoteretes/cognee/releases/tag/v1.6.8",
+      "commit": "069f3cc119bdf5628be054bb915992b2fc78cfc5"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v1.6.8",
+    "commit": "069f3cc119bdf5628be054bb915992b2fc78cfc5",
+    "date": "2026-11-12"
+  }
+}

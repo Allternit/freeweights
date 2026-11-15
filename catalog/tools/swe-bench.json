@@ -1,0 +1,56 @@
+{
+  "id": "swe-bench",
+  "name": "SWE-bench",
+  "repo": "SWE-bench/SWE-bench",
+  "category": "eval",
+  "license": "MIT",
+  "install": [
+    "pip install -e ."
+  ],
+  "install_check": [
+    "pip install -e ."
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Benchmark of real GitHub issues that coding agents try to resolve.",
+  "github": {
+    "repo": "SWE-bench/SWE-bench",
+    "description": "SWE-bench: Can Language Models Resolve Real-world Github Issues?",
+    "homepage": "https://www.swebench.com",
+    "language": "Python",
+    "topics": [
+      "benchmark",
+      "language-model",
+      "software-engineering"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 6188,
+    "pushed_at": "2026-09-18",
+    "archived": false,
+    "branch_commit": "02e7a74ffd0b707aab73d203fe87bdc7c76afc8e",
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "02e7a74ffd0b707aab73d203fe87bdc7c76afc8e",
+    "date": "2026-09-18"
+  }
+}

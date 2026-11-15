@@ -1,0 +1,61 @@
+{
+  "id": "evaluate",
+  "name": "Evaluate",
+  "repo": "huggingface/evaluate",
+  "category": "eval",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install evaluate"
+  ],
+  "install_check": [
+    "pip install evaluate"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Hugging Face library of metrics and comparisons for models and datasets.",
+  "github": {
+    "repo": "huggingface/evaluate",
+    "description": "🤗 Evaluate: A library for easily evaluating machine learning models and datasets.",
+    "homepage": "https://huggingface.co/docs/evaluate",
+    "language": "Python",
+    "topics": [
+      "evaluation",
+      "machine-learning"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 2495,
+    "pushed_at": "2026-11-09",
+    "archived": false,
+    "branch_commit": "a5db2ad54aaeadf15c7aa1f056bc6f7bbeeb7e5f",
+    "release": {
+      "tag": "v0.4.6",
+      "date": "2025-09-18",
+      "url": "https://github.com/huggingface/evaluate/releases/tag/v0.4.6",
+      "commit": "a4fcb45252709bd07fba897afd4575735716664f"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.4.6",
+    "commit": "a4fcb45252709bd07fba897afd4575735716664f",
+    "date": "2025-09-18"
+  }
+}

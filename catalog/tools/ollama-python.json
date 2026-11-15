@@ -1,0 +1,63 @@
+{
+  "id": "ollama-python",
+  "name": "Ollama Python",
+  "repo": "ollama/ollama-python",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install ollama"
+  ],
+  "install_check": [
+    "pip install ollama"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Python client for the Ollama API.",
+  "github": {
+    "repo": "ollama/ollama-python",
+    "description": "Ollama Python library",
+    "homepage": "https://ollama.com",
+    "language": "Python",
+    "topics": [
+      "ollama",
+      "python"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 10700,
+    "pushed_at": "2026-10-16",
+    "archived": false,
+    "branch_commit": "35d9667e84ebbd9d792826868d050027f75c1cc1",
+    "release": {
+      "tag": "v0.6.3",
+      "date": "2026-09-29",
+      "url": "https://github.com/ollama/ollama-python/releases/tag/v0.6.3",
+      "commit": "8785556559ec1d045d27a1ba9d9cc7330c3d3cb1"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.6.3",
+    "commit": "8785556559ec1d045d27a1ba9d9cc7330c3d3cb1",
+    "date": "2026-09-29"
+  }
+}

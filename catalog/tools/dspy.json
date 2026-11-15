@@ -1,0 +1,60 @@
+{
+  "id": "dspy",
+  "name": "DSPy",
+  "repo": "stanfordnlp/dspy",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install dspy"
+  ],
+  "install_check": [
+    "pip install dspy"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Programs language models with modules and optimizes their prompts and weights.",
+  "github": {
+    "repo": "stanfordnlp/dspy",
+    "description": "DSPy: The framework for programming—not prompting—language models",
+    "homepage": "https://dspy.ai",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 39061,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "2c07ebbee3a66f6e04b71e141c6c198f1b31a129",
+    "release": {
+      "tag": "3.5.0",
+      "date": "2026-11-10",
+      "url": "https://github.com/stanfordnlp/dspy/releases/tag/3.5.0",
+      "commit": "4e9db7a83e71e4c36315a2402ae7ffd0c6493404"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "3.5.0",
+    "commit": "4e9db7a83e71e4c36315a2402ae7ffd0c6493404",
+    "date": "2026-11-10"
+  }
+}

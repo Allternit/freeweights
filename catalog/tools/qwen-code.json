@@ -1,0 +1,71 @@
+{
+  "id": "qwen-code",
+  "name": "Qwen Code",
+  "repo": "QwenLM/qwen-code",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "npm install -g @qwen-code/qwen-code@latest"
+  ],
+  "install_check": [
+    "npm install -g @qwen-code/qwen-code@latest"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Terminal coding agent tuned for Qwen models and OpenAI-compatible endpoints.",
+  "github": {
+    "repo": "QwenLM/qwen-code",
+    "description": "An open-source AI coding agent that lives in your terminal.",
+    "homepage": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
+    "language": "TypeScript",
+    "topics": [
+      "agentic",
+      "ai",
+      "ai-agent",
+      "ai-coding",
+      "cli",
+      "coding-agent",
+      "developer-tools",
+      "llm",
+      "mcp",
+      "qwen",
+      "terminal",
+      "typescript"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 30397,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "038b60e3099a174395f26ed0d1b501eb04d2302d",
+    "release": {
+      "tag": "sdk-typescript-v0.1.33",
+      "date": "2026-11-13",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.33",
+      "commit": "fa64292cbcdd6c9d2106c7984aabccb11325ddeb"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "sdk-typescript-v0.1.33",
+    "commit": "fa64292cbcdd6c9d2106c7984aabccb11325ddeb",
+    "date": "2026-11-13"
+  }
+}

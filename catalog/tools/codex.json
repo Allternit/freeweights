@@ -1,0 +1,60 @@
+{
+  "id": "codex",
+  "name": "Codex CLI",
+  "repo": "openai/codex",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "npm install -g @openai/codex"
+  ],
+  "install_check": [
+    "npm install -g @openai/codex"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Coding agent for the terminal that can run with open models through a local server.",
+  "github": {
+    "repo": "openai/codex",
+    "description": "Lightweight coding agent that runs in your terminal",
+    "homepage": "",
+    "language": "Rust",
+    "topics": [],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 135315,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "b016cd18472588606c04af565528c4cd6746a41f",
+    "release": {
+      "tag": "rust-v0.169.0",
+      "date": "2026-11-13",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+      "commit": "d32063f96c2dff1dc96af839b3952abb6acfeda4"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "rust-v0.169.0",
+    "commit": "d32063f96c2dff1dc96af839b3952abb6acfeda4",
+    "date": "2026-11-13"
+  }
+}

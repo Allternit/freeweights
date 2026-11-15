@@ -1,0 +1,52 @@
+{
+  "id": "simple-evals",
+  "name": "simple-evals",
+  "repo": "openai/simple-evals",
+  "category": "eval",
+  "license": "MIT",
+  "install": [
+    "git clone https://github.com/openai/human-eval"
+  ],
+  "install_check": [
+    "git clone https://github.com/openai/human-eval"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "evals",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Small reference implementations of common language model benchmarks.",
+  "github": {
+    "repo": "openai/simple-evals",
+    "description": "",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 4705,
+    "pushed_at": "2026-04-22",
+    "archived": false,
+    "branch_commit": "652c89d0ca9df547706735883097e9537d40dc47",
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "branch",
+    "tag": "",
+    "commit": "652c89d0ca9df547706735883097e9537d40dc47",
+    "date": "2026-04-22"
+  }
+}

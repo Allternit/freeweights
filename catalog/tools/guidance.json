@@ -1,0 +1,60 @@
+{
+  "id": "guidance",
+  "name": "Guidance",
+  "repo": "guidance-ai/guidance",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install guidance"
+  ],
+  "install_check": [
+    "pip install guidance"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "llama-cpp"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Controls model output with interleaved code and constrained generation.",
+  "github": {
+    "repo": "guidance-ai/guidance",
+    "description": "A guidance language for controlling large language models.",
+    "homepage": "",
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 21823,
+    "pushed_at": "2026-05-21",
+    "archived": false,
+    "branch_commit": "21b1d90dfbebff4b141df70c714c8af15aa5f4af",
+    "release": {
+      "tag": "0.3.2",
+      "date": "2026-03-18",
+      "url": "https://github.com/guidance-ai/guidance/releases/tag/0.3.2",
+      "commit": "172f1d4bf541ff5b5722d76ecb31cbc9eb075ab3"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "0.3.2",
+    "commit": "172f1d4bf541ff5b5722d76ecb31cbc9eb075ab3",
+    "date": "2026-03-18"
+  }
+}

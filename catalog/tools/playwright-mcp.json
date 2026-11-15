@@ -1,0 +1,61 @@
+{
+  "id": "playwright-mcp",
+  "name": "Playwright MCP",
+  "repo": "microsoft/playwright-mcp",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "npx @playwright/mcp@latest --port 8931"
+  ],
+  "install_check": [
+    "npx @playwright/mcp@latest --port 8931"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "MCP server that lets agents control a browser through page snapshots.",
+  "github": {
+    "repo": "microsoft/playwright-mcp",
+    "description": "Playwright MCP server",
+    "homepage": "https://www.npmjs.com/package/@playwright/mcp",
+    "language": "TypeScript",
+    "topics": [
+      "mcp",
+      "playwright"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 39656,
+    "pushed_at": "2026-11-13",
+    "archived": false,
+    "branch_commit": "78eca85361efb545a4c0f59b6140aef0721c5412",
+    "release": {
+      "tag": "v0.0.85",
+      "date": "2026-11-09",
+      "url": "https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.85",
+      "commit": "4e0794dd0a0176519830a5ed27b491137cf9338f"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.0.85",
+    "commit": "4e0794dd0a0176519830a5ed27b491137cf9338f",
+    "date": "2026-11-09"
+  }
+}

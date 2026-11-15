@@ -1,0 +1,68 @@
+{
+  "id": "openai-agents-python",
+  "name": "OpenAI Agents SDK",
+  "repo": "openai/openai-agents-python",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "pip install openai-agents"
+  ],
+  "install_check": [
+    "pip install openai-agents"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "litellm"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Lightweight framework for agents with tools, handoffs and guardrails, usable with other providers.",
+  "github": {
+    "repo": "openai/openai-agents-python",
+    "description": "A lightweight, powerful framework for multi-agent workflows",
+    "homepage": "https://openai.github.io/openai-agents-python/",
+    "language": "Python",
+    "topics": [
+      "agents",
+      "ai",
+      "framework",
+      "harness",
+      "llm",
+      "openai",
+      "python"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 30687,
+    "pushed_at": "2026-11-15",
+    "archived": false,
+    "branch_commit": "64fbde5d02b42ae5f9db668eb0184cdb3fc9d775",
+    "release": {
+      "tag": "v0.24.0",
+      "date": "2026-10-15",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0",
+      "commit": "17d994bd3045dae71acda676a4ef4762ed8ecd94"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.24.0",
+    "commit": "17d994bd3045dae71acda676a4ef4762ed8ecd94",
+    "date": "2026-10-15"
+  }
+}

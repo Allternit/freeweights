@@ -1,0 +1,63 @@
+{
+  "id": "ollama-js",
+  "name": "Ollama JavaScript",
+  "repo": "ollama/ollama-js",
+  "category": "agents",
+  "license": "MIT",
+  "install": [
+    "npm i ollama"
+  ],
+  "install_check": [
+    "npm i ollama"
+  ],
+  "platforms": [
+    "Node.js",
+    "Web"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "JavaScript client for the Ollama API.",
+  "github": {
+    "repo": "ollama/ollama-js",
+    "description": "Ollama JavaScript library",
+    "homepage": "https://ollama.com",
+    "language": "TypeScript",
+    "topics": [
+      "javascript",
+      "js",
+      "ollama"
+    ],
+    "default_branch": "main",
+    "license": "MIT",
+    "stars": 4416,
+    "pushed_at": "2026-10-16",
+    "archived": false,
+    "branch_commit": "c276d078eee37a0df003b9ee2120ec70327f32e9",
+    "release": {
+      "tag": "v0.6.3",
+      "date": "2025-11-13",
+      "url": "https://github.com/ollama/ollama-js/releases/tag/v0.6.3",
+      "commit": "a667d4d651db01489ab6dfcd9537ef34c940cfd1"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.6.3",
+    "commit": "a667d4d651db01489ab6dfcd9537ef34c940cfd1",
+    "date": "2025-11-13"
+  }
+}

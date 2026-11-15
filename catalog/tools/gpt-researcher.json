@@ -1,0 +1,72 @@
+{
+  "id": "gpt-researcher",
+  "name": "GPT Researcher",
+  "repo": "assafelovic/gpt-researcher",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install gpt-researcher"
+  ],
+  "install_check": [
+    "pip install gpt-researcher"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Research agent that searches the web and writes cited reports.",
+  "github": {
+    "repo": "assafelovic/gpt-researcher",
+    "description": "An autonomous agent that conducts deep research on any data using any LLM providers",
+    "homepage": "https://gptr.dev",
+    "language": "Python",
+    "topics": [
+      "agent",
+      "ai",
+      "automation",
+      "deepresearch",
+      "llms",
+      "mcp",
+      "mcp-server",
+      "python",
+      "research",
+      "search",
+      "webscraping"
+    ],
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "stars": 30695,
+    "pushed_at": "2026-11-12",
+    "archived": false,
+    "branch_commit": "ddd4db36208d9c8e49f3b2436efda97baecb5433",
+    "release": {
+      "tag": "v3.8.0",
+      "date": "2026-11-09",
+      "url": "https://github.com/assafelovic/gpt-researcher/releases/tag/v3.8.0",
+      "commit": "597a99e2ef879606229754ec0d575a89eb587464"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v3.8.0",
+    "commit": "597a99e2ef879606229754ec0d575a89eb587464",
+    "date": "2026-11-09"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "camel",
+  "name": "CAMEL",
+  "repo": "camel-ai/camel",
+  "category": "agents",
+  "license": "Apache-2.0",
+  "install": [
+    "pip install camel-ai"
+  ],
+  "install_check": [
+    "pip install camel-ai"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "works_with": {
+    "role": "uses",
+    "tasks": [
+      "text-generation",
+      "image-text-to-text"
+    ]
+  },
+  "use": "",
+  "runs_with": [
+    "ollama"
+  ],
+  "homepage": "",
+  "kind": "tool",
+  "install_docs_paths": [],
+  "description": "Framework for multi-agent role-play and large agent societies.",
+  "github": {
+    "repo": "camel-ai/camel",
+    "description": "🐫 CAMEL: The first and the best multi-agent framework. Finding the Scaling Law of Agents. https://www.camel-ai.org",
+    "homepage": "https://docs.camel-ai.org/",
+    "language": "Python",
+    "topics": [
+      "agent",
+      "ai-societies",
+      "artificial-intelligence",
+      "communicative-ai",
+      "cooperative-ai",
+      "deep-learning",
+      "large-language-models",
+      "multi-agent-systems",
+      "natural-language-processing"
+    ],
+    "default_branch": "master",
+    "license": "Apache-2.0",
+    "stars": 18033,
+    "pushed_at": "2026-11-09",
+    "archived": false,
+    "branch_commit": "0366b64bf3609c76f50e396715aab73ba58a930c",
+    "release": {
+      "tag": "v0.2.90",
+      "date": "2026-03-22",
+      "url": "https://github.com/camel-ai/camel/releases/tag/v0.2.90",
+      "commit": "deb286f36702ab15a2cb890c6e223a79e4ce4284"
+    },
+    "fetched": "2026-11-15"
+  },
+  "install_verified": true,
+  "pinned": {
+    "source": "release",
+    "tag": "v0.2.90",
+    "commit": "deb286f36702ab15a2cb890c6e223a79e4ce4284",
+    "date": "2026-03-22"
+  }
+}
