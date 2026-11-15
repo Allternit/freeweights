@@ -72,6 +72,11 @@ if (existsSync(join(odir, 'sources.json'))) {
     if (v && v.file && existsSync(join(odir, v.file))) logos[org] = v.file;
   }
 }
+const SITE_ORIGIN = 'https://freeweights.allternit.com';
+catalog = { ...catalog, models: catalog.models.map((r) => {
+  const f = logos[r.id.split('/')[0]];
+  return f ? { ...r, publisher_logo: `${SITE_ORIGIN}/assets/orgs/${encodeURIComponent(f)}` } : r;
+}) };
 const catalogJson = JSON.stringify(catalog);
 const etag = '"' + createHash('sha256').update(catalogJson).digest('hex').slice(0, 32) + '"';
 
