@@ -2,12 +2,16 @@
 """Upload the site's R2 tree (model and tool detail pages, manifests, signatures) to the R2 bucket (B4). Stdlib only.
 
   python3 scripts/sync_r2.py [--src site/r2] [--bucket freeweights] [--jobs 3] [--dry-run] [--delete] [--prefix P]
+  python3 scripts/sync_r2.py --check-types        # report bucket objects with the wrong Content-Type; upload nothing
 
 `node site/build.mjs` writes the tree (B5). Keys equal the public URL paths: manifests/<org>/<repo>.json(.minisig)
 and <section>/<org>/<repo>/index.html; the Worker (or a Cloud Connector rule) serves them on those URLs.
 
 Safe to re-run. The bucket listing gives each object's MD5 etag and content type; a file whose MD5 and type
-match is skipped, so only changed files are sent. --delete removes bucket objects under the managed prefixes
+match is skipped, so only changed files are sent. Content-Type is part of the match because Cloud Connector serves
+the stored type as is (no Worker sets it): .json application/json, .minisig text/plain; charset=utf-8, index.html
+(any .html) text/html; charset=utf-8. An object with the right bytes and the wrong type is uploaded again with the
+right type (the fix is a re-upload; nothing is deleted for it). --check-types only reports them. --delete removes bucket objects under the managed prefixes
 (manifests/ and alt.freeweights.*) that the tree no longer has (a removed entry or a takedown); without it the
 script only reports them. The Cloudflare API allows 1,200 requests per 5 minutes per user, so uploads are paced
 under that (about 3.8 a second) and back off on 429. The token is wrangler's (`wrangler auth token`), refreshed
@@ -91,6 +95,11 @@ def ctype_of(key):
     return TYPES.get(os.path.splitext(key)[1], "application/octet-stream")
 
 
+def wrong_types(remote):
+    """(key, stored type, wanted type) for every managed bucket object whose stored Content-Type is not ctype_of(key)."""
+    return sorted((k, r[1], ctype_of(k)) for k, r in remote.items() if MANAGED.match(k) and r[1] != ctype_of(k))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--src", default=os.path.join(ROOT, "site", "r2"))
@@ -99,20 +108,27 @@ def main():
     ap.add_argument("--prefix", default="")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--delete", action="store_true")
+    ap.add_argument("--check-types", action="store_true", help="report objects with the wrong Content-Type, upload nothing")
     a = ap.parse_args()
     if not os.path.isdir(a.src): sys.exit(f"sync_r2: no {a.src} (run `cd site && node build.mjs` first)")
     files = local_tree(a.src, a.prefix)
     api = Api(account_id())
     remote = remote_objects(api, a.bucket, a.prefix)
-    todo, skipped = [], 0
+    bad = wrong_types(remote)
+    if a.check_types:
+        for k, have, want in bad[:50]: print(f"  wrong type {k}: {have or 'none'} (want {want})")
+        print(f"sync_r2: {len(bad):,} of {len(remote):,} objects in bucket {a.bucket} have the wrong Content-Type")
+        return 1 if bad else 0
+    todo, skipped, retype = [], 0, 0
     for key, path in sorted(files.items()):
         md5 = hashlib.md5(open(path, "rb").read()).hexdigest()
         r = remote.get(key)
         if r and r[0] == md5 and r[1] == ctype_of(key): skipped += 1
-        else: todo.append((key, path))
+        else:
+            todo.append((key, path)); retype += bool(r and r[0] == md5)
     stale = sorted(k for k in remote if k not in files and MANAGED.match(k))
     nbytes = sum(os.path.getsize(p) for _, p in todo)
-    print(f"sync_r2: {len(files):,} local objects, {len(remote):,} in bucket {a.bucket}; {len(todo):,} to upload ({nbytes/1e6:.1f} MB), {skipped:,} unchanged, {len(stale):,} not in the tree{'' if a.delete else ' (kept; --delete removes them)'}")
+    print(f"sync_r2: {len(files):,} local objects, {len(remote):,} in bucket {a.bucket}; {len(todo):,} to upload ({nbytes/1e6:.1f} MB), {skipped:,} unchanged, {retype:,} of them only for the Content-Type, {len(stale):,} not in the tree{'' if a.delete else ' (kept; --delete removes them)'}")
     if a.dry_run: return 0
     done, failed, lock = [0], [], threading.Lock()
 

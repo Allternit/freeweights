@@ -9,6 +9,10 @@ takedown, in this order:
      any R2 read and answers 451 on the entry's API detail, tree, resolve, manifest, signature and detail page,
      and drops it from search, with no redeploy. Runs only with --apply (live database) or --local (local
      test database); otherwise the exact wrangler command is printed for later. A failed D1 write stops here.
+  1b. Static copies: the entry's R2 objects (manifests/<id>.json, .json.minisig, <section>/<id>/index.html) are
+     deleted and their public URLs purged from the edge cache, so the paths Cloud Connector serves without the
+     Worker answer 404 (the API keeps 451). Runs only with --apply and needs CF_API_TOKEN (Cache Purge + R2 edit),
+     CLOUDFLARE_ACCOUNT_ID and CF_ZONE_ID; otherwise every delete and purge is printed (--skip-static: skip it).
   2. Blocklist: the entry's weight-file sha256 list, so discover.py and build_catalog.py refuse the same weights
      under any name. Non-sensitive classes go to policy/blocklist.json (public). Sensitive classes (SENSITIVE:
      csam, ncii, personal_data, real_person_likeness) go ONLY to the private list outside the repo,
@@ -77,6 +81,46 @@ def run_d1(cmd, cwd):
     return r.stdout
 
 
+# ---------- takedown: static copies (R2 + edge cache) ----------
+CF_API = "https://api.cloudflare.com/client/v4"
+BUCKET = "freeweights"
+SITE = os.environ.get("FW_HOST") or "freeweights.allternit.com"
+
+
+def static_targets(entry_id, section, host=SITE):
+    """The R2 keys and public URLs of an entry's static copies (the paths Cloud Connector serves)."""
+    from urllib.parse import quote
+    q = lambda s: quote(s, safe="/")
+    keys = [f"manifests/{entry_id}.json", f"manifests/{entry_id}.json.minisig", f"{section}/{entry_id}/index.html"]
+    base = f"https://{host}"
+    urls = [f"{base}/{q(k)}" for k in keys] + [f"{base}/{q(section)}/{q(entry_id)}/", f"{base}/{q(section)}/{q(entry_id)}"]
+    return keys, urls
+
+
+def static_env():
+    missing = [k for k in ("CF_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID", "CF_ZONE_ID") if not os.environ.get(k)]
+    return missing
+
+
+def remove_static(keys, urls):
+    """Delete the R2 objects (a missing object is fine), then purge the URLs. Returns the failures."""
+    import urllib.error, urllib.parse, urllib.request
+    tok, acct, zone = os.environ["CF_API_TOKEN"], os.environ["CLOUDFLARE_ACCOUNT_ID"], os.environ["CF_ZONE_ID"]
+    def call(method, path, body=None):
+        req = urllib.request.Request(CF_API + path, method=method, data=None if body is None else json.dumps(body).encode(),
+                                     headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r: return r.status
+        except urllib.error.HTTPError as e: return e.code
+    fails = []
+    for k in keys:
+        st = call("DELETE", f"/accounts/{acct}/r2/buckets/{BUCKET}/objects/{urllib.parse.quote(k, safe='/')}")
+        if st not in (200, 204, 404): fails.append(f"delete {k}: HTTP {st}")
+    st = call("POST", f"/zones/{zone}/purge_cache", {"files": urls})
+    if st != 200: fails.append(f"purge: HTTP {st}")
+    return fails
+
+
 # ---------- takedown ----------
 class Repo:
     def __init__(self, root):
@@ -120,9 +164,16 @@ def takedown(a, repo):
     cmd = wrangler_cmd(target or "remote", sql, a.persist_to)
     rel = lambda p: os.path.relpath(p, repo.root)
     tag = "DRY RUN: " if a.dry_run else ""
+    keys, urls = static_targets(entry_id, row["section"])
+    live_static = a.apply and not a.skip_static
+    if live_static and static_env() and not a.dry_run:
+        sys.exit(f"STOP: --apply also deletes the R2 copies and purges the cache; set {', '.join(static_env())} or pass --skip-static.")
     print(f"{tag}takedown {kind} {entry_id} ({row['section']}), reason class {reason}, {date}")
     print(f"  1. D1 ({'live database' if target == 'remote' else 'local database' if target else 'not run: pass --apply for the live database'}):")
     print(f"     {show(cmd, repo.worker)}")
+    print(f"  1b. static copies ({'skipped: --skip-static' if a.skip_static else 'live' if live_static else 'not run: pass --apply'}): R2 bucket {BUCKET} and the edge cache")
+    for k in keys: print(f"     DELETE {CF_API}/accounts/$CLOUDFLARE_ACCOUNT_ID/r2/buckets/{BUCKET}/objects/{k}")
+    print(f"     POST   {CF_API}/zones/$CF_ZONE_ID/purge_cache {json.dumps({'files': urls})}")
     where = f"PRIVATE list {bl_path} (sensitive class: never committed)" if sensitive else rel(bl_path)
     print(f"  2. {where}: add {len(hashes)} weight sha256" + (f" ({hashes[0][:16]}...)" if hashes else " (link-only entry: no manifest, id only)"))
     print(f"  3. catalog: remove {', '.join(rel(p) for p in row_files) or 'no row file'}; the catalog.json row; "
@@ -135,6 +186,11 @@ def takedown(a, repo):
     if target:
         run_d1(cmd, repo.worker)
         print(f"  D1 row written ({target}). The Worker answers 451 within 60 seconds.")
+    if live_static:
+        fails = remove_static(keys, urls)
+        for f in fails: print(f"  FAIL {f}")
+        print(f"  static copies: {len(keys)} R2 objects deleted, {len(urls)} URLs purged; Cloud Connector paths answer 404." if not fails
+              else "  static copies NOT fully removed: rerun the commands in step 1b (D1 is written; the Worker answers 451).")
     # 2. blocklist
     bl = blocklist.load(bl_path)
     bl = {"schema_version": bl.get("schema_version", 0), "entries": list(bl.get("entries", []))}
@@ -206,6 +262,7 @@ def main(argv=None):
     g.add_argument("--apply", action="store_true", help="write the D1 row to the LIVE database")
     g.add_argument("--local", action="store_true", help="write the D1 row to the local test database")
     t.add_argument("--persist-to", help="local D1 state directory (with --local)")
+    t.add_argument("--skip-static", action="store_true", help="with --apply: do not delete the R2 copies or purge the cache")
     t.add_argument("--key", default=registry_chain.KEY)
     s = sub.add_parser("stats", help="download totals, top entries, takedown count")
     g = s.add_mutually_exclusive_group()
