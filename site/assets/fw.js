@@ -182,7 +182,7 @@
     var lcl = (DICT.lc[e.lc] || e.lc).replace(' (link only)', '').replace('License not reviewed', 'Not reviewed');
     return '<a class="msg" href="/' + esc(e.sec) + '/' + esc(e.id) + '/" data-id="' + esc(e.id) + '"><span class="s">' +
       (lg ? '<img class="org msg-org" src="' + esc(lg) + '" alt="" width="22" height="22" loading="lazy" decoding="async">' : '<span class="msg-org msg-mono">' + FW.word(mono, 9, 'mono-svg') + '</span>') +
-      '<span class="s-t"><span class="s-n">' + esc(e.n) + (e.smp ? '<span class="sample">sample</span>' : '') + '</span><small>' + (e.fv.how && e.fv.how[0] ? '<span class="hw ' + (/^Hosted/.test(e.fv.how[0]) ? 'hw-host' : 'hw-pub') + '">' + esc(e.fv.how[0]) + '</span> ' : '') + '<b>From:</b> ' + esc(e.org) + ' <b>in</b> ' + esc(e.sec) + '</small></span></span>' +
+      '<span class="s-t"><span class="s-n">' + esc(e.n) + (e.smp ? '<span class="sample">sample</span>' : '') + '</span><small>' + (e.fv.how && e.fv.how[0] ? '<span class="hw ' + (/^Hosted/.test(e.fv.how[0]) ? 'hw-host' : 'hw-pub') + '" title="' + esc(e.fv.how[0]) + '">' + esc(e.fv.how[0].split(' · ')[0]) + '</span> ' : '') + '<b>From:</b> ' + esc(e.org) + ' <b>in</b> ' + esc(e.sec) + '</small></span></span>' +
       '<span class="z mono">' + (isT ? esc(e.tag || 'no release') : esc(FW.bytes(e.size))) + '</span><span class="pp mono">' + (e.params ? esc(FW.params(e.params)) : '—') + '</span>' +
       '<span class="lcc"><span class="lc lc-' + esc(e.lc) + '">' + esc(lcl) + '</span></span><span class="dt mono">' + esc(e.added || '') + '</span></a>';
   }

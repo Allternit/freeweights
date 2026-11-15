@@ -39,7 +39,8 @@ export function summary(r) {
 export const sizeBucket = (n) => { const gb = (n || 0) / 1e9; return gb < 4 ? 's' : gb < 40 ? 'm' : gb < 200 ? 'l' : 'xl'; };
 export const paramBucket = (n) => (!n ? 'none' : n < 3e9 ? 'p1' : n < 15e9 ? 'p2' : n < 70e9 ? 'p3' : n < 300e9 ? 'p4' : 'p5');
 export const HOW = (r) => (r.sourceOnly ? `From the publisher · ${LINK_REASON[r.linkReason || 'not-reviewed'][0]}` : r.unsigned ? 'Hosted (not signed yet)' : 'Hosted (signed)');
-export const howTag = (r) => `<span class="hw ${r.sourceOnly ? 'hw-pub' : 'hw-host'}">${esc(HOW(r))}</span>`;
+// List rows: the license has its own column, so a link-only row says only who it comes from; the full text (with the reason) is the title.
+export const howTag = (r) => `<span class="hw ${r.sourceOnly ? 'hw-pub' : 'hw-host'}" title="${esc(HOW(r))}">${esc(r.sourceOnly ? 'From the publisher' : HOW(r))}</span>`;
 export const SRC_LABEL = (r) => (r.failedAt ? 'Source check failed' : r.sourceOnly ? 'From the publisher' : r.badges.includes('host') ? 'Hosted by Allternit' : r.badges.includes('seed') ? 'Community seeded' : 'From source');
 for (const r of ROWS) {
   r.fam = r.section.replace(/^alt\.freeweights\./, ''); r.mono = MONO[r.fam] || r.fam.replace(/[^a-z0-9]/gi, '').slice(0, 2).toUpperCase();
