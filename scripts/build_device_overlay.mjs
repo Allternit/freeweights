@@ -79,13 +79,17 @@ export function onnxQuants(files) {
   }));
 }
 
+// Thresholds follow spec/on-device/fit.md ("Fits" = need * 5 <= budget * 4) and the iPhone 15 measurement
+// (S2): 2.24 GB without the increased-memory-limit entitlement, so phone = need <= 1.8 GB. The entitlement
+// (2.99 GB) is not approved for production, so "Tight fit" on phone is not counted. Browser: 2 GB tab cap,
+// "Fits" = need <= 1.6 GB. Phone browsers (0.45 GB) cannot fit any model under the 0.4 GB overhead rule.
 export function bestFor(q) {
   const need = q.ram_est ?? q.size * 1.2 + 0.4 * GB; // fit spec fallback
   const out = [];
-  if (need <= 3.2 * GB) out.push('phone');
+  if (need <= 1.8 * GB) out.push('phone');
   if (need <= 12 * GB) out.push('laptop');
   else out.push('workstation');
-  if (q.format === 'onnx' && q.size <= 2 * GB) out.push('browser');
+  if (q.format === 'onnx' && need <= 1.6 * GB) out.push('browser');
   return out;
 }
 const mask = (b) => b.reduce((a, c) => a | BIT[c], 0);

@@ -1,5 +1,6 @@
 import { LISTED, ROWS } from './catalog.mjs';
 import { isData } from './rows.mjs';
+import { DEVICE_COLLECTIONS } from './device-collections.mjs';
 
 export const PAGE = 100; export const CARD_SHARD = 100; export const IDX_SHARD = 3000;
 export const TIER_RANK = { T0: 0, T1: 1, T2: 2 }; export const REL_RANK = { base: 0, finetune: 1, merge: 1, quant: 2, adapter: 2 };
@@ -22,6 +23,7 @@ export const COLLECTIONS = [
   { slug: 'speech', name: 'Speech', blurb: 'Speech recognition, text to speech and audio models.', test: (r) => r.section === 'alt.freeweights.speech' || r.tasks.some((t) => /speech|audio/.test(t)) },
   { slug: 'gguf', name: 'GGUF for llama.cpp and Ollama', blurb: 'Repos with GGUF files, ready for llama.cpp, Ollama and LM Studio.', test: (r) => r.formats.includes('gguf') },
   { slug: 'datasets', name: 'Open datasets', blurb: 'Training and evaluation datasets with a license that allows sharing.', test: isData },
-].map((c) => ({ ...c, rows: TOP.filter(c.test) }));
+  ...DEVICE_COLLECTIONS,
+].map((c) => ({ ...c, rows: c.order ? TOP.filter(c.test).sort((a, b) => c.order(a, b) || byRank(a, b)) : TOP.filter(c.test) }));
 for (const r of ROWS) r.coll = COLLECTIONS.filter((c) => c.test(r)).map((c) => c.slug);
 export const bySection = (id) => TOP.filter((r) => r.section === id);
