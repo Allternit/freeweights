@@ -11,6 +11,9 @@ import { deviceRoute, deviceIndexRoute } from './device';
 import { pagesRoute } from './pages';
 import { resolveRoute } from './resolve';
 import { whoamiRoute } from './whoami';
+import { accountRoute } from './account';
+import { reportsRoute } from './reports';
+import { adminRoute } from './admin';
 
 // Write API routes (spec/parts/write-api.yaml) whose handlers land in later waves. Each one already checks the
 // credential (401 / 503 accounts_not_configured) so clients and tests see the final auth behaviour; past that
@@ -65,7 +68,7 @@ export const ROUTES: Route[] = [
   W(/^\/api\/settings\/webhooks$/, ['GET', 'POST']),
   W(/^\/api\/settings\/webhooks\/([^/]+)$/, ['GET', 'POST', 'DELETE']),
   W(/^\/api\/settings\/webhooks\/([^/]+)\/(enable|disable)$/, P),
-  W(/^\/api\/fw\/v1\/account$/, ['GET', 'POST', 'PATCH', 'DELETE']),
+  W(/^\/api\/fw\/v1\/account$/, ['GET', 'POST', 'PATCH', 'DELETE'], accountRoute),
   W(/^\/api\/fw\/v1\/follows$/, ['GET', 'POST', 'DELETE']),
   W(/^\/api\/fw\/v1\/posts$/, P),
   W(/^\/api\/fw\/v1\/posts\/([^/]+)$/, ['DELETE']),
@@ -73,5 +76,6 @@ export const ROUTES: Route[] = [
   W(/^\/api\/fw\/v1\/papers\/([^/]+)\/links$/, P),
   W(/^\/api\/fw\/v1\/endpoints$/, ['GET', 'POST']),
   W(/^\/api\/fw\/v1\/endpoints\/([^/]+)$/, ['GET', 'DELETE']),
-  W(/^\/api\/fw\/v1\/reports$/, P),
+  W(/^\/api\/fw\/v1\/reports$/, P, reportsRoute),
+  W(/^\/api\/fw\/v1\/admin\/.+$/, ['GET', 'POST', 'PUT'], adminRoute), // signed with ADMIN_SECRET, no Bearer
 ];
