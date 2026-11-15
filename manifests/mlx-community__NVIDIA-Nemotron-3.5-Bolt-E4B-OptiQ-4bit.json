@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T00:22:01Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "1bd1cfdb8737e2a8f85d1e95a3786cac4309839f9c27347b9406858d31026181",
+      "size": 5742
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "35b7d0641b6fb4ee41c3bc623e85bdb7d583c40f6ae9f24514ae58a9d57119f3",
+      "size": 20161
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "0b7b05eeb05fce2142a1b854d4fd4c9ccd2ddc635d9b32ad1b41048d183cd69a",
+      "size": 76793
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de",
+      "size": 208
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "413411c8193e8922e2f92f3fce2415d1fc19f97b315b9fab60e9026cb2dce2ba",
+      "size": 1576
+    },
+    {
+      "lfs": true,
+      "path": "model-00001-of-00002.safetensors",
+      "sha256": "9b1c3769e582ab07bcb1319e1fd6a1f6ce1d5b2afed1b7b120efbd6381a67c95",
+      "size": 3505995882
+    },
+    {
+      "lfs": true,
+      "path": "model-00002-of-00002.safetensors",
+      "sha256": "c816c356a2bbddef2b6e6e389f77055cf4cc11b586f9d91ac4e5804537d90f99",
+      "size": 3023979920
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "e07e11372777639181da2c972e2bb6c759824d6f022897ad2b590ec9427e5ced",
+      "size": 259833
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "2806650b0782dd70301ac8281093cf6e686c32a3743da4d299902ed885ba7259",
+      "size": 36235
+    },
+    {
+      "lfs": true,
+      "path": "optiq_vision.safetensors",
+      "sha256": "edaf481025dbd76fa64b0f6bb94e5b020f5621d84b8c04ea9ecbefcd52db957f",
+      "size": 956351300
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "8227f6f1d959e2ded8be6351bf863a77b781bfd93b82b01e6f65d5d91d5cecb8",
+      "size": 3760
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/NVIDIA-Nemotron-3.5-Bolt-E4B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "1bd1cfdb8737e2a8f85d1e95a3786cac4309839f9c27347b9406858d31026181",
+    "id": "OpenMDW-1.1",
+    "name": "OpenMDW-1.1",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.nemotron",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:22:01Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/NVIDIA-Nemotron-3.5-Bolt-E4B-OptiQ-4bit/resolve/0c204a16b6b186d1434e70f5fc2ca2e30984a006/"
+    }
+  ],
+  "upstream": {
+    "commit": "0c204a16b6b186d1434e70f5fc2ca2e30984a006",
+    "host": "huggingface.co",
+    "repo": "mlx-community/NVIDIA-Nemotron-3.5-Bolt-E4B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/NVIDIA-Nemotron-3.5-Bolt-E4B-OptiQ-4bit/tree/0c204a16b6b186d1434e70f5fc2ca2e30984a006"
+  }
+}

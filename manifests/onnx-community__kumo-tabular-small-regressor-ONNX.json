@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-11-15T00:25:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "b2edd226c6b1cd2d01eef5665bd45729424086f88ce4e410e183a8795b917f21",
+      "size": 1576
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "44b43ed7b8e0f987dc5e90fb6cb4b901eccf0b14dc9f17a9033951603851d37d",
+      "size": 2693
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "8a14c1fa8beb42a2a13f5612409eaf215efa189f72d203ee12aea1c796e0650b",
+      "size": 2791
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "1f22b731f03883fa1f8d41d4ac84678d49849bc874a083c073d2cbb82f7c484a",
+      "size": 440
+    },
+    {
+      "lfs": false,
+      "path": "conversion/export_onnx.py",
+      "sha256": "7e1fc7a980c764855b55e8efb8388ac5eb627acd6a7ace42033dacab2b377f91",
+      "size": 6346
+    },
+    {
+      "lfs": false,
+      "path": "conversion/fixtures.py",
+      "sha256": "8956dd180c79e235608f4918f3cb9d4332c1e19455e37afb4d8c1510605fc2fb",
+      "size": 6667
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "ec7b8a17758a124b99c41895245ad4f9d3208084e047e464cbbc5cd3e416305b",
+      "size": 6018136
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "13284564c5f94783eba45eb936909cc6e42b8f10d142292bea42e810ffb2acc7",
+      "size": 113829276
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/kumo-tabular-small-regressor-ONNX",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "44b43ed7b8e0f987dc5e90fb6cb4b901eccf0b14dc9f17a9033951603851d37d",
+    "id": "OpenMDW-1.1",
+    "name": "OpenMDW-1.1",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:25:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/kumo-tabular-small-regressor-ONNX/resolve/71ad7c7f8aa4325b1925ea2866820c4d8b5ac235/"
+    }
+  ],
+  "upstream": {
+    "commit": "71ad7c7f8aa4325b1925ea2866820c4d8b5ac235",
+    "host": "huggingface.co",
+    "repo": "onnx-community/kumo-tabular-small-regressor-ONNX",
+    "url": "https://huggingface.co/onnx-community/kumo-tabular-small-regressor-ONNX/tree/71ad7c7f8aa4325b1925ea2866820c4d8b5ac235"
+  }
+}

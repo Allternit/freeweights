@@ -1,0 +1,44 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T00:32:13Z",
+  "audit": {
+    "at": "2026-11-15T00:32:13Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/gemma-3-1b-it",
+  "display_name": "gemma-3-1b-it-qat-int4-unquantized",
+  "family": "gemma",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "google/gemma-3-1b-it-qat-int4-unquantized",
+  "kind": "model",
+  "license_class": "gated",
+  "license_id": "LicenseRef-Gemma",
+  "license_url": "https://huggingface.co/google/gemma-3-1b-it-qat-int4-unquantized",
+  "link_reason": "gated",
+  "note": "Gated at the source: listed as a link only, and no copy is hosted. Accept the license on the model page at the source, then download from there.",
+  "params": 999885952,
+  "redistribution": "click-through",
+  "relation": {
+    "parent": "google/gemma-3-1b-it",
+    "type": "finetune"
+  },
+  "requires_terms": true,
+  "section": "alt.freeweights.gemma",
+  "signals": {
+    "downloads_30d": 92,
+    "likes": 14,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 2039068018,
+  "upstream_url": "https://huggingface.co/google/gemma-3-1b-it-qat-int4-unquantized",
+  "what_changed": null
+}

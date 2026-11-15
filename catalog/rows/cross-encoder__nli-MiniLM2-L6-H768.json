@@ -1,0 +1,46 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T00:32:13Z",
+  "audit": {
+    "at": "2026-11-15T00:32:13Z",
+    "method": "queue"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "nreimers/MiniLMv2-L6-H768-distilled-from-RoBERTa-Large",
+  "display_name": "nli-MiniLM2-L6-H768",
+  "family": "cross-encoder",
+  "formats": [
+    "onnx",
+    "openvino",
+    "safetensors"
+  ],
+  "id": "cross-encoder/nli-MiniLM2-L6-H768",
+  "kind": "model",
+  "license_class": "unreviewed",
+  "license_id": "Apache-2.0",
+  "license_url": "https://huggingface.co/cross-encoder/nli-MiniLM2-L6-H768",
+  "link_reason": "not-reviewed",
+  "note": "License not reviewed. Read it on the publisher's page. Freeweights does not host a copy.",
+  "params": 82121221,
+  "redistribution": "no",
+  "relation": {
+    "parent": "nreimers/MiniLMv2-L6-H768-distilled-from-RoBERTa-Large",
+    "type": "quant"
+  },
+  "requires_terms": true,
+  "section": "alt.freeweights.vision",
+  "signals": {
+    "downloads_30d": 213814,
+    "likes": 16,
+    "trending": null
+  },
+  "tasks": [
+    "zero-shot-classification"
+  ],
+  "tier": "variant",
+  "total_size": 2881436941,
+  "upstream_url": "https://huggingface.co/cross-encoder/nli-MiniLM2-L6-H768",
+  "what_changed": null
+}

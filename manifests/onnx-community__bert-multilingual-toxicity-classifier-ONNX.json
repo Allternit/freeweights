@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-11-15T00:24:53Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "db12b6e7e2a85dd033d695c793c6d89b52dd79edcd886a9b3b669bb1ed0ba550",
+      "size": 425
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "db095dbbd83bc55c03f7941bbecdb8d282970de00eb6708efa17105beeb848d2",
+      "size": 954
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "42d5522ab90c2475eca734441a6452a95e5ff3c7f13d1cadd86a6927782d8018",
+      "size": 711728277
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "332bd5ef4f4d1aa9a6bfda0d20122d8c8b26fe0822d75f0d84021c48d992aa3f",
+      "size": 419776600
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "4df185f54feb56923224a35251b3fc55a00cc0e3f7222a1d712724bc15671f8f",
+      "size": 356018619
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "041b5f9e43422b864b724cafe699f4b8a0a75426fa6db44867a0e1a57cda12e5",
+      "size": 179044246
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "d6e46c332a7fc47c38dd4f37c8e35bb3eca3d1b15411931d994a33c2994ee41c",
+      "size": 425084488
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "14e83740e551524b09430f9a40632d10343309ca962d1ef70303af5310d3964c",
+      "size": 233935821
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "041b5f9e43422b864b724cafe699f4b8a0a75426fa6db44867a0e1a57cda12e5",
+      "size": 179044246
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "298dedbc24b04097d5458641408fca3d3904df9792d7e42fd7a8241890683e4a",
+      "size": 179044246
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "size": 695
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "4e8d2533b6e39afe137ac1ff84390ef303f71f9c257aab2df09f4c6a62d08bf3",
+      "size": 2919627
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "251a4f7a97f9c56f558fff88d9aac0142a23ae51d8ee50b63527ab6c6b4915bd",
+      "size": 1413
+    },
+    {
+      "lfs": false,
+      "path": "vocab.txt",
+      "sha256": "fe0fda7c425b48c516fc8f160d594c8022a0808447475c1a7c6d6479763f310c",
+      "size": 995526
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/bert-multilingual-toxicity-classifier-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "db12b6e7e2a85dd033d695c793c6d89b52dd79edcd886a9b3b669bb1ed0ba550",
+    "id": "LicenseRef-OpenRAIL++-M",
+    "name": "CreativeML Open RAIL++-M",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:24:53Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/bert-multilingual-toxicity-classifier-ONNX/resolve/d4cfd18fc44b79cc161c9ad7b7fbcce1546223bc/"
+    }
+  ],
+  "upstream": {
+    "commit": "d4cfd18fc44b79cc161c9ad7b7fbcce1546223bc",
+    "host": "huggingface.co",
+    "repo": "onnx-community/bert-multilingual-toxicity-classifier-ONNX",
+    "url": "https://huggingface.co/onnx-community/bert-multilingual-toxicity-classifier-ONNX/tree/d4cfd18fc44b79cc161c9ad7b7fbcce1546223bc"
+  }
+}

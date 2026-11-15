@@ -1,0 +1,44 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T00:32:13Z",
+  "audit": {
+    "at": "2026-11-15T00:32:13Z",
+    "method": "inherited"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "display_name": "UserLM-2.0",
+  "family": "text",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "microsoft/UserLM-2.0",
+  "kind": "model",
+  "license_class": "gated",
+  "license_id": "LicenseRef-Llama-3.1-Community",
+  "license_url": "https://huggingface.co/microsoft/UserLM-2.0",
+  "link_reason": "gated",
+  "note": "Gated at the source: listed as a link only, and no copy is hosted. Accept the license on the model page at the source, then download from there. The license of the base model meta-llama/Llama-3.1-8B-Instruct applies: the strictest license along the lineage wins.",
+  "params": 8030277632,
+  "redistribution": "click-through",
+  "relation": {
+    "parent": "meta-llama/Llama-3.1-8B-Instruct",
+    "type": "finetune"
+  },
+  "requires_terms": true,
+  "section": "alt.freeweights.text",
+  "signals": {
+    "downloads_30d": 1071,
+    "likes": 15,
+    "trending": null
+  },
+  "tasks": [
+    "text-generation"
+  ],
+  "tier": "T0",
+  "total_size": 32138708050,
+  "upstream_url": "https://huggingface.co/microsoft/UserLM-2.0",
+  "what_changed": null
+}

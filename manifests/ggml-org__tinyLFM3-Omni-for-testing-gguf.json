@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T00:18:00Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "b03a920472556fc3b8d9d0e3e0a35b52959135e1e5a27f11e1b26e077e3cdeac",
+      "size": 1670
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c",
+      "size": 10574
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "e508a704c82e66dc0480cda7175a2bf4a6e2aea947308350ec07419634c9d9fe",
+      "size": 1659
+    },
+    {
+      "lfs": false,
+      "path": "finish_gguf.py",
+      "sha256": "e6ca0bd5c70def4df589492b60b85307e3163793b37adad524f5cb514acbe6c9",
+      "size": 3501
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-tinyLFM3-Omni-for-testing-Q2_K.gguf",
+      "sha256": "8978a601f2b7c41a85dc16a4aff6d90cdc1ea01f957cb2ad33c7ad0505ac780b",
+      "size": 19250496
+    },
+    {
+      "lfs": false,
+      "path": "slice_lfm3omni.py",
+      "sha256": "db7619f769e0cb344aed79851da288ac9406be51355cab618a43a6e28b371341",
+      "size": 9706
+    },
+    {
+      "lfs": true,
+      "path": "tinyLFM3-Omni-for-testing-Q2_K.gguf",
+      "sha256": "c93c250c4a6a8da743328f8a503fa74d0b56f0efc103db08cb29aeae2514297c",
+      "size": 19980384
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/tinyLFM3-Omni-for-testing-gguf",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:18:00Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/tinyLFM3-Omni-for-testing-gguf/resolve/0d21fb0532bb81b5d6564c823ccd0c3df53b7ba7/"
+    }
+  ],
+  "upstream": {
+    "commit": "0d21fb0532bb81b5d6564c823ccd0c3df53b7ba7",
+    "host": "huggingface.co",
+    "repo": "ggml-org/tinyLFM3-Omni-for-testing-gguf",
+    "url": "https://huggingface.co/ggml-org/tinyLFM3-Omni-for-testing-gguf/tree/0d21fb0532bb81b5d6564c823ccd0c3df53b7ba7"
+  }
+}

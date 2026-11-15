@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-11-15T00:24:45Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "ba44193cf00eb237e2824cbfa212775d626f48f7c4caa3e630deda0908552db2",
+      "size": 1828
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f58e02164274cccb3003c766620e6c14885d1dc8243b4b91791703f72c3a3f62",
+      "size": 31309
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a758bf59867e27a7d92cf7a9149cae6dfc212b408b2ba74bfb87994708a803c5",
+      "size": 1623
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "12a7c98fc1ee6ec98ea728c7ffd9fcf6b245f3c9c1ea9f7c2a7cc47c023e3f9d",
+      "size": 303466
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx_data",
+      "sha256": "c293d9b5930eb9f6172f095ced052c0d1bbdbeb2594a115497583ca209b1dbd6",
+      "size": 398184448
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "286f56d64d80755eb0c84f9158c3620c9eccccb84ec53b48942c3795cf5a0c7b",
+      "size": 351782
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "affecf841c462d78c86b56a6eee6216b119809285bcbdb4d5c4d541810e9d317",
+      "size": 199287808
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "3e5e93dfd8289770343c402079d36034faa4a2eac260f66115f85ba9a2de41b2",
+      "size": 359731
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "4513ed877d7cb83944bcb27c747221a7180e03f790d1c703e50af01792b7b8f4",
+      "size": 82768000
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "e80ee1f1920f44c37d03bc65b1f1fd4f7450f5e1adbb0eaaccd3ab9442a543f7",
+      "size": 408120
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "3a9ba1de48ead635c04a117bae263f97fbd354358bca4197fb7184df7a5edf06",
+      "size": 73076608
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "fff7d18c7439c9fdc1c6c4dfec924cb42d3344264ca879780dfaf7ee886e6c1e",
+      "size": 364375
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx_data",
+      "sha256": "002d7483e1c865c35c82220fdb378f185ff213c6d35922b38ae421c8ec72c338",
+      "size": 120479872
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "71889e72aa30d334b83a05ba342c326a5ac6300920ca68eef6cabd01d4cc2292",
+      "size": 339
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "91726746788a024a2f0f2f699a6c3667f0d74e6a0e9288fc44fe3018e23af68e",
+      "size": 623
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/Nemotron-3-Diarization-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "f58e02164274cccb3003c766620e6c14885d1dc8243b4b91791703f72c3a3f62",
+    "id": "OpenMDW-1.1",
+    "name": "OpenMDW-1.1",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.nemotron",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:24:45Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/Nemotron-3-Diarization-ONNX/resolve/353b6f8ad2cac3580e982d7fbdf0a010786b0406/"
+    }
+  ],
+  "upstream": {
+    "commit": "353b6f8ad2cac3580e982d7fbdf0a010786b0406",
+    "host": "huggingface.co",
+    "repo": "onnx-community/Nemotron-3-Diarization-ONNX",
+    "url": "https://huggingface.co/onnx-community/Nemotron-3-Diarization-ONNX/tree/353b6f8ad2cac3580e982d7fbdf0a010786b0406"
+  }
+}

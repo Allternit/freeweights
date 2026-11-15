@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T00:26:06Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "30adf9d6478191fb87f2424f63ba0728598335aaf99cd2848ef17e8e545fe94b",
+      "size": 10574
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "852cc0e92836d46135b1f9919927a366cd4a69e07d05e8df73bad4f29cc03496",
+      "size": 14908
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "6d65c8804847ad74eea912dd7eca3dc1cf7a457b53a77f47d841a14121910963",
+      "size": 4621
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "37ae5e9732e6950bddd82d3aaf8d38bc79733e232038337e560c489d3604f067",
+      "size": 1605
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "4f88574c47c3215f7f952e1f520d1df7387422dde0345655228fb7b3fde6858c",
+      "size": 303
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "f630da86651136c9aee893b04b7542007e90fdd718355358e57e7ecc31517cfd",
+      "size": 459401112
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "20b69858d59797c3c56d9352d1f17d95d31f18d8812aeeb13331881d3ba5ed0d",
+      "size": 4732978
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "902aa9d3ff754f32604b4905d88ed1724dd6ddd5008f0b40b76debe1a9401ac1",
+      "size": 5398
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "unsloth/LFM2.5-230M",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "30adf9d6478191fb87f2424f63ba0728598335aaf99cd2848ef17e8e545fe94b",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:26:06Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/unsloth/LFM2.5-230M/resolve/70a7edbaf3c3afc75f4a052be6b8c12ec27713cd/"
+    }
+  ],
+  "upstream": {
+    "commit": "70a7edbaf3c3afc75f4a052be6b8c12ec27713cd",
+    "host": "huggingface.co",
+    "repo": "unsloth/LFM2.5-230M",
+    "url": "https://huggingface.co/unsloth/LFM2.5-230M/tree/70a7edbaf3c3afc75f4a052be6b8c12ec27713cd"
+  }
+}

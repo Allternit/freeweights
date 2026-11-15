@@ -1,0 +1,162 @@
+{
+  "created_at": "2026-11-15T00:21:47Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "size": 1570
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "4d438e98fac1e69fb21b8b93b27fb617b0c0c8562f14a741dfcdeaa44fbb89a9",
+      "size": 3392
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f45005c50cd2a97329722bf3a2dee9f16c04cdf825a589b280fb7e99e6827818",
+      "size": 12129
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "6f801efccaa658df91b827067a557561c25ffd976760c3ebc69d5247d6eae155",
+      "size": 34861
+    },
+    {
+      "lfs": false,
+      "path": "configuration_lfm3.py",
+      "sha256": "dd2f4b18eed69f3a303dbf438a5ecd20d6375abad8d1aa62699b3d5294e6a71a",
+      "size": 6105
+    },
+    {
+      "lfs": false,
+      "path": "configuration_lfm3_vl.py",
+      "sha256": "ddd68fa327d634db8bbaade1080264dc1206be613db6fbc3521998251a00e2a5",
+      "size": 9138
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "30b1115bcdc4e5671567a5b1255a2f3d2f5a912a79292051c6f1e9db81b5e8c4",
+      "size": 323
+    },
+    {
+      "lfs": false,
+      "path": "image_processing_lfm3_vl.py",
+      "sha256": "57db0cfa668bf89a6ff898874e1321e78c257d200f25c98e0ea52b30b8740088",
+      "size": 12036
+    },
+    {
+      "lfs": false,
+      "path": "kv_config.json",
+      "sha256": "06cabd63988c2040e3b280bd37f54d48175b38f6a7d069dd85477dcdf93744d8",
+      "size": 724
+    },
+    {
+      "lfs": false,
+      "path": "lfm3_conv.py",
+      "sha256": "80d4a985382a22774212759248a6b4c737bfbf9c2a47b3dd7f797dda748e4bb4",
+      "size": 8532
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "b3373914862fe2eb025d327243cd512244a5bf3d24902867e9a907b56eb71f26",
+      "size": 1310381146
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "4423b6b4161686c8b50216db85f35c8cb39e40068d23a49aee1fce5f4b117b66",
+      "size": 59317
+    },
+    {
+      "lfs": false,
+      "path": "modeling_lfm3.py",
+      "sha256": "4a676bee2cf184d51a9dacbb9d7c4abae85515a042a920f8e2578b22bba3d6e8",
+      "size": 42343
+    },
+    {
+      "lfs": false,
+      "path": "modeling_lfm3_vl.py",
+      "sha256": "a41cbe7242f379808bcc005207ee0d7b1709528966c1e4da46baa7c41827ac79",
+      "size": 44999
+    },
+    {
+      "lfs": false,
+      "path": "optiq/metadata.json",
+      "sha256": "373a2fbb12313b3e95ebd7c97c70090cdb9525fca30172b1eb1ec857c9d02776",
+      "size": 15961
+    },
+    {
+      "lfs": false,
+      "path": "optiq/sensitivity.json",
+      "sha256": "b6d63007159a9aae10fab785ff9188e66000a88d7779a907157a8bf5f4fa3380",
+      "size": 36699
+    },
+    {
+      "lfs": true,
+      "path": "optiq_vision.safetensors",
+      "sha256": "bf409123e3663c261dd137499501ee9533d113ff54a83324801f41f3acb359bf",
+      "size": 378777028
+    },
+    {
+      "lfs": false,
+      "path": "processing_lfm3_vl.py",
+      "sha256": "d770011e71c8b8e94ea9436d4f6768b42db60c5db70145d47f326f5d76f633f6",
+      "size": 12152
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "d3d5c3f9dc3d3f25c3177ba8bb05938b53c51799244af1ca6406cde78924b84e",
+      "size": 1535
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "a39eed58008cbcbc09e5b629b81338a654269c64cd13348aaa6090f4db75c7e7",
+      "size": 17908258
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "d4a6138a6dda5c1c8980c7448f09be5bf723ccc252c81dbfef5e26c7a2c92fc1",
+      "size": 1796
+    },
+    {
+      "lfs": false,
+      "path": "video_processing_lfm3_vl.py",
+      "sha256": "9a6b7804c520b59ae6a20bff4814196c187ef5b3ed8c93cbd7d0a9a66c413478",
+      "size": 17161
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/LFM3-VL-2B-OptiQ-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "4d438e98fac1e69fb21b8b93b27fb617b0c0c8562f14a741dfcdeaa44fbb89a9",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:21:47Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/LFM3-VL-2B-OptiQ-4bit/resolve/7319a2eeba21b1e6f58468a5c91183a780319e31/"
+    }
+  ],
+  "upstream": {
+    "commit": "7319a2eeba21b1e6f58468a5c91183a780319e31",
+    "host": "huggingface.co",
+    "repo": "mlx-community/LFM3-VL-2B-OptiQ-4bit",
+    "url": "https://huggingface.co/mlx-community/LFM3-VL-2B-OptiQ-4bit/tree/7319a2eeba21b1e6f58468a5c91183a780319e31"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-15T00:21:21Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "93aa115252aaa38e8cf30a76494ae3858131835c040b24857c229e4312aa765a",
+      "size": 661
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "cf0af741b36248dfe460af825b0b3acb3c651cf7dd40a74c29447f60b75d2b9b",
+      "size": 434
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "c467a9d4c07a0847c95ac7f2b5abb6020434cad9dc0d2cd014f16f223089d525",
+      "size": 8176
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "529184b675eb21c69367bb9b96b4b6fab90e02d94a384f5a94f1004903ac2430",
+      "size": 132
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "2f169e439c2ef393621edd16fc86698fe16b59f7c407be96808233e4526c9d6b",
+      "size": 1463031408
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "c4b6242264cac84f8434ba7fc773f61db01d59054c419440e1468abb33e44060",
+      "size": 63717
+    },
+    {
+      "lfs": false,
+      "path": "modeling_lfm2_vl.py",
+      "sha256": "c026644f7a81e86a42f73c4596d772c00348b00beb0cf384608f9957b182e2d5",
+      "size": 27396
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "a70ef8973bfbb79a429a1e48f3a3674ec5e970d82e52e6c9091381a1a2e48966",
+      "size": 535
+    },
+    {
+      "lfs": false,
+      "path": "processing_lfm2_vl.py",
+      "sha256": "fa1a408d27e1006d98308a2bb1e477dc52d1b12fff42827661af270e8e33df29",
+      "size": 24466
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "24ba14ff1adc84b65d71c87076c33e2f56786afb82e5e4b9f8f6e4a6d29f9136",
+      "size": 435
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "a33ecf36d838dc264c8f960669aa3d26369d7a683c75a65bc5acdc3c65ca5ed9",
+      "size": 584
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "f3910942aa907c48b0cc20ec426ee38bfa8dcda8feecf035ced981918cb30f14",
+      "size": 4733040
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "5d460b26aa4512b0c951d735360c6eb443812a3f7974f95abcef67638c0c0df4",
+      "size": 92279
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "mlx-community/LFM2-VL-1.6B-4bit",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "93aa115252aaa38e8cf30a76494ae3858131835c040b24857c229e4312aa765a",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:21:21Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/mlx-community/LFM2-VL-1.6B-4bit/resolve/be587c055231b0905e846f2c99803dd6d7f33a7a/"
+    }
+  ],
+  "upstream": {
+    "commit": "be587c055231b0905e846f2c99803dd6d7f33a7a",
+    "host": "huggingface.co",
+    "repo": "mlx-community/LFM2-VL-1.6B-4bit",
+    "url": "https://huggingface.co/mlx-community/LFM2-VL-1.6B-4bit/tree/be587c055231b0905e846f2c99803dd6d7f33a7a"
+  }
+}

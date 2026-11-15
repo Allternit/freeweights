@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T00:20:38Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "9131094577f8177f29ca2ecf0582f788065d4f87caf0aa8e1c71387ff11e11d9",
+      "size": 2310
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "fd34e93727a7a0a13003224dcb97b0fc2debfd955fea4afad29e3d8314cbd079",
+      "size": 3162
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ce0883eb3405e21c730be0f67df67b9dda721aecaf82058a4292fa869dfb3f36",
+      "size": 1100
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "0f678f07a00ae4bdeb2b2bd5f37988a4b33a87686d9103fefe08de7a46522373",
+      "size": 137
+    },
+    {
+      "lfs": true,
+      "path": "model.safetensors",
+      "sha256": "6f182d709fa28f96e0e4f0b92c7a1c4a5cf8bc4a4a6f9baa22bddc391eb6e9a9",
+      "size": 708984384
+    },
+    {
+      "lfs": false,
+      "path": "model.safetensors.index.json",
+      "sha256": "9420a2fe010b182d9b2973a1e17579f7a29c18ad1c43521b93b7626bd344a0c8",
+      "size": 10373
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "742aefe2b7dec496e8caffdba03a75d0c1a9925d53bd3f3e0d388c96b591b6f4",
+      "size": 434
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "98cff83b4f6d7e9d8929bebc62b07e92cf1b3f99c80d16bafe8b84a75448f40b",
+      "size": 4732426
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ae59ca89cb66af988cf803d7218ae3d0812ad92dd77641eec996f52cf368adfd",
+      "size": 91743
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "lmstudio-community/LFM2-350M-MLX-bf16",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "9131094577f8177f29ca2ecf0582f788065d4f87caf0aa8e1c71387ff11e11d9",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:20:38Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/lmstudio-community/LFM2-350M-MLX-bf16/resolve/c8ff2988e3f9a556db2f120996dda80e8f9743c8/"
+    }
+  ],
+  "upstream": {
+    "commit": "c8ff2988e3f9a556db2f120996dda80e8f9743c8",
+    "host": "huggingface.co",
+    "repo": "lmstudio-community/LFM2-350M-MLX-bf16",
+    "url": "https://huggingface.co/lmstudio-community/LFM2-350M-MLX-bf16/tree/c8ff2988e3f9a556db2f120996dda80e8f9743c8"
+  }
+}

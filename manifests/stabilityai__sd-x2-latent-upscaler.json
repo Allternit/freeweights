@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-15T00:25:27Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "e446eeff4c7b6fa37fdcd287fc72f1172e12c7d354de74ae9ab494e2d6f67005",
+      "size": 1532
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "94f0e71b342aec574d511b498d155e21f1be34768d75b152ebb498fe24397d8f",
+      "size": 7697
+    },
+    {
+      "lfs": true,
+      "path": "astronaut_1024.png",
+      "sha256": "13eed83062bceaf88c8bde6988b0359104ebfc326350c7b67a97176ff20f59a6",
+      "size": 1576713
+    },
+    {
+      "lfs": false,
+      "path": "astronaut_512.png",
+      "sha256": "6cfa17d6f29705958de7ab67b39673f03abd68c97de1064ed076b8752375a18c",
+      "size": 428858
+    },
+    {
+      "lfs": false,
+      "path": "model_index.json",
+      "sha256": "3679e8fce3dc96dec4edadb97e78f4932de2da9fa606f9eb7a1a4962f7321380",
+      "size": 408
+    },
+    {
+      "lfs": false,
+      "path": "scheduler/scheduler_config.json",
+      "sha256": "c2426e7c76a513c227a76fd51fd2e01c29e0ba1ea3fb03e7e6fd3b2aa2772bc3",
+      "size": 301
+    },
+    {
+      "lfs": false,
+      "path": "text_encoder/config.json",
+      "sha256": "dcd34181313a4171b8f7e27cc444bbb0466c8e93a272c9e2ceb5992a6c13faa3",
+      "size": 645
+    },
+    {
+      "lfs": true,
+      "path": "text_encoder/model.safetensors",
+      "sha256": "7b3a12df205cb3c74dd4eae4354d93f606ae6b3bc29d5d06fd97921cb9ad8a81",
+      "size": 492265879
+    },
+    {
+      "lfs": true,
+      "path": "text_encoder/pytorch_model.bin",
+      "sha256": "98124f3d5663b2f14ff08d4c29db93800622b4fcfa3d952bb6f9112f5d6dadd7",
+      "size": 492307041
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/merges.txt",
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+      "size": 524619
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/special_tokens_map.json",
+      "sha256": "c4864a9376a8401918425bed71fc14fc0e81f9b59ec45c1cf96cccb2df508eac",
+      "size": 472
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/tokenizer_config.json",
+      "sha256": "b563a0588e79659f9f631057a52f4237c2dbb595e76ad9410490bdd21947acbc",
+      "size": 831
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer/vocab.json",
+      "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349",
+      "size": 1059962
+    },
+    {
+      "lfs": false,
+      "path": "unet/config.json",
+      "sha256": "70a176bc64d3e7d25db5f4559b19d098b755911b919441df56ae467f2252f86c",
+      "size": 1230
+    },
+    {
+      "lfs": true,
+      "path": "unet/diffusion_pytorch_model.bin",
+      "sha256": "3b3cb6a12cfb382e72401ffd26a4a4acc700d1b41bea038509b5eb9e6fbfae7d",
+      "size": 1490494675
+    },
+    {
+      "lfs": true,
+      "path": "unet/diffusion_pytorch_model.safetensors",
+      "sha256": "373ac96d863d7c2acd2cbeca16b21c980235f2e5d4d9bfbaafa8c0d7f627e28f",
+      "size": 1490315270
+    },
+    {
+      "lfs": false,
+      "path": "vae/config.json",
+      "sha256": "5d9dad3343240b2a6c21289a26bebf17f102543a5ed340fcece6a10325b95c52",
+      "size": 653
+    },
+    {
+      "lfs": true,
+      "path": "vae/diffusion_pytorch_model.bin",
+      "sha256": "36bb8e1b54aba3a0914eb35fba13dcb107e9f18d379d1df2158732cd4bf56a94",
+      "size": 334711857
+    },
+    {
+      "lfs": true,
+      "path": "vae/diffusion_pytorch_model.safetensors",
+      "sha256": "a1d993488569e928462932c8c38a0760b874d166399b14414135bd9c42df5815",
+      "size": 334643276
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "stabilityai/sd-x2-latent-upscaler",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "94f0e71b342aec574d511b498d155e21f1be34768d75b152ebb498fe24397d8f",
+    "id": "LicenseRef-OpenRAIL++-M",
+    "name": "CreativeML Open RAIL++-M",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.image",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:25:27Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/stabilityai/sd-x2-latent-upscaler/resolve/416b1f2c11d0abe15a73e2f30c697c408dfdb2a9/"
+    }
+  ],
+  "upstream": {
+    "commit": "416b1f2c11d0abe15a73e2f30c697c408dfdb2a9",
+    "host": "huggingface.co",
+    "repo": "stabilityai/sd-x2-latent-upscaler",
+    "url": "https://huggingface.co/stabilityai/sd-x2-latent-upscaler/tree/416b1f2c11d0abe15a73e2f30c697c408dfdb2a9"
+  }
+}

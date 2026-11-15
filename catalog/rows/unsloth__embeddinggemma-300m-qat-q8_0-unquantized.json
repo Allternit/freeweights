@@ -1,0 +1,44 @@
+{
+  "abliterated": false,
+  "added_at": "2026-11-15T00:32:13Z",
+  "audit": {
+    "at": "2026-11-15T00:32:13Z",
+    "method": "tag"
+  },
+  "badges": [
+    "source"
+  ],
+  "base_model": "google/embeddinggemma-300m-qat-q8_0-unquantized",
+  "display_name": "embeddinggemma-300m-qat-q8_0-unquantized",
+  "family": "gemma",
+  "formats": [
+    "safetensors"
+  ],
+  "id": "unsloth/embeddinggemma-300m-qat-q8_0-unquantized",
+  "kind": "model",
+  "license_class": "gated",
+  "license_id": "LicenseRef-Gemma",
+  "license_url": "https://huggingface.co/unsloth/embeddinggemma-300m-qat-q8_0-unquantized",
+  "link_reason": "gated",
+  "note": "Gated at the source: listed as a link only, and no copy is hosted. Accept the license on the model page at the source, then download from there.",
+  "params": 302863104,
+  "redistribution": "click-through",
+  "relation": {
+    "parent": "google/embeddinggemma-300m-qat-q8_0-unquantized",
+    "type": "finetune"
+  },
+  "requires_terms": true,
+  "section": "alt.freeweights.gemma",
+  "signals": {
+    "downloads_30d": 1013,
+    "likes": 1,
+    "trending": null
+  },
+  "tasks": [
+    "sentence-similarity"
+  ],
+  "tier": "T2",
+  "total_size": 1269612710,
+  "upstream_url": "https://huggingface.co/unsloth/embeddinggemma-300m-qat-q8_0-unquantized",
+  "what_changed": null
+}

@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-11-15T00:25:16Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size": 1519
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "13d263e688f0a7f096b41512315ddaa76313c55f6078b6268ba7b1920a350363",
+      "size": 916
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "ea586a0de2a01b13b95a5a01329b63a787a175c8e6ef44c9180aa3c8282dfd14",
+      "size": 943
+    },
+    {
+      "lfs": false,
+      "path": "merges.txt",
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "size": 456318
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model.onnx",
+      "sha256": "ba4bede6ac1141190beb778d491266cdea636aef181ea54a5879095f5e3a9cea",
+      "size": 498912894
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_bnb4.onnx",
+      "sha256": "38ecbac243fa2234b3f8fd9863af53471f4a0881ddc989073b8a84cc63add2d5",
+      "size": 206961216
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "0f20363b35e4dbefaae997f13e462f0c14872ce68cf6d31b6914e44f3e660d4c",
+      "size": 249618877
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_int8.onnx",
+      "sha256": "d8e1d641b4ea3f9d4d156e336c33b228f332ed8840b663af3d2476ff770693e8",
+      "size": 125855418
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "346a1b6ed5930f150382ae67b71ec1502add4b6cf1e81dfb158d64df610a9b53",
+      "size": 212269104
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "0bd6e777cd09493988011f6190039cb1e16a211c83865e10c16e74cebe6903d2",
+      "size": 127536080
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "d8e1d641b4ea3f9d4d156e336c33b228f332ed8840b663af3d2476ff770693e8",
+      "size": 125855418
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_uint8.onnx",
+      "sha256": "b64ffe291bc3d9f19e04e4aae4347372c646fe6695fd0162af7c072082cf1323",
+      "size": 125855418
+    },
+    {
+      "lfs": false,
+      "path": "quantize_config.json",
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "size": 310
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "f23c8e6099631c233c16d9bf8dab198f610826cdd1b358f270f6d55c1863e857",
+      "size": 958
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer.json",
+      "sha256": "727009a8214ddfa5af1deedf1006d4d06e8e51e54aa5f03566263d4e19bfcdce",
+      "size": 3558643
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4ea8648e4067230942ac6b32dd61328675bc99ae0a9f4cc665c30a95f0f68712",
+      "size": 1246
+    },
+    {
+      "lfs": false,
+      "path": "vocab.json",
+      "sha256": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e",
+      "size": 798293
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/roberta_toxicity_classifier-ONNX",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "13d263e688f0a7f096b41512315ddaa76313c55f6078b6268ba7b1920a350363",
+    "id": "LicenseRef-OpenRAIL++-M",
+    "name": "CreativeML Open RAIL++-M",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.vision",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:25:16Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/roberta_toxicity_classifier-ONNX/resolve/4fc2487e1a2092f3067c4021927239c0e19648e6/"
+    }
+  ],
+  "upstream": {
+    "commit": "4fc2487e1a2092f3067c4021927239c0e19648e6",
+    "host": "huggingface.co",
+    "repo": "onnx-community/roberta_toxicity_classifier-ONNX",
+    "url": "https://huggingface.co/onnx-community/roberta_toxicity_classifier-ONNX/tree/4fc2487e1a2092f3067c4021927239c0e19648e6"
+  }
+}

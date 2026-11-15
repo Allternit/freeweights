@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-11-15T00:17:55Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "54cb488a930568267b31b26b4db6fa74955fdd2962d8c90f1488ea435dec7b39",
+      "size": 1752
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "d1288c22071d3a9c2016be88d555867752c4b98d17b7a880cca54392c8bae942",
+      "size": 97
+    },
+    {
+      "lfs": true,
+      "path": "NVIDIA-Nemotron-3.5-Bolt-E4B-BF16.gguf",
+      "sha256": "feb0bd02c4c1a937160dbf3ae59f1797582e35529f55ddc5ef8195e2ab1b81e8",
+      "size": 15053100032
+    },
+    {
+      "lfs": true,
+      "path": "NVIDIA-Nemotron-3.5-Bolt-E4B-Q8_0.gguf",
+      "sha256": "64504effb9a71a991e487ac4e4cf827485e78bf577efb0a6edf67ce7e1ba84a8",
+      "size": 8031245312
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "df53db9253bb6846b0093aa0d93a65974006e9d0b4d1a2787e0ea99d04d4729c",
+      "size": 539
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "01d8f1aa85faa082803d5ef5650bab02944c24bd40d712e662273ec9a9b7d359",
+      "size": 234858
+    },
+    {
+      "lfs": true,
+      "path": "dflash-NVIDIA-Nemotron-3.5-Bolt-E4B-NVFP4.gguf",
+      "sha256": "e3f09877607e6ade6fd6b9b4ceb2f7b36d6b440da01ff8e8ddc311992ef02118",
+      "size": 596162976
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "df53db9253bb6846b0093aa0d93a65974006e9d0b4d1a2787e0ea99d04d4729c",
+    "id": "OpenMDW-1.1",
+    "name": "OpenMDW-1.1",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.nemotron",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:17:55Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF/resolve/97f1ffa12ee2af5e1e7804a65ea4c777493dfa4c/"
+    }
+  ],
+  "upstream": {
+    "commit": "97f1ffa12ee2af5e1e7804a65ea4c777493dfa4c",
+    "host": "huggingface.co",
+    "repo": "ggml-org/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+    "url": "https://huggingface.co/ggml-org/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF/tree/97f1ffa12ee2af5e1e7804a65ea4c777493dfa4c"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-11-15T00:17:47Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "e2ff822e8cbf38564c8a4ea9fd5ecc05bec734b1777101b35c2e92c843d3012a",
+      "size": 1830
+    },
+    {
+      "lfs": false,
+      "path": ".src_sha",
+      "sha256": "1459e468f49c28a2ca0658f9c72ab73a805c0c213786688b9ed1220f3529abba",
+      "size": 49
+    },
+    {
+      "lfs": true,
+      "path": "LFM3-Omni-2B-BF16.gguf",
+      "sha256": "dd504610f4fcddd44a62f70fed99d842d28a88ce81fb0acda09fca56397a4eaf",
+      "size": 3466628576
+    },
+    {
+      "lfs": true,
+      "path": "LFM3-Omni-2B-Q4_K_M.gguf",
+      "sha256": "cc0879a5ae593a84ea4681535feb30377f1c867f8feda77b3b5b68b7881dea06",
+      "size": 1099630048
+    },
+    {
+      "lfs": true,
+      "path": "LFM3-Omni-2B-Q8_0.gguf",
+      "sha256": "40d27b13e500963468f1fd1099863464a4a5e8f4682e934f9be8b54641b8c0c7",
+      "size": 1846240736
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "423beaf7be3843483899044f2a87db9f0e306c1880fa85b8f5a87cf64c1ba18f",
+      "size": 944
+    },
+    {
+      "lfs": false,
+      "path": "convert.log",
+      "sha256": "057c1a689b045cf130cef2ccf13199c2a34b9ef04bbdd6f96b102da6abf5f3f2",
+      "size": 230109
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-LFM3-Omni-2B-BF16.gguf",
+      "sha256": "3e991800f8357d645f3c9aef6054df5df5237f1b88ea656a5b5b3c91418f8409",
+      "size": 949841152
+    },
+    {
+      "lfs": true,
+      "path": "mmproj-LFM3-Omni-2B-Q8_0.gguf",
+      "sha256": "279fb3110acc6c20876016f92487006d95507fccb0699b0ef22ae19cc417c79e",
+      "size": 506842432
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "ggml-org/LFM3-Omni-2B-GGUF",
+  "license": {
+    "file_path": "README.md",
+    "file_sha256": "423beaf7be3843483899044f2a87db9f0e306c1880fa85b8f5a87cf64c1ba18f",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:17:47Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/ggml-org/LFM3-Omni-2B-GGUF/resolve/0b6888cd0b7ac8962cb8b125f0bf087c3178de5f/"
+    }
+  ],
+  "upstream": {
+    "commit": "0b6888cd0b7ac8962cb8b125f0bf087c3178de5f",
+    "host": "huggingface.co",
+    "repo": "ggml-org/LFM3-Omni-2B-GGUF",
+    "url": "https://huggingface.co/ggml-org/LFM3-Omni-2B-GGUF/tree/0b6888cd0b7ac8962cb8b125f0bf087c3178de5f"
+  }
+}

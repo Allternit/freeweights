@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-11-15T00:22:51Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "32af4677d309ef447fbfb7876f0601b74533f9c1eb9e08835fd19bc40ad1e57e",
+      "size": 1955
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c",
+      "size": 10574
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "68253bf9dc136e03197fe700a2e59da935fe3d20cd3de8b56f87a75b903d42c9",
+      "size": 47751
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "f45005c50cd2a97329722bf3a2dee9f16c04cdf825a589b280fb7e99e6827818",
+      "size": 12129
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "beb7c0a3e61147e15b50151728b8dc15b994c46a3cd524264b98b1485b1acf9c",
+      "size": 1549
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "422ed8749f8849f763ffe836a709a2c58e1adcf3d32dfa4da48b3959e87ecce9",
+      "size": 241
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx",
+      "sha256": "dad1fce72012126fd4cca922a7054bae8655d88e880ef10de202be855219d388",
+      "size": 242191
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data",
+      "sha256": "5c7c953ed39add216b943cdab4474668877740c49ff1357dd22c1766a974da6f",
+      "size": 2066415616
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_fp16.onnx_data_1",
+      "sha256": "c26f50b382c564847fb460d998c27a0cd89597c0be7fc00659f01a8bc9a67fcb",
+      "size": 1491845120
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx",
+      "sha256": "25d392070c56dbf33da1d4546542e3e6e232d462be670ac5ad9a1189fcf14f93",
+      "size": 301147
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4.onnx_data",
+      "sha256": "71d16f55618638fe7f90658a0040b25cb1faa190b12f85f36f2353df9480aee8",
+      "size": 1297248256
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx",
+      "sha256": "ef4f1e8b5e1af2e1a64230c71a344954fa047db7f3d718437908030817a0ee73",
+      "size": 296714
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_q4f16.onnx_data",
+      "sha256": "7a83bb217011b85cdab7f0d42806f32b86dc4365201fd5a68bffa5b41f40cce7",
+      "size": 1087789056
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx",
+      "sha256": "c292a0e5300c3934b328d2595ad350229c849e46468793003b40700a40216a33",
+      "size": 304729
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx_data",
+      "sha256": "f09ef8e86f40b60e3e71221666df8fceb4fbf505d8526116d18c8e4a93d3d4ea",
+      "size": 2084417536
+    },
+    {
+      "lfs": true,
+      "path": "onnx/model_quantized.onnx_data_1",
+      "sha256": "959f41e077de85ae6e29467a33e13b49b30871b553d6f8b051f3a78182d2392a",
+      "size": 91160576
+    },
+    {
+      "lfs": false,
+      "path": "special_tokens_map.json",
+      "sha256": "7946f864cbfb62a1b041bda937244210a1a87f4a6cab3a48b791131b2cd57f88",
+      "size": 92
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "7e226e34bface23ccf6e495d157bf77186c1c30a7659880e1a8994db528c3701",
+      "size": 17908635
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "4e1748d03b2162c6cf5d53b13cd0cf01aae0c98d47a8b99bfb737d7fdc3d1d05",
+      "size": 14262
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/LFM3-1.7B-ONNX",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.lfm",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:22:51Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/LFM3-1.7B-ONNX/resolve/ab9fec4c681a25bec3b48b0b97a62fc2660a2985/"
+    }
+  ],
+  "upstream": {
+    "commit": "ab9fec4c681a25bec3b48b0b97a62fc2660a2985",
+    "host": "huggingface.co",
+    "repo": "onnx-community/LFM3-1.7B-ONNX",
+    "url": "https://huggingface.co/onnx-community/LFM3-1.7B-ONNX/tree/ab9fec4c681a25bec3b48b0b97a62fc2660a2985"
+  }
+}

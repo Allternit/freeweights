@@ -1,0 +1,276 @@
+{
+  "created_at": "2026-11-15T00:25:03Z",
+  "files": [
+    {
+      "lfs": false,
+      "path": ".gitattributes",
+      "sha256": "1d52edeb90f4c536f42267712842067025ec31bfc832acca357176ffd9094089",
+      "size": 2456
+    },
+    {
+      "lfs": false,
+      "path": "LICENSE",
+      "sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c",
+      "size": 10574
+    },
+    {
+      "lfs": false,
+      "path": "README.md",
+      "sha256": "f1748a90bcc96361f602cc9b352b9b3e8ae7c26d2d3e553f77372d4601b4b3c5",
+      "size": 4500
+    },
+    {
+      "lfs": false,
+      "path": "chat_template.jinja",
+      "sha256": "86f4770449a4797c9b4212d110b0cc70fb993c1ce960095bcfb12eea22f61cca",
+      "size": 5436
+    },
+    {
+      "lfs": false,
+      "path": "config.json",
+      "sha256": "a1d726e2896677da89b46b3438dbc7339a8dcb771b257cf0da31002a273fce19",
+      "size": 3272
+    },
+    {
+      "lfs": false,
+      "path": "conversion/build.py",
+      "sha256": "5d5e88ea2111a24102047a54124eefcaa42bc0c19278d3ecb4428003095fd8f3",
+      "size": 5370
+    },
+    {
+      "lfs": false,
+      "path": "conversion/cases.py",
+      "sha256": "8bce8c8fcad461a3d5e35b6c997817c32841aa582918f49e63f11ba3627f1646",
+      "size": 1877
+    },
+    {
+      "lfs": false,
+      "path": "conversion/make_repo.py",
+      "sha256": "ca08d0127d6f847c733346fdbc337863e2fac47da7dcac3219a687c970546c42",
+      "size": 1896
+    },
+    {
+      "lfs": false,
+      "path": "conversion/mapping.py",
+      "sha256": "e30775595edf6ab4d4dc35e6843859b8471642d2a7e0bbfb0087e5b8fcc3ad3b",
+      "size": 3289
+    },
+    {
+      "lfs": false,
+      "path": "conversion/onnx_check.py",
+      "sha256": "8100f9a2c3febb5decd0f16feb2bb8cf5f6d459ea7b29ea33f166c53df5aa4fd",
+      "size": 1982
+    },
+    {
+      "lfs": false,
+      "path": "conversion/quantize.py",
+      "sha256": "c8b93cbbaeb2188877e700d5a2331a5759e78ff77f119d6eb19d1c399c8d59a2",
+      "size": 1291
+    },
+    {
+      "lfs": false,
+      "path": "conversion/rechunk.py",
+      "sha256": "cbfc74fb6955bb2f48a6daa352ccc2839a4368eee74413c2c2b158417e9e9e99",
+      "size": 1180
+    },
+    {
+      "lfs": false,
+      "path": "conversion/reference.py",
+      "sha256": "bb7948abff3f4e762357311203277544968bf0cbbe9420eec768a3fafb23740b",
+      "size": 787
+    },
+    {
+      "lfs": false,
+      "path": "conversion/vision_cases.py",
+      "sha256": "7d418cae4cd771975d56ff57c5913da49aca99b49fccdfadd954b30c6b7e8205",
+      "size": 609
+    },
+    {
+      "lfs": false,
+      "path": "conversion/vision_onnx_check.py",
+      "sha256": "74f4b18796c14830bd51008baed1bbeb90a94e39a1fa6f2cdb21c7bb1d518943",
+      "size": 2202
+    },
+    {
+      "lfs": false,
+      "path": "conversion/vision_reference.py",
+      "sha256": "a030f3b73da8e9857be93903936d5c0297a4786d22d679963c8dc6b3aad59bf8",
+      "size": 1003
+    },
+    {
+      "lfs": false,
+      "path": "generation_config.json",
+      "sha256": "e78ebc863fdfa96c34085cc75ad00e5b0e3119c1771f49b8fa093910253bfb4a",
+      "size": 234
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4.onnx",
+      "sha256": "d935547f5bec6b801b512df84df69829a328d31ea4cc20b2370a1d0f8033b087",
+      "size": 344781
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4.onnx_data",
+      "sha256": "5c44e4c9814e27328eee73aafb4749519f286491a318474202fb4bc3a0b5be52",
+      "size": 1071915008
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_q4.onnx_data_1",
+      "sha256": "c5c1ba293850d14df6876745b697dd727d246108861cd1a7f8fa87c4f27d249f",
+      "size": 689618944
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx",
+      "sha256": "3ee9955a83298046e44a82e2a79d75542d58ba455c89e35d7aaf0db84f2a2f03",
+      "size": 349273
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx_data",
+      "sha256": "2ecab43ec0884f94881816069f644c8f3222af10183c744e17b82efa880a8349",
+      "size": 1065574400
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx_data_1",
+      "sha256": "932c3350c5e7ff55fedbf8ec68692f6b2c45b8be9c85da88e850fd67c299023b",
+      "size": 1073184768
+    },
+    {
+      "lfs": true,
+      "path": "onnx/decoder_model_merged_quantized.onnx_data_2",
+      "sha256": "cefcbe9592902114e5792eb5bf019ab826a415e4b8ba390bcf77102253063e64",
+      "size": 1013383168
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens.onnx",
+      "sha256": "81d58c9018e6e89c7e6ad0c23dd8ccc3508face7d3e3e9c6a30b5abf2e014872",
+      "size": 317
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens.onnx_data",
+      "sha256": "6756d304e5c712de2b0288851e2c7ed66cbed937333bf4820ba24dcf343bb8db",
+      "size": 1048576000
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4.onnx",
+      "sha256": "a624403753813de95adc6b6e58356722ff641a75530bed89e919be6f0952e2f4",
+      "size": 727
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_q4.onnx_data",
+      "sha256": "731c4d782dd7858122701228266a9e6217a68ece9131e4a5d110b4913891911c",
+      "size": 167936000
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_quantized.onnx",
+      "sha256": "d76ee81f6b9a9af3b4f74adca83e7e29d384fb030ae697d6febd81afa8f48241",
+      "size": 749
+    },
+    {
+      "lfs": true,
+      "path": "onnx/embed_tokens_quantized.onnx_data",
+      "sha256": "731c4d782dd7858122701228266a9e6217a68ece9131e4a5d110b4913891911c",
+      "size": 167936000
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder.onnx",
+      "sha256": "80e2bed5039acea74db4ec2f72e94c79349005dc7988e766dca1d4be92d1185d",
+      "size": 244445
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder.onnx_data",
+      "sha256": "8043318ecc8a6fc6f88fe2407a673d7f59574df99acd2faac3338a1665213efc",
+      "size": 1062280000
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder.onnx_data_1",
+      "sha256": "ef9db5ff69d36e8725091165c4c1aac7dee5f6b2ed4528f7cd9ed3c01068df51",
+      "size": 642861184
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_q4.onnx",
+      "sha256": "2801fa4c998cda7cd3ef948599538c7001d17344384f1d9455a7f6c34cf603a2",
+      "size": 322239
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_q4.onnx_data",
+      "sha256": "309371ad14294c731f18dd04043e0ea47c7a3a8e0ccee8680a37a2e8992a6699",
+      "size": 275770272
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_quantized.onnx",
+      "sha256": "5289cdf021928d36665d281fac091d113696390e9955d529ddbfc6f38f40fc68",
+      "size": 328038
+    },
+    {
+      "lfs": true,
+      "path": "onnx/vision_encoder_quantized.onnx_data",
+      "sha256": "d16d02129887cba07df1db83c299c23b61ce9aafd5585bd11e5279c52c774bb9",
+      "size": 495454464
+    },
+    {
+      "lfs": false,
+      "path": "preprocessor_config.json",
+      "sha256": "ab2195993036c7c8b2cac03adb2b0b228e8518f33a5bdd6c848673b89c65fcf7",
+      "size": 728
+    },
+    {
+      "lfs": false,
+      "path": "processor_config.json",
+      "sha256": "b9b82ad34a69e2f70a9033741e11f82b8a98bb5f8e6c13b3b2d5efdd3935d916",
+      "size": 824
+    },
+    {
+      "lfs": true,
+      "path": "tokenizer.json",
+      "sha256": "8096ecb9f54599d756c8de728a598a340bc1e43c0deb77ddd62456c38349fcee",
+      "size": 17905750
+    },
+    {
+      "lfs": false,
+      "path": "tokenizer_config.json",
+      "sha256": "ec6042fa2297a7876bbef462ca30cab716c885c1f6080e737be482436d0d8814",
+      "size": 6237
+    }
+  ],
+  "generator": "freeweights-manifest/0.1.0",
+  "id": "onnx-community/d1-3B-ONNX",
+  "license": {
+    "file_path": "LICENSE",
+    "file_sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c",
+    "id": "LicenseRef-LFM-1.0",
+    "name": "LFM Open License v1.0",
+    "redistribution": "click-through"
+  },
+  "schema_version": 0,
+  "section": "alt.freeweights.text",
+  "sources": [
+    {
+      "last_checked": "2026-11-15T00:25:03Z",
+      "priority": 100,
+      "type": "source",
+      "url": "https://huggingface.co/onnx-community/d1-3B-ONNX/resolve/03619d8ef1abc297947473bcedc99838a59bab39/"
+    }
+  ],
+  "upstream": {
+    "commit": "03619d8ef1abc297947473bcedc99838a59bab39",
+    "host": "huggingface.co",
+    "repo": "onnx-community/d1-3B-ONNX",
+    "url": "https://huggingface.co/onnx-community/d1-3B-ONNX/tree/03619d8ef1abc297947473bcedc99838a59bab39"
+  }
+}
