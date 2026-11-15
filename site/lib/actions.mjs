@@ -12,7 +12,16 @@ export const COMPUTE_URL = 'https://compute.allternit.com/';
 export const SERVICES_URL = 'https://services.allternit.com/';
 // "Run at home" shows for hosted rows that fit this many bytes (the biggest Compute box).
 export const COMPUTE_MAX_BYTES = 96 * 1e9;
-const STUDIO_TASKS = /^(text-generation|image-text-to-text|text2text-generation|feature-extraction|sentence-similarity|text-classification|token-classification|fill-mask|question-answering|summarization|translation|conversational)$/;
+// "Fine-tune in Studio" only where Studio can fine-tune: the same test as allternit-ai
+// src/lib/model-lab/studio-jobs.ts isTrainableBase (its trainers fine-tune causal language models from a
+// redistributable safetensors base, not a GGUF/MLX repo or a quant). Change both together.
+export function studioTrainable(r) {
+  if (!r || r.kind !== 'model' || !r.manifest_url || r.redistribution === 'no') return false;
+  const f = r.formats || [];
+  if (!f.includes('safetensors') || f.some((x) => x === 'mlx' || x === 'gguf')) return false;
+  if (r.relation && r.relation.type === 'quant') return false;
+  return (r.tasks || []).includes('text-generation');
+}
 
 // Does the model fit a Compute box? Order: overlay device.quants (catalog/overlay/device.json, may be absent):
 // yes when the memory any quant needs (ram_est, else the C1 rule in scripts/build_device_overlay.mjs needOf)
@@ -42,7 +51,7 @@ export function actionsFor(r) {
   return {
     cloud: hosted && cloud ? cloud : null,
     chat: hosted && cloud ? chatUrl(cloud) : null,
-    studio: hosted && (r.tasks || []).some((t) => STUDIO_TASKS.test(t)) ? studioUrl(r) : null,
+    studio: hosted && studioTrainable(r) ? studioUrl(r) : null,
     home: hosted && fitsCompute(r) ? COMPUTE_URL : null,
     help: SERVICES_URL,
   };
