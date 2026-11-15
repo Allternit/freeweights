@@ -352,7 +352,8 @@ def cloud_for(row, remote, overlay=None):
     (--overlay, or catalog/overlay/cloud.json in a checkout); when installed it asks the hub API."""
     path = overlay or (None if remote or not LOCAL else os.path.join(ROOT, "catalog", "overlay", "cloud.json"))
     if path:
-        try: return json.load(open(path, encoding="utf-8")).get(row["id"])
+        try:
+            with open(path, encoding="utf-8") as f: return json.load(f).get(row["id"])
         except (OSError, ValueError): return None
     try: return api_get(f"/api/models/{row['id']}").get("allternit")
     except (urllib.error.URLError, OSError, ValueError): return None
