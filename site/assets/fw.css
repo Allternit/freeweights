@@ -799,12 +799,33 @@ a.rc-subj:hover{text-decoration:underline;text-underline-offset:2px}
 .id-size.mid b{font-size:26px;letter-spacing:-.03em}
 .id-size.long b{font-size:19px;letter-spacing:-.02em}
 .ff-r.wide{grid-column:1/-1}
-.runs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}
-.runs-l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-right:2px}
-.runs-l:not(:first-child){margin-left:10px}
-.tchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:3px 10px 3px 4px;font-size:12.5px;color:var(--ink);text-decoration:none;background:var(--bg)}
-.tchip:not(:has(img)){padding-left:10px}
-a.tchip:hover{background:var(--fill)}
+.ww{margin-top:14px}
+.ww-h{font-size:15px;font-weight:600;margin:0 0 8px}
+.ww-tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none;max-width:100%}
+.ww-tabs::-webkit-scrollbar{display:none}
+.ww-tab{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px}
+.ww-tab:hover{color:var(--ink)}
+.ww-tab[aria-selected=true]{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
+.ww-c{font-size:11.5px;font-weight:500;color:var(--ink2);background:var(--fill);border-radius:999px;padding:1px 7px}
+.ww-panel{padding-top:12px;min-width:0}
+.js .ww-panel[data-off]{display:none}
+.js .ww-ph{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+html:not(.js) .ww-panel+.ww-panel{margin-top:10px;border-top:1px solid var(--line)}
+.ww-ph{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);font-weight:500;margin:0 0 8px}
+.ww-note{font-size:12.5px;color:var(--ink3);margin:0 0 10px}
+.ww-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:8px}
+.ww-more{margin-top:8px}
+.ww-more>.ww-grid{margin-top:8px}
+.ww-more summary{display:inline-flex;align-items:center;cursor:pointer;font-size:13px;font-weight:500;color:var(--ink);border:1px solid var(--line2);border-radius:8px;padding:6px 12px;list-style:none;background:var(--bg)}
+.ww-more summary::-webkit-details-marker{display:none}
+.ww-more summary:hover{background:var(--fill)}
+.ww-more[open] summary{display:none}
+.wt{display:flex;align-items:center;gap:10px;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--fill);color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:500;min-width:0}
+.wt:hover{background:var(--fill2)}
+.wt .org{flex:none;border-radius:5px}
+.wt-m{flex:none;width:20px;height:20px;border-radius:5px;background:var(--fill2);display:grid;place-items:center;font-size:9px;font-weight:600;color:var(--ink2)}
+.wt-n{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:600px){.ww-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wt{padding:8px 10px;gap:8px}}
 .runs-list{margin-top:4px}
 
 /* Docs tables: a field-name column never clips. The column fits its longest name, code in it never

@@ -38,6 +38,25 @@
   var cur = $('.chips [aria-current]');
   if (cur && cur.parentNode.scrollWidth > cur.parentNode.clientWidth) cur.parentNode.scrollLeft = cur.offsetLeft - cur.parentNode.offsetLeft - 16;
 
+  // Works with: tabs by job. Anchors stay as the no-JS fallback; with JS only the selected panel shows. No hash writes.
+  $$('[data-ww]').forEach(function (box) {
+    var wt = $$('.ww-tab', box);
+    var show = function (n, focus) {
+      wt.forEach(function (t, i) {
+        var on = i === n; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+        var p = document.getElementById(t.getAttribute('aria-controls')); if (p) { if (on) p.removeAttribute('data-off'); else p.setAttribute('data-off', ''); }
+        if (on && focus) { t.focus(); t.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }
+      });
+    };
+    wt.forEach(function (t, i) {
+      t.addEventListener('click', function (e) { e.preventDefault(); show(i); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key; if (k !== 'ArrowRight' && k !== 'ArrowLeft' && k !== 'Home' && k !== 'End') return; e.preventDefault();
+        show(k === 'Home' ? 0 : k === 'End' ? wt.length - 1 : (i + (k === 'ArrowRight' ? 1 : wt.length - 1)) % wt.length, true);
+      });
+    });
+  });
+
   // Model page tabs: anchors with role=tab; the hash picks the tab (#files, #use, ...)
   var tabList = $('[data-tabs]');
   if (tabList) {

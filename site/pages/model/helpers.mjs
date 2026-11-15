@@ -46,8 +46,20 @@ export function variantsHtml(r) {
 <p class="sub" style="margin:6px 0 10px">${plural(vs.length, 'quantized or adapter build')} of ${esc(r.name)}. Each has its own license check and page.</p>
 <div class="view-list variants"><div class="list-h"><span>Subject</span><span class="r">Size</span><span class="r">Params</span><span>License</span><span>Date</span></div>${shown.map((v) => listRow(v, false)).join('')}</div></div>`;
 }
+// "Works with" section: one tab per job. Order and labels live here, in one place.
+const WW_TABS = [['runs', 'Run'], ['trains', 'Fine-tune'], ['converts', 'Convert'], ['evals', 'Evaluate'], ['scans', 'Scan'], ['uses', 'Apps']];
+const WW_CAP = 12;
+// Fit first: a tool gated on this model's own format/task (works_with.match, or formats + tasks both matched) outranks a
+// tool that only needs one of them; ties go to GitHub stars. Nothing here widens what toolFits already allows.
+const wwFit = (tr) => { const w = tr.tool.works_with || {}; return w.match ? 3 : w.formats && w.tasks ? 2 : 1; };
+const wwStars = (tr) => (tr.tool.github && tr.tool.github.stars) || 0;
+const wwSort = (a, b) => wwFit(b) - wwFit(a) || wwStars(b) - wwStars(a) || a.name.localeCompare(b.name);
 export function runsWithHtml(r) {
   const tools = runsWith(r); if (!tools.length) return '';
-  const groups = Object.keys(TOOL_ROLE).filter((k) => k !== 'gets').map((k) => [k, tools.filter((t) => t.tool.works_with.role === k)]).filter(([, g]) => g.length);
-  return `<div class="runs">${groups.map(([k, g]) => `<span class="runs-l">${TOOL_ROLE[k][0]}</span>${g.map(toolChip).join('')}`).join('')}</div>`;
+  const tabs = WW_TABS.map(([k, label]) => [k, label, tools.filter((t) => t.tool.works_with.role === k).sort(wwSort)]).filter(([, , g]) => g.length);
+  const fmt = (r.formats || []).join(', ');
+  const tile = (tr) => { const lg = LOGO_OWNER(tr); return `<a class="wt" href="${modelUrl(tr)}">${lg ? `<img class="org" src="${lg}" alt="" width="20" height="20" loading="lazy" decoding="async">` : `<span class="wt-m" aria-hidden="true">${esc(tr.mono)}</span>`}<span class="wt-n">${esc(tr.name)}</span></a>`; };
+  return `<section class="ww" aria-labelledby="ww-h" data-ww><h2 class="ww-h" id="ww-h">Works with</h2>
+<div class="ww-tabs" role="tablist" aria-label="Works with">${tabs.map(([k, label, g], i) => `<a class="ww-tab" role="tab" href="#ww-${k}" id="ww-t-${k}" aria-controls="ww-${k}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">${label}<span class="ww-c">${g.length}</span></a>`).join('')}</div>
+${tabs.map(([k, label, g], i) => `<div class="ww-panel" role="tabpanel" id="ww-${k}" aria-labelledby="ww-t-${k}"${i ? ' data-off' : ''}><h3 class="ww-ph">${TOOL_ROLE[k][0]}</h3>${k === 'runs' && fmt ? `<p class="ww-note">Ranked by fit to this model (${esc(fmt)}), then by GitHub stars.</p>` : ''}<div class="ww-grid">${g.slice(0, WW_CAP).map(tile).join('')}</div>${g.length > WW_CAP ? `<details class="ww-more"><summary>Show all ${g.length}</summary><div class="ww-grid">${g.slice(WW_CAP).map(tile).join('')}</div></details>` : ''}</div>`).join('')}</section>`;
 }
