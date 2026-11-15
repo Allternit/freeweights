@@ -1,12 +1,13 @@
 ---
 title: Takedowns and snapshots
 nav_label: Takedowns
-summary: How to report an item, what happens when we remove one (451, blocklist, counter, signed record), and how to check the signed catalog snapshots.
+summary: How to report an item, what happens when we remove one (404 or 451, blocklist, counter, signed record), and how to check the signed catalog snapshots.
 group: Policy
 order: 7.8
 updated: 2026-11-15
 sections:
   - {id: report, title: Report an item}
+  - {id: uploads, title: Community uploads}
   - {id: what-happens, title: What a removal does}
   - {id: what-you-see, title: What clients see}
   - {id: record, title: The public record}
@@ -24,11 +25,15 @@ Every removal is public. It is counted, and it is written to a signed record. Th
 
 You get an acknowledgement. We decide within 72 hours. Malware and child sexual abuse material are handled at once.
 
+## Community uploads {#uploads}
+
+Repos that members upload follow the upload rules (`policy/community-rules.md` in the repository). Every file is scanned before anyone can download it. If a scan fails, the file is held and the owner sees the reason code. To report a community repo, use the addresses above and give its name (`handle/name`). We decide within 72 hours. A removal on a community repo works the same way as any other, with the two replies in the next section. Owners may appeal in writing within 30 days.
+
 ## What a removal does {#what-happens}
 
 One command does all of it, in this order:
 
-1. **The entry stops at once.** The API, the download redirect, the manifest and the detail page answer 451 within a minute. No redeploy is needed.
+1. **The entry stops at once.** The API and the download redirect answer 451 within a minute. The manifest and the detail page are served from storage with no Worker in the path, so for those the stored copy is deleted and the cache purged, and they answer 404 within five minutes. No redeploy is needed.
 2. **Its weights are blocklisted.** The sha256 of each weight file goes on a blocklist. The catalog build refuses any repo with one of those files, so the same weights uploaded under another name are not listed.
 3. **It leaves the catalog.** Its row and its manifest are removed from the next build.
 4. **The counter goes up.** The takedown counter on the Operating Statement page shows every removal by reason class.
@@ -44,11 +49,11 @@ The record holds no names, no addresses and no text from the report.
 | --- | --- |
 | `GET` or `HEAD /{org}/{repo}/resolve/{rev}/{path}` | 451, code `removed_after_takedown` |
 | `GET /api/models/{org}/{repo}` and `/tree/{rev}` | 451, code `removed_after_takedown` |
-| `GET /manifests/{org}/{repo}.json` and `.json.minisig` | 451, code `removed_after_takedown` |
-| The detail page | 451, a short page that links to the counter |
+| `GET /manifests/{org}/{repo}.json` and `.json.minisig` | 404 (served from storage; the object is deleted) |
+| The detail page | 404 (served from storage; the object is deleted) |
 | `GET /api/models` (search) | The entry is not listed |
 
-A 451 reply is never cached (`Cache-Control: no-store`), so a restore after a counter-notice or an appeal shows at once.
+A 451 reply is never cached (`Cache-Control: no-store`), so a restore after a counter-notice or an appeal shows on the API at once. Restored pages and manifests come back with the next publish and cache expiry (five minutes). A download link that was issued before the removal lasts at most five minutes.
 
 ## The public record {#record}
 

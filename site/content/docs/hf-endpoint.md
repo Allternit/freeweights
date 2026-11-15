@@ -43,10 +43,10 @@ We tested against the Stage 0 Worker on 2026-11-14 with BAAI/bge-small-en-v1.5, 
 - **Bytes come from the source.** At Stage 0 the resolve route redirects to the publisher at the pinned commit. Hugging Face still serves the bytes for From source models.
 - **HEAD on a file answers from the manifest.** It does not redirect, because a redirect made Xet clients follow it to Hugging Face and fail.
 - **Xet:** the Worker sends no Xet headers, so clients use plain HTTP. The read-token route passes the public token request through for clients that ask.
-- **Write operations are not supported.** No uploads, no likes, no repo creation. Uploads open at Stage 2.
+- **Uploads are supported with limits.** Repo creation, preupload, the LFS batch path and commits work for public model and dataset repos under your own handle, with `HF_HUB_DISABLE_XET=1`. Likes, pull requests, discussions, private repos and Xet answer a clear error. See the Uploads guide.
 - **Only listed models.** Anything else answers 404. A removed model answers 451. A model with no live source answers 404 `model_wanted`.
 - **Probes:** `/api/agent-harnesses` returns 404. Clients tolerate this.
 
 ## Tokens {#tokens}
 
-A request that carries a Hugging Face token (an `hf_` prefix) in any header or query is refused with 401 `hf_token_rejected`. We never log, store or forward it. Public reads need no token. Later stages add `alt_` tokens for accounts.
+A request that carries a Hugging Face token (an `hf_` prefix) in any header or query is refused with 401 `hf_token_rejected`. We never log, store or forward it. Public reads need no token. Writes use an `alt_` key from `platform.allternit.com/api-keys` (scope `freeweights.write`), sent as the Hugging Face token. See the Uploads guide.

@@ -19,9 +19,9 @@ The full contract is `spec/hub-api.yaml` (OpenAPI 3.1, Apache-2.0). The Stage 0 
 
 ## Basics {#basics}
 
-- No account, no token. A request with an `hf_` token is refused with 401 `hf_token_rejected`.
+- Reads need no account and no token. A request with an `hf_` token is refused with 401 `hf_token_rejected`.
 - Browsers can call it from any origin. A CORS preflight (`OPTIONS`) on `/api/*`, `/manifests/*` and the resolve routes answers 204 and allows `GET`, `HEAD`, the headers `If-None-Match`, `Authorization`, `Range` and `Content-Type`, cached for a day. The token rules apply to the real request.
-- Later stages add `Authorization: Bearer alt_...` for accounts.
+- Account calls send `Authorization: Bearer alt_...`, a key made at `platform.allternit.com/api-keys` with the `freeweights.write` scope (uploads) or a read scope. Uploads and the account routes need it. See the Uploads guide.
 - Counts read "download starts", because a redirect cannot see a finished download.
 
 ## Search models {#search}

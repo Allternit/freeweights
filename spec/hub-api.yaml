@@ -14,8 +14,8 @@ info:
     Authorization, Range, Content-Type and max-age 86400. Token rules apply to the real request, not the preflight.
 
     ## Auth
-    Public reads need no account and no token. Later stages add tokens with the `alt_` prefix
-    (`Authorization: Bearer alt_...`). A request that carries a Hugging Face token (`hf_` prefix) in any
+    Public reads need no account and no token. Writes and account routes take a key with the `alt_` prefix
+    (`Authorization: Bearer alt_...`), made at platform.allternit.com/api-keys with the `freeweights.write` scope. A request that carries a Hugging Face token (`hf_` prefix) in any
     header or query is refused with 401 `hf_token_rejected`. The token value is never logged, never
     stored, and never forwarded; only the fact of the rejection is counted. An `alt_` key or a Clerk session
     token sent on a public read is ignored: the read is served as anonymous and the credential is not checked

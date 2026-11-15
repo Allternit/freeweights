@@ -6,13 +6,14 @@
   fw.py info <model-id | manifest-path> [--remote] [--width N]
   fw.py search <words...> [--remote] [--width N] [--limit N]
   fw.py run <model-id> [--remote] [--overlay cloud.json]
+  fw.py login | whoami | repo create <handle>/<name> [--type model|dataset] | repo status [repo] | upload <dir> <handle>/<name>
 
 Verifies the minisign signature of the manifest (needs the minisign binary), then downloads
 every file from the sources in priority order with resume, and checks size and sha256.
 info and search print a model's card in the terminal: a dot-letter family monogram, the
 newsgroup header lines (the RECORD face), key facts and the get/verify commands (the ACTION
 face). Link-only models print the license link instead of commands."""
-import argparse, hashlib, json, os, re, shutil, subprocess, sys, tempfile, textwrap, unicodedata, urllib.error, urllib.parse, urllib.request
+import argparse, base64, hashlib, json, os, re, shutil, subprocess, sys, tempfile, textwrap, unicodedata, urllib.error, urllib.parse, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL = os.path.isdir(os.path.join(ROOT, "catalog"))  # true in a repository checkout, false when pip/brew installed
 DEFAULT_PUB = next((p for p in (os.path.join(ROOT, "spec", "keys", "freeweights-v0.pub"), os.path.join(os.path.dirname(os.path.abspath(__file__)), "keys", "freeweights-v0.pub")) if os.path.exists(p)), "freeweights-v0.pub")
@@ -452,6 +453,184 @@ def cmd_search(a):
     print(paint("2", (f"{more} more. " if more > 0 else "") + "fw info <id> shows the full card."))
     return 0
 
+# ---- uploads: login, whoami, repo create, upload, repo status (stdlib only) -------------------------
+TOKEN_PATH = os.environ.get("FW_TOKEN_FILE") or os.path.join(os.path.expanduser("~"), ".config", "freeweights", "token")
+KEY_URL = "https://platform.allternit.com/api-keys?create=freeweights"
+SKIP_NAMES = {".git", ".DS_Store", ".cache"}
+
+def read_token():
+    t = os.environ.get("FW_TOKEN", "").strip()
+    if t: return t
+    try: return open(TOKEN_PATH).read().strip()
+    except OSError: return ""
+
+def write_token(tok):
+    os.makedirs(os.path.dirname(TOKEN_PATH), mode=0o700, exist_ok=True)
+    fd = os.open(TOKEN_PATH, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    with os.fdopen(fd, "w") as f: f.write(tok + "\n")
+    os.chmod(TOKEN_PATH, 0o600)
+
+class ApiError(Exception):
+    def __init__(self, status, body, retry_after=None):
+        self.status, self.body, self.retry_after = status, body, retry_after
+        super().__init__(self.message())
+    def message(self):
+        b = self.body
+        if isinstance(b, dict):
+            err = b.get("error")
+            msg = b.get("message") or (err.get("message") if isinstance(err, dict) else err) or ""
+            code = b.get("code") or (err if isinstance(err, str) and b.get("message") else "")
+            out = f"{msg} ({code})" if code and code != msg else str(msg)
+            if b.get("paths"): out += " Refused paths: " + ", ".join(b["paths"]) + "."
+        else: out = str(b)[:300]
+        if self.retry_after: out += f" Try again in {self.retry_after} seconds."
+        return f"HTTP {self.status}: {out or 'request refused'}"
+
+def http(method, url, token=None, body=None, headers=None, ctype=None):
+    h = {**UA, **(headers or {})}
+    if token: h["Authorization"] = "Bearer " + token
+    if ctype: h["Content-Type"] = ctype
+    req = urllib.request.Request(url, data=body, headers=h, method=method)
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r: return r.status, dict(r.headers), r.read()
+    except urllib.error.HTTPError as e:
+        raw = e.read()
+        try: parsed = json.loads(raw)
+        except ValueError: parsed = raw.decode("utf-8", "replace")
+        raise ApiError(e.code, parsed, e.headers.get("Retry-After"))
+
+LFS = "application/vnd.git-lfs+json"
+def call_json(method, path, token=None, obj=None, ctype="application/json", accept="application/json"):
+    body = None if obj is None else json.dumps(obj).encode()
+    _, _, raw = http(method, path if path.startswith("http") else ORIGIN + path, token, body, {"Accept": accept}, ctype if obj is not None else None)
+    return json.loads(raw) if raw else {}
+
+def need_token():
+    t = read_token()
+    if not t: sys.exit("not logged in. Run: fw login")
+    return t
+
+def split_repo(spec):
+    if spec.count("/") != 1 or not all(spec.split("/")): sys.exit(f"repo must look like <handle>/<name>, got: {spec}")
+    return spec.split("/")
+
+def cmd_login(a):
+    key = a.token or os.environ.get("FW_TOKEN", "")
+    if not key:
+        print(f"Make a key with the freeweights.write scope at {KEY_URL}\nthen paste it here (it starts with alt_).")
+        import getpass
+        key = getpass.getpass("key: ") if sys.stdin.isatty() else sys.stdin.readline()
+    key = key.strip()
+    if not key.startswith("alt_"): print("That does not look like an Allternit key (alt_...). Nothing saved.", file=sys.stderr); return 2
+    try: who = call_json("GET", "/api/whoami-v2", key)
+    except ApiError as e:
+        print(f"fw login: the key was not accepted. {e}", file=sys.stderr); return 1
+    write_token(key)
+    print(f"logged in as {who.get('name')}. Key saved to {TOKEN_PATH} (mode 600).")
+    return 0
+
+def cmd_whoami(a):
+    try: who = call_json("GET", "/api/whoami-v2", need_token())
+    except ApiError as e: print(f"fw whoami: {e}", file=sys.stderr); return 1
+    print(who.get("name")); print(f"id: {who.get('id')}")
+    if who.get("fullname"): print(f"name: {who['fullname']}")
+    return 0
+
+def cmd_repo_create(a):
+    ns, name = split_repo(a.repo)
+    try: r = call_json("POST", "/api/repos/create", need_token(), {"name": name, "type": a.type})
+    except ApiError as e:
+        if e.status == 409: print(f"{a.repo} already exists."); return 0
+        print(f"fw repo create: {e}", file=sys.stderr); return 1
+    print(f"created {a.repo}: {r.get('url')}")
+    return 0
+
+def list_files(root):
+    out = []
+    for d, dirs, files in os.walk(root):
+        dirs[:] = sorted(x for x in dirs if x not in SKIP_NAMES)
+        for f in sorted(files):
+            full = os.path.join(d, f)
+            if f not in SKIP_NAMES and os.path.isfile(full): out.append((os.path.relpath(full, root).replace(os.sep, "/"), full))
+    return out
+
+def put_part(url, path, offset, length):
+    with open(path, "rb") as f:
+        f.seek(offset); data = f.read(length)
+    _, hdr, _ = http("PUT", url, None, data)
+    return {k.lower(): v for k, v in hdr.items()}.get("etag", "").strip()
+
+def upload_object(o, full, token):
+    act = (o.get("actions") or {}).get("upload")
+    if not act: return  # already stored for this repo
+    href, header = act["href"], act.get("header") or {}
+    if "chunk_size" in header:  # multipart: numbered part URLs, then the completion call
+        chunk = int(header["chunk_size"]); parts = []
+        for key in sorted(k for k in header if k.isdigit()):
+            n = int(key); parts.append({"partNumber": n, "etag": put_part(header[key], full, (n - 1) * chunk, chunk)})
+        call_json("POST", href, token, {"oid": o["oid"], "parts": parts}, LFS, LFS)
+    else:
+        with open(full, "rb") as f: data = f.read()
+        http("PUT", href, None, data, header)
+    ver = (o.get("actions") or {}).get("verify")
+    if ver: call_json("POST", ver["href"], token, {"oid": o["oid"], "size": o["size"]}, LFS, LFS)
+
+def cmd_upload(a):
+    token = need_token()
+    ns, name = split_repo(a.repo)
+    root = os.path.abspath(a.dir)
+    if not os.path.isdir(root): print(f"fw upload: {a.dir} is not a folder.", file=sys.stderr); return 2
+    files = list_files(root)
+    if not files: print("fw upload: the folder has no files.", file=sys.stderr); return 2
+    seg = {"model": "models", "dataset": "datasets"}[a.type]
+    lfs_prefix = "" if a.type == "model" else "datasets/"
+    try:
+        samples = []
+        for rel, full in files:
+            with open(full, "rb") as f: samples.append({"path": rel, "size": os.path.getsize(full), "sample": base64.b64encode(f.read(512)).decode()})
+        pre = call_json("POST", f"/api/{seg}/{ns}/{name}/preupload/main", token, {"files": samples})
+        mode = {f["path"]: f for f in pre.get("files", [])}
+        lfs, regular = {}, []
+        for rel, full in files:
+            m = mode.get(rel, {})
+            if m.get("shouldIgnore"): continue
+            if m.get("uploadMode", "lfs") == "lfs": lfs[rel] = (sha_of(full), os.path.getsize(full), full)
+            else: regular.append((rel, full))
+        print(f"{len(lfs) + len(regular)} file(s): {len(lfs)} large, {len(regular)} small.")
+        if lfs:
+            objs = {oid: size for oid, size, _ in lfs.values()}
+            batch = call_json("POST", f"/{lfs_prefix}{ns}/{name}.git/info/lfs/objects/batch", token,
+                {"operation": "upload", "transfers": ["basic", "multipart"], "hash_algo": "sha256", "objects": [{"oid": k, "size": v} for k, v in objs.items()]}, LFS, LFS)
+            by_oid = {o["oid"]: o for o in batch.get("objects", [])}
+            for rel, (oid, size, full) in lfs.items():
+                e = (by_oid.get(oid) or {}).get("error")
+                if e: print(f"fw upload: {rel} refused: {e.get('message', e)}", file=sys.stderr); return 1
+            for i, (rel, (oid, size, full)) in enumerate(lfs.items(), 1):
+                print(f"  [{i}/{len(lfs)}] {rel} ({human(size)})"); upload_object(by_oid[oid], full, token)
+        lines = [{"key": "header", "value": {"summary": a.message}}]
+        for rel, full in regular:
+            with open(full, "rb") as f: lines.append({"key": "file", "value": {"path": rel, "content": base64.b64encode(f.read()).decode(), "encoding": "base64"}})
+        for rel, (oid, size, _f) in lfs.items(): lines.append({"key": "lfsFile", "value": {"path": rel, "algo": "sha256", "oid": oid, "size": size}})
+        body = ("\n".join(json.dumps(l) for l in lines) + "\n").encode()
+        _, _, raw = http("POST", f"{ORIGIN}/api/{seg}/{ns}/{name}/commit/main", token, body, {"Accept": "application/json"}, "application/x-ndjson")
+        res = json.loads(raw) if raw else {}
+    except ApiError as e:
+        print(f"fw upload: {e}", file=sys.stderr); return 1
+    print(f"committed {str(res.get('commitOid', ''))[:12]}. Every file is scanned before anyone can download it.")
+    print(f"check progress: fw repo status {a.repo}")
+    return 0
+
+def cmd_repo_status(a):
+    try: repos = call_json("GET", "/api/fw/v1/repos", need_token())["repos"]
+    except ApiError as e: print(f"fw repo status: {e}", file=sys.stderr); return 1
+    if a.repo: repos = [r for r in repos if r["name"] == a.repo]
+    if not repos: print("no repos" + (f" named {a.repo}" if a.repo else "") + " yet."); return 1 if a.repo else 0
+    for r in repos:
+        s = r["scans"]
+        print(f"{r['name']}  {r['type']}  {r['status']}  {human(r['bytes'])}")
+        print(f"  scans: {s['clean']} clean, {s['scanning'] + s['queued']} waiting, {s['held']} held, {s['error']} error" + (f" ({', '.join(s['held_codes'])})" if s.get("held_codes") else ""))
+    return 0
+
 def main(argv=None):
     global ORIGIN
     ap = argparse.ArgumentParser(prog="fw"); sub = ap.add_subparsers(dest="cmd", required=True)
@@ -468,9 +647,18 @@ def main(argv=None):
     for p in (g, v, i, se, ru):
         p.add_argument("--origin", help="catalog and manifest server (default: $FREEWEIGHTS_URL or https://freeweights.allternit.com)")
     g.add_argument("--mirror", action="append", default=[], help="a Hugging Face-compatible hub to try first for file bytes (repeatable; also $FREEWEIGHTS_MIRROR, comma-separated). Files must still match the signed manifest.")
+    lg = sub.add_parser("login", help="save an alt_ key with the freeweights.write scope"); lg.add_argument("--token", help="the key (otherwise prompted, or read from $FW_TOKEN)")
+    wh = sub.add_parser("whoami", help="show the account the saved key belongs to")
+    rp = sub.add_parser("repo", help="create a repo or read its scan status"); rps = rp.add_subparsers(dest="repo_cmd", required=True)
+    rc = rps.add_parser("create", help="create a public repo under your handle"); rc.add_argument("repo", help="<handle>/<name>"); rc.add_argument("--type", choices=["model", "dataset"], default="model")
+    rs = rps.add_parser("status", help="state of your repos and their scans"); rs.add_argument("repo", nargs="?", help="<handle>/<name> (default: all)")
+    up = sub.add_parser("upload", help="upload a folder to a repo you own"); up.add_argument("dir"); up.add_argument("repo", help="<handle>/<name>")
+    up.add_argument("--type", choices=["model", "dataset"], default="model"); up.add_argument("--message", default="Upload with fw")
+    for p in (lg, wh, rc, rs, up): p.add_argument("--origin", help="server (default: $FREEWEIGHTS_URL or https://freeweights.allternit.com)")
     a = ap.parse_args(argv)
     if getattr(a, "origin", None): ORIGIN = a.origin.rstrip("/")
     MIRRORS.extend(u.rstrip("/") for u in getattr(a, "mirror", []) if u)
-    return {"get": cmd_get, "verify": cmd_verify, "info": cmd_info, "search": cmd_search, "run": cmd_run}[a.cmd](a)
+    if a.cmd == "repo": return {"create": cmd_repo_create, "status": cmd_repo_status}[a.repo_cmd](a)
+    return {"login": cmd_login, "whoami": cmd_whoami, "upload": cmd_upload, "get": cmd_get, "verify": cmd_verify, "info": cmd_info, "search": cmd_search, "run": cmd_run}[a.cmd](a)
 
 if __name__ == "__main__": sys.exit(main())
