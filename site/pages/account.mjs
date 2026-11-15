@@ -4,7 +4,7 @@ import { esc } from '../lib/util.mjs';
 
 // /account/: the MemberCard and sign-in. The static page is the signed-out state and works without JavaScript
 // (Sign in is a plain link). The account island fills the card from GET /api/whoami-v2 at view time; nothing
-// personal is built into the page. Not in the main nav until wave 3.
+// personal is built into the page. In the main nav with Plans. Signed-in states: no handle (handle + rules step), handle (usage, My repos), uploads paused, storage full.
 export function build() {
   const back = encodeURIComponent(`${ORIGIN}/account/`);
   page({ path: '/account/', nav: 'account', file: 'account/index.html', title: 'Account', desc: 'Your Allternit account on Freeweights. Downloads stay free and need no account.',

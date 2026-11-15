@@ -51,3 +51,33 @@
 .fwa-panel .btn{width:fit-content}
 .fwa-panel .btn.solid{background:var(--btn,#1A1A1A);color:var(--btnink,#fff);border-color:transparent}
 .fwa-note{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--fill);color:var(--ink2)}
+
+/* Handle step, usage meter, My repos (account island) */
+.fwa-form{display:grid;gap:8px;max-width:420px}
+.fwa-form label{font-weight:600;color:var(--ink);font-size:13.5px}
+.fwa-form input[type=text]{font:inherit;padding:9px 12px;border:1px solid var(--line2);border-radius:10px;background:var(--bg);color:var(--ink)}
+.fwa-form small,.fwa-panel small{color:var(--ink3);font-size:12.5px;line-height:1.5}
+.fwa-check{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;font-size:13.5px;color:var(--ink2)}
+.fwa-check input{margin-top:3px;flex:none}
+.fwa-err{color:var(--bad);font-size:13.5px}
+.fwa-usage{display:grid;gap:6px}
+.fwa-usage-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px}
+.fwa-meter{height:8px;border-radius:99px;background:var(--fill2);overflow:hidden}
+.fwa-meter i{display:block;height:100%;background:var(--ink2);border-radius:99px}
+.fwa-meter.is-high i{background:var(--warn)}
+.fwa-repos{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.fwa-repos li{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;gap:4px;background:var(--bg)}
+.fwa-repos li[data-status=held]{border-color:var(--warn)}
+.fwa-repos li[data-status=removed]{opacity:.75}
+.fwa-repo-top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.fwa-repo-top a{color:var(--ink);overflow-wrap:anywhere}
+.fwa-state{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);border:1px solid var(--line2);border-radius:99px;padding:1px 8px}
+.fwa-repo-top .sub{margin-left:auto}
+.fwa-scan{font-size:13px;color:var(--ink2)}
+.fwa-empty{margin:0;font-size:13.5px;color:var(--ink2)}
+
+/* Plans: perk lines with the "Not offered yet" stamp, launch-limits line, API-down state */
+.fwp-limits,.fwp-down{margin:0 0 16px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--fill);color:var(--ink2);font-size:13.5px}
+.fwp-down{margin:16px 0 0}
+.fwp-perk{display:flex;gap:8px;align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.fwp-notyet{font-family:var(--font-allternit-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:1px 6px;border-radius:3px;border:1px dashed currentColor;opacity:.75;white-space:nowrap}
