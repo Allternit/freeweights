@@ -78,7 +78,7 @@ curl -L -O https://freeweights.allternit.com/BAAI/bge-small-en-v1.5/resolve/main
 | 302 | Redirect to the best live source. |
 | 401 | An `hf_` token was sent. |
 | 404 | Unknown model, or code `model_wanted` when no source is live. |
-| 451 | Removed after a takedown. It is counted on the public page. |
+| 451 | Removed after a takedown, code `removed_after_takedown`. The model detail, tree, manifest and signature routes answer 451 too, and search leaves the entry out. See the Takedowns doc page. |
 | 503 | No live source within the time limit. Has `Retry-After`. The model moves to Wanted. |
 
 ## Catalog and manifests {#catalog}

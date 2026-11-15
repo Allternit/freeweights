@@ -20,4 +20,4 @@ fw.py, HF_ENDPOINT, Manifest spec, API.
 
 ## Policy and help {#policy}
 
-Licenses, Seeding, FAQ. To run a mirror, see the Mirrors page. For the ledger check, see the Ledger page and `docs/ledger-chain.md`.
+Licenses, What gets listed, Takedowns and snapshots, Seeding, FAQ. To run a mirror, see the Mirrors page. For the ledger check, see the Ledger page and `docs/ledger-chain.md`.

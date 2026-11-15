@@ -21,12 +21,18 @@ is a candidate too, with its own audit method, tier and relation. A batch repo's
 small-file hashes, the format header check) runs in --jobs threads first and is cached under
 work/build-cache/, so an interrupted run resumes; weights are never downloaded (their sha256 comes from
 the Hugging Face lfs data). Gated, non-commercial and link-only batch repos get a row with no manifest.
+Takedowns: an id or a weight sha256 on policy/blocklist.json (scripts/fw_admin.py takedown) is never listed,
+so a re-upload of removed weights under another name is refused too; its manifest is removed. Blocked repos do
+not go to refused.json (that file is public and names the source).
+Snapshot: after a full signed run, scripts/registry_chain.py appends a signed root of every manifest hash to
+ledger/registry.jsonl when the manifests changed (--no-sign appends nothing).
 Stdlib only. HF_TOKEN (env) raises rate limits; it is never printed."""
 import argparse, concurrent.futures, csv, datetime, glob, json, os, re, subprocess, sys, threading, time, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_manifest as mm
 import licenses  # the one license table (policy/licenses.json)
 import classify, formats
+import blocklist, registry_chain  # takedown blocklist (policy/blocklist.json), snapshot chain
 
 ROOT = mm.ROOT
 CAT = os.path.join(ROOT, "catalog")
@@ -323,6 +329,16 @@ def migrate(r, c):
     r.setdefault("audit", {"method": "reviewed", "at": r.get("added_at")})
     return r
 
+def blocked(repo, m=None):
+    """Why a candidate is on the takedown blocklist (its id, or any file hash of manifest m), or None."""
+    return blocklist.match(repo, [f.get("sha256") for f in (m or {}).get("files", [])])
+
+def drop_blocked(repo, why, blocked_ids):
+    print("BLOCKED", repo, why); blocked_ids.append(repo)
+    for ext in (".json", ".json.minisig"):
+        fp = os.path.join(MAN, fname(repo) + ext)
+        if os.path.exists(fp): os.remove(fp)
+
 def row_file(r, ids):
     """catalog/rows/<org>__<repo>.json; a non-model entry whose id collides with another kind gets a kind prefix."""
     return fname(r["id"]) + ".json" if r["kind"] == "model" or ids[r["id"]] == 1 else f"{r['kind']}__{fname(r['id'])}.json"
@@ -348,7 +364,7 @@ def main():
     cschema = json.load(open(os.path.join(ROOT, "spec", "catalog-schema.json")))
     key = a.key
     seen, rows, refused = set(), [], []
-    signed, unchanged, pending, offline_skip = [], [], [], []
+    signed, unchanged, pending, offline_skip, blocked_ids = [], [], [], [], []
     ts = now()
     # Keep added_at and the audit date for rows that already exist; only new rows get today's date.
     prev = {}
@@ -368,6 +384,8 @@ def main():
         if repo in seen: print("dup skip", repo); continue
         seen.add(repo)
         if a.only and repo not in a.only: continue
+        why = blocked(repo)
+        if why: drop_blocked(repo, why, blocked_ids); continue
         dataset = c["kind"] == "dataset"
         red, lid = c.get("redistribution"), c["license_id"]  # batch rows get redistribution from batch_terms
         pr = prev.get(repo) or {}
@@ -379,6 +397,8 @@ def main():
                 else: print("skipped, needs network:", repo)
                 continue
             if res.get("refused"): refuse(res["refused"]); continue
+            why = blocked(repo, res.get("manifest"))
+            if why: drop_blocked(repo, why, blocked_ids); continue
             if res.get("link_only"):
                 rows.append(batch_row(c, res, False, ts, res["total"], res["formats"])); continue
             if batch_terms(c, res)[4]:  # cached as hosted, but its license is link only now: no manifest
@@ -455,6 +475,8 @@ def main():
                 try: m = mm.build(repo, commit, dataset, c["section"])
                 except mm.Refused as e: refuse(str(e)); continue
                 time.sleep(1)
+            why = blocked(repo, m)
+            if why: drop_blocked(repo, why, blocked_ids); continue
             permissive = licenses.is_permissive(lid)
             c["_redis"] = "yes" if permissive else "click-through"
             m["license"]["id"] = lid
@@ -485,6 +507,7 @@ def main():
             else: print("offline: skipped, needs network", repo)
     if reuploads: print(f"exact re-uploads left out: {len(reuploads)}")
     print(f"\nmanifests: {len(signed)} signed, {len(unchanged)} unchanged, {len(pending)} pending a signature (.pending/manifests/, not served)")
+    if blocked_ids: print(f"blocked by the takedown blocklist: {len(blocked_ids)}")
     if a.only: return
     # validate + write
     for r in rows:
@@ -522,5 +545,6 @@ def main():
     write(os.path.join(CAT, "refused.json"), sorted(refused, key=lambda r: r["id"]))
     print("\nlisted", len(rows), "refused", len(refused), "total bytes", sum(r["total_size"] for r in rows))
     for s in cat["sections"]: print(f"  {s['id']}: {s['count']}")
+    print(registry_chain.snapshot(not a.no_sign, key))
 
 if __name__ == "__main__": main()

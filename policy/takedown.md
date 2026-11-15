@@ -43,7 +43,11 @@ We decide on each report within 72 hours of receipt and tell the reporter. CSAM 
 
 ## 6. Blocklist
 
-A public-safe list of hashes and identifiers of removed items. A hash stays on the list until an appeal or a court order removes it. The list holds no content.
+A public-safe list of hashes and identifiers of removed items (`policy/blocklist.json`). A hash stays on the list until an appeal or a court order removes it. The list holds no content. `scripts/discover.py` drops and `scripts/build_catalog.py` refuses any repo whose id or weight-file sha256 is on it.
+
+## 6a. The takedown command
+
+`python3 scripts/fw_admin.py takedown <org/repo> --reason <class> [--dry-run] [--apply]` does the removal in one step: the database row that makes the Worker answer 451 at once (live only with `--apply`; the exact wrangler command is printed), the blocklist entry with the weight hashes, removal of the catalog row and manifest, the public counter (`policy/takedowns.json`) and a signed registry line (date, id, reason class; no personal data). Then rebuild the site, run `scripts/sync_r2.py --delete`, deploy, and commit. Reason classes: copyright, csam, real_person_likeness, crime_marketing, malware_or_secrets, license_violation, other.
 
 ## 7. Appeals
 

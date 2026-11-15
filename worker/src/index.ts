@@ -1,8 +1,8 @@
 import type { Env, Manifest, CatalogRow, ManifestSource } from './types';
 import { CATALOG_JSON, CATALOG_ETAG, HOSTED, LOGOS } from './data.generated';
 import {
-  addDownload, addOriginBytes, allTotals, bumpCounter, effective, isPaidOrigin,
-  originGuardOn, sourceSummary, totalsFor,
+  addDownload, addOriginBytes, allTotals, bumpCounter, effective, isPaidOrigin, isTakenDown,
+  originGuardOn, sourceSummary, takenDownIds, totalsFor,
 } from './db';
 import { pickSource } from './check';
 import { countRule, isDailyCapError, pausedBody } from './rules';
@@ -58,6 +58,13 @@ const PREFLIGHT = { 'access-control-allow-origin': '*', 'access-control-allow-me
 const json = (body: unknown, status = 200, extra: HeadersInit = {}) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', ...CORS, ...extra } });
 const err = (status: number, error: string, message: string, extra: HeadersInit = {}) => json({ error, message }, status, extra);
+// 451 after a takedown (D1 `takedowns`, checked before any R2 read so a removed manifest or page is never served
+// from R2 or the edge cache). Not cached, so a restore after an appeal shows at once.
+const TAKEDOWN_NOTE = 'It is counted at https://freeweights.allternit.com/operating-statement/#takedown-counter.';
+const gone = (id: string) => err(451, 'removed_after_takedown', `${id} was removed after a takedown. ${TAKEDOWN_NOTE}`, { 'cache-control': 'no-store' });
+const gonePage = (id: string) => new Response(
+  `<!doctype html><meta charset="utf-8"><title>451 Removed</title><h1>Removed after a takedown</h1><p>${id.replace(/[<>&"]/g, '')} was removed after a takedown. <a href="/operating-statement/#takedown-counter">Takedown counter</a>.</p>`,
+  { status: 451, headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', ...CORS } });
 
 // ---- Pause at the daily cap -------------------------------------------------------------------
 // After a D1 daily-limit error this isolate answers D1-backed routes with 503 until 00:00 UTC
@@ -130,7 +137,8 @@ async function search(env: Env, url: URL): Promise<Response> {
   // With a search term the default order is rank (same rule as the site): official lab repos and
   // base models first, then fine-tunes, then quants and adapters. Order is never for sale.
   const sort = q.get('sort') || (needle ? 'rank' : 'added');
-  let rows = CATALOG.models.filter((r) =>
+  const removed = await takenDownIds(env); // taken down since this bundle was built
+  let rows = CATALOG.models.filter((r) => !removed.has(r.id) &&
     (!needle || r.id.toLowerCase().includes(needle) || r.display_name.toLowerCase().includes(needle)) &&
     (!q.get('section') || r.section === q.get('section')) &&
     (!q.get('author') || r.id.split('/')[0].toLowerCase() === q.get('author')!.toLowerCase()) &&
@@ -165,6 +173,7 @@ async function search(env: Env, url: URL): Promise<Response> {
 }
 
 async function detail(env: Env, id: string): Promise<Response> {
+  if (await isTakenDown(env, id)) return gone(id); // before the catalog lookup: stays 451 after the row is rebuilt away
   const r = ROWS.get(id);
   if (!r) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
   const m = await getManifest(env, id);
@@ -200,6 +209,7 @@ async function detail(env: Env, id: string): Promise<Response> {
 const revOk = (m: Manifest, rev: string) => rev === 'main' || rev === m.upstream.commit;
 
 async function tree(env: Env, id: string, rev: string): Promise<Response> {
+  if (await isTakenDown(env, id)) return gone(id);
   const m = await getManifest(env, id);
   if (!m) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
   if (!revOk(m, rev)) return err(404, 'revision_not_found', `Revision ${rev} is not pinned for ${id}. Use main or ${m.upstream.commit}.`);
@@ -213,6 +223,7 @@ async function tree(env: Env, id: string, rev: string): Promise<Response> {
 
 // ---- Resolve ----------------------------------------------------------------------------------
 async function resolve(env: Env, ctx: ExecutionContext, req: Request, id: string, rev: string, path: string): Promise<Response> {
+  if (await isTakenDown(env, id)) return gone(id);
   const m = await getManifest(env, id);
   if (!m) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
   if (m.takedown) return err(451, 'removed_after_takedown', `${id} was removed after a takedown.`);
@@ -280,6 +291,7 @@ export default {
       // to the upstream host for catalog models only, pinned to the manifest commit (client matrix retest).
       if ((mt = p.match(/^\/api\/models\/([^/]+)\/([^/]+)\/xet-read-token\/([^/]+)$/))) {
         const id = `${seg(mt[1])}/${seg(mt[2])}`;
+        if (await isTakenDown(env, id)) return gone(id);
         const m = await getManifest(env, id);
         if (!m) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
         if (!revOk(m, seg(mt[3]))) return err(404, 'revision_not_found', `Revision ${seg(mt[3])} is not pinned for ${id}.`);
@@ -294,12 +306,14 @@ export default {
       }
       if ((mt = p.match(/^\/manifests\/([^/]+)\/([^/]+?)\.json(\.minisig)?$/))) {
         const mid = `${seg(mt[1])}/${seg(mt[2])}`;
+        if (await isTakenDown(env, mid)) return gone(mid);
         const res = Object.hasOwn(HOSTED, mid) ? await serveObject(req, env, ctx, manifestKey(mid, !!mt[3]), mt[3] ? 'text/plain; charset=utf-8' : 'application/json') : null;
         return res ?? err(404, 'manifest_not_found', 'No such manifest.');
       }
       // Model and tool detail pages (B5) live in R2 at <section>/<org>/<repo>/index.html, on the same
       // URLs as before. Section list pages (/<section>/page/<n>/) and anything not in R2 go to Pages.
       if ((mt = p.match(/^\/(alt\.freeweights\.[a-z0-9.-]+)\/([^/]+)\/([^/]+)(\/(?:index\.html)?)?$/)) && mt[2] !== 'page') {
+        if (await isTakenDown(env, `${seg(mt[2])}/${seg(mt[3])}`)) return gonePage(`${seg(mt[2])}/${seg(mt[3])}`);
         if (!mt[4]) return new Response(null, { status: 301, headers: { location: p + '/' + url.search } });
         const res = await serveObject(req, env, ctx, `${mt[1]}/${seg(mt[2])}/${seg(mt[3])}/index.html`, 'text/html; charset=utf-8');
         if (res) return res;

@@ -7,6 +7,7 @@ sections:
   - {id: how-it-works, title: How the ledger works}
   - {id: tamper-evident, title: Why it is tamper-evident}
   - {id: verify, title: Verify it yourself}
+  - {id: snapshots, title: Catalog snapshots and takedowns}
   - {id: costs-by-stage, title: Costs by stage}
   - {id: goals, title: Funding goals}
   - {id: allternit-share, title: Allternit's share}
@@ -45,6 +46,15 @@ python3 scripts/verify_ledger.py
 It prints PASS or FAIL. On FAIL it names the first entry that does not match. It needs Python 3 and the `minisign` program. The public key is `spec/keys/freeweights-v0.pub` (key id 2DC28CC7B26A283B).
 
 You can also do it by hand: the head file is `ledger/head.json`, its signature is `ledger/head.json.minisig`, and the check is `minisign -Vm ledger/head.json -p spec/keys/freeweights-v0.pub`. The chain is `ledger/chain.jsonl`, one JSON entry per line.
+
+## Catalog snapshots and takedowns {#snapshots}
+
+A second hash chain, `ledger/registry.jsonl`, records what the catalog lists and what was removed. It is kept apart from the money chain so the money totals stay exact.
+
+- **Snapshot.** Each signed catalog build takes the sha256 of every published manifest, sorts the pairs (entry id, hash) by id, writes one line `<id> <hash>` per pair, and hashes those lines into one root. When the root changes, the build adds a snapshot entry to the chain and signs `ledger/snapshot.json`, which lists every pair. If a manifest is changed or removed later, the root no longer matches the signed one.
+- **Takedown.** Every removal adds one entry: the date, the entry id and a reason class (for example copyright). No names, no addresses, no report text.
+
+The head of this chain is signed like the money chain: `ledger/registry-head.json` and its `.minisig`.
 
 ## Costs by stage {#costs-by-stage}
 

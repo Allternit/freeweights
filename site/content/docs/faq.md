@@ -50,7 +50,7 @@ Discard the file and try the next source. If none match, email us with the model
 The model has no live source. It is on the Wanted page.
 
 ### Why 451?
-The item was removed after a takedown. It is counted on the public page.
+The item was removed after a takedown. Every route for it answers 451 `removed_after_takedown`. It is counted on the Operating Statement page and recorded in the signed registry chain. See the Takedowns doc page.
 
 ### What is a download start?
 A request to a resolve route that we redirect. We cannot see whether you finished, so we count starts.
@@ -104,4 +104,4 @@ See Mirrors. Read the agreement and the license list, then email us.
 Open a GitHub issue at https://github.com/Allternit/freeweights/issues, or email freeweights@allternit.com.
 
 ### How do I report a problem?
-Email freeweights@allternit.com. Role addresses for abuse, copyright and security reports are set up before launch. We decide within 72 hours.
+Copyright notices go to dmca@allternit.com. Everything else goes to freeweights@allternit.com. Role addresses for abuse and security reports are set up before launch. We decide within 72 hours.

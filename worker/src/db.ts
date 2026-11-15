@@ -118,3 +118,23 @@ export const isPaidOrigin = (env: Env, url: string | undefined) => {
   const hosts = (env.PAID_ORIGIN_HOSTS || '').split(',').map((h) => h.trim().toLowerCase()).filter(Boolean);
   try { return hosts.includes(new URL(url).hostname.toLowerCase()); } catch { return false; }
 };
+
+// ---- Takedowns (plan B9, migration 0003) -----------------------------------------------------
+// The whole table is read at most once per TAKEDOWN_TTL_MS per isolate (one row per takedown, so a few
+// rows), so a takedown written with `fw_admin.py takedown --apply` answers 451 within a minute with no
+// redeploy. A failed read (table not created yet, D1 paused at the daily cap) keeps the last known set and
+// never fails the route: catalog, manifests and detail pages stay up when D1 is down.
+export const TAKEDOWN_TTL_MS = 60_000;
+let takedownIds = new Set<string>();
+let takedownAt = 0;
+export async function takenDownIds(env: Env, now = Date.now()): Promise<Set<string>> {
+  if (now - takedownAt < TAKEDOWN_TTL_MS) return takedownIds;
+  takedownAt = now;
+  try {
+    const rows = await env.DB.prepare('SELECT entry_id FROM takedowns').all<{ entry_id: string }>();
+    takedownIds = new Set(rows.results.map((r) => r.entry_id));
+  } catch { /* keep the last known set */ }
+  return takedownIds;
+}
+/** True when the id was removed after a takedown (any kind: routes do not carry the kind yet). */
+export const isTakenDown = async (env: Env, id: string) => (await takenDownIds(env)).has(id);

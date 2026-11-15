@@ -134,7 +134,7 @@ Until then Allternit LLC owns Freeweights. If a nonprofit takes over, we say how
 
 ## Report a problem {#report}
 
-Send reports to freeweights@allternit.com for now. Role addresses (abuse, dmca and security at freeweights) are set up as routes before launch, and this page is updated when they exist.
+Send copyright notices and counter-notices to dmca@allternit.com. Send other reports to freeweights@allternit.com for now. Role addresses for abuse and security reports are set up as routes before launch, and this page is updated when they exist.
 
 - **Banned content or a policy problem:** abuse report.
 - **Copyright:** a copyright notice, below.
@@ -153,7 +153,9 @@ You get an acknowledgement and a ticket number. We decide within 72 hours.
 
 **Appeal.** Written, within 30 days. A different person reviews it. Answer in 14 days.
 
-**Blocklist.** A list of hashes and identifiers of removed items. It holds no content. A hash stays until an appeal or a court order removes it.
+**Blocklist.** A list of hashes and identifiers of removed items (`policy/blocklist.json`). It holds no content. A hash stays until an appeal or a court order removes it. The catalog build refuses any repo whose weight files match a hash on it.
+
+**What a removal does.** The item answers 451 at once on the API, the download redirect, the manifest and its page. Its weight hashes go on the blocklist, it leaves the catalog, the counter goes up, and a signed line (date, id, reason class, no personal data) is added to the registry chain. Details: the Takedowns doc page.
 
 **Counter.** The public takedown counter sits at the end of this page (the site build fills it) and shows per month: reports received, items removed, items restored and reason categories. At launch it reads zero.
 

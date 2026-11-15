@@ -13,6 +13,24 @@ The Freeweights ledger is tamper-evident. It is a hash chain with a signed head.
 | `scripts/ledger_chain.py` | Builds the chain and signs the head. |
 | `scripts/verify_ledger.py` | Checks everything. Prints PASS or FAIL. |
 
+## Registry chain (snapshots and takedowns)
+
+A second chain with the same entry rules records registry events, so the money chain holds only money rows
+(the CSV append-only check, `validate_ledger.py` and the ledger page totals stay exact).
+
+| File | What it is |
+| --- | --- |
+| `ledger/registry.jsonl` | One entry per event: `seq`, `prev_hash`, `type`, `date`, `entry_hash`, plus `count` and `root` (type `snapshot`) or `id`, `kind` and `reason_class` (type `takedown`). |
+| `ledger/registry-head.json` (+ `.minisig`) | Head of the registry chain, signed. |
+| `ledger/snapshot.json` (+ `.minisig`) | The latest snapshot: `root`, `count`, `created`, `seq` and every `[id, manifest sha256]` pair. Signed with trusted comment `freeweights snapshot <root>`. |
+| `scripts/registry_chain.py` | Appends entries and signs. `build_catalog.py` calls it after a full signed run; `fw_admin.py takedown` calls it with the takedown line. |
+
+Snapshot root: sha256 of the UTF-8 lines `<id> <sha256 of the manifest file bytes>\n`, sorted by id. A snapshot
+entry is added only when the root changed. `build_catalog.py --no-sign` appends nothing. `verify_ledger.py` checks
+both chains, then that `snapshot.json` hashes to its root, that its signature is valid and that the chain entry at
+its `seq` carries the same root. `--snapshot-against manifests/` (or a site URL) recomputes the root from the
+manifests themselves.
+
 ## Entry format
 
 Each entry has: `seq` (1, 2, 3 and so on), `date`, `direction`, `type`, `vendor_or_source`, `item`, `amount_usd` (a string such as `"0.00"`, so no float rounding), `ref` (the CSV `invoice_or_ref`), `notes`, `prev_hash` and `entry_hash`.
