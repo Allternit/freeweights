@@ -33,7 +33,7 @@ An installed `fw` has no local catalog, so `info` reads the catalog from freewei
 ## fw.py get {#get}
 
 ```
-fw.py get <model-id | manifest-url-or-path> [--dir D] [--pubkey FILE] [--no-verify-sig]
+fw.py get <model-id | manifest-url-or-path> [--dir D] [--pubkey FILE] [--no-verify-sig] [--origin URL] [--mirror URL ...]
 ```
 
 | Part | Meaning |
@@ -42,6 +42,8 @@ fw.py get <model-id | manifest-url-or-path> [--dir D] [--pubkey FILE] [--no-veri
 | `--dir D` | Where to put the files. Default: the model id with `/` replaced by `__`. |
 | `--pubkey FILE` | The minisign public key. Default: `spec/keys/freeweights-v0.pub` in the repository. |
 | `--no-verify-sig` | Skip the signature check. fw.py prints a warning that the manifest is not authenticated. |
+| `--origin URL` | The catalog and manifest server. Default: `$FREEWEIGHTS_URL`, else https://freeweights.allternit.com. Also on verify, info and search. |
+| `--mirror URL` | A Hugging Face-compatible hub to try first for file bytes, such as a self-hosted mirror. Repeat it for more than one, or set `$FREEWEIGHTS_MIRROR` (comma-separated). fw.py asks the mirror for the pinned commit, then `main`. A file from a mirror is kept only when its size and sha256 match the signed manifest; otherwise fw.py tries the next source. fw.py prints `from mirror <host>` for each file a mirror served. |
 
 ## fw.py verify {#verify}
 

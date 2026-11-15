@@ -16,7 +16,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL = os.path.isdir(os.path.join(ROOT, "catalog"))  # true in a repository checkout, false when pip/brew installed
 DEFAULT_PUB = next((p for p in (os.path.join(ROOT, "spec", "keys", "freeweights-v0.pub"), os.path.join(os.path.dirname(os.path.abspath(__file__)), "keys", "freeweights-v0.pub")) if os.path.exists(p)), "freeweights-v0.pub")
 UA = {"User-Agent": "freeweights-fw/0.1"}
-ORIGIN = "https://freeweights.allternit.com"
+ORIGIN = os.environ.get("FREEWEIGHTS_URL", "https://freeweights.allternit.com").rstrip("/")
+# Extra Hugging Face-compatible hubs (self-hosted mirrors) tried before the manifest's own sources.
+# Bytes from a mirror are trusted only after they match the signed manifest's sha256, like any source.
+MIRRORS = [u.strip().rstrip("/") for u in os.environ.get("FREEWEIGHTS_MIRROR", "").split(",") if u.strip()]
 KEY_ID = "2DC28CC7B26A283B"
 
 def fetch_bytes(url):
@@ -76,7 +79,15 @@ def download(url, part, size):
     print()
 
 def sources_of(m):
-    return sorted((s for s in m["sources"] if s.get("url")), key=lambda s: (s["priority"], s["url"]))
+    own = sorted((s for s in m["sources"] if s.get("url")), key=lambda s: (s["priority"], s["url"]))
+    commit = (m.get("upstream") or {}).get("commit")
+    extra = []
+    for base in MIRRORS:
+        # A mirror may not keep the publisher's commit ids (re-uploads make new ones), so try the pinned
+        # commit first and then main; the sha256 check decides either way.
+        for rev in ([commit] if commit else []) + ["main"]:
+            extra.append({"type": "mirror", "priority": -1, "url": f"{base}/{m['id']}/resolve/{rev}/"})
+    return extra + own
 
 def cmd_get(a):
     work = tempfile.mkdtemp(prefix="fw-")
@@ -98,7 +109,10 @@ def cmd_get(a):
             part = target + ".part"
             try: download(url, part, f["size"])
             except (urllib.error.URLError, OSError) as e: print(f"  source failed ({e}); next"); continue
-            if file_ok(part, f): os.replace(part, target); break
+            if file_ok(part, f):
+                os.replace(part, target)
+                if s.get("type") == "mirror": print(f"  from mirror {urllib.parse.urlsplit(url).netloc}")
+                break
             print("  hash/size mismatch; discarding, next source"); os.remove(part)
     return cmd_verify_dir(dest, m, sig)
 
@@ -395,6 +409,7 @@ def cmd_search(a):
     return 0
 
 def main(argv=None):
+    global ORIGIN
     ap = argparse.ArgumentParser(prog="fw"); sub = ap.add_subparsers(dest="cmd", required=True)
     g = sub.add_parser("get", help="download and verify a model"); g.add_argument("manifest", help="model id, manifest URL or manifest path"); g.add_argument("--dir")
     v = sub.add_parser("verify", help="check a downloaded folder"); v.add_argument("dir"); v.add_argument("manifest", help="model id, manifest URL or manifest path")
@@ -404,7 +419,12 @@ def main(argv=None):
     se.add_argument("--limit", type=int, default=20, help="most matches to list (default 20)"); se.add_argument("--cards", type=int, default=3, help="print full cards when there are at most this many matches (default 3)")
     se.add_argument("--local", action="store_true", help="search the catalog in this repository checkout instead of the live API")
     for p in (i, se): p.add_argument("--remote", action="store_true", help=f"read from {ORIGIN} (the default when installed; search always uses the live API unless --local)"); p.add_argument("--width", type=int, help="card width in columns (at least 60; default: the terminal, up to 100)")
+    for p in (g, v, i, se):
+        p.add_argument("--origin", help="catalog and manifest server (default: $FREEWEIGHTS_URL or https://freeweights.allternit.com)")
+    g.add_argument("--mirror", action="append", default=[], help="a Hugging Face-compatible hub to try first for file bytes (repeatable; also $FREEWEIGHTS_MIRROR, comma-separated). Files must still match the signed manifest.")
     a = ap.parse_args(argv)
+    if getattr(a, "origin", None): ORIGIN = a.origin.rstrip("/")
+    MIRRORS.extend(u.rstrip("/") for u in getattr(a, "mirror", []) if u)
     return {"get": cmd_get, "verify": cmd_verify, "info": cmd_info, "search": cmd_search}[a.cmd](a)
 
 if __name__ == "__main__": sys.exit(main())
