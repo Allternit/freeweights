@@ -59,6 +59,9 @@ R2_HOST = os.environ.get("FW_R2_HOST") or "freeweights-files.allternit.com"
 SECURITY = json.loads(os.environ["HEADERS_JSON"])
 CORS = {"access-control-allow-origin": "*", "access-control-expose-headers": "Link, ETag, X-Repo-Commit, X-Total-Count"}  # worker/src/http.ts CORS
 CC_MARK = "freeweights-cc:"
+# Anonymous pages load no third-party script: no-transform stops Cloudflare injecting anything (Web Analytics beacon),
+# as the Worker does for HTML (worker/src/http.ts). max-age matches the 5-minute cache rule below.
+HTML_CACHE = {"cache-control": "public, max-age=300, no-transform"}
 
 P = "http.request.uri.path"
 host = f'http.host eq "{HOST}"'
@@ -79,7 +82,7 @@ RULES = [  # (phase, rule) in apply order
         "action_parameters": {"from_value": {"status_code": 301, "target_url": {"expression": f'concat({P}, "/")'}, "preserve_query_string": True}}}),
     ("http_response_headers_transform", {"ref": "fw_cc_page_headers", "description": "Freeweights: CSP and security headers on detail pages (site/lib/csp.mjs)",
         "expression": f"({host} and {detail})", "action": "rewrite",
-        "action_parameters": {"headers": hdr({**SECURITY, **CORS})}}),
+        "action_parameters": {"headers": hdr({**SECURITY, **CORS, **HTML_CACHE})}}),
     ("http_response_headers_transform", {"ref": "fw_cc_manifest_headers", "description": "Freeweights: CORS on manifests",
         "expression": f"({host} and {manifests})", "action": "rewrite",
         "action_parameters": {"headers": hdr({**CORS, "x-content-type-options": SECURITY["x-content-type-options"]})}}),
@@ -87,7 +90,7 @@ RULES = [  # (phase, rule) in apply order
     # there directly is no weaker than on freeweights.allternit.com.
     ("http_response_headers_transform", {"ref": "fw_cc_bucket_headers", "description": "Freeweights: CSP and nosniff on the bucket's public domain",
         "expression": f'(http.host eq "{R2_HOST}")', "action": "rewrite",
-        "action_parameters": {"headers": hdr(SECURITY)}}),
+        "action_parameters": {"headers": hdr({**SECURITY, **HTML_CACHE})}}),
     ("http_request_cache_settings", {"ref": "fw_cc_cache", "description": "Freeweights: cache R2 static paths 5 minutes",
         "expression": f"({host} and ({manifests} or ({detail})))", "action": "set_cache_settings",
         "action_parameters": {"cache": True, "edge_ttl": {"mode": "override_origin", "default": 300}, "browser_ttl": {"mode": "override_origin", "default": 300}}}),
