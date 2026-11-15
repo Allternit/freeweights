@@ -19,6 +19,8 @@ export const THEME_SCRIPT_HASH = `'sha256-${createHash('sha256').update(THEME_SC
 //               account island talks to Clerk's frontend API after a Sign in click or a __client_uat hint.
 //  script-src   also names https://clerk.allternit.com, the only host clerk-js loads from (pinned version, same
 //               rule: no other third-party script). Anonymous pages never request it.
+//  worker-src   blob: only: clerk-js (signed-in pages) starts a blob worker for its session token timer. No
+//               script URL can be a worker source; script-src still limits what any page runs.
 //  frame-ancestors 'none': no page is meant to be embedded. form-action 'self': the only form is the search form.
 export const CSP = [
   "default-src 'none'",
@@ -29,7 +31,7 @@ export const CSP = [
   "connect-src 'self' https://clerk.allternit.com",
   "manifest-src 'self'",
   "frame-src 'none'",
-  "worker-src 'none'",
+  "worker-src blob:",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
