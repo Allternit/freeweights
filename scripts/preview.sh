@@ -6,7 +6,8 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")/.." && pwd)"
 PORT="${1:-8811}"; DIST="${2:-$HERE/site/dist}"
-if [ -z "${2:-}" ]; then (cd "$HERE/site" && node build.mjs); fi
+# FW_DETAILS=static: detail pages and manifests (R2 in production, B5) go into dist so one folder serves all.
+if [ -z "${2:-}" ]; then (cd "$HERE/site" && FW_DETAILS=static node build.mjs); fi
 echo "Preview: http://127.0.0.1:${PORT}/  (serving $DIST)"
 exec python3 - "$PORT" "$DIST" <<'PY'
 import functools, http.server, sys

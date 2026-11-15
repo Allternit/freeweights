@@ -21,6 +21,12 @@ binding = "DB"
 database_name = "freeweights"
 database_id = "67ac7c53-9af4-4371-97d2-7b9982e1cc6a"
 
+# Manifests, signatures and model detail pages (B3/B5/B6), uploaded by scripts/sync_r2.py.
+# Keys: manifests/<org>/<repo>.json(.minisig) and <section>/<org>/<repo>/index.html.
+[[r2_buckets]]
+binding = "FW"
+bucket_name = "freeweights"
+
 [vars]
 # Source freshness window (ms). Plan F4 default: 10 minutes.
 FRESH_MS = "600000"

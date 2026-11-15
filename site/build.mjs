@@ -13,6 +13,11 @@ import { execFileSync } from 'node:child_process';
 const SITE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(process.env.FW_ROOT || path.join(SITE, '..'));
 const OUT = path.resolve(process.env.FW_OUT || path.join(SITE, 'dist'));
+// B5: model and tool detail pages, manifests and signatures go to a separate tree (default site/r2) that
+// scripts/sync_r2.py uploads to the R2 bucket; they are served on the same URLs from R2, so Pages holds only
+// fixed and paged files. FW_DETAILS=static writes them into dist as before (local preview, tests).
+const DETAILS_STATIC = process.env.FW_DETAILS === 'static';
+const OUT_R2 = DETAILS_STATIC ? OUT : path.resolve(process.env.FW_R2_OUT || path.join(SITE, 'r2'));
 const ORIGIN = 'https://freeweights.allternit.com';
 const KEY_ID = '2DC28CC7B26A283B';
 
@@ -837,7 +842,7 @@ function modelPage(r) {
   const related = LISTED.filter((x) => x.section === r.section && x.id !== r.id).slice(0, 6);
   const rel = related.length >= 2 ? related : [...related, ...LISTED.filter((x) => x.id !== r.id && !related.includes(x) && r.tasks[0] && x.tasks[0] === r.tasks[0])].slice(0, 6);
   return {
-    path: modelUrl(r), nav: 'catalog', file: `${r.section}/${r.id}/index.html`, title: r.name,
+    path: modelUrl(r), nav: 'catalog', file: `${r.section}/${r.id}/index.html`, detail: true, title: r.name,
     desc: `${r.name} (${r.id}): free download with license, sha256 for every file and a manifest. ${licName(r.license)}.`,
     body: `
 <div class="wrap page-head m-head">
@@ -889,7 +894,7 @@ function toolPage(r) {
     ['provenance', 'Provenance', `<div class="lead-face">${FWC.record(c, 'head', { link: false })}</div><div class="box pad"><dl class="kv"><dt>Repository</dt><dd>${ext ? `<a class="link mono small" href="${esc(r.upstream)}" rel="noopener">${esc(g.repo)} ${ICON.ext}</a>` : 'Not published yet'}</dd><dt>Pinned release</dt><dd class="mono small">${rel.tag ? `<a class="link" href="${esc(rel.url)}" rel="noopener">${esc(rel.tag)}</a>, ${esc(rel.date)}` : 'none'}</dd><dt>Release commit</dt><dd class="mono small" style="word-break:break-all">${esc(rel.commit || 'not known')}</dd><dt>Default branch</dt><dd class="mono small" style="word-break:break-all">${esc(g.default_branch || '')} ${esc(g.branch_commit || '')}</dd><dt>Fetched</dt><dd>${esc(g.fetched || 'not fetched')}</dd><dt>Takedowns</dt><dd>None.</dd></dl></div>${note}`],
   ];
   return {
-    path: modelUrl(r), nav: 'catalog', file: `${r.section}/${r.id}/index.html`, title: r.name,
+    path: modelUrl(r), nav: 'catalog', file: `${r.section}/${r.id}/index.html`, detail: true, title: r.name,
     desc: `${r.name}: ${t.what} Install, the catalog models it ${role === 'trains' ? 'fine-tunes' : 'runs'}, license and the pinned release.`,
     body: `
 <div class="wrap page-head m-head">
@@ -1090,14 +1095,33 @@ page({ path: '/404.html', nav: '', file: '404.html', title: 'Not found', body: `
 // Empty dist in place (a preview server may be serving from inside it), then write.
 fs.mkdirSync(OUT, { recursive: true });
 for (const f of fs.readdirSync(OUT)) fs.rmSync(path.join(OUT, f), { recursive: true, force: true });
-const write = (rel, s) => { const f = path.join(OUT, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, s); };
-for (const p of pages) write(p.file, layout(p));
+if (!DETAILS_STATIC) { fs.mkdirSync(OUT_R2, { recursive: true }); for (const f of fs.readdirSync(OUT_R2)) fs.rmSync(path.join(OUT_R2, f), { recursive: true, force: true }); }
+const writeTo = (root, rel, s) => { const f = path.join(root, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, s); };
+const write = (rel, s) => writeTo(OUT, rel, s);
+// Large inline SVGs (the lockups in the header and footer, the monogram words on cards) repeat on every
+// page. They move into the shared sprite (assets/mono.svg) as symbols and each page keeps a <use> with the
+// same outer <svg> attributes, the pattern the section monograms already use. This keeps a detail page
+// near 30 KB (B5) instead of ~90 KB. SVGs with ids or url(#…) references stay inline.
+const SPRITE_MIN = 600;
+const spriteize = (html) => html.replace(/<svg([^>]*)>([\s\S]*?)<\/svg>/g, (all, attrs, body) => {
+  if (body.length < SPRITE_MIN || /\bid=|url\(#|<use\b/.test(body)) return all;
+  const vb = (attrs.match(/viewBox="([^"]+)"/) || [])[1]; if (!vb) return all;
+  const key = 's' + crypto.createHash('sha256').update(vb + '|' + body).digest('hex').slice(0, 12);
+  if (!MONO_SPRITE[key]) MONO_SPRITE[key] = { vb, body };
+  return `<svg${attrs}><use href="/assets/mono.svg#m-${key}"/></svg>`;
+});
+let detailBytes = 0, detailCount = 0, detailMax = 0;
+for (const p of pages) {
+  const html = spriteize(layout(p));
+  if (p.detail) { writeTo(OUT_R2, p.file, html); detailCount++; detailBytes += html.length; detailMax = Math.max(detailMax, html.length); }
+  else write(p.file, html);
+}
 fs.cpSync(path.join(SITE, 'assets'), path.join(OUT, 'assets'), { recursive: true });
 write('assets/mono.svg', `<svg xmlns="http://www.w3.org/2000/svg">${Object.entries(MONO_SPRITE).sort().map(([m, x]) => `<symbol id="m-${m}" viewBox="${x.vb}">${x.body}</symbol>`).join('')}</svg>`);
 for (const r of ROWS) if (r.manifest) {
-  fs.mkdirSync(path.join(OUT, 'manifests', r.org), { recursive: true });
-  fs.copyFileSync(manifestFile[r.id], path.join(OUT, 'manifests', `${r.id}.json`));
-  if (minisig[r.id]) fs.copyFileSync(minisig[r.id], path.join(OUT, 'manifests', `${r.id}.json.minisig`));
+  fs.mkdirSync(path.join(OUT_R2, 'manifests', r.org), { recursive: true });
+  fs.copyFileSync(manifestFile[r.id], path.join(OUT_R2, 'manifests', `${r.id}.json`));
+  if (minisig[r.id]) fs.copyFileSync(minisig[r.id], path.join(OUT_R2, 'manifests', `${r.id}.json.minisig`));
 }
 for (const f of ['chain.jsonl', 'head.json', 'head.json.minisig']) if (exists(path.join(ROOT, 'ledger', f))) fs.copyFileSync(path.join(ROOT, 'ledger', f), path.join(OUT, 'ledger', f));
 if (exists(path.join(ROOT, 'spec/keys/freeweights-v0.pub'))) { fs.mkdirSync(path.join(OUT, 'keys'), { recursive: true }); fs.copyFileSync(path.join(ROOT, 'spec/keys/freeweights-v0.pub'), path.join(OUT, 'keys/freeweights-v0.pub')); }
@@ -1137,4 +1161,5 @@ chunk(VARIANT_ROWS, CARD_SHARD).forEach((rs, i) => { rs.forEach((r) => (cardPage
   write('data/catalog.json', JSON.stringify({ generated_from: dataSource, entries: TOP_ALL.length, variants: VARIANT_ROWS.length, sections: SECTIONS.map((s) => ({ ...s, count: secCount(s) })), collections: COLLECTIONS.map(({ test, rows, ...c }) => ({ ...c, count: rows.length })), shards: { cards: '/data/catalog/p<N>.json (top level) and v<N>.json (variants), ' + CARD_SHARD + ' per file', search: '/data/search/index.json' } }));
 }
 write('_redirects', [...['/alt.freeweights', ...SECTIONS.map((s) => s.id)].map((s) => `/${s} /${s}/ 301`), ...OLD_CHARTER.flatMap((o) => [`${o.slice(0, -1)} ${CHARTER_PATH} 301`, `${o} ${CHARTER_PATH} 301`])].join('\n') + '\n');
+console.log(`Detail pages: ${detailCount} -> ${DETAILS_STATIC ? 'dist (FW_DETAILS=static)' : path.relative(process.cwd(), OUT_R2) || OUT_R2}, average ${(detailBytes / Math.max(1, detailCount) / 1024).toFixed(1)} KB, largest ${(detailMax / 1024).toFixed(1)} KB`);
 console.log(`Freeweights site: ${pages.length} pages, ${LISTED.length} listed, ${WANTED.length} wanted, ${DOCS.length} docs, chain ${CHAIN.length} (${CHAIN_CHECK.bad ? 'BROKEN at ' + CHAIN_CHECK.bad : 'ok'}), head sig ${HEAD_SIG.state}, data from ${dataSource} -> ${path.relative(process.cwd(), OUT) || OUT}`);

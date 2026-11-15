@@ -1,5 +1,5 @@
 import type { Env, Manifest, CatalogRow, ManifestSource } from './types';
-import { CATALOG_JSON, CATALOG_ETAG, MANIFESTS, LOGOS } from './data.generated';
+import { CATALOG_JSON, CATALOG_ETAG, HOSTED, LOGOS } from './data.generated';
 import {
   addDownload, addOriginBytes, allTotals, bumpCounter, effective, isPaidOrigin,
   originGuardOn, sourceSummary, totalsFor,
@@ -9,6 +9,9 @@ import { countRule, isDailyCapError, pausedBody } from './rules';
 
 const CATALOG: { sections: unknown[]; models: CatalogRow[] } = JSON.parse(CATALOG_JSON);
 const ROWS = new Map(CATALOG.models.map((r) => [r.id, r]));
+// Manifests live in R2 (B3), not in the bundle. Parsed manifests are kept per isolate (small LRU);
+// HOSTED (bundled, id -> pinned commit) says which ids have one, so link-only rows never touch R2.
+const MANIFEST_CACHE_MAX = 512;
 const manifestCache = new Map<string, Manifest>();
 const countCache = new Map<string, (path: string) => boolean>();
 const counts = (m: Manifest, path: string) => {
@@ -16,13 +19,37 @@ const counts = (m: Manifest, path: string) => {
   if (!rule) { rule = countRule(m.files); countCache.set(m.id, rule); }
   return rule(path);
 };
-const getManifest = (id: string): Manifest | null => {
-  const raw = MANIFESTS[id];
-  if (!raw) return null;
+const manifestKey = (id: string, sig = false) => `manifests/${id}.json${sig ? '.minisig' : ''}`;
+async function getManifest(env: Env, id: string): Promise<Manifest | null> {
+  if (!Object.hasOwn(HOSTED, id)) return null;
   let m = manifestCache.get(id);
-  if (!m) { m = JSON.parse(raw.json) as Manifest; manifestCache.set(id, m); }
+  if (m) { manifestCache.delete(id); manifestCache.set(id, m); return m; } // LRU touch
+  const obj = await env.FW.get(manifestKey(id));
+  if (!obj) return null; // listed as hosted but not uploaded yet: treated like a missing manifest
+  m = JSON.parse(await obj.text()) as Manifest;
+  manifestCache.set(id, m);
+  if (manifestCache.size > MANIFEST_CACHE_MAX) manifestCache.delete(manifestCache.keys().next().value!);
   return m;
-};
+}
+
+// ---- Static objects from R2 (B6 fallback) -----------------------------------------------------
+// Manifests, signatures and model detail pages are served from R2 on their public URLs. The edge
+// cache holds each response for 5 minutes, so R2 is read about once per object per colo per 5 minutes;
+// If-None-Match answers 304 from the R2 etag. Exact stored bytes, never re-serialized.
+async function serveObject(req: Request, env: Env, ctx: ExecutionContext, key: string, type: string): Promise<Response | null> {
+  const cache = (globalThis as unknown as { caches?: { default: Cache } }).caches?.default;
+  const ckey = new Request(new URL(req.url).origin + '/' + key, { method: 'GET' });
+  let res = cache ? await cache.match(ckey) : undefined;
+  if (!res) {
+    const obj = await env.FW.get(key);
+    if (!obj) return null;
+    res = new Response(obj.body, { headers: { 'content-type': type, etag: obj.httpEtag, 'cache-control': 'public, max-age=300', ...CORS } });
+    if (cache) ctx.waitUntil(cache.put(ckey, res.clone()));
+  }
+  const etag = res.headers.get('etag');
+  if (etag && req.headers.get('if-none-match') === etag) return new Response(null, { status: 304, headers: { etag, 'cache-control': 'public, max-age=300', ...CORS } });
+  return req.method === 'HEAD' ? new Response(null, { status: res.status, headers: res.headers }) : res;
+}
 
 // Browsers may read paging (Link), caching (ETag) and the pinned commit; without expose-headers CORS hides them.
 const CORS = { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'Link, ETag, X-Repo-Commit, X-Total-Count' };
@@ -67,9 +94,10 @@ function tokenKind(req: Request, url: URL): 'hf' | 'alt' | null {
 const SITE_ORIGIN = 'https://freeweights.allternit.com';
 const publisherLogo = (id: string) => { const f = LOGOS[id.split('/')[0]]; return f ? `${SITE_ORIGIN}/assets/orgs/${encodeURIComponent(f)}` : null; };
 
-function summary(r: CatalogRow, m: Manifest | undefined, downloads: number) {
+// The pinned commit comes from the bundled HOSTED map, so search never reads a manifest.
+function summary(r: CatalogRow, downloads: number) {
   return {
-    id: r.id, modelId: r.id, sha: m?.upstream.commit ?? null,
+    id: r.id, modelId: r.id, sha: HOSTED[r.id] ?? null,
     pipeline_tag: r.tasks[0], library_name: r.formats[0],
     tags: [...r.tasks, ...r.formats, `license:${r.license_id}`, r.section],
     downloads, lastModified: r.added_at, section: r.section, license: r.license_id, badges: r.badges,
@@ -133,15 +161,16 @@ async function search(env: Env, url: URL): Promise<Response> {
     const next = new URL(url); next.searchParams.set('cursor', String(offset + limit));
     headers.Link = `<${next.pathname}${next.search}>; rel="next"`;
   }
-  return json(page.map((r) => summary(r, getManifest(r.id) ?? undefined, dl(r))), 200, headers);
+  return json(page.map((r) => summary(r, dl(r))), 200, headers);
 }
 
 async function detail(env: Env, id: string): Promise<Response> {
-  const m = getManifest(id), r = ROWS.get(id);
+  const r = ROWS.get(id);
   if (!r) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
+  const m = await getManifest(env, id);
   const totals = await totalsFor(env, 'model', [id]);
   if (!m) { // link-only row: listed with its license and source link, no files served here
-    return json({ ...summary(r, undefined, totals.get(id) ?? 0), siblings: [], sources: [], upstream_url: r.upstream_url, catalog: r });
+    return json({ ...summary(r, totals.get(id) ?? 0), sha: null, siblings: [], sources: [], upstream_url: r.upstream_url, catalog: r });
   }
   const guard = await originGuardOn(env);
   const sources = [] as unknown[];
@@ -162,7 +191,7 @@ async function detail(env: Env, id: string): Promise<Response> {
     (sources as { type: string }[]).sort((a, b) => Number(b.type === 'seeded') - Number(a.type === 'seeded'));
   }
   return json({
-    ...summary(r, m, totals.get(id) ?? 0),
+    ...summary(r, totals.get(id) ?? 0),
     siblings: m.files.map((f) => ({ rfilename: f.path })),
     sources, manifest_url: r.manifest_url, upstream_url: r.upstream_url, catalog: r,
   });
@@ -170,8 +199,8 @@ async function detail(env: Env, id: string): Promise<Response> {
 
 const revOk = (m: Manifest, rev: string) => rev === 'main' || rev === m.upstream.commit;
 
-function tree(id: string, rev: string): Response {
-  const m = getManifest(id);
+async function tree(env: Env, id: string, rev: string): Promise<Response> {
+  const m = await getManifest(env, id);
   if (!m) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
   if (!revOk(m, rev)) return err(404, 'revision_not_found', `Revision ${rev} is not pinned for ${id}. Use main or ${m.upstream.commit}.`);
   return json(m.files.map((f) => ({
@@ -184,7 +213,7 @@ function tree(id: string, rev: string): Response {
 
 // ---- Resolve ----------------------------------------------------------------------------------
 async function resolve(env: Env, ctx: ExecutionContext, req: Request, id: string, rev: string, path: string): Promise<Response> {
-  const m = getManifest(id);
+  const m = await getManifest(env, id);
   if (!m) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
   if (m.takedown) return err(451, 'removed_after_takedown', `${id} was removed after a takedown.`);
   if (!revOk(m, rev)) return err(404, 'revision_not_found', `Revision ${rev} is not pinned for ${id}. Use main or ${m.upstream.commit}.`);
@@ -251,23 +280,29 @@ export default {
       // to the upstream host for catalog models only, pinned to the manifest commit (client matrix retest).
       if ((mt = p.match(/^\/api\/models\/([^/]+)\/([^/]+)\/xet-read-token\/([^/]+)$/))) {
         const id = `${seg(mt[1])}/${seg(mt[2])}`;
-        const m = getManifest(id);
+        const m = await getManifest(env, id);
         if (!m) return err(404, 'model_not_found', `No model ${id} in the catalog.`);
         if (!revOk(m, seg(mt[3]))) return err(404, 'revision_not_found', `Revision ${seg(mt[3])} is not pinned for ${id}.`);
         if (m.upstream.host !== 'huggingface.co') return err(404, 'xet_not_available', 'This source does not use Xet storage.');
         const up = await fetch(`https://huggingface.co/api/models/${m.upstream.repo}/xet-read-token/${m.upstream.commit}`, { headers: { accept: 'application/json' } });
         return new Response(up.body, { status: up.status, headers: { 'content-type': up.headers.get('content-type') ?? 'application/json', 'cache-control': 'no-store', ...CORS } });
       }
-      if ((mt = p.match(/^\/api\/models\/([^/]+)\/([^/]+)\/tree\/([^/]+)$/))) return tree(`${seg(mt[1])}/${seg(mt[2])}`, seg(mt[3]));
+      if ((mt = p.match(/^\/api\/models\/([^/]+)\/([^/]+)\/tree\/([^/]+)$/))) return await tree(env, `${seg(mt[1])}/${seg(mt[2])}`, seg(mt[3]));
       if ((mt = p.match(/^\/api\/models\/([^/]+)\/([^/]+)(?:\/revision\/[^/]+)?$/))) {
         const did = `${seg(mt[1])}/${seg(mt[2])}`;
         return await d1(() => detail(env, did));
       }
       if ((mt = p.match(/^\/manifests\/([^/]+)\/([^/]+?)\.json(\.minisig)?$/))) {
-        const raw = MANIFESTS[`${seg(mt[1])}/${seg(mt[2])}`];
-        const body = mt[3] ? raw?.sig : raw?.json; // exact stored bytes, never re-serialized
-        if (!body) return err(404, 'manifest_not_found', 'No such manifest.');
-        return new Response(req.method === 'HEAD' ? null : body, { headers: { 'content-type': mt[3] ? 'text/plain; charset=utf-8' : 'application/json', 'cache-control': 'public, max-age=300', ...CORS } });
+        const mid = `${seg(mt[1])}/${seg(mt[2])}`;
+        const res = Object.hasOwn(HOSTED, mid) ? await serveObject(req, env, ctx, manifestKey(mid, !!mt[3]), mt[3] ? 'text/plain; charset=utf-8' : 'application/json') : null;
+        return res ?? err(404, 'manifest_not_found', 'No such manifest.');
+      }
+      // Model and tool detail pages (B5) live in R2 at <section>/<org>/<repo>/index.html, on the same
+      // URLs as before. Section list pages (/<section>/page/<n>/) and anything not in R2 go to Pages.
+      if ((mt = p.match(/^\/(alt\.freeweights\.[a-z0-9.-]+)\/([^/]+)\/([^/]+)(\/(?:index\.html)?)?$/)) && mt[2] !== 'page') {
+        if (!mt[4]) return new Response(null, { status: 301, headers: { location: p + '/' + url.search } });
+        const res = await serveObject(req, env, ctx, `${mt[1]}/${seg(mt[2])}/${seg(mt[3])}/index.html`, 'text/html; charset=utf-8');
+        if (res) return res;
       }
       if ((mt = p.match(/^\/([^/]+)\/([^/]+)\/resolve\/([^/]+)\/(.+)$/)) && mt[1] !== 'api' && mt[1] !== 'manifests') {
         const [o, r, rev, path] = [seg(mt[1]), seg(mt[2]), seg(mt[3]), seg(mt[4])];
@@ -279,7 +314,7 @@ export default {
     }
     // Production runs on the route freeweights.allternit.com/* because Cloudflare routes cannot
     // match /*/resolve/* mid-path. Everything the Worker does not own goes to the Pages origin.
-    if (env.PASSTHROUGH === '1') return fetch(req);
+    if (env.PASSTHROUGH === '1') return env.PAGES_ORIGIN ? fetch(new Request(env.PAGES_ORIGIN + p + url.search, req)) : fetch(req);
     return err(404, 'not_found', 'No such route.');
   },
 } satisfies ExportedHandler<Env>;

@@ -1,5 +1,9 @@
 export interface Env {
   DB: D1Database;
+  /** R2 bucket "freeweights": manifests, signatures and model detail pages. */
+  FW: R2Bucket;
+  /** Pass-through origin for paths the Worker does not own (preview only; production fetches the request as is). */
+  PAGES_ORIGIN?: string;
   FRESH_MS?: string;
   CHECK_MODE?: string;
   HF_CHECK_CAP?: string;

@@ -2,7 +2,7 @@
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn, execFileSync } from 'node:child_process';
-import { mkdtempSync, readFileSync, readdirSync } from 'node:fs';
+import { mkdtempSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,10 +15,15 @@ const persist = mkdtempSync(join(tmpdir(), 'fw-d1-'));
 let proc;
 
 // Pick the model + LFS file from what was bundled, so the test follows the data.
-const gen = readFileSync(join(here, 'src', 'data.generated.ts'), 'utf8');
-const MANIFESTS = JSON.parse(gen.match(/export const MANIFESTS[^=]*= (.*);\n$/s)[1]);
-const [id, { json }] = Object.entries(MANIFESTS).find(([, v]) => JSON.parse(v.json).files.some((f) => f.lfs));
+// Manifests are read from R2 (B3); build-data lists their local files, and before() seeds a local R2
+// with the chosen manifest, its signature and one detail page.
+execFileSync('node', ['scripts/build-data.mjs'], { cwd: here, stdio: 'pipe' });
+const FILES = JSON.parse(readFileSync(join(here, '.data', 'manifest-files.json'), 'utf8'));
+const [id, mf] = Object.entries(FILES).find(([, v]) => JSON.parse(readFileSync(v.file, 'utf8')).files.some((f) => f.lfs));
+const json = readFileSync(mf.file, 'utf8');
 const man = JSON.parse(json);
+const PAGE_KEY = `${man.section}/${id}/index.html`;
+const PAGE_HTML = '<!doctype html><title>detail page from R2</title>';
 const lfs = man.files.find((f) => f.lfs);
 const plain = man.files.find((f) => !f.lfs);
 const rpath = (f, rev = 'main') => `/${id}/resolve/${rev}/${f.path.split('/').map(encodeURIComponent).join('/')}`;
@@ -27,6 +32,11 @@ const get = (p, init = {}) => fetch(BASE + p, { redirect: 'manual', ...init });
 before(async () => {
   const wr = (...a) => execFileSync('npx', ['wrangler', ...a, '--persist-to', persist], { cwd: here, stdio: 'pipe' });
   wr('d1', 'execute', 'freeweights', '--local', '--file=schema.sql');
+  const pageFile = join(persist, 'page.html'); writeFileSync(pageFile, PAGE_HTML);
+  const put = (key, file, type) => wr('r2', 'object', 'put', `freeweights/${key}`, '--local', '--file', file, '--content-type', type);
+  put(`manifests/${id}.json`, mf.file, 'application/json');
+  if (mf.sig) put(`manifests/${id}.json.minisig`, mf.sig, 'text/plain');
+  put(PAGE_KEY, pageFile, 'text/html');
   proc = spawn('npx', ['wrangler', 'dev', '--local', '--port', PORT, '--persist-to', persist, '--var', 'CHECK_MODE:offline', '--var', 'PASSTHROUGH:0'], { cwd: here, stdio: 'ignore' });
   for (let i = 0; i < 120; i++) {
     try { if ((await fetch(BASE + '/api/catalog')).ok) return; } catch {}
@@ -165,6 +175,27 @@ test('detail, tree, catalog, manifest passthrough', async () => {
   const m = await get(`/manifests/${id}.json`);
   assert.equal(await m.text(), json); // exact bytes
   assert.equal((await get('/manifests/x/y.json')).status, 404);
+});
+
+test('B3/B6: manifest signature and detail pages come from R2; etag answers 304; list pages are not R2 pages', async () => {
+  const m = await get(`/manifests/${id}.json`);
+  const etag = m.headers.get('etag');
+  assert.ok(etag);
+  assert.equal((await get(`/manifests/${id}.json`, { headers: { 'if-none-match': etag } })).status, 304);
+  if (mf.sig) {
+    const sig = await get(`/manifests/${id}.json.minisig`);
+    assert.equal(sig.status, 200);
+    assert.equal(await sig.text(), readFileSync(mf.sig, 'utf8'));
+  }
+  const page = await get(`/${PAGE_KEY.replace(/index\.html$/, '')}`);
+  assert.equal(page.status, 200);
+  assert.match(page.headers.get('content-type'), /text\/html/);
+  assert.equal(await page.text(), PAGE_HTML);
+  const bare = await get(`/${PAGE_KEY.replace(/\/index\.html$/, '')}`);
+  assert.equal(bare.status, 301);
+  assert.equal(new URL(bare.headers.get('location'), BASE).pathname, `/${PAGE_KEY.replace(/index\.html$/, '')}`);
+  assert.equal((await get(`/${man.section}/page/2/`)).status, 404); // passthrough is off in tests: Pages would answer
+  assert.equal((await get(`/${man.section}/nobody/none/`)).status, 404);
 });
 
 // Plan A8: one count per entry download (not per file), stored in download_totals and read by
