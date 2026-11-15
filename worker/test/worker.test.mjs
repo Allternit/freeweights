@@ -123,6 +123,11 @@ test('library, apps, language and params filters narrow /api/models', async () =
   assert.ok(both.length >= gguf.length);
   const ollama = await (await get('/api/models?apps=Ollama&limit=1000')).json();
   assert.ok(ollama.every((m) => m.tags.includes('gguf')), 'Ollama rows are GGUF rows');
+  // apps and language are "every value": adding a value can only remove rows
+  const one = await (await get('/api/models?apps=Ollama&max_size=2000000000&limit=1000')).json();
+  const two = await (await get('/api/models?apps=Ollama,vLLM&max_size=2000000000&limit=1000')).json();
+  const oneIds = new Set(one.map((m) => m.id));
+  assert.ok(one.length < 1000 && two.length <= one.length && two.every((m) => oneIds.has(m.id)), 'apps=Ollama,vLLM is a subset of apps=Ollama');
   const big = await (await get('/api/models?params_min=70000000000&limit=1000')).json();
   const small = await (await get('/api/models?params_max=1000000000&limit=1000')).json();
   const bigIds = new Set(big.map((m) => m.id));

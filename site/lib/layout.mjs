@@ -58,6 +58,7 @@ ${body}
   <div class="f-line"><b>Allternit, the open source alternative.</b> Freeweights code is published under an open license. ${esc(SUPPORT_LINE)} Support never buys ranking, placement or access.</div>
 </div></footer>
 <script src="/assets/fw-cards.js" defer></script>
+<script src="/assets/facetlogic.js" defer></script>
 <script src="/assets/fw.js" defer></script>
 </body>
 </html>

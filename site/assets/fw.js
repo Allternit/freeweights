@@ -115,10 +115,10 @@
     var out = [['model', 'model', 'models'], ['dataset', 'dataset', 'datasets'], ['tool', 'tool', 'tools']].filter(function (k) { return c[k[0]]; }).map(function (k) { return c[k[0]] + ' ' + (c[k[0]] === 1 ? k[1] : k[2]); });
     return out.join(' · ') || '0 entries';
   }
-  function matches(r, skip) {
+  function matches(r, skip, noFacets) {
     if (r.v && !state.q) return false;
     if (state.q) { var words = state.q.toLowerCase().split(/\s+/).filter(Boolean); for (var w = 0; w < words.length; w++) if (r._t.indexOf(words[w]) < 0) return false; }
-    for (var k in state.f) { if (k === skip || !state.f[k].length) continue; var vals = (r.fv && r.fv[k]) || []; if (!state.f[k].some(function (v) { return vals.indexOf(v) >= 0; })) return false; }
+    if (!noFacets && !window.FWFacet.passes(r.fv, state.f, skip)) return false;
     return true;
   }
   var SORTS = {
@@ -179,7 +179,7 @@
   }
   function rowHtml(e) {
     var lg = DICT.logos[e.org] ? '/assets/orgs/' + DICT.logos[e.org] : '', mono = DICT.mono[e.fam] || '', isT = e.kind === 'tool';
-    var lcl = (DICT.lc[e.lc] || e.lc).replace(' (link only)', '');
+    var lcl = (DICT.lc[e.lc] || e.lc).replace(' (link only)', '').replace('License not reviewed', 'Not reviewed');
     return '<a class="msg" href="/' + esc(e.sec) + '/' + esc(e.id) + '/" data-id="' + esc(e.id) + '"><span class="s">' +
       (lg ? '<img class="org msg-org" src="' + esc(lg) + '" alt="" width="22" height="22" loading="lazy" decoding="async">' : '<span class="msg-org msg-mono">' + FW.word(mono, 9, 'mono-svg') + '</span>') +
       '<span class="s-t"><span class="s-n">' + esc(e.n) + (e.smp ? '<span class="sample">sample</span>' : '') + '</span><small>' + (e.fv.how && e.fv.how[0] ? '<span class="hw ' + (/^Hosted/.test(e.fv.how[0]) ? 'hw-host' : 'hw-pub') + '">' + esc(e.fv.how[0]) + '</span> ' : '') + '<b>From:</b> ' + esc(e.org) + ' <b>in</b> ' + esc(e.sec) + '</small></span></span>' +
@@ -208,8 +208,7 @@
     // facet counts: each facet counts against every other active filter
     if (facetForm && src) $$('[data-facet]', facetForm).forEach(function (fs) {
       var k = fs.getAttribute('data-facet');
-      var base = src.filter(function (r) { return matches(r, k); });
-      var counts = {}; base.forEach(function (r) { ((r.fv && r.fv[k]) || []).forEach(function (v) { counts[v] = (counts[v] || 0) + 1; }); });
+      var counts = window.FWFacet.counts(src, state.f, k, function (r) { return matches(r, k, true); });
       $$('input', fs).forEach(function (i) {
         var n = counts[i.value] || 0;
         var oc = i.parentNode.querySelector('[data-oc]'); if (oc) oc.textContent = n;

@@ -346,9 +346,11 @@ html:not(.js) [data-needs-js]{display:none!important}
 .fchip b{color:var(--ink);font-weight:600}
 .fchip:hover{background:var(--fill2)}
 .fclear{background:none;border:0;font-size:12.5px;padding:2px 4px}
-.list-h,.msg{display:grid;grid-template-columns:minmax(0,1fr) 76px 64px 112px 88px;gap:10px;align-items:center}
+.list-h,.msg{display:grid;grid-template-columns:minmax(0,1fr) 76px 64px 116px 88px;gap:10px;align-items:center}
 .list-h{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.08em;padding:4px 8px 8px;border-bottom:1px solid var(--line);margin-bottom:4px}
 .list-h .r{text-align:right}
+.msg .lcc{min-width:0}
+.msg .lcc .lc{max-width:100%;overflow:hidden;text-overflow:ellipsis;display:block;padding:0 7px}
 .msg{padding:7px 8px;border-radius:8px;text-decoration:none;font-size:13px;color:var(--ink)}
 .msg:hover{background:var(--fill)}
 .msg[data-sel]{background:var(--fill2)}
@@ -375,7 +377,9 @@ html:not(.js) [data-needs-js]{display:none!important}
 }
 @keyframes dk-l{from{opacity:.4;transform:translateX(24px)}to{opacity:1;transform:none}}
 @keyframes dk-r{from{opacity:.4;transform:translateX(-24px)}to{opacity:1;transform:none}}
-.preview{padding:18px 16px;border-left:1px solid var(--line)}
+.preview{padding:18px 16px;position:sticky;top:62px;align-self:start;max-height:calc(100vh - 62px);overflow:auto}
+/* the divider is drawn on the grid so it runs the full height while the preview pane sticks */
+@media (min-width:1181px){.cat:not([data-view=grid]):not([data-view=deck]){background:linear-gradient(var(--line),var(--line)) no-repeat calc(100% - 340px) 0/1px 100%}}
 .chips{display:none;gap:6px;overflow-x:auto;padding:2px 16px 12px;margin:0 -16px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chip{border:1px solid var(--line2);border-radius:8px;padding:4px 10px;font-size:12.5px;color:var(--ink2);background:var(--bg);text-decoration:none;flex:none;white-space:nowrap}
