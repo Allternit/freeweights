@@ -51,7 +51,7 @@ class CloudConnectorPlan(unittest.TestCase):
     def test_dry_run_sends_nothing_and_names_placeholders(self):
         self.assertEqual(self.plan["mode"], "dry-run")
         self.assertEqual(self.plan["zone"], "$CF_ZONE_ID")
-        self.assertEqual(self.plan["r2_host"], "freeweights-r2.allternit.com")
+        self.assertEqual(self.plan["r2_host"], "freeweights-files.allternit.com")
         self.assertNotIn("r2.dev", json.dumps(self.plan))
 
     def test_each_rule_has_phase_and_target(self):
@@ -63,7 +63,7 @@ class CloudConnectorPlan(unittest.TestCase):
         self.assertEqual(fv["target_url"]["expression"], 'concat(http.request.uri.path, "/")')
         self.assertEqual(r["fw_cc_cache"]["action_parameters"]["edge_ttl"]["default"], 300)
         c = self.plan["connector"]
-        self.assertEqual((c["provider"], c["parameters"]["host"]), ("cloudflare_r2", "freeweights-r2.allternit.com"))
+        self.assertEqual((c["provider"], c["parameters"]["host"]), ("cloudflare_r2", "freeweights-files.allternit.com"))
         self.assertTrue(c["description"].startswith("freeweights-cc:"))
 
     def test_csp_comes_from_csp_mjs(self):

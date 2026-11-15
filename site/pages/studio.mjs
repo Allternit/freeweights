@@ -6,7 +6,7 @@ import { page } from '../lib/registry.mjs';
 export function build() {
   // Decision 1 hardware ids. None has been run by Allternit yet, so every row says so (decision 6).
   const hardware = [['Apple silicon (Mac)', 'MLX for LoRA and QLoRA; PyTorch MPS for full fine-tune and DPO'], ['NVIDIA on Linux', 'PyTorch CUDA'], ['NVIDIA on Windows', 'PyTorch CUDA'], ['AMD on Linux', 'PyTorch ROCm'], ['Intel GPU on Linux or Windows', 'PyTorch XPU'], ['CPU (also AMD on Windows and Intel Macs)', 'PyTorch CPU: LoRA only, small models, slow']];
-  const engines = [['Allternit Tune (our fork)', 'training'], ['Upstream Unsloth (unmodified)', 'training'], ['Axolotl', 'training'], ['TRL + PEFT', 'training'], ['LLaMA-Factory', 'training'], ['torchtune', 'training'], ['mlx-lm', 'training on Mac'], ['Allternit engine', 'local inference'], ['llama.cpp', 'local inference'], ['MLX', 'local inference'], ['Ollama', 'local inference'], ['vLLM', 'server inference'], ['SGLang', 'server inference']];
+  const engines = [['Allternit Tune (Apache-2.0)', 'training'], ['Upstream Unsloth (unmodified)', 'training'], ['Axolotl', 'training'], ['TRL + PEFT', 'training'], ['LLaMA-Factory', 'training'], ['torchtune', 'training'], ['mlx-lm', 'training on Mac'], ['Allternit engine', 'local inference'], ['llama.cpp', 'local inference'], ['MLX', 'local inference'], ['Ollama', 'local inference'], ['vLLM', 'server inference'], ['SGLang', 'server inference']];
   page({ path: '/studio/', nav: 'studio', file: 'studio/index.html', title: 'Studio status', desc: 'Freeweights Studio: fine-tuning and running open models. Honest status per engine.', body: `
 <div class="wrap page-head">
   <div class="eyebrow mono"><b>alt</b>.freeweights.studio</div>

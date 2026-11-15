@@ -79,7 +79,7 @@ the detail-page keys. Section list pages (`/<section>/page/<n>/`) are excluded a
 
 Before `--apply` (once):
 - The bucket `freeweights` needs a public custom domain in the allternit.com zone, proxied (R2 → bucket → Settings →
-  Custom Domains). Cloud Connector does not support r2.dev. Default name `freeweights-r2.allternit.com`; another
+  Custom Domains). Cloud Connector does not support r2.dev. Default name `freeweights-files.allternit.com`; another
   goes in `FW_R2_HOST`. Everything in the bucket becomes public on that domain, so private-repo objects never go in it.
 - Environment, never committed: `CF_API_TOKEN` (a zone token for allternit.com with edit on Cloud Connector,
   Transform Rules, Single Redirects, Cache Rules, Workers Routes and Cache Purge, and account R2 edit for takedowns),

@@ -23,7 +23,7 @@
 # Environment (never committed): CF_API_TOKEN (zone token: Cloud Connector, Transform Rules, Single Redirects,
 # Cache Rules, Workers Routes; edit), CF_ZONE_ID (allternit.com). FW_HOST (default freeweights.allternit.com).
 # FW_R2_HOST: the bucket's public custom domain in the same zone, proxied (r2.dev is not supported by the
-# connector); default freeweights-r2.allternit.com.
+# connector); default freeweights-files.allternit.com.
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(dirname "$HERE")"
@@ -55,7 +55,7 @@ APPLY, ROLLBACK, AS_JSON = "--apply" in args, "--rollback" in args, "json" in ar
 API = "https://api.cloudflare.com/client/v4"
 ZONE = os.environ.get("CF_ZONE_ID") or "$CF_ZONE_ID"
 HOST = os.environ.get("FW_HOST") or "freeweights.allternit.com"
-R2_HOST = os.environ.get("FW_R2_HOST") or "freeweights-r2.allternit.com"
+R2_HOST = os.environ.get("FW_R2_HOST") or "freeweights-files.allternit.com"
 SECURITY = json.loads(os.environ["HEADERS_JSON"])
 CORS = {"access-control-allow-origin": "*", "access-control-expose-headers": "Link, ETag, X-Repo-Commit, X-Total-Count"}  # worker/src/http.ts CORS
 CC_MARK = "freeweights-cc:"
@@ -83,6 +83,11 @@ RULES = [  # (phase, rule) in apply order
     ("http_response_headers_transform", {"ref": "fw_cc_manifest_headers", "description": "Freeweights: CORS on manifests",
         "expression": f"({host} and {manifests})", "action": "rewrite",
         "action_parameters": {"headers": hdr({**CORS, "x-content-type-options": SECURITY["x-content-type-options"]})}}),
+    # The bucket's own public domain serves the same objects; give its pages the same CSP so a page opened
+    # there directly is no weaker than on freeweights.allternit.com.
+    ("http_response_headers_transform", {"ref": "fw_cc_bucket_headers", "description": "Freeweights: CSP and nosniff on the bucket's public domain",
+        "expression": f'(http.host eq "{R2_HOST}")', "action": "rewrite",
+        "action_parameters": {"headers": hdr(SECURITY)}}),
     ("http_request_cache_settings", {"ref": "fw_cc_cache", "description": "Freeweights: cache R2 static paths 5 minutes",
         "expression": f"({host} and ({manifests} or ({detail})))", "action": "set_cache_settings",
         "action_parameters": {"cache": True, "edge_ttl": {"mode": "override_origin", "default": 300}, "browser_ttl": {"mode": "override_origin", "default": 300}}}),
