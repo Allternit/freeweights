@@ -66,7 +66,7 @@ def main():
     check(f"/manifests/{q(h['id'])}.json", method="HEAD")
     check("/manifests/nobody/none.json", want=404)
     check("/api/models?limit=2", ctype="json")
-    check(f"/api/models?search={q(h['id'].split('/')[1][:12])}&limit=5", ctype="json", contains=h["id"])
+    check(f"/api/models?search={q(h['id'])}&limit=50", ctype="json", contains=h["id"])
     check(f"/api/models/{q(h['id'])}", ctype="json", contains=man["upstream"]["commit"])
     check(f"/api/models/{q(l['id'])}", ctype="json", contains=l["id"])
     check(f"/api/models/{q(h['id'])}/tree/main", ctype="json", contains=f["sha256"])

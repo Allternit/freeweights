@@ -51,7 +51,7 @@ class Api:
                 if e.code == 429 or e.code >= 500:
                     time.sleep(min(60, float(e.headers.get("retry-after") or 2 ** attempt))); continue
                 raise RuntimeError(f"{method} {path.split('/objects/')[-1]}: HTTP {e.code} {e.read()[:200]!r}")
-            except (urllib.error.URLError, TimeoutError):
+            except (urllib.error.URLError, OSError):  # includes socket.timeout on Python 3.9
                 time.sleep(2 ** attempt)
         raise RuntimeError(f"{method} {path}: gave up after retries")
 
