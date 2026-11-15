@@ -38,6 +38,18 @@ info:
     Freeweights does not run a Xet server. The write-token route answers 501 `xet_not_supported`, and
     uploads must set `HF_HUB_DISABLE_XET=1` (the client then uses the LFS routes below).
 
+    ## Launch limits and scanning
+    Uploads are bounded by the operator's `limits` table (spec/accounts-v1.md section 11): an on/off switch,
+    a site byte cap, a per-account byte cap, a per-file cap and rate limits. No number is built into this
+    spec or the code; `GET /api/fw/v1/limits` reads the values in force. Every uploaded file is scanned before
+    anyone can download it. Private repos are not offered yet: asking for one answers 402 `perk_required`.
+
+    ## Signed routes
+    `/api/fw/v1/scan/*` (the scanner) and `/api/fw/v1/admin/*` (the operator) take no Bearer credential. They
+    are signed with HMAC-SHA256 (`X-FW-Timestamp`, `X-FW-Signature`; spec/accounts-v1.md 11.4), with the
+    `SCANNER_SECRET` and `ADMIN_SECRET` keys. `GET /api/fw/v1/scan/health` and `GET /api/fw/v1/limits` are
+    public.
+
     ## Not configured
     Until the accounts database exists, every route here answers 503 `accounts_not_configured`. Public
     reads and downloads (spec/hub-api.yaml) never need an account.
@@ -54,6 +66,10 @@ tags:
   - name: webhooks
   - name: allternit
     description: Allternit-only routes (/api/fw/v1). Stubs; shapes are the contract, handlers land in later waves.
+  - name: scanner
+    description: The upload scanner on allternit-standby (HMAC SCANNER_SECRET). It holds no R2 or Cloudflare credential.
+  - name: admin
+    description: Operator routes for scripts/fw_admin.py (HMAC ADMIN_SECRET).
 paths:
   # ---------------------------------------------------------------------------------------------- identity
   /api/whoami-v2:
@@ -82,6 +98,12 @@ paths:
       tags: [repos]
       operationId: createRepo
       summary: Create a repo. 409 if it exists (clients with exist_ok treat 409 as success).
+      description: |
+        Community repos only: a model or dataset under the caller's own handle (org namespaces and `app` repos
+        answer 403 `forbidden` for now). Needs a Freeweights handle, accepted upload rules and an open upload
+        switch (staff bypass). Counted against `repos_per_user` (403 `repo_limit`) and `repo_creates_per_day`
+        (429 `rate_limited`). `private: true` or `visibility: private` answers 402 `perk_required` (perk
+        `private_storage`). A new repo is `draft` until its first commit.
       requestBody:
         required: true
         content:
@@ -95,8 +117,10 @@ paths:
               schema: {$ref: '#/components/schemas/CreateRepoResponse'}
         '400': {$ref: '#/components/responses/BadRequest'}
         '401': {$ref: '#/components/responses/Unauthorized'}
-        '403': {$ref: '#/components/responses/Forbidden'}
+        '402': {$ref: '#/components/responses/PerkRequired'}
+        '403': {$ref: '#/components/responses/UploadForbidden'}
         '409': {$ref: '#/components/responses/Conflict'}
+        '429': {$ref: '#/components/responses/RateLimited'}
         '503': {$ref: '#/components/responses/NotConfigured'}
   /api/repos/delete:
     delete:
@@ -146,6 +170,9 @@ paths:
       tags: [repos]
       operationId: updateRepoSettings
       summary: Change visibility, gating or discussions. Making a repo private needs the private-storage perk.
+      description: |
+        Private repos are not offered yet, so `visibility: private` (or `private: true`) answers 402
+        `perk_required` with perk `private_storage`.
       parameters:
         - $ref: '#/components/parameters/repoType'
         - $ref: '#/components/parameters/namespace'
@@ -176,6 +203,13 @@ paths:
       tags: [upload]
       operationId: preupload
       summary: Ask which files go through LFS. Files over 10 MB, binary files and files matched by .gitattributes LFS rules are lfs.
+      description: |
+        Also the first place the launch limits answer, before any byte moves (spec/accounts-v1.md 11.2): more
+        than `files_per_commit` files answers 400 `too_many_files`; an executable or archive (by extension or
+        by the magic bytes in `sample`) answers 400 `file_type_not_allowed`; a file over `file_max_bytes`
+        answers 413 `file_too_large`; a request whose new bytes would pass the caller's `user_cap_bytes`
+        answers 413 `storage_full`, or the site's `site_cap_bytes` 413 `site_full`. The error body names every
+        refused path in `paths`. Uploads switched off answer 403 `uploads_paused`.
       parameters:
         - $ref: '#/components/parameters/repoType'
         - $ref: '#/components/parameters/namespace'
@@ -222,20 +256,31 @@ paths:
                         shouldIgnore: {type: boolean}
                         oid: {type: string, description: Present when a file with this path already exists at rev (git blob sha1 or LFS sha256).}
                   commitOid: {type: string}
+        '400': {$ref: '#/components/responses/UploadRefused'}
         '401': {$ref: '#/components/responses/Unauthorized'}
-        '403': {$ref: '#/components/responses/Forbidden'}
+        '403': {$ref: '#/components/responses/UploadForbidden'}
         '404': {$ref: '#/components/responses/NotFound'}
+        '413': {$ref: '#/components/responses/TooLarge'}
+        '503': {$ref: '#/components/responses/NotConfigured'}
   /{namespace}/{repo}.git/info/lfs/objects/batch:
     post:
       tags: [upload]
       operationId: lfsBatchModel
       summary: Git LFS batch API for model repos. Returns presigned R2 URLs (basic PUT, or multipart parts).
       description: |
-        New objects land in the quarantine bucket. `basic` is used up to 5 GB; larger objects, or any object
-        when the client lists `multipart` first, get `multipart` with `header.chunk_size` and numbered part
-        URLs ("00001", "00002", ...). After the PUTs the client POSTs the completion body to `upload.href`
-        (multipart) and calls `verify.href`. Objects already stored for this repo come back with no actions.
-        Storage over the caller's included plus add-on bytes answers per object with error code 507.
+        New objects land in the quarantine bucket at `repos/<repo id>/blobs/<sha256>`. `basic` (one presigned
+        PUT that signs `content-length`) is used up to 64 MiB (67108864 bytes); larger objects get `multipart`
+        with `header.chunk_size` = 33554432 (32 MiB) and numbered part URLs ("00001", "00002", ...). After the
+        PUTs the client POSTs the completion body to `upload.href` (multipart) and calls `verify.href`.
+        Objects already stored for this repo come back with no actions. Presigned URLs last 1 hour; an upload
+        not verified by then expires and its bytes are released.
+
+        Each new object's bytes are reserved here, in one conditional D1 statement that checks
+        `file_max_bytes`, the caller's `user_cap_bytes` and the site's `site_cap_bytes` together (bytes in
+        quarantine, held or live all count). A refused object gets a per-object `error` and no actions:
+        code 413 (`file_too_large`) or 507 (`storage_full` or `site_full`, named in `message`). A hash on the
+        takedown blocklist gets code 451. The batch as a whole answers 403 `uploads_paused` or
+        `rules_not_accepted` when those apply.
       parameters:
         - $ref: '#/components/parameters/namespace'
         - $ref: '#/components/parameters/repo'
@@ -243,8 +288,9 @@ paths:
       responses:
         '200': {$ref: '#/components/responses/LfsBatch'}
         '401': {$ref: '#/components/responses/Unauthorized'}
-        '403': {$ref: '#/components/responses/Forbidden'}
+        '403': {$ref: '#/components/responses/UploadForbidden'}
         '404': {$ref: '#/components/responses/NotFound'}
+        '503': {$ref: '#/components/responses/NotConfigured'}
   /{lfsPrefix}/{namespace}/{repo}.git/info/lfs/objects/batch:
     post:
       tags: [upload]
@@ -258,8 +304,9 @@ paths:
       responses:
         '200': {$ref: '#/components/responses/LfsBatch'}
         '401': {$ref: '#/components/responses/Unauthorized'}
-        '403': {$ref: '#/components/responses/Forbidden'}
+        '403': {$ref: '#/components/responses/UploadForbidden'}
         '404': {$ref: '#/components/responses/NotFound'}
+        '503': {$ref: '#/components/responses/NotConfigured'}
   /api/fw/v1/lfs/{uploadId}/complete:
     post:
       tags: [upload]
@@ -290,11 +337,16 @@ paths:
         '400': {$ref: '#/components/responses/BadRequest'}
         '401': {$ref: '#/components/responses/Unauthorized'}
         '404': {$ref: '#/components/responses/NotFound'}
+        '422': {$ref: '#/components/responses/SizeMismatch'}
   /api/fw/v1/lfs/{uploadId}/verify:
     post:
       tags: [upload]
       operationId: lfsVerify
-      summary: LFS verify (the `verify.href` of an action). Checks size and sha256 of the stored object.
+      summary: LFS verify (the `verify.href` of an action). Checks the stored object's size.
+      description: |
+        The Worker HEADs the quarantine object. A size that differs from the reserved size deletes the object,
+        releases its bytes and answers 422 `size_mismatch`. The sha256 is checked by the scanner (the file is
+        held with `sha256_mismatch` when it differs), not here.
       parameters:
         - {name: uploadId, in: path, required: true, schema: {type: string, pattern: '^up_[0-9A-Za-z]+$'}}
       requestBody:
@@ -311,7 +363,7 @@ paths:
         '200': {description: Verified.}
         '401': {$ref: '#/components/responses/Unauthorized'}
         '404': {$ref: '#/components/responses/NotFound'}
-        '422': {$ref: '#/components/responses/BadRequest'}
+        '422': {$ref: '#/components/responses/SizeMismatch'}
   /api/{repoType}/{namespace}/{repo}/commit/{rev}:
     post:
       tags: [upload]
@@ -319,8 +371,11 @@ paths:
       summary: Create a commit from an NDJSON body. The first line is the header; each other line is one operation.
       description: |
         Every `lfsFile` must have been uploaded and verified for this repo. After the commit the repo goes
-        to `scanning`; new files are scanned before they are served (state `live`, or `held`).
-        With `create_pr=1` the commit goes to a new `refs/pr/<num>` and a pull request is opened.
+        to `scanning` and one `scans` row is queued per new file; new files are scanned before they are served
+        (state `live` when every scan of the commit is clean, or `held`). Regular (non-LFS) files in the body
+        are stored in quarantine and scanned the same way.
+        Limits: `files_per_commit` (400 `too_many_files`), `commits_per_hour` (429 `rate_limited`), the upload
+        switch (403 `uploads_paused`). `create_pr=1` answers 501 `not_implemented` for now (no PRs at launch).
       parameters:
         - $ref: '#/components/parameters/repoType'
         - $ref: '#/components/parameters/namespace'
@@ -347,12 +402,14 @@ paths:
                   commitOid: {$ref: '#/components/schemas/CommitOid'}
                   commitUrl: {type: string, format: uri}
                   pullRequestUrl: {type: [string, 'null'], format: uri, description: Set when create_pr=1.}
-        '400': {$ref: '#/components/responses/BadRequest'}
+        '400': {$ref: '#/components/responses/UploadRefused'}
         '401': {$ref: '#/components/responses/Unauthorized'}
-        '403': {$ref: '#/components/responses/Forbidden'}
+        '403': {$ref: '#/components/responses/UploadForbidden'}
         '404': {$ref: '#/components/responses/NotFound'}
         '409': {$ref: '#/components/responses/Conflict'}
         '412': {description: parentCommit is not the head of rev., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '429': {$ref: '#/components/responses/RateLimited'}
+        '503': {$ref: '#/components/responses/NotConfigured'}
   /api/{repoType}/{namespace}/{repo}/refs:
     get:
       tags: [upload]
@@ -919,7 +976,13 @@ paths:
         required: true
         content:
           application/json:
-            schema: {type: object, required: [handle], properties: {handle: {$ref: '#/components/schemas/Handle'}, name: {type: string}}}
+            schema:
+              type: object
+              required: [handle]
+              properties:
+                handle: {$ref: '#/components/schemas/Handle'}
+                name: {type: string}
+                acceptRules: {type: boolean, const: true, description: Accepts the upload rules (policy/community-rules.md) and sets rules_accepted_at. Uploads need it.}
       responses:
         '200': {description: Created., content: {application/json: {schema: {$ref: '#/components/schemas/Account'}}}}
         '409': {$ref: '#/components/responses/Conflict'}
@@ -939,6 +1002,7 @@ paths:
                 bio: {type: string, maxLength: 2000}
                 homepage: {type: string, format: uri}
                 avatarUrl: {type: string, format: uri}
+                acceptRules: {type: boolean, const: true, description: Accepts the upload rules (sets rules_accepted_at once; sending it again keeps the first time).}
       responses:
         '200': {description: Updated., content: {application/json: {schema: {$ref: '#/components/schemas/Account'}}}}
         '409': {$ref: '#/components/responses/Conflict'}
@@ -946,6 +1010,10 @@ paths:
       tags: [allternit]
       operationId: deleteAccount
       summary: Delete the Freeweights profile, its repos and webhooks. Discussions and comments stay, shown as a deleted account.
+      description: |
+        The account's repos are marked `removed` with `removed_reason = account_deleted` at once (their files
+        stop being served; resolve answers 404) and their bytes are released from storage_usage and the site
+        total when the files are deleted.
       responses:
         '200': {description: Deleted.}
   /api/fw/v1/follows:
@@ -1169,12 +1237,395 @@ paths:
         '200': {description: Received., content: {application/json: {schema: {type: object, required: [id, status], properties: {id: {type: string}, status: {type: string, enum: [open]}}}}}}
         '401': {$ref: '#/components/responses/Unauthorized'}
 
+  # ------------------------------------------------------------------------------------- launch limits
+  /api/fw/v1/limits:
+    get:
+      tags: [allternit]
+      operationId: getLimits
+      summary: The upload limits in force, the site total and whether scanning is delayed. Public; a credential is ignored.
+      description: |
+        Read from the `limits` table at request time (spec/accounts-v1.md 11.1); no number is built in. A cap
+        whose key is unset reads null, and `open` is then false. `Cache-Control: public, max-age=60`.
+      security: [{}]
+      responses:
+        '200':
+          description: Limits.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Limits'}
+        '503': {$ref: '#/components/responses/NotConfigured'}
+  /api/fw/v1/repos:
+    get:
+      tags: [allternit]
+      operationId: listMyRepos
+      summary: The caller's community repos in every state, with scan progress. The account page and the upload UIs read it.
+      parameters:
+        - {name: kind, in: query, schema: {type: string, enum: [model, dataset]}}
+      responses:
+        '200':
+          description: Repos, newest first.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [repos]
+                properties:
+                  repos: {type: array, items: {$ref: '#/components/schemas/MyRepo'}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {description: Signed in but no Freeweights profile yet (profile_not_found)., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '503': {$ref: '#/components/responses/NotConfigured'}
+
+  # ------------------------------------------------------------------------------------------- scanner
+  /api/fw/v1/scan/claim:
+    post:
+      tags: [scanner]
+      operationId: scanClaim
+      summary: Claim the next scan jobs, record the scanner's heartbeat and run the sweep. Polled every 30 to 60 seconds.
+      description: |
+        Each poll writes `scanner_state.last_poll_at`, then sweeps (spec/accounts-v1.md 11.5): pending uploads
+        older than 1 hour expire and release their bytes; a claim past `claimed_until` goes back to `queued`, or
+        to `error` after its third attempt; held files older than 14 days are deleted from quarantine and their
+        bytes released. Then up to `max` queued scans (oldest first) are claimed: status `scanning`,
+        `attempts` + 1, `claimed_until` = now + 30 minutes. Each job carries a presigned GET on its quarantine
+        object, valid 15 minutes. No job is an empty `jobs` list, not an error.
+      security: [{fwScanner: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [scanner_version]
+              properties:
+                scanner_version: {type: string, maxLength: 100}
+                max: {type: integer, minimum: 1, maximum: 10, default: 1}
+      responses:
+        '200':
+          description: Jobs (possibly none) and what the sweep did.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [jobs, sweep]
+                properties:
+                  jobs: {type: array, items: {$ref: '#/components/schemas/ScanJob'}}
+                  sweep: {$ref: '#/components/schemas/ScanSweep'}
+        '401': {$ref: '#/components/responses/BadSignature'}
+        '503': {$ref: '#/components/responses/NotConfigured'}
+  /api/fw/v1/scan/{scanId}/result:
+    post:
+      tags: [scanner]
+      operationId: scanResult
+      summary: Report one scan's result. Clean files are promoted; the repo goes live when every scan of its commit is clean.
+      description: |
+        Accepted only while the scan is `scanning` and `attempt` equals its `attempts` (a result for a claim
+        that ran out answers 409 `scan_not_claimed`). Any finding means `held`. A sha256 on `blocked_hashes`
+        is held with `blocklisted` whatever the scanner said. On `clean` the Worker copies the object from
+        quarantine to the public bucket at the same key, then deletes the quarantine copy (U8). When every scan
+        of the commit is clean the repo goes `live`; one held scan makes the repo `held` and nothing of that
+        commit is served. `error` puts the scan back to `queued` until its third attempt, then leaves it
+        `error` (the repo stays `scanning`; an admin decides). Sending the same result twice is harmless.
+      security: [{fwScanner: []}]
+      parameters:
+        - {name: scanId, in: path, required: true, schema: {type: string, pattern: '^sc_[0-9A-Za-z]+$'}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ScanResultBody'}
+      responses:
+        '200':
+          description: Recorded.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id, status, repo_status]
+                properties:
+                  id: {type: string}
+                  status: {$ref: '#/components/schemas/ScanStatus'}
+                  repo_status: {type: string, enum: [draft, scanning, live, held, removed]}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/BadSignature'}
+        '404': {description: No such scan (scan_not_found)., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '409': {description: The scan is not claimed under this attempt (scan_not_claimed)., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+        '503': {$ref: '#/components/responses/NotConfigured'}
+  /api/fw/v1/scan/health:
+    get:
+      tags: [scanner]
+      operationId: scanHealth
+      summary: 200 when the scanner polled in the last 10 minutes, else 503. Public; status.allternit.com and the upload UIs read it.
+      security: [{}]
+      responses:
+        '200': {description: Scanner is polling., content: {application/json: {schema: {$ref: '#/components/schemas/ScanHealth'}}}}
+        '503': {description: 'Scanner is late or never polled (the upload UIs show "Scanning is delayed"), or accounts are not configured.', content: {application/json: {schema: {$ref: '#/components/schemas/ScanHealth'}}}}
+
+  # --------------------------------------------------------------------------------------------- admin
+  /api/fw/v1/admin/reports:
+    get:
+      tags: [admin]
+      operationId: adminListReports
+      security: [{fwAdmin: []}]
+      parameters:
+        - {name: status, in: query, schema: {type: string, enum: [open, actioned, rejected], default: open}}
+        - {name: cursor, in: query, schema: {type: string}}
+      responses:
+        '200':
+          description: Reports, oldest first.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [reports]
+                properties:
+                  reports: {type: array, items: {$ref: '#/components/schemas/AdminReport'}}
+                  next: {type: [string, 'null']}
+        '401': {$ref: '#/components/responses/BadSignature'}
+  /api/fw/v1/admin/reports/{reportId}:
+    post:
+      tags: [admin]
+      operationId: adminResolveReport
+      summary: Close a report. Removing the content is a separate call (repos/{repoId}/remove).
+      security: [{fwAdmin: []}]
+      parameters:
+        - {name: reportId, in: path, required: true, schema: {type: string, pattern: '^rpt_[0-9A-Za-z]+$'}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status: {type: string, enum: [actioned, rejected]}
+                resolution: {type: string, maxLength: 2000}
+      responses:
+        '200': {description: Updated., content: {application/json: {schema: {$ref: '#/components/schemas/AdminReport'}}}}
+        '401': {$ref: '#/components/responses/BadSignature'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/fw/v1/admin/held:
+    get:
+      tags: [admin]
+      operationId: adminListHeld
+      summary: Held and errored scans with their findings, oldest first. Held files are deleted 14 days after the scan.
+      security: [{fwAdmin: []}]
+      parameters:
+        - {name: cursor, in: query, schema: {type: string}}
+      responses:
+        '200':
+          description: Held scans.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [scans]
+                properties:
+                  scans: {type: array, items: {$ref: '#/components/schemas/HeldScan'}}
+                  next: {type: [string, 'null']}
+        '401': {$ref: '#/components/responses/BadSignature'}
+  /api/fw/v1/admin/repos/{repoId}/remove:
+    post:
+      tags: [admin]
+      operationId: adminRemoveRepo
+      summary: Take a repo down. Its files stop being served at once; presigned links already handed out end within 5 minutes.
+      description: |
+        Sets `status = removed` and `removed_reason = <reason_class>`; resolve then answers 451
+        `removed_after_takedown`. With `blocklist: true` every file hash of the repo goes into
+        `blocked_hashes`, so the same bytes are refused on any later upload, and the reply lists them so
+        fw_admin.py can add them to the public or private blocklist file (scripts/blocklist.py decides which).
+        The files stay in R2 until `purge` is sent (kept for an appeal or a counter-notice).
+      security: [{fwAdmin: []}]
+      parameters:
+        - {name: repoId, in: path, required: true, schema: {type: string, pattern: '^rp_[0-9A-Za-z]+$'}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [reason_class]
+              properties:
+                reason_class: {type: string, enum: [copyright, csam, ncii, personal_data, real_person_likeness, crime_marketing, malware_or_secrets, license_violation, publisher_request, spam, abuse, other]}
+                report_id: {type: string, pattern: '^rpt_[0-9A-Za-z]+$', description: Marks that report actioned.}
+                blocklist: {type: boolean, default: false}
+                purge: {type: boolean, default: false, description: Also delete the files from R2 and release their bytes.}
+      responses:
+        '200':
+          description: Removed.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id, status, sha256]
+                properties:
+                  id: {type: string}
+                  status: {type: string, enum: [removed]}
+                  sha256: {type: array, items: {$ref: '#/components/schemas/Sha256'}, description: File hashes of the repo (added to blocked_hashes when blocklist was true).}
+        '401': {$ref: '#/components/responses/BadSignature'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/fw/v1/admin/repos/{repoId}/restore:
+    post:
+      tags: [admin]
+      operationId: adminRestoreRepo
+      summary: Undo a removal (an appeal or a counter-notice), or release a held repo after review.
+      description: |
+        A removed repo goes back to `live` when every scan of its head is clean, else to `held`. A held repo
+        whose findings an admin reviewed as false positives goes `live` with `release_held: true`: its held
+        scans are marked clean and promoted. Hashes are taken off `blocked_hashes` only with
+        `unblock: true`. A purged repo cannot be restored (409 `conflict`).
+      security: [{fwAdmin: []}]
+      parameters:
+        - {name: repoId, in: path, required: true, schema: {type: string, pattern: '^rp_[0-9A-Za-z]+$'}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                release_held: {type: boolean, default: false}
+                unblock: {type: boolean, default: false}
+                note: {type: string, maxLength: 2000}
+      responses:
+        '200':
+          description: Restored.
+          content:
+            application/json:
+              schema: {type: object, required: [id, status], properties: {id: {type: string}, status: {type: string, enum: [live, held, scanning]}}}
+        '401': {$ref: '#/components/responses/BadSignature'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /api/fw/v1/admin/users/{handle}:
+    post:
+      tags: [admin]
+      operationId: adminUpdateUser
+      summary: Suspend or reinstate an account, or set its staff flag (staff may upload while uploads are switched off).
+      description: |
+        A suspended account's writes answer 403 `account_suspended`. Its live repos stay served unless removed
+        one by one. Every change is written to audit_log.
+      security: [{fwAdmin: []}]
+      parameters:
+        - {name: handle, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              minProperties: 1
+              properties:
+                status: {type: string, enum: [active, suspended]}
+                staff: {type: boolean}
+                note: {type: string, maxLength: 2000}
+      responses:
+        '200':
+          description: Updated.
+          content:
+            application/json:
+              schema: {type: object, required: [id, handle, status, staff], properties: {id: {type: string}, handle: {type: string}, status: {type: string, enum: [active, suspended, deleted]}, staff: {type: boolean}}}
+        '401': {$ref: '#/components/responses/BadSignature'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/fw/v1/admin/limits:
+    get:
+      tags: [admin]
+      operationId: adminGetLimits
+      summary: Every row of the limits table, with who set it and when.
+      security: [{fwAdmin: []}]
+      responses:
+        '200':
+          description: Limit rows.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [limits]
+                properties:
+                  limits:
+                    type: array
+                    items: {type: object, required: [key, value, updated_at], properties: {key: {type: string}, value: {type: integer, minimum: 0}, updated_by: {type: [string, 'null']}, updated_at: {type: string, format: date-time}}}
+        '401': {$ref: '#/components/responses/BadSignature'}
+    put:
+      tags: [admin]
+      operationId: adminSetLimit
+      summary: Set one limit. Takes effect on the next request; no deploy.
+      description: Unknown keys are refused (400) so a typo cannot pass silently. `uploads_open` takes 0 or 1.
+      security: [{fwAdmin: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [key, value]
+              properties:
+                key: {$ref: '#/components/schemas/LimitKey'}
+                value: {type: integer, minimum: 0}
+      responses:
+        '200': {description: Set. The reply is the new GET /api/fw/v1/limits body., content: {application/json: {schema: {$ref: '#/components/schemas/Limits'}}}}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/BadSignature'}
+  /api/fw/v1/admin/usage/reconcile:
+    post:
+      tags: [admin]
+      operationId: adminReconcileUsage
+      summary: Recompute storage_usage and the site total from uploads and repos, and say what changed.
+      security: [{fwAdmin: []}]
+      responses:
+        '200':
+          description: Reconciled.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [site_bytes_before, site_bytes_after, owners_changed]
+                properties:
+                  site_bytes_before: {type: integer}
+                  site_bytes_after: {type: integer}
+                  owners_changed: {type: integer}
+        '401': {$ref: '#/components/responses/BadSignature'}
+  /api/fw/v1/admin/r2-usage:
+    get:
+      tags: [admin]
+      operationId: adminR2Usage
+      summary: Bytes and object counts of the buckets bound to the Worker (freeweights, quarantine, private), summed from listings.
+      description: |
+        The Worker cannot see the R2 account total; fw_admin.py adds the other buckets (allternit-runtime) with
+        the Cloudflare API on the operator's machine. A large bucket is listed in pages: pass the returned
+        `cursor` until it is null.
+      security: [{fwAdmin: []}]
+      parameters:
+        - {name: cursor, in: query, schema: {type: string}}
+      responses:
+        '200':
+          description: Per-bucket totals so far.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [buckets, cursor]
+                properties:
+                  buckets:
+                    type: array
+                    items: {type: object, required: [binding, bytes, objects, complete], properties: {binding: {type: string, enum: [FW, QUARANTINE, PRIVATE]}, bytes: {type: integer}, objects: {type: integer}, complete: {type: boolean}}}
+                  cursor: {type: [string, 'null']}
+        '401': {$ref: '#/components/responses/BadSignature'}
+
 components:
   securitySchemes:
     fwBearer:
       type: http
       scheme: bearer
       description: A Clerk session JWT or an Allternit key (alt_ prefix). hf_ tokens are refused. See spec/accounts-v1.md.
+    fwScanner:
+      type: apiKey
+      in: header
+      name: X-FW-Signature
+      description: 'HMAC-SHA256 with SCANNER_SECRET over "<X-FW-Timestamp>\n<METHOD>\n<path and query>\n<sha256 hex of the body>", sent as "v1=<hex>". The timestamp (Unix seconds) must be within 300 seconds of the Worker clock. spec/accounts-v1.md 11.4.'
+    fwAdmin:
+      type: apiKey
+      in: header
+      name: X-FW-Signature
+      description: Same scheme as fwScanner, keyed with ADMIN_SECRET.
   parameters:
     repoType: {name: repoType, in: path, required: true, schema: {type: string, enum: [models, datasets, spaces, apps]}}
     namespace: {name: namespace, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
@@ -1249,7 +1700,7 @@ components:
                       type: object
                       required: [code, message]
                       properties:
-                        code: {type: integer, description: '404 unknown object, 413 too large, 422 bad oid, 507 storage limit reached'}
+                        code: {type: integer, description: '404 unknown object, 413 over file_max_bytes (file_too_large), 422 bad oid, 451 hash on the takedown blocklist, 507 over the account cap (storage_full) or the site cap (site_full); message names the code'}
                         message: {type: string}
     BadRequest:
       description: The request is malformed.
@@ -1284,13 +1735,165 @@ components:
     NotConfigured:
       description: Accounts are not turned on for this deployment (accounts_not_configured).
       content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+    UploadForbidden:
+      description: |
+        The upload cannot start: uploads are switched off (uploads_paused), the upload rules are not accepted
+        (rules_not_accepted), the account is suspended (account_suspended), the account has its repos_per_user
+        repos (repo_limit), or the credential lacks the scope or role (insufficient_scope, forbidden).
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+    UploadRefused:
+      description: Too many files in one commit (too_many_files), a refused file type (file_type_not_allowed), or a malformed request.
+      content: {application/json: {schema: {$ref: '#/components/schemas/LimitError'}}}
+    TooLarge:
+      description: A file over file_max_bytes (file_too_large), or new bytes over the account's cap (storage_full) or the site's cap (site_full).
+      content: {application/json: {schema: {$ref: '#/components/schemas/LimitError'}}}
+    SizeMismatch:
+      description: The stored object's size differs from the size given at the LFS batch (size_mismatch). The object is deleted and its bytes released.
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+    RateLimited:
+      description: Over repo_creates_per_day or commits_per_hour (rate_limited). Retry-After says when to try again.
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+    BadSignature:
+      description: Missing, wrong or stale HMAC signature (bad_signature). The body never says which.
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
   schemas:
     Error:
       type: object
       required: [error, message]
       properties:
-        error: {type: string, description: 'Stable code: auth_required, hf_token_rejected, insufficient_scope, forbidden, repo_not_found, repo_exists, handle_taken, namespace_reserved, perk_required, perk_limit, xet_not_supported, accounts_not_configured, rate_limited.'}
+        error: {type: string, description: 'Stable code: auth_required, hf_token_rejected, insufficient_scope, forbidden, repo_not_found, repo_exists, handle_taken, namespace_reserved, perk_required, perk_limit, xet_not_supported, accounts_not_configured, rate_limited, uploads_paused, rules_not_accepted, account_suspended, repo_limit, too_many_files, file_type_not_allowed, file_too_large, storage_full, site_full, size_mismatch, file_not_ready, removed_after_takedown, bad_signature, scan_not_found, scan_not_claimed, not_implemented.'}
         message: {type: string}
+    LimitError:
+      allOf:
+        - {$ref: '#/components/schemas/Error'}
+        - type: object
+          properties:
+            paths: {type: array, items: {type: string}, description: The refused file paths, when the error is about files.}
+            limit: {$ref: '#/components/schemas/LimitKey'}
+    LimitKey: {type: string, enum: [uploads_open, site_cap_bytes, user_cap_bytes, file_max_bytes, repos_per_user, repo_creates_per_day, commits_per_hour, files_per_commit]}
+    Limits:
+      type: object
+      required: [open, limits, site, scanning_delayed]
+      properties:
+        open: {type: boolean, description: 'True when uploads_open is 1 and every cap key is set. Staff may upload while false.'}
+        limits:
+          type: object
+          description: Each value is the integer in the limits table, or null while unset. Bytes for the *_bytes keys.
+          required: [site_cap_bytes, user_cap_bytes, file_max_bytes, repos_per_user, repo_creates_per_day, commits_per_hour, files_per_commit]
+          properties:
+            site_cap_bytes: {type: [integer, 'null']}
+            user_cap_bytes: {type: [integer, 'null']}
+            file_max_bytes: {type: [integer, 'null']}
+            repos_per_user: {type: [integer, 'null']}
+            repo_creates_per_day: {type: [integer, 'null']}
+            commits_per_hour: {type: [integer, 'null']}
+            files_per_commit: {type: [integer, 'null']}
+        site:
+          type: object
+          required: [used_bytes, cap_bytes, full]
+          properties:
+            used_bytes: {type: integer, description: Community bytes reserved, in quarantine, held or live.}
+            cap_bytes: {type: [integer, 'null']}
+            full: {type: boolean, description: True when no file of one byte fits, or the cap is unset.}
+        scanning_delayed: {type: boolean, description: True when the scanner has not polled in the last 10 minutes.}
+    ScanStatus: {type: string, enum: [queued, scanning, clean, held, error]}
+    ScanFinding:
+      type: object
+      required: [scanner, code]
+      properties:
+        scanner: {type: string, description: 'e.g. sha256, blocklist, formats, picklescan, modelscan, clamav, gitleaks'}
+        code: {type: string, enum: [sha256_mismatch, blocklisted, bad_header, unsafe_pickle, malware, secret_found, scan_failed]}
+        detail: {type: string, maxLength: 2000, description: Shown to admins only. Never file content or a secret's value.}
+    ScanJob:
+      type: object
+      required: [id, repo_id, path, sha256, size, file_class, attempt, url, url_expires_at, claimed_until]
+      properties:
+        id: {type: string, pattern: '^sc_[0-9A-Za-z]+$'}
+        repo_id: {type: string}
+        commit_oid: {type: [string, 'null']}
+        path: {type: string}
+        sha256: {$ref: '#/components/schemas/Sha256'}
+        size: {type: integer, minimum: 0}
+        file_class: {type: string, enum: [weights, pickle, other]}
+        attempt: {type: integer, minimum: 1, description: Send it back in the result.}
+        url: {type: string, format: uri, description: Presigned GET on the quarantine object, valid 15 minutes.}
+        url_expires_at: {type: string, format: date-time}
+        claimed_until: {type: string, format: date-time}
+    ScanSweep:
+      type: object
+      required: [expired_uploads, requeued, errored, held_deleted]
+      properties:
+        expired_uploads: {type: integer}
+        requeued: {type: integer}
+        errored: {type: integer}
+        held_deleted: {type: integer}
+    ScanResultBody:
+      type: object
+      required: [attempt, status, findings, scanner_version]
+      properties:
+        attempt: {type: integer, minimum: 1}
+        status: {type: string, enum: [clean, held, error]}
+        findings: {type: array, maxItems: 50, items: {$ref: '#/components/schemas/ScanFinding'}, description: Empty for clean. At least one for held.}
+        scanner_version: {type: string, maxLength: 100}
+    ScanHealth:
+      type: object
+      required: [ok, last_poll_at, queued, oldest_queued_at]
+      properties:
+        ok: {type: boolean}
+        last_poll_at: {type: [string, 'null'], format: date-time}
+        queued: {type: integer, description: Scans queued or being scanned.}
+        oldest_queued_at: {type: [string, 'null'], format: date-time}
+    MyRepo:
+      type: object
+      required: [id, type, name, status, bytes, scans]
+      properties:
+        id: {type: string, description: rp_...}
+        type: {type: string, enum: [model, dataset]}
+        name: {type: string, description: namespace/name}
+        status: {type: string, enum: [draft, scanning, live, held, removed]}
+        removed_reason: {type: [string, 'null'], description: Set when removed. A takedown class, owner or account_deleted.}
+        head_commit: {type: [string, 'null']}
+        bytes: {type: integer}
+        createdAt: {type: string, format: date-time}
+        updatedAt: {type: string, format: date-time}
+        scans:
+          type: object
+          description: Counts for the head commit. Findings are shown to admins only; the owner sees the codes.
+          required: [queued, scanning, clean, held, error]
+          properties:
+            queued: {type: integer}
+            scanning: {type: integer}
+            clean: {type: integer}
+            held: {type: integer}
+            error: {type: integer}
+            held_codes: {type: array, items: {type: string}}
+    AdminReport:
+      type: object
+      required: [id, target_type, target_id, reason_class, status, createdAt]
+      properties:
+        id: {type: string}
+        reporter: {type: [string, 'null'], description: Handle, or null for a deleted account.}
+        target_type: {type: string}
+        target_id: {type: string}
+        reason_class: {type: string}
+        body: {type: [string, 'null']}
+        status: {type: string, enum: [open, actioned, rejected]}
+        resolution: {type: [string, 'null']}
+        createdAt: {type: string, format: date-time}
+    HeldScan:
+      type: object
+      required: [id, repo_id, repo, path, sha256, status, findings]
+      properties:
+        id: {type: string}
+        repo_id: {type: string}
+        repo: {type: string, description: namespace/name}
+        path: {type: string}
+        sha256: {$ref: '#/components/schemas/Sha256'}
+        status: {type: string, enum: [held, error]}
+        attempts: {type: integer}
+        findings: {type: array, items: {$ref: '#/components/schemas/ScanFinding'}}
+        finished_at: {type: [string, 'null'], format: date-time}
+        delete_after: {type: [string, 'null'], format: date-time, description: finished_at + 14 days for held files.}
     Handle: {type: string, pattern: '^[A-Za-z0-9][A-Za-z0-9._-]{1,41}$'}
     Sha256: {type: string, pattern: '^[0-9a-f]{64}$'}
     CommitOid: {type: string, pattern: '^[0-9a-f]{40}$'}
@@ -1580,7 +2183,11 @@ components:
         plan: {type: string}
         perks: {type: object, additionalProperties: true, description: Copied from the entitlement claim. Names and values come from cloud-api.}
         addon_bytes: {type: object, properties: {public: {type: integer}, private: {type: integer}}}
-        usage: {type: object, required: [public_bytes, private_bytes], properties: {public_bytes: {type: integer}, private_bytes: {type: integer}, repos: {type: integer}}}
+        usage: {type: object, required: [public_bytes, private_bytes], properties: {public_bytes: {type: integer}, private_bytes: {type: integer}, quarantine_bytes: {type: integer, description: Reserved, being scanned or held. Counts against the cap.}, repos: {type: integer}}}
+        storage_cap_bytes: {type: [integer, 'null'], description: 'The cap in force: user_cap_bytes from the limits table until perks are offered, then the claim perk. Null while unset.'}
+        rules_accepted_at: {type: [string, 'null'], format: date-time, description: Null until the upload rules are accepted.}
+        staff: {type: boolean}
+        status: {type: string, enum: [active, suspended]}
         orgs: {type: array, items: {type: object, properties: {name: {type: string}, role: {type: string}}}}
     FollowTarget:
       type: object

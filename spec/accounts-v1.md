@@ -7,7 +7,9 @@ scopes, sign-in, handles, repos and storage, privacy, the page slot and island i
 overlays.
 
 Routes and shapes: `parts/write-api.yaml` (a part of `hub-api.yaml`). Database:
-`worker/migrations-accounts/0001_accounts.sql`. Shared types: `worker/src/types.ts`.
+`worker/migrations-accounts/0001_accounts.sql`, with the launch limits, scan claims and moderation columns in
+`0003_launch_limits.sql`. Shared types: `worker/src/types.ts`. Section 11 is the launch contract for community
+uploads: limits, scanning, promotion and moderation.
 
 ## 1. What stays anonymous
 
@@ -191,14 +193,19 @@ namespace (`namespace_reserved`).
   when a scan finds a problem. `removed` after a takedown or deletion.
 - **Uploads** go from the client straight to R2 by presigned URL; bytes never pass through the Worker.
   New objects land in the quarantine bucket. After the scanner clears them they move to the public bucket
-  (public repos) or the private bucket (private repos).
-- **R2 keys:** blobs at `repos/<repo id>/blobs/<sha256>`, commit trees at `repos/<repo id>/trees/<commit>.json`
+  (public repos) or the private bucket (private repos). At launch only public model and dataset repos under
+  the caller's own handle can be created (section 11); private repos answer 402 `perk_required`.
+- **R2 keys:** blobs at `repos/<repo id>/blobs/<sha256>` (the same key in quarantine and in the public
+  bucket), commit trees at `repos/<repo id>/trees/<commit>.json`
   (same file shape as a manifest `files` list), community detail pages at
   `alt.freeweights.community/<namespace>/<name>/index.html`. The catalog sync never deletes these prefixes.
 - **Private reads:** an access check, then a 302 to a presigned URL valid for 5 minutes, with
   `Cache-Control: private, no-store`. Nothing private is put in the edge cache.
-- **Storage limits:** included bytes come from the claim's perks plus `addon_bytes`. Usage is kept in
-  `storage_usage` per owner. Over the limit, the LFS batch answers error 507 for each new object.
+- **Storage limits:** until perks are offered, the per-account cap is the operator's `user_cap_bytes`
+  limit and the site cap `site_cap_bytes` (section 11.1). When perks are offered, the claim's storage perk
+  plus `addon_bytes` replaces `user_cap_bytes`; the site cap stays. Usage is kept in `storage_usage` per
+  owner and in the one-row `site_usage` total. Over a cap, the LFS batch answers error 507 for each new
+  object.
 
 ## 7. Privacy
 
@@ -276,7 +283,8 @@ Errors use the read API's body: `{"error": "<code>", "message": "..."}`. Codes: 
 `hf_token_rejected`, `insufficient_scope`, `forbidden`, `repo_not_found` (also for a private repo the
 caller cannot see), `repo_exists`, `handle_taken`, `namespace_reserved`, `perk_required`, `perk_limit`,
 `xet_not_supported`, `entitlement_unavailable`, `accounts_not_configured`, `rate_limited`,
-`profile_not_found`, `method_not_allowed`, `not_implemented`.
+`profile_not_found`, `method_not_allowed`, `not_implemented`. Upload, scan and moderation codes are listed
+in section 11.2.
 
 Signed-in API request limits per 5 minutes are the claim perk `api_requests_5m` (a number), counted per
 account per Worker isolate once a claim is in hand. With no such perk Freeweights counts nothing itself. Over
@@ -291,7 +299,152 @@ Methods: each route answers only its listed methods. Any other method answers 40
 route's methods and allows the `Authorization` header. A write route that is specified but not built yet
 checks the credential and then answers 501 `not_implemented`.
 
-## 11. Versions
+## 11. Community uploads at launch
+
+Any Allternit account with a handle can create a public model or dataset repo under its own handle and
+upload to it through the Hugging Face path (`HF_HUB_DISABLE_XET=1`), the `fw` CLI or the site. Every file
+is scanned before anyone can download it. Org namespaces, `app` repos, private repos, pull requests,
+discussions, likes, follows, collections and webhooks are not part of the launch: each answers a clear error
+(`forbidden`, `perk_required` or `not_implemented`), never a silent success.
+
+### 11.1 Limits
+
+Every limit is a row of the `limits` table (migration 0003), key to integer. The operator sets them with
+`scripts/fw_admin.py limits set <key> <value>` (admin route `PUT /api/fw/v1/admin/limits`). No limit value
+is written in this repo, and changing one needs no deploy. `GET /api/fw/v1/limits` shows the values in
+force to anyone.
+
+| Key | Meaning |
+| --- | --- |
+| `uploads_open` | 1 = uploads on. 0 = off for everyone but staff (`users.staff = 1`). The migration seeds 0. |
+| `site_cap_bytes` | All community bytes together: reserved, in quarantine, held and live. |
+| `user_cap_bytes` | One account's community bytes, counted the same way. Replaced by the claim's storage perk once perks are offered. |
+| `file_max_bytes` | One file. |
+| `repos_per_user` | Repos an account may hold (any state but `removed`). |
+| `repo_creates_per_day` | Repos an account may create in a rolling 24 hours (deleted ones count). |
+| `commits_per_hour` | Commits an account may make in a rolling hour. |
+| `files_per_commit` | Files one commit (and one preupload call) may add or change. |
+
+A key that is missing fails closed: while any key above is unset, uploads are paused for everyone but
+staff, and `GET /api/fw/v1/limits` reads `open: false`. Unknown keys in the table are ignored.
+
+### 11.2 Where each limit answers
+
+The earliest call that can know answers, so a client fails before it sends bytes.
+
+| Code | Status | Answered by |
+| --- | --- | --- |
+| `uploads_paused` | 403 | repo create, preupload, LFS batch, commit (staff pass) |
+| `rules_not_accepted` | 403 | the same four, while `users.rules_accepted_at` is null (accept with `acceptRules: true` on `POST`/`PATCH /api/fw/v1/account`) |
+| `account_suspended` | 403 | every write of a suspended account |
+| `repo_limit` | 403 | repo create, at `repos_per_user` |
+| `rate_limited` | 429 + `Retry-After` | repo create (`repo_creates_per_day`), commit (`commits_per_hour`), report |
+| `perk_required` | 402 | repo create or settings asking for a private repo (perk `private_storage`) |
+| `too_many_files` | 400 | preupload and commit, over `files_per_commit` |
+| `file_type_not_allowed` | 400 | preupload: executables and archives, by extension or by the magic bytes in `sample` |
+| `file_too_large` | 413 at preupload; per-object 413 at the LFS batch | over `file_max_bytes` |
+| `storage_full` | 413 at preupload; per-object 507 at the LFS batch | over the account's cap |
+| `site_full` | 413 at preupload; per-object 507 at the LFS batch | over `site_cap_bytes` |
+| `size_mismatch` | 422 | LFS verify or complete: the stored size differs from the size given |
+| `file_not_ready` | 404 | resolve of a community file that is not `live` yet (scanning or held) |
+| `removed_after_takedown` | 451 | resolve and repo reads of a repo removed after a takedown |
+| `bad_signature` | 401 | scanner and admin routes (section 11.4) |
+| `scan_not_found`, `scan_not_claimed` | 404, 409 | scan result for an unknown scan, or for a claim that ran out |
+
+400 and 413 bodies about files carry `paths` (the refused paths) and `limit` (the key). A per-object LFS
+error names the code in `message`. Hugging Face clients show `message` as is, so it says in plain words
+what to change.
+
+### 11.3 Upload flow
+
+1. **Preupload** answers the limits in 11.2 for the whole set of files before any byte moves.
+2. **LFS batch** reserves each new object's bytes in one conditional D1 statement that checks
+   `file_max_bytes`, the account cap and the site cap together, and adds the bytes to the owner's
+   `storage_usage.quarantine_bytes` and to `site_usage.bytes` in the same batch. Objects up to 64 MiB get
+   one presigned PUT that signs `content-length`; larger ones get multipart with 32 MiB parts (S3 Create,
+   Complete and Abort through signed fetch). URLs last 1 hour.
+3. **Verify** (and multipart complete) HEADs the quarantine object. A size that differs from the reserved
+   size deletes the object, releases the bytes and answers 422 `size_mismatch`. The sha256 is checked by
+   the scanner, because the Worker's CPU limit rules it out.
+4. **Commit** writes the tree, sets the repo to `scanning` and queues one `scans` row per new file.
+
+Bytes are released when an upload expires (1 hour) or aborts, on a size mismatch, when a held file is
+deleted (14 days), and when a repo is deleted or purged. `fw_admin.py usage reconcile` recomputes every
+total from `uploads` and `repos`.
+
+### 11.4 Signed requests (scanner and admin)
+
+The scanner (`/api/fw/v1/scan/*`) and the operator (`/api/fw/v1/admin/*`) send no Bearer credential. Each
+request carries:
+
+- `X-FW-Timestamp`: Unix seconds, within 300 seconds of the Worker clock;
+- `X-FW-Signature`: `v1=<hex>`, HMAC-SHA256 over
+  `<timestamp>\n<METHOD>\n<path and query>\n<sha256 hex of the body>` (the hash of the empty string for no
+  body).
+
+The key is `SCANNER_SECRET` for scan routes and `ADMIN_SECRET` for admin routes; one never works on the
+other's routes. The Worker compares in constant time. A missing, wrong or stale signature answers 401
+`bad_signature` with no detail. While the secret is unset the routes answer 503 `accounts_not_configured`.
+Every write these routes make is safe to repeat, so a replay inside the 300-second window changes nothing.
+Admin actions are written to `audit_log`.
+
+### 11.5 Scanning
+
+- **Jobs.** The scanner runs in its own container on allternit-standby and polls
+  `POST /api/fw/v1/scan/claim` every 30 to 60 seconds. A claim sets the scan to `scanning`, adds 1 to
+  `attempts` and sets `claimed_until` to 30 minutes on. Each job carries a presigned GET on the quarantine
+  object, valid 15 minutes. The scanner holds no R2 or Cloudflare credential.
+- **Sweep.** Every poll first records the heartbeat (`scanner_state`) and sweeps: pending uploads expire
+  after 1 hour; a scan whose claim ran out goes back to `queued`, or to `error` after its third attempt;
+  held files are deleted from quarantine 14 days after the scan. There is no cron job. An R2 lifecycle rule
+  on the quarantine bucket backs this up (incomplete multipart uploads aborted after 1 day, objects expired
+  after 15 days).
+- **What is checked.** Every file: its sha256 must equal the oid (`sha256_mismatch`), and it must not be on
+  the public blocklist or in `blocked_hashes` (`blocklisted`; the Worker checks `blocked_hashes` itself
+  when it records the result, so the scanner never needs the private list). Weights: a header check with
+  `scripts/formats.py` (`bad_header`). Pickles: picklescan and modelscan (`unsafe_pickle`). Everything
+  else: ClamAV (`malware`), plus gitleaks on text files up to 5 MiB (`secret_found`). A scanner that
+  cannot finish reports `error` (finding `scan_failed`).
+- **Results.** `POST /api/fw/v1/scan/{id}/result` with the `attempt` from the job. Any finding holds the
+  file. Findings name the scanner and code; `detail` is for admins and never holds file content or a
+  secret's value.
+- **Scanner down.** Files stay `scanning` and are never promoted on a timeout. `GET /api/fw/v1/scan/health`
+  answers 200 while the last poll is under 10 minutes old, else 503, and `GET /api/fw/v1/limits` reads
+  `scanning_delayed: true`. The upload UIs then show "Scanning is delayed".
+
+### 11.6 Promotion and downloads
+
+- **Promotion.** On a clean result the Worker copies the object from quarantine to the public bucket at the
+  same key, then deletes the quarantine copy. The repo goes `live` only when every scan of the commit is
+  clean; one held file makes the repo `held`, and nothing of that commit is served. If a stream copy of a
+  file near `file_max_bytes` fails on the free plan, the fallback is a server-side S3 CopyObject by the
+  scanner into a separate community bucket (plan U8); the key scheme does not change.
+- **Downloads.** Resolve of a community file checks that the repo is `live` (else 404 `file_not_ready`, or
+  451 `removed_after_takedown`), then answers 302 to a presigned GET valid 5 minutes, with
+  `Cache-Control: private, no-store`. A takedown therefore takes effect within 5 minutes. Community blob
+  keys are never linked directly.
+
+### 11.7 Reports and moderation
+
+- **Reports.** `POST /api/fw/v1/reports` (signed in, rate-limited). Legal notices without an account go to
+  the takedown mailbox (`docs/takedowns.md`).
+- **Admin routes** (`/api/fw/v1/admin/*`, signed with `ADMIN_SECRET`, driven by `scripts/fw_admin.py`):
+  list and close reports; list held and errored scans; remove a repo (`status = removed`,
+  `removed_reason = <reason_class>`, optionally its hashes into `blocked_hashes`, optionally purge its
+  files); restore a removed repo or release a reviewed held one; suspend or reinstate an account and set
+  its staff flag; get and set limits; reconcile usage; and sum the bound buckets' bytes (`r2-usage`). The
+  Worker cannot see the R2 account total, so `fw_admin.py r2-usage` adds the other buckets from the
+  Cloudflare API on the operator's machine and is run at each deploy.
+- **Removed repos.** `removed_reason` is a takedown class (resolve answers 451) or `owner` /
+  `account_deleted` (404).
+
+### 11.8 Staged open
+
+The migration leaves `uploads_open = 0`. The operator sets every other limit, marks the test account staff,
+checks the whole path on production (Hugging Face, `fw` and browser uploads, the scan corpus, a download,
+a lowered cap, a report and removal, a stopped scanner), and only then sets `uploads_open` to 1.
+
+## 12. Versions
 
 This is v1. A change that breaks a client (a field removed or renamed, a route moved, a claim field
 changed) makes v2 and keeps v1 working until every client has moved. Adding a field, a perk name or a
