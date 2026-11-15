@@ -1,0 +1,1638 @@
+openapi: 3.1.0
+info:
+  title: Freeweights hub write API (part)
+  version: 0.1.0
+  license:
+    name: Apache-2.0
+    identifier: Apache-2.0
+  description: |
+    Write API for Freeweights accounts. A part of spec/hub-api.yaml (listed there under `x-parts`); it is a
+    full OpenAPI 3.1 document of its own so it can be read and checked alone. Account rules, the token
+    model, the entitlement claim and privacy are in spec/accounts-v1.md.
+
+    The routes are compatible with the Hugging Face Hub where the Hub has a route, with the request and
+    response shapes the `huggingface_hub` client sends and reads, so `HF_ENDPOINT=https://freeweights.allternit.com`
+    with an Allternit key (`HF_TOKEN=alt_...`) works for create, upload, commit, discussions, likes,
+    collections and webhooks. Routes under `/api/fw/v1/` are Allternit-only.
+
+    ## Auth
+    Every route here needs `Authorization: Bearer <credential>`, where the credential is a Clerk session
+    JWT (the site, Desktop, web) or an Allternit key with the `alt_` prefix (tools, CLI, scripts). Tokens
+    with the `hf_` prefix are refused with 401 `hf_token_rejected`. Replies to authenticated requests carry
+    `Cache-Control: private, no-store`.
+
+    Scopes: `freeweights.read` (read private repos the caller can see), `freeweights.write` (every write),
+    `freeweights.repo:<repo id>` (writes to that one repo only). A Clerk session has read and write.
+
+    ## Repo types in paths
+    `{repoType}` is `models`, `datasets` or `spaces`, as Hugging Face clients send it. Freeweights calls a
+    space an app (MCP app); `apps` is accepted as an alias of `spaces` everywhere.
+
+    ## Xet
+    Freeweights does not run a Xet server. The write-token route answers 501 `xet_not_supported`, and
+    uploads must set `HF_HUB_DISABLE_XET=1` (the client then uses the LFS routes below).
+
+    ## Not configured
+    Until the accounts database exists, every route here answers 503 `accounts_not_configured`. Public
+    reads and downloads (spec/hub-api.yaml) never need an account.
+servers:
+  - url: https://freeweights.allternit.com
+    description: Production
+security:
+  - fwBearer: []
+tags:
+  - name: identity
+  - name: repos
+  - name: upload
+  - name: community
+  - name: webhooks
+  - name: allternit
+    description: Allternit-only routes (/api/fw/v1). Stubs; shapes are the contract, handlers land in later waves.
+paths:
+  # ---------------------------------------------------------------------------------------------- identity
+  /api/whoami-v2:
+    get:
+      tags: [identity]
+      operationId: whoamiV2
+      summary: Who the credential belongs to (Hugging Face shape, plus the Allternit plan).
+      responses:
+        '200':
+          description: The caller.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/WhoAmI'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '503': {$ref: '#/components/responses/NotConfigured'}
+
+  # ------------------------------------------------------------------------------------------------- repos
+  /api/repos/create:
+    post:
+      tags: [repos]
+      operationId: createRepo
+      summary: Create a repo. 409 if it exists (clients with exist_ok treat 409 as success).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/CreateRepoRequest'}
+      responses:
+        '200':
+          description: Created.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/CreateRepoResponse'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '503': {$ref: '#/components/responses/NotConfigured'}
+  /api/repos/delete:
+    delete:
+      tags: [repos]
+      operationId: deleteRepo
+      summary: Delete a repo. Its files leave R2; likes, discussions and collection items for it are removed.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name: {type: string}
+                organization: {type: [string, 'null'], description: Namespace; null or absent = the caller.}
+                type: {$ref: '#/components/schemas/RepoTypeSingular'}
+      responses:
+        '200': {description: Deleted.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/repos/move:
+    post:
+      tags: [repos]
+      operationId: moveRepo
+      summary: Rename or move a repo to another namespace the caller can write. The repo id (rp_...) does not change.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [fromRepo, toRepo]
+              properties:
+                fromRepo: {type: string, description: namespace/name}
+                toRepo: {type: string, description: namespace/name}
+                type: {$ref: '#/components/schemas/RepoTypeSingular'}
+      responses:
+        '200': {description: Moved.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /api/{repoType}/{namespace}/{repo}/settings:
+    put:
+      tags: [repos]
+      operationId: updateRepoSettings
+      summary: Change visibility, gating or discussions. Making a repo private needs the private-storage perk.
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              minProperties: 1
+              properties:
+                visibility: {type: string, enum: [public, private]}
+                private: {type: boolean, description: Older clients send this instead of visibility.}
+                gated: {enum: [auto, manual, false]}
+                discussionsDisabled: {type: boolean}
+      responses:
+        '200': {description: Updated.}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '402': {$ref: '#/components/responses/PerkRequired'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+
+  # ------------------------------------------------------------------------------------------------ upload
+  /api/{repoType}/{namespace}/{repo}/preupload/{rev}:
+    post:
+      tags: [upload]
+      operationId: preupload
+      summary: Ask which files go through LFS. Files over 10 MB, binary files and files matched by .gitattributes LFS rules are lfs.
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/rev'
+        - $ref: '#/components/parameters/createPr'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [files]
+              properties:
+                files:
+                  type: array
+                  maxItems: 1000
+                  items:
+                    type: object
+                    required: [path, sample, size]
+                    properties:
+                      path: {type: string}
+                      sample: {type: string, contentEncoding: base64, description: First 512 bytes, base64.}
+                      size: {type: integer, minimum: 0}
+                gitAttributes: {type: string}
+                gitIgnore: {type: string}
+      responses:
+        '200':
+          description: Upload mode per file.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [files]
+                properties:
+                  files:
+                    type: array
+                    items:
+                      type: object
+                      required: [path, uploadMode, shouldIgnore]
+                      properties:
+                        path: {type: string}
+                        uploadMode: {type: string, enum: [lfs, regular]}
+                        shouldIgnore: {type: boolean}
+                        oid: {type: string, description: Present when a file with this path already exists at rev (git blob sha1 or LFS sha256).}
+                  commitOid: {type: string}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /{namespace}/{repo}.git/info/lfs/objects/batch:
+    post:
+      tags: [upload]
+      operationId: lfsBatchModel
+      summary: Git LFS batch API for model repos. Returns presigned R2 URLs (basic PUT, or multipart parts).
+      description: |
+        New objects land in the quarantine bucket. `basic` is used up to 5 GB; larger objects, or any object
+        when the client lists `multipart` first, get `multipart` with `header.chunk_size` and numbered part
+        URLs ("00001", "00002", ...). After the PUTs the client POSTs the completion body to `upload.href`
+        (multipart) and calls `verify.href`. Objects already stored for this repo come back with no actions.
+        Storage over the caller's included plus add-on bytes answers per object with error code 507.
+      parameters:
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+      requestBody: {$ref: '#/components/requestBodies/LfsBatch'}
+      responses:
+        '200': {$ref: '#/components/responses/LfsBatch'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /{lfsPrefix}/{namespace}/{repo}.git/info/lfs/objects/batch:
+    post:
+      tags: [upload]
+      operationId: lfsBatchTyped
+      summary: Git LFS batch API for dataset and app repos (same contract as model repos).
+      parameters:
+        - {name: lfsPrefix, in: path, required: true, schema: {type: string, enum: [datasets, spaces, apps]}}
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+      requestBody: {$ref: '#/components/requestBodies/LfsBatch'}
+      responses:
+        '200': {$ref: '#/components/responses/LfsBatch'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/fw/v1/lfs/{uploadId}/complete:
+    post:
+      tags: [upload]
+      operationId: lfsMultipartComplete
+      summary: Multipart completion (the `upload.href` of a multipart action). Same body Hugging Face clients send.
+      parameters:
+        - {name: uploadId, in: path, required: true, schema: {type: string, pattern: '^up_[0-9A-Za-z]+$'}}
+      requestBody:
+        required: true
+        content:
+          application/vnd.git-lfs+json:
+            schema:
+              type: object
+              required: [oid, parts]
+              properties:
+                oid: {$ref: '#/components/schemas/Sha256'}
+                parts:
+                  type: array
+                  minItems: 1
+                  items:
+                    type: object
+                    required: [partNumber, etag]
+                    properties:
+                      partNumber: {type: integer, minimum: 1}
+                      etag: {type: string}
+      responses:
+        '200': {description: Upload complete.}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/fw/v1/lfs/{uploadId}/verify:
+    post:
+      tags: [upload]
+      operationId: lfsVerify
+      summary: LFS verify (the `verify.href` of an action). Checks size and sha256 of the stored object.
+      parameters:
+        - {name: uploadId, in: path, required: true, schema: {type: string, pattern: '^up_[0-9A-Za-z]+$'}}
+      requestBody:
+        required: true
+        content:
+          application/vnd.git-lfs+json:
+            schema:
+              type: object
+              required: [oid, size]
+              properties:
+                oid: {$ref: '#/components/schemas/Sha256'}
+                size: {type: integer, minimum: 0}
+      responses:
+        '200': {description: Verified.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '422': {$ref: '#/components/responses/BadRequest'}
+  /api/{repoType}/{namespace}/{repo}/commit/{rev}:
+    post:
+      tags: [upload]
+      operationId: createCommit
+      summary: Create a commit from an NDJSON body. The first line is the header; each other line is one operation.
+      description: |
+        Every `lfsFile` must have been uploaded and verified for this repo. After the commit the repo goes
+        to `scanning`; new files are scanned before they are served (state `live`, or `held`).
+        With `create_pr=1` the commit goes to a new `refs/pr/<num>` and a pull request is opened.
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/rev'
+        - $ref: '#/components/parameters/createPr'
+      requestBody:
+        required: true
+        content:
+          application/x-ndjson:
+            schema:
+              description: One JSON object per line; this schema is the shape of one line.
+              $ref: '#/components/schemas/CommitLine'
+      responses:
+        '200':
+          description: Committed.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [commitOid, commitUrl]
+                properties:
+                  success: {type: boolean}
+                  commitOid: {$ref: '#/components/schemas/CommitOid'}
+                  commitUrl: {type: string, format: uri}
+                  pullRequestUrl: {type: [string, 'null'], format: uri, description: Set when create_pr=1.}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '412': {description: parentCommit is not the head of rev., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+  /api/{repoType}/{namespace}/{repo}/commits/{rev}:
+    get:
+      tags: [upload]
+      operationId: listCommits
+      summary: Commit history of a community repo, newest first. Public repos need no credential.
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/rev'
+        - {name: p, in: query, schema: {type: integer, minimum: 0}, description: Page (50 per page).}
+      responses:
+        '200':
+          description: Commits.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  required: [id, title, message, authors, date]
+                  properties:
+                    id: {$ref: '#/components/schemas/CommitOid'}
+                    title: {type: string}
+                    message: {type: string}
+                    authors: {type: array, items: {type: object, required: [user], properties: {user: {type: string}, avatar: {type: string}}}}
+                    date: {type: string, format: date-time}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/{repoType}/{namespace}/{repo}/refs:
+    get:
+      tags: [upload]
+      operationId: listRefs
+      summary: Branches (main only), tags (none yet) and pull request refs.
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - {name: include_prs, in: query, schema: {type: integer, enum: [0, 1]}}
+      responses:
+        '200':
+          description: Refs.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [branches, converts, tags]
+                properties:
+                  branches: {type: array, items: {$ref: '#/components/schemas/GitRef'}}
+                  converts: {type: array, items: {$ref: '#/components/schemas/GitRef'}, maxItems: 0}
+                  tags: {type: array, items: {$ref: '#/components/schemas/GitRef'}}
+                  pullRequests: {type: array, items: {$ref: '#/components/schemas/GitRef'}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/{repoType}/{namespace}/{repo}/xet-write-token/{rev}:
+    get:
+      tags: [upload]
+      operationId: xetWriteToken
+      summary: Not supported. Set HF_HUB_DISABLE_XET=1 so the client uses LFS.
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/rev'
+      responses:
+        '501':
+          description: Xet is not supported.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {error: xet_not_supported, message: Freeweights takes uploads over Git LFS. Set HF_HUB_DISABLE_XET=1 and retry.}
+
+  # --------------------------------------------------------------------------------------------- community
+  /api/{repoType}/{namespace}/{repo}/discussions:
+    get:
+      tags: [community]
+      operationId: listDiscussions
+      summary: Discussions and pull requests of a repo (catalog entries included). Public repos need no credential.
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - {name: p, in: query, schema: {type: integer, minimum: 0}}
+        - {name: type, in: query, schema: {type: string, enum: [all, discussion, pull_request]}}
+        - {name: status, in: query, schema: {type: string, enum: [all, open, closed]}}
+        - {name: author, in: query, schema: {type: string}}
+      responses:
+        '200':
+          description: One page.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [discussions, count, start]
+                properties:
+                  discussions: {type: array, items: {$ref: '#/components/schemas/Discussion'}}
+                  count: {type: integer}
+                  start: {type: integer}
+                  numClosedDiscussions: {type: integer}
+        '404': {$ref: '#/components/responses/NotFound'}
+    post:
+      tags: [community]
+      operationId: createDiscussion
+      summary: Open a discussion, or a pull request (an empty refs/pr/<num> the author then commits to).
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [title]
+              properties:
+                title: {type: string, minLength: 3, maxLength: 200}
+                description: {type: [string, 'null']}
+                pullRequest: {type: boolean, default: false}
+      responses:
+        '200':
+          description: Created.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [num]
+                properties:
+                  num: {type: integer}
+                  url: {type: string, format: uri}
+                  pullRequest: {type: boolean}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/{repoType}/{namespace}/{repo}/discussions/{num}:
+    get:
+      tags: [community]
+      operationId: getDiscussion
+      summary: A discussion with its events.
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/num'
+      responses:
+        '200':
+          description: Details.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/DiscussionDetails'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/{repoType}/{namespace}/{repo}/discussions/{num}/comment:
+    post:
+      tags: [community]
+      operationId: commentDiscussion
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/num'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {type: object, required: [comment], properties: {comment: {type: string, minLength: 1, maxLength: 65536}}}
+      responses:
+        '200':
+          description: Posted.
+          content:
+            application/json:
+              schema: {type: object, required: [newMessage], properties: {newMessage: {$ref: '#/components/schemas/DiscussionEvent'}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/{repoType}/{namespace}/{repo}/discussions/{num}/status:
+    post:
+      tags: [community]
+      operationId: changeDiscussionStatus
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/num'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status: {type: string, enum: [open, closed]}
+                comment: {type: string}
+      responses:
+        '200':
+          description: Changed.
+          content:
+            application/json:
+              schema: {type: object, required: [newStatus], properties: {newStatus: {$ref: '#/components/schemas/DiscussionEvent'}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/{repoType}/{namespace}/{repo}/discussions/{num}/title:
+    post:
+      tags: [community]
+      operationId: renameDiscussion
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/num'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {type: object, required: [title], properties: {title: {type: string, minLength: 3, maxLength: 200}}}
+      responses:
+        '200':
+          description: Renamed.
+          content:
+            application/json:
+              schema: {type: object, required: [newTitle], properties: {newTitle: {$ref: '#/components/schemas/DiscussionEvent'}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/{repoType}/{namespace}/{repo}/discussions/{num}/merge:
+    post:
+      tags: [community]
+      operationId: mergePullRequest
+      summary: Merge a pull request into main. Repo write access needed. Merged files are scanned like any commit.
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+        - $ref: '#/components/parameters/num'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: {type: object, properties: {comment: {type: string}}}
+      responses:
+        '200': {description: Merged.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /api/{repoType}/{namespace}/{repo}/like:
+    post:
+      tags: [community]
+      operationId: likeRepo
+      summary: Like a repo or catalog entry. Liking twice is not an error.
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+      responses:
+        '200': {description: Liked.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [community]
+      operationId: unlikeRepo
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+      responses:
+        '200': {description: Unliked.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/{repoType}/{namespace}/{repo}/likers:
+    get:
+      tags: [community]
+      operationId: listLikers
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - $ref: '#/components/parameters/repoType'
+        - $ref: '#/components/parameters/namespace'
+        - $ref: '#/components/parameters/repo'
+      responses:
+        '200':
+          description: Users who liked the repo.
+          content:
+            application/json:
+              schema: {type: array, items: {$ref: '#/components/schemas/UserRef'}}
+  /api/users/{user}/likes:
+    get:
+      tags: [community]
+      operationId: listUserLikes
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: user, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+      responses:
+        '200':
+          description: Public repos the user liked.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  required: [createdAt, repo]
+                  properties:
+                    createdAt: {type: string, format: date-time}
+                    repo: {type: object, required: [name, type], properties: {name: {type: string}, type: {$ref: '#/components/schemas/RepoTypeSingular'}}}
+  /api/users/{user}/overview:
+    get:
+      tags: [community]
+      operationId: userOverview
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: user, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+      responses:
+        '200':
+          description: Public profile.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/UserOverview'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/users/{user}/followers:
+    get:
+      tags: [community]
+      operationId: userFollowers
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: user, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+      responses:
+        '200': {description: Followers., content: {application/json: {schema: {type: array, items: {$ref: '#/components/schemas/UserRef'}}}}}
+  /api/users/{user}/following:
+    get:
+      tags: [community]
+      operationId: userFollowing
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: user, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+      responses:
+        '200': {description: Users the user follows., content: {application/json: {schema: {type: array, items: {$ref: '#/components/schemas/UserRef'}}}}}
+  /api/organizations/{org}/overview:
+    get:
+      tags: [community]
+      operationId: orgOverview
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: org, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+      responses:
+        '200':
+          description: Public org profile.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/OrgOverview'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/organizations/{org}/members:
+    get:
+      tags: [community]
+      operationId: orgMembers
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: org, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+      responses:
+        '200':
+          description: Members (public view; roles only for members of the org).
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  allOf:
+                    - {$ref: '#/components/schemas/UserRef'}
+                    - type: object
+                      properties:
+                        role: {type: string, enum: [read, contributor, write, admin]}
+  /api/organizations/{org}/followers:
+    get:
+      tags: [community]
+      operationId: orgFollowers
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: org, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+      responses:
+        '200': {description: Followers., content: {application/json: {schema: {type: array, items: {$ref: '#/components/schemas/UserRef'}}}}}
+  /api/collections:
+    get:
+      tags: [community]
+      operationId: listCollections
+      summary: Public collections, or the caller's own private ones with owner=<self>.
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: owner, in: query, schema: {type: string}}
+        - {name: item, in: query, schema: {type: string}, description: 'e.g. models/org/repo'}
+        - {name: q, in: query, schema: {type: string}}
+        - {name: sort, in: query, schema: {type: string, enum: [lastModified, trending, upvotes]}}
+        - {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 100}}
+      responses:
+        '200': {description: Collections., content: {application/json: {schema: {type: array, items: {$ref: '#/components/schemas/Collection'}}}}}
+    post:
+      tags: [community]
+      operationId: createCollection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [title, namespace]
+              properties:
+                title: {type: string, minLength: 1, maxLength: 60}
+                namespace: {$ref: '#/components/schemas/Handle'}
+                description: {type: string, maxLength: 150}
+                private: {type: boolean, default: false}
+      responses:
+        '200': {description: Created., content: {application/json: {schema: {$ref: '#/components/schemas/Collection'}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '402': {$ref: '#/components/responses/PerkRequired'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /api/collections/{namespace}/{slug}:
+    parameters:
+      - $ref: '#/components/parameters/namespace'
+      - {name: slug, in: path, required: true, schema: {type: string}, description: '<title-slug>-<id suffix>'}
+    get:
+      tags: [community]
+      operationId: getCollection
+      security: [{}, {fwBearer: []}]
+      responses:
+        '200': {description: Collection with items., content: {application/json: {schema: {$ref: '#/components/schemas/Collection'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+    patch:
+      tags: [community]
+      operationId: updateCollection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              minProperties: 1
+              properties:
+                title: {type: string, maxLength: 60}
+                description: {type: string, maxLength: 150}
+                private: {type: boolean}
+                position: {type: integer}
+                theme: {type: string}
+      responses:
+        '200': {description: Updated., content: {application/json: {schema: {type: object, properties: {data: {$ref: '#/components/schemas/Collection'}}}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [community]
+      operationId: deleteCollection
+      responses:
+        '200': {description: Deleted.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/collections/{namespace}/{slug}/items:
+    post:
+      tags: [community]
+      operationId: addCollectionItem
+      parameters:
+        - $ref: '#/components/parameters/namespace'
+        - {name: slug, in: path, required: true, schema: {type: string}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [item]
+              properties:
+                item:
+                  type: object
+                  required: [id, type]
+                  properties:
+                    id: {type: string, description: 'org/repo for repos, arXiv id for papers, collection slug for collections'}
+                    type: {type: string, enum: [model, dataset, space, app, paper, collection]}
+                note: {type: string, maxLength: 500}
+      responses:
+        '200': {description: Added; the updated collection., content: {application/json: {schema: {$ref: '#/components/schemas/Collection'}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+  /api/collections/{namespace}/{slug}/items/{itemId}:
+    parameters:
+      - $ref: '#/components/parameters/namespace'
+      - {name: slug, in: path, required: true, schema: {type: string}}
+      - {name: itemId, in: path, required: true, schema: {type: string, pattern: '^ci_[0-9A-Za-z]+$'}}
+    patch:
+      tags: [community]
+      operationId: updateCollectionItem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {type: object, minProperties: 1, properties: {note: {type: string, maxLength: 500}, position: {type: integer}}}
+      responses:
+        '200': {description: Updated.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [community]
+      operationId: deleteCollectionItem
+      responses:
+        '200': {description: Removed.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+
+  # ---------------------------------------------------------------------------------------------- webhooks
+  /api/settings/webhooks:
+    get:
+      tags: [webhooks]
+      operationId: listWebhooks
+      responses:
+        '200': {description: The caller's webhooks., content: {application/json: {schema: {type: array, items: {$ref: '#/components/schemas/Webhook'}}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+    post:
+      tags: [webhooks]
+      operationId: createWebhook
+      summary: Create a webhook. The number of webhooks is a plan perk (402 when the limit is reached).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/WebhookInput'}
+      responses:
+        '200': {description: Created., content: {application/json: {schema: {type: object, required: [webhook], properties: {webhook: {$ref: '#/components/schemas/Webhook'}}}}}}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '402': {$ref: '#/components/responses/PerkRequired'}
+  /api/settings/webhooks/{webhookId}:
+    parameters:
+      - $ref: '#/components/parameters/webhookId'
+    get:
+      tags: [webhooks]
+      operationId: getWebhook
+      responses:
+        '200': {description: The webhook., content: {application/json: {schema: {type: object, required: [webhook], properties: {webhook: {$ref: '#/components/schemas/Webhook'}}}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+    post:
+      tags: [webhooks]
+      operationId: updateWebhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/WebhookInput'}
+      responses:
+        '200': {description: Updated., content: {application/json: {schema: {type: object, required: [webhook], properties: {webhook: {$ref: '#/components/schemas/Webhook'}}}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [webhooks]
+      operationId: deleteWebhook
+      responses:
+        '200': {description: Deleted.}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/settings/webhooks/{webhookId}/enable:
+    post:
+      tags: [webhooks]
+      operationId: enableWebhook
+      parameters: [{$ref: '#/components/parameters/webhookId'}]
+      responses:
+        '200': {description: Enabled., content: {application/json: {schema: {type: object, required: [webhook], properties: {webhook: {$ref: '#/components/schemas/Webhook'}}}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/settings/webhooks/{webhookId}/disable:
+    post:
+      tags: [webhooks]
+      operationId: disableWebhook
+      parameters: [{$ref: '#/components/parameters/webhookId'}]
+      responses:
+        '200': {description: Disabled., content: {application/json: {schema: {type: object, required: [webhook], properties: {webhook: {$ref: '#/components/schemas/Webhook'}}}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+
+  # ------------------------------------------------------------------------------------- Allternit-only stubs
+  /api/fw/v1/account:
+    get:
+      tags: [allternit]
+      operationId: getAccount
+      summary: The caller's profile, plan, perks (as the claim states them) and storage use.
+      responses:
+        '200': {description: Account., content: {application/json: {schema: {$ref: '#/components/schemas/Account'}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {description: Signed in but no Freeweights profile yet (pick a handle with POST)., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+    post:
+      tags: [allternit]
+      operationId: createAccount
+      summary: First sign-in. Picks the handle. 409 handle_taken for a taken or reserved handle.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {type: object, required: [handle], properties: {handle: {$ref: '#/components/schemas/Handle'}, name: {type: string}}}
+      responses:
+        '200': {description: Created., content: {application/json: {schema: {$ref: '#/components/schemas/Account'}}}}
+        '409': {$ref: '#/components/responses/Conflict'}
+    patch:
+      tags: [allternit]
+      operationId: updateAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              minProperties: 1
+              properties:
+                handle: {$ref: '#/components/schemas/Handle'}
+                name: {type: string, maxLength: 100}
+                bio: {type: string, maxLength: 2000}
+                homepage: {type: string, format: uri}
+                avatarUrl: {type: string, format: uri}
+      responses:
+        '200': {description: Updated., content: {application/json: {schema: {$ref: '#/components/schemas/Account'}}}}
+        '409': {$ref: '#/components/responses/Conflict'}
+    delete:
+      tags: [allternit]
+      operationId: deleteAccount
+      summary: Delete the Freeweights profile, its repos and webhooks. Discussions and comments stay, shown as a deleted account.
+      responses:
+        '200': {description: Deleted.}
+  /api/fw/v1/follows:
+    get:
+      tags: [allternit]
+      operationId: listFollows
+      parameters:
+        - {name: user, in: query, schema: {$ref: '#/components/schemas/Handle'}, description: Default the caller.}
+      responses:
+        '200': {description: Who the user follows., content: {application/json: {schema: {type: array, items: {$ref: '#/components/schemas/FollowTarget'}}}}}
+    post:
+      tags: [allternit]
+      operationId: follow
+      requestBody: {required: true, content: {application/json: {schema: {type: object, required: [target], properties: {target: {$ref: '#/components/schemas/FollowTarget'}}}}}}
+      responses:
+        '200': {description: Following.}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [allternit]
+      operationId: unfollow
+      requestBody: {required: true, content: {application/json: {schema: {type: object, required: [target], properties: {target: {$ref: '#/components/schemas/FollowTarget'}}}}}}
+      responses:
+        '200': {description: Not following.}
+  /api/fw/v1/posts:
+    get:
+      tags: [allternit]
+      operationId: listPosts
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: author, in: query, schema: {type: string}}
+        - {name: feed, in: query, schema: {type: string, enum: [recent, following]}, description: following needs a credential.}
+        - {name: cursor, in: query, schema: {type: string}}
+      responses:
+        '200': {description: Posts., content: {application/json: {schema: {type: object, required: [posts], properties: {posts: {type: array, items: {$ref: '#/components/schemas/Post'}}, next: {type: [string, 'null']}}}}}}
+    post:
+      tags: [allternit]
+      operationId: createPost
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [body]
+              properties:
+                body: {type: string, minLength: 1, maxLength: 10000}
+                asOrg: {$ref: '#/components/schemas/Handle'}
+                attachments: {type: array, maxItems: 10, items: {type: object, required: [type, ref], properties: {type: {type: string, enum: [repo, paper, image]}, ref: {type: string}}}}
+      responses:
+        '200': {description: Posted., content: {application/json: {schema: {$ref: '#/components/schemas/Post'}}}}
+  /api/fw/v1/posts/{postId}:
+    parameters:
+      - {name: postId, in: path, required: true, schema: {type: string, pattern: '^pst_[0-9A-Za-z]+$'}}
+    get:
+      tags: [allternit]
+      operationId: getPost
+      security: [{}, {fwBearer: []}]
+      responses:
+        '200': {description: Post., content: {application/json: {schema: {$ref: '#/components/schemas/Post'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [allternit]
+      operationId: deletePost
+      responses:
+        '200': {description: Deleted.}
+  /api/fw/v1/papers:
+    get:
+      tags: [allternit]
+      operationId: listPapers
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: date, in: query, schema: {type: string, format: date}}
+        - {name: q, in: query, schema: {type: string}}
+      responses:
+        '200': {description: Papers., content: {application/json: {schema: {type: array, items: {$ref: '#/components/schemas/Paper'}}}}}
+  /api/fw/v1/papers/{arxivId}:
+    get:
+      tags: [allternit]
+      operationId: getPaper
+      security: [{}, {fwBearer: []}]
+      parameters: [{$ref: '#/components/parameters/arxivId'}]
+      responses:
+        '200': {description: Paper with linked repos., content: {application/json: {schema: {$ref: '#/components/schemas/Paper'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/fw/v1/papers/{arxivId}/vote:
+    parameters: [{$ref: '#/components/parameters/arxivId'}]
+    post:
+      tags: [allternit]
+      operationId: votePaper
+      responses:
+        '200': {description: Voted.}
+    delete:
+      tags: [allternit]
+      operationId: unvotePaper
+      responses:
+        '200': {description: Vote removed.}
+  /api/fw/v1/papers/{arxivId}/links:
+    post:
+      tags: [allternit]
+      operationId: linkPaper
+      parameters: [{$ref: '#/components/parameters/arxivId'}]
+      requestBody: {required: true, content: {application/json: {schema: {type: object, required: [repo], properties: {repo: {$ref: '#/components/schemas/RepoPointer'}}}}}}
+      responses:
+        '200': {description: Linked.}
+        '403': {$ref: '#/components/responses/Forbidden'}
+  /api/fw/v1/evals:
+    get:
+      tags: [allternit]
+      operationId: listEvals
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: repo, in: query, required: true, schema: {type: string}, description: 'models/org/repo'}
+      responses:
+        '200':
+          description: Evaluation results for a repo.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [repo, results]
+                properties:
+                  repo: {type: string}
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      required: [task, dataset, metric, value, source, verified]
+                      properties:
+                        task: {type: string}
+                        dataset: {type: string}
+                        metric: {type: string}
+                        value: {type: number}
+                        source: {type: string, enum: [card, run, submitted]}
+                        verified: {type: boolean, description: True only when Freeweights or a named third party re-ran it.}
+                        url: {type: string, format: uri}
+  /api/fw/v1/apps:
+    get:
+      tags: [allternit]
+      operationId: listAppsForModel
+      summary: MCP apps that use a model (read from the apps registry; D11).
+      security: [{}, {fwBearer: []}]
+      parameters:
+        - {name: model, in: query, required: true, schema: {type: string}}
+      responses:
+        '200':
+          description: Apps.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  required: [id, name, runs]
+                  properties:
+                    id: {type: string}
+                    name: {type: string}
+                    description: {type: string}
+                    runs: {type: string, enum: [static, server], description: 'static = sandbox in the browser; server = a process in a Guard environment on the user''s own computer'}
+                    open_url: {type: string, format: uri}
+  /api/fw/v1/endpoints:
+    get:
+      tags: [allternit]
+      operationId: listEndpoints
+      responses:
+        '200': {description: The caller's inference endpoints., content: {application/json: {schema: {type: array, items: {$ref: '#/components/schemas/Endpoint'}}}}}
+    post:
+      tags: [allternit]
+      operationId: createEndpoint
+      summary: Create an endpoint for a repo, paid from prepaid credits. Costs are shown by cloud-api, not here.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [repo, hardware]
+              properties:
+                repo: {$ref: '#/components/schemas/RepoPointer'}
+                hardware: {type: string, description: A hardware id from cloud-api.}
+                min_replicas: {type: integer, minimum: 0}
+                max_replicas: {type: integer, minimum: 1}
+      responses:
+        '200': {description: Created., content: {application/json: {schema: {$ref: '#/components/schemas/Endpoint'}}}}
+        '402': {$ref: '#/components/responses/PerkRequired'}
+  /api/fw/v1/endpoints/{endpointId}:
+    parameters:
+      - {name: endpointId, in: path, required: true, schema: {type: string}}
+    get:
+      tags: [allternit]
+      operationId: getEndpoint
+      responses:
+        '200': {description: Endpoint., content: {application/json: {schema: {$ref: '#/components/schemas/Endpoint'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+    delete:
+      tags: [allternit]
+      operationId: deleteEndpoint
+      responses:
+        '200': {description: Deleted.}
+  /api/fw/v1/reports:
+    post:
+      tags: [allternit]
+      operationId: createReport
+      summary: Report content. Legal notices without an account go to the takedown mailbox instead (docs/takedowns).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [target, reason_class]
+              properties:
+                target:
+                  type: object
+                  required: [type, id]
+                  properties:
+                    type: {type: string, enum: [user, org, repo, discussion, comment, post, collection, paper]}
+                    id: {type: string}
+                reason_class: {type: string, enum: [copyright, csam, real_person_likeness, crime_marketing, malware_or_secrets, license_violation, spam, abuse, other]}
+                body: {type: string, maxLength: 5000}
+      responses:
+        '200': {description: Received., content: {application/json: {schema: {type: object, required: [id, status], properties: {id: {type: string}, status: {type: string, enum: [open]}}}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+
+components:
+  securitySchemes:
+    fwBearer:
+      type: http
+      scheme: bearer
+      description: A Clerk session JWT or an Allternit key (alt_ prefix). hf_ tokens are refused. See spec/accounts-v1.md.
+  parameters:
+    repoType: {name: repoType, in: path, required: true, schema: {type: string, enum: [models, datasets, spaces, apps]}}
+    namespace: {name: namespace, in: path, required: true, schema: {$ref: '#/components/schemas/Handle'}}
+    repo: {name: repo, in: path, required: true, schema: {type: string, pattern: '^[A-Za-z0-9._-]{1,96}$'}}
+    rev: {name: rev, in: path, required: true, description: 'main, refs/pr/<num> (URL-encoded) or a 40-hex commit.', schema: {type: string}}
+    num: {name: num, in: path, required: true, schema: {type: integer, minimum: 1}}
+    createPr: {name: create_pr, in: query, schema: {type: integer, enum: [0, 1]}}
+    webhookId: {name: webhookId, in: path, required: true, schema: {type: string, pattern: '^wh_[0-9A-Za-z]+$'}}
+    arxivId: {name: arxivId, in: path, required: true, schema: {type: string, pattern: '^[0-9]{4}\.[0-9]{4,5}$'}}
+  requestBodies:
+    LfsBatch:
+      required: true
+      content:
+        application/vnd.git-lfs+json:
+          schema:
+            type: object
+            required: [operation, objects]
+            properties:
+              operation: {type: string, enum: [upload, download]}
+              transfers: {type: array, items: {type: string, enum: [basic, multipart]}}
+              objects:
+                type: array
+                minItems: 1
+                maxItems: 1000
+                items:
+                  type: object
+                  required: [oid, size]
+                  properties:
+                    oid: {$ref: '#/components/schemas/Sha256'}
+                    size: {type: integer, minimum: 0}
+              hash_algo: {type: string, enum: [sha256]}
+              ref: {type: object, properties: {name: {type: string}}}
+  responses:
+    LfsBatch:
+      description: Per-object actions or errors.
+      content:
+        application/vnd.git-lfs+json:
+          schema:
+            type: object
+            required: [objects]
+            properties:
+              transfer: {type: string, enum: [basic, multipart]}
+              objects:
+                type: array
+                items:
+                  type: object
+                  required: [oid, size]
+                  properties:
+                    oid: {$ref: '#/components/schemas/Sha256'}
+                    size: {type: integer}
+                    authenticated: {type: boolean}
+                    actions:
+                      type: object
+                      properties:
+                        upload:
+                          type: object
+                          required: [href]
+                          properties:
+                            href: {type: string, format: uri, description: 'basic: presigned R2 PUT URL. multipart: the completion URL (/api/fw/v1/lfs/{uploadId}/complete).'}
+                            header:
+                              type: object
+                              description: 'multipart only: chunk_size (string of an integer) and one presigned part URL per part, keyed "00001", "00002", ...'
+                              additionalProperties: {type: string}
+                            expires_in: {type: integer}
+                        verify:
+                          type: object
+                          required: [href]
+                          properties:
+                            href: {type: string, format: uri}
+                            header: {type: object, additionalProperties: {type: string}}
+                    error:
+                      type: object
+                      required: [code, message]
+                      properties:
+                        code: {type: integer, description: '404 unknown object, 413 too large, 422 bad oid, 507 storage limit reached'}
+                        message: {type: string}
+    BadRequest:
+      description: The request is malformed.
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+    Unauthorized:
+      description: No credential, an invalid or expired one, or an hf_ token (hf_token_rejected).
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {error: auth_required, message: Sign in or send an Allternit key (alt_...).}
+    Forbidden:
+      description: The credential lacks the scope or the role (insufficient_scope, forbidden).
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+    NotFound:
+      description: No such repo, or a private repo the caller cannot see (the two are not told apart).
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+    Conflict:
+      description: Already exists, handle taken or reserved, or a merge conflict.
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+    PerkRequired:
+      description: The caller's plan or add-ons do not include this (perk_required) or its limit is used (perk_limit). The body names the perk, never a price.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - {$ref: '#/components/schemas/Error'}
+              - type: object
+                required: [perk]
+                properties:
+                  perk: {type: string}
+                  plans_url: {type: string, format: uri}
+    NotConfigured:
+      description: Accounts are not turned on for this deployment (accounts_not_configured).
+      content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}
+  schemas:
+    Error:
+      type: object
+      required: [error, message]
+      properties:
+        error: {type: string, description: 'Stable code: auth_required, hf_token_rejected, insufficient_scope, forbidden, repo_not_found, repo_exists, handle_taken, namespace_reserved, perk_required, perk_limit, xet_not_supported, accounts_not_configured, rate_limited.'}
+        message: {type: string}
+    Handle: {type: string, pattern: '^[A-Za-z0-9][A-Za-z0-9._-]{1,41}$'}
+    Sha256: {type: string, pattern: '^[0-9a-f]{64}$'}
+    CommitOid: {type: string, pattern: '^[0-9a-f]{40}$'}
+    RepoTypeSingular: {type: [string, 'null'], enum: [model, dataset, space, app, null], description: null or absent = model.}
+    RepoPointer:
+      type: object
+      required: [type, id]
+      properties:
+        type: {type: string, enum: [model, dataset, app]}
+        id: {type: string, description: namespace/name}
+    UserRef:
+      type: object
+      required: [user]
+      properties:
+        user: {type: string}
+        fullname: {type: [string, 'null']}
+        avatarUrl: {type: [string, 'null']}
+        type: {type: string, enum: [user]}
+    WhoAmI:
+      type: object
+      required: [type, id, name, orgs, auth]
+      properties:
+        type: {type: string, enum: [user]}
+        id: {type: string, description: Clerk user id.}
+        name: {type: string, description: Handle.}
+        fullname: {type: [string, 'null']}
+        avatarUrl: {type: [string, 'null']}
+        isPro: {type: boolean, description: True on any paid plan. Hugging Face clients read this field.}
+        orgs:
+          type: array
+          items:
+            type: object
+            required: [type, name, roleInOrg]
+            properties:
+              type: {type: string, enum: [org]}
+              name: {type: string}
+              fullname: {type: [string, 'null']}
+              avatarUrl: {type: [string, 'null']}
+              roleInOrg: {type: string, enum: [read, contributor, write, admin]}
+        auth:
+          type: object
+          required: [type]
+          properties:
+            type: {type: string, enum: [access_token, session]}
+            accessToken:
+              type: object
+              properties:
+                displayName: {type: string}
+                role: {type: string, enum: [read, write, fineGrained]}
+                fineGrained:
+                  type: object
+                  properties:
+                    scoped:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          entity: {type: object, properties: {type: {type: string}, name: {type: string}}}
+                          permissions: {type: array, items: {type: string}}
+        allternit:
+          type: object
+          description: Allternit extension. Plan id and scopes from the entitlement claim; no price.
+          properties:
+            plan: {type: string}
+            scopes: {type: array, items: {type: string}}
+    CreateRepoRequest:
+      type: object
+      required: [name]
+      properties:
+        name: {type: string, pattern: '^[A-Za-z0-9._-]{1,96}$'}
+        organization: {type: [string, 'null']}
+        type: {$ref: '#/components/schemas/RepoTypeSingular'}
+        visibility: {type: string, enum: [public, private], description: Newer clients.}
+        private: {type: boolean, description: Older clients.}
+        sdk: {type: string, enum: [static, gradio, streamlit, docker, mcp], description: Apps only. gradio/streamlit/docker apps run on the user's own computer (D11).}
+        license: {type: string}
+    CreateRepoResponse:
+      type: object
+      required: [url]
+      properties:
+        url: {type: string, format: uri, description: 'https://freeweights.allternit.com/<ns>/<name> (datasets/ or spaces/ prefixed for those kinds).'}
+        name: {type: string}
+        id: {type: string, description: Stable repo id (rp_...), used in freeweights.repo:<id> scopes.}
+    CommitLine:
+      oneOf:
+        - type: object
+          required: [key, value]
+          properties:
+            key: {const: header}
+            value:
+              type: object
+              required: [summary]
+              properties:
+                summary: {type: string, minLength: 1, maxLength: 500}
+                description: {type: string}
+                parentCommit: {$ref: '#/components/schemas/CommitOid'}
+        - type: object
+          required: [key, value]
+          properties:
+            key: {const: file}
+            value:
+              type: object
+              required: [path, content, encoding]
+              properties:
+                path: {type: string}
+                content: {type: string}
+                encoding: {const: base64}
+        - type: object
+          required: [key, value]
+          properties:
+            key: {const: lfsFile}
+            value:
+              type: object
+              required: [path, algo, oid]
+              properties:
+                path: {type: string}
+                algo: {const: sha256}
+                oid: {$ref: '#/components/schemas/Sha256'}
+                size: {type: integer}
+        - type: object
+          required: [key, value]
+          properties:
+            key: {enum: [deletedFile, deletedFolder]}
+            value: {type: object, required: [path], properties: {path: {type: string}}}
+    GitRef:
+      type: object
+      required: [name, ref, targetCommit]
+      properties:
+        name: {type: string}
+        ref: {type: string}
+        targetCommit: {$ref: '#/components/schemas/CommitOid'}
+    Discussion:
+      type: object
+      required: [num, title, status, isPullRequest, createdAt, repo]
+      properties:
+        num: {type: integer}
+        title: {type: string}
+        status: {type: string, enum: [draft, open, closed, merged]}
+        isPullRequest: {type: boolean}
+        createdAt: {type: string, format: date-time}
+        author: {type: object, properties: {name: {type: string}}, description: Absent for a deleted account.}
+        repo: {type: object, required: [name, type], properties: {name: {type: string}, type: {type: string, enum: [model, dataset, space]}}}
+        pinned: {type: boolean}
+        numComments: {type: integer}
+    DiscussionDetails:
+      allOf:
+        - {$ref: '#/components/schemas/Discussion'}
+        - type: object
+          required: [events]
+          properties:
+            events: {type: array, items: {$ref: '#/components/schemas/DiscussionEvent'}}
+            changes:
+              type: object
+              description: Pull requests only.
+              properties:
+                base: {type: string}
+                mergeCommitId: {type: [string, 'null']}
+            filesWithConflicts: {type: array, items: {type: string}}
+            diff: {type: [string, 'null']}
+    DiscussionEvent:
+      type: object
+      required: [id, type, createdAt, data]
+      properties:
+        id: {type: string}
+        type: {type: string, enum: [comment, status-change, commit, title-change]}
+        createdAt: {type: string, format: date-time}
+        author: {type: object, properties: {name: {type: string}}}
+        data:
+          type: object
+          description: 'comment: {edited, hidden, latest: {raw}}; status-change: {status}; commit: {subject, oid}; title-change: {from, to}'
+    UserOverview:
+      type: object
+      required: [user, type]
+      properties:
+        user: {type: string}
+        type: {type: string, enum: [user]}
+        fullname: {type: [string, 'null']}
+        avatarUrl: {type: [string, 'null']}
+        details: {type: [string, 'null'], description: Bio.}
+        isPro: {type: boolean}
+        createdAt: {type: string, format: date-time}
+        numModels: {type: integer}
+        numDatasets: {type: integer}
+        numSpaces: {type: integer}
+        numDiscussions: {type: integer}
+        numPapers: {type: integer}
+        numLikes: {type: integer}
+        numFollowers: {type: integer}
+        numFollowing: {type: integer}
+        isFollowing: {type: boolean}
+        orgs: {type: array, items: {type: object, properties: {name: {type: string}, fullname: {type: string}, avatarUrl: {type: string}}}}
+    OrgOverview:
+      type: object
+      required: [name, type]
+      properties:
+        name: {type: string}
+        type: {type: string, enum: [org]}
+        fullname: {type: [string, 'null']}
+        avatarUrl: {type: [string, 'null']}
+        details: {type: [string, 'null']}
+        isVerified: {type: boolean}
+        verifiedDomain: {type: [string, 'null']}
+        numModels: {type: integer}
+        numDatasets: {type: integer}
+        numSpaces: {type: integer}
+        numMembers: {type: integer}
+        numFollowers: {type: integer}
+        isFollowing: {type: boolean}
+        catalog: {type: boolean, description: True when the name is a catalog publisher (reserved) and nobody has claimed it.}
+    Collection:
+      type: object
+      required: [slug, title, owner, items, private, lastUpdated]
+      properties:
+        slug: {type: string, description: '<namespace>/<title-slug>-<id suffix>'}
+        title: {type: string}
+        description: {type: [string, 'null']}
+        owner: {type: object, required: [name, type], properties: {name: {type: string}, type: {type: string, enum: [user, org]}}}
+        items:
+          type: array
+          items:
+            type: object
+            required: [_id, type, id, position]
+            properties:
+              _id: {type: string, description: Item object id (ci_...).}
+              type: {type: string, enum: [model, dataset, space, paper, collection]}
+              id: {type: string}
+              position: {type: integer}
+              note: {type: object, properties: {text: {type: string}}}
+        position: {type: integer}
+        private: {type: boolean}
+        theme: {type: [string, 'null']}
+        upvotes: {type: integer}
+        lastUpdated: {type: string, format: date-time}
+    WebhookWatched:
+      type: object
+      required: [type, name]
+      properties:
+        type: {type: string, enum: [user, org, model, dataset, space, app]}
+        name: {type: string}
+    WebhookInput:
+      type: object
+      required: [watched, url]
+      properties:
+        watched: {type: array, minItems: 1, maxItems: 100, items: {$ref: '#/components/schemas/WebhookWatched'}}
+        url: {type: string, format: uri, pattern: '^https://'}
+        domains: {type: array, items: {type: string, enum: [repo, discussion]}}
+        secret: {type: string, maxLength: 200}
+    Webhook:
+      type: object
+      required: [id, url, watched, domains, disabled]
+      properties:
+        id: {type: string}
+        url: {type: string, format: uri}
+        watched: {type: array, items: {$ref: '#/components/schemas/WebhookWatched'}}
+        domains: {type: array, items: {type: string, enum: [repo, discussion]}}
+        secret: {type: [string, 'null'], description: Returned to the owner only.}
+        disabled: {type: boolean}
+    WebhookPayload:
+      description: Body POSTed to a webhook URL, with header X-Webhook-Secret when a secret is set. Hugging Face payload version 3.
+      type: object
+      required: [event, repo, webhook]
+      properties:
+        event:
+          type: object
+          required: [action, scope]
+          properties:
+            action: {type: string, enum: [create, update, delete, move]}
+            scope: {type: string, description: 'repo, repo.content, repo.config, discussion, discussion.comment'}
+        repo:
+          type: object
+          required: [type, name, id, private]
+          properties:
+            type: {type: string, enum: [model, dataset, space]}
+            name: {type: string}
+            id: {type: string}
+            private: {type: boolean}
+            url: {type: object, properties: {web: {type: string}, api: {type: string}}}
+            headSha: {type: string}
+        discussion: {type: object}
+        comment: {type: object}
+        webhook: {type: object, required: [id, version], properties: {id: {type: string}, version: {const: 3}}}
+    Account:
+      type: object
+      required: [user, plan, perks, usage]
+      properties:
+        user: {$ref: '#/components/schemas/UserOverview'}
+        plan: {type: string}
+        perks: {type: object, additionalProperties: true, description: Copied from the entitlement claim. Names and values come from cloud-api.}
+        addon_bytes: {type: object, properties: {public: {type: integer}, private: {type: integer}}}
+        usage: {type: object, required: [public_bytes, private_bytes], properties: {public_bytes: {type: integer}, private_bytes: {type: integer}, repos: {type: integer}}}
+        orgs: {type: array, items: {type: object, properties: {name: {type: string}, role: {type: string}}}}
+    FollowTarget:
+      type: object
+      required: [type, name]
+      properties:
+        type: {type: string, enum: [user, org]}
+        name: {$ref: '#/components/schemas/Handle'}
+    Post:
+      type: object
+      required: [id, body, createdAt]
+      properties:
+        id: {type: string}
+        author: {$ref: '#/components/schemas/UserRef'}
+        asOrg: {type: [string, 'null']}
+        body: {type: string}
+        attachments: {type: array, items: {type: object, properties: {type: {type: string}, ref: {type: string}}}}
+        createdAt: {type: string, format: date-time}
+    Paper:
+      type: object
+      required: [id, title, authors, upvotes]
+      properties:
+        id: {type: string}
+        title: {type: string}
+        authors: {type: array, items: {type: string}}
+        summary: {type: [string, 'null']}
+        publishedAt: {type: [string, 'null'], format: date-time}
+        upvotes: {type: integer}
+        hasVoted: {type: boolean}
+        repos: {type: array, items: {$ref: '#/components/schemas/RepoPointer'}}
+    Endpoint:
+      type: object
+      required: [id, repo, status]
+      properties:
+        id: {type: string}
+        repo: {$ref: '#/components/schemas/RepoPointer'}
+        status: {type: string, enum: [pending, initializing, running, scaled_to_zero, failed, deleted]}
+        hardware: {type: string}
+        url: {type: [string, 'null'], format: uri}

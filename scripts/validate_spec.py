@@ -133,10 +133,70 @@ try:
         if p not in doc.get("paths", {}): e.append(f"missing path {p}")
     try:
         from openapi_spec_validator import validate
-        validate(doc); engine2 = "openapi-spec-validator"
+        engine2 = "openapi-spec-validator"
+        try: validate(doc, base_uri="file://" + api)
+        except Exception as ex: e.append(f"openapi-spec-validator: {str(ex).splitlines()[0]}")
     except ImportError:
         engine2 = "yaml parse only"
     report(f"spec/hub-api.yaml ({engine2})", e)
+
+    # Parts (plan D8): every spec/parts/*.yaml is a full OpenAPI 3.1 document listed in hub-api.yaml x-parts.
+    def refs_ok(node, root, where, out):
+        if isinstance(node, dict):
+            r = node.get("$ref")
+            if isinstance(r, str):
+                if not r.startswith("#/"): out.append(f"{where}: external $ref {r} (parts must be self-contained)")
+                else:
+                    cur = root
+                    for part in r[2:].split("/"):
+                        part = part.replace("~1", "/").replace("~0", "~")
+                        if not isinstance(cur, dict) or part not in cur: out.append(f"{where}: $ref {r} does not resolve"); break
+                        cur = cur[part]
+            for k, v in node.items(): refs_ok(v, root, where, out)
+        elif isinstance(node, list):
+            for v in node: refs_ok(v, root, where, out)
+    listed = set(doc.get("x-parts") or [])
+    found = {os.path.relpath(p, SPEC) for p in glob.glob(os.path.join(SPEC, "parts", "*.yaml"))}
+    report("spec/hub-api.yaml x-parts lists exactly spec/parts/*.yaml",
+           [f"{x} is in x-parts but missing" for x in sorted(listed - found)] + [f"{x} is not listed in x-parts" for x in sorted(found - listed)])
+    owner = {pth: "hub-api.yaml" for pth in doc.get("paths", {})}
+    op_ids = {op.get("operationId"): "hub-api.yaml" for item in doc.get("paths", {}).values() for op in item.values() if isinstance(op, dict) and op.get("operationId")}
+    METHODS = ("get", "put", "post", "delete", "patch", "head", "options")
+    norm = lambda pth: re.sub(r"\{[^}]+\}", "{}", pth)
+    shapes = {norm(pth): pth for pth in owner}
+    for rel in sorted(found):
+        part = yaml.safe_load(open(os.path.join(SPEC, rel), encoding="utf-8"))
+        e = []
+        if not str(part.get("openapi", "")).startswith("3.1"): e.append("openapi must be 3.1.x")
+        for k in ("info", "paths", "components"):
+            if k not in part: e.append(f"missing {k}")
+        for pth, item in (part.get("paths") or {}).items():
+            if pth in owner: e.append(f"path {pth} is also defined in {owner[pth]}")
+            elif norm(pth) in shapes: e.append(f"path {pth} has the same shape as {shapes[norm(pth)]}")
+            owner[pth] = rel; shapes[norm(pth)] = pth
+            params = set(re.findall(r"\{([^}]+)\}", pth))
+            declared = set()
+            for prm in item.get("parameters", []):
+                prm = part["components"]["parameters"][prm["$ref"].split("/")[-1]] if "$ref" in prm else prm
+                if prm.get("in") == "path": declared.add(prm["name"])
+            for m in METHODS:
+                op = item.get(m)
+                if op is None: continue
+                if not op.get("responses"): e.append(f"{m.upper()} {pth}: no responses")
+                oid = op.get("operationId")
+                if not oid: e.append(f"{m.upper()} {pth}: no operationId")
+                elif oid in op_ids: e.append(f"{m.upper()} {pth}: operationId {oid} also used in {op_ids[oid]}")
+                else: op_ids[oid] = rel
+                mine = set(declared)
+                for prm in op.get("parameters", []):
+                    prm = part["components"]["parameters"][prm["$ref"].split("/")[-1]] if "$ref" in prm else prm
+                    if prm.get("in") == "path": mine.add(prm["name"])
+                if mine != params: e.append(f"{m.upper()} {pth}: path parameters {sorted(mine)} do not match the template {sorted(params)}")
+        refs_ok(part, part, rel, e)
+        if engine2 == "openapi-spec-validator":
+            try: validate(part)
+            except Exception as ex: e.append(f"openapi-spec-validator: {str(ex).splitlines()[0]}")
+        report(f"spec/{rel} ({engine2}; refs, path params, operationIds, no duplicate paths)", e)
 except ImportError:
     report("spec/hub-api.yaml (pyyaml missing; skipped)", [])
 sys.exit(1 if fails else 0)

@@ -1,0 +1,270 @@
+# Freeweights accounts v1
+
+Accounts add uploads, private repos, discussions, likes, collections, follows, posts, papers, webhooks and
+org features to Freeweights. One Allternit account works here and on every other Allternit surface. This
+file is the contract every part of the account work builds against: credentials, the entitlement claim,
+scopes, sign-in, handles, repos and storage, privacy, the page slot and island interface, and catalog
+overlays.
+
+Routes and shapes: `parts/write-api.yaml` (a part of `hub-api.yaml`). Database:
+`worker/migrations-accounts/0001_accounts.sql`. Shared types: `worker/src/types.ts`.
+
+## 1. What stays anonymous
+
+Every public read and every download works with no account, no cookie and no token, as today. This is the
+Operating Statement promise and accounts do not change it:
+
+- search, model and dataset detail, file trees, manifests and signatures, `/api/catalog`, and the site;
+- `resolve` for every public file, catalog or community;
+- public profiles, org pages, collections, discussions, papers and posts (read only).
+
+A request without `Authorization` is never refused because it has no account. Anonymous rate limits stay
+as they are. Accounts are needed only to write, and to read private repos.
+
+## 2. Credentials
+
+Every authenticated request sends `Authorization: Bearer <credential>`. The Worker never reads a cookie
+for auth, so a page on another site cannot make a signed-in request by riding a cookie (no CSRF surface).
+Two kinds of credential are accepted:
+
+| Credential | Looks like | Who uses it | How the Worker checks it |
+| --- | --- | --- | --- |
+| Clerk session JWT | three base64url parts, header `alg` `RS256` | the site, Desktop, ai.allternit.com, the phone apps | verified in the Worker (section 2.1) |
+| Allternit key | `alt_` prefix | `huggingface_hub`, the `fw` CLI, scripts, CI | verified by cloud-api when the Worker fetches the claim (section 3) |
+
+A Hugging Face token (`hf_` prefix) in any header or query is refused with 401 `hf_token_rejected`, as on
+the read API. A credential is never logged, stored or forwarded anywhere except to cloud-api's entitlement
+endpoint. The database holds no token and no token hash.
+
+### 2.1 Clerk session JWT rules
+
+The Worker verifies the session token itself with WebCrypto. No Clerk SDK runs in the Worker.
+
+1. The token is at most 8 KB and has three parts. The header has `alg: "RS256"` and a `kid`. Any other
+   `alg` (including `none` and `HS256`) is refused.
+2. The key comes from the JWKS at `https://clerk.allternit.com/.well-known/jwks.json` (`CLERK_JWKS_URL`),
+   cached for 1 hour. An unknown `kid` refetches the JWKS at most once a minute, then fails.
+3. The signature is RSASSA-PKCS1-v1_5 with SHA-256 over `header.payload`.
+4. `iss` is exactly one of `CLERK_ISSUERS`: `https://clerk.allternit.com` or `https://allternit.com/__clerk`.
+5. `exp` is in the future, allowing 60 seconds of clock skew. `nbf`, when present, is in the past, with the
+   same 60 seconds.
+6. `azp`, when present, is exactly one of `CLERK_AZP` (the Freeweights site, its preview host,
+   ai.allternit.com and m.allternit.com). A token whose `azp` is not on the list is refused. Native apps
+   that send no `azp` are accepted on the other checks.
+7. `sub` is a Clerk user id (`user_...`). It is the account id everywhere in Freeweights.
+
+Failure answers 401 `auth_required` with no detail about which check failed.
+
+A Clerk session can do everything its user can do: its scopes are `freeweights.read` and
+`freeweights.write`. Community writes that need no plan (like, comment, follow, discussion, collection)
+need only this check, with no call to cloud-api.
+
+### 2.2 Allternit keys and scopes
+
+Keys are cloud-api `alt_` keys, made on the console key page (`/api/v1/api-keys`). Freeweights adds three
+scopes:
+
+| Scope | Allows |
+| --- | --- |
+| `freeweights.read` | Reading private repos the key owner can see. |
+| `freeweights.write` | Every write the key owner can make. Implies `freeweights.read`. |
+| `freeweights.repo:<repo id>` | Reads and writes to that one repo only. `<repo id>` is the stable `rp_...` id, which survives renames and moves. |
+
+A key with none of these scopes is refused on Freeweights write routes with 403 `insufficient_scope`.
+In `whoami-v2` a key shows as `auth.type: "access_token"` with role `write`, `read` or `fineGrained` (for
+`repo:` scopes), so Hugging Face clients read it the way they read their own tokens.
+
+## 3. Entitlement claim
+
+The plan, add-ons, org seats and perks are decided by cloud-api, which holds billing. Freeweights never
+holds a perk value or a price; it reads them from a signed claim.
+
+**Request.** `GET https://api.allternit.com/api/v1/freeweights/entitlement` (`ENTITLEMENT_URL`), sent by
+the Worker with the caller's own `Authorization` header (Clerk JWT or `alt_` key). cloud-api checks the
+credential, and for a key also checks that it is not revoked.
+
+**Reply.** `200` with `Content-Type: application/jose` and a compact JWS:
+
+- header `{"alg":"EdDSA","typ":"JWT","kid":"entitlement-v1"}` (Ed25519);
+- payload, all fields required:
+
+| Field | Meaning |
+| --- | --- |
+| `iss` | `https://api.allternit.com` |
+| `aud` | `freeweights` |
+| `sub` | Clerk user id. For a key, the key owner. |
+| `plan` | The plan id, as cloud-api names it. |
+| `orgs[]` | One entry per Clerk org of the user: `clerk_org_id`, `slug`, `role` (`admin` or `member`), the org's `plan`, `perks`, `addon_bytes`, and `seats` when the org has a team plan. |
+| `perks{}` | Perk name to value (number, boolean or string). A missing name means not included. Unknown names are ignored, so cloud-api can add perks without a Worker release. |
+| `addon_bytes` | `{public, private}` bytes bought as add-ons, on top of the plan's included storage. |
+| `scopes[]` | Scopes of the credential. A session gets `["freeweights.read","freeweights.write"]`. |
+| `cred` | `session` or `key`. |
+| `iat`, `exp` | Issued at; expires 10 minutes later. |
+
+**Verify.** The Worker checks the signature with the Ed25519 public key in `spec/keys/entitlement-v1.pub`
+(bundled at build time), `kid`, `iss`, `aud`, `exp` (60 seconds skew), and for a session that `sub` equals
+the JWT's `sub`. A failed check is treated as no claim.
+
+**Cache.** Claims are cached by `sha256(bearer)`, in isolate memory and the Workers Cache API, until 30
+seconds before `exp`. The credential itself is never a cache key. A revoked key or a plan change can take
+up to 10 minutes to show.
+
+**When it is fetched.** Always for `alt_` keys (it is how the key is checked). For a Clerk session, only
+when the route needs a plan, perk, storage limit or org seat: create repo, upload, private settings,
+webhooks, private collections, endpoints, account page.
+
+**When cloud-api is down.** Routes that need a claim answer 503 `entitlement_unavailable` with
+`Retry-After`. Public reads and downloads never wait on cloud-api.
+
+**Keys.** A new signing key gets a new file (`entitlement-v2.pub`) and `kid`; the Worker accepts both
+during the change-over. Until the PEM block in `entitlement-v1.pub` is filled, no claim verifies and those
+routes answer 503 `accounts_not_configured`.
+
+**Perks in replies.** When a plan does not include something, or its limit is used, the reply is 402
+`perk_required` or `perk_limit` with the perk name and a link to `/plans/`. The plans page reads its
+numbers from cloud-api (`GET /api/v1/billing/plans`) when it is viewed; no number is built into the site.
+
+## 4. Sign-in
+
+There is no sign-in screen on Freeweights and no satellite domain. Freeweights is a subdomain of the
+Allternit Clerk primary domain.
+
+1. Anonymous pages load no third-party script. clerk-js (served by `clerk.allternit.com`) loads only after
+   the visitor clicks **Sign in**, or when the `__client_uat` cookie on `.allternit.com` says a session may
+   exist.
+2. **Sign in** sends the browser to `https://ai.allternit.com/sign-in?redirect_url=<the current Freeweights
+   URL, encoded>`. The Freeweights origin is on the ai sign-in page's redirect allowlist, so it returns
+   there after sign-in.
+3. Back on Freeweights, clerk-js reads the session and gives the islands a short-lived session token, which
+   they send as `Authorization: Bearer` to the API. The first signed-in visit asks for a handle
+   (`POST /api/fw/v1/account`).
+4. Sign-out goes through clerk-js and clears the session for every Allternit surface.
+
+Desktop, ai.allternit.com, the phone apps and Gizzi call the same API with their own Clerk session token
+or an `alt_` key.
+
+## 5. Handles
+
+User handles and org slugs share one namespace, compared without case. A handle is 2 to 42 characters of
+`A-Z a-z 0-9 . _ -`, starts with a letter or digit, and has no `..` or `--`.
+
+Reserved handles (`reserved_handles`) cannot be taken:
+
+- every catalog publisher (the org part of each catalog id);
+- every catalog section id (`alt.freeweights.qwen`) and its short name (`qwen`);
+- site route words (`api`, `docs`, `models`, `plans`, `account`, ...) and the product names.
+
+`scripts/reserved_handles.py` generates the seed (`0002_reserved_handles.sql`) from the catalog. After a
+catalog batch, `--only-new --out worker/migrations-accounts/00NN_reserved_handles.sql` writes a migration
+with only the new names, and `--check` fails while any catalog name is unreserved. A publisher claims its
+own name after verification: an admin removes the reserved row and creates the verified org in one batch.
+Database triggers refuse a taken or reserved handle (`handle_taken`) and a community repo under a reserved
+namespace (`namespace_reserved`).
+
+## 6. Repos and storage
+
+- **Kinds:** `model`, `dataset`, `app` (an MCP app; Hugging Face clients call it a space). URL segments are
+  `models`, `datasets`, `spaces`, with `apps` as an alias.
+- **Ids:** each repo has a stable id (`rp_...`) that survives renames and moves. `namespace/name` is the
+  public address.
+- **Catalog entries** keep living in `catalog/catalog.json`. When someone likes, discusses, collects or
+  links a paper to a catalog entry, a `repos` row with `source = catalog` and no owner is made for it, so
+  every feature has one foreign key.
+- **States:** `draft` (created, no commit) → `scanning` (new files are being scanned) → `live`, or `held`
+  when a scan finds a problem. `removed` after a takedown or deletion.
+- **Uploads** go from the client straight to R2 by presigned URL; bytes never pass through the Worker.
+  New objects land in the quarantine bucket. After the scanner clears them they move to the public bucket
+  (public repos) or the private bucket (private repos).
+- **R2 keys:** blobs at `repos/<repo id>/blobs/<sha256>`, commit trees at `repos/<repo id>/trees/<commit>.json`
+  (same file shape as a manifest `files` list), community detail pages at
+  `alt.freeweights.community/<namespace>/<name>/index.html`. The catalog sync never deletes these prefixes.
+- **Private reads:** an access check, then a 302 to a presigned URL valid for 5 minutes, with
+  `Cache-Control: private, no-store`. Nothing private is put in the edge cache.
+- **Storage limits:** included bytes come from the claim's perks plus `addon_bytes`. Usage is kept in
+  `storage_usage` per owner. Over the limit, the LFS batch answers error 507 for each new object.
+
+## 7. Privacy
+
+- The accounts database (`freeweights-accounts`, binding `ACC`) is separate from the catalog database
+  (`freeweights`, binding `DB`). They are never joined. The catalog database keeps its promise of no
+  personal data.
+- No download is logged per person, signed in or not. Download counts stay aggregate per model per day.
+- No email address, IP address, user agent, token or token hash is stored. Email and sessions stay in
+  Clerk; keys stay in cloud-api.
+- The audit log records account actions (who changed what) with no IP address.
+- Webhook secrets are stored encrypted. Webhook delivery rows are kept 30 days.
+- Deleting an account removes its profile, repos, likes, follows, collections and webhooks. Discussion
+  posts stay and show a deleted account.
+
+## 8. Page slots and islands
+
+Catalog pages stay static files in R2. Account features reach them through the two extension points the
+site already has, so each feature adds files instead of editing shared ones. The full contracts are in
+`site/pages/model/slots/README.md` and `site/assets/islands/README.md`; this section adds only what
+accounts need.
+
+**Model page slots (build time).** Each `site/pages/model/slots/NN-<name>.mjs` exports `region` (`head`,
+`tab`, `side` or `after`), `tab` (`[id, label]`, tab slots only) and a default function `(r, ctx) => string`.
+Files load in numeric prefix order. A slot is pure: no network, no clock, nothing personal, no price. A
+slot for an account feature renders only static text and an island mount point.
+
+**Islands (view time).** A mount point carries a text fallback and string inputs:
+
+```html
+<div data-fw-island="likes" data-model="org/name" data-kind="model">Likes load when the page does.</div>
+```
+
+`/assets/fw-islands.js` imports `/assets/islands/<name>.js` and calls `mount(el, props, api)`. `props` is
+the element's `dataset`. Accounts add the third argument, which islands that do not need it ignore:
+
+| `api` member | Meaning |
+| --- | --- |
+| `signedIn()` | `true` when a session exists. Does not load clerk-js by itself. |
+| `token()` | Promise of a fresh session token, or `null` when signed out. |
+| `fetch(path, init)` | Same-origin `fetch` to the Freeweights API that adds `Authorization: Bearer` when signed in. |
+| `signIn()` | Starts the sign-in redirect (section 4). |
+
+Rules for account islands: render a useful signed-out state (public counts, a **Sign in** link) and never
+block the page; no inline script and no `eval`, so the page CSP holds; insert user text as text, never as
+HTML.
+
+**Pages the Worker renders.** Community repo pages are rendered by the Worker at commit time and written
+to R2 under the same key scheme as catalog pages. Profiles, orgs and collections are served by the Worker
+by filling the shell the build emits (`site/lib/shell.mjs`). Private repo pages are an app shell that reads
+the API with the user's token.
+
+## 9. Catalog overlays
+
+Enrichment that is not part of the catalog row (clouds, libraries, languages, apps that use a model, eval
+results, paper links) lives in `catalog/overlay/<name>.json`, one file per kind of data, each with one
+owner (see `catalog/overlay/README.md`):
+
+```json
+{
+  "_meta": { "source": "apps-registry", "generated_at": "2026-11-15T00:00:00Z" },
+  "org/name": { "apps": ["app-id"] }
+}
+```
+
+- Keys are catalog ids. Keys that start with `_` are metadata, not rows.
+- The site build attaches each entry to its row as `r.overlay.<name>`, so an overlay can never overwrite a
+  catalog field or another overlay.
+- Overlays add display data only. They never change a signed manifest, and they hold nothing personal and
+  no price.
+- The search index and the API read the same join.
+
+## 10. Errors and limits
+
+Errors use the read API's body: `{"error": "<code>", "message": "..."}`. Codes: `auth_required`,
+`hf_token_rejected`, `insufficient_scope`, `forbidden`, `repo_not_found` (also for a private repo the
+caller cannot see), `repo_exists`, `handle_taken`, `namespace_reserved`, `perk_required`, `perk_limit`,
+`xet_not_supported`, `entitlement_unavailable`, `accounts_not_configured`, `rate_limited`.
+
+Signed-in API request limits per 5 minutes are a perk from the claim. Anonymous limits are unchanged.
+Every authenticated reply carries `Cache-Control: private, no-store`.
+
+## 11. Versions
+
+This is v1. A change that breaks a client (a field removed or renamed, a route moved, a claim field
+changed) makes v2 and keeps v1 working until every client has moved. Adding a field, a perk name or a
+route is not a breaking change.

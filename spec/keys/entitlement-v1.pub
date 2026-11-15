@@ -1,0 +1,14 @@
+# PLACEHOLDER. This file holds no key yet.
+#
+# The real Ed25519 public key is added here when cloud-api's entitlement signing key is created (plan
+# step 0.5). Only the public half is ever committed; the private key stays a cloud-api secret.
+#
+# Format once filled: these comment lines, then the key as PEM SPKI:
+#   -----BEGIN PUBLIC KEY-----
+#   <base64 of the 44-byte SPKI DER for an Ed25519 key>
+#   -----END PUBLIC KEY-----
+# Key id (JWS header "kid"): entitlement-v1. A new key gets a new file (entitlement-v2.pub) and kid, and the
+# Worker accepts both during the change-over. See spec/accounts-v1.md, "Entitlement claim".
+#
+# Until the PEM block is present the Worker must fail closed: no claim verifies, so every route that needs
+# a plan or perk answers 503 accounts_not_configured. Public reads and downloads are unaffected.

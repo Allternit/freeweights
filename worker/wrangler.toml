@@ -27,6 +27,29 @@ database_id = "67ac7c53-9af4-4371-97d2-7b9982e1cc6a"
 binding = "FW"
 bucket_name = "freeweights"
 
+# ---- Accounts (spec/accounts-v1.md, plan step 0.4) -----------------------------------------------------
+# COMMENTED OUT ON PURPOSE: created in step 0.4 gate by the coordinator after the owner's go. Until then the
+# Worker has no ACC/PRIVATE/QUARANTINE binding and every write route answers 503 accounts_not_configured.
+# To turn on: create the database and buckets, put the real database_id below, uncomment, and run the
+# migrations with `wrangler d1 migrations apply freeweights-accounts`.
+#
+# [[d1_databases]]
+# binding = "ACC"
+# database_name = "freeweights-accounts"
+# database_id = "<set at the gate>"
+# migrations_dir = "migrations-accounts"
+#
+# [[r2_buckets]]
+# binding = "PRIVATE"
+# bucket_name = "freeweights-private"
+#
+# [[r2_buckets]]
+# binding = "QUARANTINE"
+# bucket_name = "freeweights-quarantine"
+#
+# Secrets (wrangler secret put, never in this file): R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY
+# (presigned R2 URLs), WEBHOOK_SECRET_KEY (webhook secrets at rest).
+
 [vars]
 # Source freshness window (ms). Plan F4 default: 10 minutes.
 FRESH_MS = "600000"
@@ -40,3 +63,8 @@ ORIGIN_BUDGET_BYTES = "0"
 PAID_ORIGIN_HOSTS = ""
 # Pass non-Worker paths through to the Pages origin (production only; tests leave it unset).
 PASSTHROUGH = "1"
+# Accounts (commented out until the step 0.4 gate, see above). Values are public; no secret here.
+# CLERK_ISSUERS = "https://clerk.allternit.com,https://allternit.com/__clerk"
+# CLERK_JWKS_URL = "https://clerk.allternit.com/.well-known/jwks.json"
+# CLERK_AZP = "https://freeweights.allternit.com,https://fw-preview.allternit.com,https://ai.allternit.com,https://m.allternit.com"
+# ENTITLEMENT_URL = "https://api.allternit.com/api/v1/freeweights/entitlement"

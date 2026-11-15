@@ -69,6 +69,11 @@ info:
 servers:
   - url: https://freeweights.allternit.com
     description: Production
+# Parts: more route groups, each a full OpenAPI 3.1 document in spec/parts/ (plan D8: each lane adds its own
+# part file instead of editing this one). scripts/validate_spec.py checks every part and that no path is
+# defined twice. The write API needs an account (spec/accounts-v1.md); the routes in this file never do.
+x-parts:
+  - parts/write-api.yaml
 tags:
   - name: hub
     description: Hugging Face compatible model routes
@@ -167,9 +172,8 @@ paths:
       - name: path
         in: path
         required: true
-        description: File path inside the repo. May contain slashes.
+        description: File path inside the repo. May contain slashes, sent unencoded (OpenAPI path parameters cannot say allowReserved; the Worker matches the rest of the path).
         schema: {type: string}
-        allowReserved: true
     get:
       tags: [hub]
       operationId: resolveFile
