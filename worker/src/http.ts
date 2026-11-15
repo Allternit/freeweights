@@ -1,4 +1,5 @@
 // Shared response helpers: CORS headers, JSON/error responses, the 451 takedown answers.
+import { PAGE_SECURITY_HEADERS } from './data.generated';
 
 // Browsers may read paging (Link), caching (ETag) and the pinned commit; without expose-headers CORS hides them.
 export const CORS = { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'Link, ETag, X-Repo-Commit, X-Total-Count' };
@@ -14,6 +15,16 @@ export const gone = (id: string) => err(451, 'removed_after_takedown', `${id} wa
 export const gonePage = (id: string) => new Response(
   `<!doctype html><meta charset="utf-8"><title>451 Removed</title><h1>Removed after a takedown</h1><p>${id.replace(/[<>&"]/g, '')} was removed after a takedown. <a href="/operating-statement/#takedown-counter">Takedown counter</a>.</p>`,
   { status: 451, headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', ...CORS } });
+// ---- HTML pages (static Pages passthrough, R2 detail pages, 451 pages) -----------------------------------------
+// One policy for every HTML page, from site/lib/csp.mjs (baked into data.generated.ts at build time) so the
+// Worker and Pages' _headers can never differ. Never overrides a header already set (auth replies carry
+// their own stricter CSP). Always returns a new Response: replies from Pages and the edge cache are immutable.
+export function withPageSecurity(res: Response): Response {
+  if (!/^text\/html/i.test(res.headers.get('content-type') || '')) return res;
+  const h = new Headers(res.headers);
+  for (const [k, v] of Object.entries(PAGE_SECURITY_HEADERS)) if (!h.has(k)) h.set(k, v);
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+}
 export const seg = (s: string) => decodeURIComponent(s);
 
 // ---- Authenticated replies (spec/accounts-v1.md section 10) ----------------------------------------------

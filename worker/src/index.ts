@@ -1,7 +1,7 @@
 import type { Env } from './types';
 import { bumpCounter } from './db';
 import { tokenKind } from './auth';
-import { authErr, err } from './http';
+import { authErr, err, withPageSecurity } from './http';
 import { notePause } from './pause';
 import { dispatch, pathInfo, READ, type Method } from './router';
 import { preflight } from './routes/options';
@@ -31,14 +31,14 @@ export default {
 
     try {
       const res = await dispatch(ROUTES, { req, env, ctx, url });
-      if (res) return res;
+      if (res) return withPageSecurity(res);
     } catch (e) {
       if (e instanceof URIError) return fail(400, 'bad_request', 'Malformed URL encoding.');
       return fail(500, 'internal_error', 'Internal error.'); // no request data in the message
     }
     // Production runs on the route freeweights.allternit.com/* because Cloudflare routes cannot
     // match /*/resolve/* mid-path. Everything the Worker does not own goes to the Pages origin.
-    if (env.PASSTHROUGH === '1') return env.PAGES_ORIGIN ? fetch(new Request(env.PAGES_ORIGIN + url.pathname + url.search, req)) : fetch(req);
+    if (env.PASSTHROUGH === '1') return withPageSecurity(await (env.PAGES_ORIGIN ? fetch(new Request(env.PAGES_ORIGIN + url.pathname + url.search, req)) : fetch(req)));
     return err(404, 'not_found', 'No such route.');
   },
 } satisfies ExportedHandler<Env>;

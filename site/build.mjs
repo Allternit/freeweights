@@ -16,6 +16,7 @@ import { SECTIONS } from './lib/catalog.mjs';
 import { OLD_CHARTER, CHARTER_PATH } from './lib/markdown.mjs';
 import { pages } from './lib/registry.mjs';
 import { resetOut, emitPages, copyStatic, write } from './lib/assets.mjs';
+import { headersFile } from './lib/csp.mjs';
 import { writeSearchData } from './lib/search.mjs';
 import { build as home } from './pages/home.mjs';
 import { build as catalog } from './pages/catalog.mjs';
@@ -40,6 +41,7 @@ resetOut();
 const { detailBytes, detailCount, detailMax } = emitPages(pages);
 copyStatic();
 writeSearchData(write);
+write('_headers', headersFile()); // CSP + nosniff + referrer-policy for every Pages response (the Worker adds the same to HTML it serves)
 write('_redirects', [...['/alt.freeweights', ...SECTIONS.map((s) => s.id)].map((s) => `/${s} /${s}/ 301`), ...OLD_CHARTER.flatMap((o) => [`${o.slice(0, -1)} ${CHARTER_PATH} 301`, `${o} ${CHARTER_PATH} 301`])].join('\n') + '\n');
 console.log(`Detail pages: ${detailCount} -> ${DETAILS_STATIC ? 'dist (FW_DETAILS=static)' : path.relative(process.cwd(), OUT_R2) || OUT_R2}, average ${(detailBytes / Math.max(1, detailCount) / 1024).toFixed(1)} KB, largest ${(detailMax / 1024).toFixed(1)} KB`);
 console.log(`Freeweights site: ${pages.length} pages, ${LISTED.length} listed, ${WANTED.length} wanted, ${DOCS.length} docs, chain ${CHAIN.length} (${CHAIN_CHECK.bad ? 'BROKEN at ' + CHAIN_CHECK.bad : 'ok'}), head sig ${HEAD_SIG.state}, data from ${dataSource} -> ${path.relative(process.cwd(), OUT) || OUT}`);

@@ -6,6 +6,7 @@ import { FWC, ICON } from './faces.mjs';
 import { CHARTER_LABEL, CHARTER_PATH, content, inline } from './markdown.mjs';
 import { HOW, howTag, summary } from './rows.mjs';
 import { cards, facetLabel } from './cards.mjs';
+import { THEME_SCRIPT } from './csp.mjs';
 
 export const NAV = [['catalog', 'Catalog', '/alt.freeweights/'], ['wanted', 'Wanted', '/wanted/'], ['mirrors', 'Mirrors', '/mirrors/'], ['ledger', 'Ledger', '/ledger/'], ['charter', CHARTER_LABEL, CHARTER_PATH], ['docs', 'Docs', '/docs/']];
 export const sampleTag = (t = 'sample') => `<span class="sample">${t}</span>`;
@@ -37,7 +38,7 @@ export function layout({ path: p, title, desc, nav, body, wide, bodyClass, redir
 <meta property="og:url" content="${ORIGIN}${p}">
 <meta name="color-scheme" content="light dark">${redirect ? `\n<meta http-equiv="refresh" content="0; url=${redirect}">\n<meta name="robots" content="noindex">` : ''}
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('fw-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
+<script>${THEME_SCRIPT}</script>
 <link rel="stylesheet" href="/assets/fw.css">
 </head>
 <body${bodyClass ? ` class="${bodyClass}"` : ''}>

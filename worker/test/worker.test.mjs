@@ -238,6 +238,16 @@ test('B3/B6: manifest signature and detail pages come from R2; etag answers 304;
   assert.equal(page.status, 200);
   assert.match(page.headers.get('content-type'), /text\/html/);
   assert.equal(await page.text(), PAGE_HTML);
+  // CSP (parity plan section 6): the R2 detail page carries the shared page policy and the companion headers.
+  const csp = page.headers.get('content-security-policy');
+  assert.match(csp, /script-src 'self' 'sha256-[A-Za-z0-9+/=]+'/);
+  assert.doesNotMatch(csp, /script-src[^;]*unsafe-/);
+  assert.match(csp, /object-src 'none'/);
+  assert.match(csp, /frame-ancestors 'none'/);
+  assert.match(csp, /base-uri 'self'/);
+  assert.match(csp, /form-action 'self'/);
+  assert.equal(page.headers.get('x-content-type-options'), 'nosniff');
+  assert.equal(page.headers.get('referrer-policy'), 'strict-origin-when-cross-origin');
   const bare = await get(`/${PAGE_KEY.replace(/\/index\.html$/, '')}`);
   assert.equal(bare.status, 301);
   assert.equal(new URL(bare.headers.get('location'), BASE).pathname, `/${PAGE_KEY.replace(/index\.html$/, '')}`);
@@ -336,6 +346,7 @@ test('taken-down entry: 451 on API detail, tree, resolve, manifest, signature an
   const page = await get(`/${GONE_PAGE.replace(/index\.html$/, '')}`);
   assert.equal(page.status, 451);
   assert.match(await page.text(), /Removed after a takedown/);
+  assert.match(page.headers.get('content-security-policy'), /frame-ancestors 'none'/); // the 451 page is HTML too
   assert.equal((await get(`/${GONE_PAGE.replace(/\/index\.html$/, '')}`)).status, 451); // no 301 first
   const all = await (await get(`/api/models?search=${encodeURIComponent(gid.split('/')[1])}&limit=1000`)).json();
   assert.ok(!all.some((m) => m.id === gid));

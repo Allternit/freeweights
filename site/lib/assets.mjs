@@ -8,6 +8,7 @@ import { MONO_SPRITE } from './faces.mjs';
 import { inline } from './markdown.mjs';
 import { cards } from './cards.mjs';
 import { layout } from './layout.mjs';
+import { badInlineScripts } from './csp.mjs';
 import { page, pages } from './registry.mjs';
 
 export function resetOut() {
@@ -33,6 +34,8 @@ export function emitPages(pages) {
   let detailBytes = 0, detailCount = 0, detailMax = 0;
 for (const p of pages) {
   const html = spriteize(layout(p));
+  const bad = badInlineScripts(html); // CSP build check: the page's only inline script is the hashed theme script
+  if (bad.length) throw new Error(`CSP: ${p.file} has inline script the policy would block: ${bad[0]}`);
   if (p.detail) { writeTo(OUT_R2, p.file, html); detailCount++; detailBytes += html.length; detailMax = Math.max(detailMax, html.length); }
   else write(p.file, html);
 }
