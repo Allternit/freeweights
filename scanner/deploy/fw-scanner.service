@@ -1,0 +1,66 @@
+# Freeweights upload scanner (spec/accounts-v1.md 11.5, plan U11). Runs inside the Incus container
+# fw-scanner on allternit-standby. Installed by scanner/deploy/install.sh; see scanner/README.md.
+[Unit]
+Description=Freeweights upload scanner
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=fw-scanner
+Group=fw-scanner
+# Root-owned, 0600: SCANNER_SECRET and FREEWEIGHTS_PRIVATE_BLOCKLIST. systemd reads it before dropping to
+# fw-scanner, so the service user cannot read the file itself.
+EnvironmentFile=/etc/fw-scanner/env
+Environment=PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+Environment=FW_SCANNER_WORK=/var/lib/fw-scanner/work CLAMAV_DB=/var/lib/fw-scanner/clamav
+Environment=FW_SCRIPTS_DIR=/opt/fw-scanner/scripts FW_PUBLIC_BLOCKLIST=/opt/fw-scanner/policy/blocklist.json
+Environment=GITLEAKS_BIN=/usr/local/bin/gitleaks FRESHCLAM_CONFIG=/etc/fw-scanner/freshclam.conf
+WorkingDirectory=/var/lib/fw-scanner
+# -I: no PYTHONPATH, no user site, no current dir on sys.path. The package is found through
+# fw_scanner.pth in the venv's site-packages.
+ExecStart=/opt/fw-scanner/venv/bin/python -I -m fw_scanner
+Restart=always
+RestartSec=30
+# A stop mid-scan is safe: the claim runs out after 30 minutes and the scan is queued again.
+TimeoutStopSec=30
+
+# Writable: /var/lib/fw-scanner only (work/ for one job's temp files, clamav/ for the signatures).
+StateDirectory=fw-scanner
+StateDirectoryMode=0700
+UMask=0077
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+AmbientCapabilities=
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectProc=invisible
+ProcSubset=pid
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+RemoveIPC=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
+# Inside a 1 CPU / 2 GiB container. clamscan loads the full signature set per job (about 1.2 GB).
+MemoryHigh=1600M
+MemoryMax=1800M
+CPUQuota=100%
+TasksMax=64
+LimitNOFILE=1024
+
+[Install]
+WantedBy=multi-user.target
