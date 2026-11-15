@@ -40,7 +40,7 @@ async function search(env: Env, url: URL): Promise<Response> {
   // base models first, then fine-tunes, then quants and adapters. Order is never for sale.
   const sort = q.get('sort') || (needle ? 'rank' : 'added');
   const removed = await takenDownIds(env); // taken down since this bundle was built
-  let rows = CATALOG.models.filter((r) => !removed.has(r.id) &&
+  let rows = (sort === 'downloads' ? CATALOG.models : ordered(sort)).filter((r) => !removed.has(r.id) &&
     (!needle || r.id.toLowerCase().includes(needle) || r.display_name.toLowerCase().includes(needle)) &&
     (!q.get('section') || r.section === q.get('section')) &&
     (!q.get('author') || r.id.split('/')[0].toLowerCase() === q.get('author')!.toLowerCase()) &&
@@ -60,16 +60,7 @@ async function search(env: Env, url: URL): Promise<Response> {
   // Sorting by downloads needs every total; any other sort reads totals for the page only.
   let totals = sort === 'downloads' ? await allTotals(env, 'model') : new Map<string, number>();
   const dl = (r: CatalogRow) => totals.get(r.id) ?? 0;
-  const dl30 = (r: CatalogRow) => Number((r.signals as { downloads_30d?: number } | undefined)?.downloads_30d) || 0;
-  const cmp: Record<string, (a: CatalogRow, b: CatalogRow) => number> = {
-    added: (a, b) => b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
-    downloads: (a, b) => dl(b) - dl(a) || a.id.localeCompare(b.id),
-    size: (a, b) => a.total_size - b.total_size || a.id.localeCompare(b.id),
-    name: (a, b) => a.id.localeCompare(b.id),
-    // "Best first", the site's byRank: rank, then 30-day downloads at the source, then newest, then name
-    rank: (a, b) => rankOf(a) - rankOf(b) || dl30(b) - dl30(a) || b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
-  };
-  rows = rows.sort(cmp[sort] || cmp.added);
+  if (sort === 'downloads') rows = rows.sort((a, b) => dl(b) - dl(a) || a.id.localeCompare(b.id));
   const page = rows.slice(offset, offset + limit);
   if (sort !== 'downloads') totals = await totalsFor(env, 'model', page.map((r) => r.id));
   const headers: Record<string, string> = {};
@@ -78,6 +69,27 @@ async function search(env: Env, url: URL): Promise<Response> {
     headers.Link = `<${next.pathname}${next.search}>; rel="next"`;
   }
   return json(page.map((r) => summary(r, dl(r))), 200, headers);
+}
+
+// Every order except downloads depends only on the bundled catalog, so each is sorted once per isolate
+// and a request filters the sorted list. Re-sorting ~9k rows with localeCompare on every call cost
+// ~20 ms CPU (p90 25 ms after batch 3, over the free plan's 10 ms). Each comparator ends on the id,
+// so filtering a sorted list gives the same rows in the same order as sorting the filtered list.
+type Cmp = (a: CatalogRow, b: CatalogRow) => number;
+const dl30 = (r: CatalogRow) => Number((r.signals as { downloads_30d?: number } | undefined)?.downloads_30d) || 0;
+const STATIC_CMP: Record<string, Cmp> = {
+  added: (a, b) => b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
+  size: (a, b) => a.total_size - b.total_size || a.id.localeCompare(b.id),
+  name: (a, b) => a.id.localeCompare(b.id),
+  // "Best first", the site's byRank: rank, then 30-day downloads at the source, then newest, then name
+  rank: (a, b) => rankOf(a) - rankOf(b) || dl30(b) - dl30(a) || b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
+};
+const SORTED = new Map<string, CatalogRow[]>();
+function ordered(sort: string): CatalogRow[] {
+  const key = Object.hasOwn(STATIC_CMP, sort) ? sort : 'added'; // unknown sort values fall back to newest first
+  let rows = SORTED.get(key);
+  if (!rows) { rows = [...CATALOG.models].sort(STATIC_CMP[key]); SORTED.set(key, rows); }
+  return rows;
 }
 
 export const modelsRoute: Handler = ({ env, url }) => d1(() => search(env, url));
