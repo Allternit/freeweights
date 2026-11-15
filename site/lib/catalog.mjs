@@ -1,6 +1,7 @@
 import path from 'node:path';
 import { ORIGIN, ROOT, SITE } from './env.mjs';
 import { BADGE, exists, ls, readJSON } from './util.mjs';
+import { overlayOf } from './overlay.mjs';
 
 // ---------- data ----------
 export const schema = readJSON(path.join(ROOT, 'spec/catalog-schema.json'));
@@ -64,6 +65,7 @@ export const ROWS = loadRows().map((r) => {
     sourceOnly: LINK_CLASSES.has(r.license_class) || !m,
     linkReason: r.link_reason || CLASS_REASON[r.license_class] || (r.manifest_url ? null : 'not-reviewed'), terms: r.license_terms || null,
     base: r.base_model, changed: r.what_changed, added: r.added_at, manifest: m || null,
+    overlay: overlayOf(r.id),
     kind: r.kind || null, relation: r.relation || null, audit: r.audit || null, tier: r.tier || null, dl: (r.signals && r.signals.downloads_30d) || 0,
     unsigned: !!(m && !m.sample && !minisig[r.id]),
     wanted: r.status === 'wanted' || st.allFailed || !!(m && !m.sample && !minisig[r.id]), failedAt: st.allFailed ? st.last : null, lastCheck: st.last,
