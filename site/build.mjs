@@ -98,6 +98,15 @@ function sourceState(m) {
   const times = srcs.map((s) => s.last_checked).filter(Boolean).sort();
   return { srcs, failed, allFailed: srcs.length > 0 && srcs.every(failed), last: times[times.length - 1] || null };
 }
+// Hosted (signed manifest) vs From the publisher (link only), and why a row is link only.
+const LINK_CLASSES = new Set(['non-commercial', 'gated', 'territory', 'unreviewed']);
+const CLASS_REASON = { 'non-commercial': 'non-commercial', gated: 'gated', territory: 'territory', unreviewed: 'not-reviewed' };
+const LINK_REASON = {
+  gated: ['Gated', 'Gated at the source.', 'The license must be accepted on the publisher\'s page before you download.'],
+  'non-commercial': ['Non-commercial', 'Non-commercial license.', 'The license allows non-commercial use only.'],
+  territory: ['Territory-limited', 'Territory-limited license.', 'The license covers only some countries, and a worldwide hub cannot limit who downloads.'],
+  'not-reviewed': ['License not reviewed', 'License not reviewed.', 'Read it on the publisher\'s page.'],
+};
 const ROWS = loadRows().map((r) => {
   const m = manifests[r.id]; const st = sourceState(m);
   const badges = [...new Set([...(r.badges || []), ...st.srcs.filter((s) => !st.failed(s)).map((s) => s.type)].map((b) => BADGE[b]).filter(Boolean))];
@@ -110,8 +119,9 @@ const ROWS = loadRows().map((r) => {
     formats: r.formats || [], tasks: r.tasks || [], size: r.total_size ?? (m ? (m.files || []).reduce((a, f) => a + (f.size || 0), 0) : null),
     params: r.params, upstream: r.upstream_url, manifestUrl: r.manifest_url, sample: !!r.sample, abliterated: !!r.abliterated,
     licClass: r.license_class || null, requiresTerms: !!r.requires_terms, licenseUrl: r.license_url || null, note: r.note || null,
-    linkOnly: r.license_class === 'non-commercial' || r.license_class === 'gated' || !r.manifest_url,
-    sourceOnly: r.license_class === 'non-commercial' || !m,
+    linkOnly: LINK_CLASSES.has(r.license_class) || !r.manifest_url,
+    sourceOnly: LINK_CLASSES.has(r.license_class) || !m,
+    linkReason: r.link_reason || CLASS_REASON[r.license_class] || (r.manifest_url ? null : 'not-reviewed'), terms: r.license_terms || null,
     base: r.base_model, changed: r.what_changed, added: r.added_at, manifest: m || null,
     kind: r.kind || null, relation: r.relation || null, audit: r.audit || null, tier: r.tier || null, dl: (r.signals && r.signals.downloads_30d) || 0,
     unsigned: !!(m && !m.sample && !minisig[r.id]),
@@ -354,6 +364,8 @@ function summary(r) {
 }
 const sizeBucket = (n) => { const gb = (n || 0) / 1e9; return gb < 4 ? 's' : gb < 40 ? 'm' : gb < 200 ? 'l' : 'xl'; };
 const paramBucket = (n) => (!n ? 'none' : n < 3e9 ? 'p1' : n < 15e9 ? 'p2' : n < 70e9 ? 'p3' : n < 300e9 ? 'p4' : 'p5');
+const HOW = (r) => (r.sourceOnly ? `From the publisher · ${LINK_REASON[r.linkReason || 'not-reviewed'][0]}` : r.unsigned ? 'Hosted (not signed yet)' : 'Hosted (signed)');
+const howTag = (r) => `<span class="hw ${r.sourceOnly ? 'hw-pub' : 'hw-host'}">${esc(HOW(r))}</span>`;
 const SRC_LABEL = (r) => (r.failedAt ? 'Source check failed' : r.sourceOnly ? 'From the publisher' : r.badges.includes('host') ? 'Hosted by Allternit' : r.badges.includes('seed') ? 'Community seeded' : 'From source');
 for (const r of ROWS) {
   r.fam = r.section.replace(/^alt\.freeweights\./, ''); r.mono = MONO[r.fam] || r.fam.replace(/[^a-z0-9]/gi, '').slice(0, 2).toUpperCase();
@@ -398,6 +410,7 @@ const FACETS = [
   ['fmt', 'Format', (r) => (r.formats.length ? r.formats : ['other'])],
   ['sz', 'Size', (r) => [sizeBucket(r.size)]],
   ['pb', 'Parameters', (r) => [paramBucket(r.params)]],
+  ['how', 'Listing', (r) => [HOW(r)]],
   ['src', 'Bytes from', (r) => [SRC_LABEL(r)]],
   ['rt', 'Terms', (r) => [r.requiresTerms ? 'yes' : 'no']],
 ];
@@ -407,7 +420,7 @@ const TOOL_FV = { kind: () => ['tool'], sec: () => ['tools'], lc: (r) => [r.licC
 const facetVals = (k, f, r) => (r.kind === 'tool' ? (TOOL_FV[k] ? TOOL_FV[k](r) : []) : f(r));
 const FACET_LABEL = {
   kind: { model: 'Models', dataset: 'Datasets', tool: 'Tools' },
-  lc: { copyleft: 'Copyleft (GPL)', permissive: 'Permissive', custom: 'Custom terms', 'non-commercial': 'Non-commercial (link only)', gated: 'Gated (link only)', unknown: 'Not stated' },
+  lc: { copyleft: 'Copyleft (GPL)', permissive: 'Permissive', custom: 'Custom terms', 'non-commercial': 'Non-commercial (link only)', gated: 'Gated (link only)', territory: 'Territory-limited (link only)', unreviewed: 'License not reviewed (link only)', unknown: 'Not stated' },
   sz: { s: 'Under 4 GB', m: '4 to 40 GB', l: '40 to 200 GB', xl: '200 GB and up' },
   pb: { p1: 'Under 3B', p2: '3B to 15B', p3: '15B to 70B', p4: '70B to 300B', p5: '300B and up', none: 'Not stated' },
   rt: { yes: 'Requires accepting terms', no: 'No extra terms' },
@@ -417,7 +430,7 @@ const facetLabel = (k, v) => (FACET_LABEL[k] && FACET_LABEL[k][v]) || (k === 'ta
 function cardRow(r) {
   if (r.kind === 'tool') return toolCardRow(r);
   const m = r.manifest; const up = (m && m.upstream) || {};
-  return { kind: isData(r) ? 'dataset' : 'model', id: r.id, key: r.key, n: r.name, org: r.org, sec: r.section, fam: r.fam, mono: r.mono, url: modelUrl(r), size: r.size || 0, params: r.params || 0, fmt: r.formats, task: r.tasks, lc: r.licClass, lic: licName(r.license), rt: r.requiresTerms, src: SRC_LABEL(r), nc: r.linkOnly, added: r.added, sha: r.mSha ? r.mSha.slice(0, 12) : '', files: m ? (m.files || []).length : 0, host: up.host || hostOf(r.upstream), commit: up.commit || '', sum: r.summary, logo: logoOf(r.org), sig: r.manifest && minisig[r.id] ? KEY_ID : '', licUrl: r.licenseUrl || r.upstream || '', fv: Object.fromEntries(FACETS.map(([k, , f]) => [k, facetVals(k, f, r)])) };
+  return { kind: isData(r) ? 'dataset' : 'model', id: r.id, key: r.key, n: r.name, org: r.org, sec: r.section, fam: r.fam, mono: r.mono, url: modelUrl(r), size: r.size || 0, params: r.params || 0, fmt: r.formats, task: r.tasks, lc: r.licClass, lic: licName(r.license), rt: r.requiresTerms, src: SRC_LABEL(r), how: HOW(r), nc: r.linkOnly, added: r.added, sha: r.mSha ? r.mSha.slice(0, 12) : '', files: m ? (m.files || []).length : 0, host: up.host || hostOf(r.upstream), commit: up.commit || '', sum: r.summary, logo: logoOf(r.org), sig: r.manifest && minisig[r.id] ? KEY_ID : '', licUrl: r.licenseUrl || r.upstream || '', fv: Object.fromEntries(FACETS.map(([k, , f]) => [k, facetVals(k, f, r)])) };
 }
 // ---------- Tools as catalog entries ----------
 // catalog/tools.json, filled from GitHub by scripts/enrich_tools.py. Each tool gets the same four
@@ -494,7 +507,7 @@ function badge(k, r) {
   return `<span class="b src"${t}><i class="d"></i>From source</span>`;
 }
 const PUBLISHER_LINE = "From the publisher: downloads come from the publisher's own release. Freeweights never hosts a copy.";
-const badges = (r) => r.failedAt ? '<span class="b fail"><i class="d"></i>Source check failed</span>' : r.sourceOnly ? '<span class="b src"><i class="d"></i>From the publisher</span>' : r.badges.map((k) => badge(k, r)).join('');
+const badges = (r) => r.failedAt ? '<span class="b fail"><i class="d"></i>Source check failed</span>' : r.sourceOnly ? `<span class="b src"><i class="d"></i>${esc(HOW(r))}</span>` : r.badges.map((k) => badge(k, r)).join('') + (r.kind === 'tool' ? '' : howTag(r));
 const lcTag = (r) => `<span class="lc lc-${esc(r.licClass || 'unknown')}">${esc(facetLabel('lc', r.licClass || 'unknown').replace(' (link only)', ''))}</span>`;
 const codeBlock = (id, html) => `<div class="code mono"><code id="${id}">${html}</code><button class="copy" type="button" data-copy="${id}">${ICON.copy}Copy</button></div>`;
 const hfLine = (repo) => `<span class="c">$ </span><span class="k">HF_ENDPOINT</span>=${ORIGIN} hf download ${esc(repo)}`;
@@ -656,7 +669,7 @@ function monoUse(m) {
 function listRow(r, first) {
   // RECORD face as one newsreader line: From and group under the subject, then size, params, license, date.
   const lg = r.kind === 'tool' ? LOGO_OWNER(r) : logoOf(r.org);
-  return `<a class="msg" href="${modelUrl(r)}" data-id="${esc(r.id)}"${first ? ' data-sel' : ''}><span class="s">${lg ? `<img class="org msg-org" src="${lg}" alt="" width="22" height="22" loading="lazy" decoding="async">` : `<span class="msg-org msg-mono">${monoUse(r.mono)}</span>`}<span class="s-t"><span class="s-n">${esc(r.name)}${r.sample ? sampleTag() : ''}</span><small><b>From:</b> ${esc(r.org)} <b>in</b> ${esc(r.section)}</small></span></span><span class="z mono">${r.kind === 'tool' ? esc(r.tag || 'no release') : fmtBytes(r.size)}</span><span class="pp mono">${r.params ? FWC.params(r.params) : '—'}</span><span class="lcc">${lcTag(r)}</span><span class="dt mono">${r.added ? String(r.added).slice(0, 10) : ''}</span></a>`;
+  return `<a class="msg" href="${modelUrl(r)}" data-id="${esc(r.id)}"${first ? ' data-sel' : ''}><span class="s">${lg ? `<img class="org msg-org" src="${lg}" alt="" width="22" height="22" loading="lazy" decoding="async">` : `<span class="msg-org msg-mono">${monoUse(r.mono)}</span>`}<span class="s-t"><span class="s-n">${esc(r.name)}${r.sample ? sampleTag() : ''}</span><small>${r.kind === 'tool' ? '' : howTag(r) + ' '}<b>From:</b> ${esc(r.org)} <b>in</b> ${esc(r.section)}</small></span></span><span class="z mono">${r.kind === 'tool' ? esc(r.tag || 'no release') : fmtBytes(r.size)}</span><span class="pp mono">${r.params ? FWC.params(r.params) : '—'}</span><span class="lcc">${lcTag(r)}</span><span class="dt mono">${r.added ? String(r.added).slice(0, 10) : ''}</span></a>`;
 }
 function preview(r) {
   const c = cardRow(r);
@@ -791,14 +804,16 @@ function modelPage(r) {
   const srcRows = srcs.map((s) => { const k = BADGE[s.type]; let host = s.url || s.magnet || ''; try { host = new URL(s.url).host; } catch (e) {} const bad = s.status === 'failed' || s.ok === false || s.check === 'failed';
     return `<tr><td>${k ? badge(k) : esc(s.type)}</td><td class="path">${esc(host)}</td><td>${fmtTime(s.last_checked)}</td><td>${bad ? '<span style="color:var(--bad)">failed</span>' : s.last_checked ? '<span style="color:var(--ok)">passed</span>' : 'not checked'}</td></tr>`; }).join('');
   const facts = [['Size', fmtBytes(r.size)], ['Weights', r.weight ? `${fmtBytes(r.weight)} (${r.weightLabel})` : isData(r) ? 'dataset' : 'see files'], ['Parameters', r.params ? FWC.params(r.params) : 'not stated'], ['Formats', r.formats.join(', ') || 'see files'], ['Task', r.tasks.map(taskName).join(', ') || 'not tagged'], ['License', `${licName(r.license)} (${r.licClass || 'see card'})`], ['Files', r.manifest ? `${files.length}, each with a sha256` : 'link only'], ['Publisher', r.org], ['Added', r.added ? String(r.added).slice(0, 10) : 'unknown'], ['Section', r.section]];
-  const ncNote = `<div class="notice" role="note">${ICON.info}<div><b>${r.licClass === 'gated' ? 'Gated at the source.' : r.licClass === 'non-commercial' ? 'Non-commercial license.' : 'Link only.'}</b> ${esc(PUBLISHER_LINE)} ${esc(r.note || '')}</div></div>`;
+  const why = LINK_REASON[r.linkReason || 'not-reviewed'];
+  const ncNote = `<div class="notice" role="note">${ICON.info}<div><b>${esc(why[1])}</b> ${esc(why[2])} ${esc(PUBLISHER_LINE)} ${esc(r.note || '')}</div></div>`;
+  const termsNote = r.terms && !r.linkOnly ? `<div class="notice" role="note" style="margin-top:12px">${ICON.info}<div><b>Terms that come with these files.</b> ${esc(r.terms)}</div></div>` : '';
   const snippets = r.linkOnly ? [] : useSnippets(r);
   const snipHtml = snippets.map(([name, what, code], i) => `<div class="snip"><div class="snip-h"><b class="mono">${esc(name)}</b><span class="sub small">${what}</span></div>${codeBlock(`use-${i}`, code)}</div>`).join('');
   const gate = (html) => `<details class="box gate"><summary class="pad"><b>Custom license (${esc(r.licClass || 'custom')}).</b> <span class="sub">Read the <a class="link" href="${esc(licLink)}" rel="noopener">license text</a> first. Open this panel to show the commands once you accept its terms.</span></summary><div class="pad">${html}</div></details>`;
   const comfy = TOOLS.find((t) => t.id === 'comfyui');
   const comfyNote = comfy && (/^alt\.freeweights\.(video|music|image)$/.test(r.section) || r.tasks.some((t) => /text-to-(image|video)|image-to-(image|video)|text-to-audio/.test(t)) || /comfy/i.test(r.id)) ? `<div class="notice" role="note" style="margin-top:12px">${ICON.info}<div><b>Packaged for ComfyUI.</b> Most image, video and music models run in <a class="link" href="${esc(comfy.url)}" rel="noopener">ComfyUI ${ICON.ext}</a>. Check the publisher's page for the workflow. Freeweights does not host it.</div></div>` : '';
   const useHtml = (r.linkOnly ? `${ncNote}<p style="margin-top:14px"><a class="btn pri" href="${esc(licLink)}" rel="noopener">Read the license</a> <a class="btn" href="${esc(r.upstream)}" rel="noopener">Open the source ${ICON.ext}</a></p>`
-    : (r.requiresTerms || isCustom(r.license)) ? gate(snipHtml) : snipHtml) + comfyNote;
+    : termsNote + ((r.requiresTerms || isCustom(r.license)) ? gate(snipHtml) : snipHtml)) + comfyNote;
   const filesTable = files.length ? (() => { const t = `<div class="tbl-wrap"><table class="tbl stack"><thead><tr><th>File</th><th class="r">Size</th><th>sha256</th></tr></thead><tbody>${files.map((f) => `<tr><td class="path">${esc(f.path)}</td><td class="r mono">${fmtBytes(f.size)}</td><td class="hash full">${esc(f.sha256)}</td></tr>`).join('')}</tbody></table></div>`;
     return `<details class="files"${files.length <= 20 ? ' open' : ''}><summary class="pad">${files.length <= 20 ? 'Hide' : 'Show'} all ${files.length} files with their sha256</summary>${t}</details>`; })() : '';
   const tabs = [
@@ -809,7 +824,7 @@ function modelPage(r) {
       ${srcs.length ? `<div class="box"><div class="pad"><b>Sources</b></div><div class="tbl-wrap"><table class="tbl stack"><thead><tr><th>Badge</th><th>Host</th><th>Last check</th><th>Result</th></tr></thead><tbody>${srcRows}</tbody></table></div></div>` : ''}`}`],
     ['files', 'Files', r.linkOnly ? `${ncNote}<p class="sub" style="margin-top:12px">There is no manifest and no file list for a link-only model.</p>` : files.length ? `<div class="box"><div class="pad files-h"><b>${plural(files.length, 'file')} · ${fmtBytes(total)}</b><span class="sub small">${r.weight ? `Weights ${fmtBytes(r.weight)} (${esc(r.weightLabel)}).` : ''} Sizes and sha256 from the ${signed ? 'signed ' : ''}manifest.</span></div>${filesTable}</div>` : '<div class="empty"><b>No manifest yet.</b><span>No files are listed until a manifest exists.</span></div>'],
     ['use', 'Use it', `<div class="lead-face">${FWC.action(cardRow(r))}</div>${useHtml}<div class="later-row">${r.linkOnly ? '' : later('Run in Allternit Desktop', 'Phase 1') + later('Fine-tune in Freeweights Studio', 'Phase 3')}</div>`],
-    ['license', 'License', `<div class="box pad"><dl class="kv"><dt>Name</dt><dd>${esc(lic.name || licName(r.license))}</dd><dt>Id</dt><dd class="mono">${esc(lic.id || r.license || 'see card')}</dd><dt>Class</dt><dd>${lcTag(r)}</dd><dt>Redistribution</dt><dd>${esc(r.redistribution || 'see card')}</dd>${auditLine(r)}${lic.file_path ? `<dt>Text in</dt><dd class="mono">${esc(lic.file_path)}</dd>` : ''}${lic.file_sha256 ? `<dt>Text sha256</dt><dd class="mono small" style="word-break:break-all">${esc(lic.file_sha256)}</dd>` : ''}<dt>Terms gate</dt><dd>${r.requiresTerms ? 'Yes. The commands stay folded until you open them after reading the license.' : 'No extra terms beyond the license.'}</dd></dl>
+    ['license', 'License', `<div class="box pad"><dl class="kv"><dt>Name</dt><dd>${esc(lic.name || licName(r.license))}</dd><dt>Id</dt><dd class="mono">${esc(lic.id || r.license || 'see card')}</dd><dt>Class</dt><dd>${lcTag(r)}</dd><dt>Redistribution</dt><dd>${esc(r.redistribution || 'see card')}</dd><dt>Listing</dt><dd>${howTag(r)}</dd>${r.terms ? `<dt>Terms</dt><dd>${esc(r.terms)}</dd>` : ''}${auditLine(r)}${lic.file_path ? `<dt>Text in</dt><dd class="mono">${esc(lic.file_path)}</dd>` : ''}${lic.file_sha256 ? `<dt>Text sha256</dt><dd class="mono small" style="word-break:break-all">${esc(lic.file_sha256)}</dd>` : ''}<dt>Terms gate</dt><dd>${r.requiresTerms ? 'Yes. The commands stay folded until you open them after reading the license.' : 'No extra terms beyond the license.'}</dd></dl>
       <p style="margin-top:14px"><a class="btn" href="${esc(licLink)}" rel="noopener">Read the license text ${ICON.ext}</a></p></div>
       ${r.linkOnly ? ncNote : ''}
       <p class="sub small" style="margin-top:12px">Licenses are checked against the <a class="link" href="/docs/licenses/">license table</a>. A custom license passes only after a person reads it.</p>`],

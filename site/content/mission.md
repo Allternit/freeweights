@@ -36,10 +36,10 @@ Freeweights keeps open AI models open. Anyone can find, check and download them 
 No paywall. No account. No email. You never log in to get a public model. In practice: the download route needs no token, the privacy notice says we count download starts and keep no list of people, and we do not sell ranking or access (see "We never"). How we enforce it: the read API is public by design and the spec says so. A request that carries a Hugging Face token is refused, so no one ties a download to an identity by accident.
 
 ### Publish the license and a checksum with every file
-Every file in a manifest has its size and sha256. Every model shows its license id and the hash of the license text. In practice: you can check a download with stock tools. See Verify in the docs. How we enforce it: a model has no row in the catalog until its manifest passes the schema check, and the manifest is signed. A custom license also shows a click-through before download.
+Every file in a manifest has its size and sha256. Every model shows its license id and the hash of the license text. In practice: you can check a download with stock tools. See Verify in the docs. How we enforce it: a hosted model is listed only with a manifest that passes the schema check and is signed. A custom license also shows a click-through before download. A model we link to without hosting says so, and why.
 
 ### Say where the bytes come from
-Each model shows one of three badges: Hosted by Allternit (bytes on a Freeweights origin or registered mirror), Community seeded (at least one known seeder holds a full copy), or From source (we redirect to the publisher at a pinned commit). In practice: the badge tells you who serves you. How we enforce it: a source is checked when it is read, with a time limit. A source that fails is shown as failed, and a model with no live source moves to Wanted.
+Each hosted model shows "Hosted (signed)" and one of three badges: Hosted by Allternit (bytes on a Freeweights origin or registered mirror), Community seeded (at least one known seeder holds a full copy), or From source (we redirect to the publisher at a pinned commit, checked against the signed manifest). A model we do not host shows "From the publisher" and the reason: gated, non-commercial, territory-limited, or license not reviewed. In practice: the badge tells you who serves you. How we enforce it: a source is checked when it is read, with a time limit. A source that fails is shown as failed, and a model with no live source moves to Wanted.
 
 ### Publish the code that runs Freeweights
 The hub, site, tools and specs live in a public repository under an open license. In practice: anyone can read how a manifest is checked and run their own copy. How we enforce it: we do not run private code in the download path.
@@ -78,7 +78,7 @@ Every removal is counted on a public page: reports received, items removed, item
 
 ## What we host and never host {#hosting-lines}
 
-**Allowed.** All open model types: language, vision, speech, image, embedding and others. Each needs a license on the allow-list and a checksum for every file. Abliterated models, with the what-changed card. Data-only file formats: safetensors, GGUF, MLX and ONNX, and after a header check CoreML, CTranslate2, TFLite, OpenVINO and ggml. No pickle-only weights. General speech models, such as Kokoro, that do not copy one real person.
+**Allowed.** All open model types: language, vision, speech, image, embedding and others. If Hugging Face lists a model, we list it. We host its files, with a checksum for every file, only when its license allows copies with no acceptance gate and no territory limit. Abliterated models, with the what-changed card. Data-only file formats: safetensors, GGUF, MLX and ONNX, and after a header check CoreML, CTranslate2, TFLite, OpenVINO and ggml. No pickle-only weights. General speech models, such as Kokoro, that do not copy one real person.
 
 **Banned.** We never list or host:
 
@@ -93,7 +93,7 @@ Every removal is counted on a public page: reports received, items removed, item
 
 **The standard.** We judge a listing by how it is presented and what it is for, not only by what it can do. A general model that can be misused is allowed. A model that is named, tuned or marketed for a banned use is not.
 
-**Licenses.** Only licenses on the allow-list, or a custom license that passed a person's audit, a click-through, and a check that third parties may redistribute. Otherwise we serve from the source only, or we do not list. Gated repos are listed as a link only. We do not copy gated files and we do not bypass a gate. See Licenses in the docs.
+**Licenses.** We host only licenses on the allow-list, or a custom license that passed a person's audit, a click-through, and a check that third parties may redistribute with no acceptance gate and no territory limit. Every other model Hugging Face lists is listed as a link only, "From the publisher", with the reason: gated, non-commercial, territory-limited, or license not reviewed. A model with no license at all is not listed. Gated repos are listed as a link only. We do not copy gated files and we do not bypass a gate. See Licenses in the docs.
 
 ## How decisions are made {#decisions}
 
@@ -163,4 +163,5 @@ We plan to file a designated agent with the US Copyright Office. This is not don
 
 | Date | Change |
 | --- | --- |
+| 2026-11-14 | If Hugging Face lists a model, we list it. Hosting still needs a license that allows copies with no acceptance gate and no territory limit; every other model is listed as a link only ("From the publisher") with the reason. A license that limits territory, or that no person has read yet, is no longer a reason to leave a model out. The We never lines are unchanged. |
 | 2026-11-14 | First version. Mission and the We always / We never lines approved. Content policy, takedown process, license list, support terms, privacy notice and mirror agreement are drafts that await counsel. |

@@ -69,6 +69,9 @@ Models made for sexual content. Child sexual abuse material or a model built for
 ### Why was a model refused?
 See the Wanted page. Each refusal has a reason.
 
+### Why is a model "From the publisher"?
+If Hugging Face lists a model, we list it, but we host its files only when the license allows copies with no acceptance gate and no territory limit. Otherwise the entry links to the publisher's page and says why: gated (accept the license there first), non-commercial, territory-limited, or license not reviewed. Entries we host say "Hosted (signed)".
+
 ### Can I use a model commercially?
 It depends on the license. The model page shows it. Read it before you build on it. We do not give legal advice.
 

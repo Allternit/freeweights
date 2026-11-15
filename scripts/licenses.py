@@ -6,8 +6,10 @@
   licenses.py --check-docs    exit 1 if those blocks are out of date (validate_spec.py runs this)
 
 Every script that decides a license imports this module: build_catalog.py, make_manifest.py,
-classify.py. Verdicts: permissive, custom (click-through), non-commercial (link only), refused.
-A license id that is held or unknown is not a verdict: it goes to the review queue. Stdlib only."""
+classify.py. Verdicts: permissive and custom are HOSTED (signed manifest); gated, territory,
+non-commercial and unreviewed are LINK-ONLY ("From the publisher"); refused is not listed.
+A license id that is held or unknown is "queue" here; classify.py turns it into unreviewed (link only).
+spdx() gives the one id a catalog row and a manifest carry. Stdlib only."""
 import json, os, re, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TABLE_PATH = os.path.join(ROOT, "policy", "licenses.json")
@@ -22,12 +24,21 @@ HELD = {k.lower(): v for k, v in _T["held"].items()}
 NO_LICENSE = _T["no_license"]
 REVIEWED_TEXTS = _T["reviewed_texts"]
 PERMISSIVE = frozenset(k for k, v in LICENSES.items() if v["verdict"] == "permissive")
+NAMES = {k.lower(): v.lower() for k, v in _T.get("names", {}).items()}
+NC_NAME = re.compile(_T.get("names_non_commercial_pattern") or r"$^", re.I)
+HOSTED = frozenset(k for k, v in VERDICTS.items() if v.get("hosted"))
+LINK_ONLY = frozenset(k for k, v in VERDICTS.items() if v.get("listed") and not v.get("hosted"))
+LISTED = HOSTED | LINK_ONLY
 
 def norm(lid): return str(lid or "").strip().lower()
 
+# the SPDX / LicenseRef id a row carries also finds its entry (LicenseRef-LFM-1.0 -> lfm1.0)
+_BY_SPDX = {norm(v.get("spdx") or v["name"]): k for k, v in LICENSES.items()}
+
 def entry(lid):
-    """Table entry for a license id (any case), or None."""
-    return LICENSES.get(norm(lid))
+    """Table entry for a license id (any case, table key or its SPDX id), or None."""
+    n = norm(lid)
+    return LICENSES.get(n) or LICENSES.get(_BY_SPDX.get(n, ""))
 
 def verdict(lid):
     """Verdict for a license id a person entered or audited (the licenses.csv column).
@@ -47,6 +58,32 @@ def tag_verdict(tag):
     if e and e.get("tag"): return e["verdict"], e.get("note") or f"{e['name']}, as declared by the publisher"
     if t in HELD: return "queue", HELD[t]
     return "queue", f"license tag {t!r} is not in the table"
+
+def name_verdict(license_name):
+    """Verdict for a license_name the publisher declared with the tag "other": (verdict, license_id, reason) or None.
+    A mapped name uses the table; a name that says non-commercial is link only as non-commercial."""
+    n = norm(license_name)
+    if not n: return None
+    k = NAMES.get(n)
+    if k and k in LICENSES: return LICENSES[k]["verdict"], spdx(k), f"{LICENSES[k]['name']}, as declared by the publisher"
+    if NC_NAME.search(n): return "non-commercial", license_name, f"declared license name {license_name!r} says non-commercial"
+    return None
+
+def hosted(v): return v in HOSTED
+def link_reason(v):
+    """gated | territory | non-commercial | not-reviewed for a link-only verdict, else None."""
+    return (VERDICTS.get(v) or {}).get("link_reason")
+
+def spdx(lid):
+    """The id a row and a manifest carry: SPDX case for SPDX licenses, the LicenseRef- id for the rest.
+    An id that is not on the table is returned as given (stripped)."""
+    e = entry(lid)
+    if e: return e.get("spdx") or e["name"]
+    return str(lid or "").strip()
+
+def terms(lid):
+    """Terms a hosted entry shows with its files (OpenMDW, LFM, OpenRAIL++), or None."""
+    return (entry(lid) or {}).get("terms")
 
 def text_verdict(sha256):
     """Verdict for a license text a person already read, matched by the sha256 of the text, or None."""
@@ -84,14 +121,17 @@ def table_markdown():
         label = e["name"] if e["name"].lower() == k else f"{e['name']} (`{k}`)"
         if label not in rows[e["verdict"]]: rows[e["verdict"]].append(label + ("" if e.get("tag") else " *"))
     out = ["| Verdict | What happens | Licenses |", "| --- | --- | --- |"]
-    for v in ("permissive", "custom", "non-commercial", "refused"):
+    for v in ("permissive", "custom", "gated", "territory", "non-commercial", "unreviewed", "refused"):
         out.append(f"| {VERDICTS[v]['label']} | {VERDICTS[v]['meaning']} | {', '.join(rows.get(v, [])) or 'none yet'} |")
+    terms_lines = [f"- {e['name']}: {e['terms']}" for k, e in sorted(LICENSES.items()) if e.get("terms")]
     held = {}
     for k, why in HELD.items(): held.setdefault(why, []).append(f"`{k}`")
     lines = ["", "A license marked * was read by a person; the rest list on the publisher's own tag with no person reading it, and the page says \"license as declared by the publisher\".", "",
-             "Waiting for a decision, so not listed yet (each goes to the review queue):", ""]
+             "Terms shown on hosted entries:", ""] + terms_lines + ["", "Not reviewed yet, so listed as a link only with \"License not reviewed\":", ""]
     lines += [f"- {', '.join(ids)}: {why}" for why, ids in held.items()]
-    lines += ["- No license declared: refused.", f"- {len(REVIEWED_TEXTS)} license texts a person has read are matched by the sha256 of the text."]
+    lines += ["- Any other license id or license text no person has read, and a base model that declares no license.",
+              "- Any repo Hugging Face marks gated is link only, whatever its license.",
+              "- No license declared: refused.", f"- {len(REVIEWED_TEXTS)} license texts a person has read are matched by the sha256 of the text."]
     return "\n".join(out + lines)
 
 def render(doc):

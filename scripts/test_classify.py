@@ -9,9 +9,10 @@ import classify, formats, inclusion, licenses  # noqa: E402
 NOW = "2026-11-14T00:00:00Z"
 CARD = {"rfilename": "README.md", "size": 4000}
 
-def rec(rid, lic="apache-2.0", tags=(), files=("model.safetensors",), base=None, rel=None, dl=50_000, likes=10, **kw):
+def rec(rid, lic="apache-2.0", tags=(), files=("model.safetensors",), base=None, rel=None, dl=50_000, likes=10, cardData_name=None, **kw):
     t = list(tags) + ([f"base_model:{rel}:{base}"] if base and rel else [])
     card = {"license": lic} if lic else {}
+    if cardData_name: card["license_name"] = cardData_name
     if base: card["base_model"] = base
     return dict({"id": rid, "tags": t, "cardData": card, "downloads": dl, "likes": likes,
                  "siblings": [CARD] + [{"rfilename": f, "size": 10_000} for f in files]}, **kw)
@@ -26,12 +27,12 @@ class LicenseTable(unittest.TestCase):
         self.assertTrue(licenses.is_permissive("ODC-BY-1.0"))
         self.assertTrue(licenses.is_permissive("Apache-2.0"))
         self.assertEqual(licenses.verdict("LicenseRef-Qwen-Research"), "non-commercial")
-        self.assertEqual(licenses.verdict("LicenseRef-MiniMax-H3-Community"), "refused")
+        self.assertEqual(licenses.verdict("LicenseRef-MiniMax-H3-Community"), "territory")
         self.assertEqual(licenses.verdict("something-new"), "queue")
 
     def test_custom_ids_never_pass_on_a_tag(self):
-        self.assertEqual(licenses.tag_verdict("openmdw-1.1")[0], "queue")
-        self.assertEqual(licenses.tag_verdict("llama3")[0], "queue")
+        self.assertEqual(licenses.tag_verdict("licenseref-qwen-research")[0], "queue")
+        self.assertEqual(licenses.tag_verdict("creativeml-openrail-m")[0], "queue")
 
     def test_docs_match_table(self):
         self.assertTrue(all(ok for _, ok in licenses.docs_status()), "run scripts/licenses.py --write-docs")
@@ -40,9 +41,9 @@ class Lineage(unittest.TestCase):
     def test_quant_of_refused_base_is_refused(self):
         r, _ = run(rec("lab/Base", lic="LicenseRef-MiniMax-H3-Community"),
                    rec("quanter/Base-GGUF", files=("base.Q4_K_M.gguf",), base="lab/Base", rel="quantized"))
-        self.assertEqual(r["lab/Base"]["verdict"], "queue")  # LicenseRef ids are not tag-listable
+        self.assertEqual(r["lab/Base"]["verdict"], "unreviewed")  # LicenseRef ids are not tag-listable
         r, _ = run(rec("lab/Base", lic="x"), rec("quanter/Base-GGUF", files=("b.gguf",), base="lab/Base", rel="quantized"),
-                   reviewed={"lab/Base": {"verdict": "refused", "license_id": "LicenseRef-MiniMax-H3-Community"}})
+                   reviewed={"lab/Base": {"verdict": "refused", "license_id": "LicenseRef-Banned"}})
         q = r["quanter/Base-GGUF"]
         self.assertEqual(q["verdict"], "refused")
         self.assertEqual(q["audit"]["method"], "inherited")
@@ -64,7 +65,7 @@ class Lineage(unittest.TestCase):
 
     def test_unknown_parent_goes_to_queue_unless_catalog_knows_it(self):
         r, q = run(rec("q/X-GGUF", files=("x.gguf",), base="lab/Unknown", rel="quantized"))
-        self.assertEqual(r["q/X-GGUF"]["verdict"], "queue")
+        self.assertEqual(r["q/X-GGUF"]["verdict"], "unreviewed")
         self.assertEqual(q[0]["key"], "parent:lab/Unknown")
         r, _ = run(rec("q/X-GGUF", files=("x.gguf",), base="lab/Known", rel="quantized"), catalog={"lab/Known": "permissive"})
         self.assertEqual(r["q/X-GGUF"]["verdict"], "permissive")
@@ -84,7 +85,8 @@ class Lineage(unittest.TestCase):
     def test_unlicensed_parent_queues_child(self):
         # a base with no declared license is unknown: the child waits for a person, it is not refused
         res, q = run(rec("u/base", lic=None), rec("lab/ft", lic="apache-2.0", base="u/base", rel="finetune"))
-        self.assertEqual(res["lab/ft"]["verdict"], "queue")
+        self.assertEqual(res["lab/ft"]["verdict"], "unreviewed")
+        self.assertEqual(res["lab/ft"]["link_reason"], "not-reviewed")
         self.assertEqual(res["lab/ft"]["queue_key"], "parent-unlicensed:u/base")
         self.assertEqual(res["u/base"]["verdict"], "refused")
 
@@ -110,9 +112,9 @@ class Queue(unittest.TestCase):
         self.assertEqual(q, [])
 
     def test_held_license_queues_under_its_id(self):
-        r, q = run(rec("meta/L", lic="llama3"))
-        self.assertEqual(r["meta/L"]["verdict"], "queue")
-        self.assertEqual(q[0]["key"], "held:llama3")
+        r, q = run(rec("x/R", lic="creativeml-openrail-m"))
+        self.assertEqual(r["x/R"]["verdict"], "unreviewed")
+        self.assertEqual(q[0]["key"], "held:creativeml-openrail-m")
 
     def test_no_license_is_refused(self):
         r, _ = run(rec("x/NoLic", lic=None))
@@ -163,9 +165,63 @@ class Gates(unittest.TestCase):
             subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "classify.py"), src, "--out", out, "--queue", q,
                             "--catalog", os.path.join(d, "none.json"), "--reviewed", os.path.join(d, "none.csv"), "--now", NOW], check=True, capture_output=True)
             with open(out) as f: lines = [json.loads(l) for l in f]
-            self.assertEqual({l["id"]: l["verdict"] for l in lines}, {"a/A": "permissive", "b/B": "queue"})
+            self.assertEqual({l["id"]: l["verdict"] for l in lines}, {"a/A": "permissive", "b/B": "unreviewed"})
             self.assertEqual(lines[0]["audit"], {"method": "tag", "at": NOW})
             with open(q) as f: self.assertEqual(json.load(f)[0]["repos"], ["b/B"])
+
+class ListAll(unittest.TestCase):
+    """The rule: every repo Hugging Face lists gets an entry; hosted only when the license allows copies
+    with no acceptance gate and no territory limit; everything else is link only, labelled by reason."""
+    def how(self, *recs, rid=None):
+        r, _ = run(*recs)
+        x = r[rid or recs[0]["id"]]
+        return x["verdict"], x["hosted"], x["link_reason"]
+
+    def test_hosted_families(self):
+        self.assertEqual(self.how(rec("a/Perm")), ("permissive", True, None))
+        self.assertEqual(self.how(rec("nv/M", lic="openmdw-1.1")), ("custom", True, None))
+        self.assertEqual(self.how(rec("lf/M", lic="other", cardData_name="lfm1.0")), ("custom", True, None))
+        self.assertEqual(self.how(rec("sd/M", lic="openrail++")), ("custom", True, None))
+        self.assertIn("US$10M", licenses.terms("lfm1.0"))
+        self.assertIn("Attachment A", licenses.terms("openrail++"))
+        self.assertIn("notices", licenses.terms("openmdw-1.1"))
+
+    def test_gated(self):
+        for lic in ("llama3", "llama3.1", "llama3.2", "llama3.3", "gemma"):
+            self.assertEqual(self.how(rec("m/L", lic=lic)), ("gated", False, "gated"), lic)
+        self.assertEqual(self.how(rec("f/D", lic="other", cardData_name="dinov3-license")), ("gated", False, "gated"))
+        # Hugging Face's own gate makes any license link only
+        self.assertEqual(self.how(rec("g/Apache", gated="manual")), ("gated", False, "gated"))
+        # a quant of a Llama model is gated through the lineage, whatever its own tag says
+        self.assertEqual(self.how(rec("m/L", lic="llama3.1"), rec("q/L-GGUF", files=("l.gguf",), base="m/L", rel="quantized"), rid="q/L-GGUF")[2], "gated")
+
+    def test_non_commercial(self):
+        for name in ("qwen-research", "flux-1-dev-non-commercial-license", "flux-non-commercial-license", "flux-kommunity-license", "some-nc-license"):
+            self.assertEqual(self.how(rec("x/N", lic="other", cardData_name=name)), ("non-commercial", False, "non-commercial"), name)
+        self.assertEqual(self.how(rec("x/C", lic="cc-by-nc-sa-4.0")), ("non-commercial", False, "non-commercial"))
+
+    def test_territory(self):
+        self.assertEqual(self.how(rec("t/H", lic="other", cardData_name="tencent-hunyuan-community")), ("territory", False, "territory"))
+        self.assertEqual(licenses.verdict("LicenseRef-MiniMax-H3-Image-Community"), "territory")
+
+    def test_not_reviewed(self):
+        self.assertEqual(self.how(rec("o/X", lic="other")), ("unreviewed", False, "not-reviewed"))
+        self.assertEqual(self.how(rec("o/Y", lic="other", license_text_sha256="99" * 32)), ("unreviewed", False, "not-reviewed"))
+
+    def test_exclusions_stay(self):
+        r, _ = run(rec("x/nsfw-gen"), rec("x/P", files=("pytorch_model.bin",)), rec("x/NoLic", lic=None), rec("x/phishing-kit"))
+        self.assertEqual(r["x/nsfw-gen"]["verdict"], "refused")
+        self.assertEqual((r["x/P"]["verdict"], r["x/P"]["gate"]), ("refused", "format"))
+        self.assertEqual(r["x/NoLic"]["verdict"], "refused")
+        self.assertEqual(r["x/phishing-kit"]["verdict"], "queue")  # a person decides; not listed meanwhile
+
+    def test_spdx_ids(self):
+        self.assertEqual(licenses.spdx("apache-2.0"), "Apache-2.0")
+        self.assertEqual(licenses.spdx("MIT"), "MIT")
+        self.assertEqual(licenses.spdx("cc-by-nc-4.0"), "CC-BY-NC-4.0")
+        self.assertEqual(licenses.spdx("odc-by"), "ODC-By-1.0")
+        self.assertEqual(licenses.spdx("licenseref-qwen-research"), "LicenseRef-Qwen-Research")
+        self.assertEqual(licenses.spdx("something-new"), "something-new")
 
 class HeaderCheck(unittest.TestCase):
     def test_magic_bytes(self):

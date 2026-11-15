@@ -93,6 +93,40 @@ test('search ranks official lab base models above quants and fine-tunes', async 
   assert.ok(hit[0].id.startsWith('deepseek-ai/'), hit[0].id);
 });
 
+test('sort=rank with no search is best first (rank, then 30-day downloads); no sort keeps the added order', async () => {
+  const cat = await (await get('/api/catalog')).json();
+  const rows = new Map(cat.models.map((r) => [r.id, r]));
+  const ranked = await (await get('/api/models?sort=rank&limit=1000')).json();
+  const dl = (id) => Number((rows.get(id).signals || {}).downloads_30d) || 0;
+  const tierRel = (id) => { const r = rows.get(id); return ['T0', 'T1', 'T2'].includes(r.tier) ? `${r.tier}|${(r.relation || {}).type || 'base'}` : null; };
+  // rows of one tier and relation share a rank: inside such a run, downloads never go up
+  for (let i = 1; i < ranked.length; i++) {
+    const c = tierRel(ranked[i].id);
+    if (c && c === tierRel(ranked[i - 1].id)) assert.ok(dl(ranked[i - 1].id) >= dl(ranked[i].id), `${ranked[i - 1].id} before ${ranked[i].id}`);
+  }
+  // the best rank there is: a T0 base model; the most downloaded one comes first
+  const t0 = cat.models.filter((r) => r.tier === 'T0' && ((r.relation || {}).type || 'base') === 'base');
+  if (t0.length) assert.equal(dl(ranked[0].id), Math.max(...t0.map((r) => dl(r.id))), ranked[0].id);
+  const plain = await (await get('/api/models?limit=50')).json();
+  const added = await (await get('/api/models?sort=added&limit=50')).json();
+  assert.deepEqual(plain.map((m) => m.id), added.map((m) => m.id));
+  // every row says where its publisher's logo is, or null
+  for (const m of ranked.slice(0, 200)) assert.ok(m.publisher_logo === null || /^https:\/\/freeweights\.allternit\.com\/assets\/orgs\/.+\.png$/.test(m.publisher_logo), m.publisher_logo);
+  assert.ok(ranked.some((m) => m.publisher_logo), 'no row has a publisher logo');
+});
+
+test('CORS preflight: OPTIONS answers 204 with the allowed methods and headers; hf_ stays rejected on the real request', async () => {
+  for (const path of ['/api/catalog', `/manifests/${id}.json`, rpath(lfs)]) {
+    const r = await get(path, { method: 'OPTIONS', headers: { origin: 'https://example.com', 'access-control-request-method': 'GET', 'access-control-request-headers': 'authorization, if-none-match' } });
+    assert.equal(r.status, 204, path);
+    assert.equal(r.headers.get('access-control-allow-origin'), '*');
+    assert.equal(r.headers.get('access-control-allow-methods'), 'GET, HEAD, OPTIONS');
+    assert.equal(r.headers.get('access-control-allow-headers'), 'If-None-Match, Authorization, Range, Content-Type');
+    assert.equal(r.headers.get('access-control-max-age'), '86400');
+  }
+  assert.equal((await get('/api/catalog', { headers: { authorization: 'Bearer hf_abc' } })).status, 401);
+});
+
 test('search and filters', async () => {
   const all = await (await get('/api/models')).json();
   assert.ok(all.length >= 2);
@@ -107,6 +141,12 @@ test('search and filters', async () => {
   const sec = await (await get(`/api/models?section=${man.section}`)).json();
   assert.ok(sec.every((m) => m.section === man.section));
   assert.deepEqual(await (await get('/api/models?max_size=1')).json(), []);
+  // license filter: rows carry SPDX case (Apache-2.0); either case matches the same rows
+  const spdx = await (await get('/api/models?license=Apache-2.0&limit=1000')).json();
+  const lower = await (await get('/api/models?license=apache-2.0&limit=1000')).json();
+  assert.ok(spdx.length > 0);
+  assert.ok(spdx.every((m) => m.license === 'Apache-2.0'));
+  assert.deepEqual(lower.map((m) => m.id), spdx.map((m) => m.id));
 });
 
 test('detail, tree, catalog, manifest passthrough', async () => {

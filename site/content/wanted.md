@@ -1,7 +1,7 @@
 ---
 title: Wanted
 nav_label: Wanted
-summary: Models that have no live source, an unclear license, or were refused, with the reason for each, and how to help.
+summary: Models that have no live source or were refused, with the reason for each, and how to help.
 updated: 2026-11-14
 sections:
   - {id: what-wanted-means, title: What Wanted means}
@@ -14,11 +14,10 @@ Wanted is the honest page. A model sits here when we cannot offer it as download
 
 ## What Wanted means {#what-wanted-means}
 
-A model is Wanted for one of three reasons.
+A model is Wanted for one of two reasons.
 
 1. **No live source.** We list a model only if at least one source is live: Hosted by Allternit, Community seeded, or From source. We check on read. If the publisher moved or removed the files, or the size no longer matches the manifest, the source is failed. With no live source left, the model moves here, and the API answers 404 with the code `model_wanted`.
-2. **Unclear license.** The license is missing, unspecified, or a variant we cannot identify. We do not list it until a person reads it.
-3. **Refused.** We read the license or the files and decided we cannot list it. Every refusal is logged with the model, source, license found, date and reason. This page shows the summary so authors can see why.
+2. **Refused.** No license at all, pickle-only weights, or a content-policy reason. We read the license or the files and decided we cannot list it. A license no person has read yet is not a refusal: that model is listed as a link only, "From the publisher", labelled "License not reviewed". Every refusal is logged with the model, source, license found, date and reason. This page shows the summary so authors can see why.
 
 ## Refused, with reasons {#refused}
 

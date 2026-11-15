@@ -1,11 +1,12 @@
 ---
 title: What gets listed
 nav_label: What gets listed
-summary: The four gates every model passes (format, license, content, hygiene) and the tiers that decide what gets listed.
+summary: If Hugging Face lists a model we list it, hosted or from the publisher; the four gates (format, license, content, hygiene) and the tiers.
 group: Policy
 order: 7.5
 updated: 2026-11-14
 sections:
+  - {id: list-all, title: "If Hugging Face lists it, we list it"}
   - {id: gates, title: The four gates}
   - {id: formats, title: Formats and the header check}
   - {id: tiers, title: Tiers}
@@ -14,6 +15,19 @@ sections:
 ---
 Rules decide what gets listed, not one person reading every repo. The same rules are code in the public repo: `scripts/inclusion.py`, `scripts/formats.py`, `policy/licenses.json` and `scripts/classify.py`, which applies them with no network.
 
+## If Hugging Face lists it, we list it {#list-all}
+
+Every repo that discovery finds on Hugging Face gets a catalog entry, unless a gate below refuses it. The review queue is no longer a hold list: a license no person has read does not keep a model off the catalog. The license decides only how the entry works:
+
+- **Hosted (signed).** The license allows copies with no click-through or acceptance gate at the source and no territory limit. The entry has a signed manifest and our sources, and the license file is one of the manifest's files when the repo has one. Permissive licenses, the custom licenses a person read, and three families whose terms show on the entry: OpenMDW 1.1 (keep the agreement and copyright notices with the files), LFM 1.0 (commercial use only for organisations under US$10M annual revenue) and OpenRAIL++-M (the use restrictions in Attachment A pass on to you).
+- **From the publisher (link only).** The entry shows the facts and sends the download to the publisher's Hugging Face page. No manifest, no copy. Every such entry says why:
+  - *Gated:* the license must be accepted at the source (Llama 2, 3.x and 4, Gemma, DINOv3), or Hugging Face marks the repo gated.
+  - *Non-commercial:* Qwen Research, FLUX non-commercial, FLUX Kommunity, CC BY-NC and any declared license name that says non-commercial.
+  - *Territory-limited:* the grant covers only some countries (Tencent Hunyuan community, MiniMax-H3), and a worldwide hub cannot limit who downloads.
+  - *License not reviewed:* no person has read the license yet (held ids such as `other`, unknown license texts, a base model that declares no license). The entry says "License not reviewed. Read it on the publisher's page."
+
+Never listed, whatever Hugging Face shows: a model made for sexual content; pickle-only weights (refused at the format gate because the file can run code on your machine, not because of hosting); a repo with no license at all; and a repo the content gate holds for a person (a real person's face or voice, fraud or attack tools) until a person decides.
+
 ## The four gates {#gates}
 
 Every candidate passes four gates, in this order. The first gate that fails decides.
@@ -21,7 +35,7 @@ Every candidate passes four gates, in this order. The first gate that fails deci
 | Gate | Rule |
 | --- | --- |
 | 1 Format | Data-only weights. Pickle-only weights are refused. |
-| 2 License | A verdict from the [license table](licenses.md). The strictest verdict along base model, fine-tune and quantization wins. |
+| 2 License | A verdict from the [license table](licenses.md): hosted, link only (with the reason) or refused (no license). The strictest verdict along base model, fine-tune and quantization wins. |
 | 3 Content | A model made for sexual content is refused. A real-person face or voice model, or a tool for fraud or attacks, goes to a person. Tagged not-for-all-audiences: out unless a person reviews it. Abliterated models are allowed, labeled with what changed. |
 | 4 Hygiene | A model card over 500 bytes. No CI or test fixtures. An exact re-upload becomes `same_as` the first copy, and the lab's own copy wins. |
 
@@ -56,4 +70,4 @@ The catalog and search list official lab repos first, then base models, then fin
 
 ## The review queue {#queue}
 
-A license text that is not on the table waits in the review queue and is not listed. Texts are grouped by their sha256, so one read clears every repo that ships the same text.
+A license text that is not on the table is listed as a link only, labelled "License not reviewed", until a person reads it. Texts are grouped by their sha256, so one read clears every repo that ships the same text. Only the content gate still holds a repo back for a person.

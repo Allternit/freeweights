@@ -1,5 +1,5 @@
 import type { Env, Manifest, CatalogRow, ManifestSource } from './types';
-import { CATALOG_JSON, CATALOG_ETAG, MANIFESTS } from './data.generated';
+import { CATALOG_JSON, CATALOG_ETAG, MANIFESTS, LOGOS } from './data.generated';
 import {
   addDownload, addOriginBytes, allTotals, bumpCounter, effective, isPaidOrigin,
   originGuardOn, sourceSummary, totalsFor,
@@ -26,6 +26,8 @@ const getManifest = (id: string): Manifest | null => {
 
 // Browsers may read paging (Link), caching (ETag) and the pinned commit; without expose-headers CORS hides them.
 const CORS = { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'Link, ETag, X-Repo-Commit, X-Total-Count' };
+const PREFLIGHT = { 'access-control-allow-origin': '*', 'access-control-allow-methods': 'GET, HEAD, OPTIONS',
+  'access-control-allow-headers': 'If-None-Match, Authorization, Range, Content-Type', 'access-control-max-age': '86400' };
 const json = (body: unknown, status = 200, extra: HeadersInit = {}) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', ...CORS, ...extra } });
 const err = (status: number, error: string, message: string, extra: HeadersInit = {}) => json({ error, message }, status, extra);
@@ -61,12 +63,17 @@ function tokenKind(req: Request, url: URL): 'hf' | 'alt' | null {
 
 // ---- Model views ------------------------------------------------------------------------------
 // m is undefined for link-only rows (non-commercial, territory-limited or gated at the source): no manifest, no files.
+// The publisher's logo as the site serves it (Pages, same host), or null when there is none.
+const SITE_ORIGIN = 'https://freeweights.allternit.com';
+const publisherLogo = (id: string) => { const f = LOGOS[id.split('/')[0]]; return f ? `${SITE_ORIGIN}/assets/orgs/${encodeURIComponent(f)}` : null; };
+
 function summary(r: CatalogRow, m: Manifest | undefined, downloads: number) {
   return {
     id: r.id, modelId: r.id, sha: m?.upstream.commit ?? null,
     pipeline_tag: r.tasks[0], library_name: r.formats[0],
     tags: [...r.tasks, ...r.formats, `license:${r.license_id}`, r.section],
     downloads, lastModified: r.added_at, section: r.section, license: r.license_id, badges: r.badges,
+    publisher_logo: publisherLogo(r.id),
   };
 }
 
@@ -79,7 +86,8 @@ function rankOf(r: CatalogRow): number {
   const rel = (r.relation as { type?: string } | undefined)?.type || 'base';
   let t = TIER_RANK[String(r.tier || '')];
   if (t === undefined) {
-    const o = normKey(r.id.split('/')[0]), f = normKey(r.family);
+    // the site's family is the section's last part (alt.freeweights.deepseek -> deepseek)
+    const o = normKey(r.id.split('/')[0]), f = normKey(r.section.replace(/^alt\.freeweights\./, ''));
     t = rel === 'base' && f && o && (o.includes(f) || f.includes(o)) ? 0.5 : rel === 'base' ? 2.5 : 3;
   }
   return Math.round(t * 10) + (REL_RANK[rel] ?? 1);
@@ -99,7 +107,8 @@ async function search(env: Env, url: URL): Promise<Response> {
     (!q.get('section') || r.section === q.get('section')) &&
     (!q.get('author') || r.id.split('/')[0].toLowerCase() === q.get('author')!.toLowerCase()) &&
     (!q.get('pipeline_tag') || r.tasks.includes(q.get('pipeline_tag')!)) &&
-    (!q.get('license') || r.license_id === q.get('license')) &&
+    // license ids are SPDX case in the catalog (Apache-2.0); a filter matches either case (apache-2.0)
+    (!q.get('license') || r.license_id.toLowerCase() === q.get('license')!.toLowerCase()) &&
     (!q.get('library') || r.formats.includes(q.get('library')!)) &&
     (!q.get('source') || r.badges.includes(q.get('source')!)) &&
     // total_size 0 = unknown (gated link-only rows have no file listing), so a size filter never matches them.
@@ -107,12 +116,14 @@ async function search(env: Env, url: URL): Promise<Response> {
   // Sorting by downloads needs every total; any other sort reads totals for the page only.
   let totals = sort === 'downloads' ? await allTotals(env, 'model') : new Map<string, number>();
   const dl = (r: CatalogRow) => totals.get(r.id) ?? 0;
+  const dl30 = (r: CatalogRow) => Number((r.signals as { downloads_30d?: number } | undefined)?.downloads_30d) || 0;
   const cmp: Record<string, (a: CatalogRow, b: CatalogRow) => number> = {
     added: (a, b) => b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
     downloads: (a, b) => dl(b) - dl(a) || a.id.localeCompare(b.id),
     size: (a, b) => a.total_size - b.total_size || a.id.localeCompare(b.id),
     name: (a, b) => a.id.localeCompare(b.id),
-    rank: (a, b) => rankOf(a) - rankOf(b) || b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
+    // "Best first", the site's byRank: rank, then 30-day downloads at the source, then newest, then name
+    rank: (a, b) => rankOf(a) - rankOf(b) || dl30(b) - dl30(a) || b.added_at.localeCompare(a.added_at) || a.id.localeCompare(b.id),
   };
   rows = rows.sort(cmp[sort] || cmp.added);
   const page = rows.slice(offset, offset + limit);
@@ -212,6 +223,11 @@ async function resolve(env: Env, ctx: ExecutionContext, req: Request, id: string
 export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
+    // CORS preflight for the routes the Worker owns, so a browser client may send If-None-Match,
+    // Authorization, Range or Content-Type. The token rules apply to the real request, not here.
+    if (req.method === 'OPTIONS' && (/^\/(api|manifests)\//.test(url.pathname) || /^\/[^/]+\/[^/]+\/resolve\/[^/]+\/.+$/.test(url.pathname))) {
+      return new Response(null, { status: 204, headers: PREFLIGHT });
+    }
     if (req.method !== 'GET' && req.method !== 'HEAD') return err(405, 'method_not_allowed', 'Read-only API.', { allow: 'GET, HEAD' });
 
     const kind = tokenKind(req, url);

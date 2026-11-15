@@ -9,12 +9,17 @@ base_model), downloads (last 30 days), likes, siblings [{rfilename, size}], opti
 kind (model|dataset), license_text_sha256 (sha256 of the LICENSE file, when the discovery step read
 it), trending_runs, benchmark, content_reviewed.
 
-Output: one line per candidate with verdict (permissive | custom | non-commercial | refused | queue | out),
+Output: one line per candidate with verdict (permissive | custom | gated | territory | non-commercial |
+unreviewed | refused | queue | out), hosted (true: signed manifest) and link_reason (gated | territory |
+non-commercial | not-reviewed for a link-only row),
 the gate that decided, audit {method, at} where method is tag | text-hash | inherited | reviewed | queue,
 relation {type, parent}, tier and signals. Gates run in order: format, license, content, hygiene.
 The strictest license verdict along base model -> fine-tune -> quantization wins, so a quantization of
-a refused base model is refused whatever its own tag says. Unknown license texts go to the review queue,
-grouped by the sha256 of the text, so one decision clears a cluster. Stdlib only."""
+a refused base model is refused whatever its own tag says. A license no person has read (held ids, unknown
+text hashes, a base model with no license) is listed as a link only with "License not reviewed"; its
+queue_key still groups it by the sha256 of the text so one later read clears the cluster. A repo Hugging Face
+marks gated is link only as gated. Only the content gate still holds a repo for a person (verdict queue).
+Stdlib only."""
 import argparse, csv, datetime, hashlib, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import formats, inclusion, licenses  # noqa: E402
@@ -23,7 +28,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RELATIONS = ("base", "finetune", "quant", "adapter", "merge")
 # Hugging Face lineage tags: base_model:<type>:<parent id>; a bare base_model:<id> is a fine-tune.
 TAG_RELATION = {"quantized": "quant", "finetune": "finetune", "adapter": "adapter", "merge": "merge"}
-LISTED = ("permissive", "custom", "non-commercial")
+LISTED = tuple(sorted(licenses.LISTED))
 
 def _ids(x):
     if isinstance(x, str): return [x] if "/" in x else []
@@ -68,6 +73,7 @@ def load_reviewed(path):
         if red == "unclear": v = "queue"
         elif red == "no": v = licenses.verdict(lid) if licenses.verdict(lid) in ("non-commercial", "refused", "custom") else "non-commercial"
         else: v = licenses.verdict(lid)
+        if v == "queue": v = "unreviewed"
         out[c["repo"]] = {"verdict": v, "license_id": lid}
     return out
 
@@ -78,7 +84,8 @@ def load_catalog(path):
     out = {}
     for r in rows:
         lc = r.get("license_class")
-        out[r["id"]] = "non-commercial" if lc in ("non-commercial",) else "custom" if lc in ("custom", "gated") else "permissive" if lc == "permissive" else licenses.verdict(r.get("license_id"))
+        # a row gated only by Hugging Face's flag does not pass "gated" to its children: their files are open
+        out[r["id"]] = lc if lc in ("non-commercial", "territory", "unreviewed", "permissive", "custom") else "custom" if lc == "gated" else licenses.verdict(r.get("license_id"))
     return out
 
 class Classifier:
@@ -98,10 +105,10 @@ class Classifier:
             rec = None
         if rec is None:
             v = self.catalog.get(rid)
-            res = (v, "reviewed", None, None, "listed in the catalog") if v else ("queue", "queue", f"parent:{rid}", None, f"base model {rid} is not classified yet")
+            res = (v, "reviewed", None, None, "listed in the catalog") if v else ("unreviewed", "queue", f"parent:{rid}", None, f"base model {rid} is not classified yet")
         elif rid in self.reviewed:
             r = self.reviewed[rid]
-            res = (r["verdict"], "reviewed" if r["verdict"] != "queue" else "queue", f"repo:{rid}" if r["verdict"] == "queue" else None, r["license_id"], "recorded audit")
+            res = (r["verdict"], "reviewed" if r["verdict"] != "unreviewed" else "queue", f"repo:{rid}" if r["verdict"] == "unreviewed" else None, r["license_id"], "recorded audit")
         else:
             tag = license_tag(rec)
             sha = rec.get("license_text_sha256") or (hashlib.sha256(rec["license_text"].encode()).hexdigest() if rec.get("license_text") else None)
@@ -109,14 +116,17 @@ class Classifier:
             if v != "queue": res = (v, "tag", None, tag, why)
             else:
                 hit = licenses.text_verdict(sha) if sha else None
+                lname = (rec.get("cardData") or {}).get("license_name") or rec.get("license_name")
+                # a declared license_name (tag "other"), or an unknown tag that is itself a known name
+                byname = (licenses.name_verdict(lname) if licenses.norm(tag) in ("other", "") else None) or licenses.name_verdict(tag)
                 if hit: res = (hit[0], "text-hash", None, hit[1], "license text matches one a person read")
+                elif byname: res = (byname[0], "tag", None, byname[1], byname[2])
                 else:
-                    lname = (rec.get("cardData") or {}).get("license_name")
                     if sha: key = f"text:{sha}"
                     elif licenses.norm(tag) == "other" and lname: key = f"name:{lname}"  # no text found: group by the declared name
                     elif licenses.norm(tag) in licenses.HELD: key = f"held:{licenses.norm(tag)}"
                     else: key = f"name:{lname or licenses.norm(tag) or 'none'}"
-                    res = ("queue", "queue", key, tag, why)
+                    res = ("unreviewed", "queue", key, tag, why)
         self._own[rid] = res
         return res
 
@@ -134,19 +144,19 @@ class Classifier:
             pid = rel["parents"][0]
             best, src = (self.lineage_license(pid, seen + (rid,)), pid) if pid != rid and pid not in seen else (own, rid)
             if best[0] == "refused" and best[4] == licenses.NO_LICENSE["note"]:
-                best = ("queue", "queue", f"parent-unlicensed:{pid}", pid, f"base model {pid} declares no license")
+                best = ("unreviewed", "queue", f"parent-unlicensed:{pid}", pid, f"base model {pid} declares no license")
         if rec is not None and rid not in seen:
             for pid in rel["parents"]:
                 if pid == rid or pid in seen: continue
                 pv = self.lineage_license(pid, seen + (rid,))
                 if pv[0] == "refused" and pv[4] == licenses.NO_LICENSE["note"]:
                     # an ancestor with no declared license is unknown, not refused: a person decides
-                    pv = ("queue", "queue", f"parent-unlicensed:{pid}", pid, f"base model {pid} declares no license")
+                    pv = ("unreviewed", "queue", f"parent-unlicensed:{pid}", pid, f"base model {pid} declares no license")
                 if licenses.stricter(pv[0], best[0]) == pv[0] and pv[0] != best[0]:
                     best, src = pv, pid
         if src != rid:
             v, _, key, _, reason = best
-            res = (v, "queue" if v == "queue" else "inherited", key, src, f"inherited from {src}: {reason}")
+            res = (v, "queue" if best[1] == "queue" else "inherited", key, src, f"inherited from {src}: {reason}")
         else:
             res = own[:3] + (rid,) + own[4:]
         self._lineage[rid] = res
@@ -165,6 +175,8 @@ class Classifier:
             if key: out["queue_key"] = key
             out["tier"] = inclusion.tier(rec, rel["type"], method, self.watch) if verdict in LISTED else None
             out["listable"] = verdict in LISTED and out["tier"] is not None
+            out["hosted"] = licenses.hosted(verdict)
+            out["link_reason"] = licenses.link_reason(verdict)
             if verdict in LISTED and out["tier"] is None: out["reasons"].append("below every tier threshold")
             return out
         # the license verdict is worked out first so every result carries its audit method
@@ -181,6 +193,9 @@ class Classifier:
             out["header_check"] = "pending"
         # 2 license, strictest along the lineage
         if v in ("refused", "queue"): return done(v, "license", method, reason, key)
+        # a repo behind an acceptance gate at the source is link only, whatever its license says
+        if licenses.hosted(v) and rec.get("gated") not in (None, False, "", "false"):
+            v, reason = "gated", "gated at the source (Hugging Face asks you to accept terms first)"
         # 3 content
         c, why = inclusion.content_gate(rec)
         if c == "refused": return done("refused", "content", method, why)
@@ -189,14 +204,16 @@ class Classifier:
         # 4 hygiene
         h, why = inclusion.hygiene_gate(rec)
         if h != "pass": return done("refused", "hygiene", method, why)
-        return done(v, None, method, reason if method != "tag" else "license as declared by the publisher")
+        return done(v, None, method, reason if method != "tag" else "license as declared by the publisher", key)
 
     def run(self):
         results = [self.classify(rid) for rid in self.recs]
         queue = {}
         for r in results:
-            if r["verdict"] == "queue":
-                q = queue.setdefault(r.get("queue_key") or f"repo:{r['id']}", {"key": r.get("queue_key"), "reason": r["reasons"][-1] if r["reasons"] else "", "repos": [], "downloads_30d": 0})
+            # texts no person has read yet (listed as link only) and content holds (not listed), grouped for one read
+            if r["verdict"] in ("queue", "unreviewed"):
+                q = queue.setdefault(r.get("queue_key") or f"repo:{r['id']}", {"key": r.get("queue_key"), "reason": r["reasons"][-1] if r["reasons"] else "", "repos": [], "downloads_30d": 0,
+                                                                              "held": r["verdict"] == "queue"})
                 q["repos"].append(r["id"]); q["downloads_30d"] += int(r["signals"].get("downloads_30d") or 0)
         # biggest clusters first: one read clears the most downloads
         return results, sorted(queue.values(), key=lambda q: (-q["downloads_30d"], -len(q["repos"]), q["key"] or ""))

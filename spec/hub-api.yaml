@@ -9,6 +9,9 @@ info:
     Read API implemented by the Stage 0 Cloudflare Worker and kept by the Stage 1 hub (MatrixHub fork).
     Both share this one route contract (plan F8). The model routes are compatible with the Hugging Face
     Hub, so `HF_ENDPOINT=https://freeweights.allternit.com` works for downloads.
+    CORS: every route answers with access-control-allow-origin *. A preflight (OPTIONS) on /api/*, /manifests/*
+    and the resolve routes answers 204 with allow-methods GET, HEAD, OPTIONS, allow-headers If-None-Match,
+    Authorization, Range, Content-Type and max-age 86400. Token rules apply to the real request, not the preflight.
 
     ## Auth
     Public reads need no account and no token. Later stages add tokens with the `alt_` prefix
@@ -74,11 +77,11 @@ paths:
         - {name: section, in: query, schema: {type: string, pattern: '^alt\.freeweights\.[a-z0-9-]+$'}}
         - {name: author, in: query, schema: {type: string}, description: Organization part of the id.}
         - {name: pipeline_tag, in: query, schema: {type: string}, description: Task tag.}
-        - {name: license, in: query, schema: {type: string}, description: License id.}
+        - {name: license, in: query, schema: {type: string}, description: "License id, SPDX case in the catalog (Apache-2.0); matched without case."}
         - {name: library, in: query, schema: {type: string, enum: [safetensors, gguf, mlx]}, description: Format.}
         - {name: source, in: query, schema: {type: string, enum: [hosted, seeded, source]}, description: Badge filter.}
         - {name: max_size, in: query, schema: {type: integer, minimum: 0}, description: Total size limit in bytes.}
-        - {name: sort, in: query, schema: {type: string, enum: [added, downloads, size, name], default: added}}
+        - {name: sort, in: query, schema: {type: string, enum: [added, downloads, size, name, rank], default: added}, description: "rank is the site's Best first order: official lab repos and base models first, then fine-tunes, then quantizations and adapters, then 30-day downloads at the source. With a search term and no sort, rank is the default; with neither, added."}
         - {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 1000, default: 50}}
         - {name: cursor, in: query, schema: {type: string}}
       responses:
@@ -310,6 +313,7 @@ components:
         section: {type: string}
         license: {type: string}
         badges: {type: array, items: {type: string, enum: [hosted, seeded, source]}}
+        publisher_logo: {type: [string, 'null'], format: uri, description: "Absolute URL of the publisher's logo as the site serves it (https://freeweights.allternit.com/assets/orgs/<org>.png), or null when there is none."}
     ModelDetail:
       allOf:
         - $ref: '#/components/schemas/ModelSummary'

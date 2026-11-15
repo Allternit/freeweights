@@ -220,7 +220,7 @@ def manifest_for(row, remote):
 def card_data(row, remote, fetch=True):
     m, sha, signed = manifest_for(row, remote) if fetch else (None, "", False)
     lc = row.get("license_class")
-    link_only = lc in ("non-commercial", "gated") or not row.get("manifest_url")
+    link_only = lc in ("non-commercial", "gated", "territory", "unreviewed") or not row.get("manifest_url")
     fam = row["section"].replace("alt.freeweights.", "")  # the site's monogram follows the section
     files = (m or {}).get("files") or []
     tasks = row.get("tasks") or []

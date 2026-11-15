@@ -4,8 +4,10 @@
   build_catalog.py [--only org/repo ...] [--no-sign] [--offline]
 
 Per CSV row: redistribution yes -> signed manifest + row (From source badge);
-custom licenses and gated sets -> manifest + row with requires_terms; non-commercial ->
-row only (never hosted); US-excluded, unclear and pickle-only -> catalog/refused.json.
+custom licenses -> manifest + row with requires_terms (and license_terms when the table has terms);
+gated, territory-limited, non-commercial and unclear licenses -> link-only row ("From the publisher",
+link_reason gated | territory | non-commercial | not-reviewed, never hosted); pickle-only -> catalog/refused.json.
+Every row and manifest carries the license id in SPDX case (licenses.spdx), so filters match one id.
 Writes catalog/rows/*.json, catalog/catalog.json, catalog/refused.json, manifests/*.
 Resumable: a repo whose manifest already matches the pinned commit is not rebuilt.
 Signing: only a manifest whose content changed is signed again (the signature is replaced
@@ -37,12 +39,9 @@ EXTRA = [{"repo": "onnx-community/Kokoro-82M-v1.0-ONNX", "kind": "model", "secti
           "upstream_url": "https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX", "notes": "Replaces hexgrad/Kokoro-82M (pickle-only weights)."}]
 NONCOMM_NOTE = ("Freeweights never hosts a copy of this model, and Allternit does not run it commercially. "
                 "The license allows non-commercial use only. Listed with a link to the source.")
-# Source-only rows whose reason is not "non-commercial" (redistribution "no" in the CSV).
-SOURCE_ONLY = {
-    "tencent/HunyuanVideo-1.5": ("custom", "Freeweights does not host a copy. The Tencent Hunyuan Community License covers only its Territory, "
-                                 "which excludes the European Union, the United Kingdom and South Korea, and a worldwide hub cannot limit "
-                                 "who downloads. Listed with a link to the source; read the license there before you download."),
-}
+TERRITORY_NOTE = ("Freeweights does not host a copy: the license covers only some countries, and a worldwide hub cannot limit "
+                  "who downloads. Listed with a link to the source; read the license there before you download.")
+UNREVIEWED_NOTE = "License not reviewed. Read it on the publisher's page. Freeweights does not host a copy."
 GATED_MODEL_NOTE = ("Gated at the source: listed as a link only, and no copy is hosted. Accept the license on the model page "
                     "at the source, then download from there.")
 # Abliterated rows: family of the base model and what the uploader changed (from each model card).
@@ -125,22 +124,36 @@ def prefetch_all(entries, jobs):
             for repo, r in errs: f.write(f"{now()} {repo} {r}\n")
     return errs
 
+def join(*xs): return " ".join(x for x in xs if x) or None
+
+def link_terms(v, ent=None, inh=None):
+    """(license_class, redistribution, requires_terms, note, link_reason) for a link-only verdict, else None."""
+    ent = ent or {}
+    if v == "gated": return "gated", "click-through", True, join(GATED_MODEL_NOTE, inh), "gated"
+    if v == "non-commercial": return "non-commercial", "no", True, join(NONCOMM_NOTE, inh), "non-commercial"
+    if v == "territory": return "territory", "no", True, join(ent.get("note"), TERRITORY_NOTE, inh), "territory"
+    if v == "unreviewed": return "unreviewed", "no", True, join(UNREVIEWED_NOTE, inh), "not-reviewed"
+    return None
+
 def batch_terms(e, res):
-    """(license_class, redistribution, requires_terms, note) for a batch row."""
+    """(license_class, redistribution, requires_terms, note, link_reason) for a batch row. link_reason is None
+    for a hosted row. The table's verdict for the row's license wins when it is a stricter link-only one, and
+    Hugging Face's gate makes a hostable row link only."""
     v = e["verdict"]
     ent = licenses.entry(e["license_id"]) or {}
+    ev = ent.get("verdict")
+    if ev in licenses.LINK_ONLY and licenses.stricter(ev, v) == ev: v = ev
+    if (res or {}).get("gated") and licenses.hosted(v): v = "gated"
     inh = INHERIT_NOTE.format(e["license_governed_by"]) if e["audit"]["method"] == "inherited" and e.get("license_governed_by") else None
-    join = lambda *xs: " ".join(x for x in xs if x) or None
-    if res.get("gated") and v != "non-commercial": return "gated", "click-through", True, join(GATED_MODEL_NOTE, inh)
-    if v == "non-commercial": return "non-commercial", "no", True, join(NONCOMM_NOTE, inh)
-    if ent.get("link_only"): return ent["verdict"], licenses.redistribution(ent["verdict"]), True, join(ent.get("note"), inh)
-    if e["link_only"]: return v, licenses.redistribution(v), True, join(e.get("link_note"), inh)
-    return v, licenses.redistribution(v), v != "permissive", inh
+    lt = link_terms(v, ent, inh)
+    if lt: return lt
+    if e["link_only"]: return v, licenses.redistribution(v), True, join(e.get("link_note") or UNREVIEWED_NOTE, inh), "not-reviewed"
+    return v, licenses.redistribution(v), v != "permissive", inh, None
 
 def batch_row(c, res, man, ts, total, fmts):
-    cls, red, terms, note = batch_terms(c, res)
+    cls, red, terms, note, reason = batch_terms(c, res)
     c["_redis"] = red
-    row = make_row(c, man, res["info"], ts, cls, terms, note, total=total, fmts=fmts)
+    row = make_row(c, man and not reason, res["info"], ts, cls, terms, note, total=total, fmts=fmts, reason=reason)
     row["relation"] = {"type": c["relation"]["type"], "parent": c["relation"]["parent"]}
     row["base_model"] = c["relation"]["parent"]
     row["audit"] = {"method": c["audit"]["method"], "at": c["audit"]["at"]}
@@ -223,7 +236,7 @@ def guess_task(repo):
         if re.search(pat, name): return [task] if task else []
     return []
 
-def make_row(c, man, info, now_ts, cls, terms, note=None, link_only=False, total=None, fmts=None):
+def make_row(c, man, info, now_ts, cls, terms, note=None, link_only=False, total=None, fmts=None, reason=None):
     repo, dataset = c["repo"], c["kind"] == "dataset"
     card = info.get("cardData") or {}
     if dataset:
@@ -247,29 +260,40 @@ def make_row(c, man, info, now_ts, cls, terms, note=None, link_only=False, total
     lf = c.get("license_file", "")
     if terms: row["license_url"] = f"{c['upstream_url']}/blob/{c['pinned_commit'] or 'main'}/{lf}" if lf and lf != "none" and not dataset else c["upstream_url"]
     if note: row["note"] = note
+    if reason: row["link_reason"] = reason
+    elif man and licenses.terms(c["license_id"]): row["license_terms"] = licenses.terms(c["license_id"])
     return row
 
-CLASS_RANK = {"permissive": 0, "custom": 1, "gated": 1, "non-commercial": 2}
+def class_rank(r):
+    """Strictness of a row's license class for inheritance. A row gated only by Hugging Face's flag (its own
+    license is hostable) does not pass "gated" on: its children's files are open."""
+    lc = r.get("license_class") or "permissive"
+    if lc == "gated" and licenses.hosted(licenses.verdict(r.get("license_id"))): lc = "custom"
+    return licenses.STRICTNESS.index(lc) if lc in licenses.STRICTNESS else 0
 
 def inherit(rows):
     """The strictest license class along base -> fine-tune -> quant wins (a quant of a stricter base
-    may not list looser). Returns the ids that changed."""
+    may not list looser). A row that inherits a link-only class loses its manifest_url. Returns the ids that changed."""
     by_id, changed = {r["id"]: r for r in rows}, []
     def chain(r, seen=()):
         best = r
         p = by_id.get((r.get("relation") or {}).get("parent") or "")
         if p and p["id"] not in seen and p["id"] != r["id"]:
             pb = chain(p, seen + (r["id"],))
-            if CLASS_RANK.get(pb["license_class"], 0) > CLASS_RANK.get(best["license_class"], 0): best = pb
+            if class_rank(pb) > class_rank(best): best = pb
         return best
     for r in rows:
         b = chain(r)
-        if b is not r and CLASS_RANK.get(b["license_class"], 0) > CLASS_RANK.get(r["license_class"], 0):
-            r["license_class"], r["redistribution"], r["requires_terms"] = b["license_class"], b["redistribution"], True
+        if b is not r and class_rank(b) > class_rank(r):
+            lc = b["license_class"] if not (b["license_class"] == "gated" and class_rank(b) == licenses.STRICTNESS.index("custom")) else "custom"
+            lt = link_terms(lc, licenses.entry(b.get("license_id")))
+            r["license_class"], r["requires_terms"] = lc, True
+            r["redistribution"] = lt[1] if lt else b["redistribution"]
             r["license_url"] = b.get("license_url") or b["upstream_url"]
             r["audit"]["method"] = "inherited"
-            r["note"] = (NONCOMM_NOTE + " " if b["license_class"] == "non-commercial" else "") + \
-                f"The license of the base model {b['id']} applies: the strictest license along the lineage wins."
+            r["note"] = join(lt[3] if lt else None, f"The license of the base model {b['id']} applies: the strictest license along the lineage wins.")
+            if lt:
+                r["link_reason"] = lt[4]; r.pop("manifest_url", None); r.pop("license_terms", None)
             changed.append(r["id"])
     return changed
 
@@ -296,6 +320,7 @@ def main():
     batch = [e for e in load_batches() if not (a.only and e["repo"] not in a.only)]
     csv_ids = {c["repo"] for c in cands}
     batch = [e for e in batch if e["repo"] not in csv_ids]  # a person's audit row wins over a rule verdict
+    for c in cands + batch: c["license_id"] = licenses.spdx(c["license_id"]) or "unknown"  # one id per license (SPDX case)
     if batch and not a.offline:
         errs = prefetch_all(batch, a.jobs)
         if errs: print(f"batch prefetch: {len(errs)} errors (rerun to retry; work/build-cache/_errors.log)")
@@ -332,12 +357,15 @@ def main():
             if res.get("refused"): refuse(res["refused"]); continue
             if res.get("link_only"):
                 rows.append(batch_row(c, res, False, ts, res["total"], res["formats"])); continue
+            if batch_terms(c, res)[4]:  # cached as hosted, but its license is link only now: no manifest
+                mf = res["manifest"]["files"]
+                rows.append(batch_row(c, res, False, ts, sum(f["size"] for f in mf), res.get("formats") or formats_of([f["path"] for f in mf], False, False))); continue
             out = os.path.join(MAN, fname(repo) + ".json"); sig = out + ".minisig"
             m = res["manifest"]
             if os.path.exists(out) and os.path.exists(sig):
                 have = json.load(open(out, encoding="utf-8"))
                 if have["upstream"]["commit"] == m["upstream"]["commit"] and have["section"] == m["section"]: m = have
-            cls, red, terms, note = batch_terms(c, res)
+            cls, red, terms, note, _ = batch_terms(c, res)
             m["license"]["id"], m["license"]["name"], m["license"]["redistribution"] = c["license_id"], licenses.name(c["license_id"]), red
             errs = check(m, mschema)
             if errs: print("MANIFEST ERRORS", repo, errs); sys.exit(1)
@@ -354,20 +382,21 @@ def main():
             rows.append(batch_row(c, res, True, ts, sum(f["size"] for f in m["files"]), res.get("formats") or formats_of([f["path"] for f in m["files"]], False, repo.startswith("mlx-community/"))))
             continue
         try:
-            if red == "no":
-                if "excludes the united states" in (c["notes"] + c["quoted_clause"]).lower() or "territory" in c["notes"].lower() and "United States" in c["notes"] or repo.startswith("MiniMaxAI/MiniMax-H3") or licenses.verdict(lid) == "refused":
-                    refuse("License excludes the United States (Applicable Territory is worldwide except the EU, UK, South Korea and the US). Distribution from a US host is outside the grant."); continue
-                c["_redis"] = "no"
-                info = net(lambda: meta(repo, c["pinned_commit"], False), repo)
+            lv = licenses.verdict(lid)
+            if lv == "refused":
+                refuse(licenses.NO_LICENSE["note"] if licenses.entry(lid) is None else f"License {lid} is on the refused list."); continue
+            if red in ("no", "unclear") or lv in licenses.LINK_ONLY:
+                # link only, "From the publisher": no manifest, no copy. The table says why; unclear = not reviewed.
+                lv = "unreviewed" if red == "unclear" or lv not in licenses.LINK_ONLY else lv
+                cls, c["_redis"], _, note, reason = link_terms(lv, licenses.entry(lid))
+                info = net(lambda: meta(repo, c["pinned_commit"] or "main", dataset), repo)
                 if a.offline: total, fm = pr["total_size"], pr["formats"]
                 else:
-                    sib = mm.http(f"https://huggingface.co/api/models/{repo}/revision/{c['pinned_commit']}?blobs=true").get("siblings", [])
+                    kind = "datasets" if dataset else "models"
+                    sib = mm.http(f"https://huggingface.co/api/{kind}/{repo}/revision/{c['pinned_commit'] or 'main'}?blobs=true").get("siblings", [])
                     total = sum(int((s.get("lfs") or {}).get("size", s.get("size") or 0)) for s in sib)
-                    fm = formats_of([s["rfilename"] for s in sib], False, info.get("library_name") == "mlx") or ["safetensors"]
-                e = licenses.entry(lid) or {}
-                cls, note = SOURCE_ONLY.get(repo) or ((e["verdict"], e["note"]) if e.get("link_only") else ("non-commercial", NONCOMM_NOTE))
-                rows.append(make_row(c, False, info, ts, cls, True, note, total=total, fmts=fm)); print("source-only row", repo); a.offline or time.sleep(1); continue
-            if red == "unclear": refuse("license unclear — needs review"); continue
+                    fm = formats_of([s["rfilename"] for s in sib], dataset, info.get("library_name") == "mlx") or (["other"] if dataset else ["safetensors"])
+                rows.append(make_row(c, False, info, ts, cls, True, note, total=total, fmts=fm, reason=reason)); print("link-only row", repo, reason); a.offline or time.sleep(1); continue
             if repo == "hexgrad/Kokoro-82M": refuse("pickle-only weights; replaced by onnx-community/Kokoro-82M-v1.0-ONNX"); continue
             if c["gated"] == "yes" and not dataset:
                 # Gated model: the public file listing gives size and formats; no manifest, no copy.
@@ -378,11 +407,11 @@ def main():
                     sib = info.get("siblings", [])
                     total = sum(int((s.get("lfs") or {}).get("size", s.get("size") or 0)) for s in sib)
                     fm = formats_of([s["rfilename"] for s in sib], False, info.get("library_name") == "mlx")
-                rows.append(make_row(c, False, info, ts, "gated", True, GATED_MODEL_NOTE, total=total, fmts=fm)); print("gated model row", repo); a.offline or time.sleep(1); continue
+                rows.append(make_row(c, False, info, ts, "gated", True, GATED_MODEL_NOTE, total=total, fmts=fm, reason="gated")); print("gated model row", repo); a.offline or time.sleep(1); continue
             if red == "click-through" and c["gated"] == "yes":
                 c["_redis"] = "click-through"
                 info = net(lambda: mm.http(f"https://huggingface.co/api/datasets/{repo}"), repo)
-                rows.append(make_row(c, False, info, ts, "gated", True, "Gated dataset: listed as a link only, with no file listing and no copy hosted. Accept the gate terms at the source (do not reveal examples in plain text or images online).", total=0, fmts=[])); print("gated row", repo); a.offline or time.sleep(1); continue
+                rows.append(make_row(c, False, info, ts, "gated", True, "Gated dataset: listed as a link only, with no file listing and no copy hosted. Accept the gate terms at the source (do not reveal examples in plain text or images online).", total=0, fmts=[], reason="gated")); print("gated row", repo); a.offline or time.sleep(1); continue
             # downloadable: manifest + row
             out = os.path.join(MAN, fname(repo) + ".json")
             sig = out + ".minisig"
@@ -434,6 +463,13 @@ def main():
         if p.get("added_at"): r["added_at"] = p["added_at"]
         if r.get("audit") and r is not p: r["audit"]["at"] = (p.get("audit") or {}).get("at") or r["added_at"]
     for rid in inherit(rows): print("inherited a stricter base license:", rid)
+    # a row with no manifest_url is link only: a manifest left from an earlier build is no longer served
+    stale = [r["id"] for r in rows if not r.get("manifest_url") and os.path.exists(os.path.join(MAN, fname(r["id"]) + ".json"))]
+    for rid in stale:
+        for ext in (".json", ".json.minisig"):
+            fp = os.path.join(MAN, fname(rid) + ext)
+            if os.path.exists(fp): os.remove(fp)
+        print("link only now, removed its manifest:", rid)
     secs = json.load(open(os.path.join(ROOT, "spec", "catalog-schema.json")))["x-sections"]
     bad = 0
     for r in rows:

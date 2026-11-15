@@ -85,14 +85,23 @@ if os.path.exists(os.path.join(CAT, "catalog.json")):
     report(f"catalog/rows/*.json ({len(rows)} rows)", [f"{r.get('id')}: {e}" for r in rows for e in check(r, cat_s)])
     keys = [(r.get("kind"), r.get("id")) for r in cat.get("models", [])]
     report("catalog key (kind, id) is unique", sorted({f"duplicate {k}" for k in keys if keys.count(k) > 1}))
-    want = {"permissive": "permissive", "custom": "custom", "non-commercial": "non-commercial"}
+    want = {c: c for c in ("permissive", "custom", "non-commercial", "territory", "unreviewed")}
     e = []
     for r in cat.get("models", []):
         lc, v = r.get("license_class"), licenses.verdict(r.get("license_id"))
-        if lc == "gated" or (r.get("audit") or {}).get("method") == "inherited": continue
-        if v == "queue": e.append(f"{r['id']}: license {r.get('license_id')!r} is not in policy/licenses.json")
-        elif want.get(lc) != v: e.append(f"{r['id']}: license_class {lc!r} but the table says {v!r} for {r.get('license_id')!r}")
-    report("catalog rows agree with policy/licenses.json", e)
+        hosted = bool(r.get("manifest_url"))
+        # the one rule that must never break: a hosted row's license allows copies with no gate and no territory limit
+        if hosted and (lc not in ("permissive", "custom") or v in licenses.LINK_ONLY):
+            e.append(f"{r['id']}: hosted, but license {r.get('license_id')!r} is {v!r} (class {lc!r})"); continue
+        # gated rows (Hugging Face's flag), inherited rows and rows nobody reviewed may carry any license id
+        if lc in ("gated", "unreviewed") or (r.get("audit") or {}).get("method") == "inherited": continue
+        if v == "queue":
+            byname = licenses.name_verdict(r.get("license_id"))
+            if not byname: e.append(f"{r['id']}: license {r.get('license_id')!r} is not in policy/licenses.json")
+            elif byname[0] != lc: e.append(f"{r['id']}: license_class {lc!r} but the declared name says {byname[0]!r}")
+        elif want.get(lc) != v and not (r.get("link_reason") == "not-reviewed" and not hosted):
+            e.append(f"{r['id']}: license_class {lc!r} but the table says {v!r} for {r.get('license_id')!r}")
+    report("catalog rows agree with policy/licenses.json (and no hosted row has a link-only license)", e)
     report("license table docs are generated from policy/licenses.json",
            [f"{os.path.relpath(p, ROOT)} is out of date: run scripts/licenses.py --write-docs" for p, ok in licenses.docs_status() if not ok])
 # negative test: schema must reject a bad manifest

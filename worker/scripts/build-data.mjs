@@ -61,6 +61,14 @@ if (existsSync(cpath)) {
   const sections = (schema['x-sections'] || []).map((s) => ({ ...s, count: models.filter((m) => m.section === s.id).length }));
   catalog = { sections, models };
 }
+// Publisher logos, the same lookup the site uses (site/assets/orgs/sources.json, only files that exist).
+const logos = {};
+const odir = join(root, 'site', 'assets', 'orgs');
+if (existsSync(join(odir, 'sources.json'))) {
+  for (const [org, v] of Object.entries(JSON.parse(readFileSync(join(odir, 'sources.json'), 'utf8')))) {
+    if (v && v.file && existsSync(join(odir, v.file))) logos[org] = v.file;
+  }
+}
 const catalogJson = JSON.stringify(catalog);
 const etag = '"' + createHash('sha256').update(catalogJson).digest('hex').slice(0, 32) + '"';
 
@@ -70,6 +78,7 @@ writeFileSync(
     `export const DATA_ORIGIN = ${JSON.stringify(origin)};\n` +
     `export const CATALOG_JSON = ${JSON.stringify(catalogJson)};\n` +
     `export const CATALOG_ETAG = ${JSON.stringify(etag)};\n` +
+    `export const LOGOS: Record<string, string> = ${JSON.stringify(logos)};\n` +
     `export const MANIFESTS: Record<string, { json: string; sig: string | null }> = ${JSON.stringify(manifests)};\n`,
 );
-console.log(`build-data: ${Object.keys(manifests).length} manifests, ${catalog.models.length} catalog rows (${origin})`);
+console.log(`build-data: ${Object.keys(manifests).length} manifests, ${catalog.models.length} catalog rows, ${Object.keys(logos).length} logos (${origin})`);

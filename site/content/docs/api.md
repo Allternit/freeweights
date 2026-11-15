@@ -20,6 +20,7 @@ The full contract is `spec/hub-api.yaml` (OpenAPI 3.1, Apache-2.0). The Stage 0 
 ## Basics {#basics}
 
 - No account, no token. A request with an `hf_` token is refused with 401 `hf_token_rejected`.
+- Browsers can call it from any origin. A CORS preflight (`OPTIONS`) on `/api/*`, `/manifests/*` and the resolve routes answers 204 and allows `GET`, `HEAD`, the headers `If-None-Match`, `Authorization`, `Range` and `Content-Type`, cached for a day. The token rules apply to the real request.
 - Later stages add `Authorization: Bearer alt_...` for accounts.
 - Counts read "download starts", because a redirect cannot see a finished download.
 
@@ -33,18 +34,18 @@ The full contract is `spec/hub-api.yaml` (OpenAPI 3.1, Apache-2.0). The Stage 0 
 | `section` | For example `alt.freeweights.qwen`. |
 | `author` | The organization part of the id. |
 | `pipeline_tag` | Task tag. |
-| `license` | License id. |
+| `license` | License id, for example `Apache-2.0`. Rows carry SPDX case; the filter matches either case. |
 | `library` | `safetensors`, `gguf` or `mlx`. |
 | `source` | `hosted`, `seeded` or `source`. |
 | `max_size` | Total size limit in bytes. |
-| `sort` | `added` (default), `downloads`, `size` or `name`. |
+| `sort` | `added` (default), `downloads`, `size`, `name` or `rank`. `rank` is the site's Best first order: official lab repos and base models first, then fine-tunes, then quantizations and adapters, then 30-day downloads at the source. With `search` and no `sort`, the order is `rank`. |
 | `limit`, `cursor` | Page size 1 to 1000 (default 50), and a cursor. A `Link` header with `rel="next"` appears when more exist. |
 
 ```
 curl 'https://freeweights.allternit.com/api/models?search=bge&library=safetensors&limit=5'
 ```
 
-The reply is a JSON array of model summaries.
+The reply is a JSON array of model summaries. Each has `publisher_logo`: the absolute URL of the publisher's logo, or `null` when there is none.
 
 ## Model detail {#model}
 
