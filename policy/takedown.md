@@ -6,11 +6,12 @@ Status: Draft. Owner: Allternit. Public summary at /ethos.
 
 | Address | Use |
 | --- | --- |
-| abuse@freeweights (Allternit) | Banned content, policy reports |
-| dmca@freeweights (Allternit) | Copyright notices and counter-notices |
-| security@freeweights (Allternit) | Malware, secrets, vulnerabilities |
+| abuse@allternit.com | Banned content, policy reports |
+| dmca@allternit.com | Copyright notices and counter-notices |
+| security@allternit.com | Malware, secrets, vulnerabilities |
+| freeweights@allternit.com | Everything else |
 
-Exact addresses are set when routing exists (freeweights@allternit.com plus abuse@, dmca@ and security@ routes). Each report gets an acknowledgement and a ticket number.
+All four routes forward to Allternit (verified 2026-11-14). Each report gets an acknowledgement and a ticket number.
 
 ## 2. Auto-quarantine
 
@@ -43,7 +44,16 @@ We decide on each report within 72 hours of receipt and tell the reporter. CSAM 
 
 ## 6. Blocklist
 
-A public-safe list of hashes and identifiers of removed items. A hash stays on the list until an appeal or a court order removes it. The list holds no content.
+Hashes and identifiers of removed items. A hash stays on the list until an appeal or a court order removes it. The lists hold no content.
+
+- **Public list** (`policy/blocklist.json`, in the repository): non-sensitive classes: copyright, license_violation, publisher_request, malware_or_secrets, crime_marketing, other.
+- **Private list** (`~/.config/freeweights/blocklist-private.json`, or `$FREEWEIGHTS_PRIVATE_BLOCKLIST`; never committed): sensitive classes: csam, ncii, personal_data, real_person_likeness. Hashes are shared on request. The public counter and registry line for these show only the date, kind and class; the id is withheld because it can name a person or describe the material.
+
+`scripts/discover.py` drops and `scripts/build_catalog.py` refuses any repo whose id or weight-file sha256 is on either list, so catalog builds run on a machine that has the private list.
+
+## 6a. The takedown command
+
+`python3 scripts/fw_admin.py takedown <org/repo> --reason <class> [--dry-run] [--apply]` does the removal in one step: the database row that makes the Worker answer 451 at once (live only with `--apply`; the exact wrangler command is printed), the blocklist entry with the weight hashes, removal of the catalog row and manifest, the public counter (`policy/takedowns.json`) and a signed registry line (date, id, reason class; no personal data). Then rebuild the site, run `scripts/sync_r2.py --delete`, deploy, and commit. Reason classes: as in section 6.
 
 ## 7. Appeals
 
@@ -61,7 +71,7 @@ We file a designated agent with the US Copyright Office to qualify for safe harb
 
 - DECISION (Allternit): Who is the designated agent: Allternit, or a role mailbox with a named person. Draft default: Allternit LLC with Allternit named.
 - DECISION (Allternit): Appeal window (30 days) and answer time (14 days). Draft default: as written.
-- DECISION (Allternit): Whether the blocklist is published in full or as a count only. Draft default: count and category, with hashes shared on request.
+- DECISION (Allternit): Whether the blocklist is published in full or as a count only. Draft default: count and category, with hashes shared on request. As built: hashes are public only for non-sensitive classes; sensitive classes keep hashes private (shared on request) and withhold the id.
 
 ## Verify with counsel
 

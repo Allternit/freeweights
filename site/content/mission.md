@@ -134,12 +134,10 @@ Until then Allternit LLC owns Freeweights. If a nonprofit takes over, we say how
 
 ## Report a problem {#report}
 
-Send reports to freeweights@allternit.com for now. Role addresses (abuse, dmca and security at freeweights) are set up as routes before launch, and this page is updated when they exist.
-
-- **Banned content or a policy problem:** abuse report.
-- **Copyright:** a copyright notice, below.
-- **Malware, secrets or a security hole:** security report.
-- **A wrong license, checksum or source:** tell us the model id and what you found.
+- **Banned content or a policy problem:** abuse@allternit.com.
+- **Copyright:** a copyright notice or counter-notice (below) to dmca@allternit.com.
+- **Malware, secrets or a security hole:** security@allternit.com.
+- **Anything else, for example a wrong license, checksum or source:** freeweights@allternit.com, with the model id and what you found.
 
 You get an acknowledgement and a ticket number. We decide within 72 hours.
 
@@ -153,7 +151,9 @@ You get an acknowledgement and a ticket number. We decide within 72 hours.
 
 **Appeal.** Written, within 30 days. A different person reviews it. Answer in 14 days.
 
-**Blocklist.** A list of hashes and identifiers of removed items. It holds no content. A hash stays until an appeal or a court order removes it.
+**Blocklist.** Hashes and identifiers of removed items. They hold no content. A hash stays until an appeal or a court order removes it. The catalog build refuses any repo whose weight files match a hash. Hashes for non-sensitive removals (copyright, license, publisher request) are public in `policy/blocklist.json`. Hashes for sensitive removals (child sexual abuse material, non-consensual intimate imagery, personal data, a real person's likeness) are kept private and shared on request, and the public record for them shows only the date and reason class.
+
+**What a removal does.** The item answers 451 at once on the API, the download redirect, the manifest and its page. Its weight hashes go on the blocklist, it leaves the catalog, the counter goes up, and a signed line (date, id, reason class, no personal data) is added to the registry chain. Details: the Takedowns doc page.
 
 **Counter.** The public takedown counter sits at the end of this page (the site build fills it) and shows per month: reports received, items removed, items restored and reason categories. At launch it reads zero.
 

@@ -45,3 +45,12 @@ CREATE TABLE IF NOT EXISTS counters (
   n    INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY (name, day)
 ) WITHOUT ROWID;
+
+-- Entries removed after a takedown (migration 0003). The Worker answers 451 for them before any R2 read.
+CREATE TABLE IF NOT EXISTS takedowns (
+  kind         TEXT NOT NULL,      -- model | dataset
+  entry_id     TEXT NOT NULL,      -- org/repo
+  reason_class TEXT NOT NULL,      -- fixed class, never free text
+  at           TEXT NOT NULL,      -- ISO time of the removal (UTC)
+  PRIMARY KEY (kind, entry_id)
+) WITHOUT ROWID;

@@ -28,6 +28,11 @@ const lfs = man.files.find((f) => f.lfs);
 const plain = man.files.find((f) => !f.lfs);
 const rpath = (f, rev = 'main') => `/${id}/resolve/${rev}/${f.path.split('/').map(encodeURIComponent).join('/')}`;
 const get = (p, init = {}) => fetch(BASE + p, { redirect: 'manual', ...init });
+// B9: a second hosted entry, taken down in D1 only (its manifest and page are still in R2, as right after
+// `fw_admin.py takedown --apply` and before `sync_r2.py --delete`).
+const [gid, gmf] = Object.entries(FILES).find(([k, v]) => k !== id && JSON.parse(readFileSync(v.file, 'utf8')).files.length);
+const gman = JSON.parse(readFileSync(gmf.file, 'utf8'));
+const GONE_PAGE = `${gman.section}/${gid}/index.html`;
 
 before(async () => {
   const wr = (...a) => execFileSync('npx', ['wrangler', ...a, '--persist-to', persist], { cwd: here, stdio: 'pipe' });
@@ -37,6 +42,11 @@ before(async () => {
   put(`manifests/${id}.json`, mf.file, 'application/json');
   if (mf.sig) put(`manifests/${id}.json.minisig`, mf.sig, 'text/plain');
   put(PAGE_KEY, pageFile, 'text/html');
+  put(`manifests/${gid}.json`, gmf.file, 'application/json');
+  if (gmf.sig) put(`manifests/${gid}.json.minisig`, gmf.sig, 'text/plain');
+  put(GONE_PAGE, pageFile, 'text/html');
+  wr('d1', 'execute', 'freeweights', '--local', '--command',
+    `INSERT INTO takedowns (kind, entry_id, reason_class, at) VALUES ('model', '${gid}', 'copyright', '2026-11-14T00:00:00Z')`);
   proc = spawn('npx', ['wrangler', 'dev', '--local', '--port', PORT, '--persist-to', persist, '--var', 'CHECK_MODE:offline', '--var', 'PASSTHROUGH:0'], { cwd: here, stdio: 'ignore' });
   for (let i = 0; i < 120; i++) {
     try { if ((await fetch(BASE + '/api/catalog')).ok) return; } catch {}
@@ -262,7 +272,7 @@ test('link-only rows list and show without a manifest', async () => {
     seen += rows.length;
     if (rows.length < 1000) break;
   }
-  assert.equal(seen, cat.models.length);
+  assert.equal(seen, cat.models.filter((r) => r.id !== gid).length); // the taken-down entry (B9) is not listed
   const linkOnly = cat.models.find((r) => !r.manifest_url);
   if (!linkOnly) return; // sample data has none
   const d = await get(`/api/models/${linkOnly.id}`);
@@ -271,4 +281,28 @@ test('link-only rows list and show without a manifest', async () => {
   assert.equal(body.sha, null);
   assert.deepEqual(body.siblings, []);
   assert.equal(body.upstream_url, linkOnly.upstream_url);
+});
+
+// B9: a takedown in D1 answers 451 at once on every path of the entry, before R2 is read, with no redeploy.
+test('taken-down entry: 451 on API detail, tree, resolve, manifest, signature and detail page; gone from search', async () => {
+  const f = gman.files[0];
+  const paths = [`/api/models/${gid}`, `/api/models/${gid}/revision/main`, `/api/models/${gid}/tree/main`,
+    `/${gid}/resolve/main/${f.path.split('/').map(encodeURIComponent).join('/')}`, `/manifests/${gid}.json`, `/manifests/${gid}.json.minisig`];
+  for (const p of paths) {
+    for (const method of ['GET', 'HEAD']) {
+      const r = await get(p, { method });
+      assert.equal(r.status, 451, `${method} ${p}`);
+      assert.equal(r.headers.get('cache-control'), 'no-store');
+      if (method === 'GET') assert.equal((await r.json()).error, 'removed_after_takedown');
+    }
+  }
+  const page = await get(`/${GONE_PAGE.replace(/index\.html$/, '')}`);
+  assert.equal(page.status, 451);
+  assert.match(await page.text(), /Removed after a takedown/);
+  assert.equal((await get(`/${GONE_PAGE.replace(/\/index\.html$/, '')}`)).status, 451); // no 301 first
+  const all = await (await get(`/api/models?search=${encodeURIComponent(gid.split('/')[1])}&limit=1000`)).json();
+  assert.ok(!all.some((m) => m.id === gid));
+  // the entry that was not taken down is still served
+  assert.equal((await get(`/manifests/${id}.json`)).status, 200);
+  assert.equal((await get(`/api/models/${id}`)).status, 200);
 });

@@ -6,6 +6,8 @@ The public ledger for Freeweights costs and income. It is shown at /ledger.
 
 - `YYYY-MM.csv`: one file per month. Each row is one money movement or one zero-cost service.
 - `goals.json`: funding goals and the stage each one unlocks, with amount range and the amount raised so far.
+- `chain.jsonl`, `head.json`, `head.json.minisig`: the money rows as a signed hash chain (scripts/ledger_chain.py).
+- `registry.jsonl`, `registry-head.json`, `snapshot.json` (each signed): a separate chain of catalog snapshots and takedowns (scripts/registry_chain.py, docs/ledger-chain.md). Not money: never add these to the CSVs.
 
 ## CSV columns
 

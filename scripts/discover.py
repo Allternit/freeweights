@@ -25,6 +25,9 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import blocklist  # noqa: E402  takedown blocklist (policy/blocklist.json)
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WATCHLIST = os.path.join(ROOT, "catalog", "watchlist.json")
 WORK = os.path.join(ROOT, "work")
@@ -215,6 +218,16 @@ def weight_hashes(rec):
         if h:
             hs.add(h)
     return frozenset(hs)
+
+
+def drop_blocked(records, data=None):
+    """Remove records whose id or weight hashes are on the takedown blocklist. Returns the removed keys.
+    Weight hashes are known only when the listing returned siblings (--siblings); build_catalog.py checks
+    every manifest hash again, so a re-upload is refused there either way."""
+    gone = [k for k, r in records.items() if blocklist.match(r["id"], weight_hashes(r), data)]
+    for k in gone:
+        del records[k]
+    return gone
 
 
 def link_same_as(records):
@@ -638,6 +651,9 @@ def main(argv=None):
         listable = lambda r: bool(r.get("tier_hint") or r.get("variant") or "parent" in r.get("sources", []))
         n = fetch_license_texts(client, recs, os.path.join(WORK, "license-texts.json"), os.path.join(WORK, "license-texts"), listable)
         print("license texts read: %d" % n, file=sys.stderr)
+    gone = drop_blocked(recs)
+    if gone:
+        print("blocked by the takedown blocklist: %d" % len(gone), file=sys.stderr)
     link_variants(recs)
     link_same_as(recs)
     if "trendingScore" in a.sorts.split(","):
