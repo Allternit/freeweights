@@ -1299,7 +1299,8 @@ paths:
         Each poll writes `scanner_state.last_poll_at`, then sweeps (spec/accounts-v1.md 11.5): pending uploads
         older than 1 hour expire and release their bytes; a claim past `claimed_until` goes back to `queued`, or
         to `error` after its third attempt; held files older than 14 days are deleted from quarantine and their
-        bytes released. Then up to `max` queued scans (oldest first) are claimed: status `scanning`,
+        bytes released; files of repos removed by their owner or by account deletion are deleted from every
+        bucket and their bytes released (a takedown keeps its files for review). Then up to `max` queued scans (oldest first) are claimed: status `scanning`,
         `attempts` + 1, `claimed_until` = now + 30 minutes. Each job carries a presigned GET on its quarantine
         object, valid 15 minutes. No job is an empty `jobs` list, not an error.
       security: [{fwScanner: []}]
@@ -1843,6 +1844,7 @@ components:
         requeued: {type: integer}
         errored: {type: integer}
         held_deleted: {type: integer}
+        purged_uploads: {type: integer, description: 'Uploads of repos removed by their owner or by account deletion (not a takedown) whose objects were deleted and bytes released, at most 25 per poll.'}
     ScanResultBody:
       type: object
       required: [attempt, status, findings, scanner_version]

@@ -191,10 +191,27 @@ paths:
         the file is the entry's counted file (see Counts).
         The redirect may point at a Freeweights origin, a registered mirror, a web seed or the upstream publisher.
         A `Range` request is passed through to that source by the client after the redirect.
+
+        **Community repos** (uploaded by Allternit account holders, spec/accounts-v1.md 11.6; datasets at
+        `/datasets/{namespace}/{repo}/resolve/{rev}/{path}`). Only the head commit and the commits before it are
+        served; the head moves only when every file of a commit passed the upload scan. `rev` is `main` or a
+        served commit oid.
+        - 302 to a presigned URL on the Freeweights bucket, valid 5 minutes, with `Cache-Control: private,
+          no-store` and `X-Freeweights-Source: community`. A takedown therefore takes effect within 5 minutes.
+        - 404 `file_not_ready` while the repo has no clean commit yet, or while the file belongs to a commit
+          that is still being scanned or was held by the scan.
+        - 404 `repo_not_found` for a repo removed by its owner or by account deletion; 404 `file_not_found`
+          and `revision_not_found` as for catalog entries.
+        - 451 `removed_after_takedown` for a repo removed after a takedown (not cached).
+        - 503 `accounts_not_configured` on a deployment without the R2 signing secrets.
       responses:
         '302': {$ref: '#/components/responses/Redirect'}
         '401': {$ref: '#/components/responses/HfTokenRejected'}
-        '404': {$ref: '#/components/responses/Error'}
+        '404':
+          description: 'Not found: model_not_found, model_wanted, revision_not_found, file_not_found; for community repos also repo_not_found and file_not_ready (not scanned clean yet).'
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
         '451': {$ref: '#/components/responses/TakenDown'}
         '503':
           description: No live source within the time limit (`no_live_source_in_time`), or the API is paused at the daily cap (`api_paused_daily_cap`, see PausedDailyCap).
@@ -336,7 +353,7 @@ components:
       type: object
       required: [error, message]
       properties:
-        error: {type: string, description: 'Stable code, for example model_not_found, model_wanted, hf_token_rejected, api_paused_daily_cap, removed_after_takedown.'}
+        error: {type: string, description: 'Stable code, for example model_not_found, model_wanted, hf_token_rejected, api_paused_daily_cap, removed_after_takedown, file_not_ready.'}
         message: {type: string}
     SourceState:
       type: object

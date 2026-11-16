@@ -7,7 +7,7 @@ import type { Method } from '../router';
 export function preflight(req: Request, p: string, info: { methods: Method[]; auth: boolean }): Response | null {
   if (req.method !== 'OPTIONS') return null;
   if (info.auth) return new Response(null, { status: 204, headers: authPreflight(info.methods) });
-  if (/^\/(api|manifests)\//.test(p) || /^\/[^/]+\/[^/]+\/resolve\/[^/]+\/.+$/.test(p)) {
+  if (/^\/(api|manifests)\//.test(p) || /^\/(?:datasets\/)?[^/]+\/[^/]+\/resolve\/[^/]+\/.+$/.test(p)) {
     return new Response(null, { status: 204, headers: PREFLIGHT });
   }
   return null;

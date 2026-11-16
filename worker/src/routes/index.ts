@@ -17,6 +17,9 @@ import { adminRoute } from './admin';
 import { createRepoRoute, deleteRepoRoute, moveRepoRoute, repoSettingsRoute } from './repos';
 import { commitRoute, preuploadRoute } from './commit';
 import { lfsBatchRoute, lfsFinishRoute } from './lfs';
+import { communityInfoRoute, communityTreeRoute, communityCommitsRoute, communityRefsRoute, communityResolveRoute } from './community-read';
+import { limitsRoute } from './limits';
+import { scanClaimRoute, scanResultRoute, scanHealthRoute } from './scan';
 
 // Write API routes (spec/parts/write-api.yaml) whose handlers land in later waves. Each one already checks the
 // credential (401 / 503 accounts_not_configured) so clients and tests see the final auth behaviour; past that
@@ -40,6 +43,16 @@ const P: readonly Method[] = ['POST'];
 // A handler returns null to decline, so a later route (and finally the Pages passthrough) can answer.
 // Routes answer GET/HEAD unless they list methods; `W(...)` rows are auth routes (they read a credential).
 export const ROUTES: Route[] = [
+  // community repos (routes/community-read.ts); each declines for a catalog id, so the catalog rows below answer as before
+  route(/^\/api\/(models|datasets)\/([^/]+)\/([^/]+)\/tree\/([^/]+)(?:\/(.+))?$/, communityTreeRoute),
+  route(/^\/api\/(models|datasets)\/([^/]+)\/([^/]+)\/commits\/([^/]+)$/, communityCommitsRoute),
+  route(/^\/api\/(models|datasets)\/([^/]+)\/([^/]+)\/refs$/, communityRefsRoute),
+  route(/^\/api\/(models|datasets)\/([^/]+)\/([^/]+)(?:\/revision\/([^/]+))?$/, communityInfoRoute),
+  route(/^\/(?:(datasets)\/)?([^/]+)\/([^/]+)\/resolve\/([^/]+)\/(.+)$/, communityResolveRoute),
+  route(/^\/api\/fw\/v1\/limits$/, limitsRoute),
+  route(/^\/api\/fw\/v1\/scan\/health$/, scanHealthRoute),
+  route(/^\/api\/fw\/v1\/scan\/claim$/, scanClaimRoute, { methods: ['POST'] }),
+  route(/^\/api\/fw\/v1\/scan\/([^/]+)\/result$/, scanResultRoute, { methods: ['POST'] }),
   route(/^\/api\/models$/, modelsRoute),
   route(/^\/api\/catalog$/, catalogRoute),
   route(/^\/api\/models\/([^/]+)\/([^/]+)\/xet-read-token\/([^/]+)$/, xetRoute),
