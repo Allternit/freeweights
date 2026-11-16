@@ -1,0 +1,14 @@
+# fw-scanner runtime dependencies, pinned (checked on PyPI 2026-11-15). Python 3.11 or 3.12
+# (picklescan needs >= 3.11, modelscan needs < 3.13). Install with:
+#   python3 -m venv /opt/fw-scanner/venv && /opt/fw-scanner/venv/bin/pip install -r requirements.txt
+# The scanner itself uses the standard library only; these are the two pickle scanners it runs as
+# subprocesses, and modelscan's dependencies.
+picklescan==1.0.5
+modelscan==0.8.8
+click==8.5.1
+markdown-it-py==4.3.0
+mdurl==0.1.2
+numpy==2.3.5
+Pygments==2.21.0
+rich==14.3.4
+tomlkit==0.13.3
