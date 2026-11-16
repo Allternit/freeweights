@@ -6,7 +6,7 @@
 Per CSV row: redistribution yes -> signed manifest + row (From source badge);
 custom licenses -> manifest + row with requires_terms (and license_terms when the table has terms);
 gated, territory-limited, non-commercial and unclear licenses -> link-only row ("From the publisher",
-link_reason gated | territory | non-commercial | not-reviewed, never hosted); pickle-only -> catalog/refused.json.
+link_reason gated | territory | non-commercial | copyleft | restricted | not-reviewed, never hosted); pickle-only -> catalog/refused.json.
 Every row and manifest carries the license id in SPDX case (licenses.spdx), so filters match one id.
 Writes catalog/rows/*.json, catalog/catalog.json, catalog/refused.json, manifests/*.
 Resumable: a repo whose manifest already matches the pinned commit is not rebuilt.
@@ -47,6 +47,10 @@ NONCOMM_NOTE = ("Freeweights never hosts a copy of this model, and Allternit doe
                 "The license allows non-commercial use only. Listed with a link to the source.")
 TERRITORY_NOTE = ("Freeweights does not host a copy: the license covers only some countries, and a worldwide hub cannot limit "
                   "who downloads. Listed with a link to the source; read the license there before you download.")
+COPYLEFT_NOTE = ("Copyleft license (GPL, LGPL or AGPL): Freeweights never hosts a copy. Listed with a link to the source; "
+                 "read the license there before you download.")
+RESTRICTED_NOTE = ("The license of the original does not allow this kind of derivative to be copied (a no-derivatives license, or a clause "
+                   "that ends the rights when a safety guardrail is bypassed). Freeweights never hosts a copy. Listed with a link to the source.")
 UNREVIEWED_NOTE = "License not reviewed. Read it on the publisher's page. Freeweights does not host a copy."
 GATED_MODEL_NOTE = ("Gated at the source: listed as a link only, and no copy is hosted. Accept the license on the model page "
                     "at the source, then download from there.")
@@ -140,6 +144,8 @@ def link_terms(v, ent=None, inh=None):
     if v == "gated": return "gated", "click-through", True, join(GATED_MODEL_NOTE, inh), "gated"
     if v == "non-commercial": return "non-commercial", "no", True, join(NONCOMM_NOTE, inh), "non-commercial"
     if v == "territory": return "territory", "no", True, join(ent.get("note"), TERRITORY_NOTE, inh), "territory"
+    if v == "copyleft": return "copyleft", "no", True, join(COPYLEFT_NOTE, inh), "copyleft"
+    if v == "restricted": return "restricted", "no", True, join(RESTRICTED_NOTE, inh), "restricted"
     if v == "unreviewed": return "unreviewed", "no", True, join(UNREVIEWED_NOTE, inh), "not-reviewed"
     return None
 

@@ -32,7 +32,12 @@ class LicenseTable(unittest.TestCase):
 
     def test_custom_ids_never_pass_on_a_tag(self):
         self.assertEqual(licenses.tag_verdict("licenseref-qwen-research")[0], "queue")
-        self.assertEqual(licenses.tag_verdict("creativeml-openrail-m")[0], "queue")
+        self.assertEqual(licenses.tag_verdict("bigscience-bloom-rail-1.0")[0], "queue")
+
+    def test_openrail_m_tag_is_custom_with_terms(self):
+        # read 2026-11-15: the Attachment A use restrictions pass on, so the hosted entry shows terms
+        self.assertEqual(licenses.tag_verdict("creativeml-openrail-m")[0], "custom")
+        self.assertIn("Attachment A", licenses.terms("creativeml-openrail-m"))
 
     def test_docs_match_table(self):
         self.assertTrue(all(ok for _, ok in licenses.docs_status()), "run scripts/licenses.py --write-docs")
@@ -112,9 +117,9 @@ class Queue(unittest.TestCase):
         self.assertEqual(q, [])
 
     def test_held_license_queues_under_its_id(self):
-        r, q = run(rec("x/R", lic="creativeml-openrail-m"))
+        r, q = run(rec("x/R", lic="bigscience-bloom-rail-1.0"))
         self.assertEqual(r["x/R"]["verdict"], "unreviewed")
-        self.assertEqual(q[0]["key"], "held:creativeml-openrail-m")
+        self.assertEqual(q[0]["key"], "held:bigscience-bloom-rail-1.0")
 
     def test_no_license_is_refused(self):
         r, _ = run(rec("x/NoLic", lic=None))
@@ -265,5 +270,81 @@ class HeaderCheck(unittest.TestCase):
         self.assertIn("header check failed", why)
         fm, _ = formats.decide(["model.safetensors"], lambda p, n: struct.pack("<Q", 40) + b"{")
         self.assertEqual(fm, ["safetensors"])
+
+NVIDIA_OML = dict(lic="other", cardData_name="nvidia-open-model-license")
+CSV = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "catalog", "_audit", "licenses.csv")
+
+class Decisions20261116(unittest.TestCase):
+    """The six license-policy decisions of 2026-11-16, checked through the public classify path."""
+
+    def test_1_register_before_commercial_use_stays_gated_link_only(self):
+        for name in ("stabilityai-ai-community", "stability-ai-community"):
+            r, _ = run(rec("x/Sd", lic="other", cardData_name=name))
+            self.assertEqual((r["x/Sd"]["verdict"], r["x/Sd"]["hosted"], r["x/Sd"]["link_reason"]), ("gated", False, "gated"))
+        for lid in ("licenseref-stability-ai-community", "licenseref-moonshine-community", "licenseref-glm-4", "licenseref-cogvideox", "licenseref-cogvlm", "licenseref-cogagent"):
+            self.assertIn("Allternit has not registered; hosted only if Allternit registers.", licenses.LICENSES[lid]["note"])
+            self.assertEqual(licenses.verdict(lid), "gated")
+
+    def test_2_no_redistribution_licenses_are_link_only_non_commercial(self):
+        for name in ("exaone", "msrla", "polyform-strict-1-0-0"):
+            r, _ = run(rec("x/N", lic="other", cardData_name=name))
+            n = r["x/N"]
+            self.assertEqual((n["verdict"], n["hosted"], n["link_reason"], n["listable"]), ("non-commercial", False, "non-commercial", True), name)
+        # a quantization of one is link only too, not refused
+        r, _ = run(rec("x/B", lic="other", cardData_name="exaone"), rec("x/B-GGUF", lic="apache-2.0", base="x/B", rel="quantized"))
+        self.assertEqual((r["x/B-GGUF"]["verdict"], r["x/B-GGUF"]["hosted"]), ("non-commercial", False))
+
+    def test_3_copyleft_weights_are_link_only_with_their_own_reason(self):
+        for lic in ("gpl-3.0", "lgpl-3.0", "agpl-3.0"):
+            r, q = run(rec("x/G", lic=lic))
+            g = r["x/G"]
+            self.assertEqual((g["verdict"], g["hosted"], g["link_reason"], g["listable"]), ("copyleft", False, "copyleft", True), lic)
+            self.assertEqual(q, [])
+        # a quantization of a GPL base is never hosted
+        r, _ = run(rec("x/G", lic="gpl-3.0"), rec("x/G-GGUF", lic="apache-2.0", base="x/G", rel="quantized"))
+        self.assertEqual((r["x/G-GGUF"]["verdict"], r["x/G-GGUF"]["hosted"]), ("copyleft", False))
+        self.assertEqual(licenses.VERDICTS["copyleft"]["label"], "Copyleft license: link only")
+        self.assertFalse(licenses.hosted("copyleft"))
+
+    def test_4_by_nd_hosts_only_unchanged_originals(self):
+        r, _ = run(rec("x/Orig", lic="cc-by-nd-4.0"))
+        self.assertEqual((r["x/Orig"]["verdict"], r["x/Orig"]["hosted"]), ("custom", True))
+        for rel, kind in (("quantized", "quant"), ("finetune", "ft"), ("merge", "mg"), ("adapter", "ad")):
+            r, _ = run(rec("x/Orig", lic="cc-by-nd-4.0"), rec(f"x/Orig-{kind}", lic="apache-2.0", base="x/Orig", rel=rel))
+            d = r[f"x/Orig-{kind}"]
+            self.assertEqual((d["verdict"], d["hosted"], d["link_reason"]), ("restricted", False, "restricted"), rel)
+            self.assertIn("derivative of a no-derivatives license", d["reasons"][-1])
+        # a derivative that carries its own BY-ND tag is just as barred
+        r, _ = run(rec("x/Orig", lic="cc-by-nd-4.0"), rec("x/Own-ft", lic="cc-by-nd-4.0", base="x/Orig", rel="finetune"))
+        self.assertEqual((r["x/Own-ft"]["verdict"], r["x/Own-ft"]["hosted"]), ("restricted", False))
+
+    def test_5_heimdallr_click_wrap_is_gated_link_only(self):
+        # the audit row in licenses.csv decides (the tag says apache-2.0), and a child inherits it
+        reviewed = classify.load_reviewed(CSV)
+        r, _ = run(rec("ReadyArt/Heimdallr-26B-A4B-v0.35", lic="apache-2.0"), rec("x/Heimdallr-ft", lic="apache-2.0", base="ReadyArt/Heimdallr-26B-A4B-v0.35", rel="finetune"), reviewed=reviewed)
+        for rid in ("ReadyArt/Heimdallr-26B-A4B-v0.35", "x/Heimdallr-ft"):
+            self.assertEqual((r[rid]["verdict"], r[rid]["hosted"]), ("gated", False), rid)
+
+    def test_6_abliterated_nvidia_open_model_derivative_is_never_hosted(self):
+        base = rec("nvidia/Base-8B", **NVIDIA_OML)
+        r, _ = run(base)
+        self.assertEqual((r["nvidia/Base-8B"]["verdict"], r["nvidia/Base-8B"]["hosted"]), ("custom", True))
+        abl = rec("u/Base-8B-abliterated", lic="apache-2.0", base="nvidia/Base-8B", rel="finetune")
+        r, _ = run(base, abl)
+        a = r["u/Base-8B-abliterated"]
+        self.assertEqual((a["verdict"], a["hosted"], a["link_reason"]), ("restricted", False, "restricted"))
+        self.assertIn("safety guardrail", a["reasons"][-1])
+        self.assertIn("automatically terminate", a["reasons"][-1])
+        # an abliterated quantization of it too, found by the tag instead of the name
+        q = rec("u/Base-8B-q4", lic="apache-2.0", tags=["abliterated"], base="u/Base-8B-abliterated", rel="quantized")
+        r, _ = run(base, abl, q)
+        self.assertEqual((r["u/Base-8B-q4"]["verdict"], r["u/Base-8B-q4"]["hosted"]), ("restricted", False))
+        # a plain fine-tune of the same model is still hosted, and so is an abliterated model of another license
+        r, _ = run(base, rec("u/Base-8B-chat", lic="apache-2.0", base="nvidia/Base-8B", rel="finetune"), rec("u/Other-abliterated", lic="apache-2.0"))
+        self.assertEqual((r["u/Base-8B-chat"]["verdict"], r["u/Base-8B-chat"]["hosted"]), ("custom", True))
+        self.assertEqual((r["u/Other-abliterated"]["verdict"], r["u/Other-abliterated"]["hosted"]), ("permissive", True))
+        # a parent already in the catalog counts through its license id
+        res, _ = classify.Classifier([abl], {}, {"nvidia/Base-8B": "custom"}, watch=set(), now=NOW, catalog_licenses={"nvidia/Base-8B": "LicenseRef-NVIDIA-Open-Model"}).run()
+        self.assertEqual((res[0]["verdict"], res[0]["hosted"]), ("restricted", False))
 
 if __name__ == "__main__": unittest.main()

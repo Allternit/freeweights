@@ -41,12 +41,14 @@ export function sourceState(m) {
   return { srcs, failed, allFailed: srcs.length > 0 && srcs.every(failed), last: times[times.length - 1] || null };
 }
 // Hosted (signed manifest) vs From the publisher (link only), and why a row is link only.
-export const LINK_CLASSES = new Set(['non-commercial', 'gated', 'territory', 'unreviewed']);
-export const CLASS_REASON = { 'non-commercial': 'non-commercial', gated: 'gated', territory: 'territory', unreviewed: 'not-reviewed' };
+export const LINK_CLASSES = new Set(['non-commercial', 'gated', 'territory', 'copyleft', 'restricted', 'unreviewed']);
+export const CLASS_REASON = { 'non-commercial': 'non-commercial', gated: 'gated', territory: 'territory', copyleft: 'copyleft', restricted: 'restricted', unreviewed: 'not-reviewed' };
 export const LINK_REASON = {
   gated: ['Gated', 'Gated at the source.', 'The license must be accepted on the publisher\'s page before you download.'],
   'non-commercial': ['Non-commercial', 'Non-commercial license.', 'The license allows non-commercial use only.'],
   territory: ['Territory-limited', 'Territory-limited license.', 'The license covers only some countries, and a worldwide hub cannot limit who downloads.'],
+  copyleft: ['Copyleft', 'Copyleft license: link only.', 'The license is GPL, LGPL or AGPL. Freeweights lists the model and links to the publisher, and never hosts a copy.'],
+  restricted: ['Barred derivative', 'Barred derivative: link only.', 'The license of the original does not allow this kind of derivative to be copied. Freeweights links to the publisher and never hosts a copy.'],
   'not-reviewed': ['License not reviewed', 'License not reviewed.', 'Read it on the publisher\'s page.'],
 };
 export const ROWS = loadRows().map((r) => {

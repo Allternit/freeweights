@@ -7,7 +7,7 @@
 
 Every script that decides a license imports this module: build_catalog.py, make_manifest.py,
 classify.py. Verdicts: permissive and custom are HOSTED (signed manifest); gated, territory,
-non-commercial and unreviewed are LINK-ONLY ("From the publisher"); refused is not listed.
+non-commercial, copyleft, restricted and unreviewed are LINK-ONLY ("From the publisher"); refused is not listed.
 A license id that is held or unknown is "queue" here; classify.py turns it into unreviewed (link only).
 spdx() gives the one id a catalog row and a manifest carry. Stdlib only."""
 import json, os, re, sys
@@ -71,7 +71,7 @@ def name_verdict(license_name):
 
 def hosted(v): return v in HOSTED
 def link_reason(v):
-    """gated | territory | non-commercial | not-reviewed for a link-only verdict, else None."""
+    """gated | territory | non-commercial | copyleft | restricted | not-reviewed for a link-only verdict, else None."""
     return (VERDICTS.get(v) or {}).get("link_reason")
 
 def spdx(lid):
@@ -121,7 +121,7 @@ def table_markdown():
         label = e["name"] if e["name"].lower() == k else f"{e['name']} (`{k}`)"
         if label not in rows[e["verdict"]]: rows[e["verdict"]].append(label + ("" if e.get("tag") else " *"))
     out = ["| Verdict | What happens | Licenses |", "| --- | --- | --- |"]
-    for v in ("permissive", "custom", "gated", "territory", "non-commercial", "unreviewed", "refused"):
+    for v in ("permissive", "custom", "gated", "territory", "non-commercial", "copyleft", "restricted", "unreviewed", "refused"):
         out.append(f"| {VERDICTS[v]['label']} | {VERDICTS[v]['meaning']} | {', '.join(rows.get(v, [])) or 'none yet'} |")
     terms_lines = [f"- {e['name']}: {e['terms']}" for k, e in sorted(LICENSES.items()) if e.get("terms")]
     held = {}

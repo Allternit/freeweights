@@ -10,8 +10,8 @@ kind (model|dataset), license_text_sha256 (sha256 of the LICENSE file, when the 
 it), trending_runs, benchmark, content_reviewed.
 
 Output: one line per candidate with verdict (permissive | custom | gated | territory | non-commercial |
-unreviewed | refused | queue | out), hosted (true: signed manifest) and link_reason (gated | territory |
-non-commercial | not-reviewed for a link-only row),
+copyleft | restricted | unreviewed | refused | queue | out), hosted (true: signed manifest) and link_reason (gated | territory |
+non-commercial | copyleft | restricted | not-reviewed for a link-only row),
 the gate that decided, audit {method, at} where method is tag | text-hash | inherited | reviewed | queue,
 relation {type, parent}, tier and signals. Gates run in order: format, license, content, hygiene.
 The strictest license verdict along base model -> fine-tune -> quantization wins, so a quantization of
@@ -71,7 +71,7 @@ def load_reviewed(path):
     for c in rows:
         red, lid = c.get("redistribution", ""), c.get("license_id", "")
         if red == "unclear": v = "queue"
-        elif red == "no": v = licenses.verdict(lid) if licenses.verdict(lid) in ("non-commercial", "refused", "custom") else "non-commercial"
+        elif red == "no": v = licenses.verdict(lid) if licenses.verdict(lid) in ("non-commercial", "copyleft", "refused", "custom") else "non-commercial"
         else: v = licenses.verdict(lid)
         if v == "queue": v = "unreviewed"
         out[c["repo"]] = {"verdict": v, "license_id": lid}
@@ -83,22 +83,24 @@ def load_decisions(path):
     except (OSError, ValueError): return {}
     return d if isinstance(d, dict) else {}
 
-def load_catalog(path):
-    """Already-listed rows act as known parents: {id: verdict}."""
+def load_catalog(path, ids=None):
+    """Already-listed rows act as known parents: {id: verdict}. With `ids` (a dict) also fills {id: license_id}."""
     try: rows = json.load(open(path, encoding="utf-8")).get("models", [])
     except (OSError, ValueError): return {}
+    if ids is not None: ids.update({r["id"]: r.get("license_id") for r in rows})
     out = {}
     for r in rows:
         lc = r.get("license_class")
         # a row gated only by Hugging Face's flag does not pass "gated" to its children: their files are open
-        out[r["id"]] = lc if lc in ("non-commercial", "territory", "unreviewed", "permissive", "custom") else "custom" if lc == "gated" else licenses.verdict(r.get("license_id"))
+        out[r["id"]] = lc if lc in ("non-commercial", "territory", "copyleft", "restricted", "unreviewed", "permissive", "custom") else "custom" if lc == "gated" else licenses.verdict(r.get("license_id"))
     return out
 
 class Classifier:
-    def __init__(self, records, reviewed=None, catalog=None, watch=None, now=None, decisions=None):
+    def __init__(self, records, reviewed=None, catalog=None, watch=None, now=None, decisions=None, catalog_licenses=None):
         self.recs = {r["id"]: r for r in records}
         self.reviewed = reviewed or {}
         self.catalog = catalog or {}
+        self.catalog_licenses = catalog_licenses or {}   # license id of an already-listed parent
         self.watch = watch
         self.decisions = decisions or {}
         self.now = now or datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -112,7 +114,7 @@ class Classifier:
             rec = None
         if rec is None:
             v = self.catalog.get(rid)
-            res = (v, "reviewed", None, None, "listed in the catalog") if v else ("unreviewed", "queue", f"parent:{rid}", None, f"base model {rid} is not classified yet")
+            res = (v, "reviewed", None, self.catalog_licenses.get(rid), "listed in the catalog") if v else ("unreviewed", "queue", f"parent:{rid}", None, f"base model {rid} is not classified yet")
         elif rid in self.reviewed:
             r = self.reviewed[rid]
             res = (r["verdict"], "reviewed" if r["verdict"] != "unreviewed" else "queue", f"repo:{rid}" if r["verdict"] == "unreviewed" else None, r["license_id"], "recorded audit")
@@ -169,6 +171,27 @@ class Classifier:
         self._lineage[rid] = res
         return res
 
+    def derivative_bar(self, rid, rel, gov):
+        """Reason a hosted verdict must become link only (restricted) because of the governing license, else None.
+        CC BY-ND 4.0: only an unchanged original (relation base) may be copied; a quantization, fine-tune, merge or
+        adapter is Adapted Material. NVIDIA Open Model License: an abliterated derivative bypasses the model's
+        safety guardrail, which ends the licensee's rights."""
+        root = gov or rid   # license_governed_by can be an intermediate repo: follow it to the repo whose license decides
+        for _ in range(32):
+            nxt = self.lineage_license(root)[3]
+            if nxt == root: break
+            root = nxt
+        e = licenses.entry(self.own_license(root)[3])
+        key = next((k for k, v in licenses.LICENSES.items() if v is e), None) if e else None
+        if key == "cc-by-nd-4.0" and rel["type"] != "base":
+            return "derivative of a no-derivatives license (CC BY-ND 4.0): link only"
+        if key == "licenseref-nvidia-open-model":
+            rec = self.recs[rid]
+            if inclusion.ABLITERATED.search(" ".join([rid] + [str(t) for t in rec.get("tags") or []])):
+                return ('abliterated derivative of a model under the NVIDIA Open Model License: "If You bypass, disable, reduce the efficacy of, '
+                        'or circumvent any ... safety guardrail ... your rights under this Agreement will automatically terminate": link only')
+        return None
+
     def classify(self, rid):
         rec = self.recs[rid]
         kind = rec.get("kind") or "model"
@@ -200,6 +223,9 @@ class Classifier:
             out["header_check"] = "pending"
         # 2 license, strictest along the lineage
         if v in ("refused", "queue"): return done(v, "license", method, reason, key)
+        # a license that bars this kind of derivative makes the repo link only, whatever the tag says
+        bar = self.derivative_bar(rid, rel, gov) if licenses.hosted(v) and kind == "model" else None
+        if bar: v, reason = "restricted", bar
         # a repo behind an acceptance gate at the source is link only, whatever its license says
         if licenses.hosted(v) and rec.get("gated") not in (None, False, "", "false"):
             v, reason = "gated", "gated at the source (Hugging Face asks you to accept terms first)"
@@ -211,7 +237,7 @@ class Classifier:
         # 4 hygiene
         h, why = inclusion.hygiene_gate(rec)
         if h != "pass": return done("refused", "hygiene", method, why)
-        return done(v, None, method, reason if method != "tag" else "license as declared by the publisher", key)
+        return done(v, None, method, reason if method != "tag" or v == "restricted" else "license as declared by the publisher", key)
 
     def run(self):
         results = [self.classify(rid) for rid in self.recs]
@@ -234,7 +260,9 @@ def main(argv=None):
     ap.add_argument("--now")
     a = ap.parse_args(argv)
     recs = [json.loads(l) for l in open(a.candidates, encoding="utf-8") if l.strip()]
-    c = Classifier(recs, load_reviewed(a.reviewed), load_catalog(a.catalog), now=a.now, decisions=load_decisions(a.decisions))
+    cat_lic = {}
+    c = Classifier(recs, load_reviewed(a.reviewed), load_catalog(a.catalog, cat_lic), now=a.now,
+                   decisions=load_decisions(a.decisions), catalog_licenses=cat_lic)
     results, queue = c.run()
     out = open(a.out, "w", encoding="utf-8") if a.out else sys.stdout
     for r in results: out.write(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n")
