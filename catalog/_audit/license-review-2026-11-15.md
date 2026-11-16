@@ -472,7 +472,19 @@ Verdicts: permissive and custom are hosted (signed manifest); gated, territory, 
 
 The queue handed over (`classify-queue-batch1.json`, 540 clusters) was built before the 2026-11-14 table; re-classified on main it was already 454.
 
-## Needs an owner decision or counsel
+## Decided 2026-11-16 (Allternit)
+
+1. **Registration before commercial use** (Stability AI Community, Moonshine Community, Zhipu GLM/Cog family): stay gated, link only. Allternit has not registered; hosted only if Allternit registers.
+2. **No-redistribution licenses** (EXAONE NC, Microsoft Research License, AI Model Personal Use 1.0, PolyForm Strict 1.0.0): non-commercial, link only. A link copies nothing.
+3. **GPL-3.0, LGPL-3.0, AGPL-3.0 weights:** new link-only verdict `copyleft` ("Copyleft license: link only"). Never hosted.
+4. **CC BY-ND 4.0:** custom (hosted) for unchanged originals only. Any quantization, fine-tune, merge or adapter is `restricted` ("Barred derivative: link only").
+5. **ReadyArt/Heimdallr-26B-A4B-v0.35:** gated, link only, for the 18+ click-wrap (`LicenseRef-Heimdallr-18-ClickWrap`, row in licenses.csv).
+6. **NVIDIA Open Model License:** an abliterated derivative is `restricted`, link only, because bypassing a guardrail terminates the grant. Rule added to policy/inclusion-policy.md.
+
+Not run yet (build-train rule: freeweights tests run in the train): unittest + pytest, validate_spec.py, licenses.py --check-docs, and the classify re-count over the batch1 candidates. The counts above are from before these six decisions.
+
+## Previously open (now decided above)
+
 
 1. **Registration before commercial use (Stability AI Community, Moonshine Community; Zhipu GLM-4, GLM-Edge, CodeGeeX4, CogVideoX, CogVLM, CogAgent).** The texts allow redistribution, but commercial use (Stability: "If You are using or distributing the Stability AI Materials for a Commercial Purpose, You must register") needs registration first; Zhipu's free grant is academic research only. Marked gated (link only). Owner decision: does Allternit hosting a free mirror count as a Commercial Purpose, and should Allternit register? If it registers, these become custom (hosted).
 2. **No-redistribution licenses are refused (EXAONE NC, Microsoft Research License, AI Model Personal Use 1.0, PolyForm Strict 1.0.0; 32 repos).** The rule used: refused means no grant to redistribute. A link-only listing copies nothing, so the owner may prefer non-commercial (link only) to keep them listed. One-line change per entry in `policy/licenses.json`.

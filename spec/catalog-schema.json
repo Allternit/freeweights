@@ -60,8 +60,8 @@
         "added_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"},
         "sample": {"type": "boolean"},
         "requires_terms": {"type": "boolean", "description": "True when the user must accept the license or gate terms before download."},
-        "license_class": {"enum": ["permissive", "custom", "gated", "territory", "non-commercial", "unreviewed"], "description": "permissive and custom rows are hosted (signed manifest); gated, territory, non-commercial and unreviewed rows are link only (From the publisher)."},
-        "link_reason": {"enum": ["gated", "territory", "non-commercial", "not-reviewed", null], "description": "Why a row is link only (From the publisher, no manifest): the license needs acceptance at the source, covers only some countries, is non-commercial, or no person has read it yet."},
+        "license_class": {"enum": ["permissive", "custom", "gated", "territory", "non-commercial", "copyleft", "restricted", "unreviewed"], "description": "permissive and custom rows are hosted (signed manifest); gated, territory, non-commercial, copyleft, restricted and unreviewed rows are link only (From the publisher)."},
+        "link_reason": {"enum": ["gated", "territory", "non-commercial", "copyleft", "restricted", "not-reviewed", null], "description": "Why a row is link only (From the publisher, no manifest): the license needs acceptance at the source, covers only some countries, is non-commercial, or no person has read it yet."},
         "license_terms": {"type": "string", "description": "Terms a hosted entry passes on with its files: OpenMDW notices, the LFM revenue limit, the OpenRAIL++ Attachment A use restrictions."},
         "license_url": {"type": "string", "format": "uri", "description": "Link to the license text or gate page."},
         "note": {"type": "string"}

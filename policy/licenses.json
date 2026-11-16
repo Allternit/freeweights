@@ -71,15 +71,37 @@
       "hosted": false,
       "link_reason": null,
       "meaning": "Not listed. The reason goes to the public refusal log."
+    },
+    "copyleft": {
+      "label": "Copyleft license: link only",
+      "redistribution": "no",
+      "license_class": "copyleft",
+      "requires_terms": true,
+      "listed": true,
+      "hosted": false,
+      "link_reason": "copyleft",
+      "meaning": "From the publisher: the license is GPL, LGPL or AGPL. Listed with a link; Freeweights never hosts a copy."
+    },
+    "restricted": {
+      "label": "Barred derivative: link only",
+      "redistribution": "no",
+      "license_class": "restricted",
+      "requires_terms": true,
+      "listed": true,
+      "hosted": false,
+      "link_reason": "restricted",
+      "meaning": "From the publisher: the license of the original allows copies of the original, but not this kind of derivative (a no-derivatives license, or a guardrail-bypass termination clause). Listed with a link; Freeweights never hosts a copy."
     }
   },
   "strictness": [
     "permissive",
     "custom",
     "unreviewed",
+    "copyleft",
     "gated",
     "territory",
     "non-commercial",
+    "restricted",
     "queue",
     "refused"
   ],
@@ -589,42 +611,42 @@
       "spdx": "LicenseRef-Stability-AI-Community",
       "verdict": "gated",
       "tag": false,
-      "note": "Commercial use (and commercial distribution) needs registration with Stability AI first, and ends above US$1M revenue. Link only until Allternit decides to register."
+      "note": "Commercial use (and commercial distribution) needs registration with Stability AI first, and ends above US$1M revenue. Allternit has not registered; hosted only if Allternit registers."
     },
     "licenseref-moonshine-community": {
       "name": "Moonshine AI Community License",
       "spdx": "LicenseRef-Moonshine-Community",
       "verdict": "gated",
       "tag": false,
-      "note": "Commercial use needs registration with Moonshine AI first, and ends above US$1M revenue. Link only until Allternit decides to register."
+      "note": "Commercial use needs registration with Moonshine AI first, and ends above US$1M revenue. Allternit has not registered; hosted only if Allternit registers."
     },
     "licenseref-glm-4": {
       "name": "GLM-4 License (glm-4-9b, GLM-Edge, CodeGeeX4)",
       "spdx": "LicenseRef-GLM-4",
       "verdict": "gated",
       "tag": false,
-      "note": "Free use is academic research only; commercial use needs registration with Zhipu first."
+      "note": "Free use is academic research only; commercial use needs registration with Zhipu first. Allternit has not registered; hosted only if Allternit registers."
     },
     "licenseref-cogvideox": {
       "name": "CogVideoX License",
       "spdx": "LicenseRef-CogVideoX",
       "verdict": "gated",
       "tag": false,
-      "note": "Free use is academic research only; commercial use needs registration with Zhipu first, and more than 1 million visits a month needs a further license."
+      "note": "Free use is academic research only; commercial use needs registration with Zhipu first, and more than 1 million visits a month needs a further license. Allternit has not registered; hosted only if Allternit registers."
     },
     "licenseref-cogvlm": {
       "name": "CogVLM License",
       "spdx": "LicenseRef-CogVLM",
       "verdict": "gated",
       "tag": false,
-      "note": "Free use is academic research only; commercial use needs registration with Zhipu first."
+      "note": "Free use is academic research only; commercial use needs registration with Zhipu first. Allternit has not registered; hosted only if Allternit registers."
     },
     "licenseref-cogagent": {
       "name": "CogAgent License",
       "spdx": "LicenseRef-CogAgent",
       "verdict": "gated",
       "tag": false,
-      "note": "Free use is academic research only; commercial use needs registration with Zhipu first."
+      "note": "Free use is academic research only; commercial use needs registration with Zhipu first. Allternit has not registered; hosted only if Allternit registers."
     },
     "licenseref-youtu-llm": {
       "name": "Youtu-LLM License Terms",
@@ -666,30 +688,30 @@
     "licenseref-exaone-nc": {
       "name": "EXAONE AI Model License Agreement (NC)",
       "spdx": "LicenseRef-EXAONE-NC",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "tag": false,
-      "note": "Research use only, and \"any commercial application or external distribution, is strictly prohibited\": no grant to redistribute."
+      "note": "Research use only, and \"any commercial application or external distribution, is strictly prohibited\". Freeweights lists it as a link only and copies nothing."
     },
     "licenseref-msrla": {
       "name": "Microsoft Research License Agreement",
       "spdx": "LicenseRef-MSRLA",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "tag": false,
-      "note": "\"you may use the model(s), but you may not distribute the models\": no grant to redistribute."
+      "note": "\"you may use the model(s), but you may not distribute the models\". Freeweights lists it as a link only and copies nothing."
     },
     "licenseref-personal-use-1.0": {
       "name": "AI Model Personal Use License v1.0",
       "spdx": "LicenseRef-Personal-Use-1.0",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "tag": false,
-      "note": "Personal non-commercial use only; you may not \"redistribute the Model or its Derivatives to any third party\"."
+      "note": "Personal non-commercial use only; you may not \"redistribute the Model or its Derivatives to any third party\". Freeweights lists it as a link only and copies nothing."
     },
     "polyform-strict-1.0.0": {
       "name": "PolyForm Strict License 1.0.0",
       "spdx": "PolyForm-Strict-1.0.0",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "tag": false,
-      "note": "The copyright grant excludes \"distributing the software or making changes or new works based on the software\"."
+      "note": "The copyright grant excludes \"distributing the software or making changes or new works based on the software\". Freeweights lists it as a link only and copies nothing."
     },
     "licenseref-stability-ai-control-lora-community": {
       "name": "Stability AI Control-LoRA Community License",
@@ -724,15 +746,46 @@
       "verdict": "custom",
       "tag": false,
       "terms": "Browser Use Modified MIT: keep the notice. A company (or employer) with more than US$1M global annual revenue gets no rights under this license and needs a commercial license from Browser Use."
+    },
+    "gpl-3.0": {
+      "name": "GNU General Public License 3.0",
+      "verdict": "copyleft",
+      "tag": true,
+      "spdx": "GPL-3.0-only",
+      "note": "GNU General Public License 3.0, as declared by the publisher. Copyleft for model weights: Freeweights lists it as a link only and never hosts a copy."
+    },
+    "lgpl-3.0": {
+      "name": "GNU Lesser General Public License 3.0",
+      "verdict": "copyleft",
+      "tag": true,
+      "spdx": "LGPL-3.0-only",
+      "note": "GNU Lesser General Public License 3.0, as declared by the publisher. Copyleft for model weights: Freeweights lists it as a link only and never hosts a copy."
+    },
+    "agpl-3.0": {
+      "name": "GNU Affero General Public License 3.0",
+      "verdict": "copyleft",
+      "tag": true,
+      "spdx": "AGPL-3.0-only",
+      "note": "GNU Affero General Public License 3.0, as declared by the publisher. Copyleft for model weights: Freeweights lists it as a link only and never hosts a copy."
+    },
+    "cc-by-nd-4.0": {
+      "name": "Creative Commons Attribution-NoDerivatives 4.0",
+      "verdict": "custom",
+      "tag": true,
+      "spdx": "CC-BY-ND-4.0",
+      "terms": "CC BY-ND 4.0: give attribution and share only the unchanged original. A quantization, fine-tune, merge or adapter is Adapted Material (s.1(a)) and is never hosted: it is a link only."
+    },
+    "licenseref-heimdallr-18-clickwrap": {
+      "name": "ReadyArt Heimdallr click-wrap (LICENSE.txt, 18+)",
+      "spdx": "LicenseRef-Heimdallr-18-ClickWrap",
+      "verdict": "gated",
+      "tag": false,
+      "note": "LICENSE.txt is a click-wrap: \"By using this model, you agree: ... That you're at least 18+ years old\". An acceptance gate, so link only."
     }
   },
   "held": {
     "openrail": "\"openrail\" names the OpenRAIL family, not one license: the text differs per repo, so each repo's own license text is read (matched by its sha256).",
     "bigscience-bloom-rail-1.0": "BigScience BLOOM RAIL 1.0: no copy of the text could be fetched on 2026-11-15; not read yet.",
-    "gpl-3.0": "Copyleft for weights waits for counsel: what counts as Corresponding Source for model weights, and whether a hub copy must offer it.",
-    "lgpl-3.0": "Copyleft for weights waits for counsel: what counts as Corresponding Source for model weights, and whether a hub copy must offer it.",
-    "agpl-3.0": "Copyleft for weights waits for counsel: what counts as Corresponding Source for model weights, and the AGPL network-use duty.",
-    "cc-by-nd-4.0": "CC BY-ND 4.0 lets you share unchanged copies (s.2(a)(1)(A)) but never Adapted Material; the classifier cannot yet tell a quantization or fine-tune from an original, so it waits for that rule.",
     "other": "Matched by the hash of its text or the declared license name; otherwise not reviewed."
   },
   "no_license": {
@@ -954,13 +1007,13 @@
     },
     "294fd63925d81e9a11a2bd71fefecbfefb0d1a329eef7de28b96e49b6da4f67e": {
       "license_id": "LicenseRef-EXAONE-NC",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "at": "2026-11-15",
       "note": "Any use beyond the scope of this license, including any commercial application or external distribution, is strictly prohibited"
     },
     "8c1762fb4bd94c8f17e114c5caa567e0948e1da7d02b79b55e99be9616e0f9e3": {
       "license_id": "LicenseRef-EXAONE-NC",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "at": "2026-11-15",
       "note": "EXAONE 1.2-NC: same research-only grant and the same ban on external distribution"
     },
@@ -1158,7 +1211,7 @@
     },
     "17694bc66d045524ab4c0cf15765414cdf71cdf507520a97b1c2721303749e67": {
       "license_id": "LicenseRef-MSRLA",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "at": "2026-11-15",
       "note": "If machine learning model(s) are included, you may use the model(s), but you may not distribute the models."
     },
@@ -1230,13 +1283,13 @@
     },
     "6eb8a48a607a23a77032ec5849ef6077a9bd519c8fa0ed37fe1a9e5e82c252a6": {
       "license_id": "LicenseRef-Personal-Use-1.0",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "at": "2026-11-15",
       "note": "Sell, rent, lease, license, sublicense, or redistribute the Model or its Derivatives to any third party."
     },
     "e2361f52ad5be22b937a6e983c824a534c5cffa454b6c34af2f8ce0c2cdf7c1a": {
       "license_id": "PolyForm-Strict-1.0.0",
-      "verdict": "refused",
+      "verdict": "non-commercial",
       "at": "2026-11-15",
       "note": "for any permitted purpose, other than distributing the software or making changes or new works based on the software"
     },
@@ -1353,6 +1406,12 @@
       "verdict": "custom",
       "at": "2026-11-15",
       "note": "You are not authorized to exercise any rights under this license if the global consolidated annual revenue of your company (or that of your employer) exceeds $1 million"
+    },
+    "7f9d27970fee862454e5313a8ad3a2c2868f0cc64681c3a5f711ad17a6e98a63": {
+      "license_id": "LicenseRef-Heimdallr-18-ClickWrap",
+      "verdict": "gated",
+      "at": "2026-11-16",
+      "note": "By using this model, you agree: ... That you're at least 18+ years old"
     }
   },
   "names": {
