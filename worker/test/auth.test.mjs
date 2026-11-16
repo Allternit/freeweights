@@ -111,6 +111,9 @@ async function startWorker(port, inspector, withKey, srv) {
   wr('d1', 'migrations', 'apply', 'freeweights-accounts', '--local');
   wr('d1', 'execute', 'freeweights-accounts', '--local', '--command',
     "INSERT INTO users (id, handle, name) VALUES ('user_Alice', 'alice-test', 'Alice'), ('user_Mismatch', 'mismatch-test', NULL)");
+  wr('d1', 'execute', 'freeweights-accounts', '--local', '--command',
+    "INSERT INTO users (id, handle, name, rules_accepted_at) VALUES ('user_Bob', 'bob-test', 'Bob', '2026-11-16T00:00:00Z'); " +
+    "INSERT INTO repos (id, kind, source, namespace, name, owner_user_id) VALUES ('rp_BOBMODEL', 'model', 'community', 'bob-test', 'm', 'user_Bob')");
   wr('r2', 'object', 'put', `freeweights/manifests/${id}.json`, '--local', '--file', mf.file, '--content-type', 'application/json');
   const p = spawn('npx', ['wrangler', 'dev', '--local', '--config', cfg, '--port', port, '--inspector-port', inspector, '--persist-to', dir], { cwd: here, stdio: 'ignore' });
   procs.push(p);
@@ -265,6 +268,14 @@ test('method routing: 405 with Allow, write routes check the credential, preflig
   assert.match(pre.headers.get('access-control-allow-headers'), /Authorization/);
   const pub = await A('/api/catalog', { method: 'OPTIONS' });
   assert.equal(pub.headers.get('access-control-allow-methods'), 'GET, HEAD, OPTIONS');
+});
+
+// Regression (closed-mode deploy check, 2026-11-16): huggingface_hub create_repo(exist_ok=True) reads "url" from the
+// 409 body (KeyError 'url' without it), so every second `hf upload` to an existing repo failed.
+test('create of an existing own repo: 409 conflict with the repo url', async () => {
+  const r = await A('/api/repos/create', { method: 'POST', ...bearer(clerkJwt({ sub: 'user_Bob' })), body: JSON.stringify({ name: 'm', type: 'model' }) });
+  const body = await refused(r, 409, 'conflict');
+  assert.match(body.url, /\/bob-test\/m$/);
 });
 
 test('signed in without a profile: whoami 404 profile_not_found', async () => {

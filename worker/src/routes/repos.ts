@@ -60,7 +60,10 @@ export const createRepoRoute: Handler = ({ req, env, ctx, url }) => d1(async () 
   // every time) keeps working for an account that is at its repo limit or rate limit.
   const existing = await findRepo(env, kind, ns, b.name);
   if (existing && !reusable(existing)) {
-    return fwErr(409, 'conflict', existing.status === 'removed' ? 'This repo name is not available.' : 'You already have a repo with this name.');
+    // The Hub's 409 carries the repo url, and huggingface_hub's create_repo(exist_ok=True) reads it (KeyError 'url'
+    // without it, so a second `hf upload` to the same repo failed). A removed name is not the caller's repo: no url.
+    if (existing.status === 'removed') return fwErr(409, 'conflict', 'This repo name is not available.');
+    return fwErr(409, 'conflict', 'You already have a repo with this name.', { url: repoUrl(url.origin, kind, ns, b.name as string) });
   }
   const closed = openCheck(g);
   if (closed) return closed;
@@ -90,7 +93,7 @@ export const createRepoRoute: Handler = ({ req, env, ctx, url }) => d1(async () 
       audit(env, c.userId, 'repo.create', id, { kind }),
     ]);
   } catch (e) {
-    if (/UNIQUE|namespace_reserved/i.test(String(e))) return fwErr(409, 'conflict', 'You already have a repo with this name.');
+    if (/UNIQUE|namespace_reserved/i.test(String(e))) return fwErr(409, 'conflict', 'You already have a repo with this name.', { url: repoUrl(url.origin, kind, ns, b.name as string) });
     throw e;
   }
   return authJson({ url: repoUrl(url.origin, kind, ns, b.name), name: `${ns}/${b.name}`, id });

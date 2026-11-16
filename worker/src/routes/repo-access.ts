@@ -10,7 +10,7 @@ import { readLimits, type LimitsState } from '../storage/quota';
 // `error` field, not `message`. Our `error` is a stable code, so the plain sentence also goes in
 // X-Error-Message. X-Error-Code RepoNotFound / RevisionNotFound makes the client raise its own typed error.
 // Header values must be ASCII; messages are written in ASCII.
-export function fwErr(status: number, error: string, message: string, extra: { paths?: string[]; limit?: LimitKey; perk?: string; plans_url?: string; headers?: Record<string, string>; hfCode?: string } = {}): Response {
+export function fwErr(status: number, error: string, message: string, extra: { paths?: string[]; url?: string; limit?: LimitKey; perk?: string; plans_url?: string; headers?: Record<string, string>; hfCode?: string } = {}): Response {
   const { headers, hfCode, ...fields } = extra;
   const h: Record<string, string> = { 'x-error-message': message.replace(/[^\x20-\x7e]/g, ' '), ...(headers || {}) };
   if (hfCode) h['x-error-code'] = hfCode;

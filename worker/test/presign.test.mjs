@@ -102,9 +102,13 @@ test('multipart part URLs: one per 32 MiB part, last part sized to the remainder
 test('16-part presign is cheap (done check: under 5 ms CPU in the Worker)', async () => {
   const size = 512 * 1024 * 1024;
   await partUrls(R2, { bucket: 'quarantine', key: KEY, uploadId: 'warm', size, chunk: PART_BYTES, expiresS: 3600, now: NOW });
-  const t = performance.now();
-  await partUrls(R2, { bucket: 'quarantine', key: KEY, uploadId: 'u2', size, chunk: PART_BYTES, expiresS: 3600, now: NOW });
-  const ms = performance.now() - t;
+  // Fastest of 5: one wall-clock sample failed at 25 ms on a Mac with load average 25+ (runs 1-2 ms when idle).
+  let ms = Infinity;
+  for (let i = 0; i < 5; i++) {
+    const t = performance.now();
+    await partUrls(R2, { bucket: 'quarantine', key: KEY, uploadId: `u${i}`, size, chunk: PART_BYTES, expiresS: 3600, now: NOW });
+    ms = Math.min(ms, performance.now() - t);
+  }
   console.log(`# 16-part presign: ${ms.toFixed(2)} ms`);
   assert.ok(ms < 20, `16-part presign took ${ms} ms`);
 });
