@@ -26,7 +26,7 @@ export const TOOL_FV = { kind: () => ['tool'], sec: () => ['tools'], lc: (r) => 
 export const facetVals = (k, f, r) => (r.kind === 'tool' ? (TOOL_FV[k] ? TOOL_FV[k](r) : []) : f(r));
 export const FACET_LABEL = {
   kind: { model: 'Models', dataset: 'Datasets', tool: 'Tools' },
-  lc: { copyleft: 'Copyleft (GPL)', permissive: 'Permissive', custom: 'Custom terms', 'non-commercial': 'Non-commercial (link only)', gated: 'Gated (link only)', territory: 'Territory-limited (link only)', unreviewed: 'License not reviewed (link only)', unknown: 'Not stated' },
+  lc: { copyleft: 'Copyleft (link only)', permissive: 'Permissive', custom: 'Custom terms', 'non-commercial': 'Non-commercial (link only)', gated: 'Gated (link only)', territory: 'Territory-limited (link only)', restricted: 'Barred derivative (link only)', unreviewed: 'License not reviewed (link only)', unknown: 'Not stated' },
   sz: { s: 'Under 4 GB', m: '4 to 40 GB', l: '40 to 200 GB', xl: '200 GB and up' },
   ...FACET_LABELS_OVERLAY,
   rt: { yes: 'Requires accepting terms', no: 'No extra terms' },

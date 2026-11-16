@@ -36,7 +36,7 @@ Every candidate passes four gates, in this order. The first gate that fails deci
 | --- | --- |
 | 1 Format | Data-only weights. Pickle-only weights are refused. |
 | 2 License | A verdict from the [license table](licenses.md): hosted, link only (with the reason) or refused (no license). The strictest verdict along base model, fine-tune and quantization wins. |
-| 3 Content | A model made for sexual content is refused. A real-person face or voice model, or a tool for fraud or attacks, goes to a person. Tagged not-for-all-audiences: out unless a person reviews it. Abliterated models are allowed, labeled with what changed. |
+| 3 Content | A model made for sexual content is refused. A real-person face or voice model, or a tool for fraud or attacks, goes to a person. Tagged not-for-all-audiences: out unless a person reviews it. Abliterated models are allowed, labeled with what changed. A person's decision on a held repo (list or refuse) is recorded in `content-decisions.json` and published with the code; it cannot override the sexual-content refusal. |
 | 4 Hygiene | A model card over 500 bytes. No CI or test fixtures. An exact re-upload becomes `same_as` the first copy, and the lab's own copy wins. |
 
 ## Formats and the header check {#formats}

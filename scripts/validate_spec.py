@@ -85,7 +85,7 @@ if os.path.exists(os.path.join(CAT, "catalog.json")):
     report(f"catalog/rows/*.json ({len(rows)} rows)", [f"{r.get('id')}: {e}" for r in rows for e in check(r, cat_s)])
     keys = [(r.get("kind"), r.get("id")) for r in cat.get("models", [])]
     report("catalog key (kind, id) is unique", sorted({f"duplicate {k}" for k in keys if keys.count(k) > 1}))
-    want = {c: c for c in ("permissive", "custom", "non-commercial", "territory", "unreviewed")}
+    want = {c: c for c in ("permissive", "custom", "non-commercial", "territory", "copyleft", "unreviewed")}
     e = []
     for r in cat.get("models", []):
         lc, v = r.get("license_class"), licenses.verdict(r.get("license_id"))
@@ -94,7 +94,7 @@ if os.path.exists(os.path.join(CAT, "catalog.json")):
         if hosted and (lc not in ("permissive", "custom") or v in licenses.LINK_ONLY):
             e.append(f"{r['id']}: hosted, but license {r.get('license_id')!r} is {v!r} (class {lc!r})"); continue
         # gated rows (Hugging Face's flag), inherited rows and rows nobody reviewed may carry any license id
-        if lc in ("gated", "unreviewed") or (r.get("audit") or {}).get("method") == "inherited": continue
+        if lc in ("gated", "unreviewed", "restricted") or (r.get("audit") or {}).get("method") == "inherited": continue
         if v == "queue":
             byname = licenses.name_verdict(r.get("license_id"))
             if not byname: e.append(f"{r['id']}: license {r.get('license_id')!r} is not in policy/licenses.json")

@@ -65,7 +65,7 @@
   }
   function sizeParts(n) { var s = bytes(n).split(' '); return { v: s[0], u: s[1] || '' }; }
   function params(n) { return !n ? '' : n >= 1e12 ? +(n / 1e12).toFixed(2) + 'T' : n >= 1e9 ? +(n / 1e9).toFixed(1) + 'B' : +(n / 1e6).toFixed(0) + 'M'; }
-  var LC = { copyleft: 'copyleft', permissive: 'permissive', custom: 'custom terms', 'non-commercial': 'non-commercial', gated: 'gated', territory: 'territory-limited', unreviewed: 'license not reviewed' };
+  var LC = { copyleft: 'copyleft', permissive: 'permissive', custom: 'custom terms', 'non-commercial': 'non-commercial', gated: 'gated', territory: 'territory-limited', restricted: 'barred derivative', unreviewed: 'license not reviewed' };
   function src(r) { return r.nc ? (r.how || 'From the publisher') : r.src || 'From source'; }
   function srcBadge(r) { var cls = r.nc || /source|publisher/i.test(src(r)) ? ' src' : /seed/i.test(src(r)) ? ' seed' : ''; return '<span class="b' + cls + '"><i class="d"></i>' + esc(src(r)) + '</span>'; }
   function lcTag(r) { return '<span class="lc lc-' + esc(r.lc || 'unknown') + '">' + esc(LC[r.lc] || r.lc || 'see card') + '</span>'; }
