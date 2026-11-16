@@ -40,6 +40,8 @@ SSH=(ssh -o BatchMode=yes -o ConnectTimeout=15 "$HOST")
 say() { printf '\n== %s\n' "$*"; }
 
 # host_sh / ct_sh: run the script on stdin on the host / in the container. In dry-run, print it.
+# The script itself is stdin, so any command in it that reads stdin (incus launch reads YAML config from a
+# non-tty stdin; incus exec forwards it) must get </dev/null, or it eats the rest of the script.
 host_sh() {
   if [ "$APPLY" = 1 ]; then "${SSH[@]}" "bash -euo pipefail -s"; else sed 's/^/    host$ /'; fi
 }
@@ -72,12 +74,12 @@ if incus info $CT >/dev/null 2>&1; then
   echo "$CT exists; applying limits only"
 else
   incus launch $IMAGE $CT -c limits.cpu=1 -c limits.memory=2GiB -c limits.memory.enforce=hard \\
-    -c limits.processes=1000 -c security.privileged=false -c security.nesting=false -d root,size=20GiB
+    -c limits.processes=1000 -c security.privileged=false -c security.nesting=false -d root,size=20GiB </dev/null
 fi
 incus config set $CT limits.cpu=1 limits.memory=2GiB limits.memory.enforce=hard limits.processes=1000
 incus config device override $CT root size=20GiB 2>/dev/null || incus config device set $CT root size=20GiB
-for i in \$(seq 1 60); do incus exec $CT -- getent hosts archive.ubuntu.com >/dev/null 2>&1 && break; sleep 2; done
-incus exec $CT -- getent hosts archive.ubuntu.com >/dev/null || { echo "STOP: $CT has no DNS/network"; exit 1; }
+for i in \$(seq 1 60); do incus exec $CT -- getent hosts archive.ubuntu.com </dev/null >/dev/null 2>&1 && break; sleep 2; done
+incus exec $CT -- getent hosts archive.ubuntu.com </dev/null >/dev/null || { echo "STOP: $CT has no DNS/network"; exit 1; }
 EOF
 
 # ------------------------------------------------------------------------------------ 3. packages
