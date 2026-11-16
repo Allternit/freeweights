@@ -71,10 +71,14 @@ HTML_CACHE = {"cache-control": "public, max-age=300, no-transform"}
 
 P = "http.request.uri.path"
 host = f'http.host eq "{HOST}"'
-not_list = f'not {P} strict wildcard "/alt.freeweights.*/page/*" and not {P} strict wildcard "/alt.freeweights.*/*/*/*/*"'
+# Community datasets/apps live one level deeper (c_deep below): keep the catalog patterns off /datasets/<ns>/ and /apps/<ns>/.
+not_comm = (f'not {P} strict wildcard "/alt.freeweights.community/datasets/*"'
+            f' and not {P} strict wildcard "/alt.freeweights.community/apps/*"')
+not_list = (f'not {P} strict wildcard "/alt.freeweights.*/page/*" and not {P} strict wildcard "/alt.freeweights.*/*/*/*/*"'
+            f' and {not_comm}')
 slash = f'{P} strict wildcard "/alt.freeweights.*/*/*/"'
 index = f'{P} strict wildcard "/alt.freeweights.*/*/*/index.html"'
-bare = f'{P} strict wildcard "/alt.freeweights.*/*/*" and not {P} strict wildcard "/alt.freeweights.*/*/*/*" and not {P} strict wildcard "/alt.freeweights.*/page/*"'
+bare = f'{P} strict wildcard "/alt.freeweights.*/*/*" and not {P} strict wildcard "/alt.freeweights.*/*/*/*" and not {P} strict wildcard "/alt.freeweights.*/page/*" and {not_comm}'
 manifests = f'starts_with({P}, "/manifests/")'
 # Community pages the Worker writes to R2 that the catalog patterns above do not reach: the index of the section, and
 # dataset/app pages one level deeper (alt.freeweights.community/datasets/<ns>/<name>/, .../apps/<ns>/<name>/).
