@@ -28,6 +28,8 @@
 # Cache Rules, Workers Routes, Zone WAF; edit), CF_ZONE_ID (allternit.com). FW_HOST (default freeweights.allternit.com).
 # FW_R2_HOST: the bucket's public custom domain in the same zone, proxied (r2.dev is not supported by the
 # connector); default freeweights-files.allternit.com.
+# FW_CC_SKIP: comma list of rule refs to leave untouched on apply (e.g. fw_cc_bucket_guard while the token lacks
+# Zone WAF edit); the skipped refs are printed. Never skips the connector rule.
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(dirname "$HERE")"
@@ -180,7 +182,10 @@ if ROLLBACK:
     for phase, r in reversed(RULES):
         if r["ref"] not in KEEP_ON_ROLLBACK: drop_rule(phase, r["ref"])
 else:
-    for phase, r in RULES: put_rule(phase, r)
+    SKIP = {x.strip() for x in os.environ.get("FW_CC_SKIP", "").split(",") if x.strip()}
+    for ref in sorted(SKIP): print(f"cf_cloud_connector: skipping {ref} (FW_CC_SKIP)", file=sys.stderr)
+    for phase, r in RULES:
+        if r["ref"] not in SKIP: put_rule(phase, r)
     connector(True)
 
 if AS_JSON:
