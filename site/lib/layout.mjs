@@ -8,7 +8,7 @@ import { HOW, howTag, summary } from './rows.mjs';
 import { cards, facetLabel } from './cards.mjs';
 import { THEME_SCRIPT } from './csp.mjs';
 
-export const NAV = [['catalog', 'Catalog', '/alt.freeweights/'], ['wanted', 'Wanted', '/wanted/'], ['mirrors', 'Mirrors', '/mirrors/'], ['ledger', 'Ledger', '/ledger/'], ['charter', CHARTER_LABEL, CHARTER_PATH], ['docs', 'Docs', '/docs/']];
+export const NAV = [['catalog', 'Catalog', '/alt.freeweights/'], ['wanted', 'Wanted', '/wanted/'], ['mirrors', 'Mirrors', '/mirrors/'], ['ledger', 'Ledger', '/ledger/'], ['charter', CHARTER_LABEL, CHARTER_PATH], ['docs', 'Docs', '/docs/'], ['plans', 'Plans', '/plans/'], ['account', 'Account', '/account/']];
 export const sampleTag = (t = 'sample') => `<span class="sample">${t}</span>`;
 export function badge(k, r) {
   const t = r && r.lastByType && r.lastByType[k] ? ` title="Last checked ${fmtTime(r.lastByType[k])}"` : '';
