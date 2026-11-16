@@ -1,7 +1,7 @@
 ---
 title: fw reference
 nav_label: fw.py
-summary: Every fw.py command and option, including the info and search cards.
+summary: Every fw.py command and option, including the info and search cards and the upload commands.
 group: Tools
 order: 3
 updated: 2026-11-14
@@ -11,6 +11,7 @@ sections:
   - {id: verify, title: fw.py verify}
   - {id: info, title: fw.py info}
   - {id: search, title: fw.py search}
+  - {id: upload, title: Upload commands}
   - {id: behavior, title: How it behaves}
   - {id: exit, title: Exit codes and messages}
 ---
@@ -76,6 +77,16 @@ fw.py search <words...> [--local] [--width N] [--limit N] [--cards N]
 ```
 
 Asks the live hub API for models whose id contains the longest word, then keeps those whose id, name, section, task, format or license contain every word. With three matches or fewer (change it with `--cards`) it prints a full card for each. With more, it prints three lines per model: the name with size and license class, the From and group line, and the `fw get` command (or the license link for a link-only model). `--limit` caps the list (default 20). Exit code 1 means nothing matched. Exit code 2 means the API could not be reached.
+
+## Upload commands {#upload}
+
+These need an `alt_` key with the `freeweights.write` scope. The Uploads guide has the whole flow and the scan states.
+
+- `fw login [--token KEY]` checks the key against the hub and saves it to `~/.config/freeweights/token` with mode 600. `$FW_TOKEN` overrides the file.
+- `fw whoami` prints the handle the saved key belongs to.
+- `fw repo create <handle>/<name> [--type model|dataset]` creates a public repo under your handle. An existing repo is not an error.
+- `fw upload <folder> <handle>/<name> [--type model|dataset] [--message TEXT]` runs preupload, the LFS batch call, the file transfers (one request up to the hub's limit, parts above it) and one commit. It prints the hub's message and stops if a call is refused.
+- `fw repo status [<handle>/<name>]` lists your repos with their state and scan counts (clean, waiting, held, error) and any hold codes.
 
 ## How it behaves {#behavior}
 

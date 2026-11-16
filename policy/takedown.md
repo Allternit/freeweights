@@ -22,6 +22,12 @@ We quarantine automatically in only two cases:
 
 Nothing else is removed without a person looking at it. Quarantined files are not served. The listing shows "under review".
 
+## 2a. Community uploads
+
+Repos and files uploaded by accounts follow the upload rules in `policy/community-rules.md`. Every uploaded file is scanned before it is served. A scanner hit holds the file, and a match to a blocklist hash is refused at upload.
+
+When a community repo is removed after a report, the disabled state takes effect at once for new requests. The pages and manifests that the Cloud Connector serves straight from R2 (`/manifests/*` and the cached detail pages) answer 404, because the stored object is deleted and the cache purged. The API and resolve routes answer 451 `removed_after_takedown`. A download link that was already issued lasts at most 5 minutes.
+
 ## 3. CSAM procedure
 
 1. Disable public access at once.
@@ -53,7 +59,7 @@ Hashes and identifiers of removed items. A hash stays on the list until an appea
 
 ## 6a. The takedown command
 
-`python3 scripts/fw_admin.py takedown <org/repo> --reason <class> [--dry-run] [--apply]` does the removal in one step: the database row that makes the Worker answer 451 at once (live only with `--apply`; the exact wrangler command is printed), the blocklist entry with the weight hashes, removal of the catalog row and manifest, the public counter (`policy/takedowns.json`) and a signed registry line (date, id, reason class; no personal data). Then rebuild the site, run `scripts/sync_r2.py --delete`, deploy, and commit. Reason classes: as in section 6.
+`python3 scripts/fw_admin.py takedown <org/repo> --reason <class> [--dry-run] [--apply]` does the removal in one step: the database row that makes the Worker answer 451 at once (live only with `--apply`; the exact wrangler command is printed), the blocklist entry with the weight hashes, removal of the catalog row and manifest, the public counter (`policy/takedowns.json`) and a signed registry line (date, id, reason class; no personal data). Then rebuild the site, run `scripts/sync_r2.py --delete`, deploy, and commit. Reason classes: as in section 6. On Cloud Connector paths the page and manifest become 404; the API stays 451 (see 2a).
 
 ## 7. Appeals
 
