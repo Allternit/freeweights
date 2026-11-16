@@ -93,6 +93,37 @@ paths:
         '503': {$ref: '#/components/responses/NotConfigured'}
 
   # ------------------------------------------------------------------------------------------------- repos
+  /api/validate-yaml:
+    post:
+      tags: [repos]
+      operationId: validateYaml
+      summary: Check README.md metadata before a commit (huggingface_hub calls it for any commit that adds a README).
+      description: |
+        Public; reads no credential and stores nothing. Body `{"content": "<README.md text>", "repoType": "model"}`.
+        Checks only the shape (a string up to 512 KiB; an opened `---` metadata block is closed). Answers 200
+        `{"errors": [], "warnings": []}`, or 400 with `errors[].message`, which the client shows and stops on.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [content]
+              properties:
+                content: {type: string}
+                repoType: {type: string}
+      responses:
+        '200':
+          description: The metadata is acceptable.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  errors: {type: array, items: {type: object, properties: {message: {type: string}}}}
+                  warnings: {type: array, items: {type: object, properties: {message: {type: string}}}}
+        '400':
+          description: Malformed body or metadata; same shape with at least one error.
   /api/repos/create:
     post:
       tags: [repos]

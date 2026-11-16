@@ -216,6 +216,19 @@ test('commits: Hugging Face shaped list from the pinned history', async () => {
   assert.equal((await get('/api/models/nobody/nothing/commits/main')).status, 404);
 });
 
+// Regression (closed-mode deploy check, 2026-11-16): `hf upload` with a README.md POSTs here first; the route was
+// missing (405 method_not_allowed), so every model-card upload failed before any file was sent.
+test('validate-yaml answers the huggingface_hub shape: ok card 200, unclosed metadata 400', async () => {
+  const post = (body) => get('/api/validate-yaml', { method: 'POST', headers: { 'content-type': 'application/json' }, body });
+  const ok = await post(JSON.stringify({ content: '---\nlicense: apache-2.0\n---\n# Card\n', repoType: 'model' }));
+  assert.equal(ok.status, 200);
+  assert.deepEqual(await ok.json(), { errors: [], warnings: [] });
+  const open = await post(JSON.stringify({ content: '---\nlicense: mit\n# no end\n' }));
+  assert.equal(open.status, 400);
+  assert.equal((await open.json()).errors.length, 1);
+  assert.equal((await post('not json')).status, 400);
+});
+
 test('detail, tree, catalog, manifest passthrough', async () => {
   const d = await (await get(`/api/models/${id}`)).json();
   assert.equal(d.id, id);

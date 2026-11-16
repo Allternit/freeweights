@@ -20,6 +20,7 @@ import { lfsBatchRoute, lfsFinishRoute } from './lfs';
 import { communityInfoRoute, communityTreeRoute, communityCommitsRoute, communityRefsRoute, communityResolveRoute } from './community-read';
 import { limitsRoute } from './limits';
 import { scanClaimRoute, scanResultRoute, scanHealthRoute } from './scan';
+import { validateYamlRoute } from './validate-yaml';
 
 // Write API routes (spec/parts/write-api.yaml) whose handlers land in later waves. Each one already checks the
 // credential (401 / 503 accounts_not_configured) so clients and tests see the final auth behaviour; past that
@@ -49,6 +50,7 @@ export const ROUTES: Route[] = [
   route(/^\/api\/(models|datasets)\/([^/]+)\/([^/]+)\/refs$/, communityRefsRoute),
   route(/^\/api\/(models|datasets)\/([^/]+)\/([^/]+)(?:\/revision\/([^/]+))?$/, communityInfoRoute),
   route(/^\/(?:(datasets)\/)?([^/]+)\/([^/]+)\/resolve\/([^/]+)\/(.+)$/, communityResolveRoute),
+  route(/^\/api\/validate-yaml$/, validateYamlRoute, { methods: ['POST'] }), // huggingface_hub, before a README commit
   route(/^\/api\/fw\/v1\/limits$/, limitsRoute),
   route(/^\/api\/fw\/v1\/scan\/health$/, scanHealthRoute),
   route(/^\/api\/fw\/v1\/scan\/claim$/, scanClaimRoute, { methods: ['POST'] }),
