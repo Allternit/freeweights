@@ -40,6 +40,8 @@ const DEVICE_INDEX = { generated_at: DEVICE.generated_at, models: { [id]: [['lla
 before(async () => {
   const wr = (...a) => execFileSync('npx', ['wrangler', ...a, '--persist-to', persist], { cwd: here, stdio: 'pipe' });
   wr('d1', 'execute', 'freeweights', '--local', '--file=schema.sql');
+  // The accounts database exists in production (ACC); community read routes query it for any non-catalog id.
+  wr('d1', 'migrations', 'apply', 'freeweights-accounts', '--local');
   const pageFile = join(persist, 'page.html'); writeFileSync(pageFile, PAGE_HTML);
   const put = (key, file, type) => wr('r2', 'object', 'put', `freeweights/${key}`, '--local', '--file', file, '--content-type', type);
   put(`manifests/${id}.json`, mf.file, 'application/json');

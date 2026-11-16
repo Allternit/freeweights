@@ -119,7 +119,10 @@ class CloudConnectorPlan(unittest.TestCase):
         for path in ("/manifests/BAAI/bge-small-en-v1.5.json", "/alt.freeweights.community/me/m/index.html", "/alt.freeweights.text/BAAI/bge/index.html"):
             self.assertFalse(block(r2, path), path)
         self.assertFalse(block(HOST, "/repos/rp_X/blobs/x"))  # the main host is the Worker's, not this rule's
-        self.assertNotIn("POST https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/rulesets", out)
+        # The guard goes into the firewall phase entrypoint (PUT when the phase has none), never a new zone ruleset.
+        out = run("scripts/cf_cloud_connector.sh", "--rules-only")
+        self.assertNotRegex(out, r"POST https://api\.cloudflare\.com/client/v4/zones/\$CF_ZONE_ID/rulesets\s")
+        self.assertIn("fw_cc_bucket_guard", out)
 
 
 class StaticRoutes(unittest.TestCase):
