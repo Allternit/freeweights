@@ -1,0 +1,39 @@
+/* /new/ upload island and community repo pages. White + --fill surfaces, graphite in dark mode via fw.css tokens. */
+.fwu{display:grid;gap:16px;max-width:760px;padding-top:8px;padding-bottom:40px}
+.fwu-panel{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--bg);display:grid;gap:10px;font-size:14px;color:var(--ink2)}
+.fwu-panel b{color:var(--ink)}
+.fwu-panel .btn{width:fit-content}
+.fwu .btn.solid,.fwu-panel .btn.solid{background:var(--btn,#1A1A1A);color:var(--btnink,#fff);border-color:transparent}
+.fwu .btn[disabled]{opacity:.5;cursor:not-allowed}
+.fwu-note{font-size:13.5px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--fill);color:var(--ink2)}
+.fwu-note.err{border-color:color-mix(in srgb,var(--bad) 45%,transparent);color:var(--ink)}
+.fwu-form{display:grid;gap:14px}
+.fwu-row{display:grid;gap:6px}
+.fwu-row label{font-size:13px;font-weight:600;color:var(--ink)}
+.fwu-row select,.fwu-row input{font:inherit;font-size:14px;padding:9px 11px;border:1px solid var(--line2);border-radius:10px;background:var(--bg);color:var(--ink);min-width:0}
+.fwu-name{display:flex;gap:8px;align-items:center}
+.fwu-name input{flex:1}
+.fwu-hidden{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.fwu-drop{display:grid;justify-items:center;gap:8px;padding:26px 16px;border:1.5px dashed var(--line2);border-radius:12px;background:var(--fill);color:var(--ink2);font-size:14px;text-align:center}
+.fwu-drop.is-over{border-color:var(--ink);background:var(--fill2)}
+.fwu-drop b{color:var(--ink)}
+.fwu-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.fwu-btns .btn{cursor:pointer}
+.fwu-files{list-style:none;margin:0;padding:0;display:grid;gap:4px;max-height:260px;overflow:auto;font-size:13px}
+.fwu-files li{display:flex;justify-content:space-between;gap:12px;padding:5px 2px;border-bottom:1px solid var(--line)}
+.fwu-files .path{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.fwu-files .sub{flex:none}
+.fwu-sum{margin:0}
+.fwu progress{width:100%;height:8px;accent-color:var(--ink)}
+.fwu-status{margin:0;font-size:13.5px}
+@media (max-width:520px){.fwu-name{flex-direction:column;align-items:stretch}.fwu-panel{padding:14px}}
+@media (prefers-reduced-motion:no-preference){.fwu-drop{transition:background .15s,border-color .15s}}
+
+/* Community repo page (rendered by worker/src/pages/repo.ts) */
+.fwc-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:1px 10px;font-size:12px;font-weight:500}
+.fwc-held td{color:var(--ink2)}
+.fwc-held .fwc-hold{color:var(--bad);font-weight:500}
+.fwc-readme{overflow-wrap:anywhere}
+.fwc-report{display:grid;gap:8px;font-size:13.5px;color:var(--ink2)}
+.fwc-report select,.fwc-report textarea{font:inherit;font-size:13.5px;padding:7px 9px;border:1px solid var(--line2);border-radius:8px;background:var(--bg);color:var(--ink)}
+.fwc-report textarea{min-height:70px}

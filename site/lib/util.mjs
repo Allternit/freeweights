@@ -1,11 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { esc } from './md-core.mjs';
 
 export const rd = (p) => fs.readFileSync(p, 'utf8');
 export const exists = (p) => fs.existsSync(p);
 export const readJSON = (p) => JSON.parse(rd(p));
 export const ls = (d, re) => (exists(d) ? fs.readdirSync(d).filter((f) => re.test(f)).sort().map((f) => path.join(d, f)) : []);
-export const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+export { esc } from './md-core.mjs';
 export const fmtBytes = (n) => {
   if (n == null || isNaN(n)) return 'size unknown';
   const u = ['B', 'KB', 'MB', 'GB', 'TB']; let i = 0; let v = Number(n);

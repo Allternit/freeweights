@@ -17,6 +17,10 @@ export const THEME_SCRIPT_HASH = `'sha256-${createHash('sha256').update(THEME_SC
 //               inlined, this is the line to widen (to https:), and it should then be reviewed.
 //  connect-src  'self' + clerk.allternit.com: islands fetch catalog JSON and the Worker API on this origin; the
 //               account island talks to Clerk's frontend API after a Sign in click or a __client_uat hint.
+//               Also https://*.r2.cloudflarestorage.com: the /new/ upload island PUTs file bytes straight to R2 on the
+//               presigned URLs the LFS batch returns (bytes never pass through the Worker). Presigned URLs only
+//               work for the exact object, and the bucket's CORS rule limits them to this origin. Changing this line
+//               means running scripts/cf_cloud_connector.sh --apply --rules-only at deploy.
 //  script-src   also names https://clerk.allternit.com, the only host clerk-js loads from (pinned version, same
 //               rule: no other third-party script). Anonymous pages never request it.
 //  worker-src   blob: only: clerk-js (signed-in pages) starts a blob worker for its session token timer. No
@@ -28,7 +32,7 @@ export const CSP = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",
-  "connect-src 'self' https://clerk.allternit.com",
+  "connect-src 'self' https://clerk.allternit.com https://*.r2.cloudflarestorage.com",
   "manifest-src 'self'",
   "frame-src 'none'",
   "worker-src blob:",
