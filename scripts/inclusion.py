@@ -70,14 +70,23 @@ def tier(rec, relation="base", method=None, watch=None, now=None):
     if dl >= T2_MIN_DOWNLOADS_30D and method in RULE_METHODS: return "T2"
     return None
 
-def content_gate(rec):
-    """(result, reason): result is pass | refused | out | queue."""
+def content_gate(rec, decisions=None):
+    """(result, reason): result is pass | refused | out | queue.
+
+    decisions is catalog/_review/content-decisions.json: {repo: {"decision": "list" | "refuse", "why": ...}}.
+    A person's decision clears or refuses a NEEDS_PERSON match. It never overrides the sexual-content refusal."""
     text = " ".join([str(rec.get("id", ""))] + [str(t) for t in rec.get("tags") or []])
     tags = {str(t).lower() for t in rec.get("tags") or []}
     m = SEXUAL_PURPOSE.search(text.replace("_", "-"))
     if m: return "refused", f"made for sexual content ({m.group(0)!r} in the name or tags)"
     m = NEEDS_PERSON.search(text.replace("_", "-"))
-    if m: return "queue", f"a person decides ({m.group(0)!r}: real-person likeness, voice clone, fraud or attack tool)"
+    if m:
+        d = (decisions or {}).get(rec.get("id"))
+        if isinstance(d, dict) and d.get("decision") == "list":
+            return "pass", "a person reviewed it (content-decisions.json)"
+        if isinstance(d, dict) and d.get("decision") == "refuse":
+            return "refused", f"a person refused it (content-decisions.json): {d.get('why') or m.group(0)}"
+        return "queue", f"a person decides ({m.group(0)!r}: real-person likeness, voice clone, fraud or attack tool)"
     if ADULT_TAG in tags:
         if rec.get("content_reviewed"): return "pass", "not-for-all-audiences, reviewed by a person"
         return "out", "tagged not-for-all-audiences: out unless a person reviews it"

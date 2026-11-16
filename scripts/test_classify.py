@@ -17,8 +17,8 @@ def rec(rid, lic="apache-2.0", tags=(), files=("model.safetensors",), base=None,
     return dict({"id": rid, "tags": t, "cardData": card, "downloads": dl, "likes": likes,
                  "siblings": [CARD] + [{"rfilename": f, "size": 10_000} for f in files]}, **kw)
 
-def run(*recs, catalog=None, reviewed=None):
-    res, queue = classify.Classifier(list(recs), reviewed or {}, catalog or {}, watch=set(), now=NOW).run()
+def run(*recs, catalog=None, reviewed=None, decisions=None):
+    res, queue = classify.Classifier(list(recs), reviewed or {}, catalog or {}, watch=set(), now=NOW, decisions=decisions).run()
     return {r["id"]: r for r in res}, queue
 
 class LicenseTable(unittest.TestCase):
@@ -142,6 +142,23 @@ class Gates(unittest.TestCase):
         self.assertEqual(r["x/Chat"]["verdict"], "out")
         self.assertEqual(r["huihui-ai/Model-abliterated"]["verdict"], "permissive")
         self.assertEqual(r["x/Rev"]["verdict"], "permissive")
+
+    def test_person_decision_on_content_hold(self):
+        d = lambda x: {"decision": x, "why": "w", "by": "Allternit", "at": "2026-11-15"}
+        decisions = {"x/phishing-detector": d("list"), "x/deepfake-det": d("refuse"), "x/nsfw-phishing": d("list")}
+        r, queue = run(rec("x/phishing-detector"), rec("x/deepfake-det"), rec("x/malware-scan"), rec("x/nsfw-phishing"), decisions=decisions)
+        self.assertEqual(r["x/phishing-detector"]["verdict"], "permissive")
+        self.assertEqual((r["x/deepfake-det"]["verdict"], r["x/deepfake-det"]["gate"]), ("refused", "content"))
+        self.assertEqual(r["x/malware-scan"]["verdict"], "queue")
+        self.assertEqual([q["key"] for q in queue], ["content:x/malware-scan"])
+        # the sexual-content refusal can never be overridden
+        self.assertEqual((r["x/nsfw-phishing"]["verdict"], r["x/nsfw-phishing"]["gate"]), ("refused", "content"))
+
+    def test_shipped_decisions_file(self):
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "catalog", "_review", "content-decisions.json")
+        dec = classify.load_decisions(path)
+        self.assertEqual(len(dec), 17)
+        self.assertTrue(all(v["decision"] in ("list", "refuse") and v["why"] and v["by"] and v["at"] for v in dec.values()))
 
     def test_hygiene_gate(self):
         thin = rec("x/Thin"); thin["siblings"][0] = {"rfilename": "README.md", "size": 120}
