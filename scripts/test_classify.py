@@ -32,7 +32,12 @@ class LicenseTable(unittest.TestCase):
 
     def test_custom_ids_never_pass_on_a_tag(self):
         self.assertEqual(licenses.tag_verdict("licenseref-qwen-research")[0], "queue")
-        self.assertEqual(licenses.tag_verdict("creativeml-openrail-m")[0], "queue")
+        self.assertEqual(licenses.tag_verdict("gpl-3.0")[0], "queue")
+
+    def test_openrail_m_tag_is_custom_with_terms(self):
+        # read 2026-11-15: the Attachment A use restrictions pass on, so the hosted entry shows terms
+        self.assertEqual(licenses.tag_verdict("creativeml-openrail-m")[0], "custom")
+        self.assertIn("Attachment A", licenses.terms("creativeml-openrail-m"))
 
     def test_docs_match_table(self):
         self.assertTrue(all(ok for _, ok in licenses.docs_status()), "run scripts/licenses.py --write-docs")
@@ -112,9 +117,9 @@ class Queue(unittest.TestCase):
         self.assertEqual(q, [])
 
     def test_held_license_queues_under_its_id(self):
-        r, q = run(rec("x/R", lic="creativeml-openrail-m"))
+        r, q = run(rec("x/R", lic="gpl-3.0"))
         self.assertEqual(r["x/R"]["verdict"], "unreviewed")
-        self.assertEqual(q[0]["key"], "held:creativeml-openrail-m")
+        self.assertEqual(q[0]["key"], "held:gpl-3.0")
 
     def test_no_license_is_refused(self):
         r, _ = run(rec("x/NoLic", lic=None))

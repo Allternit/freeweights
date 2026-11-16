@@ -227,7 +227,8 @@
       "name": "LicenseRef-LTX-2.x-Community",
       "verdict": "custom",
       "tag": false,
-      "spdx": "LicenseRef-LTX-2.x-Community"
+      "spdx": "LicenseRef-LTX-2.x-Community",
+      "terms": "LTX-2.x Community: the use restrictions in Attachment A pass on to anyone you share the model with. Entities with US$10M or more annual revenue need a paid license for any use other than non-commercial use."
     },
     "licenseref-tencent-hunyuan-community": {
       "name": "LicenseRef-Tencent-Hunyuan-Community",
@@ -361,18 +362,377 @@
       "spdx": "LicenseRef-SAI-NC-Community",
       "verdict": "non-commercial",
       "tag": false
+    },
+    "licenseref-qwen-license": {
+      "name": "Qwen License Agreement (2024-09-19)",
+      "spdx": "LicenseRef-Qwen-License",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Qwen License: keep a copy of the agreement and its Notice file with the files. A commercial product or service with more than 100 million monthly active users needs a license from Alibaba Cloud."
+    },
+    "licenseref-tongyi-qianwen": {
+      "name": "Tongyi Qianwen License Agreement (2023-08-03)",
+      "spdx": "LicenseRef-Tongyi-Qianwen",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Tongyi Qianwen License: keep a copy of the agreement and its Notice file. A commercial product with more than 100 million monthly active users needs a license from Alibaba Cloud. The model and its output may not be used to improve another large language model."
+    },
+    "licenseref-tongyi-qianwen-research": {
+      "name": "Tongyi Qianwen Research License Agreement",
+      "spdx": "LicenseRef-Tongyi-Qianwen-Research",
+      "verdict": "non-commercial",
+      "tag": false
+    },
+    "licenseref-deepseek": {
+      "name": "DeepSeek License Agreement 1.0",
+      "spdx": "LicenseRef-DeepSeek-1.0",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "DeepSeek License: the use restrictions in Attachment A pass on to you and to anyone you share the model with. Keep a copy of the license with the files and mark files you change."
+    },
+    "licenseref-kimi-modified-mit": {
+      "name": "Kimi K2 Modified MIT License",
+      "spdx": "LicenseRef-Kimi-Modified-MIT",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Kimi Modified MIT: keep the copyright and permission notice. A commercial product with more than 100 million monthly active users or more than US$20M monthly revenue must show the model name (for example \"Kimi K2.5\") in its user interface."
+    },
+    "licenseref-kimi-k3": {
+      "name": "Kimi K3 License",
+      "spdx": "LicenseRef-Kimi-K3",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Kimi K3: keep the notice. A Model-as-a-Service business above US$20M revenue over 12 months needs a separate Moonshot AI agreement. Above 100 million monthly active users or US$20M monthly revenue, show \"Kimi K3\" in the user interface."
+    },
+    "licenseref-mistral-modified-mit": {
+      "name": "Mistral Modified MIT License",
+      "spdx": "LicenseRef-Mistral-Modified-MIT",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Mistral Modified MIT: keep the notice. A company (or employer) with more than US$20M global monthly revenue gets no rights under this license and needs a commercial license from Mistral AI."
+    },
+    "licenseref-mistral-ecosystem-open-weight": {
+      "name": "Mistral Ecosystem Open-Weight License",
+      "spdx": "LicenseRef-Mistral-Ecosystem-Open-Weight",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Mistral Ecosystem Open-Weight: keep the notice. A Model-as-a-Service business needs a separate commercial license from Mistral before any commercial use."
+    },
+    "licenseref-ltx-2-community": {
+      "name": "LTX-2 Community License Agreement",
+      "spdx": "LicenseRef-LTX-2-Community",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "LTX-2 Community: the use restrictions in Attachment A pass on to anyone you share the model with. Entities with US$10M or more annual revenue need a paid commercial license from Lightricks."
+    },
+    "licenseref-minimax-model": {
+      "name": "MiniMax Model License (M2.5)",
+      "spdx": "LicenseRef-MiniMax-Model",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "MiniMax Model License: give recipients a copy of the agreement, keep the Notice file, mark changed files, and follow the Prohibited Uses Policy."
+    },
+    "licenseref-minimax-m2.7-non-commercial": {
+      "name": "MiniMax M2.7 Non-Commercial License",
+      "spdx": "LicenseRef-MiniMax-M2.7-NC",
+      "verdict": "non-commercial",
+      "tag": false
+    },
+    "licenseref-minimax-music3-community": {
+      "name": "MiniMax-Music3 Community License",
+      "spdx": "LicenseRef-MiniMax-Music3-Community",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "MiniMax-Music3 Community: keep the notice and follow the Acceptable Use Policy (Exhibit A). A commercial product must show \"MiniMax-Music3\"; above US$20M yearly revenue it needs written authorization from MiniMax."
+    },
+    "licenseref-livekit-model": {
+      "name": "LiveKit Model License Agreement",
+      "spdx": "LicenseRef-LiveKit-Model",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "LiveKit Model License: the models may be used only with the LiveKit Agents framework, never standalone, and not to train other models. Pass the agreement and notice on with any copy."
+    },
+    "licenseref-sam": {
+      "name": "SAM License (2025-11-19)",
+      "spdx": "LicenseRef-SAM",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "SAM License: give recipients a copy of the agreement, acknowledge SAM in published research, and follow trade-control laws."
+    },
+    "licenseref-sapiens2": {
+      "name": "Sapiens2 License",
+      "spdx": "LicenseRef-Sapiens2",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Sapiens2 License: give recipients a copy of the agreement, acknowledge Sapiens in published research, and follow trade-control laws."
+    },
+    "licenseref-fish-audio-community-1.0": {
+      "name": "Fish Audio Community License Agreement 1.0",
+      "spdx": "LicenseRef-Fish-Audio-Community-1.0",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Fish Audio Community: commercial use only while annual revenue is under US$500K, and a hosted text-to-speech or voice service needs a separate license. Keep the agreement with the files."
+    },
+    "licenseref-qwen3.8-max": {
+      "name": "Qwen3.8-Max License",
+      "spdx": "LicenseRef-Qwen3.8-Max",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Qwen3.8-Max: keep the notice. Above 100 million monthly active users or US$20M monthly revenue, show the model name in the user interface; a Model-as-a-Service or AI Work Assistant business above US$50M revenue over 12 months needs a separate license."
+    },
+    "licenseref-muse-spark-open": {
+      "name": "Muse Model License (Muse Spark Open)",
+      "spdx": "LicenseRef-Muse-Spark-Open",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Muse Spark Open: keep the license and Usage Policy (Exhibit A) with all copies, show \"Built with Muse Spark Open\", and a Model-as-a-Service business above US$20M revenue over 12 months needs a separate Meta license."
+    },
+    "licenseref-bilibili-model-use": {
+      "name": "bilibili Model Use License Agreement",
+      "spdx": "LicenseRef-bilibili-Model-Use",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "bilibili Model Use License: above 100 million monthly active users or RMB 1 billion annual revenue you need a separate license; the model may not be used to improve other AI models."
+    },
+    "licenseref-boson-higgs-audio-2-community": {
+      "name": "Boson Higgs Audio 2 Community License",
+      "spdx": "LicenseRef-Boson-Higgs-Audio-2-Community",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Higgs Audio 2 Community: give recipients this agreement and the Meta Llama 3 license, show the \"Built with Higgs Materials\" notice, and above 100,000 annual active users you need an expanded license from Boson AI."
+    },
+    "licenseref-inf-model": {
+      "name": "INF Model License Agreement (OpenCoder, 2024-07-16)",
+      "spdx": "LicenseRef-INF-Model",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "INF Model License: give each recipient a copy of the agreement."
+    },
+    "licenseref-swift-open-1.0": {
+      "name": "Swift Open License v1.0",
+      "spdx": "LicenseRef-Swift-Open-1.0",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Swift Open License: commercial use only while gross revenue is under US$1M; the base model's own license also applies."
+    },
+    "licenseref-fastino-community": {
+      "name": "Fastino Community License",
+      "spdx": "LicenseRef-Fastino-Community",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Fastino Community: keep the notice; production commercial use by an entity above US$10M annual revenue needs a commercial agreement with Fastino. The base model's license also applies."
+    },
+    "licenseref-kwaipilot-model": {
+      "name": "Kwaipilot Model License Agreement",
+      "spdx": "LicenseRef-Kwaipilot-Model",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Kwaipilot Model License: give recipients the model source and a copy of the agreement, mark changed files, and follow the Acceptable Use Policy."
+    },
+    "licenseref-hi3d-open-1.0": {
+      "name": "Hi3D Open License Agreement 1.0",
+      "spdx": "LicenseRef-Hi3D-Open-1.0",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Hi3D Open License: above the Scale Threshold (monthly active users) you must apply to OCEANO HK HOLDING LIMITED for a separate license within 60 days."
+    },
+    "licenseref-krea-2-community": {
+      "name": "Krea 2 Community License Agreement v1",
+      "spdx": "LicenseRef-Krea-2-Community",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Krea 2 Community: commercial use only below US$1M company-wide annual revenue; give recipients the agreement and bind them to it; the use rules include content filters."
+    },
+    "licenseref-nvidia-open-model": {
+      "name": "NVIDIA Open Model License",
+      "spdx": "LicenseRef-NVIDIA-Open-Model",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "NVIDIA Open Model License: give recipients a copy of the agreement and keep the Notice \"Licensed by NVIDIA Corporation under the NVIDIA Open Model License\". Removing a model's safety guardrail without a similar one ends your rights."
+    },
+    "licenseref-nvidia-nemotron-open-model": {
+      "name": "NVIDIA Nemotron Open Model License",
+      "spdx": "LicenseRef-NVIDIA-Nemotron-Open-Model",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "NVIDIA Nemotron Open Model License: give recipients a copy of the license and keep the copyright, patent, trademark and attribution notices."
+    },
+    "mit-and-apache-2.0": {
+      "name": "MIT and Apache-2.0 (separate files)",
+      "spdx": "MIT AND Apache-2.0",
+      "verdict": "permissive",
+      "tag": false
+    },
+    "creativeml-openrail-m": {
+      "name": "CreativeML Open RAIL-M",
+      "spdx": "LicenseRef-CreativeML-OpenRAIL-M",
+      "verdict": "custom",
+      "tag": true,
+      "terms": "CreativeML Open RAIL-M: the use restrictions in Attachment A pass on to you and to anyone you share the model with. Keep a copy of the license with the files."
+    },
+    "bigscience-openrail-m": {
+      "name": "BigScience Open RAIL-M",
+      "spdx": "LicenseRef-BigScience-OpenRAIL-M",
+      "verdict": "custom",
+      "tag": true,
+      "terms": "BigScience Open RAIL-M: the use restrictions in Attachment A pass on to you and to anyone you share the model with. Keep a copy of the license with the files."
+    },
+    "bigcode-openrail-m": {
+      "name": "BigCode OpenRAIL-M v1",
+      "spdx": "LicenseRef-BigCode-OpenRAIL-M",
+      "verdict": "custom",
+      "tag": true,
+      "terms": "BigCode OpenRAIL-M: the use restrictions in Attachment A pass on to you and to anyone you share the model with. Give recipients a copy of the license and keep the explanatory documentation."
+    },
+    "licenseref-stability-ai-community": {
+      "name": "Stability AI Community License (2024-07-05)",
+      "spdx": "LicenseRef-Stability-AI-Community",
+      "verdict": "gated",
+      "tag": false,
+      "note": "Commercial use (and commercial distribution) needs registration with Stability AI first, and ends above US$1M revenue. Link only until Allternit decides to register."
+    },
+    "licenseref-moonshine-community": {
+      "name": "Moonshine AI Community License",
+      "spdx": "LicenseRef-Moonshine-Community",
+      "verdict": "gated",
+      "tag": false,
+      "note": "Commercial use needs registration with Moonshine AI first, and ends above US$1M revenue. Link only until Allternit decides to register."
+    },
+    "licenseref-glm-4": {
+      "name": "GLM-4 License (glm-4-9b, GLM-Edge, CodeGeeX4)",
+      "spdx": "LicenseRef-GLM-4",
+      "verdict": "gated",
+      "tag": false,
+      "note": "Free use is academic research only; commercial use needs registration with Zhipu first."
+    },
+    "licenseref-cogvideox": {
+      "name": "CogVideoX License",
+      "spdx": "LicenseRef-CogVideoX",
+      "verdict": "gated",
+      "tag": false,
+      "note": "Free use is academic research only; commercial use needs registration with Zhipu first, and more than 1 million visits a month needs a further license."
+    },
+    "licenseref-cogvlm": {
+      "name": "CogVLM License",
+      "spdx": "LicenseRef-CogVLM",
+      "verdict": "gated",
+      "tag": false,
+      "note": "Free use is academic research only; commercial use needs registration with Zhipu first."
+    },
+    "licenseref-cogagent": {
+      "name": "CogAgent License",
+      "spdx": "LicenseRef-CogAgent",
+      "verdict": "gated",
+      "tag": false,
+      "note": "Free use is academic research only; commercial use needs registration with Zhipu first."
+    },
+    "licenseref-youtu-llm": {
+      "name": "Youtu-LLM License Terms",
+      "spdx": "LicenseRef-Youtu-LLM",
+      "verdict": "territory",
+      "tag": false,
+      "note": "Youtu-LLM is not intended for use within the European Union (s.0), and a worldwide hub cannot limit who downloads."
+    },
+    "licenseref-apple-amlr": {
+      "name": "Apple Machine Learning Research Model License",
+      "spdx": "LicenseRef-Apple-AMLR",
+      "verdict": "non-commercial",
+      "tag": false
+    },
+    "licenseref-nvidia-source-code-nc": {
+      "name": "NVIDIA Source Code License (non-commercial)",
+      "spdx": "LicenseRef-NVIDIA-Source-Code-NC",
+      "verdict": "non-commercial",
+      "tag": false
+    },
+    "licenseref-katanemo-community": {
+      "name": "Katanemo Community License Agreement",
+      "spdx": "LicenseRef-Katanemo-Community",
+      "verdict": "non-commercial",
+      "tag": false
+    },
+    "licenseref-contextpilot": {
+      "name": "ContextPilot-14B License Terms (Apache-2.0 with a research-only clause)",
+      "spdx": "LicenseRef-ContextPilot",
+      "verdict": "non-commercial",
+      "tag": false
+    },
+    "licenseref-fair-nc-research-1": {
+      "name": "FAIR Noncommercial Research License v1",
+      "spdx": "LicenseRef-FAIR-NC-Research-1",
+      "verdict": "non-commercial",
+      "tag": false
+    },
+    "licenseref-exaone-nc": {
+      "name": "EXAONE AI Model License Agreement (NC)",
+      "spdx": "LicenseRef-EXAONE-NC",
+      "verdict": "refused",
+      "tag": false,
+      "note": "Research use only, and \"any commercial application or external distribution, is strictly prohibited\": no grant to redistribute."
+    },
+    "licenseref-msrla": {
+      "name": "Microsoft Research License Agreement",
+      "spdx": "LicenseRef-MSRLA",
+      "verdict": "refused",
+      "tag": false,
+      "note": "\"you may use the model(s), but you may not distribute the models\": no grant to redistribute."
+    },
+    "licenseref-personal-use-1.0": {
+      "name": "AI Model Personal Use License v1.0",
+      "spdx": "LicenseRef-Personal-Use-1.0",
+      "verdict": "refused",
+      "tag": false,
+      "note": "Personal non-commercial use only; you may not \"redistribute the Model or its Derivatives to any third party\"."
+    },
+    "polyform-strict-1.0.0": {
+      "name": "PolyForm Strict License 1.0.0",
+      "spdx": "PolyForm-Strict-1.0.0",
+      "verdict": "refused",
+      "tag": false,
+      "note": "The copyright grant excludes \"distributing the software or making changes or new works based on the software\"."
+    },
+    "licenseref-stability-ai-control-lora-community": {
+      "name": "Stability AI Control-LoRA Community License",
+      "spdx": "LicenseRef-Stability-AI-Control-LoRA-Community",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Stability AI Control-LoRA Community: give recipients the agreement and the NOTICE attributions, follow the Acceptable Use Policy, and above 1 million monthly active users commercial rights need a license from Stability AI."
+    },
+    "licenseref-ai2-impact-lr": {
+      "name": "AI2 ImpACT License, Low Risk Artifacts 1.0",
+      "spdx": "LicenseRef-AI2-ImpACT-LR-1.0",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "AI2 ImpACT LR: the use-based restrictions flow down into any license for downstream use or distribution, and changed files carry a notice."
+    },
+    "licenseref-xai-community": {
+      "name": "xAI Community License Agreement (2025-11-04)",
+      "spdx": "LicenseRef-xAI-Community",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "xAI Community License: commercial use only within xAI's Acceptable Use Policy guardrails; no training of other foundational or general-purpose models; include the agreement and the xAI notice, and show \"Powered by xAI\"."
+    },
+    "licenseref-sarvam-research": {
+      "name": "Sarvam AI Research License",
+      "spdx": "LicenseRef-Sarvam-Research",
+      "verdict": "non-commercial",
+      "tag": false
+    },
+    "licenseref-browser-use-modified-mit": {
+      "name": "Browser Use Modified MIT License",
+      "spdx": "LicenseRef-Browser-Use-Modified-MIT",
+      "verdict": "custom",
+      "tag": false,
+      "terms": "Browser Use Modified MIT: keep the notice. A company (or employer) with more than US$1M global annual revenue gets no rights under this license and needs a commercial license from Browser Use."
     }
   },
   "held": {
-    "openrail": "OpenRAIL licenses are not reviewed yet.",
-    "creativeml-openrail-m": "OpenRAIL licenses are not reviewed yet.",
-    "bigscience-openrail-m": "OpenRAIL licenses are not reviewed yet.",
-    "bigscience-bloom-rail-1.0": "OpenRAIL licenses are not reviewed yet.",
-    "bigcode-openrail-m": "OpenRAIL licenses are not reviewed yet.",
-    "gpl-3.0": "Copyleft licenses for weights are not reviewed yet.",
-    "lgpl-3.0": "Copyleft licenses for weights are not reviewed yet.",
-    "agpl-3.0": "Copyleft licenses for weights are not reviewed yet.",
-    "cc-by-nd-4.0": "No-derivatives licenses are not reviewed yet.",
+    "openrail": "\"openrail\" names the OpenRAIL family, not one license: the text differs per repo, so each repo's own license text is read (matched by its sha256).",
+    "bigscience-bloom-rail-1.0": "BigScience BLOOM RAIL 1.0: no copy of the text could be fetched on 2026-11-15; not read yet.",
+    "gpl-3.0": "Copyleft for weights waits for counsel: what counts as Corresponding Source for model weights, and whether a hub copy must offer it.",
+    "lgpl-3.0": "Copyleft for weights waits for counsel: what counts as Corresponding Source for model weights, and whether a hub copy must offer it.",
+    "agpl-3.0": "Copyleft for weights waits for counsel: what counts as Corresponding Source for model weights, and the AGPL network-use duty.",
+    "cc-by-nd-4.0": "CC BY-ND 4.0 lets you share unchanged copies (s.2(a)(1)(A)) but never Adapted Material; the classifier cannot yet tell a quantization or fine-tune from an original, so it waits for that rule.",
     "other": "Matched by the hash of its text or the declared license name; otherwise not reviewed."
   },
   "no_license": {
@@ -399,6 +759,600 @@
       "license_id": "LicenseRef-GLM-5.3",
       "verdict": "custom",
       "at": "2026-11-14"
+    },
+    "8aff84e2629edb092f195c1d91bc368d8bb40eeb5fcedce2df19e405ee2cc876": {
+      "license_id": "LicenseRef-Qwen-License",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "If you are commercially using the Materials, and your product or service has more than 100 million monthly active users, you shall request a license from us."
+    },
+    "c04f7c8d5721b4081eb4e95ebf19224ffd459e5d185a13ca2d7dc4405b34ed95": {
+      "license_id": "LicenseRef-Qwen-License",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same text as 8aff84e2629e (whitespace differs)"
+    },
+    "906173ddd513292907b27eef9c5e7d35085bfc4a17c6c4e599677ee5bdcf19dd": {
+      "license_id": "LicenseRef-Qwen-License",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same text as 8aff84e2629e (whitespace differs)"
+    },
+    "7c7b8e244f6aa1ac8c32b74f56d42c41a0364dd2dabed8d9c6030a862e805b54": {
+      "license_id": "LicenseRef-Tongyi-Qianwen",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "If you are commercially using the Materials, and your product or service has more than 100 million monthly active users, You shall request a license from Us."
+    },
+    "6e521a32ba6661de2b3e7b1cd27d7e1e9b8ff99633c79462a23284cac13c8b8d": {
+      "license_id": "LicenseRef-Tongyi-Qianwen",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same text as 7c7b8e244f6a (whitespace differs)"
+    },
+    "41c2cf8c272f6fb0080a97cd9d9bd7d4604072b80a0b10e7d65ca26ef5000c0c": {
+      "license_id": "LicenseRef-Tongyi-Qianwen-Research",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "to use, reproduce, distribute ... the Materials FOR NON-COMMERCIAL PURPOSES ONLY."
+    },
+    "41f3a23ef5ca5bf9dec082e2f0da6a9c74b69e24d15b7baa8a8e9dd2edf7cf63": {
+      "license_id": "LicenseRef-Tongyi-Qianwen-Research",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "same text as 41c2cf8c272f (whitespace differs)"
+    },
+    "ccfee4895df06bcab524151c278e8dde88bbe76165a24ecbcbcf9fafd71fd2b3": {
+      "license_id": "LicenseRef-DeepSeek-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "Use-based restrictions as referenced in paragraph 5 MUST be included as an enforceable provision by You in any type of legal agreement ... governing the use and/or distribution"
+    },
+    "a3a0e9449cb691a12f4de1d03725fd41326614fdeaf5d80b28c51187da0bed0e": {
+      "license_id": "LicenseRef-DeepSeek-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same text as ccfee4895df0 (whitespace differs)"
+    },
+    "214742a89d95d503b15a0ae7a459e0df214ad02493233016e329a812e22009c3": {
+      "license_id": "LicenseRef-DeepSeek-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same text as ccfee4895df0 (whitespace differs)"
+    },
+    "c524b41658421b8b143c5b50637ef008909da56013ad12ccaba0536139ee35b0": {
+      "license_id": "LicenseRef-Kimi-Modified-MIT",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "if the Software ... is used for any of your commercial products or services that have more than 100 million monthly active users, or more than 20 million US dollars ... in monthly revenue, you shall prominently display \"Kimi K2.5\""
+    },
+    "b280da6f496d75e0c5beb79b03520d190fce67dfe12f75cf3aadad8670839d93": {
+      "license_id": "LicenseRef-Kimi-Modified-MIT",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as c524b4165842 with \"Kimi K2\" (2025)"
+    },
+    "9cb73476cecdfabac7775bf7c225bd5f6017d5d678372917e4456964c0454f7a": {
+      "license_id": "LicenseRef-Kimi-Modified-MIT",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as c524b4165842 with \"Kimi K2.7 Code\""
+    },
+    "1d4ab2d8404287de44429024a78b58d3aabc4df9d0c490e73fec9ff1fd842529": {
+      "license_id": "LicenseRef-Kimi-Modified-MIT",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as c524b4165842 with \"Kimi K2.6\""
+    },
+    "fa2dd8ae5b5fa27c2b5bbc835a053930efcf42451768aebdfac230f350f1aa62": {
+      "license_id": "LicenseRef-Kimi-Modified-MIT",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as c524b4165842 with \"Kimi K2\" (2025)"
+    },
+    "20c797ce19af0c17de52c6afb144644768a591c521655f5ebf5712c9850f2887": {
+      "license_id": "LicenseRef-Kimi-K3",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "If the Licensee ... operates a Model as a Service business, and the aggregate revenue ... exceeds 20 million US dollars ... the Licensee must enter into a separate agreement with Moonshot AI"
+    },
+    "648194727930df730890e9f9affdbcc5c930d406d6829559b25ca3d5a973fc8c": {
+      "license_id": "LicenseRef-Mistral-Modified-MIT",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "You are not authorized to exercise any rights under this license if the global consolidated monthly revenue of your company (or that of your employer) exceeds $20 million"
+    },
+    "867daee3b68e4e9392c9767fec4f099096fa6ad67adfc9c24020494e97766778": {
+      "license_id": "LicenseRef-Mistral-Modified-MIT",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as 648194727930 (2025 notice)"
+    },
+    "d242ebedb53ffd7e26c220e3305665ca47e4e5267fa62ff4cdeb3953b8353c78": {
+      "license_id": "LicenseRef-Mistral-Ecosystem-Open-Weight",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "If the Licensee or any of its affiliates operates a Model as a Service business, the Licensee must enter into a separate commercial license with Mistral"
+    },
+    "e28ef68d90e17b06308e4c5cba5c9a967b70c3d67f87ddc3dfc46a312cb6a134": {
+      "license_id": "LicenseRef-LTX-2-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "Entities with annual revenues of at least $10,000,000 ... are required to obtain a paid commercial use license"
+    },
+    "52ba86caf2ccf9ef4ee6553586f2ed3755dbfd9a9b182fee5b49693283c8f065": {
+      "license_id": "LicenseRef-LTX-2-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as e28ef68d90e1 (\"more than\" for \"or more\")"
+    },
+    "191ee7ebecd395ef20b98fa55c803d2d0bfc50cdbefaa0eafbaef3e79f4d2475": {
+      "license_id": "LicenseRef-LTX-2-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as e28ef68d90e1 (licensing link added)"
+    },
+    "be75acae5c99b0fb16ed6cfbf8f731e5121a729bef112d20337699407e796451": {
+      "license_id": "LicenseRef-LTX-2.x-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "Entities with annual revenues of at least $10,000,000 ... are required to obtain a paid license for any use (excluding use solely for a Non-Commercial Purpose"
+    },
+    "4e7dd26d9c9294e1e0549587505dcf4ba40c7c82c50850559f846f92245f6120": {
+      "license_id": "LicenseRef-LTX-2.x-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as be75acae5c99 (Markdown formatting)"
+    },
+    "d6f6b1a4dce5c852bd6d7d9482d002baf0ccdb71e662250b73be9eec8764ee8d": {
+      "license_id": "LicenseRef-Stability-AI-Community",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "If You are using or distributing the Stability AI Materials for a Commercial Purpose, You must register with Stability AI"
+    },
+    "9b60b9d0411f54d4087484ad4acf28ca6fd9f6a84c30ddacb04de2c623254749": {
+      "license_id": "LicenseRef-Stability-AI-Community",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "same as d6f6b1a4dce5 (quotes, numbering)"
+    },
+    "507fa93cb20c8ea1cb59831122f8c37e8e3f7badb9605951cfaf6613ddb7cb08": {
+      "license_id": "LicenseRef-Stability-AI-Community",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "same as d6f6b1a4dce5 (quotes, numbering)"
+    },
+    "79eda083d6eb7ae2714e2b9115ea5eef6b6fa6a6d597f38a439a0a0d22cb2b38": {
+      "license_id": "LicenseRef-Stability-AI-Community",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "same as d6f6b1a4dce5 (numbering)"
+    },
+    "9509b94e411ef77117514268f8338d40fa76287a506a957025e97e266e9fb450": {
+      "license_id": "LicenseRef-SAI-NC-Community",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "to use, reproduce, distribute, and create Derivative Works of, the Software Products, in each case for Non-Commercial Uses only"
+    },
+    "c0092bdb55bb39a32898ea8c1692b1969df0821b47ea42fa3435f5fd2d0a515a": {
+      "license_id": "LicenseRef-SAI-NC-Community",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "same text as 9509b94e411e"
+    },
+    "f748459fcf7a7f26f591ccd8364422e2a707cd68a4b7a0d5151a0850e9b656ec": {
+      "license_id": "LicenseRef-SAI-NC-Community",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "same text as 9509b94e411e"
+    },
+    "6d306d7f3715f89e46acc8af9f8a83334b4c5ce76acdb5cb9841535799e44977": {
+      "license_id": "LicenseRef-Stability-AI-Control-LoRA-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "greater than 1 million monthly active users ... you must request a license from Stability AI"
+    },
+    "294fd63925d81e9a11a2bd71fefecbfefb0d1a329eef7de28b96e49b6da4f67e": {
+      "license_id": "LicenseRef-EXAONE-NC",
+      "verdict": "refused",
+      "at": "2026-11-15",
+      "note": "Any use beyond the scope of this license, including any commercial application or external distribution, is strictly prohibited"
+    },
+    "8c1762fb4bd94c8f17e114c5caa567e0948e1da7d02b79b55e99be9616e0f9e3": {
+      "license_id": "LicenseRef-EXAONE-NC",
+      "verdict": "refused",
+      "at": "2026-11-15",
+      "note": "EXAONE 1.2-NC: same research-only grant and the same ban on external distribution"
+    },
+    "d13f50f252706283b7495f659545d907d8b2e40cec5ae9c0e428450ee57c1868": {
+      "license_id": "LicenseRef-GLM-4",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "本许可允许您免费使用本仓库中的所有开源模型进行学术研究，对于希望将模型用于商业目的的用户，需在这里完成登记 (academic research free; commercial use must register)"
+    },
+    "710a4abbfbd30343be4b1d507835a1ae27e4b441e8a1211befc3f2124347e81a": {
+      "license_id": "LicenseRef-GLM-4",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "GLM-Edge: same text as d13f50f25270 with the model name changed"
+    },
+    "b7833bfbf8008d43a06103eaebc873c64dfb3fee1135942fa1e41ac4b86cc6df": {
+      "license_id": "LicenseRef-GLM-4",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "CodeGeeX4: same text as d13f50f25270 with the model name changed"
+    },
+    "fd0689724426a3adbc3c8866e85a14c63b1c02df220a371e38699cda47ee276e": {
+      "license_id": "LicenseRef-GLM-4",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "same text as d13f50f25270"
+    },
+    "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e": {
+      "license_id": "LicenseRef-CogVideoX",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "Users who wish to use the models for commercial purposes must register and obtain a basic commercial license"
+    },
+    "3149da85443e5802bf4e97678c0d1cba8917382ac5aa1ecb2c0353c508c49a14": {
+      "license_id": "LicenseRef-CogVLM",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "Users who wish to use the models for commercial purposes must register"
+    },
+    "c1ad1d99a8d46a00610db35d97c787d10b7e81661e48a1e389ae6cbb51a45630": {
+      "license_id": "LicenseRef-CogAgent",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "Users wishing to use the model for commercial purposes must complete registration"
+    },
+    "d8f5d9dfbdb60dc81b8f1720421699e7811070f0b46f6668f90253d5ac8c0b20": {
+      "license_id": "LicenseRef-Apple-AMLR",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "to use, copy, modify, distribute, and create Model Derivatives ... exclusively for Research Purposes"
+    },
+    "8257988a0f68ad229af9f5357c4f4ce7d8f1a00022e6263e7dde83c08939ed4c": {
+      "license_id": "LicenseRef-Apple-AMLR",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "same as d8f5d9dfbdb6 (2026)"
+    },
+    "c1211a85bc9fab9e4bcf4b3711d2e100967bc3244b6b48404ce609553660ceae": {
+      "license_id": "LicenseRef-Apple-AMLR",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "same text as d8f5d9dfbdb6"
+    },
+    "278b29a14cf6b0cc60519617909af61fa4a6aca4ee928d6178cb9799785c5cc0": {
+      "license_id": "LicenseRef-MiniMax-Model",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "to use, reproduce, distribute, copy, create derivative works of, and make modifications to the Model Materials"
+    },
+    "6373a886779a26e56af8070699ebaa8f90104cadcc7bbf6897037f72017bedfe": {
+      "license_id": "LicenseRef-MiniMax-M2.7-NC",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "Any Commercial Use of the Software or any derivative work thereof is prohibited without obtaining a separate, prior written authorization from MiniMax."
+    },
+    "b53f2fdda3049b0e9013207be51efc2d372cda1fcfdd8bb4bb8b22658ca5db9c": {
+      "license_id": "LicenseRef-MiniMax-Community",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "to deal in the Software for non-commercial purposes"
+    },
+    "b21d12df2adae59dad3fcf80c1d81492654c662342f497d9a9770198c9317e58": {
+      "license_id": "LicenseRef-MiniMax-Music3-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "You shall obtain a separate, prior written authorization from MiniMax ... if the aggregate yearly revenue ... exceeds 20 million US dollars"
+    },
+    "59b99642b95ea21630e311198ddbfffbfe05aadba0c2f5d884cbdf4efcc90f44": {
+      "license_id": "LicenseRef-MiniMax-H3-Community",
+      "verdict": "territory",
+      "at": "2026-11-15",
+      "note": "\"Excluded Territories\" means the European Union, the United Kingdom, the Republic of Korea and the United States of America."
+    },
+    "4f5b74db4fd26299a166688de8a3bde046fd7d9cc13ecab64532c24310bc18d7": {
+      "license_id": "LicenseRef-LiveKit-Model",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "not to use any LiveKit Models on a standalone basis or with any frameworks other than LiveKit Agents"
+    },
+    "bec48f70bd37bf8280a9d1ebf01642d26086f6122ba735baa08fe03c5a6e7448": {
+      "license_id": "LicenseRef-SAM",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "If you distribute or make the SAM Materials ... available to a third party, you may only do so under the terms of this Agreement and you shall provide a copy of this Agreement"
+    },
+    "1c77a629ee16972ddb9844378038b20321143a6faf0cac26c2c04dc9b61c5288": {
+      "license_id": "LicenseRef-Sapiens2",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "If you distribute or make the Sapiens Materials ... available to a third party, you may only do so under the terms of this Agreement"
+    },
+    "e3e51427556222cb152990f47991eedbd6ffa6561bb9346580d32e841e13530c": {
+      "license_id": "LicenseRef-Tencent-Hunyuan-Community",
+      "verdict": "territory",
+      "at": "2026-11-15",
+      "note": "\"Territory\" shall mean the worldwide territory, excluding the territory of the European Union, United Kingdom and South Korea."
+    },
+    "3fe50bcae6f8a3c8aac0eb641f2cdf62f066f1967a95bb4303eefd7e123ff0f1": {
+      "license_id": "Apache-2.0",
+      "verdict": "permissive",
+      "at": "2026-11-15",
+      "note": "This project is dual-licensed under the OpenMDW License 1.0 and the Apache License 2.0. You may use this project under the terms of either license, at your option."
+    },
+    "5a974fcf1ffb2bc86af3ce6a6f55b60e351537cf6761443a1dc2db557f9c82af": {
+      "license_id": "LicenseRef-NVIDIA-Source-Code-NC",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "The Work and any derivative works thereof only may be used or intended for use non-commercially."
+    },
+    "733a32442087acbda12ecafe8e71eb8ee5890c89b50ce7ac4ea3777faa3c823e": {
+      "license_id": "LicenseRef-Fish-Audio-Community-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "for a Commercial Purpose, but only while Your Annual Revenue is less than USD 500,000"
+    },
+    "3799742c9ad6becfab256ac51ab1069e9a75ccf67cb886c10a61c078399c21f8": {
+      "license_id": "MIT AND Apache-2.0",
+      "verdict": "permissive",
+      "at": "2026-11-15",
+      "note": "clip_l.safetensors -- MIT License ... t5xxl_fp16.safetensors ... -- Apache License 2.0"
+    },
+    "a136bc4137ef3d7a7a54963164a47270f73e497917728ea0f4407a0115db1290": {
+      "license_id": "LicenseRef-Qwen3.8-Max",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "If the licensee ... conducts a Model as a Service or AI Work Assistant business, and the aggregate revenue ... exceeds US$50,000,000 ... shall obtain a separate license"
+    },
+    "458a5c57d8e622e395eb0e59799ba5bba1ea7524ffd120ee6e3018688d7d6ace": {
+      "license_id": "LicenseRef-Muse-Spark-Open",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "Licensee shall prominently display \"Built with Muse Spark Open\""
+    },
+    "cc7da9ea0f8a97ef15ab3bf0389e636ce79ffca1aef5489520796ac87d87a87b": {
+      "license_id": "LicenseRef-bilibili-Model-Use",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "more than 100 million monthly active users ... or annual revenue ... exceeded RMB 1 billion, You must request a separated license"
+    },
+    "e41645104f7e83d614d94daf93c452ebeaeca12415865b0f76cc02374ad3a223": {
+      "license_id": "LicenseRef-bilibili-Model-Use",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same text as cc7da9ea0f8a"
+    },
+    "53875532237e0a97b17a41721556ff57e93193fc566e48c3a0febe6e35bb5343": {
+      "license_id": "LicenseRef-bilibili-Model-Use",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same text as cc7da9ea0f8a"
+    },
+    "9db8f114ce84e3eba181a98edb3034cef64ee09de8b1b2af765c7433554491c9": {
+      "license_id": "LicenseRef-Katanemo-Community",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "If you use, reproduce, modify, distribute, and create derivative works from the Katanemo Materials for commercial purposes, you must obtain a separate commercial license from DigitalOcean"
+    },
+    "d9950a9f78d08ebfcf55567f0b7265893abfbdd57daa2f62cf08b96294386bec": {
+      "license_id": "LicenseRef-Katanemo-Community",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "If you are commercially using the Materials, you shall request a license from us."
+    },
+    "8b2e018eeb3967a4636ccc57528440b33c14dd6e02ad67571fc7759489dde9a0": {
+      "license_id": "LicenseRef-Boson-Higgs-Audio-2-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "greater than 100,000 annual active users ... you must request an expanded license from Boson AI"
+    },
+    "af5b7213e07135d1dcd2c745612fa6b074b1f982879f6d52158062f9245b5964": {
+      "license_id": "LicenseRef-Moonshine-Community",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "register with Moonshine AI at (https://moonshine.ai/community-license)"
+    },
+    "17694bc66d045524ab4c0cf15765414cdf71cdf507520a97b1c2721303749e67": {
+      "license_id": "LicenseRef-MSRLA",
+      "verdict": "refused",
+      "at": "2026-11-15",
+      "note": "If machine learning model(s) are included, you may use the model(s), but you may not distribute the models."
+    },
+    "f95172ae8c823aebb14f73810fc71ce026e27555a17134d4720233caf8c2b2f0": {
+      "license_id": "LicenseRef-Llama-4-Community",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "Llama 4 Community License: \"provide a copy of this Agreement ... and prominently display \\\"Built with Llama\\\"\""
+    },
+    "60fb8cdec6dc73528073d611d551f25b922868cc7d2424a4cec738924a3d1cc2": {
+      "license_id": "LicenseRef-Llama-3-Community",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "Meta Llama 3 Community License: \"prominently display \\\"Built with Meta Llama 3\\\"\""
+    },
+    "3587f7eb49ecda1fdd4b53fffd72c043337c8772eaf5eeade9a9c1b07421c183": {
+      "license_id": "LicenseRef-INF-Model",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "You are permitted to reproduce and distribute the Model or any Derivative Models ... If you choose to distribute the Model, it is mandatory to: Provide each recipient with a copy of this Agreement."
+    },
+    "1367057bf17041aa1d69286a1400be5f464d2f8b8f54f600088b209eac1850be": {
+      "license_id": "LicenseRef-Swift-Open-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "The rights granted under this License for Commercial Use are conditioned upon You or Your Legal Entity not exceeding the Threshold."
+    },
+    "7a3af3e6b43fcb7c486ea8167252a36a9532dcbdf02d1704a749881872ec551c": {
+      "license_id": "LicenseRef-Swift-Open-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as 1367057bf170 (base model Qwen3.8-Flash-Next under the Qwen Community License)"
+    },
+    "915ffe920f90088d15986bb6f7fab02e08b9a167cfbde65b012741ad88010e4f": {
+      "license_id": "LicenseRef-Swift-Open-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "same as 1367057bf170"
+    },
+    "7ef64a58bdbe3ca4dc3299df7ef969cb41065301852356d152309dc471f97c7b": {
+      "license_id": "LicenseRef-Youtu-LLM",
+      "verdict": "territory",
+      "at": "2026-11-15",
+      "note": "Youtu-LLM IS NOT INTENDED FOR USE WITHIN THE EUROPEAN UNION. IN THE EVENT OF ANY CONFLICT, THIS CLAUSE SHALL PREVAIL."
+    },
+    "f715982df6ce767ae64864d74b95644e5d658aab54717dbceeb252eb3cbcb421": {
+      "license_id": "Apache-2.0",
+      "verdict": "permissive",
+      "at": "2026-11-15",
+      "note": "This model is a derivative work of Qwen3-0.6B ... licensed under the Apache License, Version 2.0 (full Apache-2.0 text follows)"
+    },
+    "d956d2d305a0639211c9cbde71501accb0e1474cc9ddf79a47820a522aff6f98": {
+      "license_id": "Apache-2.0",
+      "verdict": "permissive",
+      "at": "2026-11-15",
+      "note": "Apache License Version 2.0, January 2004 (standard text)"
+    },
+    "4102997e49bf6fd1f96a426feabb6ec8611d94a8f318a9473a5277498c4c6df5": {
+      "license_id": "LicenseRef-ContextPilot",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "ContextPilot-14B is made available solely for the purpose of scientific research and development. You shall not use it for any other purpose."
+    },
+    "4948c7c82e6879d25a10ebcb153361b373cec319490f6ba4616c2825df37c989": {
+      "license_id": "LicenseRef-Fastino-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "used in Production for any Commercial Use by an entity whose Annual Revenue exceeds 10,000,000 US dollars ... shall obtain a separate written commercial agreement"
+    },
+    "6eb8a48a607a23a77032ec5849ef6077a9bd519c8fa0ed37fe1a9e5e82c252a6": {
+      "license_id": "LicenseRef-Personal-Use-1.0",
+      "verdict": "refused",
+      "at": "2026-11-15",
+      "note": "Sell, rent, lease, license, sublicense, or redistribute the Model or its Derivatives to any third party."
+    },
+    "e2361f52ad5be22b937a6e983c824a534c5cffa454b6c34af2f8ce0c2cdf7c1a": {
+      "license_id": "PolyForm-Strict-1.0.0",
+      "verdict": "refused",
+      "at": "2026-11-15",
+      "note": "for any permitted purpose, other than distributing the software or making changes or new works based on the software"
+    },
+    "e7914ddbb068110d9f9e1e1283dd4bc23ec2a5223909b7fd2a2ca9a152d853fe": {
+      "license_id": "LicenseRef-Hi3D-Open-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "Within sixty days after first triggering the Scale Threshold, you must notify OCEANO HK HOLDING LIMITED and apply for a separate written license."
+    },
+    "d6b41838fa748a1d88481a3d0ef476c87f5538747f54057f9324066606af32a7": {
+      "license_id": "LicenseRef-FAIR-NC-Research-1",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "FAIR Noncommercial Research License v1"
+    },
+    "bf552305d13e35571ee07d8b4ad060932c4a95640df2e07703fde0bd8b8e8751": {
+      "license_id": "LicenseRef-Kwaipilot-Model",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "You may ... distribute or make available to Third Parties the Model Works, provided that You ... provide ... the source of the Model and a copy of this Agreement"
+    },
+    "5188f2b355da20647257a3156db5834c794e5fb5e6d8dc4d4cdbb3180e75b85b": {
+      "license_id": "LicenseRef-LFM-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "LFM Open License v1.0: \"Threshold\" shall mean annual revenue of 10 million United States dollars ($10,000,000) or more."
+    },
+    "b82a2805162bde714a4eb27b9063c4fc3345d08a30be055134a6160e5430ba74": {
+      "license_id": "LicenseRef-Krea-2-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "Commercial Use ... is permitted only if you ... have total company-wide annual revenue of less than one million United States dollars"
+    },
+    "b5c0e5cf74cf51af1ecbc4af597cfcd13fd9925611838884a681070838a14a50": {
+      "license_id": "LicenseRef-Qwen-Research",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "Qwen RESEARCH LICENSE AGREEMENT: \"to use, reproduce, distribute ... the Materials FOR NON-COMMERCIAL PURPOSES ONLY\" (Qwen/Qwen2.5-VL-3B-Instruct LICENSE)"
+    },
+    "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9": {
+      "license_id": "LicenseRef-Qwen-Research",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "Qwen RESEARCH LICENSE AGREEMENT: same grant, FOR NON-COMMERCIAL PURPOSES ONLY"
+    },
+    "5410c8985a7fb8c629e934cbaebdb4ffa2a0bed6404ce714369f78bb3f68e9c0": {
+      "license_id": "LicenseRef-Qwen-Research",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "Qwen RESEARCH LICENSE AGREEMENT: same grant, FOR NON-COMMERCIAL PURPOSES ONLY (jinaai/jina-embeddings-v4 LICENSE)"
+    },
+    "a81b6035bfb4ac19a71a8293a6a688ad8d44c6411fbfda5300a41c4fdc773b4e": {
+      "license_id": "LicenseRef-AI2-ImpACT-LR-1.0",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "You may Distribute any Artifacts and Your Derivatives, provided that: 1. You flow down and include the Use-Based Restrictions as an enforceable provision"
+    },
+    "f52767b81fa3372d2a5e17ab39f89feb3d24845f078995681740109c645122d7": {
+      "license_id": "LicenseRef-DINOv3",
+      "verdict": "gated",
+      "at": "2026-11-15",
+      "note": "DINOv3 License (2025-08-19); the table already lists it as gated"
+    },
+    "80b482a0c9430e34f3dfb1091f6744db8d2579533346009af81d8d8d55d8346e": {
+      "license_id": "LicenseRef-NVIDIA-Source-Code-NC",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "The Work and any derivative works thereof only may be used or intended for use non-commercially."
+    },
+    "1dcf264c3e305118d5267e2d0aae21e70d3783fd86df63adebbaa4dd834ea8e0": {
+      "license_id": "LicenseRef-Sarvam-Research",
+      "verdict": "non-commercial",
+      "at": "2026-11-15",
+      "note": "Any use of the Sarvam Model, Derivatives, or Outputs for commercial purposes requires explicit written permission from Sarvam AI."
+    },
+    "d7d9db858500ac9073f4b5decef8e208454357226f535f65079ce4376047569f": {
+      "license_id": "LicenseRef-Tencent-Hunyuan-Community",
+      "verdict": "territory",
+      "at": "2026-11-15",
+      "note": "Tencent HY Community License: \"Territory\" shall mean the worldwide territory, excluding the territory of the European Union, United Kingdom and South Korea."
+    },
+    "a82a277ebb5d9d0246751b0b042b141a22930a637c2685fec72fb08db445be47": {
+      "license_id": "LicenseRef-Tencent-Hunyuan-Community",
+      "verdict": "territory",
+      "at": "2026-11-15",
+      "note": "\"Territory\" shall mean the worldwide territory, excluding the territory of the European Union, United Kingdom and South Korea. (Hunyuan 0.5B)"
+    },
+    "a01de40400259e000371b84bd112e3a42fbeb33d042bf56dec7cd827c688a63f": {
+      "license_id": "LicenseRef-Tencent-Hunyuan-Community",
+      "verdict": "territory",
+      "at": "2026-11-15",
+      "note": "same Territory clause (Hunyuan 1.8B)"
+    },
+    "b9a1719c6f32d0140d2d34da4f5830bf15d3b3a354c8f083a47fdecfaf6946d3": {
+      "license_id": "LicenseRef-Tencent-Hunyuan-Community",
+      "verdict": "territory",
+      "at": "2026-11-15",
+      "note": "same Territory clause (Hunyuan 4B)"
+    },
+    "0d666200251ceb38448241425d0d7d5d9ccf2f330d5385b8104a2ba98ad748e8": {
+      "license_id": "LicenseRef-Tencent-Hunyuan-Community",
+      "verdict": "territory",
+      "at": "2026-11-15",
+      "note": "same Territory clause (Hunyuan 7B)"
+    },
+    "2576e2a47e576d18b3f86a9216083c2966bc19391207a80f9cd8faced69542d5": {
+      "license_id": "LicenseRef-xAI-Community",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "For commercial use solely if you and your affiliates abide by all of the guardrails provided in xAI's Acceptable Use Policy"
+    },
+    "26272dfb472cc79cdc667dd962b8876b8087297ee7cc9737291b428eb3bfc32e": {
+      "license_id": "LicenseRef-Browser-Use-Modified-MIT",
+      "verdict": "custom",
+      "at": "2026-11-15",
+      "note": "You are not authorized to exercise any rights under this license if the global consolidated annual revenue of your company (or that of your employer) exceeds $1 million"
     }
   },
   "names": {
@@ -413,7 +1367,62 @@
     "timesfm-non-commercial-license-v1.0": "licenseref-timesfm-non-commercial",
     "sai-nc-community": "licenseref-sai-nc-community",
     "apache-2.0": "apache-2.0",
-    "mit": "mit"
+    "mit": "mit",
+    "nvidia-nemotron-open-model-license": "licenseref-nvidia-nemotron-open-model",
+    "nvidia-open-model-license": "licenseref-nvidia-open-model",
+    "ltx-2-community-license-agreement": "licenseref-ltx-2-community",
+    "ltx-2-community-license": "licenseref-ltx-2-community",
+    "ltx-2.x-community-license-agreement": "licenseref-ltx-2.x-community",
+    "stabilityai-ai-community": "licenseref-stability-ai-community",
+    "stable-audio-community": "licenseref-stability-ai-community",
+    "stability-ai-community": "licenseref-stability-ai-community",
+    "polyform-strict-1-0-0": "polyform-strict-1.0.0",
+    "kimi-k3": "licenseref-kimi-k3",
+    "llama4": "llama4",
+    "llama3": "llama3",
+    "deepseek-license": "licenseref-deepseek",
+    "deepseek": "licenseref-deepseek",
+    "qwen": "licenseref-qwen-license",
+    "krea-2-community-license": "licenseref-krea-2-community",
+    "sapiens2-license": "licenseref-sapiens2",
+    "qwen-community-1.0": "licenseref-qwen-community-1.0",
+    "apple-amlr": "licenseref-apple-amlr",
+    "mit-and-apache-2.0": "mit-and-apache-2.0",
+    "sam-license": "licenseref-sam",
+    "msrla": "licenseref-msrla",
+    "kwaipilot-license": "licenseref-kwaipilot-model",
+    "swift-open-license-1.0": "licenseref-swift-open-1.0",
+    "minimax-community": "licenseref-minimax-community",
+    "mistral-ecosystem-open-weight": "licenseref-mistral-ecosystem-open-weight",
+    "mistral-ecosystem-open-weight-license": "licenseref-mistral-ecosystem-open-weight",
+    "mistral-modified-mit": "licenseref-mistral-modified-mit",
+    "exaone": "licenseref-exaone-nc",
+    "tongyi-qianwen": "licenseref-tongyi-qianwen",
+    "tongyi-qianwen-license-agreement": "licenseref-tongyi-qianwen",
+    "tongyi-qianwen-research": "licenseref-tongyi-qianwen-research",
+    "muse-model-license": "licenseref-muse-spark-open",
+    "glm-4": "licenseref-glm-4",
+    "codegeex4": "licenseref-glm-4",
+    "cogvlm2": "licenseref-cogvlm",
+    "qwen3.8-max": "licenseref-qwen3.8-max",
+    "inf": "licenseref-inf-model",
+    "tencent-hunyuan-a13b": "licenseref-tencent-hunyuan-community",
+    "fastino-community": "licenseref-fastino-community",
+    "katanemo-research": "licenseref-katanemo-community",
+    "glm-5.3": "licenseref-glm-5.3",
+    "gemma-terms-of-use": "gemma",
+    "youtu-llm": "licenseref-youtu-llm",
+    "livekit-model-license": "licenseref-livekit-model",
+    "bilibili-model-license": "licenseref-bilibili-model-use",
+    "bilibili-model-use-license-agreement": "licenseref-bilibili-model-use",
+    "fish-audio-community-license": "licenseref-fish-audio-community-1.0",
+    "minimax-music3-community-license": "licenseref-minimax-music3-community",
+    "minimax-h3-community-license-agreement": "licenseref-minimax-h3-community",
+    "s1-mini-license": "apache-2.0",
+    "hi3d-open-license-agreement-1.0": "licenseref-hi3d-open-1.0",
+    "hi3d-open-license-1.0": "licenseref-hi3d-open-1.0",
+    "nsclv1": "licenseref-nvidia-source-code-nc",
+    "grok-2": "licenseref-xai-community"
   },
   "names_non_commercial_pattern": "(^|[-_ ])(non-?commercial|nc|research-only)([-_ ]|$)"
 }
