@@ -115,6 +115,8 @@ async function startWorker(port, inspector, withKey, srv) {
     "INSERT INTO users (id, handle, name, rules_accepted_at) VALUES ('user_Bob', 'bob-test', 'Bob', '2026-11-16T00:00:00Z'); " +
     "INSERT INTO repos (id, kind, source, namespace, name, owner_user_id) VALUES ('rp_BOBMODEL', 'model', 'community', 'bob-test', 'm', 'user_Bob')");
   wr('r2', 'object', 'put', `freeweights/manifests/${id}.json`, '--local', '--file', mf.file, '--content-type', 'application/json');
+  const bobPage = join(dir, 'bob-page.html'); writeFileSync(bobPage, '<!doctype html><title>bob-test/m</title>');
+  wr('r2', 'object', 'put', 'freeweights/alt.freeweights.community/bob-test/m/index.html', '--local', '--file', bobPage, '--content-type', 'text/html; charset=utf-8');
   const p = spawn('npx', ['wrangler', 'dev', '--local', '--config', cfg, '--port', port, '--inspector-port', inspector, '--persist-to', dir], { cwd: here, stdio: 'ignore' });
   procs.push(p);
   for (let i = 0; i < 120; i++) {
@@ -276,6 +278,18 @@ test('create of an existing own repo: 409 conflict with the repo url', async () 
   const r = await A('/api/repos/create', { method: 'POST', ...bearer(clerkJwt({ sub: 'user_Bob' })), body: JSON.stringify({ name: 'm', type: 'model' }) });
   const body = await refused(r, 409, 'conflict');
   assert.match(body.url, /\/bob-test\/m$/);
+});
+
+// Regression (closed-mode deploy check, 2026-11-16): an owner delete answered 404 on the API but left the community
+// page in R2, where Cloud Connector keeps serving it (the sweep keys page cleanup on uploads the delete already released).
+test('owner delete removes the community page', async () => {
+  const page = '/alt.freeweights.community/bob-test/m/';
+  // No GET before the delete: the Worker keeps R2 pages in the edge cache for 5 minutes. The seed put in before() made it.
+  const r = await A('/api/repos/delete', { method: 'DELETE', ...bearer(clerkJwt({ sub: 'user_Bob' })), body: JSON.stringify({ name: 'm', type: 'model' }) });
+  assert.equal(r.status, 200);
+  let status = 200;
+  for (let i = 0; i < 20 && status === 200; i++) { await new Promise((ok) => setTimeout(ok, 100)); status = (await A(page)).status; }
+  assert.equal(status, 404);
 });
 
 test('signed in without a profile: whoami 404 profile_not_found', async () => {

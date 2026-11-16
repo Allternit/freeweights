@@ -2,6 +2,8 @@ import type { Caller, Env, UserRow } from '../types';
 import { authErr, authJson } from '../http';
 import { authenticate, withClaim } from '../auth';
 import { deletedHandle, handleProblem } from '../auth/handle';
+import { removeRepoPage } from '../pages/repo';
+import { renderCommunityIndex } from '../pages/community-index';
 import type { Handler } from '../router';
 
 // /api/fw/v1/account (spec/parts/write-api.yaml: getAccount, createAccount, updateAccount, deleteAccount).
@@ -120,6 +122,10 @@ export const accountRoute: Handler = async ({ req, env, ctx, url }) => {
     if (!live) return authErr(404, 'profile_not_found', 'No Freeweights profile to delete.');
     const tomb = deletedHandle(a.userId);
     const now = ISO();
+    // Community pages live in R2 under the current handle; the batch below renames the namespace to the tombstone,
+    // so the sweep could never find these keys afterwards. Read them first, delete them after the batch.
+    const { results: pages } = await env.ACC!.prepare("SELECT kind, namespace, name FROM repos WHERE owner_user_id = ?1 AND source = 'community' AND status <> 'removed'")
+      .bind(a.userId).all<{ kind: string; namespace: string; name: string }>();
     await env.ACC!.batch([
       // Repos stop being served at once (resolve answers 404 for owner / account_deleted). Their bytes stay counted
       // until the files are deleted (admin repo purge, or the sweep), then usage reconcile releases them.
@@ -130,6 +136,12 @@ export const accountRoute: Handler = async ({ req, env, ctx, url }) => {
       env.ACC!.prepare("UPDATE users SET status = 'deleted', handle = ?2, name = NULL, avatar_url = NULL, bio = NULL, homepage = NULL, updated_at = ?3 WHERE id = ?1").bind(a.userId, tomb, now),
       audit(env, a.userId, 'account.delete', a.userId),
     ]);
+    if (pages?.length) {
+      ctx?.waitUntil((async () => {
+        for (const r of pages) await removeRepoPage(env, r);
+        await renderCommunityIndex(env);
+      })().catch(() => {}));
+    }
     return authJson({ deleted: true });
   }
 
