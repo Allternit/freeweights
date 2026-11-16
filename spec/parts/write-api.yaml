@@ -1272,7 +1272,12 @@ paths:
     get:
       tags: [allternit]
       operationId: listMyRepos
-      summary: The caller's community repos in every state, with scan progress. The account page and the upload UIs read it.
+      summary: The caller's community repos, with scan progress. The account page and the upload UIs read it.
+      description: |
+        Newest first, at most 200. Every state except repos the owner deleted (their names are free again); a
+        takedown stays listed as `removed` with its reason. Any credential of the caller may read it (no write
+        scope); a suspended account still sees its repos. The reply and each repo carry `"source": "community"`
+        and `"section": "alt.freeweights.community"`. `Cache-Control: private, no-store`.
       parameters:
         - {name: kind, in: query, schema: {type: string, enum: [model, dataset]}}
       responses:
@@ -1282,9 +1287,11 @@ paths:
             application/json:
               schema:
                 type: object
-                required: [repos]
+                required: [repos, source, section]
                 properties:
                   repos: {type: array, items: {$ref: '#/components/schemas/MyRepo'}}
+                  source: {const: community}
+                  section: {const: alt.freeweights.community}
         '401': {$ref: '#/components/responses/Unauthorized'}
         '404': {description: Signed in but no Freeweights profile yet (profile_not_found)., content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
         '503': {$ref: '#/components/responses/NotConfigured'}
@@ -1486,10 +1493,13 @@ paths:
       operationId: adminRestoreRepo
       summary: Undo a removal (an appeal or a counter-notice), or release a held repo after review.
       description: |
-        A removed repo goes back to `live` when every scan of its head is clean, else to `held`. A held repo
-        whose findings an admin reviewed as false positives goes `live` with `release_held: true`: its held
-        scans are marked clean and promoted. Hashes are taken off `blocked_hashes` only with
-        `unblock: true`. A purged repo cannot be restored (409 `conflict`).
+        The repo state is worked out again the way a scan result does (spec/accounts-v1.md 11.6): `live` when
+        nothing waits after the head, `held` when a waiting commit has a held scan, else `scanning` (`draft`
+        with no commit). A held repo whose findings an admin reviewed as false positives is released with
+        `release_held: true`: up to 10 held or error scans of the commits after the head are marked clean and
+        promoted per call (repeat while `held_left` > 0), and the head moves over every commit that is then
+        fully clean. A repo that comes back `live` gets its detail page rendered again. Hashes are taken off
+        `blocked_hashes` only with `unblock: true`. A purged repo cannot be restored (409 `conflict`).
       security: [{fwAdmin: []}]
       parameters:
         - {name: repoId, in: path, required: true, schema: {type: string, pattern: '^rp_[0-9A-Za-z]+$'}}
@@ -1508,7 +1518,7 @@ paths:
           description: Restored.
           content:
             application/json:
-              schema: {type: object, required: [id, status], properties: {id: {type: string}, status: {type: string, enum: [live, held, scanning]}}}
+              schema: {type: object, required: [id, status, held_left], properties: {id: {type: string}, status: {type: string, enum: [draft, live, held, scanning]}, held_left: {type: integer, description: Held or error scans still waiting after the head.}}}
         '401': {$ref: '#/components/responses/BadSignature'}
         '404': {$ref: '#/components/responses/NotFound'}
         '409': {$ref: '#/components/responses/Conflict'}
@@ -1863,7 +1873,7 @@ components:
         oldest_queued_at: {type: [string, 'null'], format: date-time}
     MyRepo:
       type: object
-      required: [id, type, name, status, bytes, scans]
+      required: [id, type, name, status, bytes, scans, page_url, source, section]
       properties:
         id: {type: string, description: rp_...}
         type: {type: string, enum: [model, dataset]}
@@ -1874,9 +1884,12 @@ components:
         bytes: {type: integer}
         createdAt: {type: string, format: date-time}
         updatedAt: {type: string, format: date-time}
+        page_url: {type: [string, 'null'], description: 'Path of the community detail page, /alt.freeweights.community/<namespace>/<name>/. Null until a commit is served, and for a removed repo.'}
+        source: {const: community}
+        section: {const: alt.freeweights.community}
         scans:
           type: object
-          description: Counts for the head commit. Findings are shown to admins only; the owner sees the codes.
+          description: Counts for the commits waiting after the head (the head moves only over fully clean commits, spec/accounts-v1.md 11.6); when none waits, for the head commit. Findings are shown to admins only; the owner sees the codes.
           required: [queued, scanning, clean, held, error]
           properties:
             queued: {type: integer}

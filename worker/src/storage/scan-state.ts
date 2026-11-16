@@ -74,21 +74,44 @@ export function checkClaim(scan: { status: ScanStatus; attempts: number; claimed
 
 // ---- Promotion ---------------------------------------------------------------------------------------
 
-export interface PendingCommit { oid: string; parent_oid: string | null; statuses: ScanStatus[] }
+export interface PendingCommit {
+  oid: string;
+  parent_oid: string | null;
+  statuses: ScanStatus[];
+  /** sha256 of the held files this commit brought (needed only for a commit with a held scan). */
+  heldShas?: string[];
+  /** sha256 of every file in this commit's tree (needed only for a commit after a held one), null if unreadable. */
+  treeShas?: string[] | null;
+}
 
 /**
- * Commits (oldest first, every commit after the head) that can become the head now, in order. A commit
- * moves the head only when every scan in it is clean AND its parent is the head, so a commit is never
- * served on top of files that were not cleared. A commit with no scans (only deletions) counts as clean.
+ * Commits (oldest first, every commit after the head) that can become the head now, in order. The head moves
+ * to a commit only when every scan in it is clean AND no file in its tree is a held file. Commits chain on
+ * the tip (routes/commit.ts), so the fix for a held file is a commit on top of the held one: the held commit
+ * is passed over (never served), and the fix is served once its own scans are clean and its tree no longer
+ * carries any held sha256 (the clean files the held commit brought were promoted by their own clean scans).
+ * A commit with a scan still queued, scanning or in error stops the walk (it waits; later commits wait too).
+ * A commit with no scans (only deletions or re-used blobs) counts as clean.
  */
 export function promotableChain(pending: PendingCommit[], head: string | null): string[] {
   const out: string[] = [];
-  let at = head;
+  let prev = head;
+  const held = new Set<string>();
   for (const c of pending) {
-    if ((c.parent_oid ?? null) !== at) break;
-    if (!c.statuses.every((s) => s === 'clean')) break;
+    if ((c.parent_oid ?? null) !== prev) break;
+    if (c.statuses.some((s) => s === 'queued' || s === 'scanning' || s === 'error')) break;
+    if (c.statuses.includes('held')) {
+      if (!c.heldShas?.length) break; // which files are held is unknown: pass nothing over
+      for (const h of c.heldShas) held.add(h);
+      prev = c.oid;
+      continue;
+    }
+    if (held.size) {
+      if (!c.treeShas) break; // tree unreadable: cannot prove no held file is in it
+      prev = c.oid;
+      if (c.treeShas.some((x) => held.has(x))) continue; // still carries a held file: not served
+    } else prev = c.oid;
     out.push(c.oid);
-    at = c.oid;
   }
   return out;
 }

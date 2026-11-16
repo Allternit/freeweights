@@ -105,6 +105,27 @@ test('a held update leaves the last clean head served', () => {
   assert.equal(repoStatusFrom('live', [['held']], true), 'held');
 });
 
+test('a fix commit on top of a held one is served once its tree carries no held file', () => {
+  const BAD = 'b'.repeat(64), OK = 'c'.repeat(64), NEW = 'd'.repeat(64);
+  // A (head) <- B held (brought BAD and OK) <- C clean, tree without BAD -> head jumps to C; B is never served
+  const pending = [
+    { oid: B, parent_oid: A, statuses: ['held', 'clean'], heldShas: [BAD] },
+    { oid: C, parent_oid: B, statuses: ['clean'], treeShas: [OK, NEW] },
+  ];
+  assert.deepEqual(promotableChain(pending, A), [C]);
+  // C still carries BAD -> nothing moves and the repo stays held
+  pending[1].treeShas = [OK, BAD];
+  assert.deepEqual(promotableChain(pending, A), []);
+  assert.equal(repoStatusFrom('held', pending.map((p) => p.statuses), true), 'held');
+  // C's tree unreadable -> nothing moves
+  pending[1].treeShas = null;
+  assert.deepEqual(promotableChain(pending, A), []);
+  // a delete-only fix (no scans) counts as clean
+  assert.deepEqual(promotableChain([pending[0], { oid: C, parent_oid: B, statuses: [], treeShas: [OK] }], A), [C]);
+  // a fix still scanning waits
+  assert.deepEqual(promotableChain([pending[0], { oid: C, parent_oid: B, statuses: ['scanning'], treeShas: [OK] }], A), []);
+});
+
 test('a clean commit on top of an unscanned parent waits for the parent; then both move in order', () => {
   const pending = [
     { oid: A, parent_oid: null, statuses: ['scanning'] },

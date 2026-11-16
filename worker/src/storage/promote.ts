@@ -97,12 +97,29 @@ export async function settleRepo(env: Env, repoId: string): Promise<RepoStatus> 
       WHERE repo_id = ? AND ref = 'refs/heads/main' AND rowid > ? ORDER BY rowid LIMIT ${MAX_PENDING}`).bind(repoId, after)
     .all<{ oid: string; parent_oid: string | null; tree_key: string; bytes: number }>()).results;
   const scanRows = commits.length
-    ? (await db.prepare(`SELECT commit_oid, status FROM scans WHERE repo_id = ? AND commit_oid IN (SELECT oid FROM commits WHERE repo_id = ? AND rowid > ?)`)
-      .bind(repoId, repoId, after).all<{ commit_oid: string; status: ScanStatus }>()).results
+    ? (await db.prepare(`SELECT commit_oid, status, sha256 FROM scans WHERE repo_id = ? AND commit_oid IN (SELECT oid FROM commits WHERE repo_id = ? AND rowid > ?)`)
+      .bind(repoId, repoId, after).all<{ commit_oid: string; status: ScanStatus; sha256: string }>()).results
     : [];
   const by = new Map<string, ScanStatus[]>();
-  for (const s of scanRows) by.set(s.commit_oid, [...(by.get(s.commit_oid) ?? []), s.status]);
-  const pending: PendingCommit[] = commits.map((c) => ({ oid: c.oid, parent_oid: c.parent_oid, statuses: by.get(c.oid) ?? [] }));
+  const heldBy = new Map<string, string[]>();
+  for (const s of scanRows) {
+    by.set(s.commit_oid, [...(by.get(s.commit_oid) ?? []), s.status]);
+    if (s.status === 'held') heldBy.set(s.commit_oid, [...(heldBy.get(s.commit_oid) ?? []), s.sha256]);
+  }
+  const pending: PendingCommit[] = commits.map((c) => ({ oid: c.oid, parent_oid: c.parent_oid, statuses: by.get(c.oid) ?? [], heldShas: heldBy.get(c.oid) }));
+  // A commit after a held one is served only if its tree carries no held file: read those trees (rare: only
+  // while a fix for a held file is in flight). The pending tree is in QUARANTINE (FW once published).
+  const firstHeld = pending.findIndex((p) => p.statuses.includes('held'));
+  if (firstHeld >= 0) {
+    for (const p of pending.slice(firstHeld + 1)) {
+      if (p.statuses.includes('held')) continue;
+      const key = commits.find((x) => x.oid === p.oid)!.tree_key;
+      const o = (await env.QUARANTINE!.get(key)) ?? (await env.FW.get(key));
+      let files: TreeFile[] | null = null;
+      try { files = o ? parseTree(await o.json()) : null; } catch { files = null; }
+      p.treeShas = files ? files.map((f) => f.sha256) : null;
+    }
+  }
 
   let head = repo.head_commit;
   for (const oid of promotableChain(pending, head)) {
@@ -119,7 +136,8 @@ export async function settleRepo(env: Env, repoId: string): Promise<RepoStatus> 
   if (status !== repo.status) {
     await db.prepare(`UPDATE repos SET status = ?, updated_at = ? WHERE id = ? AND status <> 'removed'`).bind(status, iso(Date.now()), repoId).run();
   }
-  if (status === 'live' && (head !== repo.head_commit || repo.status !== 'live')) await publishPage(env, repoId);
+  // Render when the served head moved (even if a later commit still waits) or the repo just came back live.
+  if (head && (head !== repo.head_commit || (status === 'live' && repo.status !== 'live'))) await publishPage(env, repoId);
   return status;
 }
 
@@ -131,10 +149,11 @@ const README_MAX = 200 * 1024;
  * from the head tree, every file clean. A page failure never undoes the promotion: the API and resolve already
  * serve the repo, and the next promotion renders the page again.
  */
-async function publishPage(env: Env, repoId: string): Promise<void> {
+export async function publishPage(env: Env, repoId: string): Promise<void> {
   try {
     const repo = await env.ACC!.prepare(`SELECT * FROM repos WHERE id = ?`).bind(repoId).first<RepoRow>();
-    if (!repo || repo.status !== 'live' || repo.private || !repo.head_commit) return;
+    // Any repo with a served head gets a page (a newer commit scanning or held leaves the head served).
+    if (!repo || repo.status === 'removed' || repo.private || !repo.head_commit) return;
     const c = await env.ACC!.prepare(`SELECT tree_key FROM commits WHERE oid = ?`).bind(repo.head_commit).first<{ tree_key: string }>();
     const files = c ? await readServedTree(env, c.tree_key) : null;
     if (!files) return;

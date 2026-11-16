@@ -9,7 +9,11 @@
 #   options: --rules-only (leave the Worker routes alone)  --format json (print the plan as JSON; for tests)
 #
 # Rules on the zone (every ruleset rule carries a `ref` starting fw_cc_, the connector rule a description starting
-# "freeweights-cc:", so --rollback removes exactly these and nothing else):
+# "freeweights-cc:", so --rollback removes exactly these and nothing else, except fw_cc_bucket_guard):
+#   fw_cc_bucket_guard   WAF block     on FW_R2_HOST (the bucket's public custom domain) every path outside
+#                        /manifests/* and /alt.freeweights*, and any path with "..". The domain could otherwise
+#                        serve repos/* blobs and trees directly, past the takedown and scan checks (spec 11.6).
+#                        Installed first; --rollback keeps it (the domain stays public after a rollback).
 #   fw_cc_index_rewrite  URL rewrite   /<alt.freeweights.*>/<org>/<repo>/ -> .../index.html (the R2 key)
 #   fw_cc_bare_301       redirect      /<alt.freeweights.*>/<org>/<repo> -> .../<repo>/ (301, query string kept)
 #   fw_cc_page_headers   resp headers  CSP + security headers from site/lib/csp.mjs, CORS, on detail pages
@@ -21,7 +25,7 @@
 # Order on --rollback: cf_static_routes.sh --connector-off first (the Worker takes the paths back), then the rules.
 #
 # Environment (never committed): CF_API_TOKEN (zone token: Cloud Connector, Transform Rules, Single Redirects,
-# Cache Rules, Workers Routes; edit), CF_ZONE_ID (allternit.com). FW_HOST (default freeweights.allternit.com).
+# Cache Rules, Workers Routes, Zone WAF; edit), CF_ZONE_ID (allternit.com). FW_HOST (default freeweights.allternit.com).
 # FW_R2_HOST: the bucket's public custom domain in the same zone, proxied (r2.dev is not supported by the
 # connector); default freeweights-files.allternit.com.
 set -euo pipefail
@@ -73,7 +77,15 @@ manifests = f'starts_with({P}, "/manifests/")'
 detail = f"({slash} or {index}) and {not_list}"
 hdr = lambda d: {k: {"operation": "set", "value": v} for k, v in d.items()}
 
+# Only what the connector serves may be read on the bucket's own domain: manifests and the alt.freeweights* pages
+# (catalog and community). Blobs and trees (repos/<id>/...) are served only by the Worker after its checks.
+bucket_guard = (f'(http.host eq "{R2_HOST}" and ((not starts_with({P}, "/manifests/") and not starts_with({P}, "/alt.freeweights"))'
+                f' or {P} contains ".."))')
+KEEP_ON_ROLLBACK = {"fw_cc_bucket_guard"}
+
 RULES = [  # (phase, rule) in apply order
+    ("http_request_firewall_custom", {"ref": "fw_cc_bucket_guard", "description": "Freeweights: bucket domain serves only manifests and alt.freeweights pages",
+        "expression": bucket_guard, "action": "block"}),
     ("http_request_transform", {"ref": "fw_cc_index_rewrite", "description": "Freeweights: detail page URL -> R2 key index.html",
         "expression": f"({host} and {slash} and {not_list})", "action": "rewrite",
         "action_parameters": {"uri": {"path": {"expression": f'concat({P}, "index.html")'}}}}),
@@ -165,7 +177,8 @@ def connector(add):
 
 if ROLLBACK:
     connector(False)
-    for phase, r in reversed(RULES): drop_rule(phase, r["ref"])
+    for phase, r in reversed(RULES):
+        if r["ref"] not in KEEP_ON_ROLLBACK: drop_rule(phase, r["ref"])
 else:
     for phase, r in RULES: put_rule(phase, r)
     connector(True)

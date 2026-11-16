@@ -34,10 +34,11 @@ def matcher(expr):
     py = re.sub(r'http\.request\.uri\.path strict wildcard "([^"]*)"', r'W("\1")', expr)
     py = re.sub(r'starts_with\(http\.request\.uri\.path, "([^"]*)"\)', r'SW("\1")', py)
     py = re.sub(r'http\.host eq "([^"]*)"', r'H("\1")', py)
+    py = re.sub(r'http\.request\.uri\.path contains "([^"]*)"', r'C("\1")', py)
     assert not re.search(r"http\.|wildcard|matches", py), py  # nothing left untranslated (and no regex operator: Free plan)
     def f(host, path):
         W = lambda pat: re.fullmatch(".*".join(map(re.escape, pat.split("*"))), path) is not None
-        return eval(py, {"W": W, "SW": path.startswith, "H": lambda h: h == host})  # noqa: S307 - test-only, our own strings
+        return eval(py, {"W": W, "SW": path.startswith, "C": lambda s: s in path, "H": lambda h: h == host})  # noqa: S307 - test-only, our own strings
     return f
 
 
@@ -106,7 +107,18 @@ class CloudConnectorPlan(unittest.TestCase):
         out = run("scripts/cf_cloud_connector.sh", "--rollback")
         self.assertLess(out.index("--connector-off"), out.index("cloud_connector/rules"))
         deleted = re.findall(r"DELETE \S+/rules/\{rule_id:(fw_cc_\w+)\}", out)
-        self.assertEqual(sorted(deleted), sorted(self.rules))
+        self.assertEqual(sorted(deleted), sorted(set(self.rules) - {"fw_cc_bucket_guard"}))  # the guard stays
+
+    def test_bucket_domain_serves_only_manifests_and_pages(self):
+        g = self.rules["fw_cc_bucket_guard"]
+        self.assertEqual((g["phase"], g["action"]), ("http_request_firewall_custom", "block"))
+        block, r2 = matcher(g["expression"]), "freeweights-files.allternit.com"
+        for path in ("/repos/rp_X/blobs/" + "a" * 64, "/repos/rp_X/trees/" + "b" * 40 + ".json", "/", "/index.html",
+                     "/manifests/../repos/rp_X/blobs/x", "/alt.freeweights.community/../repos/x", "/policy/takedowns.json"):
+            self.assertTrue(block(r2, path), path)
+        for path in ("/manifests/BAAI/bge-small-en-v1.5.json", "/alt.freeweights.community/me/m/index.html", "/alt.freeweights.text/BAAI/bge/index.html"):
+            self.assertFalse(block(r2, path), path)
+        self.assertFalse(block(HOST, "/repos/rp_X/blobs/x"))  # the main host is the Worker's, not this rule's
         self.assertNotIn("POST https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/rulesets", out)
 
 

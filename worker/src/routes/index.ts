@@ -14,7 +14,7 @@ import { whoamiRoute } from './whoami';
 import { accountRoute } from './account';
 import { reportsRoute } from './reports';
 import { adminRoute } from './admin';
-import { createRepoRoute, deleteRepoRoute, moveRepoRoute, repoSettingsRoute } from './repos';
+import { createRepoRoute, deleteRepoRoute, listMyReposRoute, moveRepoRoute, repoSettingsRoute } from './repos';
 import { commitRoute, preuploadRoute } from './commit';
 import { lfsBatchRoute, lfsFinishRoute } from './lfs';
 import { communityInfoRoute, communityTreeRoute, communityCommitsRoute, communityRefsRoute, communityResolveRoute } from './community-read';
@@ -87,6 +87,7 @@ export const ROUTES: Route[] = [
   W(/^\/api\/settings\/webhooks\/([^/]+)$/, ['GET', 'POST', 'DELETE']),
   W(/^\/api\/settings\/webhooks\/([^/]+)\/(enable|disable)$/, P),
   W(/^\/api\/fw\/v1\/account$/, ['GET', 'POST', 'PATCH', 'DELETE'], accountRoute),
+  W(/^\/api\/fw\/v1\/repos$/, ['GET', 'HEAD'], listMyReposRoute),
   W(/^\/api\/fw\/v1\/follows$/, ['GET', 'POST', 'DELETE']),
   W(/^\/api\/fw\/v1\/posts$/, P),
   W(/^\/api\/fw\/v1\/posts\/([^/]+)$/, ['DELETE']),

@@ -121,6 +121,11 @@ paths:
       tags: [hub]
       operationId: getModel
       summary: Model detail
+      description: |
+        A community repo (spec/accounts-v1.md 11.6) answers the Hugging Face model-info shape plus
+        `"source": "community"`, `"section": "alt.freeweights.community"` and `"status"`
+        (draft | scanning | live | held). `sha` and `siblings` are the served commit (the last clean head),
+        null and empty until one is served; `status` describes what still waits after it.
       parameters:
         - {$ref: '#/components/parameters/org'}
         - {$ref: '#/components/parameters/repo'}

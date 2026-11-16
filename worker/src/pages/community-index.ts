@@ -31,15 +31,16 @@ export function communityIndexHtml(repos: CommunityListing[], truncated = false)
 }
 
 /**
- * Rebuild the community index from D1 (accounts DB) into R2. Lists live, public, community model and dataset repos,
- * newest first, up to 200. The scan promote step calls it after renderRepoPage / removeRepoPage.
+ * Rebuild the community index from D1 (accounts DB) into R2. Lists public community model and dataset repos that
+ * have a served commit (head_commit set, not removed), newest first, up to 200. A repo whose newer commit is
+ * scanning or held still serves its last clean head (spec/accounts-v1.md 11.6), so it stays listed. The scan promote step calls it after renderRepoPage / removeRepoPage.
  *   renderCommunityIndex(env) -> Promise<{ key: string; repos: number }>
  */
 export async function renderCommunityIndex(env: Env): Promise<{ key: string; repos: number }> {
   if (!env.ACC) throw new Error('renderCommunityIndex: accounts database is not configured');
   const rs = await env.ACC.prepare(
     `SELECT namespace, name, kind, license_id, bytes, updated_at FROM repos
-      WHERE source = 'community' AND status = 'live' AND private = 0 AND kind IN ('model', 'dataset')
+      WHERE source = 'community' AND status <> 'removed' AND head_commit IS NOT NULL AND private = 0 AND kind IN ('model', 'dataset')
       ORDER BY updated_at DESC LIMIT ?1`).bind(LIMIT + 1).all<CommunityListing>();
   const all = rs.results || [];
   const html = communityIndexHtml(all.slice(0, LIMIT), all.length > LIMIT);

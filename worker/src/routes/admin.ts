@@ -1,7 +1,8 @@
 import type { Env } from '../types';
 import { authErr, authJson } from '../http';
 import { requireSigned } from '../auth/hmac';
-import { LIMIT_KEYS, REMOVE_REASONS, diffUsage, limitsView, restoreStatus, type Usage } from '../moderation';
+import { LIMIT_KEYS, REMOVE_REASONS, diffUsage, limitsView, type Usage } from '../moderation';
+import { promoteBlob, publishPage, settleRepo } from '../storage/promote';
 import type { Handler } from '../router';
 
 // /api/fw/v1/admin/* (spec/accounts-v1.md 11.4 and 11.7, spec/parts/write-api.yaml tag admin). Signed with
@@ -154,28 +155,29 @@ async function restoreRepo(env: Env, id: string, b: Record<string, unknown>) {
   if (!repo) return notFound('No such repo.');
   const db = env.ACC!;
   if (repo.status === 'removed' && (await isPurged(env, repo))) return authErr(409, 'conflict', 'This repo was purged; its files are gone and it cannot be restored.');
-  const scans = async () => (await db.prepare('SELECT id, sha256, status FROM scans WHERE repo_id = ?1 AND commit_oid IS ?2').bind(id, repo.head_commit).all<{ id: string; sha256: string; status: string }>()).results;
-  let rows = await scans();
+  // Held files sit in commits after the head (the head only moves over fully clean commits, spec 11.6), so
+  // release looks at every commit waiting after it. Copies go through storage/promote.ts (the same byte move
+  // and usage bookkeeping a clean scan gets); settleRepo then moves the head and sets the state.
+  const waiting = async () => (await db.prepare(`SELECT id, sha256, status FROM scans WHERE repo_id = ?1 AND status IN ('held', 'error')
+      AND commit_oid IN (SELECT oid FROM commits WHERE repo_id = ?1 AND rowid > COALESCE((SELECT rowid FROM commits WHERE oid = ?2), 0))
+      ORDER BY created_at, id`).bind(id, repo.head_commit).all<{ id: string; sha256: string; status: string }>()).results;
   const now = ISO();
   if (b.release_held === true) {
-    const held = rows.filter((s) => s.status === 'held' || s.status === 'error').slice(0, 10); // 10 files per call: 3 R2 calls each
+    const held = (await waiting()).slice(0, 10); // 10 files per call: 3 R2 calls each; repeat until none is left
     for (const s of held) {
-      const key = `repos/${id}/blobs/${s.sha256}`;
-      const obj = await env.QUARANTINE?.get(key);
-      if (!obj) { if (!(await env.FW.head(key))) return authErr(409, 'conflict', 'A held file is already deleted from quarantine; it cannot be released.'); }
-      else { await env.FW.put(key, obj.body, { httpMetadata: obj.httpMetadata }); await env.QUARANTINE!.delete(key); }
+      if ((await promoteBlob(env, id, s.sha256, s.id)) === 'missing') return authErr(409, 'conflict', 'A held file is already deleted from quarantine; it cannot be released.');
     }
-    if (held.length) {
-      await db.batch(held.map((s) => db.prepare("UPDATE scans SET status = 'clean', finished_at = ?2, updated_at = ?2 WHERE id = ?1").bind(s.id, now)));
-      rows = await scans();
-    }
+    if (held.length) await db.batch(held.map((s) => db.prepare("UPDATE scans SET status = 'clean', finished_at = ?2, claimed_until = NULL, updated_at = ?2 WHERE id = ?1").bind(s.id, now)));
   }
-  const status = restoreStatus(repo.head_commit, rows.map((s) => s.status));
-  const stmts = [db.prepare("UPDATE repos SET status = ?2, removed_reason = NULL, updated_at = ?3 WHERE id = ?1").bind(id, status, now)];
+  // An interim state (scanning with a head, else draft); settleRepo replaces it with the real one. The detail
+  // page (deleted by remove) is rendered again for any repo with a served head.
+  const stmts = [db.prepare("UPDATE repos SET status = ?2, removed_reason = NULL, updated_at = ?3 WHERE id = ?1").bind(id, repo.head_commit ? 'scanning' : 'draft', now)];
   if (b.unblock === true) stmts.push(db.prepare('DELETE FROM blocked_hashes WHERE source = ?1').bind(id));
-  stmts.push(audit(env, 'repo.restore', 'repo', id, { status, release_held: b.release_held === true, unblock: b.unblock === true, note: b.note ?? null }));
   await db.batch(stmts);
-  return authJson({ id, status });
+  const status = await settleRepo(env, id);
+  if (status !== 'live' && status !== 'draft') await publishPage(env, id); // settle renders it only on live
+  await db.batch([audit(env, 'repo.restore', 'repo', id, { status, release_held: b.release_held === true, unblock: b.unblock === true, note: b.note ?? null })]);
+  return authJson({ id, status, held_left: (await waiting()).length });
 }
 
 // ---- users ------------------------------------------------------------------------------------------------

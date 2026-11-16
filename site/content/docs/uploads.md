@@ -58,12 +58,12 @@ After the commit the repo is **scanning**. Each new file is checked for a matchi
 | State | Meaning |
 | --- | --- |
 | `draft` | The repo exists and has no commit yet. |
-| `scanning` | The commit is in. Files are waiting for or going through a scan. Nothing is downloadable yet. |
+| `scanning` | The commit is in. Files are waiting for or going through a scan. A new repo has nothing downloadable yet; an update keeps the last clean commit downloadable until the new one passes. |
 | `live` | Every file in the commit scanned clean. Downloads work. |
-| `held` | A file failed a scan. It is not served. You see the reason code in `fw repo status` and on your account page. |
+| `held` | A file failed a scan. That commit is not served (an earlier clean commit stays downloadable). You see the reason code in `fw repo status` and on your account page. |
 | `removed` | The repo was removed, by you or after a report. |
 
-A file that is still scanning answers 404 `file_not_ready` on download. If scanning is delayed, the upload pages say so and the files wait; they are never published without a scan. Held files are deleted after 14 days. Fix the file and upload it again.
+A file that is still scanning answers 404 `file_not_ready` on download. If scanning is delayed, the upload pages say so and the files wait; they are never published without a scan. Held files are deleted after 14 days. To fix a held repo, commit again with the file deleted or replaced: once that commit scans clean and no longer contains the held file, it goes live and the held commit is never served.
 
 ## Current limits {#limits}
 

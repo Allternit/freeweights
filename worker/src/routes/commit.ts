@@ -4,6 +4,7 @@ import { authJson, seg } from '../http';
 import { d1 } from '../pause';
 import { readUsage, refuseSet, releaseStatements, reserve, type Refusal } from '../storage/quota';
 import { sha256Hex } from '../storage/presign';
+import { publishPage, settleRepo } from '../storage/promote';
 import { blobKey, caller, fwErr, gate, isoIn, kindOf, newId, repoUrl, treeKey, writableRepo, type Gate } from './repo-access';
 
 // Preupload and commit (plan step 7, spec/accounts-v1.md 11.2-11.3, spec/parts/write-api.yaml "upload").
@@ -313,7 +314,8 @@ export const commitRoute: Handler = ({ req, env, ctx, url }, m) => d1(async () =
   // A commit with nothing to scan (deletes, renames, re-used blobs) on top of the served head is served at
   // once. One on top of a commit still scanning waits in the chain; promotion moves the head past it.
   const direct = !scans.length && parent === repo.head_commit;
-  const status = scans.length ? 'scanning' : direct ? 'live' : repo.status;
+  // Same state rule as storage/scan-state.ts repoStatusFrom: a held commit still waiting keeps the repo held.
+  const status = direct ? 'live' : repo.status === 'held' ? 'held' : scans.length ? 'scanning' : repo.status;
 
   const ts = new Date().toISOString();
   const oid = [...new Uint8Array(await crypto.subtle.digest('SHA-1', new TextEncoder().encode(
@@ -321,9 +323,10 @@ export const commitRoute: Handler = ({ req, env, ctx, url }, m) => d1(async () =
     .map((x) => x.toString(16).padStart(2, '0')).join('');
   const tk = treeKey(repo.id, oid);
   const treeJson = JSON.stringify({ commit: oid, parent, files: next } satisfies Tree);
-  // The pending tree lives in quarantine until the commit is served; promotion copies it to FW.
-  await env.QUARANTINE.put(tk, treeJson, { httpMetadata: { contentType: 'application/json' } });
-  if (direct) await env.FW.put(tk, treeJson, { httpMetadata: { contentType: 'application/json' } });
+  // The pending tree lives in quarantine until the commit is served; promotion copies it to FW. A commit
+  // served at once writes it to FW only (nothing would ever move or delete a quarantine copy of it).
+  const treeBucket = direct ? env.FW : env.QUARANTINE;
+  await treeBucket.put(tk, treeJson, { httpMetadata: { contentType: 'application/json' } });
 
   const IS_NEW = 'EXISTS (SELECT 1 FROM commits WHERE oid = ?2)';
   const res = await acc.batch([
@@ -346,9 +349,15 @@ export const commitRoute: Handler = ({ req, env, ctx, url }, m) => d1(async () =
   ]);
   if (res[0].meta.changes !== 1) {
     await releaseAll();
-    ctx.waitUntil(Promise.all([env.QUARANTINE.delete(tk), direct ? env.FW.delete(tk) : null]).then(() => undefined));
+    ctx.waitUntil(treeBucket.delete(tk));
     return fwErr(412, 'conflict', 'main moved while this commit was being made. Commit again.');
   }
+  // A commit served at once changed the served tree: render the community page again (promotion does this
+  // for scanned commits). The page failing never fails the commit.
+  if (direct && res[3].meta.changes === 1) ctx.waitUntil(publishPage(env, repo.id));
+  // A commit with nothing to scan that is not on the served head (for example one that deletes a held file)
+  // gets no scan result to settle it: settle it now, so it is served as soon as the chain allows.
+  if (!direct && !scans.length) ctx.waitUntil(settleRepo(env, repo.id).then(() => undefined));
   const base = repoUrl(url.origin, kind, repo.namespace, repo.name);
   return authJson({ success: true, commitOid: oid, commitUrl: `${base}/commit/${oid}`, pullRequestUrl: null });
 });

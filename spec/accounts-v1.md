@@ -329,6 +329,28 @@ force to anyone.
 A key that is missing fails closed: while any key above is unset, uploads are paused for everyone but
 staff, and `GET /api/fw/v1/limits` reads `open: false`. Unknown keys in the table are ignored.
 
+**`GET /api/fw/v1/limits` body (pinned).** Public, `Cache-Control: public, max-age=60`, the same for every
+caller (a credential is ignored). It never carries the caller's own usage: that is `usage` on
+`GET /api/fw/v1/account`. The admin `PUT /api/fw/v1/admin/limits` reply is the same body. Exactly:
+
+```json
+{
+  "open": false,
+  "limits": {
+    "site_cap_bytes": 3000000000, "user_cap_bytes": 500000000, "file_max_bytes": 500000000,
+    "repos_per_user": 5, "repo_creates_per_day": 3, "commits_per_hour": 20, "files_per_commit": 100
+  },
+  "site": { "used_bytes": 0, "cap_bytes": 3000000000, "full": false },
+  "scanning_delayed": false
+}
+```
+
+`open` is true only when `uploads_open` = 1 and every key of `limits` is set. Each `limits` value is an
+integer or `null` while its key is unset (bytes for the `*_bytes` keys); `reports_per_day` and
+`uploads_open` are not in `limits`. `site.full` is true when `used_bytes` >= `cap_bytes` or the cap is unset.
+`scanning_delayed` is true when the scanner has not polled in the last 10 minutes. Clients read this one
+shape; there is no flat variant.
+
 ### 11.2 Where each limit answers
 
 The earliest call that can know answers, so a client fails before it sends bytes.
@@ -421,7 +443,11 @@ Admin actions are written to `audit_log`.
 
 - **Promotion.** On a clean result the Worker copies the object from quarantine to the public bucket at the
   same key, then deletes the quarantine copy. The repo goes `live` only when every scan of the commit is
-  clean; one held file makes the repo `held`, and nothing of that commit is served. If a stream copy of a
+  clean; one held file makes the repo `held`, and nothing of that commit is served. Commits chain on the
+  tip, so the owner fixes a held file with a new commit on top that deletes or replaces it: the held commit
+  is passed over (never served), and the head moves to the fix once the fix's own scans are clean and its
+  tree carries no held sha256. A commit with nothing to scan (only deletions or re-used blobs) is settled
+  when it is made. If a stream copy of a
   file near `file_max_bytes` fails on the free plan, the fallback is a server-side S3 CopyObject by the
   scanner into a separate community bucket (plan U8); the key scheme does not change.
 - **Downloads.** Resolve of a community file serves only the head commit and the commits before it (the head
@@ -430,6 +456,15 @@ Admin actions are written to `audit_log`.
   `file_not_ready`; a takedown answers 451 `removed_after_takedown`. Otherwise it answers 302 to a presigned GET valid 5 minutes, with
   `Cache-Control: private, no-store`. A takedown therefore takes effect within 5 minutes. Community blob
   keys are never linked directly.
+- **Community state on info replies (pinned).** `GET /api/models/{ns}/{name}` and
+  `GET /api/datasets/{ns}/{name}` for a community repo add three fields to the Hugging Face shape:
+  `"source": "community"`, `"section": "alt.freeweights.community"` and `"status"`, one of
+  `draft` (no commit yet), `scanning` (a newer commit is being scanned), `live` (nothing waits) or `held` (a
+  newer commit has a file that did not pass; an admin decides). A removed repo has no body: 451
+  `removed_after_takedown` or 404 `repo_not_found`. `status` says what waits, not what is served: `sha`
+  (the served commit) and `siblings` are the last clean head, so a `scanning` or `held` repo with a non-null
+  `sha` is still downloadable. Clients show "downloadable" from `sha != null` and the badge from `status`.
+  Catalog replies carry neither `source: community` nor `status`.
 
 ### 11.7 Reports and moderation
 

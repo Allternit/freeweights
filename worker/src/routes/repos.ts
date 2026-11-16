@@ -200,3 +200,64 @@ export const repoSettingsRoute: Handler = ({ req, env, ctx, url }, m) => d1(asyn
   }
   return authJson({ private: false });
 });
+
+// ---- GET /api/fw/v1/repos ------------------------------------------------------------------------------------
+// The caller's community repos, newest first, with scan counts (spec listMyRepos). The account page, the
+// /new/ upload page, `fw repo status` and the app upload screens read it. Any credential of the caller may
+// read it (no write scope needed); a suspended account still sees its repos. Repos the owner deleted are left
+// out (their names are free again); a takedown stays listed as removed with its reason.
+//
+// Scan counts: the commits waiting after the head (the head moves only over fully clean commits, spec 11.6),
+// which is what "scanning" or "held" is about. When nothing waits, the head commit's scans (all clean).
+
+const LIST_MAX = 200;
+interface ListRow { id: string; kind: RepoKind; namespace: string; name: string; status: RepoRow['status']; removed_reason: string | null; head_commit: string | null; bytes: number; created_at: string; updated_at: string }
+interface ScanCountRow { repo_id: string; status: 'queued' | 'scanning' | 'clean' | 'held' | 'error'; findings: string | null; waiting: number }
+
+export const listMyReposRoute: Handler = ({ req, env, ctx, url }) => d1(async () => {
+  const c = await caller(req, env, url, ctx);
+  if (c instanceof Response) return c;
+  const db = env.ACC!;
+  const user = await db.prepare('SELECT status FROM users WHERE id = ?1').bind(c.userId).first<{ status: string }>();
+  if (!user || user.status === 'deleted') return fwErr(404, 'profile_not_found', 'Signed in, but no Freeweights profile yet. Pick a handle at https://freeweights.allternit.com/account/ (POST /api/fw/v1/account).');
+  const k = url.searchParams.get('kind');
+  if (k !== null && k !== 'model' && k !== 'dataset') return badRequest('kind is model or dataset.');
+
+  const [repos, scans] = await db.batch([
+    db.prepare(`SELECT id, kind, namespace, name, status, removed_reason, head_commit, bytes, created_at, updated_at FROM repos
+      WHERE owner_user_id = ?1 AND source = 'community' AND kind IN ('model', 'dataset') AND (?2 IS NULL OR kind = ?2)
+        AND NOT (status = 'removed' AND removed_reason IN ('owner', 'account_deleted'))
+      ORDER BY created_at DESC, id DESC LIMIT ${LIST_MAX}`).bind(c.userId, k),
+    // waiting = 1 for a scan of a commit after the head, 0 for a scan of the head commit itself.
+    db.prepare(`SELECT s.repo_id, s.status, s.findings,
+        CASE WHEN s.commit_oid IS r.head_commit THEN 0 ELSE 1 END AS waiting
+      FROM scans s JOIN repos r ON r.id = s.repo_id
+      WHERE r.owner_user_id = ?1 AND r.source = 'community'
+        AND (s.commit_oid IS r.head_commit
+          OR s.commit_oid IN (SELECT oid FROM commits WHERE repo_id = r.id AND rowid > COALESCE((SELECT rowid FROM commits WHERE oid = r.head_commit), 0)))`).bind(c.userId),
+  ]);
+  const rows = (repos.results || []) as unknown as ListRow[];
+  const byRepo = new Map<string, ScanCountRow[]>();
+  for (const s of (scans.results || []) as unknown as ScanCountRow[]) byRepo.set(s.repo_id, [...(byRepo.get(s.repo_id) ?? []), s]);
+
+  const out = rows.map((r) => {
+    const all = byRepo.get(r.id) ?? [];
+    const pick = all.some((s) => s.waiting === 1) ? all.filter((s) => s.waiting === 1) : all;
+    const counts = { queued: 0, scanning: 0, clean: 0, held: 0, error: 0 };
+    const codes = new Set<string>();
+    for (const s of pick) {
+      counts[s.status]++;
+      if (s.status !== 'held' || !s.findings) continue;
+      try { for (const f of JSON.parse(s.findings) as { code?: unknown }[]) if (typeof f?.code === 'string') codes.add(f.code); } catch { /* bad JSON: count only */ }
+    }
+    return {
+      id: r.id, type: r.kind, name: `${r.namespace}/${r.name}`, status: r.status, removed_reason: r.removed_reason,
+      head_commit: r.head_commit, bytes: r.bytes, createdAt: r.created_at, updatedAt: r.updated_at,
+      scans: { ...counts, held_codes: [...codes] },
+      // The detail page exists once a commit has been served (rendered at promotion), and is deleted on removal.
+      page_url: r.head_commit && r.status !== 'removed' ? `/alt.freeweights.community/${r.namespace}/${r.name}/` : null,
+      source: 'community' as const, section: 'alt.freeweights.community' as const,
+    };
+  });
+  return authJson({ repos: out, source: 'community', section: 'alt.freeweights.community' }, 200, { 'cache-control': 'private, no-store' });
+});
