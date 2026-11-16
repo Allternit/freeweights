@@ -202,7 +202,7 @@ paths:
     post:
       tags: [upload]
       operationId: preupload
-      summary: Ask which files go through LFS. Files over 10 MB, binary files and files matched by .gitattributes LFS rules are lfs.
+      summary: Ask which files go through LFS. Only text files up to 512 KiB (512 KiB in total per call) are regular; everything else is lfs.
       description: |
         Also the first place the launch limits answer, before any byte moves (spec/accounts-v1.md 11.2): more
         than `files_per_commit` files answers 400 `too_many_files`; an executable or archive (by extension or
@@ -279,7 +279,8 @@ paths:
         `file_max_bytes`, the caller's `user_cap_bytes` and the site's `site_cap_bytes` together (bytes in
         quarantine, held or live all count). A refused object gets a per-object `error` and no actions:
         code 413 (`file_too_large`) or 507 (`storage_full` or `site_full`, named in `message`). A hash on the
-        takedown blocklist gets code 451. The batch as a whole answers 403 `uploads_paused` or
+        takedown blocklist gets code 451. One batch starts at most 40 multipart uploads (the Workers Free
+        subrequest limit); further objects over 64 MiB in the same call get code 429. The batch as a whole answers 403 `uploads_paused` or
         `rules_not_accepted` when those apply.
       parameters:
         - $ref: '#/components/parameters/namespace'
@@ -312,8 +313,15 @@ paths:
       tags: [upload]
       operationId: lfsMultipartComplete
       summary: Multipart completion (the `upload.href` of a multipart action). Same body Hugging Face clients send.
+      description: |
+        huggingface_hub sends this POST with LFS headers only, no Authorization, so the href itself is the
+        credential: `exp` (Unix seconds) and `sig` (HMAC over the step, the upload id and exp) from the batch.
+        A wrong or expired link answers 401 `bad_signature`. Safe to repeat.
+      security: [{}]
       parameters:
         - {name: uploadId, in: path, required: true, schema: {type: string, pattern: '^up_[0-9A-Za-z]+$'}}
+        - {name: exp, in: query, required: true, schema: {type: integer}}
+        - {name: sig, in: query, required: true, schema: {type: string, pattern: '^[0-9a-f]{64}$'}}
       requestBody:
         required: true
         content:
@@ -346,9 +354,13 @@ paths:
       description: |
         The Worker HEADs the quarantine object. A size that differs from the reserved size deletes the object,
         releases its bytes and answers 422 `size_mismatch`. The sha256 is checked by the scanner (the file is
-        held with `sha256_mismatch` when it differs), not here.
+        held with `sha256_mismatch` when it differs), not here. Like the completion, the href carries `exp`
+        and `sig` and needs no Authorization (401 `bad_signature` when wrong or expired). Safe to repeat.
+      security: [{}]
       parameters:
         - {name: uploadId, in: path, required: true, schema: {type: string, pattern: '^up_[0-9A-Za-z]+$'}}
+        - {name: exp, in: query, required: true, schema: {type: integer}}
+        - {name: sig, in: query, required: true, schema: {type: string, pattern: '^[0-9a-f]{64}$'}}
       requestBody:
         required: true
         content:
@@ -370,10 +382,12 @@ paths:
       operationId: createCommit
       summary: Create a commit from an NDJSON body. The first line is the header; each other line is one operation.
       description: |
-        Every `lfsFile` must have been uploaded and verified for this repo. After the commit the repo goes
-        to `scanning` and one `scans` row is queued per new file; new files are scanned before they are served
-        (state `live` when every scan of the commit is clean, or `held`). Regular (non-LFS) files in the body
-        are stored in quarantine and scanned the same way.
+        Every `lfsFile` must have been uploaded to this repo (400 `file_not_uploaded` names the paths; an
+        upload not verified yet is size-checked here). The commit chains onto the tip of main. Its tree is
+        written to quarantine, the repo goes to `scanning` and one `scans` row is queued per new file; the
+        served head moves to the commit only when every scan of it is clean (spec/accounts-v1.md 11.6).
+        A commit with nothing new to scan on top of the served head is served at once. Regular (non-LFS)
+        files in the body (at most 512 KiB in total) are stored in quarantine and scanned the same way.
         Limits: `files_per_commit` (400 `too_many_files`), `commits_per_hour` (429 `rate_limited`), the upload
         switch (403 `uploads_paused`). `create_pr=1` answers 501 `not_implemented` for now (no PRs at launch).
       parameters:

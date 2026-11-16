@@ -248,10 +248,16 @@ test('method routing: 405 with Allow, write routes check the credential, preflig
   assert.equal(r.headers.get('allow'), 'GET, HEAD');
 
   await refused(await A('/api/repos/create', { method: 'POST' }), 401, 'auth_required');
-  await refused(await A('/api/repos/create', { method: 'POST', ...bearer(clerkJwt()) }), 501, 'not_implemented');
+  // Built upload routes (plan step 7) answer for real: no body is a 400, and an account that has not
+  // accepted the upload rules is refused before any repo is made.
+  await refused(await A('/api/repos/create', { method: 'POST', ...bearer(clerkJwt()) }), 400, 'bad_request');
+  const rules = await refused(await A('/api/repos/create', { method: 'POST', ...bearer(clerkJwt()), body: JSON.stringify({ name: 'm', type: 'model' }) }), 403, 'rules_not_accepted');
+  assert.match(rules.message, /upload rules/);
+  await refused(await A('/api/repos/create', { method: 'POST', ...bearer(clerkJwt()), body: JSON.stringify({ name: 'm', private: true }) }), 402, 'perk_required');
+  await refused(await A('/datasets/org/name.git/info/lfs/objects/batch', { method: 'POST', ...bearer(clerkJwt()) }), 404, 'repo_not_found');
   await refused(await A('/api/models/org/name/like', { method: 'DELETE', ...bearer(clerkJwt()) }), 501, 'not_implemented');
+  await refused(await A('/api/collections', { method: 'POST', ...bearer(clerkJwt()) }), 501, 'not_implemented');
   await refused(await A('/api/models/org/name/xet-write-token/main', bearer('alt_goodkey123')), 501, 'xet_not_supported');
-  await refused(await A('/datasets/org/name.git/info/lfs/objects/batch', { method: 'POST', ...bearer(clerkJwt()) }), 501, 'not_implemented');
 
   const pre = await A('/api/fw/v1/account', { method: 'OPTIONS', headers: { origin: AZP, 'access-control-request-method': 'PATCH' } });
   assert.equal(pre.status, 204);

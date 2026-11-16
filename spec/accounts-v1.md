@@ -353,8 +353,12 @@ The earliest call that can know answers, so a client fails before it sends bytes
 | `scan_not_found`, `scan_not_claimed` | 404, 409 | scan result for an unknown scan, or for a claim that ran out |
 
 400 and 413 bodies about files carry `paths` (the refused paths) and `limit` (the key). A per-object LFS
-error names the code in `message`. Hugging Face clients show `message` as is, so it says in plain words
-what to change.
+error names the code in `message`. Hugging Face clients show a per-object `message` as is, so it says in
+plain words what to change. For whole-request errors they print the `X-Error-Message` header and the body's
+`error` field (not `message`), so every upload error also sends its sentence as `X-Error-Message`.
+
+Staff pass `uploads_open` only. A staff upload still needs every other key set, so a cap never reads as
+"no limit".
 
 ### 11.3 Upload flow
 
