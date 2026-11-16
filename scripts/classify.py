@@ -77,6 +77,12 @@ def load_reviewed(path):
         out[c["repo"]] = {"verdict": v, "license_id": lid}
     return out
 
+def load_decisions(path):
+    """Content decisions a person made (catalog/_review/content-decisions.json): {repo: {"decision", "why", ...}}."""
+    try: d = json.load(open(path, encoding="utf-8"))
+    except (OSError, ValueError): return {}
+    return d if isinstance(d, dict) else {}
+
 def load_catalog(path):
     """Already-listed rows act as known parents: {id: verdict}."""
     try: rows = json.load(open(path, encoding="utf-8")).get("models", [])
@@ -89,11 +95,12 @@ def load_catalog(path):
     return out
 
 class Classifier:
-    def __init__(self, records, reviewed=None, catalog=None, watch=None, now=None):
+    def __init__(self, records, reviewed=None, catalog=None, watch=None, now=None, decisions=None):
         self.recs = {r["id"]: r for r in records}
         self.reviewed = reviewed or {}
         self.catalog = catalog or {}
         self.watch = watch
+        self.decisions = decisions or {}
         self.now = now or datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         self._own, self._lineage = {}, {}
 
@@ -197,7 +204,7 @@ class Classifier:
         if licenses.hosted(v) and rec.get("gated") not in (None, False, "", "false"):
             v, reason = "gated", "gated at the source (Hugging Face asks you to accept terms first)"
         # 3 content
-        c, why = inclusion.content_gate(rec)
+        c, why = inclusion.content_gate(rec, self.decisions)
         if c == "refused": return done("refused", "content", method, why)
         if c == "out": return done("out", "content", method, why)
         if c == "queue": return done("queue", "content", "queue", why, f"content:{rid}")
@@ -223,10 +230,11 @@ def main(argv=None):
     ap.add_argument("candidates"); ap.add_argument("--out"); ap.add_argument("--queue")
     ap.add_argument("--catalog", default=os.path.join(ROOT, "catalog", "catalog.json"))
     ap.add_argument("--reviewed", default=os.path.join(ROOT, "catalog", "_audit", "licenses.csv"))
+    ap.add_argument("--decisions", default=os.path.join(ROOT, "catalog", "_review", "content-decisions.json"))
     ap.add_argument("--now")
     a = ap.parse_args(argv)
     recs = [json.loads(l) for l in open(a.candidates, encoding="utf-8") if l.strip()]
-    c = Classifier(recs, load_reviewed(a.reviewed), load_catalog(a.catalog), now=a.now)
+    c = Classifier(recs, load_reviewed(a.reviewed), load_catalog(a.catalog), now=a.now, decisions=load_decisions(a.decisions))
     results, queue = c.run()
     out = open(a.out, "w", encoding="utf-8") if a.out else sys.stdout
     for r in results: out.write(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n")
