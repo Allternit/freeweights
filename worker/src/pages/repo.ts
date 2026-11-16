@@ -25,9 +25,17 @@ export interface RepoTree {
   owner?: string;
 }
 
-/** R2 key (bucket FW) of a community repo page. Served at /alt.freeweights.community/<ns>/<name>/ (spec/accounts-v1.md section 3). */
-export const repoPageKey = (repo: Pick<RepoRow, 'namespace' | 'name'>) => `alt.freeweights.community/${repo.namespace}/${repo.name}/index.html`;
-export const repoPageUrl = (repo: Pick<RepoRow, 'namespace' | 'name'>) => `/alt.freeweights.community/${repo.namespace}/${repo.name}/`;
+/**
+ * Path of a community repo page (spec/accounts-v1.md section 3): models at /alt.freeweights.community/<ns>/<name>/,
+ * datasets at /alt.freeweights.community/datasets/<ns>/<name>/ and apps at .../apps/<ns>/<name>/ (HF style), so a
+ * model and a dataset with the same name never share a page. "datasets" and "apps" are reserved handles.
+ */
+type PageRef = { kind?: string | null; namespace: string; name: string };
+export const repoPagePath = (repo: PageRef) =>
+  `alt.freeweights.community/${repo.kind === 'dataset' ? 'datasets/' : repo.kind === 'app' ? 'apps/' : ''}${repo.namespace}/${repo.name}`;
+/** R2 key (bucket FW) of a community repo page. */
+export const repoPageKey = (repo: PageRef) => `${repoPagePath(repo)}/index.html`;
+export const repoPageUrl = (repo: PageRef) => `/${repoPagePath(repo)}/`;
 
 const bytes = (n: number) => {
   const u = ['B', 'KB', 'MB', 'GB', 'TB']; let i = 0; let v = Number(n) || 0;
@@ -151,6 +159,6 @@ export async function renderRepoPage(env: Env, repo: RepoRow, tree: RepoTree): P
 }
 
 /** Delete a repo's page (takedown, owner deletion, hold). On Connector paths a removed page is a 404, not a 451. */
-export async function removeRepoPage(env: Env, repo: Pick<RepoRow, 'namespace' | 'name'>): Promise<void> {
+export async function removeRepoPage(env: Env, repo: PageRef): Promise<void> {
   await env.FW.delete(repoPageKey(repo));
 }

@@ -198,7 +198,7 @@ namespace (`namespace_reserved`).
 - **R2 keys:** blobs at `repos/<repo id>/blobs/<sha256>` (the same key in quarantine and in the public
   bucket), commit trees at `repos/<repo id>/trees/<commit>.json`
   (same file shape as a manifest `files` list), community detail pages at
-  `alt.freeweights.community/<namespace>/<name>/index.html`. The catalog sync never deletes these prefixes.
+  `alt.freeweights.community/<namespace>/<name>/index.html` for models, `alt.freeweights.community/datasets/<namespace>/<name>/index.html` for datasets (and `apps/` for apps), so a model and a dataset with the same name keep separate pages. `datasets` and `apps` are reserved handles. The catalog sync never deletes these prefixes.
 - **Private reads:** an access check, then a 302 to a presigned URL valid for 5 minutes, with
   `Cache-Control: private, no-store`. Nothing private is put in the edge cache.
 - **Storage limits:** until perks are offered, the per-account cap is the operator's `user_cap_bytes`

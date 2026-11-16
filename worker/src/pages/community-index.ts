@@ -1,6 +1,6 @@
 import type { Env } from '../types';
 import { esc } from '../../../site/lib/md-core.mjs';
-import { communityShell } from './repo';
+import { communityShell, repoPagePath } from './repo';
 
 /** R2 key (bucket FW) of the community index, served at /alt.freeweights.community/. */
 export const COMMUNITY_INDEX_KEY = 'alt.freeweights.community/index.html';
@@ -13,7 +13,7 @@ const size = (n: number) => { const u = ['B', 'KB', 'MB', 'GB']; let i = 0; let 
 /** The community index HTML for a list of live public repos (pure). */
 export function communityIndexHtml(repos: CommunityListing[], truncated = false): string {
   const rows = repos.map((r) => {
-    const href = `/alt.freeweights.community/${r.namespace}/${r.name}/`;
+    const href = `/${repoPagePath(r)}/`;
     return `<tr><td class="path"><a class="link" href="${esc(href)}">${esc(r.namespace)}/${esc(r.name)}</a></td><td>${r.kind === 'dataset' ? 'Dataset' : 'Model'}</td><td>${esc(r.license_id || 'not stated')}</td><td class="r mono">${size(r.bytes)}</td><td class="mono">${esc(String(r.updated_at).slice(0, 10))}</td></tr>`;
   }).join('');
   const body = `

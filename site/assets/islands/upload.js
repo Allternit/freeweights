@@ -308,7 +308,7 @@ export default async function mount(el, props, api) {
   function scanning({ type, name }) {
     const state = h('b', {}, 'Scanning');
     const detail = h('span', {}, 'Your files are uploaded. Each one is scanned before anyone can download it. This page updates by itself.');
-    const link = h('a', { class: 'btn', href: `/alt.freeweights.community/${ns}/${name}/` }, 'Open the repo page');
+    const link = h('a', { class: 'btn', href: `/alt.freeweights.community/${type === 'dataset' ? 'datasets/' : ''}${ns}/${name}/` }, 'Open the repo page');
     say(panel(state, detail, h('p', { class: 'small sub' }, 'The repo page appears once the scan finishes. You can close this tab; the scan keeps going, and My repos on your account page shows the state.'), h('a', { class: 'btn', href: '/account/' }, 'My repos')));
     let tries = 0;
     const poll = async () => {

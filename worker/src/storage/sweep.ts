@@ -29,7 +29,7 @@ export async function runSweep(env: Env, nowMs = Date.now()): Promise<ScanSweep>
       WHERE s.status = 'held' AND s.finished_at < ?
         AND EXISTS (SELECT 1 FROM uploads u WHERE u.repo_id = s.repo_id AND u.oid = s.sha256 AND u.status = 'committed' AND u.bucket = 'quarantine')
       ORDER BY s.finished_at LIMIT ${SWEEP_BATCH}`).bind(iso(nowMs - HELD_KEEP_MS)),
-    db.prepare(`SELECT u.id, u.repo_id, u.status, u.size, u.bucket, u.r2_key, u.r2_upload_id, r.removed_reason, r.namespace, r.name
+    db.prepare(`SELECT u.id, u.repo_id, u.status, u.size, u.bucket, u.r2_key, u.r2_upload_id, r.removed_reason, r.kind, r.namespace, r.name
       FROM uploads u JOIN repos r ON r.id = u.repo_id
       WHERE r.status = 'removed' AND r.removed_reason IN (${reasons}) AND u.status IN ('pending', 'uploaded', 'verified', 'committed')
       LIMIT ${SWEEP_BATCH}`),
@@ -37,7 +37,7 @@ export async function runSweep(env: Env, nowMs = Date.now()): Promise<ScanSweep>
   type U = { id: string; repo_id: string; status: string; expires_at: string; size: number; bucket: string; r2_key: string; r2_upload_id: string | null };
   type C = { id: string; status: string; attempts: number; claimed_until: string | null };
   type H = { id: string; repo_id: string; sha256: string; status: string; finished_at: string | null };
-  type R = { id: string; repo_id: string; status: string; size: number; bucket: 'quarantine' | 'public' | 'private'; r2_key: string; r2_upload_id: string | null; removed_reason: string | null; namespace: string; name: string };
+  type R = { id: string; repo_id: string; status: string; size: number; bucket: 'quarantine' | 'public' | 'private'; r2_key: string; r2_upload_id: string | null; removed_reason: string | null; kind: string; namespace: string; name: string };
   const U = uploads.results as U[]; const C = claims.results as C[]; const H = held.results as H[]; const R = removed.results as R[];
   const plan = planSweep(nowMs, { uploads: U, claims: C, held: H, removed: R });
   const out: ScanSweep = { expired_uploads: 0, requeued: 0, errored: 0, held_deleted: 0, purged_uploads: 0 };

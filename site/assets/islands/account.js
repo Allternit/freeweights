@@ -93,7 +93,7 @@ function repoList(repos) {
   if (!repos.length) return h('p', { class: 'fwa-empty' }, 'No repos yet. Create one with the fw CLI or with huggingface_hub pointed at Freeweights; it shows up here with its scan state.');
   const ul = h('ul', { class: 'fwa-repos' });
   for (const r of repos) {
-    // Community repo pages live at /alt.freeweights.community/<ns>/<name>/ (worker/src/pages/repo.ts). The page
+    // Community repo pages live at /alt.freeweights.community/<ns>/<name>/ (datasets under .../datasets/<ns>/<name>/) (worker/src/pages/repo.ts). The page
     // exists once a commit has been served; until then (and after a removal) the name is plain text.
     const title = r.page_url ? h('a', { class: 'mono', href: r.page_url }, r.name) : h('span', { class: 'mono' }, r.name);
     ul.append(h('li', { 'data-status': r.status },

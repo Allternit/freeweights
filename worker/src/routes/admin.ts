@@ -4,6 +4,7 @@ import { requireSigned } from '../auth/hmac';
 import { LIMIT_KEYS, REMOVE_REASONS, diffUsage, limitsView, type Usage } from '../moderation';
 import { promoteBlob, publishPage, settleRepo } from '../storage/promote';
 import type { Handler } from '../router';
+import { repoPagePath } from '../pages/repo';
 
 // /api/fw/v1/admin/* (spec/accounts-v1.md 11.4 and 11.7, spec/parts/write-api.yaml tag admin). Signed with
 // ADMIN_SECRET (auth/hmac.ts), driven by scripts/fw_admin.py. Every write is safe to repeat inside the 300 s
@@ -87,9 +88,9 @@ async function listHeld(env: Env, url: URL) {
 
 // ---- repo remove / restore --------------------------------------------------------------------------------
 
-interface RepoRowLite { id: string; namespace: string; name: string; status: string; removed_reason: string | null; head_commit: string | null }
+interface RepoRowLite { id: string; kind: string; namespace: string; name: string; status: string; removed_reason: string | null; head_commit: string | null }
 const loadRepo = (env: Env, id: string) =>
-  REPO_ID.test(id) ? env.ACC!.prepare("SELECT id, namespace, name, status, removed_reason, head_commit FROM repos WHERE id = ?1 AND source = 'community'").bind(id).first<RepoRowLite>() : Promise.resolve(null);
+  REPO_ID.test(id) ? env.ACC!.prepare("SELECT id, kind, namespace, name, status, removed_reason, head_commit FROM repos WHERE id = ?1 AND source = 'community'").bind(id).first<RepoRowLite>() : Promise.resolve(null);
 
 /** Deletes a repo's R2 objects, a bounded number per call (the free plan allows 50 subrequests per request). True when nothing is left. */
 async function purgeFiles(env: Env, repoId: string): Promise<boolean> {
@@ -135,7 +136,7 @@ async function removeRepo(env: Env, id: string, b: Record<string, unknown>) {
 
   // The community detail page sits in R2 where Cloud Connector serves it with no Worker in the path: delete it
   // (404 there; the API answers 451). The caller purges these paths from the edge cache.
-  const page = `alt.freeweights.community/${repo.namespace}/${repo.name}`;
+  const page = repoPagePath(repo);
   await env.FW.delete(`${page}/index.html`);
   let purged = false;
   if (b.purge === true) {

@@ -7,6 +7,7 @@ import { abortMultipart, r2Creds } from '../storage/presign';
 import {
   audit, caller, findRepo, fwErr, gate, isoIn, kindOf, newId, noScope, openCheck, readJson, repoUrl, validName, writableRepo,
 } from './repo-access';
+import { repoPageUrl } from '../pages/repo';
 
 // Repo create / delete / move / settings (plan step 7, spec/parts/write-api.yaml "repos", accounts-v1.md 11).
 // At launch: public model and dataset repos under the caller's own handle. Org namespaces and app repos
@@ -255,7 +256,7 @@ export const listMyReposRoute: Handler = ({ req, env, ctx, url }) => d1(async ()
       head_commit: r.head_commit, bytes: r.bytes, createdAt: r.created_at, updatedAt: r.updated_at,
       scans: { ...counts, held_codes: [...codes] },
       // The detail page exists once a commit has been served (rendered at promotion), and is deleted on removal.
-      page_url: r.head_commit && r.status !== 'removed' ? `/alt.freeweights.community/${r.namespace}/${r.name}/` : null,
+      page_url: r.head_commit && r.status !== 'removed' ? repoPageUrl(r) : null,
       source: 'community' as const, section: 'alt.freeweights.community' as const,
     };
   });
