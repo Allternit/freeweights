@@ -324,6 +324,7 @@ force to anyone.
 | `repo_creates_per_day` | Repos an account may create in a rolling 24 hours (deleted ones count). |
 | `commits_per_hour` | Commits an account may make in a rolling hour. |
 | `files_per_commit` | Files one commit (and one preupload call) may add or change. |
+| `reports_per_day` | Reports an account may file in a rolling 24 hours (429 `rate_limited`). Not one of the keys that pause uploads: while it is unset no per-day report cap applies, so a report is never refused for a missing setting. |
 
 A key that is missing fails closed: while any key above is unset, uploads are paused for everyone but
 staff, and `GET /api/fw/v1/limits` reads `open: false`. Unknown keys in the table are ignored.

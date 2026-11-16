@@ -1461,6 +1461,8 @@ paths:
                   id: {type: string}
                   status: {type: string, enum: [removed]}
                   sha256: {type: array, items: {$ref: '#/components/schemas/Sha256'}, description: File hashes of the repo (added to blocked_hashes when blocklist was true).}
+                  purged: {type: boolean, description: True when purge was sent and every file is deleted. Send the call again while it is false (a bounded number of files go per call).}
+                  static_paths: {type: array, items: {type: string}, description: Paths of the community detail page. The Worker deletes the R2 page (404 on Cloud Connector paths); the caller purges these from the edge cache.}
         '401': {$ref: '#/components/responses/BadSignature'}
         '404': {$ref: '#/components/responses/NotFound'}
   /api/fw/v1/admin/repos/{repoId}/restore:
@@ -1761,7 +1763,7 @@ components:
       type: object
       required: [error, message]
       properties:
-        error: {type: string, description: 'Stable code: auth_required, hf_token_rejected, insufficient_scope, forbidden, repo_not_found, repo_exists, handle_taken, namespace_reserved, perk_required, perk_limit, xet_not_supported, accounts_not_configured, rate_limited, uploads_paused, rules_not_accepted, account_suspended, repo_limit, too_many_files, file_type_not_allowed, file_too_large, storage_full, site_full, size_mismatch, file_not_ready, removed_after_takedown, bad_signature, scan_not_found, scan_not_claimed, not_implemented.'}
+        error: {type: string, description: 'Stable code: auth_required, hf_token_rejected, insufficient_scope, forbidden, repo_not_found, repo_exists, handle_taken, account_exists, namespace_reserved, perk_required, perk_limit, xet_not_supported, accounts_not_configured, rate_limited, uploads_paused, rules_not_accepted, account_suspended, repo_limit, too_many_files, file_type_not_allowed, file_too_large, storage_full, site_full, size_mismatch, file_not_ready, removed_after_takedown, bad_signature, scan_not_found, scan_not_claimed, not_implemented.'}
         message: {type: string}
     LimitError:
       allOf:
@@ -1770,7 +1772,7 @@ components:
           properties:
             paths: {type: array, items: {type: string}, description: The refused file paths, when the error is about files.}
             limit: {$ref: '#/components/schemas/LimitKey'}
-    LimitKey: {type: string, enum: [uploads_open, site_cap_bytes, user_cap_bytes, file_max_bytes, repos_per_user, repo_creates_per_day, commits_per_hour, files_per_commit]}
+    LimitKey: {type: string, enum: [uploads_open, site_cap_bytes, user_cap_bytes, file_max_bytes, repos_per_user, repo_creates_per_day, commits_per_hour, files_per_commit, reports_per_day]}
     Limits:
       type: object
       required: [open, limits, site, scanning_delayed]
@@ -2180,7 +2182,7 @@ components:
       required: [user, plan, perks, usage]
       properties:
         user: {$ref: '#/components/schemas/UserOverview'}
-        plan: {type: string}
+        plan: {type: [string, 'null'], description: Null when the plan service did not answer; perks is then empty.}
         perks: {type: object, additionalProperties: true, description: Copied from the entitlement claim. Names and values come from cloud-api.}
         addon_bytes: {type: object, properties: {public: {type: integer}, private: {type: integer}}}
         usage: {type: object, required: [public_bytes, private_bytes], properties: {public_bytes: {type: integer}, private_bytes: {type: integer}, quarantine_bytes: {type: integer, description: Reserved, being scanned or held. Counts against the cap.}, repos: {type: integer}}}
