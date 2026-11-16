@@ -124,6 +124,25 @@ class CloudConnectorPlan(unittest.TestCase):
         self.assertNotRegex(out, r"POST https://api\.cloudflare\.com/client/v4/zones/\$CF_ZONE_ID/rulesets\s")
         self.assertIn("fw_cc_bucket_guard", out)
 
+    def test_community_index_and_dataset_app_pages(self):
+        # Regression (2026-11-16 deploy): the community index and datasets/apps pages (6168841f) went to Pages (404)
+        # because the catalog patterns stop at /<section>/<org>/<repo>/.
+        rw = matcher(self.rules["fw_cc_index_rewrite"]["expression"])
+        hd = matcher(self.rules["fw_cc_page_headers"]["expression"])
+        cc = matcher(self.plan["connector"]["expression"])
+        r301 = matcher(self.rules["fw_cc_bare_301"]["expression"])
+        C = "/alt.freeweights.community"
+        for p in (C + "/", C + "/datasets/me/d/", C + "/apps/me/a/", C + "/me/m/"):
+            self.assertTrue(rw(HOST, p), p)
+            self.assertTrue(hd(HOST, p), p)
+            self.assertTrue(cc(HOST, p + "index.html"), p)
+        for p in (C + "/datasets/me/d/x/", C + "/datasets/me/", C + "/apps/me/a/b/index.html"):
+            self.assertFalse(rw(HOST, p) or cc(HOST, p), p)
+        for p in (C, C + "/datasets/me/d", C + "/apps/me/a"):
+            self.assertTrue(r301(HOST, p), p)
+        self.assertFalse(r301(HOST, C + "/datasets/me/d/x"))
+        self.assertFalse(rw("other.example", C + "/"))
+
 
 class StaticRoutes(unittest.TestCase):
     def test_switch_and_reverse(self):
