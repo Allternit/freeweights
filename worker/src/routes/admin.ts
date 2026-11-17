@@ -5,6 +5,7 @@ import { LIMIT_KEYS, REMOVE_REASONS, diffUsage, limitsView, type Usage } from '.
 import { promoteBlob, publishPage, settleRepo } from '../storage/promote';
 import type { Handler } from '../router';
 import { repoPagePath } from '../pages/repo';
+import { renderCommunityIndex } from '../pages/community-index';
 
 // /api/fw/v1/admin/* (spec/accounts-v1.md 11.4 and 11.7, spec/parts/write-api.yaml tag admin). Signed with
 // ADMIN_SECRET (auth/hmac.ts), driven by scripts/fw_admin.py. Every write is safe to repeat inside the 300 s
@@ -138,6 +139,7 @@ async function removeRepo(env: Env, id: string, b: Record<string, unknown>) {
   // (404 there; the API answers 451). The caller purges these paths from the edge cache.
   const page = repoPagePath(repo);
   await env.FW.delete(`${page}/index.html`);
+  await renderCommunityIndex(env).catch(() => {});
   let purged = false;
   if (b.purge === true) {
     purged = await purgeFiles(env, id);

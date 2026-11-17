@@ -7,7 +7,8 @@ import { abortMultipart, r2Creds } from '../storage/presign';
 import {
   audit, caller, findRepo, fwErr, gate, isoIn, kindOf, newId, noScope, openCheck, readJson, repoUrl, validName, writableRepo,
 } from './repo-access';
-import { repoPageUrl } from '../pages/repo';
+import { removeRepoPage, repoPageUrl } from '../pages/repo';
+import { renderCommunityIndex } from '../pages/community-index';
 
 // Repo create / delete / move / settings (plan step 7, spec/parts/write-api.yaml "repos", accounts-v1.md 11).
 // At launch: public model and dataset repos under the caller's own handle. Org namespaces and app repos
@@ -126,7 +127,13 @@ export const deleteRepoRoute: Handler = ({ req, env, ctx, url }) => d1(async () 
     acc.prepare("UPDATE storage_usage SET repos = MAX(0, repos - 1), updated_at = strftime('%Y-%m-%dT%H:%M:%SZ', 'now') WHERE owner_user_id = ?1").bind(c.userId),
     audit(env, c.userId, 'repo.delete', repo.id),
   ]);
-  ctx.waitUntil(purge(env, repo.id, open || []).catch(notePause));
+  // The page and the index are removed here: this batch already released the uploads, so the sweep (which keys its
+  // page cleanup on uploads still counted) never sees this repo again.
+  ctx.waitUntil((async () => {
+    await removeRepoPage(env, repo);
+    await purge(env, repo.id, open || []);
+    await renderCommunityIndex(env);
+  })().catch(notePause));
   return authJson({});
 });
 

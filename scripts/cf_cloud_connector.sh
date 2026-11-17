@@ -71,12 +71,25 @@ HTML_CACHE = {"cache-control": "public, max-age=300, no-transform"}
 
 P = "http.request.uri.path"
 host = f'http.host eq "{HOST}"'
-not_list = f'not {P} strict wildcard "/alt.freeweights.*/page/*" and not {P} strict wildcard "/alt.freeweights.*/*/*/*/*"'
+# Community datasets/apps live one level deeper (c_deep below): keep the catalog patterns off /datasets/<ns>/ and /apps/<ns>/.
+not_comm = (f'not {P} strict wildcard "/alt.freeweights.community/datasets/*"'
+            f' and not {P} strict wildcard "/alt.freeweights.community/apps/*"')
+not_list = (f'not {P} strict wildcard "/alt.freeweights.*/page/*" and not {P} strict wildcard "/alt.freeweights.*/*/*/*/*"'
+            f' and {not_comm}')
 slash = f'{P} strict wildcard "/alt.freeweights.*/*/*/"'
 index = f'{P} strict wildcard "/alt.freeweights.*/*/*/index.html"'
-bare = f'{P} strict wildcard "/alt.freeweights.*/*/*" and not {P} strict wildcard "/alt.freeweights.*/*/*/*" and not {P} strict wildcard "/alt.freeweights.*/page/*"'
+bare = f'{P} strict wildcard "/alt.freeweights.*/*/*" and not {P} strict wildcard "/alt.freeweights.*/*/*/*" and not {P} strict wildcard "/alt.freeweights.*/page/*" and {not_comm}'
 manifests = f'starts_with({P}, "/manifests/")'
-detail = f"({slash} or {index}) and {not_list}"
+# Community pages the Worker writes to R2 that the catalog patterns above do not reach: the index of the section, and
+# dataset/app pages one level deeper (alt.freeweights.community/datasets/<ns>/<name>/, .../apps/<ns>/<name>/).
+COMM = "/alt.freeweights.community"
+c_deep = lambda tail: (f'({P} strict wildcard "{COMM}/datasets/*/*/{tail}" or {P} strict wildcard "{COMM}/apps/*/*/{tail}")'
+                       f' and not {P} strict wildcard "{COMM}/*/*/*/*/{tail}"')
+c_slash = f'(({c_deep("")}) or {P} strict wildcard "{COMM}/")'
+c_index = f'(({c_deep("index.html")}) or {P} strict wildcard "{COMM}/index.html")'
+c_bare = (f'(({P} strict wildcard "{COMM}/datasets/*/*" or {P} strict wildcard "{COMM}/apps/*/*") and not {P} strict wildcard "{COMM}/*/*/*/*")'
+          f' or {P} strict wildcard "{COMM}"')
+detail = f"((({slash} or {index}) and {not_list}) or {c_slash} or {c_index})"
 hdr = lambda d: {k: {"operation": "set", "value": v} for k, v in d.items()}
 
 # Only what the connector serves may be read on the bucket's own domain: manifests and the alt.freeweights* pages
@@ -89,10 +102,10 @@ RULES = [  # (phase, rule) in apply order
     ("http_request_firewall_custom", {"ref": "fw_cc_bucket_guard", "description": "Freeweights: bucket domain serves only manifests and alt.freeweights pages",
         "expression": bucket_guard, "action": "block"}),
     ("http_request_transform", {"ref": "fw_cc_index_rewrite", "description": "Freeweights: detail page URL -> R2 key index.html",
-        "expression": f"({host} and {slash} and {not_list})", "action": "rewrite",
+        "expression": f"({host} and (({slash} and {not_list}) or {c_slash}))", "action": "rewrite",
         "action_parameters": {"uri": {"path": {"expression": f'concat({P}, "index.html")'}}}}),
     ("http_request_dynamic_redirect", {"ref": "fw_cc_bare_301", "description": "Freeweights: bare detail URL -> trailing slash",
-        "expression": f"({host} and {bare})", "action": "redirect",
+        "expression": f"({host} and (({bare}) or {c_bare}))", "action": "redirect",
         "action_parameters": {"from_value": {"status_code": 301, "target_url": {"expression": f'concat({P}, "/")'}, "preserve_query_string": True}}}),
     ("http_response_headers_transform", {"ref": "fw_cc_page_headers", "description": "Freeweights: CSP and security headers on detail pages (site/lib/csp.mjs)",
         "expression": f"({host} and {detail})", "action": "rewrite",
@@ -110,7 +123,7 @@ RULES = [  # (phase, rule) in apply order
         "action_parameters": {"cache": True, "edge_ttl": {"mode": "override_origin", "default": 300}, "browser_ttl": {"mode": "override_origin", "default": 300}}}),
 ]
 CONNECTOR = {"description": f"{CC_MARK} manifests and detail pages from R2 bucket freeweights", "enabled": True,
-             "expression": f"({host} and ({manifests} or ({index} and {not_list})))", "provider": "cloudflare_r2",
+             "expression": f"({host} and ({manifests} or ({index} and {not_list}) or {c_index}))", "provider": "cloudflare_r2",
              "parameters": {"host": R2_HOST}}
 for _, r in RULES: r["enabled"] = True
 
