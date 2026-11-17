@@ -23,7 +23,8 @@ export const codeBlock = (id, html) => `<div class="code mono"><code id="${id}">
 export const hfLine = (repo) => `<span class="c">$ </span><span class="k">HF_ENDPOINT</span>=${ORIGIN} hf download ${esc(repo)}`;
 export const later = (label, phase) => `<div class="later"><b>${esc(label)}</b><span class="when mono">coming in ${phase}</span></div>`;
 
-export function layout({ path: p, title, desc, nav, body, wide, bodyClass, redirect }) {
+// jsonld: an optional schema.org object, written as a data block (not executed, so the CSP check allows it).
+export function layout({ path: p, title, desc, nav, body, wide, bodyClass, redirect, jsonld }) {
   const full = title ? `${title} · Allternit Freeweights` : 'Allternit Freeweights: open models, free to download';
   const links = NAV.map(([k, l, h]) => `<a href="${h}"${k === nav ? ' aria-current="page"' : ''}>${esc(l)}</a>`).join('');
   return `<!doctype html>
@@ -35,7 +36,10 @@ export function layout({ path: p, title, desc, nav, body, wide, bodyClass, redir
 <meta name="description" content="${esc(desc || 'Open AI models, free to download with no account. Every file has a license and a checksum. Run by Allternit, the open source alternative.')}">
 <link rel="canonical" href="${ORIGIN}${p}">
 <meta property="og:title" content="${esc(full)}">
-<meta property="og:url" content="${ORIGIN}${p}">
+<meta property="og:url" content="${ORIGIN}${p}">${jsonld ? `\n<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
+<link rel="me" href="https://github.com/Allternit">
+<link rel="me" href="https://www.youtube.com/@allternit">
+<link rel="me" href="https://x.com/allternit">
 <meta name="color-scheme" content="light dark">${redirect ? `\n<meta http-equiv="refresh" content="0; url=${redirect}">\n<meta name="robots" content="noindex">` : ''}
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>${THEME_SCRIPT}</script>

@@ -27,7 +27,22 @@ export function build() {
   const latest = [...TOP].sort((a, b) => String(b.added || '').localeCompare(String(a.added || '')) || a.name.localeCompare(b.name)).slice(0, 6);
   const mission = MISSION_DOC ? (mdSections(MISSION_DOC.body).find((s) => s.id === 'mission') || {}).md || '' : MISSION;
   const verifyEx = LISTED.find((r) => r.manifest && minisig[r.id] && !r.requiresTerms) || first;
-  page({ path: '/', nav: 'home', file: 'index.html', desc: HOME && HOME.fm.summary, body: `
+  // Dataset markup for search engines and directories. The catalog data is CC0 (README, catalog/LICENSE-CC0.txt);
+  // the models themselves keep their own licenses.
+  const jsonld = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'Allternit Freeweights catalog',
+    description: `A catalog of ${LISTED.length} open AI models that are free to download with no account. Each entry lists the model's own license, file checksums and a signed manifest. The catalog data is CC0; each model keeps its own license.`,
+    url: `${ORIGIN}/alt.freeweights/`,
+    sameAs: 'https://github.com/Allternit/freeweights',
+    license: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    isAccessibleForFree: true,
+    keywords: ['open models', 'open weights', 'AI models', 'model catalog', 'checksums'],
+    creator: { '@type': 'Organization', name: 'Allternit LLC', url: 'https://allternit.com' },
+    distribution: [{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: 'https://raw.githubusercontent.com/Allternit/freeweights/main/catalog/catalog.json' }],
+  };
+  page({ path: '/', nav: 'home', file: 'index.html', desc: HOME && HOME.fm.summary, jsonld, body: `
 <div class="wrap hero">
   <div class="hero-mark">${FWC.lockup('stack', 92, 'lockup stack hero-lockup')}</div>
   <p class="tag">${esc(tagline)}</p>
