@@ -7,7 +7,7 @@
 // Layout: lib/*.mjs are shared helpers, pages/*.mjs is one module per page family (each exports build()),
 // pages/model/slots/ holds the model-page sections and assets/islands/ the client islands (see their READMEs).
 import path from 'node:path';
-import { OUT, OUT_R2, DETAILS_STATIC } from './lib/env.mjs';
+import { OUT, OUT_R2, DETAILS_STATIC, ORIGIN } from './lib/env.mjs';
 import { ROOT } from './lib/env.mjs';
 import { LISTED, WANTED, dataSource } from './lib/catalog.mjs';
 import { DOCS } from './lib/markdown.mjs';
@@ -48,5 +48,12 @@ console.log(`Device overlay: ${emitDeviceStatic()} models -> device/ in the R2 t
 writeSearchData(write);
 write('_headers', headersFile()); // CSP + nosniff + referrer-policy for every Pages response (the Worker adds the same to HTML it serves)
 write('_redirects', [...['/alt.freeweights', ...SECTIONS.map((s) => s.id)].map((s) => `/${s} /${s}/ 301`), ...OLD_CHARTER.flatMap((o) => [`${o.slice(0, -1)} ${CHARTER_PATH} 301`, `${o} ${CHARTER_PATH} 301`])].join('\n') + '\n');
+// Sitemap + robots.txt, generated from the same page registry that writes the HTML (so new models, docs and sections appear on their own).
+// Left out: the 404 page, redirect stubs, and signed-in pages (account, upload). Detail pages are served from R2 on these same URLs.
+const SITEMAP_SKIP = new Set(['/404.html', '/account/', '/new/']);
+const sitemapUrls = [...new Set(pages.filter((p) => !p.redirect && !SITEMAP_SKIP.has(p.path)).map((p) => ORIGIN + p.path))].sort();
+write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map((u) => `  <url><loc>${u.replace(/&/g, '&amp;')}</loc></url>`).join('\n')}\n</urlset>\n`);
+write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
+console.log(`Sitemap: ${sitemapUrls.length} URLs`);
 console.log(`Detail pages: ${detailCount} -> ${DETAILS_STATIC ? 'dist (FW_DETAILS=static)' : path.relative(process.cwd(), OUT_R2) || OUT_R2}, average ${(detailBytes / Math.max(1, detailCount) / 1024).toFixed(1)} KB, largest ${(detailMax / 1024).toFixed(1)} KB`);
 console.log(`Freeweights site: ${pages.length} pages, ${LISTED.length} listed, ${WANTED.length} wanted, ${DOCS.length} docs, chain ${CHAIN.length} (${CHAIN_CHECK.bad ? 'BROKEN at ' + CHAIN_CHECK.bad : 'ok'}), head sig ${HEAD_SIG.state}, data from ${dataSource} -> ${path.relative(process.cwd(), OUT) || OUT}`);
